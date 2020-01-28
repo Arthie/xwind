@@ -1,0 +1,27 @@
+{
+  "name": "tailwindcssinjs",
+  "version": "1.0.0",
+  "repository": "https://github.com/Arthie/tailwindcssinjs.git",
+  "author": "Arthie",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "yarn": ">=2.0.0",
+    "node": ">=13.0.0"
+  },
+  "scripts": {
+    "build": "yarn workspaces foreach -v run build",
+    "prettier": "prettier ./packages/**/*.ts --write"
+  },
+  "devDependencies": {
+    "@types/eslint": "6.1.7",
+    "@types/prettier": "1.19.0",
+    "@yarnpkg/pnpify": "^2.0.0-rc.16",
+    "eslint": "^6.8.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  }
+}

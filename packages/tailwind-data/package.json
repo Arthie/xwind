@@ -1,0 +1,23 @@
+{
+  "name": "@tailwindcssinjs/tailwindcss-data",
+  "version": "0.0.1",
+  "author": "Arthie",
+  "description": "This package contains tailwind data",
+  "main": "dist/tailwindcssData.js",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "peerDependencies": {
+    "tailwindcss": "1.x"
+  },
+  "dependencies": {
+    "postcss": "^7.0.26"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  }
+}

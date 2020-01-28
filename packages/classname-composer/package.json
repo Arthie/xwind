@@ -1,0 +1,17 @@
+{
+  "name": "@tailwindcssinjs/classname-composer",
+  "version": "0.0.1",
+  "author": "Arthie",
+  "description": "This package contains tailwindcssinjs classname composer",
+  "main": "dist/classnameComposer.js",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  }
+}
