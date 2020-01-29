@@ -1,16 +1,16 @@
 import merge from "lodash/merge"
-import { TwObject, TwCssObject, Rule, AtRule } from "./transformTypes"
+import { TwObject, TwCssObject, Rule, AtRule } from "./transformerTypes"
 
 export const parseSelector = (selector: string) => {
-  const pseudoSelector = selector.match(/[:]{1,2}\S*$/)?.[0]
-  const classNameSelector = pseudoSelector
+  const [pseudoSelector] = selector.match(/[:]{1,2}\S*$/) || [null]
+  const twClassSelector = pseudoSelector
     ? selector.replace(pseudoSelector, "")
     : selector
-  const className = classNameSelector.substring(1)
+  const twClass = twClassSelector.substring(1)
   return {
     selector,
     pseudoSelector,
-    className
+    twClass
   }
 }
 
@@ -44,12 +44,12 @@ export const transformTwObjectArrayToTwStyleObjectMap = (
 ) => {
   const mappedObject = new Map<string, TwCssObject>()
   for (const twObject of twObjects) {
-    const { className } = parseSelector(twObject.selector)
+    const { twClass } = parseSelector(twObject.selector)
     const cssObject = transformTwObjectToTwCssObject(twObject)
-    if (mappedObject.has(className)) {
-      mappedObject.set(className, merge(mappedObject.get(className), cssObject))
+    if (mappedObject.has(twClass)) {
+      mappedObject.set(twClass, merge(mappedObject.get(twClass), cssObject))
     } else {
-      mappedObject.set(className, cssObject)
+      mappedObject.set(twClass, cssObject)
     }
   }
   return mappedObject

@@ -1,5 +1,5 @@
 import merge from "lodash/merge"
-import { TwCssObject, AtRule, Rule } from "./transformTypes"
+import { TwCssObject, AtRule, Rule } from "./transformerTypes"
 
 const getPseudoClass = (pseudoPrefix: string, classPrefix: string) => {
   switch (pseudoPrefix) {
@@ -43,6 +43,7 @@ export const applyVariants = (
       variantTwCssObject = {
         [`@media ${mediaScreens[variant]}`]: variantTwCssObject
       } as AtRule
+      continue
     }
 
     if (twCssObject.variants?.includes(variant)) {
@@ -50,7 +51,10 @@ export const applyVariants = (
       variantTwCssObject = ({
         [pseudoClass]: variantTwCssObject
       } as unknown) as Rule
+      continue
     }
+
+    throw new Error(`Utilitie with class '${variant}' not found`)
   }
 
   return variantTwCssObject
@@ -58,7 +62,7 @@ export const applyVariants = (
 
 export const transformTwStyleObjectToStyleObject = (
   components: Map<string, TwCssObject>,
-  twParsedClassNames: Map<string, string[]>,
+  twParsedClasses: Map<string, string[]>,
   mediaScreens: {
     [key: string]: string
   },
@@ -66,8 +70,8 @@ export const transformTwStyleObjectToStyleObject = (
 ) => {
   let cssObject = {}
 
-  twParsedClassNames.forEach((variants, className) => {
-    const twCssObject = components.get(className)
+  twParsedClasses.forEach((variants, twClass) => {
+    const twCssObject = components.get(twClass)
     if (twCssObject) {
       if (variants.length === 0) {
         cssObject = merge(cssObject, twCssObject.cssObject)
@@ -78,7 +82,7 @@ export const transformTwStyleObjectToStyleObject = (
         )
       }
     } else {
-      throw new Error(`Utilitie with classname '${className}' not found`)
+      throw new Error(`Utilitie with class '${twClass}' not found`)
     }
   })
 

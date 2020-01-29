@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "lodash": "^4.17.15",
-    "postcss": "^7.0.26",
     "postcss-js": "^2.0.3"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.149",
+    "postcss": "^7.0.26",
     "typescript": "^3.7.5"
   }
 }

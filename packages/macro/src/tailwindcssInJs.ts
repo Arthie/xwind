@@ -6,10 +6,7 @@ import {
   transformTwStyleObjectToStyleObject
 } from "@tailwindcssinjs/transformers"
 
-import {
-  twClassNameMapParser,
-  TwClassName
-} from "@tailwindcssinjs/classname-composer"
+import { twClassesMapParser, TwClass } from "@tailwindcssinjs/class-composer"
 import { TailwindConfig } from "./tailwindcssConfig"
 
 export const tailwindcssInJs = (config: TailwindConfig) => {
@@ -28,11 +25,8 @@ export const tailwindcssInJs = (config: TailwindConfig) => {
     ...transformedUtilities
   ])
 
-  return (...arg: TwClassName[]) => {
-    const twParsedClassNames = twClassNameMapParser(
-      arg,
-      resolvedConfig.separator
-    )
+  return (...arg: TwClass[]) => {
+    const twParsedClassNames = twClassesMapParser(arg, resolvedConfig.separator)
 
     const cssObject = transformTwStyleObjectToStyleObject(
       mappedTwCssObjects,
