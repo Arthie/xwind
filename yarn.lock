@@ -446,6 +446,7 @@ __metadata:
   resolution: "@tailwindcssinjs/tailwindcss-data@workspace:packages/tailwind-data"
   dependencies:
     postcss: ^7.0.26
+    tailwindcss: 1.1.4
     typescript: ^3.7.5
   peerDependencies:
     tailwindcss: 1.x
@@ -915,6 +916,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"autoprefixer@npm:^9.4.5":
+  version: 9.7.4
+  resolution: "autoprefixer@npm:9.7.4"
+  dependencies:
+    browserslist: ^4.8.3
+    caniuse-lite: ^1.0.30001020
+    chalk: ^2.4.2
+    normalize-range: ^0.1.2
+    num2fraction: ^1.2.2
+    postcss: ^7.0.26
+    postcss-value-parser: ^4.0.2
+  bin:
+    autoprefixer: bin/autoprefixer
+  checksum: 35925d1f85a7f60a7c5749f48fe8096806dac353674590d4613e7b79427b3f410155928960bc268daecc539b210fc760a3bba9d25d3bcee7f23fd82f654aeafc
+  languageName: node
+  linkType: hard
+
 "aws-sign2@npm:~0.7.0":
   version: 0.7.0
   resolution: "aws-sign2@npm:0.7.0"
@@ -1076,6 +1094,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"browserslist@npm:^4.8.3":
+  version: 4.8.5
+  resolution: "browserslist@npm:4.8.5"
+  dependencies:
+    caniuse-lite: ^1.0.30001022
+    electron-to-chromium: ^1.3.338
+    node-releases: ^1.1.46
+  bin:
+    browserslist: cli.js
+  checksum: 278c507d59efb04fe3044298a5bbfa5f38c53d2ef138de720aaacb6abcdbfb5432a09da3ab5509d0e1a0471aeb9b254939ceea06d0cedfecf3abf433eb8ebcc8
+  languageName: node
+  linkType: hard
+
 "bser@npm:2.1.1":
   version: 2.1.1
   resolution: "bser@npm:2.1.1"
@@ -1089,6 +1120,13 @@ __metadata:
   version: 1.1.1
   resolution: "buffer-from@npm:1.1.1"
   checksum: b34c802232998fe342f64398c6bfbcd74c7e3d8115513ccc1c932c8ea0e0a205293847bc69be4c32ed9388ca151f635b005019e0bddbd80a5df34da537d722d6
+  languageName: node
+  linkType: hard
+
+"bytes@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "bytes@npm:3.1.0"
+  checksum: 4810d53e395e3b5d2cd54df0f1b4433ac01670efee10d74785625fa8ca4ce364975f152ad13408c796aa925ccab2a14423bd56c9107837ab4a114853ab988a76
   languageName: node
   linkType: hard
 
@@ -1130,6 +1168,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"caniuse-lite@npm:^1.0.30001020, caniuse-lite@npm:^1.0.30001022":
+  version: 1.0.30001023
+  resolution: "caniuse-lite@npm:1.0.30001023"
+  checksum: fc3969b39405bc503065f5272c0b4bb63f368ec53f3e0929a08bdc1b891fd5b455ecb55c7ca79b876bbc21b3b02880f6725a3d532c14f046e048bf368c6ac1b6
+  languageName: node
+  linkType: hard
+
 "capture-exit@npm:^2.0.0":
   version: 2.0.0
   resolution: "capture-exit@npm:2.0.0"
@@ -1146,7 +1191,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^2.0.0, chalk@npm:^2.1.0, chalk@npm:^2.4.2":
+"chalk@npm:^2.0.0, chalk@npm:^2.1.0, chalk@npm:^2.4.1, chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
   dependencies:
@@ -1392,6 +1437,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-unit-converter@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "css-unit-converter@npm:1.1.1"
+  checksum: 24efa25fbd467526ceca8db175948dbe6b1e233768218dc5b9c70c036ea96b30c39357e7b92492b850a06124c1dbf7fe6b4e4be9ad2e9593836e7a276f4e15f2
+  languageName: node
+  linkType: hard
+
+"cssesc@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "cssesc@npm:3.0.0"
+  bin:
+    cssesc: bin/cssesc
+  checksum: 334b66caad868a584fc502b69afa007e2763f3f9c550dcb7517d0334d95269e757dfa90c8facfaa8141c89c6a079f51a72a83d426cee4afa41efc170bfbc8e73
+  languageName: node
+  linkType: hard
+
 "cssom@npm:^0.4.1":
   version: 0.4.4
   resolution: "cssom@npm:0.4.4"
@@ -1564,6 +1625,13 @@ __metadata:
     jsbn: ~0.1.0
     safer-buffer: ^2.1.0
   checksum: 4e31135f449b97f6155426873293f9270a2c2885520ad85e700665b680354bd3c1223783f822c4ad19fbe7899a2dff33794ddd7d25d234a7529b16b999c9ed83
+  languageName: node
+  linkType: hard
+
+"electron-to-chromium@npm:^1.3.338":
+  version: 1.3.341
+  resolution: "electron-to-chromium@npm:1.3.341"
+  checksum: e0dd5ea3d4cd394fe70aecd3228e84431ad81d2128ac7eb0d9480c03a8292b35343a0a3b45d314f55ca9a7d65a298c05c1b2e406fd70775059bf1cc46cbcbdd4
   languageName: node
   linkType: hard
 
@@ -2055,6 +2123,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:^8.0.0":
+  version: 8.1.0
+  resolution: "fs-extra@npm:8.1.0"
+  dependencies:
+    graceful-fs: ^4.2.0
+    jsonfile: ^4.0.0
+    universalify: ^0.1.0
+  checksum: fe173c88b1daa8f1e26001fd55c0a659087b5507ca2f8188ee3ae01d090f0c44d083fe6b56414d5fe744cd3414570aab4dfed884c05f6a91cdddd3d9084cc3f6
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^1.2.5":
   version: 1.2.7
   resolution: "fs-minipass@npm:1.2.7"
@@ -2206,7 +2285,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.2.2, graceful-fs@npm:^4.2.3":
+"graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.2, graceful-fs@npm:^4.2.3":
   version: 4.2.3
   resolution: "graceful-fs@npm:4.2.3"
   checksum: ed0570de762f98ddeaff67a54375d9869eda6ac5fd0c55e1783ce13fbf8ed3c6f1243bc459a7c848d20a916e20985c0c80a544f18a2a9a14ab8dee4a77285fcd
@@ -2396,6 +2475,13 @@ fsevents@^2.1.2:
   version: 0.1.4
   resolution: "imurmurhash@npm:0.1.4"
   checksum: 7c698a208c922ba8b65ee6deb61295bed1a3303615795963ed080d87db3f24ac415cf738fabc0233f7d1f414ba4fc0de7affb20263dfd2484f0706cff4201933
+  languageName: node
+  linkType: hard
+
+"indexes-of@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "indexes-of@npm:1.0.1"
+  checksum: 43d26b6016a7cf456dbc6895af7c573caf91aa86b233def3eac2136e07c7601f3380fb669dec854517f1d9f585269cda0d83bc4c55d5851ee794ca081926afcd
   languageName: node
   linkType: hard
 
@@ -3316,6 +3402,18 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
+"jsonfile@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "jsonfile@npm:4.0.0"
+  dependencies:
+    graceful-fs: ^4.1.6
+  dependenciesMeta:
+    graceful-fs:
+      optional: true
+  checksum: a90ca8a5bde33b9ff0ce4bf5a6a5f6c418cdf50af218b8719e3a49f7804e98b7552717ab7eb4870684673529dee42b12e3a22753facda1baca40960b4ab14a52
+  languageName: node
+  linkType: hard
+
 "jsprim@npm:^1.2.2":
   version: 1.4.1
   resolution: "jsprim@npm:1.4.1"
@@ -3407,7 +3505,14 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.13, lodash@npm:^4.17.14, lodash@npm:^4.17.15":
+"lodash.toarray@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "lodash.toarray@npm:4.4.0"
+  checksum: 078238f297399c46f30950ffca02eefd509fc6d81f0a0ab14cbb06ff92062704c523fe48f187ca71ff266f3ad3c5b1ae624505ce650bd1480873511b5b1b52dc
+  languageName: node
+  linkType: hard
+
+"lodash@npm:^4.17.11, lodash@npm:^4.17.13, lodash@npm:^4.17.14, lodash@npm:^4.17.15":
   version: 4.17.15
   resolution: "lodash@npm:4.17.15"
   checksum: b018ec8d4c95f14a4b57005a247eca1bc25639322939471a1958d3bc721b4f18e90edb6ea564854593a8bc1f94956a0352cf0cd372991b98c42d61c0cd11e5a3
@@ -3635,6 +3740,15 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
+"node-emoji@npm:^1.8.1":
+  version: 1.10.0
+  resolution: "node-emoji@npm:1.10.0"
+  dependencies:
+    lodash.toarray: ^4.4.0
+  checksum: f36b78eb150bc0ae54e9c5ecc09582a461f740016fffd5aaaf98573d20f7bbf971a2f8517090829eb25e7c9f776665798c6a7422f9f5364893a2870f30cf5df2
+  languageName: node
+  linkType: hard
+
 "node-gyp@npm:latest":
   version: 6.1.0
   resolution: "node-gyp@npm:6.1.0"
@@ -3683,6 +3797,15 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
+"node-releases@npm:^1.1.46":
+  version: 1.1.47
+  resolution: "node-releases@npm:1.1.47"
+  dependencies:
+    semver: ^6.3.0
+  checksum: 9506f7418a6b57725dce89c0b02537a78ced07b618feaaaed6c86427f72e2dc1f116fa58f40fed5c605333f3d20849effaaca4fa42775569958f7b7742da1b01
+  languageName: node
+  linkType: hard
+
 "nopt@npm:^4.0.1":
   version: 4.0.1
   resolution: "nopt@npm:4.0.1"
@@ -3708,6 +3831,20 @@ fsevents@^2.1.2:
   version: 3.0.0
   resolution: "normalize-path@npm:3.0.0"
   checksum: 73bb886e24509977706086359ee2b822b8a21bea96376f41332797a9a0c0ef5107f610584c90532bdd9206c54d7bfecbb55c34261f33e05dbb3603a45e78c54b
+  languageName: node
+  linkType: hard
+
+"normalize-range@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "normalize-range@npm:0.1.2"
+  checksum: 9a22a68e9f894b948d9b5ffb7ecf08b56b405e7b37c7c30cd50b9f8ba89008b687a7e3bdfe581c2d99b8e5ba500fa48eba2d381676e8f1526ee7dad0667a5f36
+  languageName: node
+  linkType: hard
+
+"normalize.css@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "normalize.css@npm:8.0.1"
+  checksum: df0e5f89d0be50525c17fe219bfe7fbc5c76fc093cf8180406e6b85a9235323b0c4515f36c4e4bc15818cde6417351f74d1b9de589089a3c1ae7bc69b198c98f
   languageName: node
   linkType: hard
 
@@ -3741,6 +3878,13 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
+"num2fraction@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "num2fraction@npm:1.2.2"
+  checksum: 9542ef9767c59a0cae725c8292dc36d13178751a9dff7986d460a9559e944f8167f52ce9168cd04ad8bf59dabe55c164de15e3f3955709daf3626575788b156c
+  languageName: node
+  linkType: hard
+
 "number-is-nan@npm:^1.0.0":
   version: 1.0.1
   resolution: "number-is-nan@npm:1.0.1"
@@ -3762,7 +3906,7 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"object-assign@npm:^4.1.0":
+"object-assign@npm:^4.1.0, object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
   checksum: 8a281400d57a8880141ceb4335061b17e2d21405b2d5909e3fd71948d6b10f366c65d71a62aac27a0e45754a5e467bcc3f6ff78f26a929948d751b582b46d14e
@@ -4059,7 +4203,19 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"postcss-js@npm:^2.0.3":
+"postcss-functions@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "postcss-functions@npm:3.0.0"
+  dependencies:
+    glob: ^7.1.2
+    object-assign: ^4.1.1
+    postcss: ^6.0.9
+    postcss-value-parser: ^3.3.0
+  checksum: 9446e9fbfed37476b91927fab88185233a563706c378e53a5f97a5a230c6e00ef885c74b55fdb4cd25fefe8da61c6becea42f3ff48c581c5b6ea75b52104952e
+  languageName: node
+  linkType: hard
+
+"postcss-js@npm:^2.0.0, postcss-js@npm:^2.0.3":
   version: 2.0.3
   resolution: "postcss-js@npm:2.0.3"
   dependencies:
@@ -4069,7 +4225,53 @@ fsevents@^2.1.2:
   languageName: node
   linkType: hard
 
-"postcss@npm:^7.0.18, postcss@npm:^7.0.26":
+"postcss-nested@npm:^4.1.1":
+  version: 4.2.1
+  resolution: "postcss-nested@npm:4.2.1"
+  dependencies:
+    postcss: ^7.0.21
+    postcss-selector-parser: ^6.0.2
+  checksum: 118fd3594f2ae1defc9f6d23700e303863227e340d22a3d5c54550a2a47aaf60d2e79c0eb62e8d21abbcaa20d92ed15908bad98581ce5f382d027925c8cb2ee4
+  languageName: node
+  linkType: hard
+
+"postcss-selector-parser@npm:^6.0.0, postcss-selector-parser@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "postcss-selector-parser@npm:6.0.2"
+  dependencies:
+    cssesc: ^3.0.0
+    indexes-of: ^1.0.1
+    uniq: ^1.0.1
+  checksum: 1877103e0b7bc57281aec343452375e6766893d697bb74515592e95644ad18007b619f8f7536c5d5c08023b26f7db045e83a770d5cb60c8ce96577005bd4a3c9
+  languageName: node
+  linkType: hard
+
+"postcss-value-parser@npm:^3.3.0":
+  version: 3.3.1
+  resolution: "postcss-value-parser@npm:3.3.1"
+  checksum: 973cf7dc318769e134716794919235bc0d17dfdd175a8511d652211537ff0224b18b698476127d1067dfd4357b4468eb96509d29500c5c01daa3275e320eb0ba
+  languageName: node
+  linkType: hard
+
+"postcss-value-parser@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "postcss-value-parser@npm:4.0.2"
+  checksum: d49c86482a5a5c6682db22c192c1da93787342f940f5de6e96d62385366c13aa139ed4819704c85174cb0ce87ef93e2f3376f12f3a850a6434fc90b88d9e855a
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^6.0.9":
+  version: 6.0.23
+  resolution: "postcss@npm:6.0.23"
+  dependencies:
+    chalk: ^2.4.1
+    source-map: ^0.6.1
+    supports-color: ^5.4.0
+  checksum: c0771d3f3d41039eea9b58fc51d9433de9e0cae41a796cb0cad4478bb2cddfc9978779ed3d04fd17e29a00a706da0a6c15fa4e0a37e3ec9586bbbb87588f5a98
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^7.0.11, postcss@npm:^7.0.18, postcss@npm:^7.0.21, postcss@npm:^7.0.26":
   version: 7.0.26
   resolution: "postcss@npm:7.0.26"
   dependencies:
@@ -4105,6 +4307,13 @@ fsevents@^2.1.2:
     ansi-styles: ^4.0.0
     react-is: ^16.12.0
   checksum: 7d4f659dc022265640b5ae9070534c99a9b0c8c27ab5d8292f10d8222c0f98501a209ef5ef380593bdfe3a9aaa852e81bfe400c19a908e08e751210da101c8b8
+  languageName: node
+  linkType: hard
+
+"pretty-hrtime@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "pretty-hrtime@npm:1.0.3"
+  checksum: 50ad3401f5e5393be5841fcfa939ac2fb86671fc68f795ffbb6f53dcf0a8145c4a46050ae85f34610790568092d35f98d8f491dd7a2a7953b988b394853e49f6
   languageName: node
   linkType: hard
 
@@ -4198,6 +4407,16 @@ fsevents@^2.1.2:
   dependencies:
     util.promisify: ^1.0.0
   checksum: e265193645cf1ec1dae5859773540ccf7da0e0a633635324944512ef3fbb7a991c091bcc1d9a286742aa00a7d56641337e7e64e19cf14ef46f7e90b10d19ec6d
+  languageName: node
+  linkType: hard
+
+"reduce-css-calc@npm:^2.1.6":
+  version: 2.1.7
+  resolution: "reduce-css-calc@npm:2.1.7"
+  dependencies:
+    css-unit-converter: ^1.1.1
+    postcss-value-parser: ^3.3.0
+  checksum: 12efe8db2d928cf80c0148c7d4b9f4a590aaa090c851a7dbaaad1f63a2172453972fbc4a1d740a145b1e78a9b011b0e30df4a0fb35233e17c2d1d4f5d01130c5
   languageName: node
   linkType: hard
 
@@ -4892,7 +5111,7 @@ resolve@1.1.7:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^5.3.0":
+"supports-color@npm:^5.3.0, supports-color@npm:^5.4.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
   dependencies:
@@ -4945,6 +5164,30 @@ resolve@1.1.7:
     slice-ansi: ^2.1.0
     string-width: ^3.0.0
   checksum: ef31c08beab8419ae0c036b8751f262eb1ebc94692e02b207d603cda071eed5e3df1d76dd305f4ee915001b9e3c2c0d338100f17ff92b8f599fb1f75545a2385
+  languageName: node
+  linkType: hard
+
+"tailwindcss@npm:1.1.4":
+  version: 1.1.4
+  resolution: "tailwindcss@npm:1.1.4"
+  dependencies:
+    autoprefixer: ^9.4.5
+    bytes: ^3.0.0
+    chalk: ^2.4.1
+    fs-extra: ^8.0.0
+    lodash: ^4.17.11
+    node-emoji: ^1.8.1
+    normalize.css: ^8.0.1
+    postcss: ^7.0.11
+    postcss-functions: ^3.0.0
+    postcss-js: ^2.0.0
+    postcss-nested: ^4.1.1
+    postcss-selector-parser: ^6.0.0
+    pretty-hrtime: ^1.0.3
+    reduce-css-calc: ^2.1.6
+  bin:
+    tailwind: lib/cli.js
+  checksum: 3dad59bfd3b94db9cd30e473cd9c740de4d630bce233d01f183fbe3641101d7920d66f6a9433ca7656065ef071aae94de472ceb1c2c606bcf4b4fb583c068d2e
   languageName: node
   linkType: hard
 
@@ -5214,6 +5457,20 @@ typescript@^3.7.5:
     is-extendable: ^0.1.1
     set-value: ^2.0.1
   checksum: 8f26af512530b6bed9923ba4db7066c4d2f766452439b7569a3fcc9e145170274863aaa6ce61ce1be92a5f3236e473f34cd074e1ba97cb82d09a75a49406c64b
+  languageName: node
+  linkType: hard
+
+"uniq@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "uniq@npm:1.0.1"
+  checksum: 01a457e9b3b6cbe97870358b862956c8cf51d9edf70892e128992b9111290def8cf63e80f136525f1dae9b97687f722de14aa03e2cd7893b02490fa78a2cac9a
+  languageName: node
+  linkType: hard
+
+"universalify@npm:^0.1.0":
+  version: 0.1.2
+  resolution: "universalify@npm:0.1.2"
+  checksum: d42e93c813408da203add373e208b4ee98a68dfa8832b84a9f116babf7610637cf569d20964d23227b4a7ad960477ae78144b4b119b999442813957b8cedabcc
   languageName: node
   linkType: hard
 
