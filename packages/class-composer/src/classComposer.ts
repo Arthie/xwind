@@ -1,3 +1,5 @@
+import isPlainObject from "lodash/isPlainObject"
+
 export type TwClasses = TwClass[] | Set<TwClass>
 
 export type TwClass = string | TwObject
@@ -5,8 +7,6 @@ export type TwClass = string | TwObject
 export interface TwObject {
   [key: string]: string | { [key: string]: string }
 }
-
-const notWhitespace = /\S+/g
 
 const twClassObjectComposer = (twClass: TwObject, separator: string) => {
   const composedTwClassObject: string[] = []
@@ -34,15 +34,18 @@ export const twClassesComposer = (twClasses: TwClasses, separator: string) => {
   }
 
   const composedTwClasses: string[] = []
+  const NOT_WHITE_SPACE_REGEXP = /\S+/g
 
   for (const twClass of twClasses) {
     if (typeof twClass === "string") {
-      const matchedTwClasses = twClass.match(notWhitespace)
-      if (matchedTwClasses) composedTwClasses.push(...matchedTwClasses)
+      const matchedTwClasses = twClass.match(NOT_WHITE_SPACE_REGEXP)
+      if (matchedTwClasses) {
+        composedTwClasses.push(...matchedTwClasses)
+      }
       continue
     }
 
-    if (typeof twClass === "object" && !(twClass instanceof Array)) {
+    if (isPlainObject(twClass)) {
       const composedTwClassObject = twClassObjectComposer(twClass, separator)
       composedTwClasses.push(...composedTwClassObject)
       continue
@@ -54,17 +57,20 @@ export const twClassesComposer = (twClasses: TwClasses, separator: string) => {
   return composedTwClasses
 }
 
-export const twClassesMapParser = (twClasses: TwClasses, separator: string) => {
-  const parsedMap = new Map<string, string[]>()
+export const twClassesVariantsParser = (
+  twClasses: TwClasses,
+  separator: string
+) => {
+  const parsedClassesVariants: Array<[string, string[]]> = []
 
   const composedTwClasses = twClassesComposer(twClasses, separator)
 
   for (const composedTwClass of composedTwClasses) {
     const [twClass, ...variants] = composedTwClass.split(separator).reverse()
-    parsedMap.set(twClass, variants)
+    parsedClassesVariants.push([twClass, variants])
   }
 
-  return parsedMap
+  return parsedClassesVariants
 }
 
 export const twClassesSerializer = (twClasses: TwClasses, separator: string) =>
@@ -72,16 +78,33 @@ export const twClassesSerializer = (twClasses: TwClasses, separator: string) =>
 
 type TagFunction = (twClasses: TwClasses, separator: string) => any
 
-//Note: Tags do not follow input order, inputs will be ordered by type: first strings then objects
 const twClassTagFactory = <T extends TagFunction>(twClassFunction: T) => (
   separator: string
 ) => (
-  twClassestrings: string[] | TemplateStringsArray,
+  twClassTemplateStrings: TemplateStringsArray,
   ...twClassObjects: TwObject[]
-): T => twClassFunction([...twClassestrings, ...twClassObjects], separator)
+): T => {
+  //This code makes sure that input order is kept
+  const twClassStrings = [...twClassTemplateStrings]
+  const twClasses: TwClasses = []
+  while (twClassStrings.length || twClassObjects.length) {
+    const twClassString = twClassStrings.shift()
+    const twClassObject = twClassObjects.shift()
+    if (twClassString) {
+      twClasses.push(twClassString)
+    }
+    if (twClassObject) {
+      twClasses.push(twClassObject)
+    }
+  }
+
+  return twClassFunction(twClasses, separator)
+}
 
 export const twClassesComposerTag = twClassTagFactory(twClassesComposer)
 
 export const twClassesSerializerTag = twClassTagFactory(twClassesSerializer)
 
-export const twClassesMapParserTag = twClassTagFactory(twClassesMapParser)
+export const twClassesVariantsParserTag = twClassTagFactory(
+  twClassesVariantsParser
+)

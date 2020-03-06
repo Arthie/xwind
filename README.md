@@ -10,3 +10,5 @@ macro errors : https://github.com/kentcdodds/babel-plugin-macros/blob/master/oth
 headwind
 
 macro: invalidate cache
+
+with or without ampersand?? https://styled-components.com/docs/basics#pseudoelements-pseudoselectors-and-nesting

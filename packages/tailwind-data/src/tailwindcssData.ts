@@ -1,8 +1,14 @@
+import path from "path"
+import fs from "fs"
 import postcss from "postcss"
+
 import resolveConfig from "tailwindcss/resolveConfig"
 import buildMediaQuery from "tailwindcss/lib/util/buildMediaQuery"
 import corePlugins from "tailwindcss/lib/corePlugins"
 import processPlugins from "tailwindcss/lib/util/processPlugins"
+import defaultConfig from "tailwindcss/defaultConfig"
+
+export const defaultConfigFile = "./tailwind.config.js"
 
 export interface TailwindConfig {
   theme: {
@@ -21,9 +27,31 @@ export interface TailwindConfig {
   plugins: []
 }
 
+const resolveTailwindConfigPath = (configFile?: string) => {
+  const file = configFile ? configFile : defaultConfigFile
+  try {
+    const defaultConfigPath = path.resolve(file)
+    fs.accessSync(defaultConfigPath)
+    return defaultConfigPath
+  } catch (err) {
+    throw new Error(`Could not find '${file}' | ${err}`)
+  }
+}
+
+export const resolveTailwindConfig = (configFile?: string): TailwindConfig => {
+  try {
+    const configPath = resolveTailwindConfigPath(configFile)
+    const config = require(configPath)
+    return config
+  } catch (err) {
+    console.log("No tailwind config found using default tailwind config")
+    return defaultConfig
+  }
+}
+
 export const getMediaScreens = (config: TailwindConfig) => {
   const screens = Object.entries(config.theme.screens)
-  const buildScreens = screens.map(([key, value]) => [
+  const buildScreens = screens.map(([key, value]): [string, string] => [
     key,
     buildMediaQuery(value)
   ])

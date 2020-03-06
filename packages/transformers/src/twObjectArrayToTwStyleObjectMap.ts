@@ -1,8 +1,10 @@
 import merge from "lodash/merge"
-import { TwObject, TwCssObject, Rule, AtRule } from "./transformerTypes"
+import { TwObject, TwCssObject, Rule, AtRule } from "./transformersTypes"
+
+const SELECTOR_REGXEXP = /[:]{1,2}\S*$/
 
 export const parseSelector = (selector: string) => {
-  const [pseudoSelector] = selector.match(/[:]{1,2}\S*$/) || [null]
+  const [pseudoSelector] = selector.match(SELECTOR_REGXEXP) || [null]
   const twClassSelector = pseudoSelector
     ? selector.replace(pseudoSelector, "")
     : selector

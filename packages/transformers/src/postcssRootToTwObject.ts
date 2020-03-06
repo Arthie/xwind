@@ -1,6 +1,6 @@
 import { Root } from "postcss"
 import postcssJs from "postcss-js"
-import { TwObject } from "./transformerTypes"
+import { TwObject } from "./transformersTypes"
 
 export const transformPostcssRootToTwObject = (root: Root) => {
   const twObjects: TwObject[] = []

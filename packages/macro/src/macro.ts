@@ -1,51 +1,82 @@
-import { createMacro, MacroHandler } from "babel-plugin-macros"
-import { resolveTailwindConfig } from "./tailwindcssConfig"
-import { tailwindcssInJs } from "./tailwindcssInJs"
-import { transformStyleObjectToCssString } from "@tailwindcssinjs/transformers"
+// https://github.com/knpwrs/ms.macro/blob/master/src/ms.macro.js
 
-const defaultMacroConfig = {
-  format: "object"
+import { createMacro, MacroError, MacroHandler } from "babel-plugin-macros"
+import { transformStyleObjectToCssString } from "@tailwindcssinjs/transformers"
+import { resolveTailwindConfig } from "@tailwindcssinjs/tailwindcss-data"
+
+import { tailwindcssInJs } from "./tailwindcssInJs"
+
+const defaultConfig = {
+  format: "object",
+  strictVariants: false
+}
+
+const getArgs = (path: any) => {
+  if (path.type === "CallExpression") {
+    const args = path.get("arguments").map((item: any) => item.evaluate().value)
+    return args
+  }
+
+  if (path.type === "TaggedTemplateExpression") {
+    const quasi = path.get("quasi")
+
+    const templateElements = quasi
+      .get("quasis")
+      .map((item: any) => item.node.value.raw)
+    const expressions = quasi
+      .get("expressions")
+      .map((item: any) => item.evaluate().value)
+    const twClasses = []
+    while (templateElements.length || expressions.length) {
+      const twClassString = templateElements.shift()
+      const twClassObject = expressions.shift()
+      if (twClassString) {
+        twClasses.push(twClassString)
+      }
+      if (twClassObject) {
+        twClasses.push(twClassObject)
+      }
+    }
+    return twClasses
+  }
+  return null
 }
 
 const tailwindcssInJsMacro: MacroHandler = ({
-  references,
+  references: { default: paths },
   state,
-  babel: { types: t },
+  babel: { types: t, template },
   //@ts-ignore
-  config: macroConfig = defaultMacroConfig
+  config
 }) => {
-  const config = resolveTailwindConfig()
-  if (!config) {
-    throw new Error(
+  // console.log(config)
+  if (!config?.format) {
+    config.format = defaultConfig.format
+  }
+  if (!config?.strictVariants) {
+    config.strictVariants = defaultConfig.strictVariants
+  }
+
+  const tailwindConfig = resolveTailwindConfig()
+  if (!tailwindConfig) {
+    throw new MacroError(
       "No config file found. Add `tailwind.config.js` to your project"
     )
   }
-  const tailwind = tailwindcssInJs(config)
+  const tailwind = tailwindcssInJs(tailwindConfig)
 
-  references.default.forEach(referencePath => {
-    if (referencePath.parentPath.type === "CallExpression") {
-      if (referencePath === referencePath.parentPath.get("callee")) {
-        //@ts-ignore
-        const args = referencePath.parentPath
-          .get("arguments")
-          //@ts-ignore
-          .map((value: any) => {
-            return value.evaluate().value
-          })
+  paths.forEach(referencePath => {
+    const args = getArgs(referencePath.parentPath)
+    const cssObj = tailwind(...args)
 
-        const cssObj = tailwind(...args)
+    if (config.format === "object") {
+      const ast = template.expression(JSON.stringify(cssObj))()
+      referencePath.parentPath.replaceWith(ast)
+    }
 
-        if (macroConfig.format === "string") {
-          const css = transformStyleObjectToCssString(cssObj)
-          referencePath.parentPath.replaceWith(t.stringLiteral(css))
-        }
-
-        if (macroConfig.format === "object") {
-          referencePath.parentPath.replaceWithSourceString(
-            JSON.stringify(cssObj)
-          )
-        }
-      }
+    if (config.format === "string") {
+      const css = transformStyleObjectToCssString(cssObj)
+      referencePath.parentPath.replaceWith(t.stringLiteral(css))
     }
   })
 }

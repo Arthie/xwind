@@ -1,4 +1,4 @@
-import { tailwindData } from "@tailwindcssinjs/tailwindcss-data"
+import { tailwindData, TailwindConfig } from "@tailwindcssinjs/tailwindcss-data"
 
 import {
   transformPostcssRootToTwObject,
@@ -6,8 +6,10 @@ import {
   transformTwStyleObjectToStyleObject
 } from "@tailwindcssinjs/transformers"
 
-import { twClassesMapParser, TwClass } from "@tailwindcssinjs/class-composer"
-import { TailwindConfig } from "./tailwindcssConfig"
+import {
+  twClassesVariantsParser,
+  TwClass
+} from "@tailwindcssinjs/class-composer"
 
 export const tailwindcssInJs = (config: TailwindConfig) => {
   const {
@@ -26,7 +28,10 @@ export const tailwindcssInJs = (config: TailwindConfig) => {
   ])
 
   return (...arg: TwClass[]) => {
-    const twParsedClassNames = twClassesMapParser(arg, resolvedConfig.separator)
+    const twParsedClassNames = twClassesVariantsParser(
+      arg,
+      resolvedConfig.separator
+    )
 
     const cssObject = transformTwStyleObjectToStyleObject(
       mappedTwCssObjects,

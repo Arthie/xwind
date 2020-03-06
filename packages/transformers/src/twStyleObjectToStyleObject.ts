@@ -1,5 +1,5 @@
 import merge from "lodash/merge"
-import { TwCssObject, AtRule, Rule } from "./transformerTypes"
+import { TwCssObject, AtRule, Rule, StyleObject } from "./transformersTypes"
 
 const getPseudoClass = (pseudoPrefix: string, classPrefix: string) => {
   switch (pseudoPrefix) {
@@ -54,30 +54,79 @@ export const applyVariants = (
       continue
     }
 
-    throw new Error(`Utilitie with class '${variant}' not found`)
+    throw new Error(
+      `Utilitie with pseudo class '${variant}' not found, add variant to "tailwind.config.js"`
+    )
   }
 
   return variantTwCssObject
 }
 
+const getMediaScreenIndex = (
+  mediaScreens: {
+    [key: string]: string
+  },
+  mediaValue: string
+) => {
+  const mediaScreenValues = Object.values(mediaScreens)
+  const mediaScreenIndex = mediaScreenValues.findIndex(
+    mediaScreen => `@media ${mediaScreen}` === mediaValue
+  )
+  return mediaScreenIndex
+}
+
+export const sortStyleObject = (
+  cssObject: [string, string | Rule | AtRule][],
+  mediaScreens: {
+    [key: string]: string
+  }
+) =>
+  cssObject.sort(([first, firstValue], [second, secondValue]) => {
+    const firstValueType = typeof firstValue
+    const secondValueType = typeof secondValue
+
+    if ([firstValueType, secondValueType].includes("string")) {
+      if (firstValueType === "string" && secondValueType === "string") return 0
+      if (firstValueType === "string") return -1
+      if (secondValueType === "string") return 1
+    }
+
+    const firstIsMedia = first.startsWith("@media")
+    const secondIsMedia = second.startsWith("@media")
+
+    if (firstIsMedia || secondIsMedia) {
+      if (firstIsMedia && secondIsMedia) {
+        //sort media values
+        const firstIndex = getMediaScreenIndex(mediaScreens, first)
+        const secondIndex = getMediaScreenIndex(mediaScreens, second)
+        if (firstIndex > secondIndex) return 1
+        if (firstIndex < secondIndex) return -1
+      }
+
+      if (firstIsMedia) return 1
+      if (secondIsMedia) return -1
+    }
+
+    return 0
+  })
+
 export const transformTwStyleObjectToStyleObject = (
   components: Map<string, TwCssObject>,
-  twParsedClasses: Map<string, string[]>,
+  twParsedClasses: Array<[string, string[]]>,
   mediaScreens: {
     [key: string]: string
   },
   classPrefix: string
 ) => {
-  let cssObject = {}
+  const cssObjectArray: StyleObject[] = []
 
-  twParsedClasses.forEach((variants, twClass) => {
+  twParsedClasses.forEach(([twClass, variants]) => {
     const twCssObject = components.get(twClass)
     if (twCssObject) {
       if (variants.length === 0) {
-        cssObject = merge(cssObject, twCssObject.cssObject)
+        cssObjectArray.push(twCssObject.cssObject)
       } else {
-        cssObject = merge(
-          cssObject,
+        cssObjectArray.push(
           applyVariants(twCssObject, variants, mediaScreens, classPrefix)
         )
       }
@@ -86,5 +135,23 @@ export const transformTwStyleObjectToStyleObject = (
     }
   })
 
-  return cssObject
+  const mergedCssObject: StyleObject = merge({}, ...cssObjectArray)
+
+  const sortedStyleObject = sortStyleObject(
+    Object.entries(mergedCssObject),
+    mediaScreens
+  )
+
+  const sortedMediaQuerries = sortedStyleObject.map(item => {
+    const [name, rule] = item
+    if (name.startsWith("@media") && typeof rule !== "string") {
+      return [
+        name,
+        Object.fromEntries(sortStyleObject(Object.entries(rule), mediaScreens))
+      ]
+    }
+    return item
+  })
+
+  return Object.fromEntries(sortedMediaQuerries)
 }

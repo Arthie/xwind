@@ -10,7 +10,7 @@
     "noImplicitAny": true,
     "declarationDir": "dist",
     "declaration": true,
-    "target": "ES2019",
+    "target": "ES2018",
     "module": "CommonJS",
     "strict": true,
     "baseUrl": "./src",

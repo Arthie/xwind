@@ -1,5 +1,5 @@
 export * from "./postcssRootToTwObject"
 export * from "./styleObjectToCssString"
-export * from "./transformerTypes"
+export * from "./transformersTypes"
 export * from "./twObjectArrayToTwStyleObjectMap"
 export * from "./twStyleObjectToStyleObject"

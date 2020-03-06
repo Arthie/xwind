@@ -2,13 +2,13 @@
 const {
   twClassesComposer,
   twClassesComposerTag,
-  twClassesMapParser,
-  twClassesMapParserTag,
+  twClassesVariantsParser,
+  twClassesVariantsParserTag,
   twClassesSerializer,
   twClassesSerializerTag
 } = require("../dist/classComposer")
 
-const separator = ":"
+const SEPARATOR = ":"
 
 const inputArray = [
   "    text-red-100       hover:text-red-200    sm:focus:text-red-300   ",
@@ -31,91 +31,102 @@ const inputArrayComposerResult = [
 ]
 const inputArraySerializerResult =
   "text-red-100 hover:text-red-200 sm:focus:text-red-300 active:text-red-400 sm:hover:text-red-500 md:focus:text-red-600"
-const inputArrayMapParserResult = new Map([
+const inputArrayMapParserResult = [
   ["text-red-100", []],
   ["text-red-200", ["hover"]],
   ["text-red-300", ["focus", "sm"]],
   ["text-red-400", ["active"]],
   ["text-red-500", ["hover", "sm"]],
   ["text-red-600", ["focus", "md"]]
-])
+]
 
 test("Composer inputArray", () => {
-  expect(twClassesComposer(inputArray, separator)).toStrictEqual(
+  expect(twClassesComposer(inputArray, SEPARATOR)).toStrictEqual(
     inputArrayComposerResult
   )
 })
 
 test("Serializer inputArray", () => {
-  expect(twClassesSerializer(inputArray, separator)).toBe(
+  expect(twClassesSerializer(inputArray, SEPARATOR)).toBe(
     inputArraySerializerResult
   )
 })
 
 test("MapParser inputArray", () => {
-  expect(twClassesMapParser(inputArray, separator)).toStrictEqual(
+  expect(twClassesVariantsParser(inputArray, SEPARATOR)).toStrictEqual(
     inputArrayMapParserResult
   )
 })
 
-const inputSet = new Set(["  text-red-100", " text-red-200"])
+test("MapParser inputArray2", () => {
+  expect(twClassesVariantsParser(["text-red-100 hover:text-red-100"], SEPARATOR)).toStrictEqual(
+    [
+      ["text-red-100", []],
+      ["text-red-100", ["hover"]],
+    ]
+  )
+})
+
+const inputSet = new Set(["  text-red-100   ", " text-red-200"])
 
 const inputSetComposerResult = ["text-red-100", "text-red-200"]
 
 test("Composer inputSet", () => {
-  expect(twClassesComposer(inputSet, separator)).toStrictEqual(
+  expect(twClassesComposer(inputSet, SEPARATOR)).toStrictEqual(
     inputSetComposerResult
   )
 })
 
 test("Composer wrong input type", () => {
-  expect(() => twClassesComposer("", separator)).toThrow(/Array and Set/)
+  expect(() => twClassesComposer("", SEPARATOR)).toThrow(/Array and Set/)
 })
 
-test("Composer wrong separator type", () => {
+test("Composer wrong SEPARATOR type", () => {
   expect(() => twClassesComposer([])).toThrow(/Separator/)
 })
 
 test("Composer unsupported TwClass type", () => {
-  expect(() => twClassesComposer([["text-red-200"]], separator)).toThrow(
+  expect(() => twClassesComposer([{ hover: ["text-red-200"] }], SEPARATOR)).toThrow(
     /not supported/
   )
 })
 
 const inputComposerTagResult = [
+  "focus:bg-red-200",
   "text-red-100",
+  "bg-red-100",
+  "hover:text-red-200",
   "focus:text-red-300",
-  "hover:text-red-200"
 ]
 
 test("ComposerTag", () => {
   expect(
-    twClassesComposerTag(separator)` text-red-100 ${{
+    twClassesComposerTag(SEPARATOR)`${{ focus: "bg-red-200" }} text-red-100 bg-red-100 ${{
       hover: "text-red-200"
     }} focus:text-red-300`
   ).toStrictEqual(inputComposerTagResult)
 })
 
 const inputSerializerTagResult =
-  "text-red-100 focus:text-red-300 hover:text-red-200"
+  "text-red-100 hover:text-red-200 focus:text-red-300"
 
 test("SerializerTag", () => {
   expect(
-    twClassesSerializerTag(separator)` text-red-100 ${{
+    twClassesSerializerTag(SEPARATOR)` text-red-100 ${{
       hover: "text-red-200"
     }} focus:text-red-300`
   ).toBe(inputSerializerTagResult)
 })
 
-const inputArrayMapParserTagResult = new Map([
+const inputArrayMapParserTagResult = [
   ["text-red-100", []],
   ["text-red-200", ["hover"]],
   ["text-red-300", ["focus"]]
-])
+]
 
 test("MapParserTag", () => {
   expect(
-    twClassesMapParserTag(separator)` text-red-100 ${{
+    twClassesVariantsParserTag(SEPARATOR)` text-red-100 ${{
       hover: "text-red-200"
     }} focus:text-red-300`
   ).toStrictEqual(inputArrayMapParserTagResult)
