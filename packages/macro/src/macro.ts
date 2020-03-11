@@ -49,36 +49,37 @@ const tailwindcssInJsMacro: MacroHandler = ({
   //@ts-ignore
   config
 }) => {
-  // console.log(config)
-  if (!config?.format) {
-    config.format = defaultConfig.format
-  }
-  if (!config?.strictVariants) {
-    config.strictVariants = defaultConfig.strictVariants
-  }
+  try {
+    if (!config?.format) {
+      config.format = defaultConfig.format
+    }
+    if (!config?.strictVariants) {
+      config.strictVariants = defaultConfig.strictVariants
+    }
 
-  const tailwindConfig = resolveTailwindConfig()
-  if (!tailwindConfig) {
+    const tailwindConfig = resolveTailwindConfig()
+
+    const tailwind = tailwindcssInJs(tailwindConfig, config.strictVariants)
+
+    paths.forEach(referencePath => {
+      const args = getArgs(referencePath.parentPath)
+      const cssObj = tailwind(...args)
+
+      if (config.format === "object") {
+        const ast = template.expression(JSON.stringify(cssObj), { placeholderPattern: false })()
+        referencePath.parentPath.replaceWith(ast)
+      }
+
+      if (config.format === "string") {
+        const css = transformStyleObjectToCssString(cssObj)
+        referencePath.parentPath.replaceWith(t.stringLiteral(css))
+      }
+    })
+  } catch (err) {
     throw new MacroError(
-      "No config file found. Add `tailwind.config.js` to your project"
+      err
     )
   }
-  const tailwind = tailwindcssInJs(tailwindConfig)
-
-  paths.forEach(referencePath => {
-    const args = getArgs(referencePath.parentPath)
-    const cssObj = tailwind(...args)
-
-    if (config.format === "object") {
-      const ast = template.expression(JSON.stringify(cssObj))()
-      referencePath.parentPath.replaceWith(ast)
-    }
-
-    if (config.format === "string") {
-      const css = transformStyleObjectToCssString(cssObj)
-      referencePath.parentPath.replaceWith(t.stringLiteral(css))
-    }
-  })
 }
 
 export default createMacro(tailwindcssInJsMacro, {

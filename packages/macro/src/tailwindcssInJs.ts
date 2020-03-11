@@ -11,7 +11,7 @@ import {
   TwClass
 } from "@tailwindcssinjs/class-composer"
 
-export const tailwindcssInJs = (config: TailwindConfig) => {
+export const tailwindcssInJs = (config: TailwindConfig, strict: boolean) => {
   const {
     resolvedConfig,
     mediaScreens,
@@ -37,7 +37,8 @@ export const tailwindcssInJs = (config: TailwindConfig) => {
       mappedTwCssObjects,
       twParsedClassNames,
       mediaScreens,
-      resolvedConfig.prefix
+      resolvedConfig.prefix,
+      strict
     )
 
     return cssObject

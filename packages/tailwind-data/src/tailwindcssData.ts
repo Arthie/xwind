@@ -8,7 +8,7 @@ import corePlugins from "tailwindcss/lib/corePlugins"
 import processPlugins from "tailwindcss/lib/util/processPlugins"
 import defaultConfig from "tailwindcss/defaultConfig"
 
-export const defaultConfigFile = "./tailwind.config.js"
+export const DEFAULT_CONFIG_PATH = "./tailwind.config.js"
 
 export interface TailwindConfig {
   theme: {
@@ -27,14 +27,14 @@ export interface TailwindConfig {
   plugins: []
 }
 
-const resolveTailwindConfigPath = (configFile?: string) => {
-  const file = configFile ? configFile : defaultConfigFile
+const resolveTailwindConfigPath = (configPath?: string) => {
+  const filePath = configPath ?? DEFAULT_CONFIG_PATH
   try {
-    const defaultConfigPath = path.resolve(file)
+    const defaultConfigPath = path.resolve(filePath)
     fs.accessSync(defaultConfigPath)
     return defaultConfigPath
   } catch (err) {
-    throw new Error(`Could not find '${file}' | ${err}`)
+    throw new Error(`Could not find '${filePath}' | ${err}`)
   }
 }
 
@@ -44,7 +44,6 @@ export const resolveTailwindConfig = (configFile?: string): TailwindConfig => {
     const config = require(configPath)
     return config
   } catch (err) {
-    console.log("No tailwind config found using default tailwind config")
     return defaultConfig
   }
 }

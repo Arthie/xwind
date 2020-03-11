@@ -1,41 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`macros correct usage 1: correct usage 1 1`] = `
-
-import tw from '../dist/macro';
-const css = tw\`\${{ focus: "bg-red-200" }} text-red-100 bg-red-100 \${{
-  hover: "text-red-200"
-}} focus:text-red-300\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  ":focus": {
-    backgroundColor: "#fed7d7",
-    color: "#feb2b2"
-  },
-  color: "#fff5f5",
-  backgroundColor: "#fff5f5",
-  ":hover": {
-    color: "#fed7d7"
-  }
-}
-
-
-`;
-
 exports[`macros correct usage: correct usage 1`] = `
 
 import tw from '../dist/macro';
-const css = tw('text-red-400 bg-red-500', {hover:"bg-blue-500"});
+const css = tw('bg-blue-500 scale-0', {lg:"bg-blue-500", "lg:hover":"bg-red-300"}, 'lg:text-red-300',"focus:bg-green-300", "md:bg-green-300");
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fc8181",
-  backgroundColor: "#f56565",
-  ":hover": {
-    backgroundColor: "#4299e1"
+  backgroundColor: "#4299e1",
+  "-TransformScaleX": "0",
+  "-TransformScaleY": "0",
+  "&:focus": {
+    backgroundColor: "#9ae6b4"
+  },
+  "@media (min-width: 768px)": {
+    backgroundColor: "#9ae6b4"
+  },
+  "@media (min-width: 1024px)": {
+    backgroundColor: "#4299e1",
+    color: "#feb2b2",
+    "&:hover": {
+      backgroundColor: "#feb2b2"
+    }
   }
 }
 

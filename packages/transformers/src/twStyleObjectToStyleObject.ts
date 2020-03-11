@@ -31,7 +31,8 @@ export const applyVariants = (
   mediaScreens: {
     [key: string]: string
   },
-  classPrefix: string
+  classPrefix: string,
+  strict: boolean
 ) => {
   let variantTwCssObject = twCssObject.cssObject
 
@@ -46,7 +47,7 @@ export const applyVariants = (
       continue
     }
 
-    if (twCssObject.variants?.includes(variant)) {
+    if (twCssObject.variants?.includes(variant) || !strict) {
       const pseudoClass = getPseudoClass(variant, classPrefix)
       variantTwCssObject = ({
         [pseudoClass]: variantTwCssObject
@@ -96,7 +97,6 @@ export const sortStyleObject = (
 
     if (firstIsMedia || secondIsMedia) {
       if (firstIsMedia && secondIsMedia) {
-        //sort media values
         const firstIndex = getMediaScreenIndex(mediaScreens, first)
         const secondIndex = getMediaScreenIndex(mediaScreens, second)
         if (firstIndex > secondIndex) return 1
@@ -116,7 +116,8 @@ export const transformTwStyleObjectToStyleObject = (
   mediaScreens: {
     [key: string]: string
   },
-  classPrefix: string
+  classPrefix: string,
+  strict: boolean
 ) => {
   const cssObjectArray: StyleObject[] = []
 
@@ -127,7 +128,13 @@ export const transformTwStyleObjectToStyleObject = (
         cssObjectArray.push(twCssObject.cssObject)
       } else {
         cssObjectArray.push(
-          applyVariants(twCssObject, variants, mediaScreens, classPrefix)
+          applyVariants(
+            twCssObject,
+            variants,
+            mediaScreens,
+            classPrefix,
+            strict
+          )
         )
       }
     } else {
