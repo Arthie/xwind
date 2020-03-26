@@ -1,11 +1,12 @@
 {
   "name": "@tailwindcssinjs/transformers",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "author": "Arthie",
   "description": "This package contains tailwindcssinjs transformers",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "dist"
+    "lib"
   ],
   "license": "MIT",
   "scripts": {
@@ -14,10 +15,5 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "postcss-js": "^2.0.3"
-  },
-  "devDependencies": {
-    "@types/lodash": "^4.14.149",
-    "postcss": "^7.0.27",
-    "typescript": "^3.8.3"
   }
 }

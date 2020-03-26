@@ -1,32 +1,9 @@
 {
+  "extends": "../../config/tsconfig",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedParameters": false,
-    "noImplicitReturns": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "noUnusedLocals": false,
-    "noImplicitAny": true,
-    "declarationDir": "dist",
-    "declaration": true,
-    "target": "ES2018",
-    "module": "CommonJS",
-    "strict": true,
-    "baseUrl": "./src",
-    "paths": {
-      "~*": [
-        "./*"
-      ]
-    },
-    "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./lib",
   },
   "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
+    "src"
   ]
 }

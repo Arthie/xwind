@@ -1,13 +1,14 @@
 {
   "name": "@tailwindcssinjs/macro",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "This package contains tailwindcssinjs babel macro",
   "keywords": [
     "babel-plugin-macros"
   ],
-  "main": "dist/macro.js",
+  "main": "lib/macro.js",
+  "types": "lib/macro.d.ts",
   "files": [
-    "dist"
+    "lib"
   ],
   "license": "MIT",
   "scripts": {
@@ -19,17 +20,9 @@
     "tailwindcss": "1.x"
   },
   "dependencies": {
-    "@tailwindcssinjs/class-composer": "workspace:*",
-    "@tailwindcssinjs/tailwindcss-data": "workspace:*",
-    "@tailwindcssinjs/transformers": "workspace:*",
+    "@tailwindcssinjs/class-composer": "0.1.0",
+    "@tailwindcssinjs/tailwindcss-data": "0.1.0",
+    "@tailwindcssinjs/transformers": "0.1.0",
     "babel-plugin-macros": "^2.8.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "@types/babel-plugin-macros": "^2.8.1",
-    "@types/babel__core": "7.1.6",
-    "babel-plugin-tester": "^8.0.1",
-    "jest": "^25.1.0",
-    "typescript": "^3.8.3"
   }
 }

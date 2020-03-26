@@ -1,0 +1,30 @@
+{
+	"name": "@tailwindcssinjs/vscode-extension",
+	"displayName": "Tailwindcssinjs vscode extension",
+	"version": "0.1.0",
+	"publisher": "arthie",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Arthie/tailwindcssinjs"
+	},
+	"bugs": {
+		"url": "https://github.com/Arthie/tailwindcssinjs/issues"
+	},
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"contributes": {
+		"typescriptServerPlugins": [
+			{
+				"name": "@tailwindcssinjs/typescript-plugin",
+				"enableForWorkspaceTypeScriptVersions": true
+			}
+		]
+	},
+	"dependencies": {
+		"@tailwindcssinjs/typescript-plugin": "*"
+	}
+}

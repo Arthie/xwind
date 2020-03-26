@@ -6,7 +6,7 @@ const {
   twClassesVariantsParserTag,
   twClassesSerializer,
   twClassesSerializerTag
-} = require("../dist/classComposer")
+} = require("../lib/classComposer")
 
 const SEPARATOR = ":"
 

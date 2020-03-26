@@ -1,0 +1,22 @@
+{
+  "name": "@tailwindcssinjs/typescript-plugin",
+  "version": "0.1.0",
+  "author": "Arthie",
+  "description": "This package contains tailwindcssinjs typescript language service plugin",
+  "main": "lib/plugin.js",
+  "types": "lib",
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "dependencies": {
+    "@tailwindcssinjs/tailwindcss-data": "0.1.0",
+    "@tailwindcssinjs/transformers": "0.1.0",
+    "typescript": "^3.8.3",
+    "typescript-template-language-service-decorator": "^2.2.0",
+    "vscode-languageserver-types": "^3.15.1"
+  }
+}

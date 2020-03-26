@@ -1,1 +1,1 @@
-declare module "postcss-js"
+declare module "postcss-js";
