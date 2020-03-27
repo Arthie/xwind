@@ -1,6 +1,6 @@
 # tailwindcssinjs
 
-This is a mono repo containing packages to integrate tailwind with css-in-js.
+This is a mono repo containing packages that make integrating tailwind with css-in-js libraries easier.
 
 Currently we have one package ready to be used in tailwind projects `@tailwindcssinjs/macro`. The other packages are for developing tailwind tools or adding editor tooling support.
 
@@ -49,6 +49,7 @@ yarn add @tailwindcssinjs/macro
 You can use `@tailwindcssinjs/macro` with your preferred CSS-in-JS library that supports css style objects.
 
 ### emotion
+
 ### styled-components
 
 ## Advanced Example

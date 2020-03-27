@@ -40,11 +40,13 @@ tw`hover:text-red-100`
 tw`text-red-100 hover:text-red-100`
 ```
 
-### variants object examples
+### utility variants object examples
 
-Tailwind class variants object applies the variant (object key) to the classes (object variant). This is usefull to structure a long list of classes.
+Tailwind class variants object applies the variant (object key) to utility classes (object variant). This is usefull to structure a long list of classes.
 
-`note:` pseudo variants cannot contain variant objects
+`note:`
+- pseudo variants cannot contain variant objects
+- this can only be used for utility classes
 
 ```js
 //pseudo variant
@@ -69,11 +71,11 @@ tw`${{hover: "text-red-100 bg-red-200"}}`
 tw("hover:text-red-100 hover:bg-red-200")
 
 //combined variant
-tw({lg:{hover:"text-red-100"}})
+tw({lg:{hover:"text-red-100"}, "md:focus": "text-red-200"})
 //tag combined variant
-tw`${lg:{hover:"text-red-100"}}`
+tw`${{lg:{hover:"text-red-100"}, "md:focus": "text-red-200"}}`
 //same output as
-tw("lg:hover:text-red-100")
+tw("lg:hover:text-red-100 md:focus:text-red-200")
 ```
 
 ### array examples
