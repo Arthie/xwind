@@ -22,7 +22,7 @@
     "@types/node": "^12.12.31",
     "@types/prettier": "1.19.1",
     "babel-plugin-tester": "^9.0.0",
-    "jest": "^25.2.1",
+    "jest": "^25.2.3",
     "postcss": "^7.0.27",
     "prettier": "^2.0.2",
     "tailwindcss": "^1.2.0",

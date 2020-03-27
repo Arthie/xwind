@@ -1,7 +1,5 @@
 import isPlainObject from "lodash/isPlainObject";
 
-export type TwClasses = TwClass[] | Set<TwClass>;
-
 export type TwClass = string | TwObject;
 
 export interface TwObject {
@@ -11,7 +9,10 @@ export interface TwObject {
 const twClassObjectComposer = (twClass: TwObject, separator: string) => {
   const composedTwClassObject: string[] = [];
   for (const twVariant in twClass) {
-    const twClasses = twClassesComposer([twClass[twVariant]], separator);
+    const twClasses = twClassesComposerFunction(
+      [twClass[twVariant]],
+      separator
+    );
 
     const twVariantClasses = twClasses.map(
       (value: string) => `${twVariant}${separator}${value}`
@@ -22,10 +23,13 @@ const twClassObjectComposer = (twClass: TwObject, separator: string) => {
   return composedTwClassObject;
 };
 
-export const twClassesComposer = (twClasses: TwClasses, separator: string) => {
-  if (!(twClasses instanceof Array || twClasses instanceof Set)) {
+export const twClassesComposerFunction = (
+  twClasses: TwClass[],
+  separator: string
+) => {
+  if (!(twClasses instanceof Array)) {
     throw new Error(
-      `Type of input ${twClasses} is invalid. Only Array and Set types are supported`
+      `Type of input ${twClasses} is invalid. Only Array type is supported`
     );
   }
 
@@ -36,7 +40,8 @@ export const twClassesComposer = (twClasses: TwClasses, separator: string) => {
   const composedTwClasses: string[] = [];
   const NOT_WHITE_SPACE_REGEXP = /\S+/g;
 
-  for (const twClass of twClasses) {
+  //flatten the array to make arrays possible as input
+  for (const twClass of twClasses.flat() as TwClass[]) {
     if (typeof twClass === "string") {
       const matchedTwClasses = twClass.match(NOT_WHITE_SPACE_REGEXP);
       if (matchedTwClasses) {
@@ -57,16 +62,18 @@ export const twClassesComposer = (twClasses: TwClasses, separator: string) => {
   return composedTwClasses;
 };
 
-export const twClassesSerializer = (twClasses: TwClasses, separator: string) =>
-  twClassesComposer(twClasses, separator).join(" ");
+export const twClassesSerializerFunction = (
+  twClasses: TwClass[],
+  separator: string
+) => twClassesComposerFunction(twClasses, separator).join(" ");
 
-export const twClassesVariantsParser = (
-  twClasses: TwClasses,
+export const twClassesVariantsParserFunction = (
+  twClasses: TwClass[],
   separator: string
 ) => {
   const parsedClassesVariants: Array<[string, string[]]> = [];
 
-  const composedTwClasses = twClassesComposer(twClasses, separator);
+  const composedTwClasses = twClassesComposerFunction(twClasses, separator);
 
   for (const composedTwClass of composedTwClasses) {
     const [twClass, ...variants] = composedTwClass.split(separator).reverse();
@@ -76,17 +83,17 @@ export const twClassesVariantsParser = (
   return parsedClassesVariants;
 };
 
-type TagFunction = (twClasses: TwClasses, separator: string) => any;
+type TwClassesFunction = (twClasses: TwClass[], separator: string) => any;
 
-const twClassFunctionTagFactory = <T extends TagFunction>(
-  twClassFunction: T
-) => (separator: string) => (
+const twClassTagFactory = <T extends TwClassesFunction>(twClassFunction: T) => (
+  separator: string
+) => (
   twClassTemplateStrings: TemplateStringsArray,
   ...twClassObjects: TwObject[]
 ): T => {
   //This code makes sure that input order is kept
   const twClassStrings = [...twClassTemplateStrings];
-  const twClasses: TwClasses = [];
+  const twClasses: TwClass[] = [];
   while (twClassStrings.length || twClassObjects.length) {
     const twClassString = twClassStrings.shift();
     const twClassObject = twClassObjects.shift();
@@ -101,14 +108,50 @@ const twClassFunctionTagFactory = <T extends TagFunction>(
   return twClassFunction(twClasses, separator);
 };
 
-export const twClassesComposerTag = twClassFunctionTagFactory(
-  twClassesComposer
+export const twClassesComposerTag = twClassTagFactory(
+  twClassesComposerFunction
 );
 
-export const twClassesSerializerTag = twClassFunctionTagFactory(
-  twClassesSerializer
+export const twClassesSerializerTag = twClassTagFactory(
+  twClassesSerializerFunction
 );
 
-export const twClassesVariantsParserTag = twClassFunctionTagFactory(
-  twClassesVariantsParser
+export const twClassesVariantsParserTag = twClassTagFactory(
+  twClassesVariantsParserFunction
+);
+
+const twClassFunctionTagFactory = (twClassesFunction: TwClassesFunction) => (
+  separator: string
+) => (...args: TwClass[] | [TemplateStringsArray, ...TwObject[]]) => {
+  const [arg1, ...rest] = args;
+
+  if (!(typeof arg1 === "string")) {
+    const isTag = !!(
+      arg1 &&
+      arg1.length > 0 &&
+      arg1.raw &&
+      arg1.raw.length === arg1.length &&
+      Object.isFrozen(arg1) &&
+      rest.length + 1 === arg1.length
+    );
+
+    if (isTag) {
+      return twClassTagFactory(twClassesFunction)(separator)(
+        arg1 as TemplateStringsArray,
+        ...(rest as TwObject[])
+      );
+    }
+  }
+
+  return twClassesFunction(args as TwClass[], separator);
+};
+
+export const twClassesComposer = twClassFunctionTagFactory(
+  twClassesComposerFunction
+);
+export const twClassesSerializer = twClassFunctionTagFactory(
+  twClassesSerializerFunction
+);
+export const twClassesVariantsParser = twClassFunctionTagFactory(
+  twClassesVariantsParserFunction
 );

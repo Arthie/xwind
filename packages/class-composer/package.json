@@ -2,7 +2,7 @@
   "name": "@tailwindcssinjs/class-composer",
   "version": "0.1.0",
   "author": "Arthie",
-  "description": "This package contains tailwindcssinjs class composer",
+  "description": "Simple utility functions for joining tailwindcss classNames together.",
   "main": "lib/classComposer.js",
   "types": "lib/classComposer.d.ts",
   "files": [

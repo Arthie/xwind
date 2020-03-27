@@ -1,11 +1,14 @@
 
 const {
   twClassesComposer,
+  twClassesComposerFunction,
   twClassesComposerTag,
   twClassesVariantsParser,
+  twClassesVariantsParserFunction,
   twClassesVariantsParserTag,
   twClassesSerializer,
-  twClassesSerializerTag
+  twClassesSerializerFunction,
+  twClassesSerializerTag,
 } = require("../lib/classComposer")
 
 const SEPARATOR = ":"
@@ -40,26 +43,46 @@ const inputArrayMapParserResult = [
   ["text-red-600", ["focus", "md"]]
 ]
 
-test("Composer inputArray", () => {
-  expect(twClassesComposer(inputArray, SEPARATOR)).toStrictEqual(
+test("ComposerFunction inputArray", () => {
+  expect(twClassesComposerFunction(inputArray, SEPARATOR)).toStrictEqual(
     inputArrayComposerResult
   )
 })
 
+test("Composer function spread args", () => {
+  expect(twClassesComposer(SEPARATOR)(...inputArray)).toStrictEqual(
+    inputArrayComposerResult
+  )
+})
+
+test("Composer function array args", () => {
+  expect(twClassesComposer(SEPARATOR)(inputArray)).toStrictEqual(
+    inputArrayComposerResult
+  )
+})
+
+test("Composer tag", () => {
+  expect(
+    twClassesComposer(SEPARATOR)`${{ focus: "bg-red-200" }} text-red-100 bg-red-100 ${{
+      hover: "text-red-200"
+    }} focus:text-red-300`
+  ).toStrictEqual(inputComposerTagResult)
+})
+
 test("Serializer inputArray", () => {
-  expect(twClassesSerializer(inputArray, SEPARATOR)).toBe(
+  expect(twClassesSerializerFunction(inputArray, SEPARATOR)).toBe(
     inputArraySerializerResult
   )
 })
 
 test("MapParser inputArray", () => {
-  expect(twClassesVariantsParser(inputArray, SEPARATOR)).toStrictEqual(
+  expect(twClassesVariantsParserFunction(inputArray, SEPARATOR)).toStrictEqual(
     inputArrayMapParserResult
   )
 })
 
 test("MapParser inputArray2", () => {
-  expect(twClassesVariantsParser(["text-red-100 hover:text-red-100"], SEPARATOR)).toStrictEqual(
+  expect(twClassesVariantsParserFunction(["text-red-100 hover:text-red-100"], SEPARATOR)).toStrictEqual(
     [
       ["text-red-100", []],
       ["text-red-100", ["hover"]],
@@ -67,28 +90,12 @@ test("MapParser inputArray2", () => {
   )
 })
 
-const inputSet = new Set(["  text-red-100   ", " text-red-200"])
-
-const inputSetComposerResult = ["text-red-100", "text-red-200"]
-
-test("Composer inputSet", () => {
-  expect(twClassesComposer(inputSet, SEPARATOR)).toStrictEqual(
-    inputSetComposerResult
-  )
-})
-
 test("Composer wrong input type", () => {
-  expect(() => twClassesComposer("", SEPARATOR)).toThrow(/Array and Set/)
+  expect(() => twClassesComposerFunction("", SEPARATOR)).toThrow(/Array/)
 })
 
 test("Composer wrong SEPARATOR type", () => {
-  expect(() => twClassesComposer([])).toThrow(/Separator/)
-})
-
-test("Composer unsupported TwClass type", () => {
-  expect(() => twClassesComposer([{ hover: ["text-red-200"] }], SEPARATOR)).toThrow(
-    /not supported/
-  )
+  expect(() => twClassesComposerFunction([])).toThrow(/Separator/)
 })
 
 const inputComposerTagResult = [
