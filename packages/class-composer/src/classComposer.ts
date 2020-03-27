@@ -1,4 +1,5 @@
 import isPlainObject from "lodash/isPlainObject";
+import "core-js/stable/array/flat";
 
 export type TwClass = string | TwObject;
 
@@ -91,22 +92,22 @@ const twClassTagFactory = <T extends TwClassesFunction>(twClassFunction: T) => (
   twClassTemplateStrings: TemplateStringsArray,
   ...twClassObjects: TwObject[]
 ): T => {
-  //This code makes sure that input order is kept
-  const twClassStrings = [...twClassTemplateStrings];
-  const twClasses: TwClass[] = [];
-  while (twClassStrings.length || twClassObjects.length) {
-    const twClassString = twClassStrings.shift();
-    const twClassObject = twClassObjects.shift();
-    if (twClassString) {
-      twClasses.push(twClassString);
+    //This code makes sure that input order is kept
+    const twClassStrings = [...twClassTemplateStrings];
+    const twClasses: TwClass[] = [];
+    while (twClassStrings.length || twClassObjects.length) {
+      const twClassString = twClassStrings.shift();
+      const twClassObject = twClassObjects.shift();
+      if (twClassString) {
+        twClasses.push(twClassString);
+      }
+      if (twClassObject) {
+        twClasses.push(twClassObject);
+      }
     }
-    if (twClassObject) {
-      twClasses.push(twClassObject);
-    }
-  }
 
-  return twClassFunction(twClasses, separator);
-};
+    return twClassFunction(twClasses, separator);
+  };
 
 export const twClassesComposerTag = twClassTagFactory(
   twClassesComposerFunction

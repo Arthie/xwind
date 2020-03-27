@@ -31,9 +31,9 @@ export const tailwindcssInJs = (config: TailwindConfig, strict: boolean) => {
   ]);
 
   return (...arg: TwClass[]) => {
-    const twParsedClassNames = twClassesVariantsParser(resolvedConfig.separator)(
-      ...arg
-    );
+    const twParsedClassNames = twClassesVariantsParser(
+      resolvedConfig.separator
+    )(...arg);
 
     const cssObject = transformTwStyleObjectToStyleObject(
       mappedTwCssObjects,

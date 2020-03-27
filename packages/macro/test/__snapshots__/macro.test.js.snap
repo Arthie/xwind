@@ -36,48 +36,23 @@ const css = {
 exports[`macros correct usage 2: correct usage 2 1`] = `
 
 import tw from '../lib/macro';
-const css = tw("text-red-100 hover:bg-blue-200");
+const css = tw("m-0 mr-4 text-red-400 transform");
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fff5f5",
-  "&:hover": {
-    backgroundColor: "#bee3f8",
-  },
-};
-
-
-`;
-
-exports[`macros correct usage: correct usage 1`] = `
-
-import tw from '../lib/macro';
-const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300', {lg:"bg-blue-500", "lg:hover":"bg-red-300"}, 'lg:text-red-300',"focus:bg-green-300", "md:bg-green-300");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  width: "50%",
-  backgroundColor: "#4299e1",
-  "-TransformScaleX": "0",
-  "-TransformScaleY": "0",
-  "&:active": {
-    backgroundColor: "#feb2b2",
-  },
-  "&:focus": {
-    backgroundColor: "#9ae6b4",
-  },
-  "@media (min-width: 768px)": {
-    backgroundColor: "#9ae6b4",
-  },
-  "@media (min-width: 1024px)": {
-    backgroundColor: "#4299e1",
-    color: "#feb2b2",
-    "&:hover": {
-      backgroundColor: "#feb2b2",
-    },
-  },
+  margin: "0",
+  marginRight: "1rem",
+  color: "#fc8181",
+  "-TransformTranslateX": "0",
+  "-TransformTranslateY": "0",
+  "-TransformRotate": "0",
+  "-TransformSkewX": "0",
+  "-TransformSkewY": "0",
+  "-TransformScaleX": "1",
+  "-TransformScaleY": "1",
+  transform:
+    "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))",
 };
 
 
