@@ -3,7 +3,10 @@
   "version": "0.1.1",
   "description": "This package contains tailwindcssinjs babel macro",
   "keywords": [
-    "babel-plugin-macros"
+    "babel-plugin-macros",
+    "tailwind",
+    "tailwindcss",
+    "css-in-js"
   ],
   "main": "lib/macro.js",
   "types": "lib/macro.d.ts",

@@ -12,13 +12,13 @@ import tw from "@tailwindcssinjs/macro"
 
 const styles = tw`text-red-100 hover:bg-blue-200`
 ```
-get turned into
+gets transformed into
 ```js
 const styles = {
   color: "#fff5f5",
   "&:hover": {
     backgroundColor: "#bee3f8",
-  },
+  }
 };
 ```
 
@@ -29,7 +29,7 @@ const styles = {
 - Default pseudo-class variants (limited support for custom variants  plugins)
 - Custom breakpoints/media queries
 - Typescript definitions
-- Flexible syntax to compose classes
+- Flexible syntax to compose utility classes
 
 
 ## Install
@@ -48,13 +48,9 @@ yarn add @tailwindcssinjs/macro
 
 You can use `@tailwindcssinjs/macro` with your preferred CSS-in-JS library that supports css style objects.
 
-### emotion
+### Advanced Example
 
-### styled-components
-
-## Advanced Example
-
-Codesandbox
+[Codesandbox nextjs + emotion](https://codesandbox.io/s/tailwindcssinjsmacro-button-example-ubdfh)
 
 ## License
 
