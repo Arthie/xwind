@@ -8,10 +8,10 @@ const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300', {lg:"bg-blue-500",
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
+  "--transform-scale-x": "0",
+  "--transform-scale-y": "0",
   width: "50%",
   backgroundColor: "#4299e1",
-  "-TransformScaleX": "0",
-  "-TransformScaleY": "0",
   "&:active": {
     backgroundColor: "#feb2b2",
   },
@@ -36,21 +36,21 @@ const css = {
 exports[`macros correct usage 2: correct usage 2 1`] = `
 
 import tw from '../lib/macro';
-const css = tw("m-0 mr-4 text-red-400 transform");
+const css = tw("m-0 mr-4 text-red-400 transform -translate-y-1/2");
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
+  "--transform-translate-x": "0",
+  "--transform-translate-y": "-50%",
+  "--transform-rotate": "0",
+  "--transform-skew-x": "0",
+  "--transform-skew-y": "0",
+  "--transform-scale-x": "1",
+  "--transform-scale-y": "1",
   margin: "0",
   marginRight: "1rem",
   color: "#fc8181",
-  "-TransformTranslateX": "0",
-  "-TransformTranslateY": "0",
-  "-TransformRotate": "0",
-  "-TransformSkewX": "0",
-  "-TransformSkewY": "0",
-  "-TransformScaleX": "1",
-  "-TransformScaleY": "1",
   transform:
     "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))",
 };

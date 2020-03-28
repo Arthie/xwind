@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/macro",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "This package contains tailwindcssinjs babel macro",
   "keywords": [
     "babel-plugin-macros",
@@ -25,7 +25,7 @@
   "dependencies": {
     "@tailwindcssinjs/class-composer": "0.1.1",
     "@tailwindcssinjs/tailwindcss-data": "0.1.0",
-    "@tailwindcssinjs/transformers": "0.1.1",
+    "@tailwindcssinjs/transformers": "0.1.2",
     "babel-plugin-macros": "^2.8.0"
   }
 }

@@ -89,7 +89,16 @@ export const sortStyleObject = (
     const secondValueType = typeof secondValue;
 
     if ([firstValueType, secondValueType].includes("string")) {
-      if (firstValueType === "string" && secondValueType === "string") return 0;
+      if (firstValueType === "string" && secondValueType === "string") {
+        const firstIsCssVar = first.startsWith("--")
+        const secondIsCssVar = second.startsWith("--")
+        if (firstIsCssVar && secondIsCssVar) return 0
+        if (firstIsCssVar) return -1
+        if (secondIsCssVar) return 1
+
+        return 0;
+      }
+
       if (firstValueType === "string") return -1;
       if (secondValueType === "string") return 1;
     }

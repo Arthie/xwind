@@ -15,7 +15,7 @@ pluginTester.default({
     `,
     "correct usage 2": `
       import tw from '../lib/macro';
-      const css = tw("m-0 mr-4 text-red-400 transform");
+      const css = tw("m-0 mr-4 text-red-400 transform -translate-y-1/2");
     `
   },
 });
