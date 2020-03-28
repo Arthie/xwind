@@ -4,8 +4,8 @@ import {
 } from "@tailwindcssinjs/tailwindcss-data";
 
 import {
-  transformPostcssRootToTwObject,
-  transformTwObjectArrayToTwStyleObjectMap,
+  transformPostcssRootToTwObjects,
+  transformTwObjectsToTwStyleObjectMap,
   transformTwStyleObjectToStyleObject,
 } from "@tailwindcssinjs/transformers";
 
@@ -22,10 +22,10 @@ export const tailwindcssInJs = (config: TailwindConfig, strict: boolean) => {
     utilitiesRoot,
   } = tailwindData(config);
 
-  const transformedComponents = transformPostcssRootToTwObject(componentsRoot);
-  const transformedUtilities = transformPostcssRootToTwObject(utilitiesRoot);
+  const transformedComponents = transformPostcssRootToTwObjects(componentsRoot);
+  const transformedUtilities = transformPostcssRootToTwObjects(utilitiesRoot);
 
-  const mappedTwCssObjects = transformTwObjectArrayToTwStyleObjectMap([
+  const mappedTwCssObjects = transformTwObjectsToTwStyleObjectMap([
     ...transformedComponents,
     ...transformedUtilities,
   ]);

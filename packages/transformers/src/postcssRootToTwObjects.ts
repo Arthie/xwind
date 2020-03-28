@@ -1,12 +1,14 @@
 import { Root } from "postcss";
-import postcssJs from "postcss-js";
 import { TwObject } from "./transformersTypes";
 
-export const transformPostcssRootToTwObject = (root: Root) => {
+//@ts-ignore
+import objectify from "./postcssjs-objectify"
+
+export const transformPostcssRootToTwObjects = (root: Root) => {
   const twObjects: TwObject[] = [];
   root.walkRules((rule) => {
     const selector = rule.selector;
-    const decls = postcssJs.objectify(rule);
+    const decls = objectify(rule);
     if (rule.parent.type === "atrule") {
       if (rule.parent.name === "media") {
         twObjects.push({

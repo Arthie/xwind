@@ -8,6 +8,7 @@ export const parseSelector = (selector: string) => {
   const twClassSelector = pseudoSelector
     ? selector.replace(pseudoSelector, "")
     : selector;
+  //replace fixes classnames / like "w-1/2"
   const twClass = twClassSelector.substring(1).replace("\\", "");
   return {
     selector,
@@ -41,7 +42,7 @@ const transformTwObjectToTwCssObject = (twObject: TwObject) => {
   return TwCssObject;
 };
 
-export const transformTwObjectArrayToTwStyleObjectMap = (
+export const transformTwObjectsToTwStyleObjectMap = (
   twObjects: TwObject[]
 ) => {
   const mappedObject = new Map<string, TwCssObject>();
