@@ -1,10 +1,11 @@
 import path from "path";
 import fs from "fs";
-import postcss from "postcss";
+import postcss, { atRule } from "postcss";
 import "core-js/stable/object/from-entries";
 
 import resolveConfig from "tailwindcss/resolveConfig";
 import buildMediaQuery from "tailwindcss/lib/util/buildMediaQuery";
+import substituteVariantsAtRules from "tailwindcss/lib/lib/substituteVariantsAtRules";
 import corePlugins from "tailwindcss/lib/corePlugins";
 import processPlugins from "tailwindcss/lib/util/processPlugins";
 import defaultConfig from "tailwindcss/defaultConfig";
@@ -58,6 +59,46 @@ export const getMediaScreens = (config: TailwindConfig) => {
   return Object.fromEntries(buildScreens);
 };
 
+export const getPseudoVariants = (variantGenerators: any) => {
+  const pseudoVariants = [
+    "default",
+    "group-hover",
+    "hover",
+    "focus-within",
+    "focus",
+    "active",
+    "visited",
+    "disabled",
+    "first",
+    "last",
+    "odd",
+    "even",
+  ].concat(Object.keys(variantGenerators))
+
+  return pseudoVariants
+};
+
+export const applyPseudoVariant = (variantGenerators: any, config: TailwindConfig) => (pseudoVariant: string, decals: string) => {
+  const root = postcss.parse(`@variants ${pseudoVariant} {.Arthie {
+    ${decals}
+  }}`)
+
+  substituteVariantsAtRules(config, { variantGenerators })(root)
+
+  let pseudoRule: postcss.Rule;
+  root.walkRules((rule) => {
+    if (rule.selector === ".Arthie") {
+      rule.remove()
+    } else {
+      rule.selector = rule.selector.replace(/\S*(Arthie)/g, "&")
+      pseudoRule = rule
+    }
+  })
+
+  //@ts-ignore
+  return pseudoRule
+}
+
 export const processTailwindPlugins = (config: TailwindConfig) => {
   const processedPlugins = processPlugins(
     [...corePlugins(config), ...config.plugins],
@@ -65,6 +106,8 @@ export const processTailwindPlugins = (config: TailwindConfig) => {
   );
 
   return {
+    processedPlugins,
+    variantGenerators: processedPlugins.variantGenerators,
     baseRoot: postcss.root({ nodes: processedPlugins.base }),
     utilitiesRoot: postcss.root({ nodes: processedPlugins.utilities }),
     componentsRoot: postcss.root({ nodes: processedPlugins.components }),
@@ -73,12 +116,13 @@ export const processTailwindPlugins = (config: TailwindConfig) => {
 
 export const tailwindData = (config: TailwindConfig) => {
   const resolvedConfig = resolveConfig(config);
-
   const mediaScreens = getMediaScreens(resolvedConfig);
 
-  const { utilitiesRoot, componentsRoot, baseRoot } = processTailwindPlugins(
+  const { utilitiesRoot, componentsRoot, baseRoot, variantGenerators } = processTailwindPlugins(
     resolvedConfig
   );
+
+  const pseudoVariants = getPseudoVariants(variantGenerators)
 
   return {
     resolvedConfig,
@@ -86,5 +130,7 @@ export const tailwindData = (config: TailwindConfig) => {
     utilitiesRoot,
     baseRoot,
     mediaScreens,
+    pseudoVariants,
+    applyPseudoVariant: applyPseudoVariant(variantGenerators, resolvedConfig)
   };
 };

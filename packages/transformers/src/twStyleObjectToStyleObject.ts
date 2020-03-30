@@ -2,30 +2,10 @@ import merge from "lodash/merge";
 import "core-js/stable/object/from-entries";
 
 import { TwCssObject, AtRule, Rule, StyleObject } from "./transformersTypes";
-
-const getPseudoClass = (pseudoPrefix: string, classPrefix: string) => {
-  switch (pseudoPrefix) {
-    case "first":
-      return "&:first-child";
-    case "last":
-      return "&:last-child";
-    case "odd":
-      return "&:nth-child(odd)";
-    case "even":
-      return "&:nth-child(even)";
-    case "group-hover":
-      return `.${classPrefix}group:hover &`;
-    default:
-      //#other PseuldoClasses:
-      //hover
-      //focus
-      //active
-      //disabled
-      //visited
-      //focus-within
-      return `&:${pseudoPrefix}`;
-  }
-};
+import { transformStyleObjectToCssString } from "./styleObjectToCssString";
+import postcss, { Root } from "postcss";
+//@ts-ignore
+import objectify from "./postcssjs-objectify";
 
 export const applyVariants = (
   twCssObject: TwCssObject,
@@ -33,7 +13,8 @@ export const applyVariants = (
   mediaScreens: {
     [key: string]: string;
   },
-  classPrefix: string,
+  pseudoVariants: string[],
+  applyPseudoVariant: (pseudoVariant: string, decals: string) => postcss.Rule,
   strict: boolean
 ) => {
   let variantTwCssObject = twCssObject.cssObject;
@@ -49,11 +30,21 @@ export const applyVariants = (
       continue;
     }
 
-    if (twCssObject.variants?.includes(variant) || !strict) {
-      const pseudoClass = getPseudoClass(variant, classPrefix);
-      variantTwCssObject = ({
-        [pseudoClass]: variantTwCssObject,
-      } as unknown) as Rule;
+    if ((pseudoVariants.includes(variant) && twCssObject.variants?.includes(variant)) || !strict) {
+      const cssDecals = transformStyleObjectToCssString(variantTwCssObject)
+      const variantRule = applyPseudoVariant(variant, cssDecals);
+
+      variantTwCssObject = {
+        [variantRule.selector]: objectify(variantRule),
+      };
+
+      if (variantRule.parent.type === "atrule") {
+        const media = `@${variantRule.parent.name} ${variantRule.parent.params}`
+        //@ts-ignore
+        variantTwCssObject = {
+          [media]: variantTwCssObject
+        }
+      }
       continue;
     }
 
@@ -127,7 +118,8 @@ export const transformTwStyleObjectToStyleObject = (
   mediaScreens: {
     [key: string]: string;
   },
-  classPrefix: string,
+  pseudoVariants: string[],
+  applyPseudoVariant: (pseudoVariant: string, decals: string) => postcss.Rule,
   strict: boolean
 ) => {
   const cssObjectArray: StyleObject[] = [];
@@ -143,7 +135,8 @@ export const transformTwStyleObjectToStyleObject = (
             twCssObject,
             variants,
             mediaScreens,
-            classPrefix,
+            pseudoVariants,
+            applyPseudoVariant,
             strict
           )
         );

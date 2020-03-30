@@ -17,6 +17,8 @@ export const tailwindcssInJs = (config: TailwindConfig, strict: boolean) => {
   const {
     resolvedConfig,
     mediaScreens,
+    pseudoVariants,
+    applyPseudoVariant,
     componentsRoot,
     utilitiesRoot,
   } = tailwindData(config);
@@ -38,7 +40,8 @@ export const tailwindcssInJs = (config: TailwindConfig, strict: boolean) => {
       mappedTwCssObjects,
       twParsedClassNames,
       mediaScreens,
-      resolvedConfig.prefix,
+      pseudoVariants,
+      applyPseudoVariant,
       strict
     );
 

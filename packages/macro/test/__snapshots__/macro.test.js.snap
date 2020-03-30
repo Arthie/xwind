@@ -11,21 +11,21 @@ const css = {
   "--transform-scale-x": "0",
   "--transform-scale-y": "0",
   width: "50%",
-  backgroundColor: "#4299e1",
+  backgroundColor: "#3f83f8",
   "&:active": {
-    backgroundColor: "#feb2b2",
+    backgroundColor: "#f8b4b4",
   },
   "&:focus": {
-    backgroundColor: "#9ae6b4",
-  },
-  "@media (min-width: 768px)": {
-    backgroundColor: "#9ae6b4",
+    backgroundColor: "#84e1bc",
   },
   "@media (min-width: 1024px)": {
-    color: "#feb2b2",
+    backgroundColor: "#84e1bc",
+  },
+  "@media (min-width: 1280px)": {
+    color: "#f8b4b4",
     "&:hover": {
-      color: "#fed7d7",
-      backgroundColor: "#4299e1",
+      color: "#fbd5d5",
+      backgroundColor: "#3f83f8",
     },
   },
 };
@@ -50,13 +50,13 @@ const css = {
   "--transform-scale-y": "1",
   margin: "0",
   marginRight: "1rem",
-  color: "#fc8181",
+  color: "#f98080",
   transform:
     "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))",
-  "@media (min-width: 1024px)": {
+  "@media (min-width: 1280px)": {
     "&:hover": {
-      backgroundColor: "#ebf8ff",
-      color: "#fed7d7",
+      backgroundColor: "#e1effe",
+      color: "#fbd5d5",
     },
   },
 };
@@ -67,7 +67,7 @@ const css = {
 exports[`macros correct usage tagged: correct usage tagged 1`] = `
 
 import tw from '../lib/macro';
-const css = tw\`m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]\`;
+const css = tw\`supports-grid:text-blue-400 important[text-green-200 bg-red-300] m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]\`;
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -81,13 +81,22 @@ const css = {
   "--transform-scale-y": "1",
   margin: "0",
   marginRight: "1rem",
-  color: "#fc8181",
+  color: "#f98080",
   transform:
     "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))",
-  "@media (min-width: 1024px)": {
+  "@supports (display: grid)": {
+    "&": {
+      color: "#76a9fa",
+    },
+  },
+  "&": {
+    color: "#bcf0da !important",
+    backgroundColor: "#f8b4b4 !important",
+  },
+  "@media (min-width: 1280px)": {
     "&:hover": {
-      backgroundColor: "#ebf8ff",
-      color: "#fed7d7",
+      backgroundColor: "#e1effe",
+      color: "#fbd5d5",
     },
   },
 };
