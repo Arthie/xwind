@@ -34,7 +34,7 @@ const styles = {
 
 ## Install
 
-Prerequisite: use babel with your bundler and have babel macros installed
+Prerequisite: use babel with your bundler also have babel macros and tailwindcss installed
 
 ```bash
 # with npm

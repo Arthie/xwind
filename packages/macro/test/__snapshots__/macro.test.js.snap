@@ -3,7 +3,7 @@
 exports[`macros correct usage 1: correct usage 1 1`] = `
 
 import tw from '../lib/macro';
-const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300', {lg:"bg-blue-500", "lg:hover":"bg-red-300"}, 'lg:text-red-300',"focus:bg-green-300", "md:bg-green-300");
+const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', 'lg:text-red-300',"focus:bg-green-300", "md:bg-green-300");
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -22,10 +22,10 @@ const css = {
     backgroundColor: "#9ae6b4",
   },
   "@media (min-width: 1024px)": {
-    backgroundColor: "#4299e1",
     color: "#feb2b2",
     "&:hover": {
-      backgroundColor: "#feb2b2",
+      color: "#fed7d7",
+      backgroundColor: "#4299e1",
     },
   },
 };
@@ -36,7 +36,7 @@ const css = {
 exports[`macros correct usage 2: correct usage 2 1`] = `
 
 import tw from '../lib/macro';
-const css = tw("m-0 mr-4 text-red-400 transform -translate-y-1/2");
+const css = tw("m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]");
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -53,6 +53,43 @@ const css = {
   color: "#fc8181",
   transform:
     "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))",
+  "@media (min-width: 1024px)": {
+    "&:hover": {
+      backgroundColor: "#ebf8ff",
+      color: "#fed7d7",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros correct usage tagged: correct usage tagged 1`] = `
+
+import tw from '../lib/macro';
+const css = tw\`m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--transform-translate-x": "0",
+  "--transform-translate-y": "-50%",
+  "--transform-rotate": "0",
+  "--transform-skew-x": "0",
+  "--transform-skew-y": "0",
+  "--transform-scale-x": "1",
+  "--transform-scale-y": "1",
+  margin: "0",
+  marginRight: "1rem",
+  color: "#fc8181",
+  transform:
+    "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))",
+  "@media (min-width: 1024px)": {
+    "&:hover": {
+      backgroundColor: "#ebf8ff",
+      color: "#fed7d7",
+    },
+  },
 };
 
 

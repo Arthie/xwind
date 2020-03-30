@@ -2,7 +2,7 @@ import { Root } from "postcss";
 import { TwObject } from "./transformersTypes";
 
 //@ts-ignore
-import objectify from "./postcssjs-objectify"
+import objectify from "./postcssjs-objectify";
 
 export const transformPostcssRootToTwObjects = (root: Root) => {
   const twObjects: TwObject[] = [];

@@ -40,44 +40,6 @@ tw`hover:text-red-100`
 tw`text-red-100 hover:text-red-100`
 ```
 
-### utility variants object examples
-
-Tailwind class variants object applies the variant (object key) to utility classes (object variant). This is usefull to structure a long list of classes.
-
-`note:`
-- pseudo variants cannot contain variant objects
-- this can only be used for utility classes
-
-```js
-//pseudo variant
-tw({hover: "text-red-100"})
-//tagged pseudo variant
-tw`${{hover: "text-red-100"}}`
-//same output as
-tw("hover:text-red-100")
-
-//media variant
-tw({lg:"text-red-100"})
-//tagged media variant
-tw`${{lg:"text-red-100"}}`
-//same output as
-tw("lg:text-red-100")
-
-//variant to all classes
-tw({hover: "text-red-100 bg-red-200"})
-//tag variant to all classes
-tw`${{hover: "text-red-100 bg-red-200"}}`
-//same output as
-tw("hover:text-red-100 hover:bg-red-200")
-
-//combined variant
-tw({lg:{hover:"text-red-100"}, "md:focus": "text-red-200"})
-//tag combined variant
-tw`${{lg:{hover:"text-red-100"}, "md:focus": "text-red-200"}}`
-//same output as
-tw("lg:hover:text-red-100 md:focus:text-red-200")
-```
-
 ### array examples
 
 You can pass as many arguments as you want or pass an array of arguments
@@ -102,13 +64,6 @@ Takes class arguments or template and returns a string array of tailwind classna
 import { twClassesComposer } from "@tailwindcssinjs/class-composer"
 
 twClassesComposer("text-red-100 hover:bg-red-200 sm:active:bg-red-300");
-// OR
-twClassesComposer`text-red-100 hover:bg-red-200 sm:active:bg-red-300`;
-
-//only function arguments
-twClassesComposerFunction("text-red-100 hover:bg-red-200 sm:active:bg-red-300");
-//only tagged template
-twClassesComposerTag`text-red-100 hover:bg-red-200 sm:active:bg-red-300`;
 
 //Result: [ "text-red-100", "hover:bg-red-200", "sm:active:bg-red-300" ]
 ```
@@ -121,13 +76,6 @@ Takes class arguments or template and returns a string with tailwind classnames
 import { twSerializer } from "@tailwindcssinjs/class-composer"
 
 twSerializer("text-red-100 hover:bg-red-200 sm:active:bg-red-300");
-// OR
-twSerializer`text-red-100 hover:bg-red-200 sm:active:bg-red-300`;
-
-//only function arguments
-twSerializerFunction("text-red-100 hover:bg-red-200 sm:active:bg-red-300");
-//only tagged template
-twSerializerTag`text-red-100 hover:bg-red-200 sm:active:bg-red-300`;
 
 //Result: "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
 ```
@@ -140,13 +88,6 @@ Takes tailwind class arguments or template and returns an array of tailwind clas
 import { twClassesVariantsParser } from "@tailwindcssinjs/class-composer"
 
 twClassesVariantsParser("text-red-100 hover:bg-red-200 sm:active:bg-red-300");
-// OR
-twClassesVariantsParser`text-red-100 hover:bg-red-200 sm:active:bg-red-300`;
-
-//only function arguments
-twClassesVariantsParserFunction("text-red-100 hover:bg-red-200 sm:active:bg-red-300");
-//only tagged template
-twClassesVariantsParserTag`text-red-100 hover:bg-red-200 sm:active:bg-red-300`;
 
 //Result: [
 //   ["text-red-100", []],

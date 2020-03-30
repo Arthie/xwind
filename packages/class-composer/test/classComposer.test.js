@@ -1,27 +1,19 @@
 
 const {
   twClassesComposer,
-  twClassesComposerFunction,
-  twClassesComposerTag,
   twClassesVariantsParser,
-  twClassesVariantsParserFunction,
-  twClassesVariantsParserTag,
-  twClassesSerializer,
-  twClassesSerializerFunction,
-  twClassesSerializerTag,
+  twClassesSerializer
 } = require("../lib/classComposer")
 
 const SEPARATOR = ":"
 
 const inputArray = [
   "    text-red-100       hover:text-red-200    sm:focus:text-red-300   ",
-  {
-    active: "  text-red-400  ",
-    sm: {
-      hover: "  text-red-500"
-    },
-    "md:focus": " text-red-600    "
-  }
+  `
+    active[text-red-400]
+    sm:hover[text-red-500]
+    md:focus[text-red-600]
+  `
 ]
 
 const inputArrayComposerResult = [
@@ -44,7 +36,7 @@ const inputArrayMapParserResult = [
 ]
 
 test("ComposerFunction inputArray", () => {
-  expect(twClassesComposerFunction(inputArray, SEPARATOR)).toStrictEqual(
+  expect(twClassesComposer(SEPARATOR)(inputArray)).toStrictEqual(
     inputArrayComposerResult
   )
 })
@@ -55,34 +47,28 @@ test("Composer function spread args", () => {
   )
 })
 
-test("Composer function array args", () => {
-  expect(twClassesComposer(SEPARATOR)(inputArray)).toStrictEqual(
-    inputArrayComposerResult
-  )
-})
-
 test("Composer tag", () => {
   expect(
-    twClassesComposer(SEPARATOR)`${{ focus: "bg-red-200" }} text-red-100 bg-red-100 ${{
-      hover: "text-red-200"
-    }} focus:text-red-300`
-  ).toStrictEqual(inputComposerTagResult)
+    twClassesComposer(SEPARATOR)`focus[bg-red-200] text-red-100 bg-red-100
+    hover[text-red-200]
+    focus[text-red-300]`
+  ).toStrictEqual(["focus:bg-red-200", "text-red-100", "bg-red-100", "hover:text-red-200", "focus:text-red-300"])
 })
 
 test("Serializer inputArray", () => {
-  expect(twClassesSerializerFunction(inputArray, SEPARATOR)).toBe(
+  expect(twClassesSerializer(SEPARATOR)(inputArray)).toBe(
     inputArraySerializerResult
   )
 })
 
 test("MapParser inputArray", () => {
-  expect(twClassesVariantsParserFunction(inputArray, SEPARATOR)).toStrictEqual(
+  expect(twClassesVariantsParser(SEPARATOR)(inputArray)).toStrictEqual(
     inputArrayMapParserResult
   )
 })
 
 test("MapParser inputArray2", () => {
-  expect(twClassesVariantsParserFunction(["text-red-100 hover:text-red-100"], SEPARATOR)).toStrictEqual(
+  expect(twClassesVariantsParser(SEPARATOR)(["text-red-100 hover:text-red-100"])).toStrictEqual(
     [
       ["text-red-100", []],
       ["text-red-100", ["hover"]],
@@ -90,51 +76,6 @@ test("MapParser inputArray2", () => {
   )
 })
 
-test("Composer wrong input type", () => {
-  expect(() => twClassesComposerFunction("", SEPARATOR)).toThrow(/Array/)
-})
-
 test("Composer wrong SEPARATOR type", () => {
-  expect(() => twClassesComposerFunction([])).toThrow(/Separator/)
-})
-
-const inputComposerTagResult = [
-  "focus:bg-red-200",
-  "text-red-100",
-  "bg-red-100",
-  "hover:text-red-200",
-  "focus:text-red-300",
-]
-
-test("ComposerTag", () => {
-  expect(
-    twClassesComposerTag(SEPARATOR)`${{ focus: "bg-red-200" }} text-red-100 bg-red-100 ${{
-      hover: "text-red-200"
-    }} focus:text-red-300`
-  ).toStrictEqual(inputComposerTagResult)
-})
-
-const inputSerializerTagResult =
-  "text-red-100 hover:text-red-200 focus:text-red-300"
-
-test("SerializerTag", () => {
-  expect(
-    twClassesSerializerTag(SEPARATOR)` text-red-100 ${{
-      hover: "text-red-200"
-    }} focus:text-red-300`
-  ).toBe(inputSerializerTagResult)
-})
-
-const inputArrayMapParserTagResult = [
-  ["text-red-100", []],
-  ["text-red-200", ["hover"]],
-  ["text-red-300", ["focus"]]
-]
-
-test("MapParserTag", () => {
-  expect(
-    twClassesVariantsParserTag(SEPARATOR)` text-red-100 ${{
-      hover: "text-red-200"
-    }} focus:text-red-300`
-  ).toStrictEqual(inputArrayMapParserTagResult)
+  expect(() => twClassesComposer([])).toThrow(/Separator/)
 })

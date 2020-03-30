@@ -474,14 +474,6 @@
   dependencies:
     type-detect "4.0.8"
 
-"@tailwindcssinjs/transformers@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/transformers/-/transformers-0.1.0.tgz#fc00f6896e19389f8ffeb9870ccfdccb10535cce"
-  integrity sha512-jnG+VCoUtTBkMgke8sTmRW4D1XD9r6ukBawEqKpZ9aUiVuJ9KNI7SFNe9zoD/5hPmjD26XCqyDz38ShEC5GXWQ==
-  dependencies:
-    lodash "^4.17.15"
-    postcss-js "^2.0.3"
-
 "@types/babel-plugin-macros@^2.8.1":
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/@types/babel-plugin-macros/-/babel-plugin-macros-2.8.1.tgz#fe7e732fa6ea13a0576a0fb4c306a2e75808f431"

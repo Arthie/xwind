@@ -42,9 +42,7 @@ const transformTwObjectToTwCssObject = (twObject: TwObject) => {
   return TwCssObject;
 };
 
-export const transformTwObjectsToTwStyleObjectMap = (
-  twObjects: TwObject[]
-) => {
+export const transformTwObjectsToTwStyleObjectMap = (twObjects: TwObject[]) => {
   const mappedObject = new Map<string, TwCssObject>();
   for (const twObject of twObjects) {
     const { twClass } = parseSelector(twObject.selector);

@@ -11,7 +11,6 @@ import {
 
 import {
   twClassesVariantsParser,
-  TwClass,
 } from "@tailwindcssinjs/class-composer";
 
 export const tailwindcssInJs = (config: TailwindConfig, strict: boolean) => {
@@ -30,7 +29,7 @@ export const tailwindcssInJs = (config: TailwindConfig, strict: boolean) => {
     ...transformedUtilities,
   ]);
 
-  return (...arg: TwClass[]) => {
+  return (...arg: string[]) => {
     const twParsedClassNames = twClassesVariantsParser(
       resolvedConfig.separator
     )(...arg);
