@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/macro",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "This package contains tailwindcssinjs babel macro",
   "keywords": [
     "babel-plugin-macros",
@@ -14,6 +14,9 @@
     "lib"
   ],
   "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
     "build": "tsc --build",
     "test": "yarn run build && yarn run jest",
@@ -25,7 +28,7 @@
   "dependencies": {
     "@tailwindcssinjs/class-composer": "0.1.2",
     "@tailwindcssinjs/tailwindcss-data": "0.1.1",
-    "@tailwindcssinjs/transformers": "0.1.3",
+    "@tailwindcssinjs/transformers": "0.1.4",
     "babel-plugin-macros": "^2.8.0"
   }
 }
