@@ -47,9 +47,9 @@ with css-in-js libraries.
 
 ## Usage
 
-You can use `@tailwindcssinjs/macro` with your preferred CSS-in-JS library that supports css style objects.
+You can use `@tailwindcssinjs/macro` with your preferred CSS-in-JS library that supports css objects styles.
 
-`Note` you will need to restart dev server when changes are made to `./tailwind.config.js` and clear the babel cache
+`Note` you will need to restart dev server when changes are made to `./tailwind.config.js` and maybe clear the babel cache
 
 ## Install
 
