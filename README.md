@@ -75,7 +75,7 @@ import "tailwindcss/dist/base.min.css";
 ```bash
 npx tailwindcss init
 ```
-Check out the [Tailwind documentation](https://tailwindcss.com/) for customizing the Tailwind config file
+Check out the [Tailwind documentation](https://tailwindcss.com/docs/configuration) for customizing the Tailwind config file.
 
 ## Advanced Examples
 
