@@ -1,59 +1,65 @@
 import merge from "lodash/merge";
+//@ts-ignore
+const timsort = require("timsort");
 import "core-js/stable/object/from-entries";
 
-import { TwCssObject, AtRule, Rule, StyleObject } from "./transformersTypes";
+import { TwStyleObject, AtRule, Rule, StyleObject } from "./transformersTypes";
 import { transformStyleObjectToCssString } from "./styleObjectToCssString";
-import postcss, { Root } from "postcss";
+import postcss from "postcss";
 //@ts-ignore
 import objectify from "./postcssjs-objectify";
 
-export const applyVariants = (
-  twCssObject: TwCssObject,
-  variants: string[],
+export const applyTwClassVariants = (
+  twClass: string,
+  twVariants: string[],
+  twStyleObject: TwStyleObject,
   mediaScreens: {
     [key: string]: string;
   },
-  pseudoVariants: string[],
-  applyPseudoVariant: (pseudoVariant: string, decals: string) => postcss.Rule,
-  strict: boolean
+  variants: string[],
+  applyVariant: (variant: string, decals: string) => postcss.Rule,
 ) => {
-  let variantTwCssObject = twCssObject.cssObject;
+  if (twStyleObject.type !== "utility") {
+    throw new Error(`You cannot use a variant class "${twVariants.join(", ")}" with class "${twClass}"`)
+  }
 
-  for (const variant of variants) {
+  let variantStyleObject = twStyleObject.styleObject;
+
+  for (const variant of twVariants) {
     if (
-      twCssObject.variants?.includes("responsive") &&
+      //@ts-ignore
+      twStyleObject.variants.includes("responsive") &&
       Object.keys(mediaScreens).includes(variant)
     ) {
-      variantTwCssObject = {
-        [`@media ${mediaScreens[variant]}`]: variantTwCssObject,
+      variantStyleObject = {
+        [`@media ${mediaScreens[variant]}`]: variantStyleObject,
       } as AtRule;
       continue;
     }
 
-    if ((pseudoVariants.includes(variant) && twCssObject.variants?.includes(variant)) || !strict) {
-      const cssDecals = transformStyleObjectToCssString(variantTwCssObject)
-      const variantRule = applyPseudoVariant(variant, cssDecals);
+    if (variants.includes(variant)) {
+      const decals = transformStyleObjectToCssString(variantStyleObject);
+      const variantRule = applyVariant(variant, decals);
 
-      variantTwCssObject = {
+      variantStyleObject = {
         [variantRule.selector]: objectify(variantRule),
       };
 
       if (variantRule.parent.type === "atrule") {
-        const media = `@${variantRule.parent.name} ${variantRule.parent.params}`
-        //@ts-ignore
-        variantTwCssObject = {
-          [media]: variantTwCssObject
-        }
+        const media = `@${variantRule.parent.name} ${variantRule.parent.params}`;
+        variantStyleObject = {
+          [media]: variantStyleObject as AtRule
+        };
       }
       continue;
     }
 
     throw new Error(
-      `Utilitie with pseudo class '${variant}' not found, add variant to "tailwind.config.js"`
+      `Utilitie with variant class '${variant}' not found, add variant to "tailwind.config.js"`
     );
   }
 
-  return variantTwCssObject;
+  return variantStyleObject;
 };
 
 const getMediaScreenIndex = (
@@ -70,17 +76,19 @@ const getMediaScreenIndex = (
 };
 
 export const sortStyleObject = (
-  cssObject: [string, string | Rule | AtRule][],
+  styleObject: [string, string | Rule | AtRule][],
   mediaScreens: {
     [key: string]: string;
   }
-) =>
-  cssObject.sort(([first, firstValue], [second, secondValue]) => {
+): [string, string | Rule | AtRule][] => {
+  //@ts-ignore
+  timsort.sort(styleObject, ([first, firstValue], [second, secondValue]) => {
     const firstValueType = typeof firstValue;
     const secondValueType = typeof secondValue;
 
     if ([firstValueType, secondValueType].includes("string")) {
       if (firstValueType === "string" && secondValueType === "string") {
+        //move css-variables to the top
         const firstIsCssVar = first.startsWith("--");
         const secondIsCssVar = second.startsWith("--");
         if (firstIsCssVar && secondIsCssVar) return 0;
@@ -112,32 +120,34 @@ export const sortStyleObject = (
     return 0;
   });
 
+  return styleObject;
+};
+
 export const transformTwStyleObjectToStyleObject = (
-  components: Map<string, TwCssObject>,
-  twParsedClasses: Array<[string, string[]]>,
+  twStyleObjectMap: Map<string, TwStyleObject>,
+  twParsedClasses: [string, string[]][],
   mediaScreens: {
     [key: string]: string;
   },
-  pseudoVariants: string[],
-  applyPseudoVariant: (pseudoVariant: string, decals: string) => postcss.Rule,
-  strict: boolean
+  variants: string[],
+  applyVariant: (variant: string, decals: string) => postcss.Rule,
 ) => {
-  const cssObjectArray: StyleObject[] = [];
+  const styleObjectArray: StyleObject[] = [];
 
-  twParsedClasses.forEach(([twClass, variants]) => {
-    const twCssObject = components.get(twClass);
-    if (twCssObject) {
-      if (variants.length === 0) {
-        cssObjectArray.push(twCssObject.cssObject);
+  twParsedClasses.forEach(([twClass, twClassVariants]) => {
+    const twStyleObject = twStyleObjectMap.get(twClass);
+    if (twStyleObject) {
+      if (twClassVariants.length === 0) {
+        styleObjectArray.push(twStyleObject.styleObject);
       } else {
-        cssObjectArray.push(
-          applyVariants(
-            twCssObject,
-            variants,
+        styleObjectArray.push(
+          applyTwClassVariants(
+            twClass,
+            twClassVariants,
+            twStyleObject,
             mediaScreens,
-            pseudoVariants,
-            applyPseudoVariant,
-            strict
+            variants,
+            applyVariant
           )
         );
       }
@@ -146,7 +156,7 @@ export const transformTwStyleObjectToStyleObject = (
     }
   });
 
-  const mergedCssObject: StyleObject = merge({}, ...cssObjectArray);
+  const mergedCssObject: StyleObject = merge({}, ...styleObjectArray);
 
   const sortedStyleObject = sortStyleObject(
     Object.entries(mergedCssObject),

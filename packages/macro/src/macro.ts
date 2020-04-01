@@ -8,7 +8,6 @@ import { tailwindcssInJs } from "./tailwindcssInJs";
 
 const defaultConfig = {
   format: "object",
-  strictVariants: false,
 };
 
 const getArgs = (path: any) => {
@@ -55,13 +54,10 @@ const tailwindcssInJsMacro: MacroHandler = ({
     if (!config?.format) {
       config.format = defaultConfig.format;
     }
-    if (!config?.strictVariants) {
-      config.strictVariants = defaultConfig.strictVariants;
-    }
 
     const tailwindConfig = resolveTailwindConfig();
 
-    const tailwind = tailwindcssInJs(tailwindConfig, config.strictVariants);
+    const tailwind = tailwindcssInJs(tailwindConfig);
 
     paths.forEach((referencePath) => {
       const args = getArgs(referencePath.parentPath);

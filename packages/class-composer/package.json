@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/class-composer",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": "Arthie",
   "description": "Simple utility functions for joining tailwindcss classNames together.",
   "main": "lib/classComposer.js",
@@ -9,6 +9,9 @@
     "lib"
   ],
   "license": "MIT",
+  "//engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
     "build": "tsc --build",
     "test": "yarn run build && yarn run jest",

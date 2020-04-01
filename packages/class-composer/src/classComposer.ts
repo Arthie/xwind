@@ -1,61 +1,53 @@
 import "core-js/stable/array/flat";
 
-export const twClassesComposer = (
-  separator: string
-) => {
+export type TwClasses = string | TwClasses[];
+
+export const twClassesComposer = (separator: string) => {
   if (typeof separator !== "string") {
     throw new Error(`Separator "${separator}" must be of type String`);
   }
 
-  const NOT_WHITE_SPACE_REGEXP = /\S+/g;
-  const VARIANT_ARRAY_REGEXP = new RegExp(
+  const NOT_WHITE_SPACE_REGEX = /\S+/g;
+  const VARIANT_ARRAY_REGEX = new RegExp(
     `\\S+(${separator}\\w+)?(\\[((.|\\n)*?)\\])`,
     "g"
   );
+  const NESTED_VARIANT_REGEXP = /(\[([^\[\]]){0,}\[)|(\]([^\[\]]){0,}\])/g;
 
   const variantArrayReplacer = (match: string) => {
-    const [variant, twClassesString] = match.replace("]", "").split("[")
-    const twClasses = twClassesString.match(NOT_WHITE_SPACE_REGEXP)
-    let replacements = []
-    for (const twClass of twClasses ?? []) {
-      replacements.push(`${variant}${separator}${twClass}`)
+    //slice last char "]" and split on "["
+    const [variant, ...variantClasses] = match.slice(0, -1).split("[");
+    if (variantClasses.length !== 1) {
     }
-    return replacements.join(" ")
+    const twClasses = variantClasses[0].match(NOT_WHITE_SPACE_REGEX);
+    const replacements = [];
+    for (const twClass of twClasses ?? []) {
+      replacements.push(`${variant}${separator}${twClass}`);
+    }
+    return replacements.join(" ");
   };
 
-  return (...twClasses: Array<string | string[]>) => {
-    if (!(twClasses instanceof Array)) {
-      throw new Error(
-        `Type of input ${twClasses} is invalid. Only Array of strings type is supported`
-      );
-    }
+  return (...twClasses: TwClasses[]) => {
+    const twClassesString = twClasses.flat(Infinity).join(" ");
 
-    const twClassesString = twClasses.flat(Infinity).join(" ")
+    if (NESTED_VARIANT_REGEXP.test(twClassesString)) {
+      throw new Error(`Nested variant arrays are not allowed`);
+    }
 
     //replace variant arrays (e.g. lg:focus[text-red-100])
     const convertedClasses = twClassesString.replace(
-      VARIANT_ARRAY_REGEXP,
+      VARIANT_ARRAY_REGEX,
       variantArrayReplacer
     );
 
-    //remove whitespaces
-    return convertedClasses.match(NOT_WHITE_SPACE_REGEXP) ?? [];
-  }
+    return convertedClasses.match(NOT_WHITE_SPACE_REGEX) ?? [];
+  };
 };
 
-export const twClassesSerializer = (
-  separator: string
-) => {
-  const composer = twClassesComposer(separator)
-  return (...twClasses: string[]) => composer(twClasses).join(" ");
-}
-
-export const twClassesVariantsParser = (
-  separator: string
-) => {
-  const composer = twClassesComposer(separator)
-  return (...twClasses: string[]) => {
-    const parsedClassesVariants: Array<[string, string[]]> = [];
+export const twClassesVariantsParser = (separator: string) => {
+  const composer = twClassesComposer(separator);
+  return (...twClasses: TwClasses[]) => {
+    const parsedClassesVariants: [string, string[]][] = [];
     const composedTwClasses = composer(twClasses);
 
     for (const composedTwClass of composedTwClasses) {
@@ -64,5 +56,12 @@ export const twClassesVariantsParser = (
     }
 
     return parsedClassesVariants;
-  }
+  };
 };
+
+export const twClassesSerializer = (
+  separator: string
+) => {
+  const composer = twClassesComposer(separator);
+  return (...twClasses: TwClasses[]) => composer(twClasses).join(" ");
+}

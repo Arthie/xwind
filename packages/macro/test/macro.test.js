@@ -20,6 +20,26 @@ pluginTester.default({
     "correct usage tagged": `
       import tw from '../lib/macro';
       const css = tw\`supports-grid:text-blue-400 important[text-green-200 bg-red-300] m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]\`;
-    `
+    `,
+    "tailwind-ui ussage": `
+      import tw from '../lib/macro';
+      const css = tw\`relative w-full flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-300 transition duration-150 ease-in-out\`;
+    `,
+    "test screen": `
+      import tw from '../lib/macro';
+      const css = tw\`md2[text-red-200] bg-red-300\`;
+    `,
+    "components": `
+      import tw from '../lib/macro';
+      const css = tw\`container form-input\`
+    `,
+    "components error": {
+      code: `
+      import tw from '../lib/macro';
+      const css = tw\`md[container] form-input\`
+      `,
+      snapshot: true,
+      error: /use a variant/,
+    }
   },
 });

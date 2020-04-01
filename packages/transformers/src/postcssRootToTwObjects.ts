@@ -4,7 +4,7 @@ import { TwObject } from "./transformersTypes";
 //@ts-ignore
 import objectify from "./postcssjs-objectify";
 
-export const transformPostcssRootToTwObjects = (root: Root) => {
+export const transformPostcssRootToTwObjects = (root: Root, type: string) => {
   const twObjects: TwObject[] = [];
   root.walkRules((rule) => {
     const selector = rule.selector;
@@ -15,6 +15,7 @@ export const transformPostcssRootToTwObjects = (root: Root) => {
           selector,
           decls,
           atRule: `@media ${rule.parent.params}`,
+          type
         });
       }
 
@@ -23,14 +24,16 @@ export const transformPostcssRootToTwObjects = (root: Root) => {
           selector,
           decls,
           variants: rule.parent.params.split(", "),
+          type
         });
       }
     } else {
       twObjects.push({
         selector,
         decls,
+        type
       });
     }
   });
-  return twObjects;
+  return twObjects
 };

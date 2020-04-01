@@ -7,75 +7,66 @@ const {
 
 const SEPARATOR = ":"
 
-const inputArray = [
+const INPUT = [
   "    text-red-100       hover:text-red-200    sm:focus:text-red-300   ",
   `
-    active[text-red-400]
-    sm:hover[text-red-500]
-    md:focus[text-red-600]
+    active[text-red-400 text-red-500]
+    sm[hover:text-red-600]
+    md:focus[text-red-700]
   `
 ]
 
-const inputArrayComposerResult = [
+const COMPOSER_RESULT = [
   "text-red-100",
   "hover:text-red-200",
   "sm:focus:text-red-300",
   "active:text-red-400",
-  "sm:hover:text-red-500",
-  "md:focus:text-red-600"
+  "active:text-red-500",
+  "sm:hover:text-red-600",
+  "md:focus:text-red-700"
 ]
-const inputArraySerializerResult =
-  "text-red-100 hover:text-red-200 sm:focus:text-red-300 active:text-red-400 sm:hover:text-red-500 md:focus:text-red-600"
-const inputArrayMapParserResult = [
+
+test("classesComposer", () => {
+  expect(twClassesComposer(SEPARATOR)(INPUT)).toStrictEqual(
+    COMPOSER_RESULT
+  )
+})
+
+test("classesComposer: multiple args", () => {
+  expect(twClassesComposer(SEPARATOR)(...INPUT)).toStrictEqual(
+    COMPOSER_RESULT
+  )
+})
+
+const VARIANT_PARSER_RESULT = [
   ["text-red-100", []],
   ["text-red-200", ["hover"]],
   ["text-red-300", ["focus", "sm"]],
   ["text-red-400", ["active"]],
-  ["text-red-500", ["hover", "sm"]],
-  ["text-red-600", ["focus", "md"]]
+  ["text-red-500", ["active"]],
+  ["text-red-600", ["hover", "sm"]],
+  ["text-red-700", ["focus", "md"]]
 ]
 
-test("ComposerFunction inputArray", () => {
-  expect(twClassesComposer(SEPARATOR)(inputArray)).toStrictEqual(
-    inputArrayComposerResult
+test("classesVariantParser", () => {
+  expect(twClassesVariantsParser(SEPARATOR)(INPUT)).toStrictEqual(
+    VARIANT_PARSER_RESULT
   )
 })
 
-test("Composer function spread args", () => {
-  expect(twClassesComposer(SEPARATOR)(...inputArray)).toStrictEqual(
-    inputArrayComposerResult
+const SERIALIZER_RESULT = "text-red-100 hover:text-red-200 sm:focus:text-red-300 active:text-red-400 active:text-red-500 sm:hover:text-red-600 md:focus:text-red-700"
+
+test("classesSerializer", () => {
+  expect(twClassesSerializer(SEPARATOR)(INPUT)).toStrictEqual(
+    SERIALIZER_RESULT
   )
 })
 
-test("Composer tag", () => {
-  expect(
-    twClassesComposer(SEPARATOR)`focus[bg-red-200] text-red-100 bg-red-100
-    hover[text-red-200]
-    focus[text-red-300]`
-  ).toStrictEqual(["focus:bg-red-200", "text-red-100", "bg-red-100", "hover:text-red-200", "focus:text-red-300"])
-})
-
-test("Serializer inputArray", () => {
-  expect(twClassesSerializer(SEPARATOR)(inputArray)).toBe(
-    inputArraySerializerResult
-  )
-})
-
-test("MapParser inputArray", () => {
-  expect(twClassesVariantsParser(SEPARATOR)(inputArray)).toStrictEqual(
-    inputArrayMapParserResult
-  )
-})
-
-test("MapParser inputArray2", () => {
-  expect(twClassesVariantsParser(SEPARATOR)(["text-red-100 hover:text-red-100"])).toStrictEqual(
-    [
-      ["text-red-100", []],
-      ["text-red-100", ["hover"]],
-    ]
-  )
-})
 
 test("Composer wrong SEPARATOR type", () => {
   expect(() => twClassesComposer([])).toThrow(/Separator/)
+})
+
+test("No nested variants", () => {
+  expect(() => twClassesComposer(SEPARATOR)("sm[hover[text-red-200]]")).toThrow(/Nested variant/)
 })

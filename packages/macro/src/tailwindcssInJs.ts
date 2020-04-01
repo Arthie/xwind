@@ -11,38 +11,38 @@ import {
 
 import {
   twClassesVariantsParser,
+  TwClasses,
 } from "@tailwindcssinjs/class-composer";
 
-export const tailwindcssInJs = (config: TailwindConfig, strict: boolean) => {
+export const tailwindcssInJs = (config: TailwindConfig) => {
   const {
     resolvedConfig,
     mediaScreens,
-    pseudoVariants,
-    applyPseudoVariant,
+    variants,
+    applyVariant,
     componentsRoot,
     utilitiesRoot,
   } = tailwindData(config);
 
-  const transformedComponents = transformPostcssRootToTwObjects(componentsRoot);
-  const transformedUtilities = transformPostcssRootToTwObjects(utilitiesRoot);
+  const transformedComponents = transformPostcssRootToTwObjects(componentsRoot, "component");
+  const transformedUtilities = transformPostcssRootToTwObjects(utilitiesRoot, "utility");
 
-  const mappedTwCssObjects = transformTwObjectsToTwStyleObjectMap([
+  const tsStyleObjectMap = transformTwObjectsToTwStyleObjectMap([
     ...transformedComponents,
     ...transformedUtilities,
   ]);
 
-  return (...arg: string[]) => {
-    const twParsedClassNames = twClassesVariantsParser(
-      resolvedConfig.separator
-    )(...arg);
+  const variantParser = twClassesVariantsParser(resolvedConfig.separator);
+
+  return (...arg: TwClasses[]) => {
+    const twParsedClasses = variantParser(arg);
 
     const cssObject = transformTwStyleObjectToStyleObject(
-      mappedTwCssObjects,
-      twParsedClassNames,
+      tsStyleObjectMap,
+      twParsedClasses,
       mediaScreens,
-      pseudoVariants,
-      applyPseudoVariant,
-      strict
+      variants,
+      applyVariant,
     );
 
     return cssObject;

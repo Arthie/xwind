@@ -1,5 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`macros components error: components error 1`] = `
+
+import tw from '../lib/macro';
+const css = tw\`md[container] form-input\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test.js: Error: You cannot use a variant class "md" with class "container"
+
+`;
+
+exports[`macros components: components 1`] = `
+
+import tw from '../lib/macro';
+const css = tw\`container form-input\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  width: "100%",
+  appearance: "none",
+  backgroundColor: "#ffffff",
+  borderColor: "#d2d6dc",
+  borderWidth: "1px",
+  borderRadius: "0.375rem",
+  paddingTop: "0.5rem",
+  paddingRight: "0.75rem",
+  paddingBottom: "0.5rem",
+  paddingLeft: "0.75rem",
+  fontSize: "1rem",
+  lineHeight: "1.5",
+  "&::placeholder": {
+    color: "#9fa6b2",
+    opacity: "1",
+  },
+  "&:focus": {
+    outline: "none",
+    boxShadow: "0 0 0 3px rgba(164, 202, 254, 0.45)",
+    borderColor: "#a4cafe",
+  },
+  "@media (min-width: 668px)": {
+    maxWidth: "668px",
+  },
+  "@media (min-width: 868px)": {
+    maxWidth: "868px",
+  },
+  "@media (min-width: 640px)": {
+    maxWidth: "640px",
+  },
+  "@media (min-width: 1024px)": {
+    maxWidth: "1024px",
+  },
+  "@media (min-width: 1280px)": {
+    maxWidth: "1280px",
+  },
+  "@media (min-width: 1536px)": {
+    maxWidth: "1536px",
+  },
+};
+
+
+`;
+
 exports[`macros correct usage 1: correct usage 1 1`] = `
 
 import tw from '../lib/macro';
@@ -110,6 +173,67 @@ import tw from '../lib/macro'
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
+
+
+`;
+
+exports[`macros tailwind-ui ussage: tailwind-ui ussage 1`] = `
+
+import tw from '../lib/macro';
+const css = tw\`relative w-full flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-300 transition duration-150 ease-in-out\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  position: "relative",
+  width: "100%",
+  display: "flex",
+  justifyContent: "center",
+  paddingTop: "0.5rem",
+  paddingBottom: "0.5rem",
+  paddingLeft: "1rem",
+  paddingRight: "1rem",
+  borderWidth: "1px",
+  borderColor: "transparent",
+  fontSize: "0.875rem",
+  lineHeight: "1.25rem",
+  fontWeight: "500",
+  borderRadius: "0.375rem",
+  color: "#ffffff",
+  backgroundColor: "#5850ec",
+  transitionProperty:
+    "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
+  transitionDuration: "150ms",
+  transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+  "&:hover": {
+    backgroundColor: "#6875f5",
+  },
+  "&:focus": {
+    outline: "0",
+    borderColor: "#5145cd",
+    boxShadow: "0 0 0 3px rgba(180, 198, 252, 0.45)",
+  },
+  "&:active": {
+    backgroundColor: "#b4c6fc",
+  },
+};
+
+
+`;
+
+exports[`macros test screen: test screen 1`] = `
+
+import tw from '../lib/macro';
+const css = tw\`md2[text-red-200] bg-red-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundColor: "#f8b4b4",
+  "@media (min-width: 668px) and (max-width: 767px), (min-width: 868px)": {
+    color: "#fbd5d5",
+  },
+};
 
 
 `;
