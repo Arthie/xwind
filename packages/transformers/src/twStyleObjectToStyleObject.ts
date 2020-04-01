@@ -20,7 +20,7 @@ export const applyTwClassVariants = (
   applyVariant: (variant: string, decals: string) => postcss.Rule,
 ) => {
   if (twStyleObject.type !== "utility") {
-    throw new Error(`You cannot use a variant class "${twVariants.join(", ")}" with class "${twClass}"`)
+    throw new Error(`Variant class "${twVariants.join(", ")}" not allowed with class "${twClass}" of type "${twStyleObject.type}"`)
   }
 
   let variantStyleObject = twStyleObject.styleObject;
@@ -55,7 +55,7 @@ export const applyTwClassVariants = (
     }
 
     throw new Error(
-      `Utilitie with variant class '${variant}' not found, add variant to "tailwind.config.js"`
+      `Utility with variant class '${variant}' not found, add variant to "tailwind.config.js"`
     );
   }
 
@@ -152,7 +152,7 @@ export const transformTwStyleObjectToStyleObject = (
         );
       }
     } else {
-      throw new Error(`Utilitie with class '${twClass}' not found`);
+      throw new Error(`Class "${twClass}" not found. Check Tailwind config. Restart dev server and or clearing babel cache after Tailwind config changes.`);
     }
   });
 

@@ -88,7 +88,7 @@ const resolveTailwindConfigPath = (configPath?: string) => {
     fs.accessSync(defaultConfigPath);
     return defaultConfigPath;
   } catch (err) {
-    throw new Error(`Could not find '${filePath}' | ${err}`);
+    throw new Error(`File not found '${filePath}' | ${err}`);
   }
 };
 

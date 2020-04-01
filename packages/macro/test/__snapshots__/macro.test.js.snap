@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`macros class not found error: class not found error 1`] = `
+
+import tw from '../lib/macro';
+const css = tw\`lol\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test.js: Error: Class "lol" not found. Check Tailwind config. Restart dev server and or clearing babel cache after Tailwind config changes.
+
+`;
+
 exports[`macros components error: components error 1`] = `
 
 import tw from '../lib/macro';
@@ -235,5 +246,16 @@ const css = {
   },
 };
 
+
+`;
+
+exports[`macros variant class not allowed: variant class not allowed 1`] = `
+
+import tw from '../lib/macro';
+const css = tw\`md[container] form-input\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test.js: Error: Variant class "md" not allowed with class "container" of type "component"
 
 `;
