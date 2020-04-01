@@ -47,9 +47,9 @@ with css-in-js libraries.
 
 ## Usage
 
-You can use `@tailwindcssinjs/macro` with your preferred CSS-in-JS library that supports css style objects.
+You can use `@tailwindcssinjs/macro` with your preferred CSS-in-JS library that supports css objects styles.
 
-`Note` you will need to restart dev server when changes are made to `./tailwind.config.js` and clear the babel cache
+`Note` you will need to restart dev server when changes are made to `./tailwind.config.js` and maybe clear the babel cache
 
 ## Install
 
@@ -77,41 +77,64 @@ npx tailwindcss init
 ```
 Check out the [Tailwind documentation](https://tailwindcss.com/) for customizing the Tailwind config file
 
-## Advanced Example
+## Advanced Examples
 
-[Codesandbox](https://codesandbox.io/s/tailwindcssinjsmacro-simple-example-wds6l) for this example with [Nextjs](https://nextjs.org/) and [Emotion](https://emotion.sh/docs/introduction)
+[Codesandbox](https://codesandbox.io/s/tailwindcssinjsmacro-simple-example-wds6l) with Typescript, [Nextjs](https://nextjs.org/) and [Emotion](https://emotion.sh/docs/introduction)
 
+#### React + Emotion: Button component example
 ```js
-import { css } from "@emotion/core";
+import { css, cx } from "@emotion/css";
 import tw from "@tailwindcssinjs/macro";
 
-const styles = tw`
-  relative
-  w-full
-  flex justify-center
-  py-2 px-4
-  border border-transparent
-  text-sm leading-5 font-medium uppercase
-  rounded-md
-  text-white
-  bg-gray-600
-  hover:bg-gray-500
-  focus[outline-none border-gray-700 shadow-outline]
-  active:bg-gray-700
-  transition duration-150 ease-in-out
-`;
+const styles = {
+  button: css(tw`
+    relative
+    w-full
+    flex justify-center
+    py-2 px-4
+    border border-transparent
+    text-sm leading-5 font-medium
+    rounded-md
+    text-white
+    bg-gray-600
+    hover:bg-gray-500
+    focus[outline-none border-gray-700 shadow-outline-gray]
+    active:bg-gray-700
+    transition duration-150 ease-in-out
+  `),
+  iconWrapper: css(tw`
+    absolute left-0 inset-y-0
+    flex items-center
+    pl-3
+  `),
+  icon: css(tw`
+    h-5 w-5
+    text-gray-500
+    group-hover:text-gray-400
+    transition ease-in-out duration-150
+  `)
+};
 
-const Button = () => (
-  <button css={styles}>
-    Button
+const Button = ({ className, children, ...props }) => (
+  <button {...props} className={cx(styles.button, "group", className)}>
+    <span className={styles.iconWrapper}>
+      <svg className={styles.icon} fill="currentColor" viewBox="0 0 20 20">
+        <path
+          fillRule="evenodd"
+          d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </span>
+    {children}
   </button>
 );
 
-export default Button;
+export default Button
 ```
 
 ---
 
 ## License
 
-[MIT](LICENSE). Copyright (c) 2020 Arthur Petrie.
+[MIT](LICENSE). Copyright (c) 2020 [Arthur Petrie](https://arthurpetrie.com/).
