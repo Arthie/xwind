@@ -83,6 +83,7 @@ Check out the [Tailwind documentation](https://tailwindcss.com/) for customizing
 
 #### React + Emotion: Button component example
 ```js
+import React from "react";
 import { css, cx } from "@emotion/css";
 import tw from "@tailwindcssinjs/macro";
 
