@@ -38,7 +38,7 @@ with css-in-js libraries.
 
 ## Features
 - Solves all of the above problems
-- Compatible with **Tailwind** version **1.2.0** and above
+- Compatible with Tailwind version **1.2.0**
 - All utility and component classes
 - All variant utility classes
 - Full support for custom classes and `tailwind.config.js` customization
