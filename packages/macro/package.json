@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/macro",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "This package contains tailwindcssinjs babel macro",
   "keywords": [
     "babel-plugin-macros",
