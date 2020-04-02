@@ -49,7 +49,7 @@ with css-in-js libraries.
 
 You can use `@tailwindcssinjs/macro` with your preferred CSS-in-JS library that supports css objects styles.
 
-`Note` you will need to restart dev server when changes are made to `./tailwind.config.js` and maybe clear the babel cache
+**Note:** You will need to restart dev server when changes are made to `./tailwind.config.js` and maybe clear the babel cache.
 
 ## Install
 
@@ -70,6 +70,30 @@ yarn add -D @tailwindcssinjs/macro tailwindcss
 ```js
 import "tailwindcss/dist/base.min.css";
 ```
+If you use Tailwind plugins that register new base styles you will need to generate a custom base css file.
+<details>
+  <summary>Generate base css with Tailwind cli</summary>
+
+#### 3.1 Create a tailwind.base.css file
+```css
+/* tailwind.base.css */
+@tailwind base;
+```
+#### 3.2 Using Tailwind CLI
+
+```bash
+# Use the `npx tailwindcss help build` command to learn more about the various CLI options.
+npx tailwindcss build tailwind.base.css -o base.css
+```
+**Tip:** add this command to your package.json scripts section
+
+#### 3.3 Import base.css
+```js
+import "base.css";
+```
+
+
+</details>
 
 ### 4. Create a Tailwind config file (optional)
 ```bash
@@ -133,6 +157,14 @@ const Button = ({ className, children, ...props }) => (
 
 export default Button
 ```
+
+## Future
+
+I am currently working on:
+- a [typescript plugin](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/typescript-plugin) for editor tooling support
+- a [vcode extension](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/vscode-extension)
+- `Not started` a Tailwindcssinjs language server
+- `Not started` a codemod / transformer for Tailwind-ui html templates to react and @tailwindcssinjs/marco components
 
 ---
 
