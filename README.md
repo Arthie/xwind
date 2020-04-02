@@ -10,7 +10,7 @@ Currently, we have one package ready to be used in Tailwind projects `@tailwindc
 
 ## @tailwindcssinjs/macro Documentation
 
-`@tailwindcssinjs/marco` is a babel macro that turns Tailwind classes into css-in-js style objects.
+`@tailwindcssinjs/marco` is a babel macro that turns Tailwind classes into css object styles. These css object styles can be used with your favorite css-in-js library.
 
 ## Basic example
 ```js
@@ -44,6 +44,7 @@ with css-in-js libraries.
 - Full support for custom classes and `tailwind.config.js` customization
 - New syntax to apply variants to multiple utility classes
 - Supports Tailwind plugins (e.g. tailwind-ui, custom-forms)
+- No runtime impact all transformations happen during build time.
 
 ## Usage
 
@@ -57,7 +58,7 @@ You can use `@tailwindcssinjs/macro` with your preferred CSS-in-JS library that 
 - Have node 12 or above installed
 - Install and configure your bundler with [babel](https://github.com/babel/babel) and [babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros)
 
-### 2. Install packages
+### 1. Install packages
 ```bash
 # with npm
 npm install --save-dev @tailwindcssinjs/macro tailwindcss
@@ -66,20 +67,20 @@ npm install --save-dev @tailwindcssinjs/macro tailwindcss
 yarn add -D @tailwindcssinjs/macro tailwindcss
 ```
 
-### 3. Add Tailwind base css
+### 2. Add Tailwind base css
 ```js
 import "tailwindcss/dist/base.min.css";
 ```
-If you use Tailwind plugins that register new base styles you will need to generate a custom base css file.
+If you use Tailwind plugins that register new base styles you will need to generate a customized base css file.
 <details>
   <summary>Generate base css with Tailwind cli</summary>
 
-#### 3.1 Create a tailwind.base.css file
+#### 2.1 Create a tailwind.base.css file
 ```css
 /* tailwind.base.css */
 @tailwind base;
 ```
-#### 3.2 Using Tailwind CLI
+#### 2.2 Using Tailwind CLI
 
 ```bash
 # Use the `npx tailwindcss help build` command to learn more about the various CLI options.
@@ -87,7 +88,7 @@ npx tailwindcss build tailwind.base.css -o base.css
 ```
 **Tip:** add this command to your package.json scripts section
 
-#### 3.3 Import base.css
+#### 2.3 Import base.css
 ```js
 import "base.css";
 ```
@@ -95,7 +96,7 @@ import "base.css";
 
 </details>
 
-### 4. Create a Tailwind config file (optional)
+### 3. Create a Tailwind config file (optional)
 ```bash
 npx tailwindcss init
 ```
