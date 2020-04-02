@@ -10,7 +10,7 @@ Currently, we have one package ready to be used in Tailwind projects `@tailwindc
 
 ## @tailwindcssinjs/macro Documentation
 
-`@tailwindcssinjs/marco` is a babel macro that turns Tailwind classes into css object styles. These css object styles can be used with your favorite css-in-js library.
+`@tailwindcssinjs/marco` is a babel macro that transforms Tailwind classes into css object styles. These css object styles can be used with your favorite css-in-js library.
 
 ## Basic example
 ```js
