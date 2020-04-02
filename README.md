@@ -10,26 +10,29 @@ Currently, we have one package ready to be used in Tailwind projects `@tailwindc
 
 ## @tailwindcssinjs/macro Documentation
 
-`@tailwindcssinjs/marco` is a babel macro that transforms Tailwind classes into css object styles. These css object styles can be used with your favorite css-in-js library.
+`@tailwindcssinjs/macro` is a babel macro that transforms Tailwind classes into css object styles. These css object styles can be used with your favorite css-in-js library.
 
 ## Basic example
-```js
-import tw from "@tailwindcssinjs/macro"
 
-const styles = tw`text-red-100 hover:bg-blue-200`
+```js
+import tw from "@tailwindcssinjs/macro";
+
+const styles = tw`text-red-100 hover:bg-blue-200`;
 
 //Transformed into:
 const styles = {
   color: "#fff5f5",
   "&:hover": {
-    backgroundColor: "#bee3f8",
+    backgroundColor: "#bee3f8"
   }
 };
 ```
 
 ## Why does this package exist?
+
 This package was created to solve these problems. You may have encountered some when using Tailwind
 with css-in-js libraries.
+
 - You need to setup postCSS with your bundler
 - You have to use PurgeCSS to get minimal css file
 - No error when you misspell a class
@@ -37,6 +40,7 @@ with css-in-js libraries.
 - You have to specify the variants for utility classes in tailwind.config.js
 
 ## Features
+
 - Solves all of the above problems
 - Compatible with Tailwind version **1.2.0**
 - All utility and component classes
@@ -55,10 +59,12 @@ You can use `@tailwindcssinjs/macro` with your preferred CSS-in-JS library that 
 ## Install
 
 ### 0. Prerequisites:
+
 - Have node 12 or above installed
 - Install and configure your bundler with [babel](https://github.com/babel/babel) and [babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros)
 
 ### 1. Install packages
+
 ```bash
 # with npm
 npm install --save-dev @tailwindcssinjs/macro tailwindcss
@@ -68,38 +74,46 @@ yarn add -D @tailwindcssinjs/macro tailwindcss
 ```
 
 ### 2. Add Tailwind base css
+
 ```js
 import "tailwindcss/dist/base.min.css";
 ```
+
 If you use Tailwind plugins that register new base styles you will need to generate a customized base css file.
+
 <details>
   <summary>Generate base css with Tailwind cli</summary>
 
 #### 2.1 Create a tailwind.base.css file
+
 ```css
 /* tailwind.base.css */
 @tailwind base;
 ```
+
 #### 2.2 Using Tailwind CLI
 
 ```bash
 # Use the `npx tailwindcss help build` command to learn more about the various CLI options.
 npx tailwindcss build tailwind.base.css -o base.css
 ```
+
 **Tip:** add this command to your package.json scripts section
 
 #### 2.3 Import base.css
+
 ```js
 import "base.css";
 ```
 
-
 </details>
 
 ### 3. Create a Tailwind config file (optional)
+
 ```bash
 npx tailwindcss init
 ```
+
 Check out the [Tailwind documentation](https://tailwindcss.com/docs/configuration) for customizing the Tailwind config file.
 
 ## Advanced Examples
@@ -107,6 +121,7 @@ Check out the [Tailwind documentation](https://tailwindcss.com/docs/configuratio
 [Codesandbox](https://codesandbox.io/s/tailwindcssinjsmacro-simple-example-wds6l) with Typescript, [Nextjs](https://nextjs.org/) and [Emotion](https://emotion.sh/docs/introduction)
 
 #### React + Emotion: Button component example
+
 ```js
 import React from "react";
 import { css, cx } from "@emotion/css";
@@ -153,6 +168,7 @@ export default Button
 ## Future
 
 I am currently working on:
+
 - a [typescript plugin](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/typescript-plugin) for editor tooling support
 - a [vcode extension](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/vscode-extension)
 - `Not started` a Tailwindcssinjs language server
