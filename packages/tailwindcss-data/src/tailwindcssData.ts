@@ -127,7 +127,7 @@ export const getVariants = (variantGenerators: any) =>
     "even",
   ].concat(Object.keys(variantGenerators));
 
-export const applyVariant = (
+export const getApplyVariant = (
   variantGenerators: any,
   config: TailwindConfig
 ) => (variant: string, decals: string) => {
@@ -168,7 +168,6 @@ export const processTailwindPlugins = (config: ResolvedTialwindConfig) => {
 
 export const tailwindData = (config: TailwindConfig) => {
   const resolvedConfig = resolveConfig(config) as ResolvedTialwindConfig;
-  const mediaScreens = getMediaScreens(resolvedConfig);
 
   const {
     utilitiesRoot,
@@ -177,7 +176,9 @@ export const tailwindData = (config: TailwindConfig) => {
     variantGenerators,
   } = processTailwindPlugins(resolvedConfig);
 
+  const mediaScreens = getMediaScreens(resolvedConfig);
   const variants = getVariants(variantGenerators);
+  const applyVariant = getApplyVariant(variantGenerators, resolvedConfig)
 
   return {
     resolvedConfig,
@@ -186,6 +187,6 @@ export const tailwindData = (config: TailwindConfig) => {
     baseRoot,
     mediaScreens,
     variants,
-    applyVariant: applyVariant(variantGenerators, resolvedConfig),
+    applyVariant
   };
 };
