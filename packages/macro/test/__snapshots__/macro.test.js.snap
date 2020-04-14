@@ -11,17 +11,6 @@ MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test
 
 `;
 
-exports[`macros components error: components error 1`] = `
-
-import tw from '../lib/macro';
-const css = tw\`md[container] form-input\`
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test.js: Error: You cannot use a variant class "md" with class "container"
-
-`;
-
 exports[`macros components: components 1`] = `
 
 import tw from '../lib/macro';
@@ -77,7 +66,7 @@ const css = {
 exports[`macros correct usage 1: correct usage 1 1`] = `
 
 import tw from '../lib/macro';
-const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', 'lg:text-red-300',"focus:bg-green-300", "md:bg-green-300");
+const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
 
       ↓ ↓ ↓ ↓ ↓ ↓
 

@@ -19,7 +19,7 @@
     "tailwindcss": "1.x"
   },
   "dependencies": {
-    "core-js": "^3.6.4",
+    "core-js": "^3.6.5",
     "postcss": "^7.0.27"
   }
 }
