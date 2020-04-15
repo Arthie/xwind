@@ -45,12 +45,11 @@ with css-in-js libraries.
 - New syntax to apply variants to multiple utility classes
 - Supports Tailwind plugins (e.g. tailwind-ui, custom-forms)
 - No runtime impact all transformations happen during build time.
+- Hot reloading: changes in `tailwind.config.js` go in effect next time server recompiles.
 
 ## Usage
 
 You can use `@tailwindcssinjs/macro` with your preferred CSS-in-JS library that supports css objects styles.
-
-**Note:** You will need to restart dev server when changes are made to `./tailwind.config.js` and maybe clear the babel cache.
 
 ## Install
 
