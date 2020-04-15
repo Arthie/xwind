@@ -24,8 +24,14 @@ export const tailwindcssInJs = (config: TailwindConfig) => {
     utilitiesRoot,
   } = tailwindData(config);
 
-  const transformedComponents = transformPostcssRootToTwObjects(componentsRoot, "component");
-  const transformedUtilities = transformPostcssRootToTwObjects(utilitiesRoot, "utility");
+  const transformedComponents = transformPostcssRootToTwObjects(
+    componentsRoot,
+    "component"
+  );
+  const transformedUtilities = transformPostcssRootToTwObjects(
+    utilitiesRoot,
+    "utility"
+  );
 
   const tsStyleObjectMap = transformTwObjectsToTwStyleObjectMap([
     ...transformedComponents,
@@ -42,7 +48,7 @@ export const tailwindcssInJs = (config: TailwindConfig) => {
       twParsedClasses,
       mediaScreens,
       variants,
-      applyVariant,
+      applyVariant
     );
 
     return cssObject;

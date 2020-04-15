@@ -9,6 +9,7 @@ import substituteVariantsAtRules from "tailwindcss/lib/lib/substituteVariantsAtR
 import corePlugins from "tailwindcss/lib/corePlugins";
 import processPlugins from "tailwindcss/lib/util/processPlugins";
 import defaultConfig from "tailwindcss/defaultConfig";
+import importFresh from "import-fresh";
 
 export const DEFAULT_CONFIG_PATH = "./tailwind.config.js";
 
@@ -77,7 +78,7 @@ export interface Theme {
   transitionDuration?: KeyConfig;
 }
 
-interface ResolvedTialwindConfig extends Required<TailwindConfig> {
+export interface ResolvedTialwindConfig extends Required<TailwindConfig> {
   theme: Required<Theme>;
 }
 
@@ -95,7 +96,7 @@ const resolveTailwindConfigPath = (configPath?: string) => {
 export const resolveTailwindConfig = (configFile?: string): TailwindConfig => {
   try {
     const configPath = resolveTailwindConfigPath(configFile);
-    const config = require(configPath);
+    const config = importFresh(configPath) as TailwindConfig;
     return config;
   } catch (err) {
     return defaultConfig;
@@ -127,13 +128,17 @@ export const getVariants = (variantGenerators: any) =>
     "even",
   ].concat(Object.keys(variantGenerators));
 
+//change to postcss-js???
 export const getApplyVariant = (
   variantGenerators: any,
   config: TailwindConfig
 ) => (variant: string, decals: string) => {
-  const root = postcss.parse(`@variants ${variant} {.Arthie {
+  const root = postcss.parse(
+    `@variants ${variant} {.Arthie {
     ${decals}
-  }}`);
+  }}`,
+    { from: undefined }
+  );
 
   substituteVariantsAtRules(config, { variantGenerators })(root);
 
@@ -178,7 +183,7 @@ export const tailwindData = (config: TailwindConfig) => {
 
   const mediaScreens = getMediaScreens(resolvedConfig);
   const variants = getVariants(variantGenerators);
-  const applyVariant = getApplyVariant(variantGenerators, resolvedConfig)
+  const applyVariant = getApplyVariant(variantGenerators, resolvedConfig);
 
   return {
     resolvedConfig,
@@ -187,6 +192,6 @@ export const tailwindData = (config: TailwindConfig) => {
     baseRoot,
     mediaScreens,
     variants,
-    applyVariant
+    applyVariant,
   };
 };

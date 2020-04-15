@@ -5,7 +5,7 @@ import "core-js/stable/object/from-entries";
 
 import { TwStyleObject, AtRule, Rule, StyleObject } from "./transformersTypes";
 import { transformStyleObjectToCssString } from "./styleObjectToCssString";
-import postcss from "postcss";
+import { Rule as PostCSSRule } from "postcss";
 //@ts-ignore
 import objectify from "./postcssjs-objectify";
 
@@ -17,10 +17,14 @@ export const applyTwClassVariants = (
     [key: string]: string;
   },
   variants: string[],
-  applyVariant: (variant: string, decals: string) => postcss.Rule,
+  applyVariant: (variant: string, decals: string) => PostCSSRule
 ) => {
   if (twStyleObject.type !== "utility") {
-    throw new Error(`Variant class "${twVariants.join(", ")}" not allowed with class "${twClass}" of type "${twStyleObject.type}"`)
+    throw new Error(
+      `Variant class "${twVariants.join(
+        ", "
+      )}" not allowed with class "${twClass}" of type "${twStyleObject.type}"`
+    );
   }
 
   let variantStyleObject = twStyleObject.styleObject;
@@ -48,7 +52,7 @@ export const applyTwClassVariants = (
       if (variantRule.parent.type === "atrule") {
         const media = `@${variantRule.parent.name} ${variantRule.parent.params}`;
         variantStyleObject = {
-          [media]: variantStyleObject as AtRule
+          [media]: variantStyleObject as AtRule,
         };
       }
       continue;
@@ -130,7 +134,7 @@ export const transformTwStyleObjectToStyleObject = (
     [key: string]: string;
   },
   variants: string[],
-  applyVariant: (variant: string, decals: string) => postcss.Rule,
+  applyVariant: (variant: string, decals: string) => PostCSSRule
 ) => {
   const styleObjectArray: StyleObject[] = [];
 
@@ -152,7 +156,9 @@ export const transformTwStyleObjectToStyleObject = (
         );
       }
     } else {
-      throw new Error(`Class "${twClass}" not found. Check Tailwind config. Restart dev server and or clearing babel cache after Tailwind config changes.`);
+      throw new Error(
+        `Class "${twClass}" not found. Check Tailwind config. Restart dev server and or clearing babel cache after Tailwind config changes.`
+      );
     }
   });
 

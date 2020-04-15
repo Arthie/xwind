@@ -15,7 +15,7 @@ export const transformPostcssRootToTwObjects = (root: Root, type: string) => {
           selector,
           decls,
           atRule: `@media ${rule.parent.params}`,
-          type
+          type,
         });
       }
 
@@ -24,16 +24,16 @@ export const transformPostcssRootToTwObjects = (root: Root, type: string) => {
           selector,
           decls,
           variants: rule.parent.params.split(", "),
-          type
+          type,
         });
       }
     } else {
       twObjects.push({
         selector,
         decls,
-        type
+        type,
       });
     }
   });
-  return twObjects
+  return twObjects;
 };

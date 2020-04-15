@@ -2,7 +2,7 @@ import merge from "lodash/merge";
 import { TwObject, Rule, AtRule, TwStyleObject } from "./transformersTypes";
 
 const SELECTOR_REGXEX = /[:]{1,2}\S*$/;
-const BACKSLASH_REGXEX = /\\/g
+const BACKSLASH_REGXEX = /\\/g;
 
 export const parseSelector = (selector: string) => {
   const [pseudoSelector] = selector.match(SELECTOR_REGXEX) || [null];
@@ -25,7 +25,7 @@ const transformTwObjectToTwStyleObject = (twObject: TwObject) => {
 
   const twStyleObject: TwStyleObject = {
     styleObject: decls,
-    type
+    type,
   };
 
   const pseudoClass = parseSelector(selector).pseudoSelector;

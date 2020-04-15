@@ -12,7 +12,7 @@ export interface TwUtilitiesObject extends TwObjectBase {
   variants?: string[];
 }
 
-export interface TwObject extends TwComponentObject, TwUtilitiesObject { }
+export interface TwObject extends TwComponentObject, TwUtilitiesObject {}
 
 export interface StyleObject {
   [key: string]: Decls | Rule | AtRule;

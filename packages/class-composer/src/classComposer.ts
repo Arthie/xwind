@@ -59,9 +59,7 @@ export const twClassesVariantsParser = (separator: string) => {
   };
 };
 
-export const twClassesSerializer = (
-  separator: string
-) => {
+export const twClassesSerializer = (separator: string) => {
   const composer = twClassesComposer(separator);
   return (...twClasses: TwClasses[]) => composer(twClasses).join(" ");
-}
+};

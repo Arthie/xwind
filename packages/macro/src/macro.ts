@@ -1,14 +1,9 @@
 // https://github.com/knpwrs/ms.macro/blob/master/src/ms.macro.js
 
 import { createMacro, MacroError, MacroHandler } from "babel-plugin-macros";
-import { transformStyleObjectToCssString } from "@tailwindcssinjs/transformers";
 import { resolveTailwindConfig } from "@tailwindcssinjs/tailwindcss-data";
 
 import { tailwindcssInJs } from "./tailwindcssInJs";
-
-const defaultConfig = {
-  format: "object",
-};
 
 const getArgs = (path: any) => {
   if (path.type === "CallExpression") {
@@ -47,14 +42,8 @@ const tailwindcssInJsMacro: MacroHandler = ({
   references: { default: paths },
   state,
   babel: { types: t, template },
-  //@ts-ignore
-  config,
 }) => {
   try {
-    if (!config?.format) {
-      config.format = defaultConfig.format;
-    }
-
     const tailwindConfig = resolveTailwindConfig();
 
     const tailwind = tailwindcssInJs(tailwindConfig);
@@ -63,17 +52,10 @@ const tailwindcssInJsMacro: MacroHandler = ({
       const args = getArgs(referencePath.parentPath);
       const cssObj = tailwind(...args);
 
-      if (config.format === "object") {
-        const ast = template.expression(JSON.stringify(cssObj), {
-          placeholderPattern: false,
-        })();
-        referencePath.parentPath.replaceWith(ast);
-      }
-
-      if (config.format === "string") {
-        const css = transformStyleObjectToCssString(cssObj);
-        referencePath.parentPath.replaceWith(t.stringLiteral(css));
-      }
+      const ast = template.expression(JSON.stringify(cssObj), {
+        placeholderPattern: false,
+      })();
+      referencePath.parentPath.replaceWith(ast);
     });
   } catch (err) {
     throw new MacroError(err);

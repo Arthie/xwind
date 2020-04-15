@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/transformers",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Arthie",
   "description": "This package contains tailwindcssinjs transformers",
   "main": "lib/index.js",
