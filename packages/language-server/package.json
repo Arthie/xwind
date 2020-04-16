@@ -1,0 +1,24 @@
+{
+  "name": "@tailwindcssinjs/language-server",
+  "version": "0.1.0",
+  "author": "Arthie",
+  "description": "This package contains tailwindcssinjs language server",
+  "main": "lib/server.js",
+  "types": "lib",
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "peerDependencies": {
+    "tailwindcss": "1.x"
+  },
+  "dependencies": {
+    "@tailwindcssinjs/tailwindcss-data": "^0.2.2",
+    "@tailwindcssinjs/transformers": "^0.2.1",
+    "vscode-languageserver": "^6.1.1",
+    "vscode-languageserver-textdocument": "^1.0.1"
+  }
+}

@@ -117,7 +117,7 @@ Check out the [Tailwind documentation](https://tailwindcss.com/docs/configuratio
 
 ## Advanced Examples
 
-[Codesandbox](https://codesandbox.io/s/tailwindcssinjsmacro-simple-example-wds6l) with Typescript, [Nextjs](https://nextjs.org/) and [Emotion](https://emotion.sh/docs/introduction)
+[Codesandbox](https://codesandbox.io/s/tailwindcssinjsmacro-simple-example-wds6l?file=/pages/index.tsx) with Typescript, [Nextjs](https://nextjs.org/) and [Emotion](https://emotion.sh/docs/introduction)
 
 #### React + Emotion: Button component example
 
@@ -168,10 +168,8 @@ export default Button
 
 I am currently working on:
 
-- a [typescript plugin](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/typescript-plugin) for editor tooling support
 - a [vcode extension](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/vscode-extension)
-- `Not started` a Tailwindcssinjs language server
-- `Not started` a codemod / transformer for Tailwind-ui html templates to react and @tailwindcssinjs/marco components
+- a [Tailwindcssinjs language server](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/language-server)
 
 ---
 

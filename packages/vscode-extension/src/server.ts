@@ -1,0 +1,1 @@
+import "@tailwindcssinjs/language-server";
