@@ -169,9 +169,13 @@ export const transformTwStyleObjectToStyleObject = (
     mediaScreens
   );
 
+  //todo: fix & selector sorting in media queries
   const sortedMediaQuerries = sortedStyleObject.map((item) => {
     const [name, rule] = item;
-    if (name.startsWith("@media") && typeof rule !== "string") {
+    if (
+      (name.startsWith("@media") || name.startsWith("&")) &&
+      typeof rule !== "string"
+    ) {
       return [
         name,
         Object.fromEntries(sortStyleObject(Object.entries(rule), mediaScreens)),

@@ -99,6 +99,7 @@ export const resolveTailwindConfig = (configFile?: string): TailwindConfig => {
     const config = importFresh(configPath) as TailwindConfig;
     return config;
   } catch (err) {
+    console.log("No tailwind config file not found:", err);
     return defaultConfig;
   }
 };
@@ -116,6 +117,7 @@ export const getVariants = (variantGenerators: any) =>
   [
     "default",
     "group-hover",
+    "group-focus",
     "hover",
     "focus-within",
     "focus",
@@ -193,5 +195,6 @@ export const tailwindData = (config: TailwindConfig) => {
     mediaScreens,
     variants,
     applyVariant,
+    variantGenerators,
   };
 };

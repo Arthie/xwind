@@ -48,6 +48,14 @@ pluginTester.default({
       `,
       snapshot: true,
       error: /not found/,
-    }
+    },
+    "version 1.3.X test 1": `
+      import tw from '../lib/macro';
+      const css = tw\`group-focus:text-red-100 delay-1000 space-y-4 flex space-x-2 divide-x divide-y divide-blue-500 space-x-reverse\`
+      `,
+    "version 1.3.X test 2": `
+      import tw from '../lib/macro';
+      const css = tw\`group-focus:text-red-100 md:delay-1000 md:space-y-4 md:space-x-2 md:divide-x md:divide-y md:divide-blue-500 md:space-x-reverse\`
+      `,
   },
 });

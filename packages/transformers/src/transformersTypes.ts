@@ -26,4 +26,9 @@ export interface TwStyleObject {
   variants?: string[];
   styleObject: StyleObject;
   type: string;
+  selectors: {
+    class: string;
+    selector: string;
+    remainder: string;
+  };
 }

@@ -1,37 +1,35 @@
 import merge from "lodash/merge";
 import { TwObject, Rule, AtRule, TwStyleObject } from "./transformersTypes";
-
-const SELECTOR_REGXEX = /[:]{1,2}\S*$/;
-const BACKSLASH_REGXEX = /\\/g;
+import { parse, stringify } from "css-what";
 
 export const parseSelector = (selector: string) => {
-  const [pseudoSelector] = selector.match(SELECTOR_REGXEX) || [null];
-  const twClassSelector = pseudoSelector
-    ? selector.replace(pseudoSelector, "")
-    : selector;
-
-  //substring removes first .
-  //replace fixes classnames / like "w-1\\/2" => "w-1/2"
-  const twClass = twClassSelector.substring(1).replace(BACKSLASH_REGXEX, "");
+  const [classSelector, ...otherSelectors] = parse(selector)[0];
+  if (classSelector.type !== "attribute") {
+    throw new Error(
+      `Class selector not found in:"${selector}", the first element of the selector should be a class atrribute`
+    );
+  }
   return {
-    selector,
-    pseudoSelector,
-    twClass,
+    selector: stringify([[classSelector, ...otherSelectors]]),
+    class: classSelector.value,
+    remainder: stringify([[...otherSelectors]]),
   };
 };
 
 const transformTwObjectToTwStyleObject = (twObject: TwObject) => {
   const { selector, decls, atRule, variants, type } = twObject;
 
+  const selectors = parseSelector(selector);
   const twStyleObject: TwStyleObject = {
     styleObject: decls,
     type,
+    selectors,
   };
 
-  const pseudoClass = parseSelector(selector).pseudoSelector;
-  if (pseudoClass) {
+  const selectorRemainder = selectors.remainder;
+  if (selectorRemainder) {
     const styleObject = twStyleObject.styleObject as Rule;
-    twStyleObject.styleObject = { [`&${pseudoClass}`]: styleObject };
+    twStyleObject.styleObject = { [`&${selectorRemainder}`]: styleObject };
   }
 
   if (atRule) {
@@ -49,7 +47,7 @@ const transformTwObjectToTwStyleObject = (twObject: TwObject) => {
 export const transformTwObjectsToTwStyleObjectMap = (twObjects: TwObject[]) => {
   const mappedObject = new Map<string, TwStyleObject>();
   for (const twObject of twObjects) {
-    const { twClass } = parseSelector(twObject.selector);
+    const { class: twClass } = parseSelector(twObject.selector);
     const styleObject = transformTwObjectToTwStyleObject(twObject);
     if (mappedObject.has(twClass)) {
       mappedObject.set(twClass, merge(mappedObject.get(twClass), styleObject));

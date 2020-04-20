@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/transformers",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "author": "Arthie",
   "description": "This package contains tailwindcssinjs transformers",
   "main": "lib/index.js",
@@ -16,6 +16,7 @@
     "build": "tsc --build"
   },
   "dependencies": {
+    "css-what": "^3.2.1",
     "lodash": "^4.17.15",
     "postcss-js": "^2.0.3",
     "timsort": "^0.3.0"

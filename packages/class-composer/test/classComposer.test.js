@@ -13,7 +13,8 @@ const INPUT = [
     active[text-red-400 text-red-500]
     sm[hover:text-red-600]
     md:focus[text-red-700]
-  `
+  `,
+  "group-hover:text-red-800"
 ]
 
 const COMPOSER_RESULT = [
@@ -23,7 +24,8 @@ const COMPOSER_RESULT = [
   "active:text-red-400",
   "active:text-red-500",
   "sm:hover:text-red-600",
-  "md:focus:text-red-700"
+  "md:focus:text-red-700",
+  "group-hover:text-red-800"
 ]
 
 test("classesComposer", () => {
@@ -45,7 +47,8 @@ const VARIANT_PARSER_RESULT = [
   ["text-red-400", ["active"]],
   ["text-red-500", ["active"]],
   ["text-red-600", ["hover", "sm"]],
-  ["text-red-700", ["focus", "md"]]
+  ["text-red-700", ["focus", "md"]],
+  ["text-red-800", ["group-hover"]]
 ]
 
 test("classesVariantParser", () => {
@@ -54,7 +57,7 @@ test("classesVariantParser", () => {
   )
 })
 
-const SERIALIZER_RESULT = "text-red-100 hover:text-red-200 sm:focus:text-red-300 active:text-red-400 active:text-red-500 sm:hover:text-red-600 md:focus:text-red-700"
+const SERIALIZER_RESULT = "text-red-100 hover:text-red-200 sm:focus:text-red-300 active:text-red-400 active:text-red-500 sm:hover:text-red-600 md:focus:text-red-700 group-hover:text-red-800"
 
 test("classesSerializer", () => {
   expect(twClassesSerializer(SEPARATOR)(INPUT)).toStrictEqual(
