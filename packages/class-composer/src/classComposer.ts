@@ -8,17 +8,22 @@ export const twClassesComposer = (separator: string) => {
   }
 
   const NOT_WHITE_SPACE_REGEX = /\S+/g;
+  // matches variant arrays =>  sm:hover[text-red-100 bg-blue-200]
   const VARIANT_ARRAY_REGEX = new RegExp(
     `\\S+(${separator}\\w+)?(\\[((.|\\n)*?)\\])`,
     "g"
   );
-  const NESTED_VARIANT_REGEXP = /(\[([^\[\]]){0,}\[)|(\]([^\[\]]){0,}\])/g;
+  // matches nested angle brackets => [[]]
+  const NESTED_ANGLE_BRACKET_REGEXP = /(\[([^\[\]]){0,}\[)|(\]([^\[\]]){0,}\])/g;
 
+  /**
+   * replaces variant array syntax to regular class syntax
+   * sm:hover[text-red-100 bg-blue-200] => sm:hover:text-red-100 sm:hover:bg-blue-200
+   * @param match 
+   */
   const variantArrayReplacer = (match: string) => {
     //slice last char "]" and split on "["
     const [variant, ...variantClasses] = match.slice(0, -1).split("[");
-    if (variantClasses.length !== 1) {
-    }
     const twClasses = variantClasses[0].match(NOT_WHITE_SPACE_REGEX);
     const replacements = [];
     for (const twClass of twClasses ?? []) {
@@ -30,11 +35,10 @@ export const twClassesComposer = (separator: string) => {
   return (...twClasses: TwClasses[]) => {
     const twClassesString = twClasses.flat(Infinity).join(" ");
 
-    if (NESTED_VARIANT_REGEXP.test(twClassesString)) {
+    if (NESTED_ANGLE_BRACKET_REGEXP.test(twClassesString)) {
       throw new Error(`Nested variant arrays are not allowed`);
     }
 
-    //replace variant arrays (e.g. lg:focus[text-red-100])
     const convertedClasses = twClassesString.replace(
       VARIANT_ARRAY_REGEX,
       variantArrayReplacer
