@@ -30,11 +30,11 @@ export const twClassesComposer = (separator: string) => {
    */
   const variantArraySyntaxReplacer = (_substring: string, ...searchResult: any[]) => {
     //searchResult contains substring capture groups
-    const [variant, classes] = searchResult as [string, string]
+    const [variant, variantclasses] = searchResult as [string, string]
 
     //matches tailwind classes and removes whitespace
     //" text-red-100  bg-blue-200 " => ["text-red-100", "bg-blue-200"]
-    const twClasses = classes.match(NOT_WHITE_SPACE_REGEX) ?? [];
+    const twClasses = variantclasses.match(NOT_WHITE_SPACE_REGEX) ?? [];
 
     const replacementClasses = [];
     for (const twClass of twClasses) {
