@@ -170,6 +170,7 @@ export const transformTwStyleObjectToStyleObject = (
   );
 
   //todo: fix & selector sorting in media queries
+  //detect if object then sort inside
   const sortedMediaQuerries = sortedStyleObject.map((item) => {
     const [name, rule] = item;
     if (

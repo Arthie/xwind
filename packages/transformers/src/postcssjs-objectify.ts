@@ -1,4 +1,7 @@
 //@ts-nocheck
+// this is a polyfill for postcss-js because of bug: https://github.com/postcss/postcss-js/pull/46
+// this file can be removed when post-css gets released with patch for this bug
+
 const pattern = /-(\w|$)/g;
 
 const callback = (dashChar, char) => char.toUpperCase();
