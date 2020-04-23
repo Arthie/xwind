@@ -1,59 +1,79 @@
 import "core-js/stable/array/flat";
 
+//recursive type: string | string array | nested string array (no depth limit)
 export type TwClasses = string | TwClasses[];
 
+/**
+ * Takes a separator string (e.g. ":") as parameter and returns a composer function.
+ * The composer function will return a Array of tailwind classes.
+ * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#twclassescomposer
+ */
 export const twClassesComposer = (separator: string) => {
   if (typeof separator !== "string") {
     throw new Error(`Separator "${separator}" must be of type String`);
   }
 
   const NOT_WHITE_SPACE_REGEX = /\S+/g;
-  // matches variant arrays =>  sm:hover[text-red-100 bg-blue-200]
-  const VARIANT_ARRAY_REGEX = new RegExp(
-    `\\S+(${separator}\\w+)?(\\[((.|\\n)*?)\\])`,
+
+  // captures variant arrays syntax =>  sm:hover[text-red-100 bg-blue-200]
+  const VARIANT_ARRAY_SYNTAX_REGEX = new RegExp(
+    `(?<variant>\\S+(?:\\${separator}\\w+)?)\\[(?<classes>(?:.|\\n)*?)\\]`,
     "g"
   );
-  // matches nested angle brackets => [[]]
+
+  // captures nested angle brackets => [[]]
   const NESTED_ANGLE_BRACKET_REGEXP = /(\[([^\[\]]){0,}\[)|(\]([^\[\]]){0,}\])/g;
 
   /**
-   * replaces variant array syntax to regular class syntax
+   * replaces variant array syntax to regular tailwind class syntax
    * sm:hover[text-red-100 bg-blue-200] => sm:hover:text-red-100 sm:hover:bg-blue-200
-   * @param match 
    */
-  const variantArrayReplacer = (match: string) => {
-    //slice last char "]" and split on "["
-    const [variant, ...variantClasses] = match.slice(0, -1).split("[");
-    const twClasses = variantClasses[0].match(NOT_WHITE_SPACE_REGEX);
-    const replacements = [];
-    for (const twClass of twClasses ?? []) {
-      replacements.push(`${variant}${separator}${twClass}`);
+  const variantArraySyntaxReplacer = (_substring: string, ...searchResult: any[]) => {
+    //searchResult contains substring capture groups
+    const [variant, classes] = searchResult as [string, string]
+
+    //matches tailwind classes and removes whitespace
+    //" text-red-100  bg-blue-200 " => ["text-red-100", "bg-blue-200"]
+    const twClasses = classes.match(NOT_WHITE_SPACE_REGEX) ?? [];
+
+    const replacementClasses = [];
+    for (const twClass of twClasses) {
+      replacementClasses.push(`${variant}${separator}${twClass}`);
     }
-    return replacements.join(" ");
+    return replacementClasses.join(" ");
   };
 
   return (...twClasses: TwClasses[]) => {
+    //combines all arguments into a string
     const twClassesString = twClasses.flat(Infinity).join(" ");
 
     if (NESTED_ANGLE_BRACKET_REGEXP.test(twClassesString)) {
       throw new Error(`Nested variant arrays are not allowed`);
     }
 
-    const convertedClasses = twClassesString.replace(
-      VARIANT_ARRAY_REGEX,
-      variantArrayReplacer
+    //replaces variant array syntax
+    const replacedTwClasses = twClassesString.replace(
+      VARIANT_ARRAY_SYNTAX_REGEX,
+      variantArraySyntaxReplacer
     );
 
-    return convertedClasses.match(NOT_WHITE_SPACE_REGEX) ?? [];
+    //matches tailwind classes and removes whitespace
+    //" text-red-100  bg-blue-200 " => ["text-red-100", "bg-blue-200"]
+    return Array.from(replacedTwClasses.match(NOT_WHITE_SPACE_REGEX) ?? []);
   };
 };
 
+/**
+ * Takes a separator string (e.g. ":") as parameter and returns a composer function.
+ * The composer function will return an array of class and variants tuples.
+ * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#twclassesvariantsparser
+ */
 export const twClassesVariantsParser = (separator: string) => {
   const composer = twClassesComposer(separator);
   return (...twClasses: TwClasses[]) => {
-    const parsedClassesVariants: [string, string[]][] = [];
     const composedTwClasses = composer(twClasses);
 
+    const parsedClassesVariants: [string, string[]][] = [];
     for (const composedTwClass of composedTwClasses) {
       const [twClass, ...variants] = composedTwClass.split(separator).reverse();
       parsedClassesVariants.push([twClass, variants]);
@@ -63,6 +83,11 @@ export const twClassesVariantsParser = (separator: string) => {
   };
 };
 
+/**
+ * Takes a separator string (e.g. ":") as parameter and returns a composer function.
+ * The composer function will return a tailwind classes string
+ * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#twclassesserializer
+ */
 export const twClassesSerializer = (separator: string) => {
   const composer = twClassesComposer(separator);
   return (...twClasses: TwClasses[]) => composer(twClasses).join(" ");
