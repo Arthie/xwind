@@ -6,7 +6,7 @@ export type TwClasses = string | TwClasses[];
 /**
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return a Array of tailwind classes.
- * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#twclassescomposer
+ * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#1-twclassescomposer
  */
 export const twClassesComposer = (separator: string) => {
   if (typeof separator !== "string") {
@@ -66,7 +66,7 @@ export const twClassesComposer = (separator: string) => {
 /**
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return an array of class and variants tuples.
- * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#twclassesvariantsparser
+ * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#2-twclassesvariantsparser
  */
 export const twClassesVariantsParser = (separator: string) => {
   const composer = twClassesComposer(separator);
@@ -86,7 +86,7 @@ export const twClassesVariantsParser = (separator: string) => {
 /**
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return a tailwind classes string
- * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#twclassesserializer
+ * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#3-twclassesserializer
  */
 export const twClassesSerializer = (separator: string) => {
   const composer = twClassesComposer(separator);
