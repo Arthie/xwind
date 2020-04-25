@@ -26,7 +26,7 @@ Transforms into:
 const styles = {
   color: "#fff5f5",
   "&:hover": {
-    color: "#f0fff4"
+    color: "#f0fff4",
     backgroundColor: "#bee3f8"
   }
 };
