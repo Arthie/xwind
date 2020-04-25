@@ -17,12 +17,16 @@ Currently, we have one package ready to be used in Tailwind projects `@tailwindc
 ```js
 import tw from "@tailwindcssinjs/macro";
 
-const styles = tw`text-red-100 hover:bg-blue-200`;
-
-//Transformed into:
+const styles = tw`text-red-100 hover:text-green-100 hover:bg-blue-200`;
+// OR (with custom array syntax)
+const styles = tw`text-red-100 hover[text-green-100 bg-blue-200]`;
+```
+Transforms into:
+```js
 const styles = {
   color: "#fff5f5",
   "&:hover": {
+    color: "#f0fff4"
     backgroundColor: "#bee3f8"
   }
 };
@@ -35,21 +39,21 @@ with css-in-js libraries.
 
 - You need to setup postCSS with your bundler
 - You have to use PurgeCSS to get minimal css file
-- No error when you misspell a class
+- No error when misspelling or using a class that doesn't exist
 - Inline classes can get very long and hard to read
 - You have to specify the variants for utility classes in tailwind.config.js
 
 ## Features
 
 - Solves all of the above problems
-- Compatible with Tailwind version **1.3.3**
+- Compatible with Tailwind version **1.3.x**
 - All utility and component classes
 - All variant utility classes
 - Full support for custom classes and `tailwind.config.js` customization
 - New syntax to apply variants to multiple utility classes
 - Supports Tailwind plugins (e.g. tailwind-ui, custom-forms)
-- No runtime impact all transformations happen during build time.
-- Hot reloading: changes in `tailwind.config.js` go in effect next time server recompiles.
+- No runtime impact all transformations happen during build time
+- Hot reloading: changes in `tailwind.config.js` go in effect next time dev server recompiles
 
 ## Usage
 
@@ -118,6 +122,8 @@ Check out the [Tailwind documentation](https://tailwindcss.com/docs/configuratio
 ## Advanced Examples
 
 [Codesandbox](https://codesandbox.io/s/tailwindcssinjsmacro-simple-example-wds6l?file=/pages/index.tsx) with Typescript, [Nextjs](https://nextjs.org/) and [Emotion](https://emotion.sh/docs/introduction)
+
+[Official Next.js example - Tailwind CSS with Emotion.js](https://github.com/zeit/next.js/tree/canary/examples/with-tailwindcss-emotion)
 
 #### React + Emotion: Button component example
 
