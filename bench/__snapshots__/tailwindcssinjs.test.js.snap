@@ -1,0 +1,3800 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`macros align-text-bottom=: align-text-bottom= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`align-text-bottom\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  verticalAlign: "text-bottom",
+};
+
+
+`;
+
+exports[`macros align-text-top=: align-text-top= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`align-text-top\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  verticalAlign: "text-top",
+};
+
+
+`;
+
+exports[`macros cursor-text=: cursor-text= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`cursor-text\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  cursor: "text",
+};
+
+
+`;
+
+exports[`macros md:hover:align-text-bottom =: md:hover:align-text-bottom = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:align-text-bottom\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      verticalAlign: "text-bottom",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:align-text-top =: md:hover:align-text-top = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:align-text-top\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      verticalAlign: "text-top",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:cursor-text =: md:hover:cursor-text = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:cursor-text\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      cursor: "text",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:select-text =: md:hover:select-text = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:select-text\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      userSelect: "text",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-2xl =: md:hover:text-2xl = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-2xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "1.5rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-3xl =: md:hover:text-3xl = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-3xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "1.875rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-4xl =: md:hover:text-4xl = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-4xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "2.25rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-5xl =: md:hover:text-5xl = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-5xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "3rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-6xl =: md:hover:text-6xl = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-6xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "4rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-base =: md:hover:text-base = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-base\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "1rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-black =: md:hover:text-black = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-black\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#000", "rgba(0, 0, 0, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-blue-100 =: md:hover:text-blue-100 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-blue-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#ebf8ff", "rgba(235, 248, 255, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-blue-200 =: md:hover:text-blue-200 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-blue-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#bee3f8", "rgba(190, 227, 248, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-blue-300 =: md:hover:text-blue-300 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-blue-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#90cdf4", "rgba(144, 205, 244, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-blue-400 =: md:hover:text-blue-400 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-blue-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#63b3ed", "rgba(99, 179, 237, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-blue-500 =: md:hover:text-blue-500 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-blue-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#4299e1", "rgba(66, 153, 225, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-blue-600 =: md:hover:text-blue-600 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-blue-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#3182ce", "rgba(49, 130, 206, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-blue-700 =: md:hover:text-blue-700 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-blue-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#2b6cb0", "rgba(43, 108, 176, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-blue-800 =: md:hover:text-blue-800 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-blue-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#2c5282", "rgba(44, 82, 130, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-blue-900 =: md:hover:text-blue-900 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-blue-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#2a4365", "rgba(42, 67, 101, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-center =: md:hover:text-center = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-center\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      textAlign: "center",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-current =: md:hover:text-current = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-current\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      color: "currentColor",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-gray-100 =: md:hover:text-gray-100 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-gray-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#f7fafc", "rgba(247, 250, 252, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-gray-200 =: md:hover:text-gray-200 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-gray-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#edf2f7", "rgba(237, 242, 247, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-gray-300 =: md:hover:text-gray-300 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-gray-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#e2e8f0", "rgba(226, 232, 240, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-gray-400 =: md:hover:text-gray-400 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-gray-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#cbd5e0", "rgba(203, 213, 224, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-gray-500 =: md:hover:text-gray-500 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-gray-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#a0aec0", "rgba(160, 174, 192, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-gray-600 =: md:hover:text-gray-600 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-gray-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#718096", "rgba(113, 128, 150, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-gray-700 =: md:hover:text-gray-700 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-gray-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#4a5568", "rgba(74, 85, 104, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-gray-800 =: md:hover:text-gray-800 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-gray-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#2d3748", "rgba(45, 55, 72, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-gray-900 =: md:hover:text-gray-900 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-gray-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#1a202c", "rgba(26, 32, 44, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-green-100 =: md:hover:text-green-100 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-green-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#f0fff4", "rgba(240, 255, 244, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-green-200 =: md:hover:text-green-200 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-green-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#c6f6d5", "rgba(198, 246, 213, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-green-300 =: md:hover:text-green-300 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-green-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#9ae6b4", "rgba(154, 230, 180, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-green-400 =: md:hover:text-green-400 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-green-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#68d391", "rgba(104, 211, 145, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-green-500 =: md:hover:text-green-500 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-green-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#48bb78", "rgba(72, 187, 120, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-green-600 =: md:hover:text-green-600 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-green-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#38a169", "rgba(56, 161, 105, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-green-700 =: md:hover:text-green-700 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-green-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#2f855a", "rgba(47, 133, 90, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-green-800 =: md:hover:text-green-800 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-green-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#276749", "rgba(39, 103, 73, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-green-900 =: md:hover:text-green-900 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-green-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#22543d", "rgba(34, 84, 61, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-indigo-100 =: md:hover:text-indigo-100 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-indigo-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#ebf4ff", "rgba(235, 244, 255, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-indigo-200 =: md:hover:text-indigo-200 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-indigo-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#c3dafe", "rgba(195, 218, 254, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-indigo-300 =: md:hover:text-indigo-300 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-indigo-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#a3bffa", "rgba(163, 191, 250, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-indigo-400 =: md:hover:text-indigo-400 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-indigo-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#7f9cf5", "rgba(127, 156, 245, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-indigo-500 =: md:hover:text-indigo-500 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-indigo-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#667eea", "rgba(102, 126, 234, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-indigo-600 =: md:hover:text-indigo-600 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-indigo-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#5a67d8", "rgba(90, 103, 216, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-indigo-700 =: md:hover:text-indigo-700 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-indigo-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#4c51bf", "rgba(76, 81, 191, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-indigo-800 =: md:hover:text-indigo-800 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-indigo-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#434190", "rgba(67, 65, 144, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-indigo-900 =: md:hover:text-indigo-900 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-indigo-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#3c366b", "rgba(60, 54, 107, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-justify =: md:hover:text-justify = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-justify\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      textAlign: "justify",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-left =: md:hover:text-left = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-left\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      textAlign: "left",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-lg =: md:hover:text-lg = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-lg\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "1.125rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-orange-100 =: md:hover:text-orange-100 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-orange-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fffaf0", "rgba(255, 250, 240, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-orange-200 =: md:hover:text-orange-200 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-orange-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#feebc8", "rgba(254, 235, 200, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-orange-300 =: md:hover:text-orange-300 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-orange-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fbd38d", "rgba(251, 211, 141, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-orange-400 =: md:hover:text-orange-400 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-orange-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#f6ad55", "rgba(246, 173, 85, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-orange-500 =: md:hover:text-orange-500 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-orange-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#ed8936", "rgba(237, 137, 54, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-orange-600 =: md:hover:text-orange-600 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-orange-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#dd6b20", "rgba(221, 107, 32, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-orange-700 =: md:hover:text-orange-700 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-orange-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#c05621", "rgba(192, 86, 33, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-orange-800 =: md:hover:text-orange-800 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-orange-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#9c4221", "rgba(156, 66, 33, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-orange-900 =: md:hover:text-orange-900 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-orange-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#7b341e", "rgba(123, 52, 30, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-pink-100 =: md:hover:text-pink-100 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-pink-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fff5f7", "rgba(255, 245, 247, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-pink-200 =: md:hover:text-pink-200 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-pink-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fed7e2", "rgba(254, 215, 226, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-pink-300 =: md:hover:text-pink-300 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-pink-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fbb6ce", "rgba(251, 182, 206, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-pink-400 =: md:hover:text-pink-400 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-pink-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#f687b3", "rgba(246, 135, 179, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-pink-500 =: md:hover:text-pink-500 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-pink-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#ed64a6", "rgba(237, 100, 166, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-pink-600 =: md:hover:text-pink-600 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-pink-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#d53f8c", "rgba(213, 63, 140, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-pink-700 =: md:hover:text-pink-700 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-pink-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#b83280", "rgba(184, 50, 128, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-pink-800 =: md:hover:text-pink-800 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-pink-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#97266d", "rgba(151, 38, 109, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-pink-900 =: md:hover:text-pink-900 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-pink-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#702459", "rgba(112, 36, 89, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-purple-100 =: md:hover:text-purple-100 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-purple-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#faf5ff", "rgba(250, 245, 255, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-purple-200 =: md:hover:text-purple-200 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-purple-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#e9d8fd", "rgba(233, 216, 253, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-purple-300 =: md:hover:text-purple-300 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-purple-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#d6bcfa", "rgba(214, 188, 250, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-purple-400 =: md:hover:text-purple-400 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-purple-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#b794f4", "rgba(183, 148, 244, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-purple-500 =: md:hover:text-purple-500 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-purple-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#9f7aea", "rgba(159, 122, 234, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-purple-600 =: md:hover:text-purple-600 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-purple-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#805ad5", "rgba(128, 90, 213, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-purple-700 =: md:hover:text-purple-700 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-purple-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#6b46c1", "rgba(107, 70, 193, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-purple-800 =: md:hover:text-purple-800 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-purple-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#553c9a", "rgba(85, 60, 154, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-purple-900 =: md:hover:text-purple-900 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-purple-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#44337a", "rgba(68, 51, 122, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-red-100 =: md:hover:text-red-100 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-red-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fff5f5", "rgba(255, 245, 245, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-red-200 =: md:hover:text-red-200 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-red-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fed7d7", "rgba(254, 215, 215, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-red-300 =: md:hover:text-red-300 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-red-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#feb2b2", "rgba(254, 178, 178, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-red-400 =: md:hover:text-red-400 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-red-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fc8181", "rgba(252, 129, 129, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-red-500 =: md:hover:text-red-500 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-red-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#f56565", "rgba(245, 101, 101, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-red-600 =: md:hover:text-red-600 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-red-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#e53e3e", "rgba(229, 62, 62, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-red-700 =: md:hover:text-red-700 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-red-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#c53030", "rgba(197, 48, 48, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-red-800 =: md:hover:text-red-800 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-red-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#9b2c2c", "rgba(155, 44, 44, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-red-900 =: md:hover:text-red-900 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-red-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#742a2a", "rgba(116, 42, 42, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-right =: md:hover:text-right = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-right\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      textAlign: "right",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-sm =: md:hover:text-sm = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-sm\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "0.875rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-teal-100 =: md:hover:text-teal-100 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-teal-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#e6fffa", "rgba(230, 255, 250, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-teal-200 =: md:hover:text-teal-200 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-teal-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#b2f5ea", "rgba(178, 245, 234, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-teal-300 =: md:hover:text-teal-300 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-teal-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#81e6d9", "rgba(129, 230, 217, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-teal-400 =: md:hover:text-teal-400 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-teal-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#4fd1c5", "rgba(79, 209, 197, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-teal-500 =: md:hover:text-teal-500 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-teal-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#38b2ac", "rgba(56, 178, 172, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-teal-600 =: md:hover:text-teal-600 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-teal-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#319795", "rgba(49, 151, 149, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-teal-700 =: md:hover:text-teal-700 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-teal-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#2c7a7b", "rgba(44, 122, 123, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-teal-800 =: md:hover:text-teal-800 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-teal-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#285e61", "rgba(40, 94, 97, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-teal-900 =: md:hover:text-teal-900 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-teal-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#234e52", "rgba(35, 78, 82, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-transparent =: md:hover:text-transparent = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-transparent\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      color: "transparent",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-white =: md:hover:text-white = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-white\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fff", "rgba(255, 255, 255, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-xl =: md:hover:text-xl = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "1.25rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-xs =: md:hover:text-xs = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-xs\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "0.75rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-yellow-100 =: md:hover:text-yellow-100 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-yellow-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fffff0", "rgba(255, 255, 240, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-yellow-200 =: md:hover:text-yellow-200 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-yellow-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fefcbf", "rgba(254, 252, 191, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-yellow-300 =: md:hover:text-yellow-300 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-yellow-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#faf089", "rgba(250, 240, 137, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-yellow-400 =: md:hover:text-yellow-400 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-yellow-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#f6e05e", "rgba(246, 224, 94, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-yellow-500 =: md:hover:text-yellow-500 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-yellow-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#ecc94b", "rgba(236, 201, 75, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-yellow-600 =: md:hover:text-yellow-600 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-yellow-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#d69e2e", "rgba(214, 158, 46, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-yellow-700 =: md:hover:text-yellow-700 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-yellow-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#b7791f", "rgba(183, 121, 31, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-yellow-800 =: md:hover:text-yellow-800 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-yellow-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#975a16", "rgba(151, 90, 22, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-yellow-900 =: md:hover:text-yellow-900 = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`md:hover:text-yellow-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#744210", "rgba(116, 66, 16, var(--text-opacity))"],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros select-text=: select-text= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`select-text\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  userSelect: "text",
+};
+
+
+`;
+
+exports[`macros text-2xl=: text-2xl= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-2xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "1.5rem",
+};
+
+
+`;
+
+exports[`macros text-3xl=: text-3xl= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-3xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "1.875rem",
+};
+
+
+`;
+
+exports[`macros text-4xl=: text-4xl= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-4xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "2.25rem",
+};
+
+
+`;
+
+exports[`macros text-5xl=: text-5xl= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-5xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "3rem",
+};
+
+
+`;
+
+exports[`macros text-6xl=: text-6xl= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-6xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "4rem",
+};
+
+
+`;
+
+exports[`macros text-base=: text-base= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-base\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "1rem",
+};
+
+
+`;
+
+exports[`macros text-black=: text-black= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-black\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#000", "rgba(0, 0, 0, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-blue-100=: text-blue-100= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-blue-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#ebf8ff", "rgba(235, 248, 255, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-blue-200=: text-blue-200= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-blue-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#bee3f8", "rgba(190, 227, 248, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-blue-300=: text-blue-300= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-blue-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#90cdf4", "rgba(144, 205, 244, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-blue-400=: text-blue-400= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-blue-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#63b3ed", "rgba(99, 179, 237, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-blue-500=: text-blue-500= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-blue-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#4299e1", "rgba(66, 153, 225, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-blue-600=: text-blue-600= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-blue-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#3182ce", "rgba(49, 130, 206, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-blue-700=: text-blue-700= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-blue-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#2b6cb0", "rgba(43, 108, 176, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-blue-800=: text-blue-800= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-blue-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#2c5282", "rgba(44, 82, 130, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-blue-900=: text-blue-900= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-blue-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#2a4365", "rgba(42, 67, 101, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-center=: text-center= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-center\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  textAlign: "center",
+};
+
+
+`;
+
+exports[`macros text-current=: text-current= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-current\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  color: "currentColor",
+};
+
+
+`;
+
+exports[`macros text-gray-100=: text-gray-100= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-gray-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#f7fafc", "rgba(247, 250, 252, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-gray-200=: text-gray-200= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-gray-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#edf2f7", "rgba(237, 242, 247, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-gray-300=: text-gray-300= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-gray-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#e2e8f0", "rgba(226, 232, 240, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-gray-400=: text-gray-400= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-gray-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#cbd5e0", "rgba(203, 213, 224, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-gray-500=: text-gray-500= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-gray-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#a0aec0", "rgba(160, 174, 192, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-gray-600=: text-gray-600= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-gray-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#718096", "rgba(113, 128, 150, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-gray-700=: text-gray-700= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-gray-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#4a5568", "rgba(74, 85, 104, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-gray-800=: text-gray-800= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-gray-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#2d3748", "rgba(45, 55, 72, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-gray-900=: text-gray-900= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-gray-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#1a202c", "rgba(26, 32, 44, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-green-100=: text-green-100= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-green-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#f0fff4", "rgba(240, 255, 244, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-green-200=: text-green-200= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-green-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#c6f6d5", "rgba(198, 246, 213, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-green-300=: text-green-300= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-green-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#9ae6b4", "rgba(154, 230, 180, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-green-400=: text-green-400= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-green-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#68d391", "rgba(104, 211, 145, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-green-500=: text-green-500= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-green-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#48bb78", "rgba(72, 187, 120, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-green-600=: text-green-600= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-green-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#38a169", "rgba(56, 161, 105, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-green-700=: text-green-700= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-green-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#2f855a", "rgba(47, 133, 90, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-green-800=: text-green-800= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-green-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#276749", "rgba(39, 103, 73, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-green-900=: text-green-900= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-green-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#22543d", "rgba(34, 84, 61, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-indigo-100=: text-indigo-100= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-indigo-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#ebf4ff", "rgba(235, 244, 255, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-indigo-200=: text-indigo-200= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-indigo-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#c3dafe", "rgba(195, 218, 254, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-indigo-300=: text-indigo-300= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-indigo-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#a3bffa", "rgba(163, 191, 250, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-indigo-400=: text-indigo-400= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-indigo-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#7f9cf5", "rgba(127, 156, 245, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-indigo-500=: text-indigo-500= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-indigo-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#667eea", "rgba(102, 126, 234, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-indigo-600=: text-indigo-600= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-indigo-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#5a67d8", "rgba(90, 103, 216, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-indigo-700=: text-indigo-700= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-indigo-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#4c51bf", "rgba(76, 81, 191, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-indigo-800=: text-indigo-800= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-indigo-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#434190", "rgba(67, 65, 144, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-indigo-900=: text-indigo-900= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-indigo-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#3c366b", "rgba(60, 54, 107, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-justify=: text-justify= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-justify\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  textAlign: "justify",
+};
+
+
+`;
+
+exports[`macros text-left=: text-left= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-left\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  textAlign: "left",
+};
+
+
+`;
+
+exports[`macros text-lg=: text-lg= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-lg\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "1.125rem",
+};
+
+
+`;
+
+exports[`macros text-orange-100=: text-orange-100= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-orange-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fffaf0", "rgba(255, 250, 240, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-orange-200=: text-orange-200= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-orange-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#feebc8", "rgba(254, 235, 200, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-orange-300=: text-orange-300= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-orange-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fbd38d", "rgba(251, 211, 141, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-orange-400=: text-orange-400= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-orange-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#f6ad55", "rgba(246, 173, 85, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-orange-500=: text-orange-500= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-orange-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#ed8936", "rgba(237, 137, 54, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-orange-600=: text-orange-600= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-orange-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#dd6b20", "rgba(221, 107, 32, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-orange-700=: text-orange-700= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-orange-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#c05621", "rgba(192, 86, 33, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-orange-800=: text-orange-800= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-orange-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#9c4221", "rgba(156, 66, 33, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-orange-900=: text-orange-900= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-orange-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#7b341e", "rgba(123, 52, 30, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-pink-100=: text-pink-100= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-pink-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fff5f7", "rgba(255, 245, 247, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-pink-200=: text-pink-200= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-pink-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fed7e2", "rgba(254, 215, 226, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-pink-300=: text-pink-300= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-pink-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fbb6ce", "rgba(251, 182, 206, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-pink-400=: text-pink-400= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-pink-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#f687b3", "rgba(246, 135, 179, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-pink-500=: text-pink-500= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-pink-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#ed64a6", "rgba(237, 100, 166, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-pink-600=: text-pink-600= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-pink-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#d53f8c", "rgba(213, 63, 140, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-pink-700=: text-pink-700= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-pink-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#b83280", "rgba(184, 50, 128, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-pink-800=: text-pink-800= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-pink-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#97266d", "rgba(151, 38, 109, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-pink-900=: text-pink-900= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-pink-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#702459", "rgba(112, 36, 89, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-purple-100=: text-purple-100= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-purple-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#faf5ff", "rgba(250, 245, 255, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-purple-200=: text-purple-200= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-purple-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#e9d8fd", "rgba(233, 216, 253, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-purple-300=: text-purple-300= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-purple-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#d6bcfa", "rgba(214, 188, 250, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-purple-400=: text-purple-400= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-purple-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#b794f4", "rgba(183, 148, 244, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-purple-500=: text-purple-500= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-purple-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#9f7aea", "rgba(159, 122, 234, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-purple-600=: text-purple-600= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-purple-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#805ad5", "rgba(128, 90, 213, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-purple-700=: text-purple-700= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-purple-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#6b46c1", "rgba(107, 70, 193, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-purple-800=: text-purple-800= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-purple-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#553c9a", "rgba(85, 60, 154, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-purple-900=: text-purple-900= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-purple-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#44337a", "rgba(68, 51, 122, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-red-100=: text-red-100= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-red-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fff5f5", "rgba(255, 245, 245, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-red-200=: text-red-200= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-red-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fed7d7", "rgba(254, 215, 215, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-red-300=: text-red-300= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-red-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#feb2b2", "rgba(254, 178, 178, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-red-400=: text-red-400= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-red-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fc8181", "rgba(252, 129, 129, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-red-500=: text-red-500= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-red-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#f56565", "rgba(245, 101, 101, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-red-600=: text-red-600= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-red-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#e53e3e", "rgba(229, 62, 62, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-red-700=: text-red-700= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-red-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#c53030", "rgba(197, 48, 48, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-red-800=: text-red-800= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-red-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#9b2c2c", "rgba(155, 44, 44, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-red-900=: text-red-900= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-red-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#742a2a", "rgba(116, 42, 42, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-right=: text-right= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-right\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  textAlign: "right",
+};
+
+
+`;
+
+exports[`macros text-sm=: text-sm= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-sm\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "0.875rem",
+};
+
+
+`;
+
+exports[`macros text-teal-100=: text-teal-100= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-teal-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#e6fffa", "rgba(230, 255, 250, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-teal-200=: text-teal-200= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-teal-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#b2f5ea", "rgba(178, 245, 234, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-teal-300=: text-teal-300= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-teal-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#81e6d9", "rgba(129, 230, 217, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-teal-400=: text-teal-400= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-teal-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#4fd1c5", "rgba(79, 209, 197, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-teal-500=: text-teal-500= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-teal-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#38b2ac", "rgba(56, 178, 172, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-teal-600=: text-teal-600= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-teal-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#319795", "rgba(49, 151, 149, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-teal-700=: text-teal-700= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-teal-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#2c7a7b", "rgba(44, 122, 123, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-teal-800=: text-teal-800= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-teal-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#285e61", "rgba(40, 94, 97, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-teal-900=: text-teal-900= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-teal-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#234e52", "rgba(35, 78, 82, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-transparent=: text-transparent= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-transparent\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  color: "transparent",
+};
+
+
+`;
+
+exports[`macros text-white=: text-white= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-white\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fff", "rgba(255, 255, 255, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-xl=: text-xl= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "1.25rem",
+};
+
+
+`;
+
+exports[`macros text-xs=: text-xs= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-xs\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "0.75rem",
+};
+
+
+`;
+
+exports[`macros text-yellow-100=: text-yellow-100= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-yellow-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fffff0", "rgba(255, 255, 240, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-yellow-200=: text-yellow-200= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-yellow-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#fefcbf", "rgba(254, 252, 191, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-yellow-300=: text-yellow-300= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-yellow-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#faf089", "rgba(250, 240, 137, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-yellow-400=: text-yellow-400= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-yellow-400\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#f6e05e", "rgba(246, 224, 94, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-yellow-500=: text-yellow-500= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-yellow-500\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#ecc94b", "rgba(236, 201, 75, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-yellow-600=: text-yellow-600= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-yellow-600\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#d69e2e", "rgba(214, 158, 46, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-yellow-700=: text-yellow-700= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-yellow-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#b7791f", "rgba(183, 121, 31, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-yellow-800=: text-yellow-800= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-yellow-800\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#975a16", "rgba(151, 90, 22, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros text-yellow-900=: text-yellow-900= 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`text-yellow-900\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  color: ["#744210", "rgba(116, 66, 16, var(--text-opacity))"],
+};
+
+
+`;
+
+exports[`macros ⚡ test 224 classes =: ⚡ test 224 classes = 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css = tw\`cursor-text md:hover:cursor-text text-xs md:hover:text-xs text-sm md:hover:text-sm text-base md:hover:text-base text-lg md:hover:text-lg text-xl md:hover:text-xl text-2xl md:hover:text-2xl text-3xl md:hover:text-3xl text-4xl md:hover:text-4xl text-5xl md:hover:text-5xl text-6xl md:hover:text-6xl text-left md:hover:text-left text-center md:hover:text-center text-right md:hover:text-right text-justify md:hover:text-justify text-transparent md:hover:text-transparent text-current md:hover:text-current text-black md:hover:text-black text-white md:hover:text-white text-gray-100 md:hover:text-gray-100 text-gray-200 md:hover:text-gray-200 text-gray-300 md:hover:text-gray-300 text-gray-400 md:hover:text-gray-400 text-gray-500 md:hover:text-gray-500 text-gray-600 md:hover:text-gray-600 text-gray-700 md:hover:text-gray-700 text-gray-800 md:hover:text-gray-800 text-gray-900 md:hover:text-gray-900 text-red-100 md:hover:text-red-100 text-red-200 md:hover:text-red-200 text-red-300 md:hover:text-red-300 text-red-400 md:hover:text-red-400 text-red-500 md:hover:text-red-500 text-red-600 md:hover:text-red-600 text-red-700 md:hover:text-red-700 text-red-800 md:hover:text-red-800 text-red-900 md:hover:text-red-900 text-orange-100 md:hover:text-orange-100 text-orange-200 md:hover:text-orange-200 text-orange-300 md:hover:text-orange-300 text-orange-400 md:hover:text-orange-400 text-orange-500 md:hover:text-orange-500 text-orange-600 md:hover:text-orange-600 text-orange-700 md:hover:text-orange-700 text-orange-800 md:hover:text-orange-800 text-orange-900 md:hover:text-orange-900 text-yellow-100 md:hover:text-yellow-100 text-yellow-200 md:hover:text-yellow-200 text-yellow-300 md:hover:text-yellow-300 text-yellow-400 md:hover:text-yellow-400 text-yellow-500 md:hover:text-yellow-500 text-yellow-600 md:hover:text-yellow-600 text-yellow-700 md:hover:text-yellow-700 text-yellow-800 md:hover:text-yellow-800 text-yellow-900 md:hover:text-yellow-900 text-green-100 md:hover:text-green-100 text-green-200 md:hover:text-green-200 text-green-300 md:hover:text-green-300 text-green-400 md:hover:text-green-400 text-green-500 md:hover:text-green-500 text-green-600 md:hover:text-green-600 text-green-700 md:hover:text-green-700 text-green-800 md:hover:text-green-800 text-green-900 md:hover:text-green-900 text-teal-100 md:hover:text-teal-100 text-teal-200 md:hover:text-teal-200 text-teal-300 md:hover:text-teal-300 text-teal-400 md:hover:text-teal-400 text-teal-500 md:hover:text-teal-500 text-teal-600 md:hover:text-teal-600 text-teal-700 md:hover:text-teal-700 text-teal-800 md:hover:text-teal-800 text-teal-900 md:hover:text-teal-900 text-blue-100 md:hover:text-blue-100 text-blue-200 md:hover:text-blue-200 text-blue-300 md:hover:text-blue-300 text-blue-400 md:hover:text-blue-400 text-blue-500 md:hover:text-blue-500 text-blue-600 md:hover:text-blue-600 text-blue-700 md:hover:text-blue-700 text-blue-800 md:hover:text-blue-800 text-blue-900 md:hover:text-blue-900 text-indigo-100 md:hover:text-indigo-100 text-indigo-200 md:hover:text-indigo-200 text-indigo-300 md:hover:text-indigo-300 text-indigo-400 md:hover:text-indigo-400 text-indigo-500 md:hover:text-indigo-500 text-indigo-600 md:hover:text-indigo-600 text-indigo-700 md:hover:text-indigo-700 text-indigo-800 md:hover:text-indigo-800 text-indigo-900 md:hover:text-indigo-900 text-purple-100 md:hover:text-purple-100 text-purple-200 md:hover:text-purple-200 text-purple-300 md:hover:text-purple-300 text-purple-400 md:hover:text-purple-400 text-purple-500 md:hover:text-purple-500 text-purple-600 md:hover:text-purple-600 text-purple-700 md:hover:text-purple-700 text-purple-800 md:hover:text-purple-800 text-purple-900 md:hover:text-purple-900 text-pink-100 md:hover:text-pink-100 text-pink-200 md:hover:text-pink-200 text-pink-300 md:hover:text-pink-300 text-pink-400 md:hover:text-pink-400 text-pink-500 md:hover:text-pink-500 text-pink-600 md:hover:text-pink-600 text-pink-700 md:hover:text-pink-700 text-pink-800 md:hover:text-pink-800 text-pink-900 md:hover:text-pink-900 select-text md:hover:select-text align-text-top md:hover:align-text-top align-text-bottom md:hover:align-text-bottom\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+  cursor: "text",
+  fontSize: "4rem",
+  textAlign: "justify",
+  userSelect: "text",
+  verticalAlign: "text-bottom",
+  color: ["#702459", "rgba(112, 36, 89, var(--text-opacity))"],
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      cursor: "text",
+      fontSize: "4rem",
+      textAlign: "justify",
+      color: ["#702459", "rgba(112, 36, 89, var(--text-opacity))"],
+      "--text-opacity": "1",
+      userSelect: "text",
+      verticalAlign: "text-bottom",
+    },
+  },
+};
+
+
+`;
