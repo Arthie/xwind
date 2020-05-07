@@ -82,7 +82,7 @@ export interface ResolvedTialwindConfig extends Required<TailwindConfig> {
   theme: Required<Theme>;
 }
 
-const resolveTailwindConfigPath = (configPath?: string) => {
+export const resolveTailwindConfigPath = (configPath?: string) => {
   const filePath = configPath ?? DEFAULT_CONFIG_PATH;
   try {
     const defaultConfigPath = path.resolve(filePath);
@@ -93,13 +93,16 @@ const resolveTailwindConfigPath = (configPath?: string) => {
   }
 };
 
-export const resolveTailwindConfig = (configFile?: string): TailwindConfig => {
+export const resolveTailwindConfig = (
+  configFilePath?: string
+): TailwindConfig => {
   try {
-    const configPath = resolveTailwindConfigPath(configFile);
-    const config = importFresh(configPath) as TailwindConfig;
-    return config;
+    if (configFilePath) {
+      const config = importFresh(configFilePath) as TailwindConfig;
+      return config;
+    }
+    throw new Error();
   } catch (err) {
-    console.log("No tailwind config file not found:", err);
     return defaultConfig;
   }
 };
