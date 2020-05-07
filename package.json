@@ -8,9 +8,10 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "bench": "jest --clearCache && yarn run bench-tailwindcssinjs && yarn run bench-twin",
-    "bench-npm": "jest --clearCache && npm run bench-tailwindcssinjs && npm run bench-twin",
+    "bench": "jest --clearCache && yarn run bench-twin && yarn run bench-tailwindcssinjs",
+    "bench-npm": "jest --clearCache && npm run bench-twin && npm run bench-tailwindcssinjs",
     "bench-tailwindcssinjs": "jest ./bench/tailwindcssinjs.test.js --update-snapshot",
+    "bench-tailwind": "jest ./bench/tailwind.test.js --update-snapshot",
     "bench-twin": "jest ./bench/twin.test.js --update-snapshot"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "jest": "^26.0.1",
     "postcss": "^7.0.29",
     "prettier": "^2.0.5",
+    "tailwind.macro": "^1.0.0-alpha.10",
     "tailwindcss": "^1.4.5",
     "twin.macro": "^1.0.0-alpha.10"
   }

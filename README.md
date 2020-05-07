@@ -41,3 +41,13 @@ npm run bench-twin
 # with Yarn
 yarn run bench-twin
 ```
+
+### 2.3 Run tailwind.macro test
+
+```bash
+# with npm
+npm run bench-twin
+
+# with Yarn
+yarn run bench-twin
+```

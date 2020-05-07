@@ -1,0 +1,6407 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`macros cursor-text                   : cursor-text                    1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`cursor-text\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {};
+
+
+`;
+
+exports[`macros initial load (just import)    : initial load (just import)     1`] = `
+
+import tw from 'tailwind.macro';
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+
+
+`;
+
+exports[`macros md:hover:cursor-text          : md:hover:cursor-text           1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:cursor-text\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {};
+
+
+`;
+
+exports[`macros md:hover:text-2xl             : md:hover:text-2xl              1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-2xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["2xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["2xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-3xl             : md:hover:text-3xl              1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-3xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["3xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["3xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-4xl             : md:hover:text-4xl              1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-4xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["4xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["4xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-5xl             : md:hover:text-5xl              1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-5xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["5xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["5xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-6xl             : md:hover:text-6xl              1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-6xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["6xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["6xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-base            : md:hover:text-base             1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-base\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["base"],
+        },
+        {
+          fontSize: _tailwind.textSizes["base"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-center          : md:hover:text-center           1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-center\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      textAlign: "center",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-justify         : md:hover:text-justify          1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-justify\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      textAlign: "justify",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-left            : md:hover:text-left             1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-left\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      textAlign: "left",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-lg              : md:hover:text-lg               1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-lg\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["lg"],
+        },
+        {
+          fontSize: _tailwind.textSizes["lg"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-right           : md:hover:text-right            1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-right\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      textAlign: "right",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-sm              : md:hover:text-sm               1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-sm\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["sm"],
+        },
+        {
+          fontSize: _tailwind.textSizes["sm"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-xl              : md:hover:text-xl               1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros md:hover:text-xs              : md:hover:text-xs               1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`md:hover:text-xs\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["xs"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xs"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+};
+
+
+`;
+
+exports[`macros test 10 classes               : test 10 classes                1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`cursor-text md:hover:cursor-text text-xs md:hover:text-xs text-sm md:hover:text-sm text-base md:hover:text-base text-lg md:hover:text-lg\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["xs"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xs"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["xs"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xs"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["sm"],
+        },
+        {
+          fontSize: _tailwind.textSizes["sm"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["base"],
+        },
+        {
+          fontSize: _tailwind.textSizes["base"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["lg"],
+        },
+        {
+          fontSize: _tailwind.textSizes["lg"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+  ...[
+    {
+      color: _tailwind.textColors["sm"],
+    },
+    {
+      fontSize: _tailwind.textSizes["sm"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["base"],
+    },
+    {
+      fontSize: _tailwind.textSizes["base"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["lg"],
+    },
+    {
+      fontSize: _tailwind.textSizes["lg"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros test 20 classes               : test 20 classes                1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`cursor-text md:hover:cursor-text text-xs md:hover:text-xs text-sm md:hover:text-sm text-base md:hover:text-base text-lg md:hover:text-lg text-xl md:hover:text-xl text-2xl md:hover:text-2xl text-3xl md:hover:text-3xl text-4xl md:hover:text-4xl text-5xl md:hover:text-5xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["xs"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xs"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["xs"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xs"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["sm"],
+        },
+        {
+          fontSize: _tailwind.textSizes["sm"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["base"],
+        },
+        {
+          fontSize: _tailwind.textSizes["base"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["lg"],
+        },
+        {
+          fontSize: _tailwind.textSizes["lg"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["2xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["2xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["3xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["3xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["4xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["4xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["5xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["5xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+  ...[
+    {
+      color: _tailwind.textColors["sm"],
+    },
+    {
+      fontSize: _tailwind.textSizes["sm"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["base"],
+    },
+    {
+      fontSize: _tailwind.textSizes["base"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["lg"],
+    },
+    {
+      fontSize: _tailwind.textSizes["lg"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["2xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["2xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["3xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["3xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["4xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["4xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["5xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["5xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros test 40 classes               : test 40 classes                1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`cursor-text md:hover:cursor-text text-xs md:hover:text-xs text-sm md:hover:text-sm text-base md:hover:text-base text-lg md:hover:text-lg text-xl md:hover:text-xl text-2xl md:hover:text-2xl text-3xl md:hover:text-3xl text-4xl md:hover:text-4xl text-5xl md:hover:text-5xl text-6xl md:hover:text-6xl text-left md:hover:text-left text-center md:hover:text-center text-right md:hover:text-right text-justify md:hover:text-justify text-transparent md:hover:text-transparent text-current md:hover:text-current text-black md:hover:text-black text-white md:hover:text-white text-gray-100 md:hover:text-gray-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["xs"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xs"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["xs"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xs"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["sm"],
+        },
+        {
+          fontSize: _tailwind.textSizes["sm"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["base"],
+        },
+        {
+          fontSize: _tailwind.textSizes["base"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["lg"],
+        },
+        {
+          fontSize: _tailwind.textSizes["lg"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["2xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["2xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["3xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["3xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["4xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["4xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["5xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["5xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["6xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["6xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      textAlign: "justify",
+      ...[
+        {
+          color: _tailwind.textColors["transparent"],
+        },
+        {
+          fontSize: _tailwind.textSizes["transparent"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["current"],
+        },
+        {
+          fontSize: _tailwind.textSizes["current"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["black"],
+        },
+        {
+          fontSize: _tailwind.textSizes["black"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["white"],
+        },
+        {
+          fontSize: _tailwind.textSizes["white"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+  ...[
+    {
+      color: _tailwind.textColors["sm"],
+    },
+    {
+      fontSize: _tailwind.textSizes["sm"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["base"],
+    },
+    {
+      fontSize: _tailwind.textSizes["base"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["lg"],
+    },
+    {
+      fontSize: _tailwind.textSizes["lg"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["2xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["2xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["3xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["3xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["4xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["4xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["5xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["5xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["6xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["6xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  textAlign: "justify",
+  ...[
+    {
+      color: _tailwind.textColors["transparent"],
+    },
+    {
+      fontSize: _tailwind.textSizes["transparent"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["current"],
+    },
+    {
+      fontSize: _tailwind.textSizes["current"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["black"],
+    },
+    {
+      fontSize: _tailwind.textSizes["black"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["white"],
+    },
+    {
+      fontSize: _tailwind.textSizes["white"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros test 80 classes               : test 80 classes                1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`cursor-text md:hover:cursor-text text-xs md:hover:text-xs text-sm md:hover:text-sm text-base md:hover:text-base text-lg md:hover:text-lg text-xl md:hover:text-xl text-2xl md:hover:text-2xl text-3xl md:hover:text-3xl text-4xl md:hover:text-4xl text-5xl md:hover:text-5xl text-6xl md:hover:text-6xl text-left md:hover:text-left text-center md:hover:text-center text-right md:hover:text-right text-justify md:hover:text-justify text-transparent md:hover:text-transparent text-current md:hover:text-current text-black md:hover:text-black text-white md:hover:text-white text-gray-100 md:hover:text-gray-100 text-gray-200 md:hover:text-gray-200 text-gray-300 md:hover:text-gray-300 text-gray-400 md:hover:text-gray-400 text-gray-500 md:hover:text-gray-500 text-gray-600 md:hover:text-gray-600 text-gray-700 md:hover:text-gray-700 text-gray-800 md:hover:text-gray-800 text-gray-900 md:hover:text-gray-900 text-red-100 md:hover:text-red-100 text-red-200 md:hover:text-red-200 text-red-300 md:hover:text-red-300 text-red-400 md:hover:text-red-400 text-red-500 md:hover:text-red-500 text-red-600 md:hover:text-red-600 text-red-700 md:hover:text-red-700 text-red-800 md:hover:text-red-800 text-red-900 md:hover:text-red-900 text-orange-100 md:hover:text-orange-100 text-orange-200 md:hover:text-orange-200 text-orange-300 md:hover:text-orange-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["xs"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xs"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["xs"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xs"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["sm"],
+        },
+        {
+          fontSize: _tailwind.textSizes["sm"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["base"],
+        },
+        {
+          fontSize: _tailwind.textSizes["base"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["lg"],
+        },
+        {
+          fontSize: _tailwind.textSizes["lg"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["2xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["2xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["3xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["3xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["4xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["4xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["5xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["5xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["6xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["6xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      textAlign: "justify",
+      ...[
+        {
+          color: _tailwind.textColors["transparent"],
+        },
+        {
+          fontSize: _tailwind.textSizes["transparent"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["current"],
+        },
+        {
+          fontSize: _tailwind.textSizes["current"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["black"],
+        },
+        {
+          fontSize: _tailwind.textSizes["black"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["white"],
+        },
+        {
+          fontSize: _tailwind.textSizes["white"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+  ...[
+    {
+      color: _tailwind.textColors["sm"],
+    },
+    {
+      fontSize: _tailwind.textSizes["sm"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["base"],
+    },
+    {
+      fontSize: _tailwind.textSizes["base"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["lg"],
+    },
+    {
+      fontSize: _tailwind.textSizes["lg"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["2xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["2xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["3xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["3xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["4xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["4xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["5xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["5xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["6xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["6xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  textAlign: "justify",
+  ...[
+    {
+      color: _tailwind.textColors["transparent"],
+    },
+    {
+      fontSize: _tailwind.textSizes["transparent"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["current"],
+    },
+    {
+      fontSize: _tailwind.textSizes["current"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["black"],
+    },
+    {
+      fontSize: _tailwind.textSizes["black"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["white"],
+    },
+    {
+      fontSize: _tailwind.textSizes["white"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros test 160 classes              : test 160 classes               1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`cursor-text md:hover:cursor-text text-xs md:hover:text-xs text-sm md:hover:text-sm text-base md:hover:text-base text-lg md:hover:text-lg text-xl md:hover:text-xl text-2xl md:hover:text-2xl text-3xl md:hover:text-3xl text-4xl md:hover:text-4xl text-5xl md:hover:text-5xl text-6xl md:hover:text-6xl text-left md:hover:text-left text-center md:hover:text-center text-right md:hover:text-right text-justify md:hover:text-justify text-transparent md:hover:text-transparent text-current md:hover:text-current text-black md:hover:text-black text-white md:hover:text-white text-gray-100 md:hover:text-gray-100 text-gray-200 md:hover:text-gray-200 text-gray-300 md:hover:text-gray-300 text-gray-400 md:hover:text-gray-400 text-gray-500 md:hover:text-gray-500 text-gray-600 md:hover:text-gray-600 text-gray-700 md:hover:text-gray-700 text-gray-800 md:hover:text-gray-800 text-gray-900 md:hover:text-gray-900 text-red-100 md:hover:text-red-100 text-red-200 md:hover:text-red-200 text-red-300 md:hover:text-red-300 text-red-400 md:hover:text-red-400 text-red-500 md:hover:text-red-500 text-red-600 md:hover:text-red-600 text-red-700 md:hover:text-red-700 text-red-800 md:hover:text-red-800 text-red-900 md:hover:text-red-900 text-orange-100 md:hover:text-orange-100 text-orange-200 md:hover:text-orange-200 text-orange-300 md:hover:text-orange-300 text-orange-400 md:hover:text-orange-400 text-orange-500 md:hover:text-orange-500 text-orange-600 md:hover:text-orange-600 text-orange-700 md:hover:text-orange-700 text-orange-800 md:hover:text-orange-800 text-orange-900 md:hover:text-orange-900 text-yellow-100 md:hover:text-yellow-100 text-yellow-200 md:hover:text-yellow-200 text-yellow-300 md:hover:text-yellow-300 text-yellow-400 md:hover:text-yellow-400 text-yellow-500 md:hover:text-yellow-500 text-yellow-600 md:hover:text-yellow-600 text-yellow-700 md:hover:text-yellow-700 text-yellow-800 md:hover:text-yellow-800 text-yellow-900 md:hover:text-yellow-900 text-green-100 md:hover:text-green-100 text-green-200 md:hover:text-green-200 text-green-300 md:hover:text-green-300 text-green-400 md:hover:text-green-400 text-green-500 md:hover:text-green-500 text-green-600 md:hover:text-green-600 text-green-700 md:hover:text-green-700 text-green-800 md:hover:text-green-800 text-green-900 md:hover:text-green-900 text-teal-100 md:hover:text-teal-100 text-teal-200 md:hover:text-teal-200 text-teal-300 md:hover:text-teal-300 text-teal-400 md:hover:text-teal-400 text-teal-500 md:hover:text-teal-500 text-teal-600 md:hover:text-teal-600 text-teal-700 md:hover:text-teal-700 text-teal-800 md:hover:text-teal-800 text-teal-900 md:hover:text-teal-900 text-blue-100 md:hover:text-blue-100 text-blue-200 md:hover:text-blue-200 text-blue-300 md:hover:text-blue-300 text-blue-400 md:hover:text-blue-400 text-blue-500 md:hover:text-blue-500 text-blue-600 md:hover:text-blue-600 text-blue-700 md:hover:text-blue-700\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["xs"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xs"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["xs"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xs"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["sm"],
+        },
+        {
+          fontSize: _tailwind.textSizes["sm"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["base"],
+        },
+        {
+          fontSize: _tailwind.textSizes["base"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["lg"],
+        },
+        {
+          fontSize: _tailwind.textSizes["lg"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["2xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["2xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["3xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["3xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["4xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["4xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["5xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["5xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["6xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["6xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      textAlign: "justify",
+      ...[
+        {
+          color: _tailwind.textColors["transparent"],
+        },
+        {
+          fontSize: _tailwind.textSizes["transparent"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["current"],
+        },
+        {
+          fontSize: _tailwind.textSizes["current"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["black"],
+        },
+        {
+          fontSize: _tailwind.textSizes["black"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["white"],
+        },
+        {
+          fontSize: _tailwind.textSizes["white"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+    },
+  },
+  ...[
+    {
+      color: _tailwind.textColors["sm"],
+    },
+    {
+      fontSize: _tailwind.textSizes["sm"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["base"],
+    },
+    {
+      fontSize: _tailwind.textSizes["base"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["lg"],
+    },
+    {
+      fontSize: _tailwind.textSizes["lg"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["2xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["2xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["3xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["3xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["4xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["4xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["5xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["5xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["6xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["6xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  textAlign: "justify",
+  ...[
+    {
+      color: _tailwind.textColors["transparent"],
+    },
+    {
+      fontSize: _tailwind.textSizes["transparent"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["current"],
+    },
+    {
+      fontSize: _tailwind.textSizes["current"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["black"],
+    },
+    {
+      fontSize: _tailwind.textSizes["black"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["white"],
+    },
+    {
+      fontSize: _tailwind.textSizes["white"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros test 220 classes              : test 220 classes               1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`cursor-text md:hover:cursor-text text-xs md:hover:text-xs text-sm md:hover:text-sm text-base md:hover:text-base text-lg md:hover:text-lg text-xl md:hover:text-xl text-2xl md:hover:text-2xl text-3xl md:hover:text-3xl text-4xl md:hover:text-4xl text-5xl md:hover:text-5xl text-6xl md:hover:text-6xl text-left md:hover:text-left text-center md:hover:text-center text-right md:hover:text-right text-justify md:hover:text-justify text-transparent md:hover:text-transparent text-current md:hover:text-current text-black md:hover:text-black text-white md:hover:text-white text-gray-100 md:hover:text-gray-100 text-gray-200 md:hover:text-gray-200 text-gray-300 md:hover:text-gray-300 text-gray-400 md:hover:text-gray-400 text-gray-500 md:hover:text-gray-500 text-gray-600 md:hover:text-gray-600 text-gray-700 md:hover:text-gray-700 text-gray-800 md:hover:text-gray-800 text-gray-900 md:hover:text-gray-900 text-red-100 md:hover:text-red-100 text-red-200 md:hover:text-red-200 text-red-300 md:hover:text-red-300 text-red-400 md:hover:text-red-400 text-red-500 md:hover:text-red-500 text-red-600 md:hover:text-red-600 text-red-700 md:hover:text-red-700 text-red-800 md:hover:text-red-800 text-red-900 md:hover:text-red-900 text-orange-100 md:hover:text-orange-100 text-orange-200 md:hover:text-orange-200 text-orange-300 md:hover:text-orange-300 text-orange-400 md:hover:text-orange-400 text-orange-500 md:hover:text-orange-500 text-orange-600 md:hover:text-orange-600 text-orange-700 md:hover:text-orange-700 text-orange-800 md:hover:text-orange-800 text-orange-900 md:hover:text-orange-900 text-yellow-100 md:hover:text-yellow-100 text-yellow-200 md:hover:text-yellow-200 text-yellow-300 md:hover:text-yellow-300 text-yellow-400 md:hover:text-yellow-400 text-yellow-500 md:hover:text-yellow-500 text-yellow-600 md:hover:text-yellow-600 text-yellow-700 md:hover:text-yellow-700 text-yellow-800 md:hover:text-yellow-800 text-yellow-900 md:hover:text-yellow-900 text-green-100 md:hover:text-green-100 text-green-200 md:hover:text-green-200 text-green-300 md:hover:text-green-300 text-green-400 md:hover:text-green-400 text-green-500 md:hover:text-green-500 text-green-600 md:hover:text-green-600 text-green-700 md:hover:text-green-700 text-green-800 md:hover:text-green-800 text-green-900 md:hover:text-green-900 text-teal-100 md:hover:text-teal-100 text-teal-200 md:hover:text-teal-200 text-teal-300 md:hover:text-teal-300 text-teal-400 md:hover:text-teal-400 text-teal-500 md:hover:text-teal-500 text-teal-600 md:hover:text-teal-600 text-teal-700 md:hover:text-teal-700 text-teal-800 md:hover:text-teal-800 text-teal-900 md:hover:text-teal-900 text-blue-100 md:hover:text-blue-100 text-blue-200 md:hover:text-blue-200 text-blue-300 md:hover:text-blue-300 text-blue-400 md:hover:text-blue-400 text-blue-500 md:hover:text-blue-500 text-blue-600 md:hover:text-blue-600 text-blue-700 md:hover:text-blue-700 text-blue-800 md:hover:text-blue-800 text-blue-900 md:hover:text-blue-900 text-indigo-100 md:hover:text-indigo-100 text-indigo-200 md:hover:text-indigo-200 text-indigo-300 md:hover:text-indigo-300 text-indigo-400 md:hover:text-indigo-400 text-indigo-500 md:hover:text-indigo-500 text-indigo-600 md:hover:text-indigo-600 text-indigo-700 md:hover:text-indigo-700 text-indigo-800 md:hover:text-indigo-800 text-indigo-900 md:hover:text-indigo-900 text-purple-100 md:hover:text-purple-100 text-purple-200 md:hover:text-purple-200 text-purple-300 md:hover:text-purple-300 text-purple-400 md:hover:text-purple-400 text-purple-500 md:hover:text-purple-500 text-purple-600 md:hover:text-purple-600 text-purple-700 md:hover:text-purple-700 text-purple-800 md:hover:text-purple-800 text-purple-900 md:hover:text-purple-900 text-pink-100 md:hover:text-pink-100 text-pink-200 md:hover:text-pink-200 text-pink-300 md:hover:text-pink-300 text-pink-400 md:hover:text-pink-400 text-pink-500 md:hover:text-pink-500 text-pink-600 md:hover:text-pink-600 text-pink-700 md:hover:text-pink-700 text-pink-800 md:hover:text-pink-800 text-pink-900 md:hover:text-pink-900 select-text md:hover:select-text\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["xs"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xs"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  [\`@media (min-width: \${_tailwind.screens["md"]})\`]: {
+    ":hover": {
+      ...[
+        {
+          color: _tailwind.textColors["xs"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xs"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["sm"],
+        },
+        {
+          fontSize: _tailwind.textSizes["sm"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["base"],
+        },
+        {
+          fontSize: _tailwind.textSizes["base"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["lg"],
+        },
+        {
+          fontSize: _tailwind.textSizes["lg"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["2xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["2xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["3xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["3xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["4xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["4xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["5xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["5xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["6xl"],
+        },
+        {
+          fontSize: _tailwind.textSizes["6xl"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      textAlign: "justify",
+      ...[
+        {
+          color: _tailwind.textColors["transparent"],
+        },
+        {
+          fontSize: _tailwind.textSizes["transparent"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["current"],
+        },
+        {
+          fontSize: _tailwind.textSizes["current"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["black"],
+        },
+        {
+          fontSize: _tailwind.textSizes["black"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["white"],
+        },
+        {
+          fontSize: _tailwind.textSizes["white"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["gray-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["gray-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["red-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["red-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["orange-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["orange-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["yellow-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["yellow-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["green-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["green-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["teal-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["teal-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["blue-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["blue-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["indigo-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["indigo-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["indigo-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["indigo-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["indigo-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["indigo-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["indigo-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["indigo-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["indigo-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["indigo-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["indigo-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["indigo-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["indigo-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["indigo-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["indigo-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["indigo-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["indigo-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["indigo-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["purple-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["purple-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["purple-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["purple-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["purple-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["purple-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["purple-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["purple-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["purple-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["purple-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["purple-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["purple-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["purple-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["purple-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["purple-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["purple-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["purple-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["purple-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["pink-100"],
+        },
+        {
+          fontSize: _tailwind.textSizes["pink-100"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["pink-200"],
+        },
+        {
+          fontSize: _tailwind.textSizes["pink-200"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["pink-300"],
+        },
+        {
+          fontSize: _tailwind.textSizes["pink-300"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["pink-400"],
+        },
+        {
+          fontSize: _tailwind.textSizes["pink-400"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["pink-500"],
+        },
+        {
+          fontSize: _tailwind.textSizes["pink-500"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["pink-600"],
+        },
+        {
+          fontSize: _tailwind.textSizes["pink-600"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["pink-700"],
+        },
+        {
+          fontSize: _tailwind.textSizes["pink-700"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["pink-800"],
+        },
+        {
+          fontSize: _tailwind.textSizes["pink-800"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      ...[
+        {
+          color: _tailwind.textColors["pink-900"],
+        },
+        {
+          fontSize: _tailwind.textSizes["pink-900"],
+        },
+      ].filter(
+        (x) =>
+          typeof x[Object.keys(x)[0]] !== "undefined" &&
+          x[Object.keys(x)[0]] !== ""
+      )[0],
+      userSelect: "text",
+    },
+  },
+  ...[
+    {
+      color: _tailwind.textColors["sm"],
+    },
+    {
+      fontSize: _tailwind.textSizes["sm"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["base"],
+    },
+    {
+      fontSize: _tailwind.textSizes["base"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["lg"],
+    },
+    {
+      fontSize: _tailwind.textSizes["lg"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["2xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["2xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["3xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["3xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["4xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["4xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["5xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["5xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["6xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["6xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  textAlign: "justify",
+  ...[
+    {
+      color: _tailwind.textColors["transparent"],
+    },
+    {
+      fontSize: _tailwind.textSizes["transparent"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["current"],
+    },
+    {
+      fontSize: _tailwind.textSizes["current"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["black"],
+    },
+    {
+      fontSize: _tailwind.textSizes["black"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["white"],
+    },
+    {
+      fontSize: _tailwind.textSizes["white"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["gray-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["gray-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["red-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["red-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["orange-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["orange-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["yellow-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["yellow-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["green-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["green-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["teal-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["teal-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["blue-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["blue-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["indigo-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["indigo-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["indigo-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["indigo-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["indigo-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["indigo-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["indigo-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["indigo-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["indigo-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["indigo-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["indigo-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["indigo-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["indigo-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["indigo-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["indigo-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["indigo-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["indigo-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["indigo-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["purple-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["purple-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["purple-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["purple-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["purple-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["purple-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["purple-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["purple-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["purple-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["purple-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["purple-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["purple-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["purple-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["purple-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["purple-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["purple-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["purple-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["purple-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["pink-100"],
+    },
+    {
+      fontSize: _tailwind.textSizes["pink-100"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["pink-200"],
+    },
+    {
+      fontSize: _tailwind.textSizes["pink-200"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["pink-300"],
+    },
+    {
+      fontSize: _tailwind.textSizes["pink-300"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["pink-400"],
+    },
+    {
+      fontSize: _tailwind.textSizes["pink-400"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["pink-500"],
+    },
+    {
+      fontSize: _tailwind.textSizes["pink-500"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["pink-600"],
+    },
+    {
+      fontSize: _tailwind.textSizes["pink-600"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["pink-700"],
+    },
+    {
+      fontSize: _tailwind.textSizes["pink-700"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["pink-800"],
+    },
+    {
+      fontSize: _tailwind.textSizes["pink-800"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  ...[
+    {
+      color: _tailwind.textColors["pink-900"],
+    },
+    {
+      fontSize: _tailwind.textSizes["pink-900"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+  userSelect: "text",
+};
+
+
+`;
+
+exports[`macros text-2xl                      : text-2xl                       1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-2xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["2xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["2xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros text-3xl                      : text-3xl                       1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-3xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["3xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["3xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros text-4xl                      : text-4xl                       1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-4xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["4xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["4xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros text-5xl                      : text-5xl                       1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-5xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["5xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["5xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros text-6xl                      : text-6xl                       1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-6xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["6xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["6xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros text-base                     : text-base                      1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-base\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["base"],
+    },
+    {
+      fontSize: _tailwind.textSizes["base"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros text-center                   : text-center                    1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-center\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  textAlign: "center",
+};
+
+
+`;
+
+exports[`macros text-justify                  : text-justify                   1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-justify\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  textAlign: "justify",
+};
+
+
+`;
+
+exports[`macros text-left                     : text-left                      1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-left\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  textAlign: "left",
+};
+
+
+`;
+
+exports[`macros text-lg                       : text-lg                        1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-lg\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["lg"],
+    },
+    {
+      fontSize: _tailwind.textSizes["lg"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros text-right                    : text-right                     1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-right\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  textAlign: "right",
+};
+
+
+`;
+
+exports[`macros text-sm                       : text-sm                        1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-sm\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["sm"],
+    },
+    {
+      fontSize: _tailwind.textSizes["sm"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros text-xl                       : text-xl                        1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["xl"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xl"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
+
+exports[`macros text-xs                       : text-xs                        1`] = `
+
+import tw from 'tailwind.macro';
+const css = tw\`text-xs\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import _tailwind from "/home/arthie/projects/tailwindcssinjs/tailwind.js";
+const css = {
+  ...[
+    {
+      color: _tailwind.textColors["xs"],
+    },
+    {
+      fontSize: _tailwind.textSizes["xs"],
+    },
+  ].filter(
+    (x) =>
+      typeof x[Object.keys(x)[0]] !== "undefined" && x[Object.keys(x)[0]] !== ""
+  )[0],
+};
+
+
+`;
