@@ -9,6 +9,7 @@
   },
   "scripts": {
     "bench": "jest --clearCache && yarn run bench-tailwindcssinjs && yarn run bench-twin",
+    "bench-npm": "jest --clearCache && npm run bench-tailwindcssinjs && npm run bench-twin",
     "bench-tailwindcssinjs": "jest ./bench/tailwindcssinjs.test.js --update-snapshot",
     "bench-twin": "jest ./bench/twin.test.js --update-snapshot"
   },

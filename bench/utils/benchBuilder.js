@@ -31,6 +31,16 @@ const tailwindcssInJs = (macroImport) => {
 
     const tests = [];
     const classes = [];
+    tests.push([
+      `initial load (no usage)`,
+      {
+        code: `
+          import tw from '${macroImport}';
+          `,
+        snapshot: true,
+      },
+      ,
+    ]);
     for (const [key, styleObject] of tsStyleObjectMap.entries()) {
       if (
         key.includes("text") &&
@@ -61,11 +71,61 @@ const tailwindcssInJs = (macroImport) => {
       }
     }
     tests.push([
-      `⚡ test ${classes.length} classes =`,
+      `test ${classes.slice(0, 10).length} classes =`,
       {
         code: `
           import tw from '${macroImport}';
-          const css = tw\`${classes.join(" ")}\`;
+          const css = tw\`${classes.slice(0, 10).join(" ")}\`;
+          `,
+        snapshot: true,
+      },
+    ]);
+    tests.push([
+      `test ${classes.slice(0, 20).length} classes =`,
+      {
+        code: `
+          import tw from '${macroImport}';
+          const css = tw\`${classes.slice(0, 20).join(" ")}\`;
+          `,
+        snapshot: true,
+      },
+    ]);
+    tests.push([
+      `test ${classes.slice(0, 40).length} classes =`,
+      {
+        code: `
+          import tw from '${macroImport}';
+          const css = tw\`${classes.slice(0, 40).join(" ")}\`;
+          `,
+        snapshot: true,
+      },
+    ]);
+    tests.push([
+      `test ${classes.slice(0, 80).length} classes =`,
+      {
+        code: `
+          import tw from '${macroImport}';
+          const css = tw\`${classes.slice(0, 80).join(" ")}\`;
+          `,
+        snapshot: true,
+      },
+    ]);
+    tests.push([
+      `test ${classes.slice(0, 160).length} classes =`,
+      {
+        code: `
+          import tw from '${macroImport}';
+          const css = tw\`${classes.slice(0, 160).join(" ")}\`;
+          `,
+        snapshot: true,
+      },
+    ]);
+    tests.push([
+      `test ${classes.slice(0, 220).length} classes =`,
+      {
+        code: `
+          import tw from '${macroImport}';
+          const css = tw\`${classes.slice(0, 220).join(" ")}\`;
           `,
         snapshot: true,
       },
