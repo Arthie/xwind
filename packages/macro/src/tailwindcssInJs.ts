@@ -1,6 +1,9 @@
+import fs from "fs";
+
 import {
   tailwindData,
-  TailwindConfig,
+  resolveTailwindConfig,
+  resolveTailwindConfigPath,
 } from "@tailwindcssinjs/tailwindcss-data";
 
 import {
@@ -14,43 +17,74 @@ import {
   TwClasses,
 } from "@tailwindcssinjs/class-composer";
 
-export const tailwindcssInJs = (config: TailwindConfig) => {
-  const {
-    resolvedConfig,
-    mediaScreens,
-    variants,
-    applyVariant,
-    componentsRoot,
-    utilitiesRoot,
-  } = tailwindData(config);
+let configCache = Buffer.from("");
+let tailwind: (args: TwClasses[]) => any;
+let configPath: string | undefined;
 
-  const transformedComponents = transformPostcssRootToTwObjects(
-    componentsRoot,
-    "component"
-  );
-  const transformedUtilities = transformPostcssRootToTwObjects(
-    utilitiesRoot,
-    "utility"
-  );
+export const tailwindcssInJs = () => {
+  //check for config
+  try {
+    configPath = resolveTailwindConfigPath();
+  } catch (err) {
+    configPath = undefined;
+  }
 
-  const tsStyleObjectMap = transformTwObjectsToTwStyleObjectMap([
-    ...transformedComponents,
-    ...transformedUtilities,
-  ]);
+  //check if config has changed
+  let configHasChanged;
+  if (configPath) {
+    const configfile = fs.readFileSync(configPath);
+    configHasChanged = !configCache.equals(configfile);
+    if (configHasChanged) {
+      if (configCache.length > 0)
+        console.log(
+          "@tailwindcssinjs/macro - Tailwind config has been changed"
+        );
+      configCache = configfile;
+    }
+  }
 
-  const variantParser = twClassesVariantsParser(resolvedConfig.separator);
+  if (configHasChanged || !tailwind) {
+    const config = resolveTailwindConfig(configPath);
 
-  return (...arg: TwClasses[]) => {
-    const twParsedClasses = variantParser(arg);
-
-    const cssObject = transformTwStyleObjectToStyleObject(
-      tsStyleObjectMap,
-      twParsedClasses,
+    const {
+      resolvedConfig,
       mediaScreens,
       variants,
-      applyVariant
+      applyVariant,
+      componentsRoot,
+      utilitiesRoot,
+    } = tailwindData(config);
+
+    const transformedComponents = transformPostcssRootToTwObjects(
+      componentsRoot,
+      "component"
+    );
+    const transformedUtilities = transformPostcssRootToTwObjects(
+      utilitiesRoot,
+      "utility"
     );
 
-    return cssObject;
-  };
+    const tsStyleObjectMap = transformTwObjectsToTwStyleObjectMap([
+      ...transformedComponents,
+      ...transformedUtilities,
+    ]);
+
+    const variantParser = twClassesVariantsParser(resolvedConfig.separator);
+
+    tailwind = (arg: TwClasses[]) => {
+      const twParsedClasses = variantParser(arg);
+
+      const cssObject = transformTwStyleObjectToStyleObject(
+        tsStyleObjectMap,
+        twParsedClasses,
+        mediaScreens,
+        variants,
+        applyVariant
+      );
+
+      return cssObject;
+    };
+  }
+
+  return tailwind;
 };

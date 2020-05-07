@@ -10279,7 +10279,8 @@ const css = tw("bg-black");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#000000",
+  "--bg-opacity": "1",
+  backgroundColor: ["#000000", "rgba(0, 0, 0, var(--bg-opacity))"],
 };
 
 
@@ -10293,7 +10294,8 @@ const css = tw("bg-blue-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#ebf5ff",
+  "--bg-opacity": "1",
+  backgroundColor: ["#ebf5ff", "rgba(235, 245, 255, var(--bg-opacity))"],
 };
 
 
@@ -10307,7 +10309,8 @@ const css = tw("bg-blue-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#e1effe",
+  "--bg-opacity": "1",
+  backgroundColor: ["#e1effe", "rgba(225, 239, 254, var(--bg-opacity))"],
 };
 
 
@@ -10321,7 +10324,8 @@ const css = tw("bg-blue-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#c3ddfd",
+  "--bg-opacity": "1",
+  backgroundColor: ["#c3ddfd", "rgba(195, 221, 253, var(--bg-opacity))"],
 };
 
 
@@ -10335,7 +10339,8 @@ const css = tw("bg-blue-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#a4cafe",
+  "--bg-opacity": "1",
+  backgroundColor: ["#a4cafe", "rgba(164, 202, 254, var(--bg-opacity))"],
 };
 
 
@@ -10349,7 +10354,8 @@ const css = tw("bg-blue-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#76a9fa",
+  "--bg-opacity": "1",
+  backgroundColor: ["#76a9fa", "rgba(118, 169, 250, var(--bg-opacity))"],
 };
 
 
@@ -10363,7 +10369,8 @@ const css = tw("bg-blue-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#3f83f8",
+  "--bg-opacity": "1",
+  backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
 };
 
 
@@ -10377,7 +10384,8 @@ const css = tw("bg-blue-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#1c64f2",
+  "--bg-opacity": "1",
+  backgroundColor: ["#1c64f2", "rgba(28, 100, 242, var(--bg-opacity))"],
 };
 
 
@@ -10391,7 +10399,8 @@ const css = tw("bg-blue-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#1a56db",
+  "--bg-opacity": "1",
+  backgroundColor: ["#1a56db", "rgba(26, 86, 219, var(--bg-opacity))"],
 };
 
 
@@ -10405,7 +10414,8 @@ const css = tw("bg-blue-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#1e429f",
+  "--bg-opacity": "1",
+  backgroundColor: ["#1e429f", "rgba(30, 66, 159, var(--bg-opacity))"],
 };
 
 
@@ -10419,7 +10429,8 @@ const css = tw("bg-blue-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#233876",
+  "--bg-opacity": "1",
+  backgroundColor: ["#233876", "rgba(35, 56, 118, var(--bg-opacity))"],
 };
 
 
@@ -10475,7 +10486,8 @@ const css = tw("bg-cool-gray-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fbfdfe",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fbfdfe", "rgba(251, 253, 254, var(--bg-opacity))"],
 };
 
 
@@ -10489,7 +10501,8 @@ const css = tw("bg-cool-gray-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f1f5f9",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f1f5f9", "rgba(241, 245, 249, var(--bg-opacity))"],
 };
 
 
@@ -10503,7 +10516,8 @@ const css = tw("bg-cool-gray-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#e2e8f0",
+  "--bg-opacity": "1",
+  backgroundColor: ["#e2e8f0", "rgba(226, 232, 240, var(--bg-opacity))"],
 };
 
 
@@ -10517,7 +10531,8 @@ const css = tw("bg-cool-gray-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#cfd8e3",
+  "--bg-opacity": "1",
+  backgroundColor: ["#cfd8e3", "rgba(207, 216, 227, var(--bg-opacity))"],
 };
 
 
@@ -10531,7 +10546,8 @@ const css = tw("bg-cool-gray-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#97a6ba",
+  "--bg-opacity": "1",
+  backgroundColor: ["#97a6ba", "rgba(151, 166, 186, var(--bg-opacity))"],
 };
 
 
@@ -10545,7 +10561,8 @@ const css = tw("bg-cool-gray-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#64748b",
+  "--bg-opacity": "1",
+  backgroundColor: ["#64748b", "rgba(100, 116, 139, var(--bg-opacity))"],
 };
 
 
@@ -10559,7 +10576,8 @@ const css = tw("bg-cool-gray-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#475569",
+  "--bg-opacity": "1",
+  backgroundColor: ["#475569", "rgba(71, 85, 105, var(--bg-opacity))"],
 };
 
 
@@ -10573,7 +10591,8 @@ const css = tw("bg-cool-gray-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#364152",
+  "--bg-opacity": "1",
+  backgroundColor: ["#364152", "rgba(54, 65, 82, var(--bg-opacity))"],
 };
 
 
@@ -10587,7 +10606,8 @@ const css = tw("bg-cool-gray-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#27303f",
+  "--bg-opacity": "1",
+  backgroundColor: ["#27303f", "rgba(39, 48, 63, var(--bg-opacity))"],
 };
 
 
@@ -10601,7 +10621,8 @@ const css = tw("bg-cool-gray-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#1a202e",
+  "--bg-opacity": "1",
+  backgroundColor: ["#1a202e", "rgba(26, 32, 46, var(--bg-opacity))"],
 };
 
 
@@ -10643,7 +10664,8 @@ const css = tw("bg-gray-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f9fafb",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f9fafb", "rgba(249, 250, 251, var(--bg-opacity))"],
 };
 
 
@@ -10657,7 +10679,8 @@ const css = tw("bg-gray-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f4f5f7",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f4f5f7", "rgba(244, 245, 247, var(--bg-opacity))"],
 };
 
 
@@ -10671,7 +10694,8 @@ const css = tw("bg-gray-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#e5e7eb",
+  "--bg-opacity": "1",
+  backgroundColor: ["#e5e7eb", "rgba(229, 231, 235, var(--bg-opacity))"],
 };
 
 
@@ -10685,7 +10709,8 @@ const css = tw("bg-gray-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#d2d6dc",
+  "--bg-opacity": "1",
+  backgroundColor: ["#d2d6dc", "rgba(210, 214, 220, var(--bg-opacity))"],
 };
 
 
@@ -10699,7 +10724,8 @@ const css = tw("bg-gray-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#9fa6b2",
+  "--bg-opacity": "1",
+  backgroundColor: ["#9fa6b2", "rgba(159, 166, 178, var(--bg-opacity))"],
 };
 
 
@@ -10713,7 +10739,8 @@ const css = tw("bg-gray-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#6b7280",
+  "--bg-opacity": "1",
+  backgroundColor: ["#6b7280", "rgba(107, 114, 128, var(--bg-opacity))"],
 };
 
 
@@ -10727,7 +10754,8 @@ const css = tw("bg-gray-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#4b5563",
+  "--bg-opacity": "1",
+  backgroundColor: ["#4b5563", "rgba(75, 85, 99, var(--bg-opacity))"],
 };
 
 
@@ -10741,7 +10769,8 @@ const css = tw("bg-gray-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#374151",
+  "--bg-opacity": "1",
+  backgroundColor: ["#374151", "rgba(55, 65, 81, var(--bg-opacity))"],
 };
 
 
@@ -10755,7 +10784,8 @@ const css = tw("bg-gray-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#252f3f",
+  "--bg-opacity": "1",
+  backgroundColor: ["#252f3f", "rgba(37, 47, 63, var(--bg-opacity))"],
 };
 
 
@@ -10769,7 +10799,8 @@ const css = tw("bg-gray-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#161e2e",
+  "--bg-opacity": "1",
+  backgroundColor: ["#161e2e", "rgba(22, 30, 46, var(--bg-opacity))"],
 };
 
 
@@ -10783,7 +10814,8 @@ const css = tw("bg-green-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f3faf7",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f3faf7", "rgba(243, 250, 247, var(--bg-opacity))"],
 };
 
 
@@ -10797,7 +10829,8 @@ const css = tw("bg-green-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#def7ec",
+  "--bg-opacity": "1",
+  backgroundColor: ["#def7ec", "rgba(222, 247, 236, var(--bg-opacity))"],
 };
 
 
@@ -10811,7 +10844,8 @@ const css = tw("bg-green-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#bcf0da",
+  "--bg-opacity": "1",
+  backgroundColor: ["#bcf0da", "rgba(188, 240, 218, var(--bg-opacity))"],
 };
 
 
@@ -10825,7 +10859,8 @@ const css = tw("bg-green-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#84e1bc",
+  "--bg-opacity": "1",
+  backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
 };
 
 
@@ -10839,7 +10874,8 @@ const css = tw("bg-green-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#31c48d",
+  "--bg-opacity": "1",
+  backgroundColor: ["#31c48d", "rgba(49, 196, 141, var(--bg-opacity))"],
 };
 
 
@@ -10853,7 +10889,8 @@ const css = tw("bg-green-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#0e9f6e",
+  "--bg-opacity": "1",
+  backgroundColor: ["#0e9f6e", "rgba(14, 159, 110, var(--bg-opacity))"],
 };
 
 
@@ -10867,7 +10904,8 @@ const css = tw("bg-green-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#057a55",
+  "--bg-opacity": "1",
+  backgroundColor: ["#057a55", "rgba(5, 122, 85, var(--bg-opacity))"],
 };
 
 
@@ -10881,7 +10919,8 @@ const css = tw("bg-green-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#046c4e",
+  "--bg-opacity": "1",
+  backgroundColor: ["#046c4e", "rgba(4, 108, 78, var(--bg-opacity))"],
 };
 
 
@@ -10895,7 +10934,8 @@ const css = tw("bg-green-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#03543f",
+  "--bg-opacity": "1",
+  backgroundColor: ["#03543f", "rgba(3, 84, 63, var(--bg-opacity))"],
 };
 
 
@@ -10909,7 +10949,8 @@ const css = tw("bg-green-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#014737",
+  "--bg-opacity": "1",
+  backgroundColor: ["#014737", "rgba(1, 71, 55, var(--bg-opacity))"],
 };
 
 
@@ -10923,7 +10964,8 @@ const css = tw("bg-indigo-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f0f5ff",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f0f5ff", "rgba(240, 245, 255, var(--bg-opacity))"],
 };
 
 
@@ -10937,7 +10979,8 @@ const css = tw("bg-indigo-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#e5edff",
+  "--bg-opacity": "1",
+  backgroundColor: ["#e5edff", "rgba(229, 237, 255, var(--bg-opacity))"],
 };
 
 
@@ -10951,7 +10994,8 @@ const css = tw("bg-indigo-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#cddbfe",
+  "--bg-opacity": "1",
+  backgroundColor: ["#cddbfe", "rgba(205, 219, 254, var(--bg-opacity))"],
 };
 
 
@@ -10965,7 +11009,8 @@ const css = tw("bg-indigo-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#b4c6fc",
+  "--bg-opacity": "1",
+  backgroundColor: ["#b4c6fc", "rgba(180, 198, 252, var(--bg-opacity))"],
 };
 
 
@@ -10979,7 +11024,8 @@ const css = tw("bg-indigo-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#8da2fb",
+  "--bg-opacity": "1",
+  backgroundColor: ["#8da2fb", "rgba(141, 162, 251, var(--bg-opacity))"],
 };
 
 
@@ -10993,7 +11039,8 @@ const css = tw("bg-indigo-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#6875f5",
+  "--bg-opacity": "1",
+  backgroundColor: ["#6875f5", "rgba(104, 117, 245, var(--bg-opacity))"],
 };
 
 
@@ -11007,7 +11054,8 @@ const css = tw("bg-indigo-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#5850ec",
+  "--bg-opacity": "1",
+  backgroundColor: ["#5850ec", "rgba(88, 80, 236, var(--bg-opacity))"],
 };
 
 
@@ -11021,7 +11069,8 @@ const css = tw("bg-indigo-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#5145cd",
+  "--bg-opacity": "1",
+  backgroundColor: ["#5145cd", "rgba(81, 69, 205, var(--bg-opacity))"],
 };
 
 
@@ -11035,7 +11084,8 @@ const css = tw("bg-indigo-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#42389d",
+  "--bg-opacity": "1",
+  backgroundColor: ["#42389d", "rgba(66, 56, 157, var(--bg-opacity))"],
 };
 
 
@@ -11049,7 +11099,8 @@ const css = tw("bg-indigo-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#362f78",
+  "--bg-opacity": "1",
+  backgroundColor: ["#362f78", "rgba(54, 47, 120, var(--bg-opacity))"],
 };
 
 
@@ -11125,6 +11176,76 @@ const css = {
 
 `;
 
+exports[`macros bg-opacity-0: bg-opacity-0 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-opacity-0");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--bg-opacity": "0",
+};
+
+
+`;
+
+exports[`macros bg-opacity-25: bg-opacity-25 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-opacity-25");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--bg-opacity": "0.25",
+};
+
+
+`;
+
+exports[`macros bg-opacity-50: bg-opacity-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-opacity-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--bg-opacity": "0.5",
+};
+
+
+`;
+
+exports[`macros bg-opacity-75: bg-opacity-75 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-opacity-75");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--bg-opacity": "0.75",
+};
+
+
+`;
+
+exports[`macros bg-opacity-100: bg-opacity-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-opacity-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--bg-opacity": "1",
+};
+
+
+`;
+
 exports[`macros bg-orange-50: bg-orange-50 1`] = `
 
 import tw from '../lib/macro';
@@ -11133,7 +11254,8 @@ const css = tw("bg-orange-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fff8f1",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fff8f1", "rgba(255, 248, 241, var(--bg-opacity))"],
 };
 
 
@@ -11147,7 +11269,8 @@ const css = tw("bg-orange-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#feecdc",
+  "--bg-opacity": "1",
+  backgroundColor: ["#feecdc", "rgba(254, 236, 220, var(--bg-opacity))"],
 };
 
 
@@ -11161,7 +11284,8 @@ const css = tw("bg-orange-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fcd9bd",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fcd9bd", "rgba(252, 217, 189, var(--bg-opacity))"],
 };
 
 
@@ -11175,7 +11299,8 @@ const css = tw("bg-orange-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fdba8c",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fdba8c", "rgba(253, 186, 140, var(--bg-opacity))"],
 };
 
 
@@ -11189,7 +11314,8 @@ const css = tw("bg-orange-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#ff8a4c",
+  "--bg-opacity": "1",
+  backgroundColor: ["#ff8a4c", "rgba(255, 138, 76, var(--bg-opacity))"],
 };
 
 
@@ -11203,7 +11329,8 @@ const css = tw("bg-orange-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#ff5a1f",
+  "--bg-opacity": "1",
+  backgroundColor: ["#ff5a1f", "rgba(255, 90, 31, var(--bg-opacity))"],
 };
 
 
@@ -11217,7 +11344,8 @@ const css = tw("bg-orange-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#d03801",
+  "--bg-opacity": "1",
+  backgroundColor: ["#d03801", "rgba(208, 56, 1, var(--bg-opacity))"],
 };
 
 
@@ -11231,7 +11359,8 @@ const css = tw("bg-orange-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#b43403",
+  "--bg-opacity": "1",
+  backgroundColor: ["#b43403", "rgba(180, 52, 3, var(--bg-opacity))"],
 };
 
 
@@ -11245,7 +11374,8 @@ const css = tw("bg-orange-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#8a2c0d",
+  "--bg-opacity": "1",
+  backgroundColor: ["#8a2c0d", "rgba(138, 44, 13, var(--bg-opacity))"],
 };
 
 
@@ -11259,7 +11389,8 @@ const css = tw("bg-orange-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#771d1d",
+  "--bg-opacity": "1",
+  backgroundColor: ["#771d1d", "rgba(119, 29, 29, var(--bg-opacity))"],
 };
 
 
@@ -11273,7 +11404,8 @@ const css = tw("bg-pink-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fdf2f8",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fdf2f8", "rgba(253, 242, 248, var(--bg-opacity))"],
 };
 
 
@@ -11287,7 +11419,8 @@ const css = tw("bg-pink-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fce8f3",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fce8f3", "rgba(252, 232, 243, var(--bg-opacity))"],
 };
 
 
@@ -11301,7 +11434,8 @@ const css = tw("bg-pink-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fad1e8",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fad1e8", "rgba(250, 209, 232, var(--bg-opacity))"],
 };
 
 
@@ -11315,7 +11449,8 @@ const css = tw("bg-pink-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f8b4d9",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f8b4d9", "rgba(248, 180, 217, var(--bg-opacity))"],
 };
 
 
@@ -11329,7 +11464,8 @@ const css = tw("bg-pink-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f17eb8",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f17eb8", "rgba(241, 126, 184, var(--bg-opacity))"],
 };
 
 
@@ -11343,7 +11479,8 @@ const css = tw("bg-pink-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#e74694",
+  "--bg-opacity": "1",
+  backgroundColor: ["#e74694", "rgba(231, 70, 148, var(--bg-opacity))"],
 };
 
 
@@ -11357,7 +11494,8 @@ const css = tw("bg-pink-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#d61f69",
+  "--bg-opacity": "1",
+  backgroundColor: ["#d61f69", "rgba(214, 31, 105, var(--bg-opacity))"],
 };
 
 
@@ -11371,7 +11509,8 @@ const css = tw("bg-pink-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#bf125d",
+  "--bg-opacity": "1",
+  backgroundColor: ["#bf125d", "rgba(191, 18, 93, var(--bg-opacity))"],
 };
 
 
@@ -11385,7 +11524,8 @@ const css = tw("bg-pink-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#99154b",
+  "--bg-opacity": "1",
+  backgroundColor: ["#99154b", "rgba(153, 21, 75, var(--bg-opacity))"],
 };
 
 
@@ -11399,7 +11539,8 @@ const css = tw("bg-pink-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#751a3d",
+  "--bg-opacity": "1",
+  backgroundColor: ["#751a3d", "rgba(117, 26, 61, var(--bg-opacity))"],
 };
 
 
@@ -11413,7 +11554,8 @@ const css = tw("bg-purple-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f6f5ff",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f6f5ff", "rgba(246, 245, 255, var(--bg-opacity))"],
 };
 
 
@@ -11427,7 +11569,8 @@ const css = tw("bg-purple-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#edebfe",
+  "--bg-opacity": "1",
+  backgroundColor: ["#edebfe", "rgba(237, 235, 254, var(--bg-opacity))"],
 };
 
 
@@ -11441,7 +11584,8 @@ const css = tw("bg-purple-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#dcd7fe",
+  "--bg-opacity": "1",
+  backgroundColor: ["#dcd7fe", "rgba(220, 215, 254, var(--bg-opacity))"],
 };
 
 
@@ -11455,7 +11599,8 @@ const css = tw("bg-purple-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#cabffd",
+  "--bg-opacity": "1",
+  backgroundColor: ["#cabffd", "rgba(202, 191, 253, var(--bg-opacity))"],
 };
 
 
@@ -11469,7 +11614,8 @@ const css = tw("bg-purple-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#ac94fa",
+  "--bg-opacity": "1",
+  backgroundColor: ["#ac94fa", "rgba(172, 148, 250, var(--bg-opacity))"],
 };
 
 
@@ -11483,7 +11629,8 @@ const css = tw("bg-purple-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#9061f9",
+  "--bg-opacity": "1",
+  backgroundColor: ["#9061f9", "rgba(144, 97, 249, var(--bg-opacity))"],
 };
 
 
@@ -11497,7 +11644,8 @@ const css = tw("bg-purple-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#7e3af2",
+  "--bg-opacity": "1",
+  backgroundColor: ["#7e3af2", "rgba(126, 58, 242, var(--bg-opacity))"],
 };
 
 
@@ -11511,7 +11659,8 @@ const css = tw("bg-purple-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#6c2bd9",
+  "--bg-opacity": "1",
+  backgroundColor: ["#6c2bd9", "rgba(108, 43, 217, var(--bg-opacity))"],
 };
 
 
@@ -11525,7 +11674,8 @@ const css = tw("bg-purple-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#5521b5",
+  "--bg-opacity": "1",
+  backgroundColor: ["#5521b5", "rgba(85, 33, 181, var(--bg-opacity))"],
 };
 
 
@@ -11539,7 +11689,8 @@ const css = tw("bg-purple-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#4a1d96",
+  "--bg-opacity": "1",
+  backgroundColor: ["#4a1d96", "rgba(74, 29, 150, var(--bg-opacity))"],
 };
 
 
@@ -11553,7 +11704,8 @@ const css = tw("bg-red-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fdf2f2",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fdf2f2", "rgba(253, 242, 242, var(--bg-opacity))"],
 };
 
 
@@ -11567,7 +11719,8 @@ const css = tw("bg-red-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fde8e8",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fde8e8", "rgba(253, 232, 232, var(--bg-opacity))"],
 };
 
 
@@ -11581,7 +11734,8 @@ const css = tw("bg-red-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fbd5d5",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fbd5d5", "rgba(251, 213, 213, var(--bg-opacity))"],
 };
 
 
@@ -11595,7 +11749,8 @@ const css = tw("bg-red-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f8b4b4",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f8b4b4", "rgba(248, 180, 180, var(--bg-opacity))"],
 };
 
 
@@ -11609,7 +11764,8 @@ const css = tw("bg-red-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f98080",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f98080", "rgba(249, 128, 128, var(--bg-opacity))"],
 };
 
 
@@ -11623,7 +11779,8 @@ const css = tw("bg-red-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#f05252",
+  "--bg-opacity": "1",
+  backgroundColor: ["#f05252", "rgba(240, 82, 82, var(--bg-opacity))"],
 };
 
 
@@ -11637,7 +11794,8 @@ const css = tw("bg-red-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#e02424",
+  "--bg-opacity": "1",
+  backgroundColor: ["#e02424", "rgba(224, 36, 36, var(--bg-opacity))"],
 };
 
 
@@ -11651,7 +11809,8 @@ const css = tw("bg-red-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#c81e1e",
+  "--bg-opacity": "1",
+  backgroundColor: ["#c81e1e", "rgba(200, 30, 30, var(--bg-opacity))"],
 };
 
 
@@ -11665,7 +11824,8 @@ const css = tw("bg-red-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#9b1c1c",
+  "--bg-opacity": "1",
+  backgroundColor: ["#9b1c1c", "rgba(155, 28, 28, var(--bg-opacity))"],
 };
 
 
@@ -11679,7 +11839,8 @@ const css = tw("bg-red-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#771d1d",
+  "--bg-opacity": "1",
+  backgroundColor: ["#771d1d", "rgba(119, 29, 29, var(--bg-opacity))"],
 };
 
 
@@ -11819,7 +11980,8 @@ const css = tw("bg-teal-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#edfafa",
+  "--bg-opacity": "1",
+  backgroundColor: ["#edfafa", "rgba(237, 250, 250, var(--bg-opacity))"],
 };
 
 
@@ -11833,7 +11995,8 @@ const css = tw("bg-teal-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#d5f5f6",
+  "--bg-opacity": "1",
+  backgroundColor: ["#d5f5f6", "rgba(213, 245, 246, var(--bg-opacity))"],
 };
 
 
@@ -11847,7 +12010,8 @@ const css = tw("bg-teal-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#afecef",
+  "--bg-opacity": "1",
+  backgroundColor: ["#afecef", "rgba(175, 236, 239, var(--bg-opacity))"],
 };
 
 
@@ -11861,7 +12025,8 @@ const css = tw("bg-teal-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#7edce2",
+  "--bg-opacity": "1",
+  backgroundColor: ["#7edce2", "rgba(126, 220, 226, var(--bg-opacity))"],
 };
 
 
@@ -11875,7 +12040,8 @@ const css = tw("bg-teal-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#16bdca",
+  "--bg-opacity": "1",
+  backgroundColor: ["#16bdca", "rgba(22, 189, 202, var(--bg-opacity))"],
 };
 
 
@@ -11889,7 +12055,8 @@ const css = tw("bg-teal-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#0694a2",
+  "--bg-opacity": "1",
+  backgroundColor: ["#0694a2", "rgba(6, 148, 162, var(--bg-opacity))"],
 };
 
 
@@ -11903,7 +12070,8 @@ const css = tw("bg-teal-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#047481",
+  "--bg-opacity": "1",
+  backgroundColor: ["#047481", "rgba(4, 116, 129, var(--bg-opacity))"],
 };
 
 
@@ -11917,7 +12085,8 @@ const css = tw("bg-teal-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#036672",
+  "--bg-opacity": "1",
+  backgroundColor: ["#036672", "rgba(3, 102, 114, var(--bg-opacity))"],
 };
 
 
@@ -11931,7 +12100,8 @@ const css = tw("bg-teal-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#05505c",
+  "--bg-opacity": "1",
+  backgroundColor: ["#05505c", "rgba(5, 80, 92, var(--bg-opacity))"],
 };
 
 
@@ -11945,7 +12115,8 @@ const css = tw("bg-teal-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#014451",
+  "--bg-opacity": "1",
+  backgroundColor: ["#014451", "rgba(1, 68, 81, var(--bg-opacity))"],
 };
 
 
@@ -11987,7 +12158,8 @@ const css = tw("bg-white");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#ffffff",
+  "--bg-opacity": "1",
+  backgroundColor: ["#ffffff", "rgba(255, 255, 255, var(--bg-opacity))"],
 };
 
 
@@ -12001,7 +12173,8 @@ const css = tw("bg-yellow-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fdfdea",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fdfdea", "rgba(253, 253, 234, var(--bg-opacity))"],
 };
 
 
@@ -12015,7 +12188,8 @@ const css = tw("bg-yellow-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fdf6b2",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fdf6b2", "rgba(253, 246, 178, var(--bg-opacity))"],
 };
 
 
@@ -12029,7 +12203,8 @@ const css = tw("bg-yellow-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#fce96a",
+  "--bg-opacity": "1",
+  backgroundColor: ["#fce96a", "rgba(252, 233, 106, var(--bg-opacity))"],
 };
 
 
@@ -12043,7 +12218,8 @@ const css = tw("bg-yellow-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#faca15",
+  "--bg-opacity": "1",
+  backgroundColor: ["#faca15", "rgba(250, 202, 21, var(--bg-opacity))"],
 };
 
 
@@ -12057,7 +12233,8 @@ const css = tw("bg-yellow-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#e3a008",
+  "--bg-opacity": "1",
+  backgroundColor: ["#e3a008", "rgba(227, 160, 8, var(--bg-opacity))"],
 };
 
 
@@ -12071,7 +12248,8 @@ const css = tw("bg-yellow-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#c27803",
+  "--bg-opacity": "1",
+  backgroundColor: ["#c27803", "rgba(194, 120, 3, var(--bg-opacity))"],
 };
 
 
@@ -12085,7 +12263,8 @@ const css = tw("bg-yellow-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#9f580a",
+  "--bg-opacity": "1",
+  backgroundColor: ["#9f580a", "rgba(159, 88, 10, var(--bg-opacity))"],
 };
 
 
@@ -12099,7 +12278,8 @@ const css = tw("bg-yellow-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#8e4b10",
+  "--bg-opacity": "1",
+  backgroundColor: ["#8e4b10", "rgba(142, 75, 16, var(--bg-opacity))"],
 };
 
 
@@ -12113,7 +12293,8 @@ const css = tw("bg-yellow-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#723b13",
+  "--bg-opacity": "1",
+  backgroundColor: ["#723b13", "rgba(114, 59, 19, var(--bg-opacity))"],
 };
 
 
@@ -12127,7 +12308,8 @@ const css = tw("bg-yellow-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  backgroundColor: "#633112",
+  "--bg-opacity": "1",
+  backgroundColor: ["#633112", "rgba(99, 49, 18, var(--bg-opacity))"],
 };
 
 
@@ -12295,7 +12477,8 @@ const css = tw("border-black");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#000000",
+  "--border-opacity": "1",
+  borderColor: ["#000000", "rgba(0, 0, 0, var(--border-opacity))"],
 };
 
 
@@ -12309,7 +12492,8 @@ const css = tw("border-blue-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#ebf5ff",
+  "--border-opacity": "1",
+  borderColor: ["#ebf5ff", "rgba(235, 245, 255, var(--border-opacity))"],
 };
 
 
@@ -12323,7 +12507,8 @@ const css = tw("border-blue-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#e1effe",
+  "--border-opacity": "1",
+  borderColor: ["#e1effe", "rgba(225, 239, 254, var(--border-opacity))"],
 };
 
 
@@ -12337,7 +12522,8 @@ const css = tw("border-blue-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#c3ddfd",
+  "--border-opacity": "1",
+  borderColor: ["#c3ddfd", "rgba(195, 221, 253, var(--border-opacity))"],
 };
 
 
@@ -12351,7 +12537,8 @@ const css = tw("border-blue-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#a4cafe",
+  "--border-opacity": "1",
+  borderColor: ["#a4cafe", "rgba(164, 202, 254, var(--border-opacity))"],
 };
 
 
@@ -12365,7 +12552,8 @@ const css = tw("border-blue-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#76a9fa",
+  "--border-opacity": "1",
+  borderColor: ["#76a9fa", "rgba(118, 169, 250, var(--border-opacity))"],
 };
 
 
@@ -12379,7 +12567,8 @@ const css = tw("border-blue-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#3f83f8",
+  "--border-opacity": "1",
+  borderColor: ["#3f83f8", "rgba(63, 131, 248, var(--border-opacity))"],
 };
 
 
@@ -12393,7 +12582,8 @@ const css = tw("border-blue-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#1c64f2",
+  "--border-opacity": "1",
+  borderColor: ["#1c64f2", "rgba(28, 100, 242, var(--border-opacity))"],
 };
 
 
@@ -12407,7 +12597,8 @@ const css = tw("border-blue-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#1a56db",
+  "--border-opacity": "1",
+  borderColor: ["#1a56db", "rgba(26, 86, 219, var(--border-opacity))"],
 };
 
 
@@ -12421,7 +12612,8 @@ const css = tw("border-blue-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#1e429f",
+  "--border-opacity": "1",
+  borderColor: ["#1e429f", "rgba(30, 66, 159, var(--border-opacity))"],
 };
 
 
@@ -12435,7 +12627,8 @@ const css = tw("border-blue-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#233876",
+  "--border-opacity": "1",
+  borderColor: ["#233876", "rgba(35, 56, 118, var(--border-opacity))"],
 };
 
 
@@ -12463,7 +12656,8 @@ const css = tw("border-cool-gray-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fbfdfe",
+  "--border-opacity": "1",
+  borderColor: ["#fbfdfe", "rgba(251, 253, 254, var(--border-opacity))"],
 };
 
 
@@ -12477,7 +12671,8 @@ const css = tw("border-cool-gray-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f1f5f9",
+  "--border-opacity": "1",
+  borderColor: ["#f1f5f9", "rgba(241, 245, 249, var(--border-opacity))"],
 };
 
 
@@ -12491,7 +12686,8 @@ const css = tw("border-cool-gray-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#e2e8f0",
+  "--border-opacity": "1",
+  borderColor: ["#e2e8f0", "rgba(226, 232, 240, var(--border-opacity))"],
 };
 
 
@@ -12505,7 +12701,8 @@ const css = tw("border-cool-gray-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#cfd8e3",
+  "--border-opacity": "1",
+  borderColor: ["#cfd8e3", "rgba(207, 216, 227, var(--border-opacity))"],
 };
 
 
@@ -12519,7 +12716,8 @@ const css = tw("border-cool-gray-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#97a6ba",
+  "--border-opacity": "1",
+  borderColor: ["#97a6ba", "rgba(151, 166, 186, var(--border-opacity))"],
 };
 
 
@@ -12533,7 +12731,8 @@ const css = tw("border-cool-gray-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#64748b",
+  "--border-opacity": "1",
+  borderColor: ["#64748b", "rgba(100, 116, 139, var(--border-opacity))"],
 };
 
 
@@ -12547,7 +12746,8 @@ const css = tw("border-cool-gray-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#475569",
+  "--border-opacity": "1",
+  borderColor: ["#475569", "rgba(71, 85, 105, var(--border-opacity))"],
 };
 
 
@@ -12561,7 +12761,8 @@ const css = tw("border-cool-gray-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#364152",
+  "--border-opacity": "1",
+  borderColor: ["#364152", "rgba(54, 65, 82, var(--border-opacity))"],
 };
 
 
@@ -12575,7 +12776,8 @@ const css = tw("border-cool-gray-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#27303f",
+  "--border-opacity": "1",
+  borderColor: ["#27303f", "rgba(39, 48, 63, var(--border-opacity))"],
 };
 
 
@@ -12589,7 +12791,8 @@ const css = tw("border-cool-gray-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#1a202e",
+  "--border-opacity": "1",
+  borderColor: ["#1a202e", "rgba(26, 32, 46, var(--border-opacity))"],
 };
 
 
@@ -12645,7 +12848,8 @@ const css = tw("border-gray-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f9fafb",
+  "--border-opacity": "1",
+  borderColor: ["#f9fafb", "rgba(249, 250, 251, var(--border-opacity))"],
 };
 
 
@@ -12659,7 +12863,8 @@ const css = tw("border-gray-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f4f5f7",
+  "--border-opacity": "1",
+  borderColor: ["#f4f5f7", "rgba(244, 245, 247, var(--border-opacity))"],
 };
 
 
@@ -12673,7 +12878,8 @@ const css = tw("border-gray-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#e5e7eb",
+  "--border-opacity": "1",
+  borderColor: ["#e5e7eb", "rgba(229, 231, 235, var(--border-opacity))"],
 };
 
 
@@ -12687,7 +12893,8 @@ const css = tw("border-gray-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#d2d6dc",
+  "--border-opacity": "1",
+  borderColor: ["#d2d6dc", "rgba(210, 214, 220, var(--border-opacity))"],
 };
 
 
@@ -12701,7 +12908,8 @@ const css = tw("border-gray-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#9fa6b2",
+  "--border-opacity": "1",
+  borderColor: ["#9fa6b2", "rgba(159, 166, 178, var(--border-opacity))"],
 };
 
 
@@ -12715,7 +12923,8 @@ const css = tw("border-gray-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#6b7280",
+  "--border-opacity": "1",
+  borderColor: ["#6b7280", "rgba(107, 114, 128, var(--border-opacity))"],
 };
 
 
@@ -12729,7 +12938,8 @@ const css = tw("border-gray-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#4b5563",
+  "--border-opacity": "1",
+  borderColor: ["#4b5563", "rgba(75, 85, 99, var(--border-opacity))"],
 };
 
 
@@ -12743,7 +12953,8 @@ const css = tw("border-gray-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#374151",
+  "--border-opacity": "1",
+  borderColor: ["#374151", "rgba(55, 65, 81, var(--border-opacity))"],
 };
 
 
@@ -12757,7 +12968,8 @@ const css = tw("border-gray-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#252f3f",
+  "--border-opacity": "1",
+  borderColor: ["#252f3f", "rgba(37, 47, 63, var(--border-opacity))"],
 };
 
 
@@ -12771,7 +12983,8 @@ const css = tw("border-gray-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#161e2e",
+  "--border-opacity": "1",
+  borderColor: ["#161e2e", "rgba(22, 30, 46, var(--border-opacity))"],
 };
 
 
@@ -12785,7 +12998,8 @@ const css = tw("border-green-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f3faf7",
+  "--border-opacity": "1",
+  borderColor: ["#f3faf7", "rgba(243, 250, 247, var(--border-opacity))"],
 };
 
 
@@ -12799,7 +13013,8 @@ const css = tw("border-green-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#def7ec",
+  "--border-opacity": "1",
+  borderColor: ["#def7ec", "rgba(222, 247, 236, var(--border-opacity))"],
 };
 
 
@@ -12813,7 +13028,8 @@ const css = tw("border-green-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#bcf0da",
+  "--border-opacity": "1",
+  borderColor: ["#bcf0da", "rgba(188, 240, 218, var(--border-opacity))"],
 };
 
 
@@ -12827,7 +13043,8 @@ const css = tw("border-green-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#84e1bc",
+  "--border-opacity": "1",
+  borderColor: ["#84e1bc", "rgba(132, 225, 188, var(--border-opacity))"],
 };
 
 
@@ -12841,7 +13058,8 @@ const css = tw("border-green-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#31c48d",
+  "--border-opacity": "1",
+  borderColor: ["#31c48d", "rgba(49, 196, 141, var(--border-opacity))"],
 };
 
 
@@ -12855,7 +13073,8 @@ const css = tw("border-green-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#0e9f6e",
+  "--border-opacity": "1",
+  borderColor: ["#0e9f6e", "rgba(14, 159, 110, var(--border-opacity))"],
 };
 
 
@@ -12869,7 +13088,8 @@ const css = tw("border-green-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#057a55",
+  "--border-opacity": "1",
+  borderColor: ["#057a55", "rgba(5, 122, 85, var(--border-opacity))"],
 };
 
 
@@ -12883,7 +13103,8 @@ const css = tw("border-green-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#046c4e",
+  "--border-opacity": "1",
+  borderColor: ["#046c4e", "rgba(4, 108, 78, var(--border-opacity))"],
 };
 
 
@@ -12897,7 +13118,8 @@ const css = tw("border-green-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#03543f",
+  "--border-opacity": "1",
+  borderColor: ["#03543f", "rgba(3, 84, 63, var(--border-opacity))"],
 };
 
 
@@ -12911,7 +13133,8 @@ const css = tw("border-green-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#014737",
+  "--border-opacity": "1",
+  borderColor: ["#014737", "rgba(1, 71, 55, var(--border-opacity))"],
 };
 
 
@@ -12925,7 +13148,8 @@ const css = tw("border-indigo-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f0f5ff",
+  "--border-opacity": "1",
+  borderColor: ["#f0f5ff", "rgba(240, 245, 255, var(--border-opacity))"],
 };
 
 
@@ -12939,7 +13163,8 @@ const css = tw("border-indigo-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#e5edff",
+  "--border-opacity": "1",
+  borderColor: ["#e5edff", "rgba(229, 237, 255, var(--border-opacity))"],
 };
 
 
@@ -12953,7 +13178,8 @@ const css = tw("border-indigo-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#cddbfe",
+  "--border-opacity": "1",
+  borderColor: ["#cddbfe", "rgba(205, 219, 254, var(--border-opacity))"],
 };
 
 
@@ -12967,7 +13193,8 @@ const css = tw("border-indigo-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#b4c6fc",
+  "--border-opacity": "1",
+  borderColor: ["#b4c6fc", "rgba(180, 198, 252, var(--border-opacity))"],
 };
 
 
@@ -12981,7 +13208,8 @@ const css = tw("border-indigo-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#8da2fb",
+  "--border-opacity": "1",
+  borderColor: ["#8da2fb", "rgba(141, 162, 251, var(--border-opacity))"],
 };
 
 
@@ -12995,7 +13223,8 @@ const css = tw("border-indigo-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#6875f5",
+  "--border-opacity": "1",
+  borderColor: ["#6875f5", "rgba(104, 117, 245, var(--border-opacity))"],
 };
 
 
@@ -13009,7 +13238,8 @@ const css = tw("border-indigo-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#5850ec",
+  "--border-opacity": "1",
+  borderColor: ["#5850ec", "rgba(88, 80, 236, var(--border-opacity))"],
 };
 
 
@@ -13023,7 +13253,8 @@ const css = tw("border-indigo-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#5145cd",
+  "--border-opacity": "1",
+  borderColor: ["#5145cd", "rgba(81, 69, 205, var(--border-opacity))"],
 };
 
 
@@ -13037,7 +13268,8 @@ const css = tw("border-indigo-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#42389d",
+  "--border-opacity": "1",
+  borderColor: ["#42389d", "rgba(66, 56, 157, var(--border-opacity))"],
 };
 
 
@@ -13051,7 +13283,8 @@ const css = tw("border-indigo-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#362f78",
+  "--border-opacity": "1",
+  borderColor: ["#362f78", "rgba(54, 47, 120, var(--border-opacity))"],
 };
 
 
@@ -13141,6 +13374,76 @@ const css = {
 
 `;
 
+exports[`macros border-opacity-0: border-opacity-0 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("border-opacity-0");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--border-opacity": "0",
+};
+
+
+`;
+
+exports[`macros border-opacity-25: border-opacity-25 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("border-opacity-25");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--border-opacity": "0.25",
+};
+
+
+`;
+
+exports[`macros border-opacity-50: border-opacity-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("border-opacity-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--border-opacity": "0.5",
+};
+
+
+`;
+
+exports[`macros border-opacity-75: border-opacity-75 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("border-opacity-75");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--border-opacity": "0.75",
+};
+
+
+`;
+
+exports[`macros border-opacity-100: border-opacity-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("border-opacity-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--border-opacity": "1",
+};
+
+
+`;
+
 exports[`macros border-orange-50: border-orange-50 1`] = `
 
 import tw from '../lib/macro';
@@ -13149,7 +13452,8 @@ const css = tw("border-orange-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fff8f1",
+  "--border-opacity": "1",
+  borderColor: ["#fff8f1", "rgba(255, 248, 241, var(--border-opacity))"],
 };
 
 
@@ -13163,7 +13467,8 @@ const css = tw("border-orange-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#feecdc",
+  "--border-opacity": "1",
+  borderColor: ["#feecdc", "rgba(254, 236, 220, var(--border-opacity))"],
 };
 
 
@@ -13177,7 +13482,8 @@ const css = tw("border-orange-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fcd9bd",
+  "--border-opacity": "1",
+  borderColor: ["#fcd9bd", "rgba(252, 217, 189, var(--border-opacity))"],
 };
 
 
@@ -13191,7 +13497,8 @@ const css = tw("border-orange-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fdba8c",
+  "--border-opacity": "1",
+  borderColor: ["#fdba8c", "rgba(253, 186, 140, var(--border-opacity))"],
 };
 
 
@@ -13205,7 +13512,8 @@ const css = tw("border-orange-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#ff8a4c",
+  "--border-opacity": "1",
+  borderColor: ["#ff8a4c", "rgba(255, 138, 76, var(--border-opacity))"],
 };
 
 
@@ -13219,7 +13527,8 @@ const css = tw("border-orange-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#ff5a1f",
+  "--border-opacity": "1",
+  borderColor: ["#ff5a1f", "rgba(255, 90, 31, var(--border-opacity))"],
 };
 
 
@@ -13233,7 +13542,8 @@ const css = tw("border-orange-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#d03801",
+  "--border-opacity": "1",
+  borderColor: ["#d03801", "rgba(208, 56, 1, var(--border-opacity))"],
 };
 
 
@@ -13247,7 +13557,8 @@ const css = tw("border-orange-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#b43403",
+  "--border-opacity": "1",
+  borderColor: ["#b43403", "rgba(180, 52, 3, var(--border-opacity))"],
 };
 
 
@@ -13261,7 +13572,8 @@ const css = tw("border-orange-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#8a2c0d",
+  "--border-opacity": "1",
+  borderColor: ["#8a2c0d", "rgba(138, 44, 13, var(--border-opacity))"],
 };
 
 
@@ -13275,7 +13587,8 @@ const css = tw("border-orange-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#771d1d",
+  "--border-opacity": "1",
+  borderColor: ["#771d1d", "rgba(119, 29, 29, var(--border-opacity))"],
 };
 
 
@@ -13289,7 +13602,8 @@ const css = tw("border-pink-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fdf2f8",
+  "--border-opacity": "1",
+  borderColor: ["#fdf2f8", "rgba(253, 242, 248, var(--border-opacity))"],
 };
 
 
@@ -13303,7 +13617,8 @@ const css = tw("border-pink-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fce8f3",
+  "--border-opacity": "1",
+  borderColor: ["#fce8f3", "rgba(252, 232, 243, var(--border-opacity))"],
 };
 
 
@@ -13317,7 +13632,8 @@ const css = tw("border-pink-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fad1e8",
+  "--border-opacity": "1",
+  borderColor: ["#fad1e8", "rgba(250, 209, 232, var(--border-opacity))"],
 };
 
 
@@ -13331,7 +13647,8 @@ const css = tw("border-pink-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f8b4d9",
+  "--border-opacity": "1",
+  borderColor: ["#f8b4d9", "rgba(248, 180, 217, var(--border-opacity))"],
 };
 
 
@@ -13345,7 +13662,8 @@ const css = tw("border-pink-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f17eb8",
+  "--border-opacity": "1",
+  borderColor: ["#f17eb8", "rgba(241, 126, 184, var(--border-opacity))"],
 };
 
 
@@ -13359,7 +13677,8 @@ const css = tw("border-pink-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#e74694",
+  "--border-opacity": "1",
+  borderColor: ["#e74694", "rgba(231, 70, 148, var(--border-opacity))"],
 };
 
 
@@ -13373,7 +13692,8 @@ const css = tw("border-pink-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#d61f69",
+  "--border-opacity": "1",
+  borderColor: ["#d61f69", "rgba(214, 31, 105, var(--border-opacity))"],
 };
 
 
@@ -13387,7 +13707,8 @@ const css = tw("border-pink-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#bf125d",
+  "--border-opacity": "1",
+  borderColor: ["#bf125d", "rgba(191, 18, 93, var(--border-opacity))"],
 };
 
 
@@ -13401,7 +13722,8 @@ const css = tw("border-pink-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#99154b",
+  "--border-opacity": "1",
+  borderColor: ["#99154b", "rgba(153, 21, 75, var(--border-opacity))"],
 };
 
 
@@ -13415,7 +13737,8 @@ const css = tw("border-pink-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#751a3d",
+  "--border-opacity": "1",
+  borderColor: ["#751a3d", "rgba(117, 26, 61, var(--border-opacity))"],
 };
 
 
@@ -13429,7 +13752,8 @@ const css = tw("border-purple-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f6f5ff",
+  "--border-opacity": "1",
+  borderColor: ["#f6f5ff", "rgba(246, 245, 255, var(--border-opacity))"],
 };
 
 
@@ -13443,7 +13767,8 @@ const css = tw("border-purple-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#edebfe",
+  "--border-opacity": "1",
+  borderColor: ["#edebfe", "rgba(237, 235, 254, var(--border-opacity))"],
 };
 
 
@@ -13457,7 +13782,8 @@ const css = tw("border-purple-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#dcd7fe",
+  "--border-opacity": "1",
+  borderColor: ["#dcd7fe", "rgba(220, 215, 254, var(--border-opacity))"],
 };
 
 
@@ -13471,7 +13797,8 @@ const css = tw("border-purple-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#cabffd",
+  "--border-opacity": "1",
+  borderColor: ["#cabffd", "rgba(202, 191, 253, var(--border-opacity))"],
 };
 
 
@@ -13485,7 +13812,8 @@ const css = tw("border-purple-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#ac94fa",
+  "--border-opacity": "1",
+  borderColor: ["#ac94fa", "rgba(172, 148, 250, var(--border-opacity))"],
 };
 
 
@@ -13499,7 +13827,8 @@ const css = tw("border-purple-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#9061f9",
+  "--border-opacity": "1",
+  borderColor: ["#9061f9", "rgba(144, 97, 249, var(--border-opacity))"],
 };
 
 
@@ -13513,7 +13842,8 @@ const css = tw("border-purple-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#7e3af2",
+  "--border-opacity": "1",
+  borderColor: ["#7e3af2", "rgba(126, 58, 242, var(--border-opacity))"],
 };
 
 
@@ -13527,7 +13857,8 @@ const css = tw("border-purple-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#6c2bd9",
+  "--border-opacity": "1",
+  borderColor: ["#6c2bd9", "rgba(108, 43, 217, var(--border-opacity))"],
 };
 
 
@@ -13541,7 +13872,8 @@ const css = tw("border-purple-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#5521b5",
+  "--border-opacity": "1",
+  borderColor: ["#5521b5", "rgba(85, 33, 181, var(--border-opacity))"],
 };
 
 
@@ -13555,7 +13887,8 @@ const css = tw("border-purple-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#4a1d96",
+  "--border-opacity": "1",
+  borderColor: ["#4a1d96", "rgba(74, 29, 150, var(--border-opacity))"],
 };
 
 
@@ -13639,7 +13972,8 @@ const css = tw("border-red-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fdf2f2",
+  "--border-opacity": "1",
+  borderColor: ["#fdf2f2", "rgba(253, 242, 242, var(--border-opacity))"],
 };
 
 
@@ -13653,7 +13987,8 @@ const css = tw("border-red-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fde8e8",
+  "--border-opacity": "1",
+  borderColor: ["#fde8e8", "rgba(253, 232, 232, var(--border-opacity))"],
 };
 
 
@@ -13667,7 +14002,8 @@ const css = tw("border-red-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fbd5d5",
+  "--border-opacity": "1",
+  borderColor: ["#fbd5d5", "rgba(251, 213, 213, var(--border-opacity))"],
 };
 
 
@@ -13681,7 +14017,8 @@ const css = tw("border-red-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f8b4b4",
+  "--border-opacity": "1",
+  borderColor: ["#f8b4b4", "rgba(248, 180, 180, var(--border-opacity))"],
 };
 
 
@@ -13695,7 +14032,8 @@ const css = tw("border-red-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f98080",
+  "--border-opacity": "1",
+  borderColor: ["#f98080", "rgba(249, 128, 128, var(--border-opacity))"],
 };
 
 
@@ -13709,7 +14047,8 @@ const css = tw("border-red-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#f05252",
+  "--border-opacity": "1",
+  borderColor: ["#f05252", "rgba(240, 82, 82, var(--border-opacity))"],
 };
 
 
@@ -13723,7 +14062,8 @@ const css = tw("border-red-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#e02424",
+  "--border-opacity": "1",
+  borderColor: ["#e02424", "rgba(224, 36, 36, var(--border-opacity))"],
 };
 
 
@@ -13737,7 +14077,8 @@ const css = tw("border-red-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#c81e1e",
+  "--border-opacity": "1",
+  borderColor: ["#c81e1e", "rgba(200, 30, 30, var(--border-opacity))"],
 };
 
 
@@ -13751,7 +14092,8 @@ const css = tw("border-red-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#9b1c1c",
+  "--border-opacity": "1",
+  borderColor: ["#9b1c1c", "rgba(155, 28, 28, var(--border-opacity))"],
 };
 
 
@@ -13765,7 +14107,8 @@ const css = tw("border-red-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#771d1d",
+  "--border-opacity": "1",
+  borderColor: ["#771d1d", "rgba(119, 29, 29, var(--border-opacity))"],
 };
 
 
@@ -13877,7 +14220,8 @@ const css = tw("border-teal-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#edfafa",
+  "--border-opacity": "1",
+  borderColor: ["#edfafa", "rgba(237, 250, 250, var(--border-opacity))"],
 };
 
 
@@ -13891,7 +14235,8 @@ const css = tw("border-teal-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#d5f5f6",
+  "--border-opacity": "1",
+  borderColor: ["#d5f5f6", "rgba(213, 245, 246, var(--border-opacity))"],
 };
 
 
@@ -13905,7 +14250,8 @@ const css = tw("border-teal-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#afecef",
+  "--border-opacity": "1",
+  borderColor: ["#afecef", "rgba(175, 236, 239, var(--border-opacity))"],
 };
 
 
@@ -13919,7 +14265,8 @@ const css = tw("border-teal-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#7edce2",
+  "--border-opacity": "1",
+  borderColor: ["#7edce2", "rgba(126, 220, 226, var(--border-opacity))"],
 };
 
 
@@ -13933,7 +14280,8 @@ const css = tw("border-teal-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#16bdca",
+  "--border-opacity": "1",
+  borderColor: ["#16bdca", "rgba(22, 189, 202, var(--border-opacity))"],
 };
 
 
@@ -13947,7 +14295,8 @@ const css = tw("border-teal-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#0694a2",
+  "--border-opacity": "1",
+  borderColor: ["#0694a2", "rgba(6, 148, 162, var(--border-opacity))"],
 };
 
 
@@ -13961,7 +14310,8 @@ const css = tw("border-teal-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#047481",
+  "--border-opacity": "1",
+  borderColor: ["#047481", "rgba(4, 116, 129, var(--border-opacity))"],
 };
 
 
@@ -13975,7 +14325,8 @@ const css = tw("border-teal-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#036672",
+  "--border-opacity": "1",
+  borderColor: ["#036672", "rgba(3, 102, 114, var(--border-opacity))"],
 };
 
 
@@ -13989,7 +14340,8 @@ const css = tw("border-teal-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#05505c",
+  "--border-opacity": "1",
+  borderColor: ["#05505c", "rgba(5, 80, 92, var(--border-opacity))"],
 };
 
 
@@ -14003,7 +14355,8 @@ const css = tw("border-teal-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#014451",
+  "--border-opacity": "1",
+  borderColor: ["#014451", "rgba(1, 68, 81, var(--border-opacity))"],
 };
 
 
@@ -14031,7 +14384,8 @@ const css = tw("border-white");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#ffffff",
+  "--border-opacity": "1",
+  borderColor: ["#ffffff", "rgba(255, 255, 255, var(--border-opacity))"],
 };
 
 
@@ -14045,7 +14399,8 @@ const css = tw("border-yellow-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fdfdea",
+  "--border-opacity": "1",
+  borderColor: ["#fdfdea", "rgba(253, 253, 234, var(--border-opacity))"],
 };
 
 
@@ -14059,7 +14414,8 @@ const css = tw("border-yellow-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fdf6b2",
+  "--border-opacity": "1",
+  borderColor: ["#fdf6b2", "rgba(253, 246, 178, var(--border-opacity))"],
 };
 
 
@@ -14073,7 +14429,8 @@ const css = tw("border-yellow-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#fce96a",
+  "--border-opacity": "1",
+  borderColor: ["#fce96a", "rgba(252, 233, 106, var(--border-opacity))"],
 };
 
 
@@ -14087,7 +14444,8 @@ const css = tw("border-yellow-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#faca15",
+  "--border-opacity": "1",
+  borderColor: ["#faca15", "rgba(250, 202, 21, var(--border-opacity))"],
 };
 
 
@@ -14101,7 +14459,8 @@ const css = tw("border-yellow-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#e3a008",
+  "--border-opacity": "1",
+  borderColor: ["#e3a008", "rgba(227, 160, 8, var(--border-opacity))"],
 };
 
 
@@ -14115,7 +14474,8 @@ const css = tw("border-yellow-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#c27803",
+  "--border-opacity": "1",
+  borderColor: ["#c27803", "rgba(194, 120, 3, var(--border-opacity))"],
 };
 
 
@@ -14129,7 +14489,8 @@ const css = tw("border-yellow-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#9f580a",
+  "--border-opacity": "1",
+  borderColor: ["#9f580a", "rgba(159, 88, 10, var(--border-opacity))"],
 };
 
 
@@ -14143,7 +14504,8 @@ const css = tw("border-yellow-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#8e4b10",
+  "--border-opacity": "1",
+  borderColor: ["#8e4b10", "rgba(142, 75, 16, var(--border-opacity))"],
 };
 
 
@@ -14157,7 +14519,8 @@ const css = tw("border-yellow-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#723b13",
+  "--border-opacity": "1",
+  borderColor: ["#723b13", "rgba(114, 59, 19, var(--border-opacity))"],
 };
 
 
@@ -14171,7 +14534,8 @@ const css = tw("border-yellow-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  borderColor: "#633112",
+  "--border-opacity": "1",
+  borderColor: ["#633112", "rgba(99, 49, 18, var(--border-opacity))"],
 };
 
 
@@ -16824,39 +17188,6 @@ const css = {
 
 `;
 
-exports[`macros correct usage 1: correct usage 1 1`] = `
-
-import tw from '../lib/macro';
-const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "--transform-scale-x": "0",
-  "--transform-scale-y": "0",
-  width: "50%",
-  backgroundColor: "#3f83f8",
-  "&:active": {
-    backgroundColor: "#f8b4b4",
-  },
-  "&:focus": {
-    backgroundColor: "#84e1bc",
-  },
-  "@media (min-width: 1024px)": {
-    backgroundColor: "#84e1bc",
-  },
-  "@media (min-width: 1280px)": {
-    color: "#f8b4b4",
-    "&:hover": {
-      color: "#fbd5d5",
-      backgroundColor: "#3f83f8",
-    },
-  },
-};
-
-
-`;
-
 exports[`macros cursor-auto: cursor-auto 1`] = `
 
 import tw from '../lib/macro';
@@ -17076,7 +17407,8 @@ const css = tw("divide-black");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#000000",
+    "--divide-opacity": "1",
+    borderColor: ["#000000", "rgba(0, 0, 0, var(--divide-opacity))"],
   },
 };
 
@@ -17092,7 +17424,8 @@ const css = tw("divide-blue-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#ebf5ff",
+    "--divide-opacity": "1",
+    borderColor: ["#ebf5ff", "rgba(235, 245, 255, var(--divide-opacity))"],
   },
 };
 
@@ -17108,7 +17441,8 @@ const css = tw("divide-blue-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#e1effe",
+    "--divide-opacity": "1",
+    borderColor: ["#e1effe", "rgba(225, 239, 254, var(--divide-opacity))"],
   },
 };
 
@@ -17124,7 +17458,8 @@ const css = tw("divide-blue-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#c3ddfd",
+    "--divide-opacity": "1",
+    borderColor: ["#c3ddfd", "rgba(195, 221, 253, var(--divide-opacity))"],
   },
 };
 
@@ -17140,7 +17475,8 @@ const css = tw("divide-blue-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#a4cafe",
+    "--divide-opacity": "1",
+    borderColor: ["#a4cafe", "rgba(164, 202, 254, var(--divide-opacity))"],
   },
 };
 
@@ -17156,7 +17492,8 @@ const css = tw("divide-blue-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#76a9fa",
+    "--divide-opacity": "1",
+    borderColor: ["#76a9fa", "rgba(118, 169, 250, var(--divide-opacity))"],
   },
 };
 
@@ -17172,7 +17509,8 @@ const css = tw("divide-blue-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#3f83f8",
+    "--divide-opacity": "1",
+    borderColor: ["#3f83f8", "rgba(63, 131, 248, var(--divide-opacity))"],
   },
 };
 
@@ -17188,7 +17526,8 @@ const css = tw("divide-blue-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#1c64f2",
+    "--divide-opacity": "1",
+    borderColor: ["#1c64f2", "rgba(28, 100, 242, var(--divide-opacity))"],
   },
 };
 
@@ -17204,7 +17543,8 @@ const css = tw("divide-blue-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#1a56db",
+    "--divide-opacity": "1",
+    borderColor: ["#1a56db", "rgba(26, 86, 219, var(--divide-opacity))"],
   },
 };
 
@@ -17220,7 +17560,8 @@ const css = tw("divide-blue-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#1e429f",
+    "--divide-opacity": "1",
+    borderColor: ["#1e429f", "rgba(30, 66, 159, var(--divide-opacity))"],
   },
 };
 
@@ -17236,7 +17577,8 @@ const css = tw("divide-blue-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#233876",
+    "--divide-opacity": "1",
+    borderColor: ["#233876", "rgba(35, 56, 118, var(--divide-opacity))"],
   },
 };
 
@@ -17252,7 +17594,8 @@ const css = tw("divide-cool-gray-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fbfdfe",
+    "--divide-opacity": "1",
+    borderColor: ["#fbfdfe", "rgba(251, 253, 254, var(--divide-opacity))"],
   },
 };
 
@@ -17268,7 +17611,8 @@ const css = tw("divide-cool-gray-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f1f5f9",
+    "--divide-opacity": "1",
+    borderColor: ["#f1f5f9", "rgba(241, 245, 249, var(--divide-opacity))"],
   },
 };
 
@@ -17284,7 +17628,8 @@ const css = tw("divide-cool-gray-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#e2e8f0",
+    "--divide-opacity": "1",
+    borderColor: ["#e2e8f0", "rgba(226, 232, 240, var(--divide-opacity))"],
   },
 };
 
@@ -17300,7 +17645,8 @@ const css = tw("divide-cool-gray-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#cfd8e3",
+    "--divide-opacity": "1",
+    borderColor: ["#cfd8e3", "rgba(207, 216, 227, var(--divide-opacity))"],
   },
 };
 
@@ -17316,7 +17662,8 @@ const css = tw("divide-cool-gray-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#97a6ba",
+    "--divide-opacity": "1",
+    borderColor: ["#97a6ba", "rgba(151, 166, 186, var(--divide-opacity))"],
   },
 };
 
@@ -17332,7 +17679,8 @@ const css = tw("divide-cool-gray-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#64748b",
+    "--divide-opacity": "1",
+    borderColor: ["#64748b", "rgba(100, 116, 139, var(--divide-opacity))"],
   },
 };
 
@@ -17348,7 +17696,8 @@ const css = tw("divide-cool-gray-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#475569",
+    "--divide-opacity": "1",
+    borderColor: ["#475569", "rgba(71, 85, 105, var(--divide-opacity))"],
   },
 };
 
@@ -17364,7 +17713,8 @@ const css = tw("divide-cool-gray-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#364152",
+    "--divide-opacity": "1",
+    borderColor: ["#364152", "rgba(54, 65, 82, var(--divide-opacity))"],
   },
 };
 
@@ -17380,7 +17730,8 @@ const css = tw("divide-cool-gray-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#27303f",
+    "--divide-opacity": "1",
+    borderColor: ["#27303f", "rgba(39, 48, 63, var(--divide-opacity))"],
   },
 };
 
@@ -17396,7 +17747,8 @@ const css = tw("divide-cool-gray-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#1a202e",
+    "--divide-opacity": "1",
+    borderColor: ["#1a202e", "rgba(26, 32, 46, var(--divide-opacity))"],
   },
 };
 
@@ -17412,7 +17764,8 @@ const css = tw("divide-gray-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f9fafb",
+    "--divide-opacity": "1",
+    borderColor: ["#f9fafb", "rgba(249, 250, 251, var(--divide-opacity))"],
   },
 };
 
@@ -17428,7 +17781,8 @@ const css = tw("divide-gray-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f4f5f7",
+    "--divide-opacity": "1",
+    borderColor: ["#f4f5f7", "rgba(244, 245, 247, var(--divide-opacity))"],
   },
 };
 
@@ -17444,7 +17798,8 @@ const css = tw("divide-gray-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#e5e7eb",
+    "--divide-opacity": "1",
+    borderColor: ["#e5e7eb", "rgba(229, 231, 235, var(--divide-opacity))"],
   },
 };
 
@@ -17460,7 +17815,8 @@ const css = tw("divide-gray-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#d2d6dc",
+    "--divide-opacity": "1",
+    borderColor: ["#d2d6dc", "rgba(210, 214, 220, var(--divide-opacity))"],
   },
 };
 
@@ -17476,7 +17832,8 @@ const css = tw("divide-gray-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#9fa6b2",
+    "--divide-opacity": "1",
+    borderColor: ["#9fa6b2", "rgba(159, 166, 178, var(--divide-opacity))"],
   },
 };
 
@@ -17492,7 +17849,8 @@ const css = tw("divide-gray-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#6b7280",
+    "--divide-opacity": "1",
+    borderColor: ["#6b7280", "rgba(107, 114, 128, var(--divide-opacity))"],
   },
 };
 
@@ -17508,7 +17866,8 @@ const css = tw("divide-gray-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#4b5563",
+    "--divide-opacity": "1",
+    borderColor: ["#4b5563", "rgba(75, 85, 99, var(--divide-opacity))"],
   },
 };
 
@@ -17524,7 +17883,8 @@ const css = tw("divide-gray-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#374151",
+    "--divide-opacity": "1",
+    borderColor: ["#374151", "rgba(55, 65, 81, var(--divide-opacity))"],
   },
 };
 
@@ -17540,7 +17900,8 @@ const css = tw("divide-gray-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#252f3f",
+    "--divide-opacity": "1",
+    borderColor: ["#252f3f", "rgba(37, 47, 63, var(--divide-opacity))"],
   },
 };
 
@@ -17556,7 +17917,8 @@ const css = tw("divide-gray-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#161e2e",
+    "--divide-opacity": "1",
+    borderColor: ["#161e2e", "rgba(22, 30, 46, var(--divide-opacity))"],
   },
 };
 
@@ -17572,7 +17934,8 @@ const css = tw("divide-green-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f3faf7",
+    "--divide-opacity": "1",
+    borderColor: ["#f3faf7", "rgba(243, 250, 247, var(--divide-opacity))"],
   },
 };
 
@@ -17588,7 +17951,8 @@ const css = tw("divide-green-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#def7ec",
+    "--divide-opacity": "1",
+    borderColor: ["#def7ec", "rgba(222, 247, 236, var(--divide-opacity))"],
   },
 };
 
@@ -17604,7 +17968,8 @@ const css = tw("divide-green-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#bcf0da",
+    "--divide-opacity": "1",
+    borderColor: ["#bcf0da", "rgba(188, 240, 218, var(--divide-opacity))"],
   },
 };
 
@@ -17620,7 +17985,8 @@ const css = tw("divide-green-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#84e1bc",
+    "--divide-opacity": "1",
+    borderColor: ["#84e1bc", "rgba(132, 225, 188, var(--divide-opacity))"],
   },
 };
 
@@ -17636,7 +18002,8 @@ const css = tw("divide-green-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#31c48d",
+    "--divide-opacity": "1",
+    borderColor: ["#31c48d", "rgba(49, 196, 141, var(--divide-opacity))"],
   },
 };
 
@@ -17652,7 +18019,8 @@ const css = tw("divide-green-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#0e9f6e",
+    "--divide-opacity": "1",
+    borderColor: ["#0e9f6e", "rgba(14, 159, 110, var(--divide-opacity))"],
   },
 };
 
@@ -17668,7 +18036,8 @@ const css = tw("divide-green-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#057a55",
+    "--divide-opacity": "1",
+    borderColor: ["#057a55", "rgba(5, 122, 85, var(--divide-opacity))"],
   },
 };
 
@@ -17684,7 +18053,8 @@ const css = tw("divide-green-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#046c4e",
+    "--divide-opacity": "1",
+    borderColor: ["#046c4e", "rgba(4, 108, 78, var(--divide-opacity))"],
   },
 };
 
@@ -17700,7 +18070,8 @@ const css = tw("divide-green-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#03543f",
+    "--divide-opacity": "1",
+    borderColor: ["#03543f", "rgba(3, 84, 63, var(--divide-opacity))"],
   },
 };
 
@@ -17716,7 +18087,8 @@ const css = tw("divide-green-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#014737",
+    "--divide-opacity": "1",
+    borderColor: ["#014737", "rgba(1, 71, 55, var(--divide-opacity))"],
   },
 };
 
@@ -17732,7 +18104,8 @@ const css = tw("divide-indigo-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f0f5ff",
+    "--divide-opacity": "1",
+    borderColor: ["#f0f5ff", "rgba(240, 245, 255, var(--divide-opacity))"],
   },
 };
 
@@ -17748,7 +18121,8 @@ const css = tw("divide-indigo-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#e5edff",
+    "--divide-opacity": "1",
+    borderColor: ["#e5edff", "rgba(229, 237, 255, var(--divide-opacity))"],
   },
 };
 
@@ -17764,7 +18138,8 @@ const css = tw("divide-indigo-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#cddbfe",
+    "--divide-opacity": "1",
+    borderColor: ["#cddbfe", "rgba(205, 219, 254, var(--divide-opacity))"],
   },
 };
 
@@ -17780,7 +18155,8 @@ const css = tw("divide-indigo-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#b4c6fc",
+    "--divide-opacity": "1",
+    borderColor: ["#b4c6fc", "rgba(180, 198, 252, var(--divide-opacity))"],
   },
 };
 
@@ -17796,7 +18172,8 @@ const css = tw("divide-indigo-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#8da2fb",
+    "--divide-opacity": "1",
+    borderColor: ["#8da2fb", "rgba(141, 162, 251, var(--divide-opacity))"],
   },
 };
 
@@ -17812,7 +18189,8 @@ const css = tw("divide-indigo-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#6875f5",
+    "--divide-opacity": "1",
+    borderColor: ["#6875f5", "rgba(104, 117, 245, var(--divide-opacity))"],
   },
 };
 
@@ -17828,7 +18206,8 @@ const css = tw("divide-indigo-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#5850ec",
+    "--divide-opacity": "1",
+    borderColor: ["#5850ec", "rgba(88, 80, 236, var(--divide-opacity))"],
   },
 };
 
@@ -17844,7 +18223,8 @@ const css = tw("divide-indigo-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#5145cd",
+    "--divide-opacity": "1",
+    borderColor: ["#5145cd", "rgba(81, 69, 205, var(--divide-opacity))"],
   },
 };
 
@@ -17860,7 +18240,8 @@ const css = tw("divide-indigo-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#42389d",
+    "--divide-opacity": "1",
+    borderColor: ["#42389d", "rgba(66, 56, 157, var(--divide-opacity))"],
   },
 };
 
@@ -17876,7 +18257,88 @@ const css = tw("divide-indigo-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#362f78",
+    "--divide-opacity": "1",
+    borderColor: ["#362f78", "rgba(54, 47, 120, var(--divide-opacity))"],
+  },
+};
+
+
+`;
+
+exports[`macros divide-opacity-0: divide-opacity-0 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("divide-opacity-0");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--divide-opacity": "0",
+  },
+};
+
+
+`;
+
+exports[`macros divide-opacity-25: divide-opacity-25 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("divide-opacity-25");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--divide-opacity": "0.25",
+  },
+};
+
+
+`;
+
+exports[`macros divide-opacity-50: divide-opacity-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("divide-opacity-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--divide-opacity": "0.5",
+  },
+};
+
+
+`;
+
+exports[`macros divide-opacity-75: divide-opacity-75 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("divide-opacity-75");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--divide-opacity": "0.75",
+  },
+};
+
+
+`;
+
+exports[`macros divide-opacity-100: divide-opacity-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("divide-opacity-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--divide-opacity": "1",
   },
 };
 
@@ -17892,7 +18354,8 @@ const css = tw("divide-orange-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fff8f1",
+    "--divide-opacity": "1",
+    borderColor: ["#fff8f1", "rgba(255, 248, 241, var(--divide-opacity))"],
   },
 };
 
@@ -17908,7 +18371,8 @@ const css = tw("divide-orange-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#feecdc",
+    "--divide-opacity": "1",
+    borderColor: ["#feecdc", "rgba(254, 236, 220, var(--divide-opacity))"],
   },
 };
 
@@ -17924,7 +18388,8 @@ const css = tw("divide-orange-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fcd9bd",
+    "--divide-opacity": "1",
+    borderColor: ["#fcd9bd", "rgba(252, 217, 189, var(--divide-opacity))"],
   },
 };
 
@@ -17940,7 +18405,8 @@ const css = tw("divide-orange-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fdba8c",
+    "--divide-opacity": "1",
+    borderColor: ["#fdba8c", "rgba(253, 186, 140, var(--divide-opacity))"],
   },
 };
 
@@ -17956,7 +18422,8 @@ const css = tw("divide-orange-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#ff8a4c",
+    "--divide-opacity": "1",
+    borderColor: ["#ff8a4c", "rgba(255, 138, 76, var(--divide-opacity))"],
   },
 };
 
@@ -17972,7 +18439,8 @@ const css = tw("divide-orange-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#ff5a1f",
+    "--divide-opacity": "1",
+    borderColor: ["#ff5a1f", "rgba(255, 90, 31, var(--divide-opacity))"],
   },
 };
 
@@ -17988,7 +18456,8 @@ const css = tw("divide-orange-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#d03801",
+    "--divide-opacity": "1",
+    borderColor: ["#d03801", "rgba(208, 56, 1, var(--divide-opacity))"],
   },
 };
 
@@ -18004,7 +18473,8 @@ const css = tw("divide-orange-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#b43403",
+    "--divide-opacity": "1",
+    borderColor: ["#b43403", "rgba(180, 52, 3, var(--divide-opacity))"],
   },
 };
 
@@ -18020,7 +18490,8 @@ const css = tw("divide-orange-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#8a2c0d",
+    "--divide-opacity": "1",
+    borderColor: ["#8a2c0d", "rgba(138, 44, 13, var(--divide-opacity))"],
   },
 };
 
@@ -18036,7 +18507,8 @@ const css = tw("divide-orange-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#771d1d",
+    "--divide-opacity": "1",
+    borderColor: ["#771d1d", "rgba(119, 29, 29, var(--divide-opacity))"],
   },
 };
 
@@ -18052,7 +18524,8 @@ const css = tw("divide-pink-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fdf2f8",
+    "--divide-opacity": "1",
+    borderColor: ["#fdf2f8", "rgba(253, 242, 248, var(--divide-opacity))"],
   },
 };
 
@@ -18068,7 +18541,8 @@ const css = tw("divide-pink-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fce8f3",
+    "--divide-opacity": "1",
+    borderColor: ["#fce8f3", "rgba(252, 232, 243, var(--divide-opacity))"],
   },
 };
 
@@ -18084,7 +18558,8 @@ const css = tw("divide-pink-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fad1e8",
+    "--divide-opacity": "1",
+    borderColor: ["#fad1e8", "rgba(250, 209, 232, var(--divide-opacity))"],
   },
 };
 
@@ -18100,7 +18575,8 @@ const css = tw("divide-pink-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f8b4d9",
+    "--divide-opacity": "1",
+    borderColor: ["#f8b4d9", "rgba(248, 180, 217, var(--divide-opacity))"],
   },
 };
 
@@ -18116,7 +18592,8 @@ const css = tw("divide-pink-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f17eb8",
+    "--divide-opacity": "1",
+    borderColor: ["#f17eb8", "rgba(241, 126, 184, var(--divide-opacity))"],
   },
 };
 
@@ -18132,7 +18609,8 @@ const css = tw("divide-pink-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#e74694",
+    "--divide-opacity": "1",
+    borderColor: ["#e74694", "rgba(231, 70, 148, var(--divide-opacity))"],
   },
 };
 
@@ -18148,7 +18626,8 @@ const css = tw("divide-pink-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#d61f69",
+    "--divide-opacity": "1",
+    borderColor: ["#d61f69", "rgba(214, 31, 105, var(--divide-opacity))"],
   },
 };
 
@@ -18164,7 +18643,8 @@ const css = tw("divide-pink-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#bf125d",
+    "--divide-opacity": "1",
+    borderColor: ["#bf125d", "rgba(191, 18, 93, var(--divide-opacity))"],
   },
 };
 
@@ -18180,7 +18660,8 @@ const css = tw("divide-pink-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#99154b",
+    "--divide-opacity": "1",
+    borderColor: ["#99154b", "rgba(153, 21, 75, var(--divide-opacity))"],
   },
 };
 
@@ -18196,7 +18677,8 @@ const css = tw("divide-pink-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#751a3d",
+    "--divide-opacity": "1",
+    borderColor: ["#751a3d", "rgba(117, 26, 61, var(--divide-opacity))"],
   },
 };
 
@@ -18212,7 +18694,8 @@ const css = tw("divide-purple-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f6f5ff",
+    "--divide-opacity": "1",
+    borderColor: ["#f6f5ff", "rgba(246, 245, 255, var(--divide-opacity))"],
   },
 };
 
@@ -18228,7 +18711,8 @@ const css = tw("divide-purple-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#edebfe",
+    "--divide-opacity": "1",
+    borderColor: ["#edebfe", "rgba(237, 235, 254, var(--divide-opacity))"],
   },
 };
 
@@ -18244,7 +18728,8 @@ const css = tw("divide-purple-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#dcd7fe",
+    "--divide-opacity": "1",
+    borderColor: ["#dcd7fe", "rgba(220, 215, 254, var(--divide-opacity))"],
   },
 };
 
@@ -18260,7 +18745,8 @@ const css = tw("divide-purple-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#cabffd",
+    "--divide-opacity": "1",
+    borderColor: ["#cabffd", "rgba(202, 191, 253, var(--divide-opacity))"],
   },
 };
 
@@ -18276,7 +18762,8 @@ const css = tw("divide-purple-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#ac94fa",
+    "--divide-opacity": "1",
+    borderColor: ["#ac94fa", "rgba(172, 148, 250, var(--divide-opacity))"],
   },
 };
 
@@ -18292,7 +18779,8 @@ const css = tw("divide-purple-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#9061f9",
+    "--divide-opacity": "1",
+    borderColor: ["#9061f9", "rgba(144, 97, 249, var(--divide-opacity))"],
   },
 };
 
@@ -18308,7 +18796,8 @@ const css = tw("divide-purple-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#7e3af2",
+    "--divide-opacity": "1",
+    borderColor: ["#7e3af2", "rgba(126, 58, 242, var(--divide-opacity))"],
   },
 };
 
@@ -18324,7 +18813,8 @@ const css = tw("divide-purple-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#6c2bd9",
+    "--divide-opacity": "1",
+    borderColor: ["#6c2bd9", "rgba(108, 43, 217, var(--divide-opacity))"],
   },
 };
 
@@ -18340,7 +18830,8 @@ const css = tw("divide-purple-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#5521b5",
+    "--divide-opacity": "1",
+    borderColor: ["#5521b5", "rgba(85, 33, 181, var(--divide-opacity))"],
   },
 };
 
@@ -18356,7 +18847,8 @@ const css = tw("divide-purple-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#4a1d96",
+    "--divide-opacity": "1",
+    borderColor: ["#4a1d96", "rgba(74, 29, 150, var(--divide-opacity))"],
   },
 };
 
@@ -18372,7 +18864,8 @@ const css = tw("divide-red-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fdf2f2",
+    "--divide-opacity": "1",
+    borderColor: ["#fdf2f2", "rgba(253, 242, 242, var(--divide-opacity))"],
   },
 };
 
@@ -18388,7 +18881,8 @@ const css = tw("divide-red-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fde8e8",
+    "--divide-opacity": "1",
+    borderColor: ["#fde8e8", "rgba(253, 232, 232, var(--divide-opacity))"],
   },
 };
 
@@ -18404,7 +18898,8 @@ const css = tw("divide-red-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fbd5d5",
+    "--divide-opacity": "1",
+    borderColor: ["#fbd5d5", "rgba(251, 213, 213, var(--divide-opacity))"],
   },
 };
 
@@ -18420,7 +18915,8 @@ const css = tw("divide-red-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f8b4b4",
+    "--divide-opacity": "1",
+    borderColor: ["#f8b4b4", "rgba(248, 180, 180, var(--divide-opacity))"],
   },
 };
 
@@ -18436,7 +18932,8 @@ const css = tw("divide-red-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f98080",
+    "--divide-opacity": "1",
+    borderColor: ["#f98080", "rgba(249, 128, 128, var(--divide-opacity))"],
   },
 };
 
@@ -18452,7 +18949,8 @@ const css = tw("divide-red-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#f05252",
+    "--divide-opacity": "1",
+    borderColor: ["#f05252", "rgba(240, 82, 82, var(--divide-opacity))"],
   },
 };
 
@@ -18468,7 +18966,8 @@ const css = tw("divide-red-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#e02424",
+    "--divide-opacity": "1",
+    borderColor: ["#e02424", "rgba(224, 36, 36, var(--divide-opacity))"],
   },
 };
 
@@ -18484,7 +18983,8 @@ const css = tw("divide-red-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#c81e1e",
+    "--divide-opacity": "1",
+    borderColor: ["#c81e1e", "rgba(200, 30, 30, var(--divide-opacity))"],
   },
 };
 
@@ -18500,7 +19000,8 @@ const css = tw("divide-red-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#9b1c1c",
+    "--divide-opacity": "1",
+    borderColor: ["#9b1c1c", "rgba(155, 28, 28, var(--divide-opacity))"],
   },
 };
 
@@ -18516,7 +19017,8 @@ const css = tw("divide-red-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#771d1d",
+    "--divide-opacity": "1",
+    borderColor: ["#771d1d", "rgba(119, 29, 29, var(--divide-opacity))"],
   },
 };
 
@@ -18532,7 +19034,8 @@ const css = tw("divide-teal-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#edfafa",
+    "--divide-opacity": "1",
+    borderColor: ["#edfafa", "rgba(237, 250, 250, var(--divide-opacity))"],
   },
 };
 
@@ -18548,7 +19051,8 @@ const css = tw("divide-teal-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#d5f5f6",
+    "--divide-opacity": "1",
+    borderColor: ["#d5f5f6", "rgba(213, 245, 246, var(--divide-opacity))"],
   },
 };
 
@@ -18564,7 +19068,8 @@ const css = tw("divide-teal-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#afecef",
+    "--divide-opacity": "1",
+    borderColor: ["#afecef", "rgba(175, 236, 239, var(--divide-opacity))"],
   },
 };
 
@@ -18580,7 +19085,8 @@ const css = tw("divide-teal-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#7edce2",
+    "--divide-opacity": "1",
+    borderColor: ["#7edce2", "rgba(126, 220, 226, var(--divide-opacity))"],
   },
 };
 
@@ -18596,7 +19102,8 @@ const css = tw("divide-teal-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#16bdca",
+    "--divide-opacity": "1",
+    borderColor: ["#16bdca", "rgba(22, 189, 202, var(--divide-opacity))"],
   },
 };
 
@@ -18612,7 +19119,8 @@ const css = tw("divide-teal-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#0694a2",
+    "--divide-opacity": "1",
+    borderColor: ["#0694a2", "rgba(6, 148, 162, var(--divide-opacity))"],
   },
 };
 
@@ -18628,7 +19136,8 @@ const css = tw("divide-teal-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#047481",
+    "--divide-opacity": "1",
+    borderColor: ["#047481", "rgba(4, 116, 129, var(--divide-opacity))"],
   },
 };
 
@@ -18644,7 +19153,8 @@ const css = tw("divide-teal-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#036672",
+    "--divide-opacity": "1",
+    borderColor: ["#036672", "rgba(3, 102, 114, var(--divide-opacity))"],
   },
 };
 
@@ -18660,7 +19170,8 @@ const css = tw("divide-teal-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#05505c",
+    "--divide-opacity": "1",
+    borderColor: ["#05505c", "rgba(5, 80, 92, var(--divide-opacity))"],
   },
 };
 
@@ -18676,7 +19187,8 @@ const css = tw("divide-teal-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#014451",
+    "--divide-opacity": "1",
+    borderColor: ["#014451", "rgba(1, 68, 81, var(--divide-opacity))"],
   },
 };
 
@@ -18708,7 +19220,8 @@ const css = tw("divide-white");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#ffffff",
+    "--divide-opacity": "1",
+    borderColor: ["#ffffff", "rgba(255, 255, 255, var(--divide-opacity))"],
   },
 };
 
@@ -18743,8 +19256,8 @@ const css = tw("divide-x-0");
 const css = {
   "& > :not(template) ~ :not(template)": {
     "--divide-x-reverse": "0",
-    borderRightWidth: "calc(0 * var(--divide-x-reverse))",
-    borderLeftWidth: "calc(0 * calc(1 - var(--divide-x-reverse)))",
+    borderRightWidth: "calc(0px * var(--divide-x-reverse))",
+    borderLeftWidth: "calc(0px * calc(1 - var(--divide-x-reverse)))",
   },
 };
 
@@ -18849,8 +19362,8 @@ const css = tw("divide-y-0");
 const css = {
   "& > :not(template) ~ :not(template)": {
     "--divide-y-reverse": "0",
-    borderTopWidth: "calc(0 * calc(1 - var(--divide-y-reverse)))",
-    borderBottomWidth: "calc(0 * var(--divide-y-reverse))",
+    borderTopWidth: "calc(0px * calc(1 - var(--divide-y-reverse)))",
+    borderBottomWidth: "calc(0px * var(--divide-y-reverse))",
   },
 };
 
@@ -18936,7 +19449,8 @@ const css = tw("divide-yellow-50");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fdfdea",
+    "--divide-opacity": "1",
+    borderColor: ["#fdfdea", "rgba(253, 253, 234, var(--divide-opacity))"],
   },
 };
 
@@ -18952,7 +19466,8 @@ const css = tw("divide-yellow-100");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fdf6b2",
+    "--divide-opacity": "1",
+    borderColor: ["#fdf6b2", "rgba(253, 246, 178, var(--divide-opacity))"],
   },
 };
 
@@ -18968,7 +19483,8 @@ const css = tw("divide-yellow-200");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#fce96a",
+    "--divide-opacity": "1",
+    borderColor: ["#fce96a", "rgba(252, 233, 106, var(--divide-opacity))"],
   },
 };
 
@@ -18984,7 +19500,8 @@ const css = tw("divide-yellow-300");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#faca15",
+    "--divide-opacity": "1",
+    borderColor: ["#faca15", "rgba(250, 202, 21, var(--divide-opacity))"],
   },
 };
 
@@ -19000,7 +19517,8 @@ const css = tw("divide-yellow-400");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#e3a008",
+    "--divide-opacity": "1",
+    borderColor: ["#e3a008", "rgba(227, 160, 8, var(--divide-opacity))"],
   },
 };
 
@@ -19016,7 +19534,8 @@ const css = tw("divide-yellow-500");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#c27803",
+    "--divide-opacity": "1",
+    borderColor: ["#c27803", "rgba(194, 120, 3, var(--divide-opacity))"],
   },
 };
 
@@ -19032,7 +19551,8 @@ const css = tw("divide-yellow-600");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#9f580a",
+    "--divide-opacity": "1",
+    borderColor: ["#9f580a", "rgba(159, 88, 10, var(--divide-opacity))"],
   },
 };
 
@@ -19048,7 +19568,8 @@ const css = tw("divide-yellow-700");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#8e4b10",
+    "--divide-opacity": "1",
+    borderColor: ["#8e4b10", "rgba(142, 75, 16, var(--divide-opacity))"],
   },
 };
 
@@ -19064,7 +19585,8 @@ const css = tw("divide-yellow-800");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#723b13",
+    "--divide-opacity": "1",
+    borderColor: ["#723b13", "rgba(114, 59, 19, var(--divide-opacity))"],
   },
 };
 
@@ -19080,7 +19602,8 @@ const css = tw("divide-yellow-900");
 
 const css = {
   "& > :not(template) ~ :not(template)": {
-    borderColor: "#633112",
+    "--divide-opacity": "1",
+    borderColor: ["#633112", "rgba(99, 49, 18, var(--divide-opacity))"],
   },
 };
 
@@ -28422,6 +28945,20 @@ const css = {
 
 `;
 
+exports[`macros max-w-max-content: max-w-max-content 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("max-w-max-content");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  maxWidth: "max-content",
+};
+
+
+`;
+
 exports[`macros max-w-md: max-w-md 1`] = `
 
 import tw from '../lib/macro';
@@ -28431,6 +28968,20 @@ const css = tw("max-w-md");
 
 const css = {
   maxWidth: "28rem",
+};
+
+
+`;
+
+exports[`macros max-w-min-content: max-w-min-content 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("max-w-min-content");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  maxWidth: "min-content",
 };
 
 
@@ -29495,6 +30046,34 @@ const css = tw("min-w-full");
 
 const css = {
   minWidth: "100%",
+};
+
+
+`;
+
+exports[`macros min-w-max-content: min-w-max-content 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("min-w-max-content");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  minWidth: "max-content",
+};
+
+
+`;
+
+exports[`macros min-w-min-content: min-w-min-content 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("min-w-min-content");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  minWidth: "min-content",
 };
 
 
@@ -37496,7 +38075,8 @@ const css = tw("placeholder-black");
 
 const css = {
   "&::placeholder": {
-    color: "#000000",
+    "--placeholder-opacity": "1",
+    color: ["#000000", "rgba(0, 0, 0, var(--placeholder-opacity))"],
   },
 };
 
@@ -37512,7 +38092,8 @@ const css = tw("placeholder-blue-50");
 
 const css = {
   "&::placeholder": {
-    color: "#ebf5ff",
+    "--placeholder-opacity": "1",
+    color: ["#ebf5ff", "rgba(235, 245, 255, var(--placeholder-opacity))"],
   },
 };
 
@@ -37528,7 +38109,8 @@ const css = tw("placeholder-blue-100");
 
 const css = {
   "&::placeholder": {
-    color: "#e1effe",
+    "--placeholder-opacity": "1",
+    color: ["#e1effe", "rgba(225, 239, 254, var(--placeholder-opacity))"],
   },
 };
 
@@ -37544,7 +38126,8 @@ const css = tw("placeholder-blue-200");
 
 const css = {
   "&::placeholder": {
-    color: "#c3ddfd",
+    "--placeholder-opacity": "1",
+    color: ["#c3ddfd", "rgba(195, 221, 253, var(--placeholder-opacity))"],
   },
 };
 
@@ -37560,7 +38143,8 @@ const css = tw("placeholder-blue-300");
 
 const css = {
   "&::placeholder": {
-    color: "#a4cafe",
+    "--placeholder-opacity": "1",
+    color: ["#a4cafe", "rgba(164, 202, 254, var(--placeholder-opacity))"],
   },
 };
 
@@ -37576,7 +38160,8 @@ const css = tw("placeholder-blue-400");
 
 const css = {
   "&::placeholder": {
-    color: "#76a9fa",
+    "--placeholder-opacity": "1",
+    color: ["#76a9fa", "rgba(118, 169, 250, var(--placeholder-opacity))"],
   },
 };
 
@@ -37592,7 +38177,8 @@ const css = tw("placeholder-blue-500");
 
 const css = {
   "&::placeholder": {
-    color: "#3f83f8",
+    "--placeholder-opacity": "1",
+    color: ["#3f83f8", "rgba(63, 131, 248, var(--placeholder-opacity))"],
   },
 };
 
@@ -37608,7 +38194,8 @@ const css = tw("placeholder-blue-600");
 
 const css = {
   "&::placeholder": {
-    color: "#1c64f2",
+    "--placeholder-opacity": "1",
+    color: ["#1c64f2", "rgba(28, 100, 242, var(--placeholder-opacity))"],
   },
 };
 
@@ -37624,7 +38211,8 @@ const css = tw("placeholder-blue-700");
 
 const css = {
   "&::placeholder": {
-    color: "#1a56db",
+    "--placeholder-opacity": "1",
+    color: ["#1a56db", "rgba(26, 86, 219, var(--placeholder-opacity))"],
   },
 };
 
@@ -37640,7 +38228,8 @@ const css = tw("placeholder-blue-800");
 
 const css = {
   "&::placeholder": {
-    color: "#1e429f",
+    "--placeholder-opacity": "1",
+    color: ["#1e429f", "rgba(30, 66, 159, var(--placeholder-opacity))"],
   },
 };
 
@@ -37656,7 +38245,8 @@ const css = tw("placeholder-blue-900");
 
 const css = {
   "&::placeholder": {
-    color: "#233876",
+    "--placeholder-opacity": "1",
+    color: ["#233876", "rgba(35, 56, 118, var(--placeholder-opacity))"],
   },
 };
 
@@ -37672,7 +38262,8 @@ const css = tw("placeholder-cool-gray-50");
 
 const css = {
   "&::placeholder": {
-    color: "#fbfdfe",
+    "--placeholder-opacity": "1",
+    color: ["#fbfdfe", "rgba(251, 253, 254, var(--placeholder-opacity))"],
   },
 };
 
@@ -37688,7 +38279,8 @@ const css = tw("placeholder-cool-gray-100");
 
 const css = {
   "&::placeholder": {
-    color: "#f1f5f9",
+    "--placeholder-opacity": "1",
+    color: ["#f1f5f9", "rgba(241, 245, 249, var(--placeholder-opacity))"],
   },
 };
 
@@ -37704,7 +38296,8 @@ const css = tw("placeholder-cool-gray-200");
 
 const css = {
   "&::placeholder": {
-    color: "#e2e8f0",
+    "--placeholder-opacity": "1",
+    color: ["#e2e8f0", "rgba(226, 232, 240, var(--placeholder-opacity))"],
   },
 };
 
@@ -37720,7 +38313,8 @@ const css = tw("placeholder-cool-gray-300");
 
 const css = {
   "&::placeholder": {
-    color: "#cfd8e3",
+    "--placeholder-opacity": "1",
+    color: ["#cfd8e3", "rgba(207, 216, 227, var(--placeholder-opacity))"],
   },
 };
 
@@ -37736,7 +38330,8 @@ const css = tw("placeholder-cool-gray-400");
 
 const css = {
   "&::placeholder": {
-    color: "#97a6ba",
+    "--placeholder-opacity": "1",
+    color: ["#97a6ba", "rgba(151, 166, 186, var(--placeholder-opacity))"],
   },
 };
 
@@ -37752,7 +38347,8 @@ const css = tw("placeholder-cool-gray-500");
 
 const css = {
   "&::placeholder": {
-    color: "#64748b",
+    "--placeholder-opacity": "1",
+    color: ["#64748b", "rgba(100, 116, 139, var(--placeholder-opacity))"],
   },
 };
 
@@ -37768,7 +38364,8 @@ const css = tw("placeholder-cool-gray-600");
 
 const css = {
   "&::placeholder": {
-    color: "#475569",
+    "--placeholder-opacity": "1",
+    color: ["#475569", "rgba(71, 85, 105, var(--placeholder-opacity))"],
   },
 };
 
@@ -37784,7 +38381,8 @@ const css = tw("placeholder-cool-gray-700");
 
 const css = {
   "&::placeholder": {
-    color: "#364152",
+    "--placeholder-opacity": "1",
+    color: ["#364152", "rgba(54, 65, 82, var(--placeholder-opacity))"],
   },
 };
 
@@ -37800,7 +38398,8 @@ const css = tw("placeholder-cool-gray-800");
 
 const css = {
   "&::placeholder": {
-    color: "#27303f",
+    "--placeholder-opacity": "1",
+    color: ["#27303f", "rgba(39, 48, 63, var(--placeholder-opacity))"],
   },
 };
 
@@ -37816,7 +38415,8 @@ const css = tw("placeholder-cool-gray-900");
 
 const css = {
   "&::placeholder": {
-    color: "#1a202e",
+    "--placeholder-opacity": "1",
+    color: ["#1a202e", "rgba(26, 32, 46, var(--placeholder-opacity))"],
   },
 };
 
@@ -37832,7 +38432,8 @@ const css = tw("placeholder-gray-50");
 
 const css = {
   "&::placeholder": {
-    color: "#f9fafb",
+    "--placeholder-opacity": "1",
+    color: ["#f9fafb", "rgba(249, 250, 251, var(--placeholder-opacity))"],
   },
 };
 
@@ -37848,7 +38449,8 @@ const css = tw("placeholder-gray-100");
 
 const css = {
   "&::placeholder": {
-    color: "#f4f5f7",
+    "--placeholder-opacity": "1",
+    color: ["#f4f5f7", "rgba(244, 245, 247, var(--placeholder-opacity))"],
   },
 };
 
@@ -37864,7 +38466,8 @@ const css = tw("placeholder-gray-200");
 
 const css = {
   "&::placeholder": {
-    color: "#e5e7eb",
+    "--placeholder-opacity": "1",
+    color: ["#e5e7eb", "rgba(229, 231, 235, var(--placeholder-opacity))"],
   },
 };
 
@@ -37880,7 +38483,8 @@ const css = tw("placeholder-gray-300");
 
 const css = {
   "&::placeholder": {
-    color: "#d2d6dc",
+    "--placeholder-opacity": "1",
+    color: ["#d2d6dc", "rgba(210, 214, 220, var(--placeholder-opacity))"],
   },
 };
 
@@ -37896,7 +38500,8 @@ const css = tw("placeholder-gray-400");
 
 const css = {
   "&::placeholder": {
-    color: "#9fa6b2",
+    "--placeholder-opacity": "1",
+    color: ["#9fa6b2", "rgba(159, 166, 178, var(--placeholder-opacity))"],
   },
 };
 
@@ -37912,7 +38517,8 @@ const css = tw("placeholder-gray-500");
 
 const css = {
   "&::placeholder": {
-    color: "#6b7280",
+    "--placeholder-opacity": "1",
+    color: ["#6b7280", "rgba(107, 114, 128, var(--placeholder-opacity))"],
   },
 };
 
@@ -37928,7 +38534,8 @@ const css = tw("placeholder-gray-600");
 
 const css = {
   "&::placeholder": {
-    color: "#4b5563",
+    "--placeholder-opacity": "1",
+    color: ["#4b5563", "rgba(75, 85, 99, var(--placeholder-opacity))"],
   },
 };
 
@@ -37944,7 +38551,8 @@ const css = tw("placeholder-gray-700");
 
 const css = {
   "&::placeholder": {
-    color: "#374151",
+    "--placeholder-opacity": "1",
+    color: ["#374151", "rgba(55, 65, 81, var(--placeholder-opacity))"],
   },
 };
 
@@ -37960,7 +38568,8 @@ const css = tw("placeholder-gray-800");
 
 const css = {
   "&::placeholder": {
-    color: "#252f3f",
+    "--placeholder-opacity": "1",
+    color: ["#252f3f", "rgba(37, 47, 63, var(--placeholder-opacity))"],
   },
 };
 
@@ -37976,7 +38585,8 @@ const css = tw("placeholder-gray-900");
 
 const css = {
   "&::placeholder": {
-    color: "#161e2e",
+    "--placeholder-opacity": "1",
+    color: ["#161e2e", "rgba(22, 30, 46, var(--placeholder-opacity))"],
   },
 };
 
@@ -37992,7 +38602,8 @@ const css = tw("placeholder-green-50");
 
 const css = {
   "&::placeholder": {
-    color: "#f3faf7",
+    "--placeholder-opacity": "1",
+    color: ["#f3faf7", "rgba(243, 250, 247, var(--placeholder-opacity))"],
   },
 };
 
@@ -38008,7 +38619,8 @@ const css = tw("placeholder-green-100");
 
 const css = {
   "&::placeholder": {
-    color: "#def7ec",
+    "--placeholder-opacity": "1",
+    color: ["#def7ec", "rgba(222, 247, 236, var(--placeholder-opacity))"],
   },
 };
 
@@ -38024,7 +38636,8 @@ const css = tw("placeholder-green-200");
 
 const css = {
   "&::placeholder": {
-    color: "#bcf0da",
+    "--placeholder-opacity": "1",
+    color: ["#bcf0da", "rgba(188, 240, 218, var(--placeholder-opacity))"],
   },
 };
 
@@ -38040,7 +38653,8 @@ const css = tw("placeholder-green-300");
 
 const css = {
   "&::placeholder": {
-    color: "#84e1bc",
+    "--placeholder-opacity": "1",
+    color: ["#84e1bc", "rgba(132, 225, 188, var(--placeholder-opacity))"],
   },
 };
 
@@ -38056,7 +38670,8 @@ const css = tw("placeholder-green-400");
 
 const css = {
   "&::placeholder": {
-    color: "#31c48d",
+    "--placeholder-opacity": "1",
+    color: ["#31c48d", "rgba(49, 196, 141, var(--placeholder-opacity))"],
   },
 };
 
@@ -38072,7 +38687,8 @@ const css = tw("placeholder-green-500");
 
 const css = {
   "&::placeholder": {
-    color: "#0e9f6e",
+    "--placeholder-opacity": "1",
+    color: ["#0e9f6e", "rgba(14, 159, 110, var(--placeholder-opacity))"],
   },
 };
 
@@ -38088,7 +38704,8 @@ const css = tw("placeholder-green-600");
 
 const css = {
   "&::placeholder": {
-    color: "#057a55",
+    "--placeholder-opacity": "1",
+    color: ["#057a55", "rgba(5, 122, 85, var(--placeholder-opacity))"],
   },
 };
 
@@ -38104,7 +38721,8 @@ const css = tw("placeholder-green-700");
 
 const css = {
   "&::placeholder": {
-    color: "#046c4e",
+    "--placeholder-opacity": "1",
+    color: ["#046c4e", "rgba(4, 108, 78, var(--placeholder-opacity))"],
   },
 };
 
@@ -38120,7 +38738,8 @@ const css = tw("placeholder-green-800");
 
 const css = {
   "&::placeholder": {
-    color: "#03543f",
+    "--placeholder-opacity": "1",
+    color: ["#03543f", "rgba(3, 84, 63, var(--placeholder-opacity))"],
   },
 };
 
@@ -38136,7 +38755,8 @@ const css = tw("placeholder-green-900");
 
 const css = {
   "&::placeholder": {
-    color: "#014737",
+    "--placeholder-opacity": "1",
+    color: ["#014737", "rgba(1, 71, 55, var(--placeholder-opacity))"],
   },
 };
 
@@ -38152,7 +38772,8 @@ const css = tw("placeholder-indigo-50");
 
 const css = {
   "&::placeholder": {
-    color: "#f0f5ff",
+    "--placeholder-opacity": "1",
+    color: ["#f0f5ff", "rgba(240, 245, 255, var(--placeholder-opacity))"],
   },
 };
 
@@ -38168,7 +38789,8 @@ const css = tw("placeholder-indigo-100");
 
 const css = {
   "&::placeholder": {
-    color: "#e5edff",
+    "--placeholder-opacity": "1",
+    color: ["#e5edff", "rgba(229, 237, 255, var(--placeholder-opacity))"],
   },
 };
 
@@ -38184,7 +38806,8 @@ const css = tw("placeholder-indigo-200");
 
 const css = {
   "&::placeholder": {
-    color: "#cddbfe",
+    "--placeholder-opacity": "1",
+    color: ["#cddbfe", "rgba(205, 219, 254, var(--placeholder-opacity))"],
   },
 };
 
@@ -38200,7 +38823,8 @@ const css = tw("placeholder-indigo-300");
 
 const css = {
   "&::placeholder": {
-    color: "#b4c6fc",
+    "--placeholder-opacity": "1",
+    color: ["#b4c6fc", "rgba(180, 198, 252, var(--placeholder-opacity))"],
   },
 };
 
@@ -38216,7 +38840,8 @@ const css = tw("placeholder-indigo-400");
 
 const css = {
   "&::placeholder": {
-    color: "#8da2fb",
+    "--placeholder-opacity": "1",
+    color: ["#8da2fb", "rgba(141, 162, 251, var(--placeholder-opacity))"],
   },
 };
 
@@ -38232,7 +38857,8 @@ const css = tw("placeholder-indigo-500");
 
 const css = {
   "&::placeholder": {
-    color: "#6875f5",
+    "--placeholder-opacity": "1",
+    color: ["#6875f5", "rgba(104, 117, 245, var(--placeholder-opacity))"],
   },
 };
 
@@ -38248,7 +38874,8 @@ const css = tw("placeholder-indigo-600");
 
 const css = {
   "&::placeholder": {
-    color: "#5850ec",
+    "--placeholder-opacity": "1",
+    color: ["#5850ec", "rgba(88, 80, 236, var(--placeholder-opacity))"],
   },
 };
 
@@ -38264,7 +38891,8 @@ const css = tw("placeholder-indigo-700");
 
 const css = {
   "&::placeholder": {
-    color: "#5145cd",
+    "--placeholder-opacity": "1",
+    color: ["#5145cd", "rgba(81, 69, 205, var(--placeholder-opacity))"],
   },
 };
 
@@ -38280,7 +38908,8 @@ const css = tw("placeholder-indigo-800");
 
 const css = {
   "&::placeholder": {
-    color: "#42389d",
+    "--placeholder-opacity": "1",
+    color: ["#42389d", "rgba(66, 56, 157, var(--placeholder-opacity))"],
   },
 };
 
@@ -38296,7 +38925,88 @@ const css = tw("placeholder-indigo-900");
 
 const css = {
   "&::placeholder": {
-    color: "#362f78",
+    "--placeholder-opacity": "1",
+    color: ["#362f78", "rgba(54, 47, 120, var(--placeholder-opacity))"],
+  },
+};
+
+
+`;
+
+exports[`macros placeholder-opacity-0: placeholder-opacity-0 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("placeholder-opacity-0");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "&::placeholder": {
+    "--placeholder-opacity": "0",
+  },
+};
+
+
+`;
+
+exports[`macros placeholder-opacity-25: placeholder-opacity-25 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("placeholder-opacity-25");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "&::placeholder": {
+    "--placeholder-opacity": "0.25",
+  },
+};
+
+
+`;
+
+exports[`macros placeholder-opacity-50: placeholder-opacity-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("placeholder-opacity-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "&::placeholder": {
+    "--placeholder-opacity": "0.5",
+  },
+};
+
+
+`;
+
+exports[`macros placeholder-opacity-75: placeholder-opacity-75 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("placeholder-opacity-75");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "&::placeholder": {
+    "--placeholder-opacity": "0.75",
+  },
+};
+
+
+`;
+
+exports[`macros placeholder-opacity-100: placeholder-opacity-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("placeholder-opacity-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "&::placeholder": {
+    "--placeholder-opacity": "1",
   },
 };
 
@@ -38312,7 +39022,8 @@ const css = tw("placeholder-orange-50");
 
 const css = {
   "&::placeholder": {
-    color: "#fff8f1",
+    "--placeholder-opacity": "1",
+    color: ["#fff8f1", "rgba(255, 248, 241, var(--placeholder-opacity))"],
   },
 };
 
@@ -38328,7 +39039,8 @@ const css = tw("placeholder-orange-100");
 
 const css = {
   "&::placeholder": {
-    color: "#feecdc",
+    "--placeholder-opacity": "1",
+    color: ["#feecdc", "rgba(254, 236, 220, var(--placeholder-opacity))"],
   },
 };
 
@@ -38344,7 +39056,8 @@ const css = tw("placeholder-orange-200");
 
 const css = {
   "&::placeholder": {
-    color: "#fcd9bd",
+    "--placeholder-opacity": "1",
+    color: ["#fcd9bd", "rgba(252, 217, 189, var(--placeholder-opacity))"],
   },
 };
 
@@ -38360,7 +39073,8 @@ const css = tw("placeholder-orange-300");
 
 const css = {
   "&::placeholder": {
-    color: "#fdba8c",
+    "--placeholder-opacity": "1",
+    color: ["#fdba8c", "rgba(253, 186, 140, var(--placeholder-opacity))"],
   },
 };
 
@@ -38376,7 +39090,8 @@ const css = tw("placeholder-orange-400");
 
 const css = {
   "&::placeholder": {
-    color: "#ff8a4c",
+    "--placeholder-opacity": "1",
+    color: ["#ff8a4c", "rgba(255, 138, 76, var(--placeholder-opacity))"],
   },
 };
 
@@ -38392,7 +39107,8 @@ const css = tw("placeholder-orange-500");
 
 const css = {
   "&::placeholder": {
-    color: "#ff5a1f",
+    "--placeholder-opacity": "1",
+    color: ["#ff5a1f", "rgba(255, 90, 31, var(--placeholder-opacity))"],
   },
 };
 
@@ -38408,7 +39124,8 @@ const css = tw("placeholder-orange-600");
 
 const css = {
   "&::placeholder": {
-    color: "#d03801",
+    "--placeholder-opacity": "1",
+    color: ["#d03801", "rgba(208, 56, 1, var(--placeholder-opacity))"],
   },
 };
 
@@ -38424,7 +39141,8 @@ const css = tw("placeholder-orange-700");
 
 const css = {
   "&::placeholder": {
-    color: "#b43403",
+    "--placeholder-opacity": "1",
+    color: ["#b43403", "rgba(180, 52, 3, var(--placeholder-opacity))"],
   },
 };
 
@@ -38440,7 +39158,8 @@ const css = tw("placeholder-orange-800");
 
 const css = {
   "&::placeholder": {
-    color: "#8a2c0d",
+    "--placeholder-opacity": "1",
+    color: ["#8a2c0d", "rgba(138, 44, 13, var(--placeholder-opacity))"],
   },
 };
 
@@ -38456,7 +39175,8 @@ const css = tw("placeholder-orange-900");
 
 const css = {
   "&::placeholder": {
-    color: "#771d1d",
+    "--placeholder-opacity": "1",
+    color: ["#771d1d", "rgba(119, 29, 29, var(--placeholder-opacity))"],
   },
 };
 
@@ -38472,7 +39192,8 @@ const css = tw("placeholder-pink-50");
 
 const css = {
   "&::placeholder": {
-    color: "#fdf2f8",
+    "--placeholder-opacity": "1",
+    color: ["#fdf2f8", "rgba(253, 242, 248, var(--placeholder-opacity))"],
   },
 };
 
@@ -38488,7 +39209,8 @@ const css = tw("placeholder-pink-100");
 
 const css = {
   "&::placeholder": {
-    color: "#fce8f3",
+    "--placeholder-opacity": "1",
+    color: ["#fce8f3", "rgba(252, 232, 243, var(--placeholder-opacity))"],
   },
 };
 
@@ -38504,7 +39226,8 @@ const css = tw("placeholder-pink-200");
 
 const css = {
   "&::placeholder": {
-    color: "#fad1e8",
+    "--placeholder-opacity": "1",
+    color: ["#fad1e8", "rgba(250, 209, 232, var(--placeholder-opacity))"],
   },
 };
 
@@ -38520,7 +39243,8 @@ const css = tw("placeholder-pink-300");
 
 const css = {
   "&::placeholder": {
-    color: "#f8b4d9",
+    "--placeholder-opacity": "1",
+    color: ["#f8b4d9", "rgba(248, 180, 217, var(--placeholder-opacity))"],
   },
 };
 
@@ -38536,7 +39260,8 @@ const css = tw("placeholder-pink-400");
 
 const css = {
   "&::placeholder": {
-    color: "#f17eb8",
+    "--placeholder-opacity": "1",
+    color: ["#f17eb8", "rgba(241, 126, 184, var(--placeholder-opacity))"],
   },
 };
 
@@ -38552,7 +39277,8 @@ const css = tw("placeholder-pink-500");
 
 const css = {
   "&::placeholder": {
-    color: "#e74694",
+    "--placeholder-opacity": "1",
+    color: ["#e74694", "rgba(231, 70, 148, var(--placeholder-opacity))"],
   },
 };
 
@@ -38568,7 +39294,8 @@ const css = tw("placeholder-pink-600");
 
 const css = {
   "&::placeholder": {
-    color: "#d61f69",
+    "--placeholder-opacity": "1",
+    color: ["#d61f69", "rgba(214, 31, 105, var(--placeholder-opacity))"],
   },
 };
 
@@ -38584,7 +39311,8 @@ const css = tw("placeholder-pink-700");
 
 const css = {
   "&::placeholder": {
-    color: "#bf125d",
+    "--placeholder-opacity": "1",
+    color: ["#bf125d", "rgba(191, 18, 93, var(--placeholder-opacity))"],
   },
 };
 
@@ -38600,7 +39328,8 @@ const css = tw("placeholder-pink-800");
 
 const css = {
   "&::placeholder": {
-    color: "#99154b",
+    "--placeholder-opacity": "1",
+    color: ["#99154b", "rgba(153, 21, 75, var(--placeholder-opacity))"],
   },
 };
 
@@ -38616,7 +39345,8 @@ const css = tw("placeholder-pink-900");
 
 const css = {
   "&::placeholder": {
-    color: "#751a3d",
+    "--placeholder-opacity": "1",
+    color: ["#751a3d", "rgba(117, 26, 61, var(--placeholder-opacity))"],
   },
 };
 
@@ -38632,7 +39362,8 @@ const css = tw("placeholder-purple-50");
 
 const css = {
   "&::placeholder": {
-    color: "#f6f5ff",
+    "--placeholder-opacity": "1",
+    color: ["#f6f5ff", "rgba(246, 245, 255, var(--placeholder-opacity))"],
   },
 };
 
@@ -38648,7 +39379,8 @@ const css = tw("placeholder-purple-100");
 
 const css = {
   "&::placeholder": {
-    color: "#edebfe",
+    "--placeholder-opacity": "1",
+    color: ["#edebfe", "rgba(237, 235, 254, var(--placeholder-opacity))"],
   },
 };
 
@@ -38664,7 +39396,8 @@ const css = tw("placeholder-purple-200");
 
 const css = {
   "&::placeholder": {
-    color: "#dcd7fe",
+    "--placeholder-opacity": "1",
+    color: ["#dcd7fe", "rgba(220, 215, 254, var(--placeholder-opacity))"],
   },
 };
 
@@ -38680,7 +39413,8 @@ const css = tw("placeholder-purple-300");
 
 const css = {
   "&::placeholder": {
-    color: "#cabffd",
+    "--placeholder-opacity": "1",
+    color: ["#cabffd", "rgba(202, 191, 253, var(--placeholder-opacity))"],
   },
 };
 
@@ -38696,7 +39430,8 @@ const css = tw("placeholder-purple-400");
 
 const css = {
   "&::placeholder": {
-    color: "#ac94fa",
+    "--placeholder-opacity": "1",
+    color: ["#ac94fa", "rgba(172, 148, 250, var(--placeholder-opacity))"],
   },
 };
 
@@ -38712,7 +39447,8 @@ const css = tw("placeholder-purple-500");
 
 const css = {
   "&::placeholder": {
-    color: "#9061f9",
+    "--placeholder-opacity": "1",
+    color: ["#9061f9", "rgba(144, 97, 249, var(--placeholder-opacity))"],
   },
 };
 
@@ -38728,7 +39464,8 @@ const css = tw("placeholder-purple-600");
 
 const css = {
   "&::placeholder": {
-    color: "#7e3af2",
+    "--placeholder-opacity": "1",
+    color: ["#7e3af2", "rgba(126, 58, 242, var(--placeholder-opacity))"],
   },
 };
 
@@ -38744,7 +39481,8 @@ const css = tw("placeholder-purple-700");
 
 const css = {
   "&::placeholder": {
-    color: "#6c2bd9",
+    "--placeholder-opacity": "1",
+    color: ["#6c2bd9", "rgba(108, 43, 217, var(--placeholder-opacity))"],
   },
 };
 
@@ -38760,7 +39498,8 @@ const css = tw("placeholder-purple-800");
 
 const css = {
   "&::placeholder": {
-    color: "#5521b5",
+    "--placeholder-opacity": "1",
+    color: ["#5521b5", "rgba(85, 33, 181, var(--placeholder-opacity))"],
   },
 };
 
@@ -38776,7 +39515,8 @@ const css = tw("placeholder-purple-900");
 
 const css = {
   "&::placeholder": {
-    color: "#4a1d96",
+    "--placeholder-opacity": "1",
+    color: ["#4a1d96", "rgba(74, 29, 150, var(--placeholder-opacity))"],
   },
 };
 
@@ -38792,7 +39532,8 @@ const css = tw("placeholder-red-50");
 
 const css = {
   "&::placeholder": {
-    color: "#fdf2f2",
+    "--placeholder-opacity": "1",
+    color: ["#fdf2f2", "rgba(253, 242, 242, var(--placeholder-opacity))"],
   },
 };
 
@@ -38808,7 +39549,8 @@ const css = tw("placeholder-red-100");
 
 const css = {
   "&::placeholder": {
-    color: "#fde8e8",
+    "--placeholder-opacity": "1",
+    color: ["#fde8e8", "rgba(253, 232, 232, var(--placeholder-opacity))"],
   },
 };
 
@@ -38824,7 +39566,8 @@ const css = tw("placeholder-red-200");
 
 const css = {
   "&::placeholder": {
-    color: "#fbd5d5",
+    "--placeholder-opacity": "1",
+    color: ["#fbd5d5", "rgba(251, 213, 213, var(--placeholder-opacity))"],
   },
 };
 
@@ -38840,7 +39583,8 @@ const css = tw("placeholder-red-300");
 
 const css = {
   "&::placeholder": {
-    color: "#f8b4b4",
+    "--placeholder-opacity": "1",
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--placeholder-opacity))"],
   },
 };
 
@@ -38856,7 +39600,8 @@ const css = tw("placeholder-red-400");
 
 const css = {
   "&::placeholder": {
-    color: "#f98080",
+    "--placeholder-opacity": "1",
+    color: ["#f98080", "rgba(249, 128, 128, var(--placeholder-opacity))"],
   },
 };
 
@@ -38872,7 +39617,8 @@ const css = tw("placeholder-red-500");
 
 const css = {
   "&::placeholder": {
-    color: "#f05252",
+    "--placeholder-opacity": "1",
+    color: ["#f05252", "rgba(240, 82, 82, var(--placeholder-opacity))"],
   },
 };
 
@@ -38888,7 +39634,8 @@ const css = tw("placeholder-red-600");
 
 const css = {
   "&::placeholder": {
-    color: "#e02424",
+    "--placeholder-opacity": "1",
+    color: ["#e02424", "rgba(224, 36, 36, var(--placeholder-opacity))"],
   },
 };
 
@@ -38904,7 +39651,8 @@ const css = tw("placeholder-red-700");
 
 const css = {
   "&::placeholder": {
-    color: "#c81e1e",
+    "--placeholder-opacity": "1",
+    color: ["#c81e1e", "rgba(200, 30, 30, var(--placeholder-opacity))"],
   },
 };
 
@@ -38920,7 +39668,8 @@ const css = tw("placeholder-red-800");
 
 const css = {
   "&::placeholder": {
-    color: "#9b1c1c",
+    "--placeholder-opacity": "1",
+    color: ["#9b1c1c", "rgba(155, 28, 28, var(--placeholder-opacity))"],
   },
 };
 
@@ -38936,7 +39685,8 @@ const css = tw("placeholder-red-900");
 
 const css = {
   "&::placeholder": {
-    color: "#771d1d",
+    "--placeholder-opacity": "1",
+    color: ["#771d1d", "rgba(119, 29, 29, var(--placeholder-opacity))"],
   },
 };
 
@@ -38952,7 +39702,8 @@ const css = tw("placeholder-teal-50");
 
 const css = {
   "&::placeholder": {
-    color: "#edfafa",
+    "--placeholder-opacity": "1",
+    color: ["#edfafa", "rgba(237, 250, 250, var(--placeholder-opacity))"],
   },
 };
 
@@ -38968,7 +39719,8 @@ const css = tw("placeholder-teal-100");
 
 const css = {
   "&::placeholder": {
-    color: "#d5f5f6",
+    "--placeholder-opacity": "1",
+    color: ["#d5f5f6", "rgba(213, 245, 246, var(--placeholder-opacity))"],
   },
 };
 
@@ -38984,7 +39736,8 @@ const css = tw("placeholder-teal-200");
 
 const css = {
   "&::placeholder": {
-    color: "#afecef",
+    "--placeholder-opacity": "1",
+    color: ["#afecef", "rgba(175, 236, 239, var(--placeholder-opacity))"],
   },
 };
 
@@ -39000,7 +39753,8 @@ const css = tw("placeholder-teal-300");
 
 const css = {
   "&::placeholder": {
-    color: "#7edce2",
+    "--placeholder-opacity": "1",
+    color: ["#7edce2", "rgba(126, 220, 226, var(--placeholder-opacity))"],
   },
 };
 
@@ -39016,7 +39770,8 @@ const css = tw("placeholder-teal-400");
 
 const css = {
   "&::placeholder": {
-    color: "#16bdca",
+    "--placeholder-opacity": "1",
+    color: ["#16bdca", "rgba(22, 189, 202, var(--placeholder-opacity))"],
   },
 };
 
@@ -39032,7 +39787,8 @@ const css = tw("placeholder-teal-500");
 
 const css = {
   "&::placeholder": {
-    color: "#0694a2",
+    "--placeholder-opacity": "1",
+    color: ["#0694a2", "rgba(6, 148, 162, var(--placeholder-opacity))"],
   },
 };
 
@@ -39048,7 +39804,8 @@ const css = tw("placeholder-teal-600");
 
 const css = {
   "&::placeholder": {
-    color: "#047481",
+    "--placeholder-opacity": "1",
+    color: ["#047481", "rgba(4, 116, 129, var(--placeholder-opacity))"],
   },
 };
 
@@ -39064,7 +39821,8 @@ const css = tw("placeholder-teal-700");
 
 const css = {
   "&::placeholder": {
-    color: "#036672",
+    "--placeholder-opacity": "1",
+    color: ["#036672", "rgba(3, 102, 114, var(--placeholder-opacity))"],
   },
 };
 
@@ -39080,7 +39838,8 @@ const css = tw("placeholder-teal-800");
 
 const css = {
   "&::placeholder": {
-    color: "#05505c",
+    "--placeholder-opacity": "1",
+    color: ["#05505c", "rgba(5, 80, 92, var(--placeholder-opacity))"],
   },
 };
 
@@ -39096,7 +39855,8 @@ const css = tw("placeholder-teal-900");
 
 const css = {
   "&::placeholder": {
-    color: "#014451",
+    "--placeholder-opacity": "1",
+    color: ["#014451", "rgba(1, 68, 81, var(--placeholder-opacity))"],
   },
 };
 
@@ -39128,7 +39888,8 @@ const css = tw("placeholder-white");
 
 const css = {
   "&::placeholder": {
-    color: "#ffffff",
+    "--placeholder-opacity": "1",
+    color: ["#ffffff", "rgba(255, 255, 255, var(--placeholder-opacity))"],
   },
 };
 
@@ -39144,7 +39905,8 @@ const css = tw("placeholder-yellow-50");
 
 const css = {
   "&::placeholder": {
-    color: "#fdfdea",
+    "--placeholder-opacity": "1",
+    color: ["#fdfdea", "rgba(253, 253, 234, var(--placeholder-opacity))"],
   },
 };
 
@@ -39160,7 +39922,8 @@ const css = tw("placeholder-yellow-100");
 
 const css = {
   "&::placeholder": {
-    color: "#fdf6b2",
+    "--placeholder-opacity": "1",
+    color: ["#fdf6b2", "rgba(253, 246, 178, var(--placeholder-opacity))"],
   },
 };
 
@@ -39176,7 +39939,8 @@ const css = tw("placeholder-yellow-200");
 
 const css = {
   "&::placeholder": {
-    color: "#fce96a",
+    "--placeholder-opacity": "1",
+    color: ["#fce96a", "rgba(252, 233, 106, var(--placeholder-opacity))"],
   },
 };
 
@@ -39192,7 +39956,8 @@ const css = tw("placeholder-yellow-300");
 
 const css = {
   "&::placeholder": {
-    color: "#faca15",
+    "--placeholder-opacity": "1",
+    color: ["#faca15", "rgba(250, 202, 21, var(--placeholder-opacity))"],
   },
 };
 
@@ -39208,7 +39973,8 @@ const css = tw("placeholder-yellow-400");
 
 const css = {
   "&::placeholder": {
-    color: "#e3a008",
+    "--placeholder-opacity": "1",
+    color: ["#e3a008", "rgba(227, 160, 8, var(--placeholder-opacity))"],
   },
 };
 
@@ -39224,7 +39990,8 @@ const css = tw("placeholder-yellow-500");
 
 const css = {
   "&::placeholder": {
-    color: "#c27803",
+    "--placeholder-opacity": "1",
+    color: ["#c27803", "rgba(194, 120, 3, var(--placeholder-opacity))"],
   },
 };
 
@@ -39240,7 +40007,8 @@ const css = tw("placeholder-yellow-600");
 
 const css = {
   "&::placeholder": {
-    color: "#9f580a",
+    "--placeholder-opacity": "1",
+    color: ["#9f580a", "rgba(159, 88, 10, var(--placeholder-opacity))"],
   },
 };
 
@@ -39256,7 +40024,8 @@ const css = tw("placeholder-yellow-700");
 
 const css = {
   "&::placeholder": {
-    color: "#8e4b10",
+    "--placeholder-opacity": "1",
+    color: ["#8e4b10", "rgba(142, 75, 16, var(--placeholder-opacity))"],
   },
 };
 
@@ -39272,7 +40041,8 @@ const css = tw("placeholder-yellow-800");
 
 const css = {
   "&::placeholder": {
-    color: "#723b13",
+    "--placeholder-opacity": "1",
+    color: ["#723b13", "rgba(114, 59, 19, var(--placeholder-opacity))"],
   },
 };
 
@@ -39288,7 +40058,8 @@ const css = tw("placeholder-yellow-900");
 
 const css = {
   "&::placeholder": {
-    color: "#633112",
+    "--placeholder-opacity": "1",
+    color: ["#633112", "rgba(99, 49, 18, var(--placeholder-opacity))"],
   },
 };
 
@@ -46980,8 +47751,8 @@ const css = tw("space-x-0");
 const css = {
   "& > :not(template) ~ :not(template)": {
     "--space-x-reverse": "0",
-    marginRight: "calc(0 * var(--space-x-reverse))",
-    marginLeft: "calc(0 * calc(1 - var(--space-x-reverse)))",
+    marginRight: "calc(0px * var(--space-x-reverse))",
+    marginLeft: "calc(0px * calc(1 - var(--space-x-reverse)))",
   },
 };
 
@@ -48112,8 +48883,8 @@ const css = tw("space-y-0");
 const css = {
   "& > :not(template) ~ :not(template)": {
     "--space-y-reverse": "0",
-    marginTop: "calc(0 * calc(1 - var(--space-y-reverse)))",
-    marginBottom: "calc(0 * var(--space-y-reverse))",
+    marginTop: "calc(0px * calc(1 - var(--space-y-reverse)))",
+    marginBottom: "calc(0px * var(--space-y-reverse))",
   },
 };
 
@@ -49583,7 +50354,8 @@ const css = tw("text-black");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#000000",
+  "--text-opacity": "1",
+  color: ["#000000", "rgba(0, 0, 0, var(--text-opacity))"],
 };
 
 
@@ -49597,7 +50369,8 @@ const css = tw("text-blue-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#ebf5ff",
+  "--text-opacity": "1",
+  color: ["#ebf5ff", "rgba(235, 245, 255, var(--text-opacity))"],
 };
 
 
@@ -49611,7 +50384,8 @@ const css = tw("text-blue-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#e1effe",
+  "--text-opacity": "1",
+  color: ["#e1effe", "rgba(225, 239, 254, var(--text-opacity))"],
 };
 
 
@@ -49625,7 +50399,8 @@ const css = tw("text-blue-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#c3ddfd",
+  "--text-opacity": "1",
+  color: ["#c3ddfd", "rgba(195, 221, 253, var(--text-opacity))"],
 };
 
 
@@ -49639,7 +50414,8 @@ const css = tw("text-blue-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#a4cafe",
+  "--text-opacity": "1",
+  color: ["#a4cafe", "rgba(164, 202, 254, var(--text-opacity))"],
 };
 
 
@@ -49653,7 +50429,8 @@ const css = tw("text-blue-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#76a9fa",
+  "--text-opacity": "1",
+  color: ["#76a9fa", "rgba(118, 169, 250, var(--text-opacity))"],
 };
 
 
@@ -49667,7 +50444,8 @@ const css = tw("text-blue-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#3f83f8",
+  "--text-opacity": "1",
+  color: ["#3f83f8", "rgba(63, 131, 248, var(--text-opacity))"],
 };
 
 
@@ -49681,7 +50459,8 @@ const css = tw("text-blue-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#1c64f2",
+  "--text-opacity": "1",
+  color: ["#1c64f2", "rgba(28, 100, 242, var(--text-opacity))"],
 };
 
 
@@ -49695,7 +50474,8 @@ const css = tw("text-blue-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#1a56db",
+  "--text-opacity": "1",
+  color: ["#1a56db", "rgba(26, 86, 219, var(--text-opacity))"],
 };
 
 
@@ -49709,7 +50489,8 @@ const css = tw("text-blue-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#1e429f",
+  "--text-opacity": "1",
+  color: ["#1e429f", "rgba(30, 66, 159, var(--text-opacity))"],
 };
 
 
@@ -49723,7 +50504,8 @@ const css = tw("text-blue-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#233876",
+  "--text-opacity": "1",
+  color: ["#233876", "rgba(35, 56, 118, var(--text-opacity))"],
 };
 
 
@@ -49751,7 +50533,8 @@ const css = tw("text-cool-gray-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fbfdfe",
+  "--text-opacity": "1",
+  color: ["#fbfdfe", "rgba(251, 253, 254, var(--text-opacity))"],
 };
 
 
@@ -49765,7 +50548,8 @@ const css = tw("text-cool-gray-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f1f5f9",
+  "--text-opacity": "1",
+  color: ["#f1f5f9", "rgba(241, 245, 249, var(--text-opacity))"],
 };
 
 
@@ -49779,7 +50563,8 @@ const css = tw("text-cool-gray-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#e2e8f0",
+  "--text-opacity": "1",
+  color: ["#e2e8f0", "rgba(226, 232, 240, var(--text-opacity))"],
 };
 
 
@@ -49793,7 +50578,8 @@ const css = tw("text-cool-gray-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#cfd8e3",
+  "--text-opacity": "1",
+  color: ["#cfd8e3", "rgba(207, 216, 227, var(--text-opacity))"],
 };
 
 
@@ -49807,7 +50593,8 @@ const css = tw("text-cool-gray-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#97a6ba",
+  "--text-opacity": "1",
+  color: ["#97a6ba", "rgba(151, 166, 186, var(--text-opacity))"],
 };
 
 
@@ -49821,7 +50608,8 @@ const css = tw("text-cool-gray-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#64748b",
+  "--text-opacity": "1",
+  color: ["#64748b", "rgba(100, 116, 139, var(--text-opacity))"],
 };
 
 
@@ -49835,7 +50623,8 @@ const css = tw("text-cool-gray-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#475569",
+  "--text-opacity": "1",
+  color: ["#475569", "rgba(71, 85, 105, var(--text-opacity))"],
 };
 
 
@@ -49849,7 +50638,8 @@ const css = tw("text-cool-gray-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#364152",
+  "--text-opacity": "1",
+  color: ["#364152", "rgba(54, 65, 82, var(--text-opacity))"],
 };
 
 
@@ -49863,7 +50653,8 @@ const css = tw("text-cool-gray-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#27303f",
+  "--text-opacity": "1",
+  color: ["#27303f", "rgba(39, 48, 63, var(--text-opacity))"],
 };
 
 
@@ -49877,7 +50668,8 @@ const css = tw("text-cool-gray-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#1a202e",
+  "--text-opacity": "1",
+  color: ["#1a202e", "rgba(26, 32, 46, var(--text-opacity))"],
 };
 
 
@@ -49891,7 +50683,8 @@ const css = tw("text-gray-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f9fafb",
+  "--text-opacity": "1",
+  color: ["#f9fafb", "rgba(249, 250, 251, var(--text-opacity))"],
 };
 
 
@@ -49905,7 +50698,8 @@ const css = tw("text-gray-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f4f5f7",
+  "--text-opacity": "1",
+  color: ["#f4f5f7", "rgba(244, 245, 247, var(--text-opacity))"],
 };
 
 
@@ -49919,7 +50713,8 @@ const css = tw("text-gray-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#e5e7eb",
+  "--text-opacity": "1",
+  color: ["#e5e7eb", "rgba(229, 231, 235, var(--text-opacity))"],
 };
 
 
@@ -49933,7 +50728,8 @@ const css = tw("text-gray-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#d2d6dc",
+  "--text-opacity": "1",
+  color: ["#d2d6dc", "rgba(210, 214, 220, var(--text-opacity))"],
 };
 
 
@@ -49947,7 +50743,8 @@ const css = tw("text-gray-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#9fa6b2",
+  "--text-opacity": "1",
+  color: ["#9fa6b2", "rgba(159, 166, 178, var(--text-opacity))"],
 };
 
 
@@ -49961,7 +50758,8 @@ const css = tw("text-gray-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#6b7280",
+  "--text-opacity": "1",
+  color: ["#6b7280", "rgba(107, 114, 128, var(--text-opacity))"],
 };
 
 
@@ -49975,7 +50773,8 @@ const css = tw("text-gray-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#4b5563",
+  "--text-opacity": "1",
+  color: ["#4b5563", "rgba(75, 85, 99, var(--text-opacity))"],
 };
 
 
@@ -49989,7 +50788,8 @@ const css = tw("text-gray-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#374151",
+  "--text-opacity": "1",
+  color: ["#374151", "rgba(55, 65, 81, var(--text-opacity))"],
 };
 
 
@@ -50003,7 +50803,8 @@ const css = tw("text-gray-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#252f3f",
+  "--text-opacity": "1",
+  color: ["#252f3f", "rgba(37, 47, 63, var(--text-opacity))"],
 };
 
 
@@ -50017,7 +50818,8 @@ const css = tw("text-gray-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#161e2e",
+  "--text-opacity": "1",
+  color: ["#161e2e", "rgba(22, 30, 46, var(--text-opacity))"],
 };
 
 
@@ -50031,7 +50833,8 @@ const css = tw("text-green-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f3faf7",
+  "--text-opacity": "1",
+  color: ["#f3faf7", "rgba(243, 250, 247, var(--text-opacity))"],
 };
 
 
@@ -50045,7 +50848,8 @@ const css = tw("text-green-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#def7ec",
+  "--text-opacity": "1",
+  color: ["#def7ec", "rgba(222, 247, 236, var(--text-opacity))"],
 };
 
 
@@ -50059,7 +50863,8 @@ const css = tw("text-green-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#bcf0da",
+  "--text-opacity": "1",
+  color: ["#bcf0da", "rgba(188, 240, 218, var(--text-opacity))"],
 };
 
 
@@ -50073,7 +50878,8 @@ const css = tw("text-green-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#84e1bc",
+  "--text-opacity": "1",
+  color: ["#84e1bc", "rgba(132, 225, 188, var(--text-opacity))"],
 };
 
 
@@ -50087,7 +50893,8 @@ const css = tw("text-green-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#31c48d",
+  "--text-opacity": "1",
+  color: ["#31c48d", "rgba(49, 196, 141, var(--text-opacity))"],
 };
 
 
@@ -50101,7 +50908,8 @@ const css = tw("text-green-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#0e9f6e",
+  "--text-opacity": "1",
+  color: ["#0e9f6e", "rgba(14, 159, 110, var(--text-opacity))"],
 };
 
 
@@ -50115,7 +50923,8 @@ const css = tw("text-green-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#057a55",
+  "--text-opacity": "1",
+  color: ["#057a55", "rgba(5, 122, 85, var(--text-opacity))"],
 };
 
 
@@ -50129,7 +50938,8 @@ const css = tw("text-green-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#046c4e",
+  "--text-opacity": "1",
+  color: ["#046c4e", "rgba(4, 108, 78, var(--text-opacity))"],
 };
 
 
@@ -50143,7 +50953,8 @@ const css = tw("text-green-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#03543f",
+  "--text-opacity": "1",
+  color: ["#03543f", "rgba(3, 84, 63, var(--text-opacity))"],
 };
 
 
@@ -50157,7 +50968,8 @@ const css = tw("text-green-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#014737",
+  "--text-opacity": "1",
+  color: ["#014737", "rgba(1, 71, 55, var(--text-opacity))"],
 };
 
 
@@ -50171,7 +50983,8 @@ const css = tw("text-indigo-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f0f5ff",
+  "--text-opacity": "1",
+  color: ["#f0f5ff", "rgba(240, 245, 255, var(--text-opacity))"],
 };
 
 
@@ -50185,7 +50998,8 @@ const css = tw("text-indigo-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#e5edff",
+  "--text-opacity": "1",
+  color: ["#e5edff", "rgba(229, 237, 255, var(--text-opacity))"],
 };
 
 
@@ -50199,7 +51013,8 @@ const css = tw("text-indigo-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#cddbfe",
+  "--text-opacity": "1",
+  color: ["#cddbfe", "rgba(205, 219, 254, var(--text-opacity))"],
 };
 
 
@@ -50213,7 +51028,8 @@ const css = tw("text-indigo-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#b4c6fc",
+  "--text-opacity": "1",
+  color: ["#b4c6fc", "rgba(180, 198, 252, var(--text-opacity))"],
 };
 
 
@@ -50227,7 +51043,8 @@ const css = tw("text-indigo-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#8da2fb",
+  "--text-opacity": "1",
+  color: ["#8da2fb", "rgba(141, 162, 251, var(--text-opacity))"],
 };
 
 
@@ -50241,7 +51058,8 @@ const css = tw("text-indigo-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#6875f5",
+  "--text-opacity": "1",
+  color: ["#6875f5", "rgba(104, 117, 245, var(--text-opacity))"],
 };
 
 
@@ -50255,7 +51073,8 @@ const css = tw("text-indigo-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#5850ec",
+  "--text-opacity": "1",
+  color: ["#5850ec", "rgba(88, 80, 236, var(--text-opacity))"],
 };
 
 
@@ -50269,7 +51088,8 @@ const css = tw("text-indigo-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#5145cd",
+  "--text-opacity": "1",
+  color: ["#5145cd", "rgba(81, 69, 205, var(--text-opacity))"],
 };
 
 
@@ -50283,7 +51103,8 @@ const css = tw("text-indigo-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#42389d",
+  "--text-opacity": "1",
+  color: ["#42389d", "rgba(66, 56, 157, var(--text-opacity))"],
 };
 
 
@@ -50297,7 +51118,8 @@ const css = tw("text-indigo-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#362f78",
+  "--text-opacity": "1",
+  color: ["#362f78", "rgba(54, 47, 120, var(--text-opacity))"],
 };
 
 
@@ -50345,6 +51167,76 @@ const css = {
 
 `;
 
+exports[`macros text-opacity-0: text-opacity-0 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("text-opacity-0");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "0",
+};
+
+
+`;
+
+exports[`macros text-opacity-25: text-opacity-25 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("text-opacity-25");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "0.25",
+};
+
+
+`;
+
+exports[`macros text-opacity-50: text-opacity-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("text-opacity-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "0.5",
+};
+
+
+`;
+
+exports[`macros text-opacity-75: text-opacity-75 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("text-opacity-75");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "0.75",
+};
+
+
+`;
+
+exports[`macros text-opacity-100: text-opacity-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("text-opacity-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--text-opacity": "1",
+};
+
+
+`;
+
 exports[`macros text-orange-50: text-orange-50 1`] = `
 
 import tw from '../lib/macro';
@@ -50353,7 +51245,8 @@ const css = tw("text-orange-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fff8f1",
+  "--text-opacity": "1",
+  color: ["#fff8f1", "rgba(255, 248, 241, var(--text-opacity))"],
 };
 
 
@@ -50367,7 +51260,8 @@ const css = tw("text-orange-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#feecdc",
+  "--text-opacity": "1",
+  color: ["#feecdc", "rgba(254, 236, 220, var(--text-opacity))"],
 };
 
 
@@ -50381,7 +51275,8 @@ const css = tw("text-orange-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fcd9bd",
+  "--text-opacity": "1",
+  color: ["#fcd9bd", "rgba(252, 217, 189, var(--text-opacity))"],
 };
 
 
@@ -50395,7 +51290,8 @@ const css = tw("text-orange-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fdba8c",
+  "--text-opacity": "1",
+  color: ["#fdba8c", "rgba(253, 186, 140, var(--text-opacity))"],
 };
 
 
@@ -50409,7 +51305,8 @@ const css = tw("text-orange-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#ff8a4c",
+  "--text-opacity": "1",
+  color: ["#ff8a4c", "rgba(255, 138, 76, var(--text-opacity))"],
 };
 
 
@@ -50423,7 +51320,8 @@ const css = tw("text-orange-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#ff5a1f",
+  "--text-opacity": "1",
+  color: ["#ff5a1f", "rgba(255, 90, 31, var(--text-opacity))"],
 };
 
 
@@ -50437,7 +51335,8 @@ const css = tw("text-orange-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#d03801",
+  "--text-opacity": "1",
+  color: ["#d03801", "rgba(208, 56, 1, var(--text-opacity))"],
 };
 
 
@@ -50451,7 +51350,8 @@ const css = tw("text-orange-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#b43403",
+  "--text-opacity": "1",
+  color: ["#b43403", "rgba(180, 52, 3, var(--text-opacity))"],
 };
 
 
@@ -50465,7 +51365,8 @@ const css = tw("text-orange-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#8a2c0d",
+  "--text-opacity": "1",
+  color: ["#8a2c0d", "rgba(138, 44, 13, var(--text-opacity))"],
 };
 
 
@@ -50479,7 +51380,8 @@ const css = tw("text-orange-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#771d1d",
+  "--text-opacity": "1",
+  color: ["#771d1d", "rgba(119, 29, 29, var(--text-opacity))"],
 };
 
 
@@ -50493,7 +51395,8 @@ const css = tw("text-pink-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fdf2f8",
+  "--text-opacity": "1",
+  color: ["#fdf2f8", "rgba(253, 242, 248, var(--text-opacity))"],
 };
 
 
@@ -50507,7 +51410,8 @@ const css = tw("text-pink-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fce8f3",
+  "--text-opacity": "1",
+  color: ["#fce8f3", "rgba(252, 232, 243, var(--text-opacity))"],
 };
 
 
@@ -50521,7 +51425,8 @@ const css = tw("text-pink-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fad1e8",
+  "--text-opacity": "1",
+  color: ["#fad1e8", "rgba(250, 209, 232, var(--text-opacity))"],
 };
 
 
@@ -50535,7 +51440,8 @@ const css = tw("text-pink-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f8b4d9",
+  "--text-opacity": "1",
+  color: ["#f8b4d9", "rgba(248, 180, 217, var(--text-opacity))"],
 };
 
 
@@ -50549,7 +51455,8 @@ const css = tw("text-pink-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f17eb8",
+  "--text-opacity": "1",
+  color: ["#f17eb8", "rgba(241, 126, 184, var(--text-opacity))"],
 };
 
 
@@ -50563,7 +51470,8 @@ const css = tw("text-pink-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#e74694",
+  "--text-opacity": "1",
+  color: ["#e74694", "rgba(231, 70, 148, var(--text-opacity))"],
 };
 
 
@@ -50577,7 +51485,8 @@ const css = tw("text-pink-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#d61f69",
+  "--text-opacity": "1",
+  color: ["#d61f69", "rgba(214, 31, 105, var(--text-opacity))"],
 };
 
 
@@ -50591,7 +51500,8 @@ const css = tw("text-pink-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#bf125d",
+  "--text-opacity": "1",
+  color: ["#bf125d", "rgba(191, 18, 93, var(--text-opacity))"],
 };
 
 
@@ -50605,7 +51515,8 @@ const css = tw("text-pink-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#99154b",
+  "--text-opacity": "1",
+  color: ["#99154b", "rgba(153, 21, 75, var(--text-opacity))"],
 };
 
 
@@ -50619,7 +51530,8 @@ const css = tw("text-pink-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#751a3d",
+  "--text-opacity": "1",
+  color: ["#751a3d", "rgba(117, 26, 61, var(--text-opacity))"],
 };
 
 
@@ -50633,7 +51545,8 @@ const css = tw("text-purple-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f6f5ff",
+  "--text-opacity": "1",
+  color: ["#f6f5ff", "rgba(246, 245, 255, var(--text-opacity))"],
 };
 
 
@@ -50647,7 +51560,8 @@ const css = tw("text-purple-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#edebfe",
+  "--text-opacity": "1",
+  color: ["#edebfe", "rgba(237, 235, 254, var(--text-opacity))"],
 };
 
 
@@ -50661,7 +51575,8 @@ const css = tw("text-purple-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#dcd7fe",
+  "--text-opacity": "1",
+  color: ["#dcd7fe", "rgba(220, 215, 254, var(--text-opacity))"],
 };
 
 
@@ -50675,7 +51590,8 @@ const css = tw("text-purple-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#cabffd",
+  "--text-opacity": "1",
+  color: ["#cabffd", "rgba(202, 191, 253, var(--text-opacity))"],
 };
 
 
@@ -50689,7 +51605,8 @@ const css = tw("text-purple-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#ac94fa",
+  "--text-opacity": "1",
+  color: ["#ac94fa", "rgba(172, 148, 250, var(--text-opacity))"],
 };
 
 
@@ -50703,7 +51620,8 @@ const css = tw("text-purple-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#9061f9",
+  "--text-opacity": "1",
+  color: ["#9061f9", "rgba(144, 97, 249, var(--text-opacity))"],
 };
 
 
@@ -50717,7 +51635,8 @@ const css = tw("text-purple-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#7e3af2",
+  "--text-opacity": "1",
+  color: ["#7e3af2", "rgba(126, 58, 242, var(--text-opacity))"],
 };
 
 
@@ -50731,7 +51650,8 @@ const css = tw("text-purple-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#6c2bd9",
+  "--text-opacity": "1",
+  color: ["#6c2bd9", "rgba(108, 43, 217, var(--text-opacity))"],
 };
 
 
@@ -50745,7 +51665,8 @@ const css = tw("text-purple-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#5521b5",
+  "--text-opacity": "1",
+  color: ["#5521b5", "rgba(85, 33, 181, var(--text-opacity))"],
 };
 
 
@@ -50759,7 +51680,8 @@ const css = tw("text-purple-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#4a1d96",
+  "--text-opacity": "1",
+  color: ["#4a1d96", "rgba(74, 29, 150, var(--text-opacity))"],
 };
 
 
@@ -50773,7 +51695,8 @@ const css = tw("text-red-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fdf2f2",
+  "--text-opacity": "1",
+  color: ["#fdf2f2", "rgba(253, 242, 242, var(--text-opacity))"],
 };
 
 
@@ -50787,7 +51710,8 @@ const css = tw("text-red-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fde8e8",
+  "--text-opacity": "1",
+  color: ["#fde8e8", "rgba(253, 232, 232, var(--text-opacity))"],
 };
 
 
@@ -50801,7 +51725,8 @@ const css = tw("text-red-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fbd5d5",
+  "--text-opacity": "1",
+  color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
 };
 
 
@@ -50815,7 +51740,8 @@ const css = tw("text-red-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f8b4b4",
+  "--text-opacity": "1",
+  color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
 };
 
 
@@ -50829,7 +51755,8 @@ const css = tw("text-red-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f98080",
+  "--text-opacity": "1",
+  color: ["#f98080", "rgba(249, 128, 128, var(--text-opacity))"],
 };
 
 
@@ -50843,7 +51770,8 @@ const css = tw("text-red-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#f05252",
+  "--text-opacity": "1",
+  color: ["#f05252", "rgba(240, 82, 82, var(--text-opacity))"],
 };
 
 
@@ -50857,7 +51785,8 @@ const css = tw("text-red-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#e02424",
+  "--text-opacity": "1",
+  color: ["#e02424", "rgba(224, 36, 36, var(--text-opacity))"],
 };
 
 
@@ -50871,7 +51800,8 @@ const css = tw("text-red-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#c81e1e",
+  "--text-opacity": "1",
+  color: ["#c81e1e", "rgba(200, 30, 30, var(--text-opacity))"],
 };
 
 
@@ -50885,7 +51815,8 @@ const css = tw("text-red-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#9b1c1c",
+  "--text-opacity": "1",
+  color: ["#9b1c1c", "rgba(155, 28, 28, var(--text-opacity))"],
 };
 
 
@@ -50899,7 +51830,8 @@ const css = tw("text-red-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#771d1d",
+  "--text-opacity": "1",
+  color: ["#771d1d", "rgba(119, 29, 29, var(--text-opacity))"],
 };
 
 
@@ -50941,7 +51873,8 @@ const css = tw("text-teal-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#edfafa",
+  "--text-opacity": "1",
+  color: ["#edfafa", "rgba(237, 250, 250, var(--text-opacity))"],
 };
 
 
@@ -50955,7 +51888,8 @@ const css = tw("text-teal-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#d5f5f6",
+  "--text-opacity": "1",
+  color: ["#d5f5f6", "rgba(213, 245, 246, var(--text-opacity))"],
 };
 
 
@@ -50969,7 +51903,8 @@ const css = tw("text-teal-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#afecef",
+  "--text-opacity": "1",
+  color: ["#afecef", "rgba(175, 236, 239, var(--text-opacity))"],
 };
 
 
@@ -50983,7 +51918,8 @@ const css = tw("text-teal-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#7edce2",
+  "--text-opacity": "1",
+  color: ["#7edce2", "rgba(126, 220, 226, var(--text-opacity))"],
 };
 
 
@@ -50997,7 +51933,8 @@ const css = tw("text-teal-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#16bdca",
+  "--text-opacity": "1",
+  color: ["#16bdca", "rgba(22, 189, 202, var(--text-opacity))"],
 };
 
 
@@ -51011,7 +51948,8 @@ const css = tw("text-teal-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#0694a2",
+  "--text-opacity": "1",
+  color: ["#0694a2", "rgba(6, 148, 162, var(--text-opacity))"],
 };
 
 
@@ -51025,7 +51963,8 @@ const css = tw("text-teal-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#047481",
+  "--text-opacity": "1",
+  color: ["#047481", "rgba(4, 116, 129, var(--text-opacity))"],
 };
 
 
@@ -51039,7 +51978,8 @@ const css = tw("text-teal-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#036672",
+  "--text-opacity": "1",
+  color: ["#036672", "rgba(3, 102, 114, var(--text-opacity))"],
 };
 
 
@@ -51053,7 +51993,8 @@ const css = tw("text-teal-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#05505c",
+  "--text-opacity": "1",
+  color: ["#05505c", "rgba(5, 80, 92, var(--text-opacity))"],
 };
 
 
@@ -51067,7 +52008,8 @@ const css = tw("text-teal-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#014451",
+  "--text-opacity": "1",
+  color: ["#014451", "rgba(1, 68, 81, var(--text-opacity))"],
 };
 
 
@@ -51095,7 +52037,8 @@ const css = tw("text-white");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#ffffff",
+  "--text-opacity": "1",
+  color: ["#ffffff", "rgba(255, 255, 255, var(--text-opacity))"],
 };
 
 
@@ -51137,7 +52080,8 @@ const css = tw("text-yellow-50");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fdfdea",
+  "--text-opacity": "1",
+  color: ["#fdfdea", "rgba(253, 253, 234, var(--text-opacity))"],
 };
 
 
@@ -51151,7 +52095,8 @@ const css = tw("text-yellow-100");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fdf6b2",
+  "--text-opacity": "1",
+  color: ["#fdf6b2", "rgba(253, 246, 178, var(--text-opacity))"],
 };
 
 
@@ -51165,7 +52110,8 @@ const css = tw("text-yellow-200");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#fce96a",
+  "--text-opacity": "1",
+  color: ["#fce96a", "rgba(252, 233, 106, var(--text-opacity))"],
 };
 
 
@@ -51179,7 +52125,8 @@ const css = tw("text-yellow-300");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#faca15",
+  "--text-opacity": "1",
+  color: ["#faca15", "rgba(250, 202, 21, var(--text-opacity))"],
 };
 
 
@@ -51193,7 +52140,8 @@ const css = tw("text-yellow-400");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#e3a008",
+  "--text-opacity": "1",
+  color: ["#e3a008", "rgba(227, 160, 8, var(--text-opacity))"],
 };
 
 
@@ -51207,7 +52155,8 @@ const css = tw("text-yellow-500");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#c27803",
+  "--text-opacity": "1",
+  color: ["#c27803", "rgba(194, 120, 3, var(--text-opacity))"],
 };
 
 
@@ -51221,7 +52170,8 @@ const css = tw("text-yellow-600");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#9f580a",
+  "--text-opacity": "1",
+  color: ["#9f580a", "rgba(159, 88, 10, var(--text-opacity))"],
 };
 
 
@@ -51235,7 +52185,8 @@ const css = tw("text-yellow-700");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#8e4b10",
+  "--text-opacity": "1",
+  color: ["#8e4b10", "rgba(142, 75, 16, var(--text-opacity))"],
 };
 
 
@@ -51249,7 +52200,8 @@ const css = tw("text-yellow-800");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#723b13",
+  "--text-opacity": "1",
+  color: ["#723b13", "rgba(114, 59, 19, var(--text-opacity))"],
 };
 
 
@@ -51263,7 +52215,8 @@ const css = tw("text-yellow-900");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  color: "#633112",
+  "--text-opacity": "1",
+  color: ["#633112", "rgba(99, 49, 18, var(--text-opacity))"],
 };
 
 
@@ -55027,6 +55980,34 @@ const css = tw("w-full");
 
 const css = {
   width: "100%",
+};
+
+
+`;
+
+exports[`macros w-max-content: w-max-content 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("w-max-content");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  width: "max-content",
+};
+
+
+`;
+
+exports[`macros w-min-content: w-min-content 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("w-min-content");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  width: "min-content",
 };
 
 

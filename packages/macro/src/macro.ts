@@ -1,27 +1,24 @@
-// https://github.com/knpwrs/ms.macro/blob/master/src/ms.macro.js
-
+import { NodePath, types } from "@babel/core";
 import { createMacro, MacroError, MacroHandler } from "babel-plugin-macros";
-import { resolveTailwindConfig } from "@tailwindcssinjs/tailwindcss-data";
 
 import { tailwindcssInJs } from "./tailwindcssInJs";
 
-const getArgs = (path: any) => {
+const getArgs = (path: NodePath<types.Node>) => {
   if (path.type === "CallExpression") {
-    const args = path
-      .get("arguments")
-      .map((item: any) => item.evaluate().value);
-    return args;
+    const node = path as NodePath<types.CallExpression>;
+    return node.get("arguments").map((item) => item.evaluate().value);
   }
 
   if (path.type === "TaggedTemplateExpression") {
-    const quasi = path.get("quasi");
-
+    const node = path as NodePath<types.TaggedTemplateExpression>;
+    const quasi = node.get("quasi");
     const templateElements = quasi
       .get("quasis")
-      .map((item: any) => item.node.value.raw);
+      .map((item) => item.node.value.raw);
+
     const expressions = quasi
       .get("expressions")
-      .map((item: any) => item.evaluate().value);
+      .map((item) => item.evaluate().value);
     const twClasses = [];
     while (templateElements.length || expressions.length) {
       const twClassString = templateElements.shift();
@@ -35,7 +32,8 @@ const getArgs = (path: any) => {
     }
     return twClasses;
   }
-  return null;
+
+  throw new Error("Invalid Nodepath");
 };
 
 const tailwindcssInJsMacro: MacroHandler = ({
@@ -44,13 +42,11 @@ const tailwindcssInJsMacro: MacroHandler = ({
   babel: { types: t, template },
 }) => {
   try {
-    const tailwindConfig = resolveTailwindConfig();
-
-    const tailwind = tailwindcssInJs(tailwindConfig);
+    const tailwind = tailwindcssInJs();
 
     paths.forEach((referencePath) => {
       const args = getArgs(referencePath.parentPath);
-      const cssObj = tailwind(...args);
+      const cssObj = tailwind(args);
 
       const ast = template.expression(JSON.stringify(cssObj), {
         placeholderPattern: false,
@@ -58,6 +54,7 @@ const tailwindcssInJsMacro: MacroHandler = ({
       referencePath.parentPath.replaceWith(ast);
     });
   } catch (err) {
+    err.message = `@tailwindcssinjs/macro - ${err.message}`;
     throw new MacroError(err);
   }
 };
