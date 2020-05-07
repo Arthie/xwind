@@ -8,11 +8,11 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "bench": "jest --clearCache && yarn run bench-twin && yarn run bench-tailwindcssinjs",
-    "bench-npm": "jest --clearCache && npm run bench-twin && npm run bench-tailwindcssinjs",
-    "bench-tailwindcssinjs": "jest ./bench/tailwindcssinjs.test.js --update-snapshot",
-    "bench-tailwind": "jest ./bench/tailwind.test.js --update-snapshot",
-    "bench-twin": "jest ./bench/twin.test.js --update-snapshot"
+    "test": "jest --clearCache && yarn run test-twin && yarn run test-tailwindcssinjs",
+    "test-npm": "jest --clearCache && npm run test-twin && npm run test-tailwindcssinjs",
+    "test-tailwindcssinjs": "jest ./tests/tailwindcssinjs.test.js --update-snapshot",
+    "test-tailwind": "jest ./tests/tailwind.test.js --update-snapshot",
+    "test-twin": "jest ./tests/twin.test.js --update-snapshot"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
