@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`macros align-text-bottom=: align-text-bottom= 1`] = `
+exports[`macros align-text-bottom =: align-text-bottom = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`align-text-bottom\`;
@@ -14,7 +14,7 @@ const css = {
 
 `;
 
-exports[`macros align-text-top=: align-text-top= 1`] = `
+exports[`macros align-text-top =: align-text-top = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`align-text-top\`;
@@ -28,7 +28,7 @@ const css = {
 
 `;
 
-exports[`macros cursor-text=: cursor-text= 1`] = `
+exports[`macros cursor-text =: cursor-text = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`cursor-text\`;
@@ -2058,7 +2058,7 @@ const css = {
 
 `;
 
-exports[`macros select-text=: select-text= 1`] = `
+exports[`macros select-text =: select-text = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`select-text\`;
@@ -2072,7 +2072,7 @@ const css = {
 
 `;
 
-exports[`macros text-2xl=: text-2xl= 1`] = `
+exports[`macros text-2xl =: text-2xl = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-2xl\`;
@@ -2086,7 +2086,7 @@ const css = {
 
 `;
 
-exports[`macros text-3xl=: text-3xl= 1`] = `
+exports[`macros text-3xl =: text-3xl = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-3xl\`;
@@ -2100,7 +2100,7 @@ const css = {
 
 `;
 
-exports[`macros text-4xl=: text-4xl= 1`] = `
+exports[`macros text-4xl =: text-4xl = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-4xl\`;
@@ -2114,7 +2114,7 @@ const css = {
 
 `;
 
-exports[`macros text-5xl=: text-5xl= 1`] = `
+exports[`macros text-5xl =: text-5xl = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-5xl\`;
@@ -2128,7 +2128,7 @@ const css = {
 
 `;
 
-exports[`macros text-6xl=: text-6xl= 1`] = `
+exports[`macros text-6xl =: text-6xl = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-6xl\`;
@@ -2142,7 +2142,7 @@ const css = {
 
 `;
 
-exports[`macros text-base=: text-base= 1`] = `
+exports[`macros text-base =: text-base = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-base\`;
@@ -2156,7 +2156,7 @@ const css = {
 
 `;
 
-exports[`macros text-black=: text-black= 1`] = `
+exports[`macros text-black =: text-black = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-black\`;
@@ -2170,7 +2170,7 @@ const css = {
 
 `;
 
-exports[`macros text-blue-100=: text-blue-100= 1`] = `
+exports[`macros text-blue-100 =: text-blue-100 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-blue-100\`;
@@ -2184,7 +2184,7 @@ const css = {
 
 `;
 
-exports[`macros text-blue-200=: text-blue-200= 1`] = `
+exports[`macros text-blue-200 =: text-blue-200 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-blue-200\`;
@@ -2198,7 +2198,7 @@ const css = {
 
 `;
 
-exports[`macros text-blue-300=: text-blue-300= 1`] = `
+exports[`macros text-blue-300 =: text-blue-300 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-blue-300\`;
@@ -2212,7 +2212,7 @@ const css = {
 
 `;
 
-exports[`macros text-blue-400=: text-blue-400= 1`] = `
+exports[`macros text-blue-400 =: text-blue-400 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-blue-400\`;
@@ -2226,7 +2226,7 @@ const css = {
 
 `;
 
-exports[`macros text-blue-500=: text-blue-500= 1`] = `
+exports[`macros text-blue-500 =: text-blue-500 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-blue-500\`;
@@ -2240,7 +2240,7 @@ const css = {
 
 `;
 
-exports[`macros text-blue-600=: text-blue-600= 1`] = `
+exports[`macros text-blue-600 =: text-blue-600 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-blue-600\`;
@@ -2254,7 +2254,7 @@ const css = {
 
 `;
 
-exports[`macros text-blue-700=: text-blue-700= 1`] = `
+exports[`macros text-blue-700 =: text-blue-700 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-blue-700\`;
@@ -2268,7 +2268,7 @@ const css = {
 
 `;
 
-exports[`macros text-blue-800=: text-blue-800= 1`] = `
+exports[`macros text-blue-800 =: text-blue-800 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-blue-800\`;
@@ -2282,7 +2282,7 @@ const css = {
 
 `;
 
-exports[`macros text-blue-900=: text-blue-900= 1`] = `
+exports[`macros text-blue-900 =: text-blue-900 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-blue-900\`;
@@ -2296,7 +2296,7 @@ const css = {
 
 `;
 
-exports[`macros text-center=: text-center= 1`] = `
+exports[`macros text-center =: text-center = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-center\`;
@@ -2310,7 +2310,7 @@ const css = {
 
 `;
 
-exports[`macros text-current=: text-current= 1`] = `
+exports[`macros text-current =: text-current = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-current\`;
@@ -2324,7 +2324,7 @@ const css = {
 
 `;
 
-exports[`macros text-gray-100=: text-gray-100= 1`] = `
+exports[`macros text-gray-100 =: text-gray-100 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-gray-100\`;
@@ -2338,7 +2338,7 @@ const css = {
 
 `;
 
-exports[`macros text-gray-200=: text-gray-200= 1`] = `
+exports[`macros text-gray-200 =: text-gray-200 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-gray-200\`;
@@ -2352,7 +2352,7 @@ const css = {
 
 `;
 
-exports[`macros text-gray-300=: text-gray-300= 1`] = `
+exports[`macros text-gray-300 =: text-gray-300 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-gray-300\`;
@@ -2366,7 +2366,7 @@ const css = {
 
 `;
 
-exports[`macros text-gray-400=: text-gray-400= 1`] = `
+exports[`macros text-gray-400 =: text-gray-400 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-gray-400\`;
@@ -2380,7 +2380,7 @@ const css = {
 
 `;
 
-exports[`macros text-gray-500=: text-gray-500= 1`] = `
+exports[`macros text-gray-500 =: text-gray-500 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-gray-500\`;
@@ -2394,7 +2394,7 @@ const css = {
 
 `;
 
-exports[`macros text-gray-600=: text-gray-600= 1`] = `
+exports[`macros text-gray-600 =: text-gray-600 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-gray-600\`;
@@ -2408,7 +2408,7 @@ const css = {
 
 `;
 
-exports[`macros text-gray-700=: text-gray-700= 1`] = `
+exports[`macros text-gray-700 =: text-gray-700 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-gray-700\`;
@@ -2422,7 +2422,7 @@ const css = {
 
 `;
 
-exports[`macros text-gray-800=: text-gray-800= 1`] = `
+exports[`macros text-gray-800 =: text-gray-800 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-gray-800\`;
@@ -2436,7 +2436,7 @@ const css = {
 
 `;
 
-exports[`macros text-gray-900=: text-gray-900= 1`] = `
+exports[`macros text-gray-900 =: text-gray-900 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-gray-900\`;
@@ -2450,7 +2450,7 @@ const css = {
 
 `;
 
-exports[`macros text-green-100=: text-green-100= 1`] = `
+exports[`macros text-green-100 =: text-green-100 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-green-100\`;
@@ -2464,7 +2464,7 @@ const css = {
 
 `;
 
-exports[`macros text-green-200=: text-green-200= 1`] = `
+exports[`macros text-green-200 =: text-green-200 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-green-200\`;
@@ -2478,7 +2478,7 @@ const css = {
 
 `;
 
-exports[`macros text-green-300=: text-green-300= 1`] = `
+exports[`macros text-green-300 =: text-green-300 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-green-300\`;
@@ -2492,7 +2492,7 @@ const css = {
 
 `;
 
-exports[`macros text-green-400=: text-green-400= 1`] = `
+exports[`macros text-green-400 =: text-green-400 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-green-400\`;
@@ -2506,7 +2506,7 @@ const css = {
 
 `;
 
-exports[`macros text-green-500=: text-green-500= 1`] = `
+exports[`macros text-green-500 =: text-green-500 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-green-500\`;
@@ -2520,7 +2520,7 @@ const css = {
 
 `;
 
-exports[`macros text-green-600=: text-green-600= 1`] = `
+exports[`macros text-green-600 =: text-green-600 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-green-600\`;
@@ -2534,7 +2534,7 @@ const css = {
 
 `;
 
-exports[`macros text-green-700=: text-green-700= 1`] = `
+exports[`macros text-green-700 =: text-green-700 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-green-700\`;
@@ -2548,7 +2548,7 @@ const css = {
 
 `;
 
-exports[`macros text-green-800=: text-green-800= 1`] = `
+exports[`macros text-green-800 =: text-green-800 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-green-800\`;
@@ -2562,7 +2562,7 @@ const css = {
 
 `;
 
-exports[`macros text-green-900=: text-green-900= 1`] = `
+exports[`macros text-green-900 =: text-green-900 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-green-900\`;
@@ -2576,7 +2576,7 @@ const css = {
 
 `;
 
-exports[`macros text-indigo-100=: text-indigo-100= 1`] = `
+exports[`macros text-indigo-100 =: text-indigo-100 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-indigo-100\`;
@@ -2590,7 +2590,7 @@ const css = {
 
 `;
 
-exports[`macros text-indigo-200=: text-indigo-200= 1`] = `
+exports[`macros text-indigo-200 =: text-indigo-200 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-indigo-200\`;
@@ -2604,7 +2604,7 @@ const css = {
 
 `;
 
-exports[`macros text-indigo-300=: text-indigo-300= 1`] = `
+exports[`macros text-indigo-300 =: text-indigo-300 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-indigo-300\`;
@@ -2618,7 +2618,7 @@ const css = {
 
 `;
 
-exports[`macros text-indigo-400=: text-indigo-400= 1`] = `
+exports[`macros text-indigo-400 =: text-indigo-400 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-indigo-400\`;
@@ -2632,7 +2632,7 @@ const css = {
 
 `;
 
-exports[`macros text-indigo-500=: text-indigo-500= 1`] = `
+exports[`macros text-indigo-500 =: text-indigo-500 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-indigo-500\`;
@@ -2646,7 +2646,7 @@ const css = {
 
 `;
 
-exports[`macros text-indigo-600=: text-indigo-600= 1`] = `
+exports[`macros text-indigo-600 =: text-indigo-600 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-indigo-600\`;
@@ -2660,7 +2660,7 @@ const css = {
 
 `;
 
-exports[`macros text-indigo-700=: text-indigo-700= 1`] = `
+exports[`macros text-indigo-700 =: text-indigo-700 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-indigo-700\`;
@@ -2674,7 +2674,7 @@ const css = {
 
 `;
 
-exports[`macros text-indigo-800=: text-indigo-800= 1`] = `
+exports[`macros text-indigo-800 =: text-indigo-800 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-indigo-800\`;
@@ -2688,7 +2688,7 @@ const css = {
 
 `;
 
-exports[`macros text-indigo-900=: text-indigo-900= 1`] = `
+exports[`macros text-indigo-900 =: text-indigo-900 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-indigo-900\`;
@@ -2702,7 +2702,7 @@ const css = {
 
 `;
 
-exports[`macros text-justify=: text-justify= 1`] = `
+exports[`macros text-justify =: text-justify = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-justify\`;
@@ -2716,7 +2716,7 @@ const css = {
 
 `;
 
-exports[`macros text-left=: text-left= 1`] = `
+exports[`macros text-left =: text-left = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-left\`;
@@ -2730,7 +2730,7 @@ const css = {
 
 `;
 
-exports[`macros text-lg=: text-lg= 1`] = `
+exports[`macros text-lg =: text-lg = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-lg\`;
@@ -2744,7 +2744,7 @@ const css = {
 
 `;
 
-exports[`macros text-orange-100=: text-orange-100= 1`] = `
+exports[`macros text-orange-100 =: text-orange-100 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-orange-100\`;
@@ -2758,7 +2758,7 @@ const css = {
 
 `;
 
-exports[`macros text-orange-200=: text-orange-200= 1`] = `
+exports[`macros text-orange-200 =: text-orange-200 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-orange-200\`;
@@ -2772,7 +2772,7 @@ const css = {
 
 `;
 
-exports[`macros text-orange-300=: text-orange-300= 1`] = `
+exports[`macros text-orange-300 =: text-orange-300 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-orange-300\`;
@@ -2786,7 +2786,7 @@ const css = {
 
 `;
 
-exports[`macros text-orange-400=: text-orange-400= 1`] = `
+exports[`macros text-orange-400 =: text-orange-400 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-orange-400\`;
@@ -2800,7 +2800,7 @@ const css = {
 
 `;
 
-exports[`macros text-orange-500=: text-orange-500= 1`] = `
+exports[`macros text-orange-500 =: text-orange-500 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-orange-500\`;
@@ -2814,7 +2814,7 @@ const css = {
 
 `;
 
-exports[`macros text-orange-600=: text-orange-600= 1`] = `
+exports[`macros text-orange-600 =: text-orange-600 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-orange-600\`;
@@ -2828,7 +2828,7 @@ const css = {
 
 `;
 
-exports[`macros text-orange-700=: text-orange-700= 1`] = `
+exports[`macros text-orange-700 =: text-orange-700 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-orange-700\`;
@@ -2842,7 +2842,7 @@ const css = {
 
 `;
 
-exports[`macros text-orange-800=: text-orange-800= 1`] = `
+exports[`macros text-orange-800 =: text-orange-800 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-orange-800\`;
@@ -2856,7 +2856,7 @@ const css = {
 
 `;
 
-exports[`macros text-orange-900=: text-orange-900= 1`] = `
+exports[`macros text-orange-900 =: text-orange-900 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-orange-900\`;
@@ -2870,7 +2870,7 @@ const css = {
 
 `;
 
-exports[`macros text-pink-100=: text-pink-100= 1`] = `
+exports[`macros text-pink-100 =: text-pink-100 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-pink-100\`;
@@ -2884,7 +2884,7 @@ const css = {
 
 `;
 
-exports[`macros text-pink-200=: text-pink-200= 1`] = `
+exports[`macros text-pink-200 =: text-pink-200 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-pink-200\`;
@@ -2898,7 +2898,7 @@ const css = {
 
 `;
 
-exports[`macros text-pink-300=: text-pink-300= 1`] = `
+exports[`macros text-pink-300 =: text-pink-300 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-pink-300\`;
@@ -2912,7 +2912,7 @@ const css = {
 
 `;
 
-exports[`macros text-pink-400=: text-pink-400= 1`] = `
+exports[`macros text-pink-400 =: text-pink-400 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-pink-400\`;
@@ -2926,7 +2926,7 @@ const css = {
 
 `;
 
-exports[`macros text-pink-500=: text-pink-500= 1`] = `
+exports[`macros text-pink-500 =: text-pink-500 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-pink-500\`;
@@ -2940,7 +2940,7 @@ const css = {
 
 `;
 
-exports[`macros text-pink-600=: text-pink-600= 1`] = `
+exports[`macros text-pink-600 =: text-pink-600 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-pink-600\`;
@@ -2954,7 +2954,7 @@ const css = {
 
 `;
 
-exports[`macros text-pink-700=: text-pink-700= 1`] = `
+exports[`macros text-pink-700 =: text-pink-700 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-pink-700\`;
@@ -2968,7 +2968,7 @@ const css = {
 
 `;
 
-exports[`macros text-pink-800=: text-pink-800= 1`] = `
+exports[`macros text-pink-800 =: text-pink-800 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-pink-800\`;
@@ -2982,7 +2982,7 @@ const css = {
 
 `;
 
-exports[`macros text-pink-900=: text-pink-900= 1`] = `
+exports[`macros text-pink-900 =: text-pink-900 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-pink-900\`;
@@ -2996,7 +2996,7 @@ const css = {
 
 `;
 
-exports[`macros text-purple-100=: text-purple-100= 1`] = `
+exports[`macros text-purple-100 =: text-purple-100 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-purple-100\`;
@@ -3010,7 +3010,7 @@ const css = {
 
 `;
 
-exports[`macros text-purple-200=: text-purple-200= 1`] = `
+exports[`macros text-purple-200 =: text-purple-200 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-purple-200\`;
@@ -3024,7 +3024,7 @@ const css = {
 
 `;
 
-exports[`macros text-purple-300=: text-purple-300= 1`] = `
+exports[`macros text-purple-300 =: text-purple-300 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-purple-300\`;
@@ -3038,7 +3038,7 @@ const css = {
 
 `;
 
-exports[`macros text-purple-400=: text-purple-400= 1`] = `
+exports[`macros text-purple-400 =: text-purple-400 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-purple-400\`;
@@ -3052,7 +3052,7 @@ const css = {
 
 `;
 
-exports[`macros text-purple-500=: text-purple-500= 1`] = `
+exports[`macros text-purple-500 =: text-purple-500 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-purple-500\`;
@@ -3066,7 +3066,7 @@ const css = {
 
 `;
 
-exports[`macros text-purple-600=: text-purple-600= 1`] = `
+exports[`macros text-purple-600 =: text-purple-600 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-purple-600\`;
@@ -3080,7 +3080,7 @@ const css = {
 
 `;
 
-exports[`macros text-purple-700=: text-purple-700= 1`] = `
+exports[`macros text-purple-700 =: text-purple-700 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-purple-700\`;
@@ -3094,7 +3094,7 @@ const css = {
 
 `;
 
-exports[`macros text-purple-800=: text-purple-800= 1`] = `
+exports[`macros text-purple-800 =: text-purple-800 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-purple-800\`;
@@ -3108,7 +3108,7 @@ const css = {
 
 `;
 
-exports[`macros text-purple-900=: text-purple-900= 1`] = `
+exports[`macros text-purple-900 =: text-purple-900 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-purple-900\`;
@@ -3122,7 +3122,7 @@ const css = {
 
 `;
 
-exports[`macros text-red-100=: text-red-100= 1`] = `
+exports[`macros text-red-100 =: text-red-100 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-red-100\`;
@@ -3136,7 +3136,7 @@ const css = {
 
 `;
 
-exports[`macros text-red-200=: text-red-200= 1`] = `
+exports[`macros text-red-200 =: text-red-200 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-red-200\`;
@@ -3150,7 +3150,7 @@ const css = {
 
 `;
 
-exports[`macros text-red-300=: text-red-300= 1`] = `
+exports[`macros text-red-300 =: text-red-300 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-red-300\`;
@@ -3164,7 +3164,7 @@ const css = {
 
 `;
 
-exports[`macros text-red-400=: text-red-400= 1`] = `
+exports[`macros text-red-400 =: text-red-400 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-red-400\`;
@@ -3178,7 +3178,7 @@ const css = {
 
 `;
 
-exports[`macros text-red-500=: text-red-500= 1`] = `
+exports[`macros text-red-500 =: text-red-500 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-red-500\`;
@@ -3192,7 +3192,7 @@ const css = {
 
 `;
 
-exports[`macros text-red-600=: text-red-600= 1`] = `
+exports[`macros text-red-600 =: text-red-600 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-red-600\`;
@@ -3206,7 +3206,7 @@ const css = {
 
 `;
 
-exports[`macros text-red-700=: text-red-700= 1`] = `
+exports[`macros text-red-700 =: text-red-700 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-red-700\`;
@@ -3220,7 +3220,7 @@ const css = {
 
 `;
 
-exports[`macros text-red-800=: text-red-800= 1`] = `
+exports[`macros text-red-800 =: text-red-800 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-red-800\`;
@@ -3234,7 +3234,7 @@ const css = {
 
 `;
 
-exports[`macros text-red-900=: text-red-900= 1`] = `
+exports[`macros text-red-900 =: text-red-900 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-red-900\`;
@@ -3248,7 +3248,7 @@ const css = {
 
 `;
 
-exports[`macros text-right=: text-right= 1`] = `
+exports[`macros text-right =: text-right = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-right\`;
@@ -3262,7 +3262,7 @@ const css = {
 
 `;
 
-exports[`macros text-sm=: text-sm= 1`] = `
+exports[`macros text-sm =: text-sm = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-sm\`;
@@ -3276,7 +3276,7 @@ const css = {
 
 `;
 
-exports[`macros text-teal-100=: text-teal-100= 1`] = `
+exports[`macros text-teal-100 =: text-teal-100 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-teal-100\`;
@@ -3290,7 +3290,7 @@ const css = {
 
 `;
 
-exports[`macros text-teal-200=: text-teal-200= 1`] = `
+exports[`macros text-teal-200 =: text-teal-200 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-teal-200\`;
@@ -3304,7 +3304,7 @@ const css = {
 
 `;
 
-exports[`macros text-teal-300=: text-teal-300= 1`] = `
+exports[`macros text-teal-300 =: text-teal-300 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-teal-300\`;
@@ -3318,7 +3318,7 @@ const css = {
 
 `;
 
-exports[`macros text-teal-400=: text-teal-400= 1`] = `
+exports[`macros text-teal-400 =: text-teal-400 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-teal-400\`;
@@ -3332,7 +3332,7 @@ const css = {
 
 `;
 
-exports[`macros text-teal-500=: text-teal-500= 1`] = `
+exports[`macros text-teal-500 =: text-teal-500 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-teal-500\`;
@@ -3346,7 +3346,7 @@ const css = {
 
 `;
 
-exports[`macros text-teal-600=: text-teal-600= 1`] = `
+exports[`macros text-teal-600 =: text-teal-600 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-teal-600\`;
@@ -3360,7 +3360,7 @@ const css = {
 
 `;
 
-exports[`macros text-teal-700=: text-teal-700= 1`] = `
+exports[`macros text-teal-700 =: text-teal-700 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-teal-700\`;
@@ -3374,7 +3374,7 @@ const css = {
 
 `;
 
-exports[`macros text-teal-800=: text-teal-800= 1`] = `
+exports[`macros text-teal-800 =: text-teal-800 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-teal-800\`;
@@ -3388,7 +3388,7 @@ const css = {
 
 `;
 
-exports[`macros text-teal-900=: text-teal-900= 1`] = `
+exports[`macros text-teal-900 =: text-teal-900 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-teal-900\`;
@@ -3402,7 +3402,7 @@ const css = {
 
 `;
 
-exports[`macros text-transparent=: text-transparent= 1`] = `
+exports[`macros text-transparent =: text-transparent = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-transparent\`;
@@ -3416,7 +3416,7 @@ const css = {
 
 `;
 
-exports[`macros text-white=: text-white= 1`] = `
+exports[`macros text-white =: text-white = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-white\`;
@@ -3430,7 +3430,7 @@ const css = {
 
 `;
 
-exports[`macros text-xl=: text-xl= 1`] = `
+exports[`macros text-xl =: text-xl = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-xl\`;
@@ -3444,7 +3444,7 @@ const css = {
 
 `;
 
-exports[`macros text-xs=: text-xs= 1`] = `
+exports[`macros text-xs =: text-xs = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-xs\`;
@@ -3458,7 +3458,7 @@ const css = {
 
 `;
 
-exports[`macros text-yellow-100=: text-yellow-100= 1`] = `
+exports[`macros text-yellow-100 =: text-yellow-100 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-yellow-100\`;
@@ -3472,7 +3472,7 @@ const css = {
 
 `;
 
-exports[`macros text-yellow-200=: text-yellow-200= 1`] = `
+exports[`macros text-yellow-200 =: text-yellow-200 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-yellow-200\`;
@@ -3486,7 +3486,7 @@ const css = {
 
 `;
 
-exports[`macros text-yellow-300=: text-yellow-300= 1`] = `
+exports[`macros text-yellow-300 =: text-yellow-300 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-yellow-300\`;
@@ -3500,7 +3500,7 @@ const css = {
 
 `;
 
-exports[`macros text-yellow-400=: text-yellow-400= 1`] = `
+exports[`macros text-yellow-400 =: text-yellow-400 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-yellow-400\`;
@@ -3514,7 +3514,7 @@ const css = {
 
 `;
 
-exports[`macros text-yellow-500=: text-yellow-500= 1`] = `
+exports[`macros text-yellow-500 =: text-yellow-500 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-yellow-500\`;
@@ -3528,7 +3528,7 @@ const css = {
 
 `;
 
-exports[`macros text-yellow-600=: text-yellow-600= 1`] = `
+exports[`macros text-yellow-600 =: text-yellow-600 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-yellow-600\`;
@@ -3542,7 +3542,7 @@ const css = {
 
 `;
 
-exports[`macros text-yellow-700=: text-yellow-700= 1`] = `
+exports[`macros text-yellow-700 =: text-yellow-700 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-yellow-700\`;
@@ -3556,7 +3556,7 @@ const css = {
 
 `;
 
-exports[`macros text-yellow-800=: text-yellow-800= 1`] = `
+exports[`macros text-yellow-800 =: text-yellow-800 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-yellow-800\`;
@@ -3570,7 +3570,7 @@ const css = {
 
 `;
 
-exports[`macros text-yellow-900=: text-yellow-900= 1`] = `
+exports[`macros text-yellow-900 =: text-yellow-900 = 1`] = `
 
 import tw from 'twin.macro';
 const css = tw\`text-yellow-900\`;

@@ -39,7 +39,7 @@ const tailwindcssInJs = (macroImport) => {
       ) {
         classes.push(key, `md:hover:${key}`);
         tests.push([
-          `${key}=`,
+          `${key} =`,
           {
             code: `
       import tw from '${macroImport}';
