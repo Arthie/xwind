@@ -55,7 +55,6 @@ with css-in-js libraries.
 - New syntax to apply variants to multiple utility classes
 - Supports Tailwind plugins (e.g. tailwind-ui, custom-forms)
 - No runtime impact all transformations happen during build time
-- Hot reloading: changes in `tailwind.config.js` go in effect next time dev server recompiles
 
 ## Usage
 
