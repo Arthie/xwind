@@ -40,7 +40,7 @@ const tailwindcssInJsMacro: MacroHandler = ({
   references: { default: paths },
   state,
   babel: { types: t, template },
-  config
+  config,
 }) => {
   try {
     const tailwind = tailwindcssInJs(config);
