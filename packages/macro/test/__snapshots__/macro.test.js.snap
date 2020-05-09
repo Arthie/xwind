@@ -137,6 +137,196 @@ const css = {
 
 `;
 
+exports[`macros correct usage 3: correct usage 3 1`] = `
+
+import tw from '../lib/macro';
+const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+const css2 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+const css3 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+const css4 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+const css5 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+const css6 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--bg-opacity": "1",
+  "--transform-scale-x": "0",
+  "--transform-scale-y": "0",
+  width: "50%",
+  backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+  "&:active": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#f8b4b4", "rgba(248, 180, 180, var(--bg-opacity))"],
+  },
+  "&:focus": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1024px)": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1280px)": {
+    "--text-opacity": "1",
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
+      "--bg-opacity": "1",
+      backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+    },
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
+  },
+};
+const css2 = {
+  "--bg-opacity": "1",
+  "--transform-scale-x": "0",
+  "--transform-scale-y": "0",
+  width: "50%",
+  backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+  "&:active": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#f8b4b4", "rgba(248, 180, 180, var(--bg-opacity))"],
+  },
+  "&:focus": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1024px)": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1280px)": {
+    "--text-opacity": "1",
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
+      "--bg-opacity": "1",
+      backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+    },
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
+  },
+};
+const css3 = {
+  "--bg-opacity": "1",
+  "--transform-scale-x": "0",
+  "--transform-scale-y": "0",
+  width: "50%",
+  backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+  "&:active": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#f8b4b4", "rgba(248, 180, 180, var(--bg-opacity))"],
+  },
+  "&:focus": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1024px)": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1280px)": {
+    "--text-opacity": "1",
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
+      "--bg-opacity": "1",
+      backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+    },
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
+  },
+};
+const css4 = {
+  "--bg-opacity": "1",
+  "--transform-scale-x": "0",
+  "--transform-scale-y": "0",
+  width: "50%",
+  backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+  "&:active": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#f8b4b4", "rgba(248, 180, 180, var(--bg-opacity))"],
+  },
+  "&:focus": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1024px)": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1280px)": {
+    "--text-opacity": "1",
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
+      "--bg-opacity": "1",
+      backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+    },
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
+  },
+};
+const css5 = {
+  "--bg-opacity": "1",
+  "--transform-scale-x": "0",
+  "--transform-scale-y": "0",
+  width: "50%",
+  backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+  "&:active": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#f8b4b4", "rgba(248, 180, 180, var(--bg-opacity))"],
+  },
+  "&:focus": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1024px)": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1280px)": {
+    "--text-opacity": "1",
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
+      "--bg-opacity": "1",
+      backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+    },
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
+  },
+};
+const css6 = {
+  "--bg-opacity": "1",
+  "--transform-scale-x": "0",
+  "--transform-scale-y": "0",
+  width: "50%",
+  backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+  "&:active": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#f8b4b4", "rgba(248, 180, 180, var(--bg-opacity))"],
+  },
+  "&:focus": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1024px)": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#84e1bc", "rgba(132, 225, 188, var(--bg-opacity))"],
+  },
+  "@media (min-width: 1280px)": {
+    "--text-opacity": "1",
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
+      "--bg-opacity": "1",
+      backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
+    },
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
+  },
+};
+
+
+`;
+
 exports[`macros correct usage tagged: correct usage tagged 1`] = `
 
 import tw from '../lib/macro';
