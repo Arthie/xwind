@@ -21,10 +21,10 @@ let configCache = Buffer.from("");
 let tailwind: (args: TwClasses[]) => any;
 let configPath: string | undefined;
 
-export const tailwindcssInJs = () => {
+export const tailwindcssInJs = (config: { configFilePath: string }) => {
   //check for config
   try {
-    configPath = resolveTailwindConfigPath();
+    configPath = resolveTailwindConfigPath(config.configFilePath);
   } catch (err) {
     configPath = undefined;
   }

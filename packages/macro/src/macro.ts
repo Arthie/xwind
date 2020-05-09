@@ -40,9 +40,10 @@ const tailwindcssInJsMacro: MacroHandler = ({
   references: { default: paths },
   state,
   babel: { types: t, template },
+  config
 }) => {
   try {
-    const tailwind = tailwindcssInJs();
+    const tailwind = tailwindcssInJs(config);
 
     paths.forEach((referencePath) => {
       const args = getArgs(referencePath.parentPath);
