@@ -48,8 +48,8 @@ function getArgs(path: NodePath<types.Node>) {
 
 interface TailwindcssinjsMacroParams extends MacroParams {
   config?: {
-    config: string;
-    experimentalDevelopmentMode: boolean;
+    config?: string;
+    experimentalDevelopmentMode?: boolean;
   };
 }
 
@@ -57,11 +57,12 @@ function tailwindcssinjsMacro({
   references: { default: paths },
   state,
   babel: { types: t, template },
-  config = {
-    config: "./tailwind.config.js",
-    experimentalDevelopmentMode: false,
-  },
+  config = {},
 }: TailwindcssinjsMacroParams) {
+  config.config = config.config ?? "./tailwind.config.js";
+  config.experimentalDevelopmentMode =
+    config.experimentalDevelopmentMode ?? false;
+
   try {
     state.dev =
       process.env.NODE_ENV === "development" &&
