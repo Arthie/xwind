@@ -80,9 +80,6 @@ function tailwindcssinjsMacro({
     } catch (err) {
       //Check if tailwindconfig has been assigned so it logs only once
       if (!state.noTailwindConfig) {
-        console.log(
-          "@tailwindcssinjs/macro - No tailwindconfig found using default"
-        );
         state.noTailwindConfig = true;
       }
       state.tailwindConfig = requireTailwindConfig(); //returns default config
