@@ -39,7 +39,9 @@ function tailwindcssinjs(config, corePlugins) {
 }
 
 const tests = () => {
-  const tailwindConfigPath = tailwindcssConfig_1.resolveTailwindConfigPath();
+  const tailwindConfigPath = tailwindcssConfig_1.resolveTailwindConfigPath(
+    "./tailwind.config.js"
+  );
   const tailwindConfig = tailwindcssConfig_1.requireTailwindConfig(
     tailwindConfigPath
   );
