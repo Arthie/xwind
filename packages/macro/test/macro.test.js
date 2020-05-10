@@ -29,7 +29,7 @@ pluginTester.default({
       import tw from '../lib/macro';
       const css = tw\`md2[text-red-200] bg-red-300\`;
     `,
-    "components": `
+    components: `
       import tw from '../lib/macro';
       const css = tw\`container form-input\`
     `,
@@ -56,6 +56,15 @@ pluginTester.default({
     "version 1.3.X test 2": `
       import tw from '../lib/macro';
       const css = tw\`group-focus:text-red-100 md:delay-1000 md:space-y-4 md:space-x-2 md:divide-x md:divide-y md:divide-blue-500 md:space-x-reverse\`
+      `,
+    "correct usage 3": `
+      import tw from '../lib/macro';
+      const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+      const css2 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+      const css3 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+      const css4 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+      const css5 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+      const css6 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
       `,
   },
 });
