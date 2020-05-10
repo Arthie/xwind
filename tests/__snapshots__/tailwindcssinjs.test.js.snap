@@ -60,78 +60,6 @@ const css = {
 
 `;
 
-exports[`macros md:hover:text-3xl             : md:hover:text-3xl              1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`md:hover:text-3xl\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "@media (min-width: 768px)": {
-    "&:hover": {
-      fontSize: "1.875rem",
-    },
-  },
-};
-
-
-`;
-
-exports[`macros md:hover:text-4xl             : md:hover:text-4xl              1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`md:hover:text-4xl\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "@media (min-width: 768px)": {
-    "&:hover": {
-      fontSize: "2.25rem",
-    },
-  },
-};
-
-
-`;
-
-exports[`macros md:hover:text-5xl             : md:hover:text-5xl              1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`md:hover:text-5xl\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "@media (min-width: 768px)": {
-    "&:hover": {
-      fontSize: "3rem",
-    },
-  },
-};
-
-
-`;
-
-exports[`macros md:hover:text-6xl             : md:hover:text-6xl              1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`md:hover:text-6xl\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "@media (min-width: 768px)": {
-    "&:hover": {
-      fontSize: "4rem",
-    },
-  },
-};
-
-
-`;
-
 exports[`macros md:hover:text-base            : md:hover:text-base             1`] = `
 
 import tw from '@tailwindcssinjs/macro';
@@ -150,60 +78,6 @@ const css = {
 
 `;
 
-exports[`macros md:hover:text-center          : md:hover:text-center           1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`md:hover:text-center\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "@media (min-width: 768px)": {
-    "&:hover": {
-      textAlign: "center",
-    },
-  },
-};
-
-
-`;
-
-exports[`macros md:hover:text-justify         : md:hover:text-justify          1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`md:hover:text-justify\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "@media (min-width: 768px)": {
-    "&:hover": {
-      textAlign: "justify",
-    },
-  },
-};
-
-
-`;
-
-exports[`macros md:hover:text-left            : md:hover:text-left             1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`md:hover:text-left\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "@media (min-width: 768px)": {
-    "&:hover": {
-      textAlign: "left",
-    },
-  },
-};
-
-
-`;
-
 exports[`macros md:hover:text-lg              : md:hover:text-lg               1`] = `
 
 import tw from '@tailwindcssinjs/macro';
@@ -215,24 +89,6 @@ const css = {
   "@media (min-width: 768px)": {
     "&:hover": {
       fontSize: "1.125rem",
-    },
-  },
-};
-
-
-`;
-
-exports[`macros md:hover:text-right           : md:hover:text-right            1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`md:hover:text-right\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "@media (min-width: 768px)": {
-    "&:hover": {
-      textAlign: "right",
     },
   },
 };
@@ -287,6 +143,124 @@ const css = {
   "@media (min-width: 768px)": {
     "&:hover": {
       fontSize: "0.75rem",
+    },
+  },
+};
+
+
+`;
+
+exports[`macros multiple transforms 20 classes: multiple transforms 20 classes 1`] = `
+
+import tw from '@tailwindcssinjs/macro';
+const css1 = tw\`cursor-text md:hover:cursor-text text-xs md:hover:text-xs text-sm md:hover:text-sm text-base md:hover:text-base text-lg md:hover:text-lg text-xl md:hover:text-xl text-2xl md:hover:text-2xl text-3xl md:hover:text-3xl text-4xl md:hover:text-4xl text-5xl md:hover:text-5xl\`;
+const css2 = tw\`md:hover:text-sm text-base md:hover:text-base text-lg md:hover:text-lg text-xl md:hover:text-xl text-2xl md:hover:text-2xl text-3xl md:hover:text-3xl text-4xl md:hover:text-4xl text-5xl md:hover:text-5xl text-6xl md:hover:text-6xl text-left md:hover:text-left text-center\`;
+const css3 = tw\`text-xl md:hover:text-xl text-2xl md:hover:text-2xl text-3xl md:hover:text-3xl text-4xl md:hover:text-4xl text-5xl md:hover:text-5xl text-6xl md:hover:text-6xl text-left md:hover:text-left text-center md:hover:text-center text-right md:hover:text-right text-justify md:hover:text-justify\`;
+const css4 = tw\`md:hover:text-3xl text-4xl md:hover:text-4xl text-5xl md:hover:text-5xl text-6xl md:hover:text-6xl text-left md:hover:text-left text-center md:hover:text-center text-right md:hover:text-right text-justify md:hover:text-justify text-transparent md:hover:text-transparent text-current md:hover:text-current text-black\`;
+const css5 = tw\`text-6xl md:hover:text-6xl text-left md:hover:text-left text-center md:hover:text-center text-right md:hover:text-right text-justify md:hover:text-justify text-transparent md:hover:text-transparent text-current md:hover:text-current text-black md:hover:text-black text-white md:hover:text-white text-gray-100 md:hover:text-gray-100\`;
+const css6 = tw\`md:hover:text-center text-right md:hover:text-right text-justify md:hover:text-justify text-transparent md:hover:text-transparent text-current md:hover:text-current text-black md:hover:text-black text-white md:hover:text-white text-gray-100 md:hover:text-gray-100 text-gray-200 md:hover:text-gray-200 text-gray-300 md:hover:text-gray-300 text-gray-400\`;
+const css7 = tw\`text-transparent md:hover:text-transparent text-current md:hover:text-current text-black md:hover:text-black text-white md:hover:text-white text-gray-100 md:hover:text-gray-100 text-gray-200 md:hover:text-gray-200 text-gray-300 md:hover:text-gray-300 text-gray-400 md:hover:text-gray-400 text-gray-500 md:hover:text-gray-500 text-gray-600 md:hover:text-gray-600\`;
+const css8 = tw\`md:hover:text-black text-white md:hover:text-white text-gray-100 md:hover:text-gray-100 text-gray-200 md:hover:text-gray-200 text-gray-300 md:hover:text-gray-300 text-gray-400 md:hover:text-gray-400 text-gray-500 md:hover:text-gray-500 text-gray-600 md:hover:text-gray-600 text-gray-700 md:hover:text-gray-700 text-gray-800 md:hover:text-gray-800 text-gray-900\`;
+const css9 = tw\`text-gray-200 md:hover:text-gray-200 text-gray-300 md:hover:text-gray-300 text-gray-400 md:hover:text-gray-400 text-gray-500 md:hover:text-gray-500 text-gray-600 md:hover:text-gray-600 text-gray-700 md:hover:text-gray-700 text-gray-800 md:hover:text-gray-800 text-gray-900 md:hover:text-gray-900 text-red-100 md:hover:text-red-100 text-red-200 md:hover:text-red-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css1 = {
+  cursor: "text",
+  fontSize: "3rem",
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      cursor: "text",
+      fontSize: "3rem",
+    },
+  },
+};
+const css2 = {
+  fontSize: "4rem",
+  textAlign: "center",
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "4rem",
+      textAlign: "left",
+    },
+  },
+};
+const css3 = {
+  fontSize: "4rem",
+  textAlign: "justify",
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "4rem",
+      textAlign: "justify",
+    },
+  },
+};
+const css4 = {
+  "--text-opacity": "1",
+  fontSize: "4rem",
+  textAlign: "justify",
+  color: ["#000", "rgba(0, 0, 0, var(--text-opacity))"],
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "4rem",
+      textAlign: "justify",
+      color: "currentColor",
+    },
+  },
+};
+const css5 = {
+  "--text-opacity": "1",
+  fontSize: "4rem",
+  textAlign: "justify",
+  color: ["#f7fafc", "rgba(247, 250, 252, var(--text-opacity))"],
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      fontSize: "4rem",
+      textAlign: "justify",
+      color: ["#f7fafc", "rgba(247, 250, 252, var(--text-opacity))"],
+      "--text-opacity": "1",
+    },
+  },
+};
+const css6 = {
+  "--text-opacity": "1",
+  textAlign: "justify",
+  color: ["#cbd5e0", "rgba(203, 213, 224, var(--text-opacity))"],
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      textAlign: "justify",
+      color: ["#e2e8f0", "rgba(226, 232, 240, var(--text-opacity))"],
+      "--text-opacity": "1",
+    },
+  },
+};
+const css7 = {
+  "--text-opacity": "1",
+  color: ["#718096", "rgba(113, 128, 150, var(--text-opacity))"],
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      color: ["#718096", "rgba(113, 128, 150, var(--text-opacity))"],
+      "--text-opacity": "1",
+    },
+  },
+};
+const css8 = {
+  "--text-opacity": "1",
+  color: ["#1a202c", "rgba(26, 32, 44, var(--text-opacity))"],
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#2d3748", "rgba(45, 55, 72, var(--text-opacity))"],
+    },
+  },
+};
+const css9 = {
+  "--text-opacity": "1",
+  color: ["#fed7d7", "rgba(254, 215, 215, var(--text-opacity))"],
+  "@media (min-width: 768px)": {
+    "&:hover": {
+      "--text-opacity": "1",
+      color: ["#fed7d7", "rgba(254, 215, 215, var(--text-opacity))"],
     },
   },
 };
@@ -474,48 +448,6 @@ const css = {
 
 `;
 
-exports[`macros text-4xl                      : text-4xl                       1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`text-4xl\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  fontSize: "2.25rem",
-};
-
-
-`;
-
-exports[`macros text-5xl                      : text-5xl                       1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`text-5xl\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  fontSize: "3rem",
-};
-
-
-`;
-
-exports[`macros text-6xl                      : text-6xl                       1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`text-6xl\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  fontSize: "4rem",
-};
-
-
-`;
-
 exports[`macros text-base                     : text-base                      1`] = `
 
 import tw from '@tailwindcssinjs/macro';
@@ -530,48 +462,6 @@ const css = {
 
 `;
 
-exports[`macros text-center                   : text-center                    1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`text-center\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  textAlign: "center",
-};
-
-
-`;
-
-exports[`macros text-justify                  : text-justify                   1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`text-justify\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  textAlign: "justify",
-};
-
-
-`;
-
-exports[`macros text-left                     : text-left                      1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`text-left\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  textAlign: "left",
-};
-
-
-`;
-
 exports[`macros text-lg                       : text-lg                        1`] = `
 
 import tw from '@tailwindcssinjs/macro';
@@ -581,20 +471,6 @@ const css = tw\`text-lg\`;
 
 const css = {
   fontSize: "1.125rem",
-};
-
-
-`;
-
-exports[`macros text-right                    : text-right                     1`] = `
-
-import tw from '@tailwindcssinjs/macro';
-const css = tw\`text-right\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  textAlign: "right",
 };
 
 

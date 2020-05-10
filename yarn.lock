@@ -500,10 +500,10 @@
   dependencies:
     core-js "^3.6.5"
 
-"@tailwindcssinjs/macro@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/macro/-/macro-0.5.0.tgz#37d3bea07f090202cadbf4793a777981971f26af"
-  integrity sha512-IqPJ55rPy6G30us3TlV63DNPD4zb0FcnAq64gBxwj9pwbGB2sQj/VHPtE7j5jVUKnx6fGWDCPINDCKplQ2RR4Q==
+"@tailwindcssinjs/macro@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/macro/-/macro-0.5.1.tgz#701edcd8003ba340562e94e6404df9f89f5f432f"
+  integrity sha512-Xri/yPrLWLT5S/SGxc9+mjKThYPI0EHnj74GSYmY7pkuzmN63UAVykYP5+PDjlln8tzm7cqj/4+sh3DsAV0TXQ==
   dependencies:
     "@tailwindcssinjs/class-composer" "0.5.0"
     "@tailwindcssinjs/tailwindcss-data" "0.5.0"

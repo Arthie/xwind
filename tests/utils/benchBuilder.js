@@ -70,7 +70,7 @@ function benchBuilder(macroImport) {
     ,
   ]);
 
-  classes.slice(0, 30).forEach((key) =>
+  classes.slice(0, 15).forEach((key) =>
     tests.push([
       padStr(`${key}`),
       {
@@ -82,6 +82,24 @@ function benchBuilder(macroImport) {
       },
     ])
   );
+  tests.push([
+    padStr(`multiple transforms 20 classes`),
+    {
+      code: `
+          import tw from '${macroImport}';
+          const css1 = tw\`${classes.slice(0, 20).join(" ")}\`;
+          const css2 = tw\`${classes.slice(5, 25).join(" ")}\`;
+          const css3 = tw\`${classes.slice(10, 30).join(" ")}\`;
+          const css4 = tw\`${classes.slice(15, 35).join(" ")}\`;
+          const css5 = tw\`${classes.slice(20, 40).join(" ")}\`;
+          const css6 = tw\`${classes.slice(25, 45).join(" ")}\`;
+          const css7 = tw\`${classes.slice(30, 50).join(" ")}\`;
+          const css8 = tw\`${classes.slice(35, 55).join(" ")}\`;
+          const css9 = tw\`${classes.slice(40, 60).join(" ")}\`;
+          `,
+      snapshot: true,
+    },
+  ]);
   tests.push([
     padStr(`test ${classes.slice(0, 10).length} classes`),
     {
