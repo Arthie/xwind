@@ -48,6 +48,7 @@ function getArgs(path: NodePath<types.Node>) {
 
 interface TailwindcssinjsMacroParams extends MacroParams {
   config?: {
+    config: string;
     experimentalDevelopmentMode: boolean;
   };
 }
@@ -57,6 +58,7 @@ function tailwindcssinjsMacro({
   state,
   babel: { types: t, template },
   config = {
+    config: "./tailwind.config.js",
     experimentalDevelopmentMode: false,
   },
 }: TailwindcssinjsMacroParams) {
@@ -67,9 +69,7 @@ function tailwindcssinjsMacro({
 
     //check for config
     try {
-      state.tailwindConfigPath = resolveTailwindConfigPath(
-        "./tailwind.config.js"
-      );
+      state.tailwindConfigPath = resolveTailwindConfigPath(config.config);
       state.tailwindConfig = requireTailwindConfig(state.tailwindConfigPath);
       if (state.noTailwindConfig) {
         throw new Error(
