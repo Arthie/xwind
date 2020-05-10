@@ -1,19 +1,28 @@
-const tailwindcss_data_1 = require("@tailwindcssinjs/tailwindcss-data");
+("use strict");
+var __importDefault =
+  (this && this.__importDefault) ||
+  function (mod) {
+    return mod && mod.__esModule ? mod : { default: mod };
+  };
+Object.defineProperty(exports, "__esModule", { value: true });
+
+const tailwindcssData_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData");
 const transformers_1 = require("@tailwindcssinjs/transformers");
+const resolveConfig_1 = __importDefault(require("tailwindcss/resolveConfig"));
+
+const tailwindcssConfig_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig");
+const corePlugins_1 = __importDefault(require("tailwindcss/lib/corePlugins"));
 
 function getTailwindClasses() {
-  let configPath;
+  // const tailwindConfigPath = tailwindcssConfig_1.resolveTailwindConfigPath(
+  //   "./tailwind.config.js"
+  // );
+  const config = tailwindcssConfig_1.requireTailwindConfig();
 
-  //check for config
-  try {
-    configPath = tailwindcss_data_1.resolveTailwindConfigPath();
-  } catch (err) {
-    configPath = undefined;
-  }
-
-  const config = tailwindcss_data_1.resolveTailwindConfig(configPath);
-  const { componentsRoot, utilitiesRoot } = tailwindcss_data_1.tailwindData(
-    config
+  const resolvedConfig = resolveConfig_1.default(config);
+  const { componentsRoot, utilitiesRoot } = tailwindcssData_1.tailwindData(
+    resolvedConfig,
+    corePlugins_1.default(resolvedConfig)
   );
   const transformedComponents = transformers_1.transformPostcssRootToTwObjects(
     componentsRoot,
@@ -23,10 +32,12 @@ function getTailwindClasses() {
     utilitiesRoot,
     "utility"
   );
-  return transformers_1.transformTwObjectsToTwStyleObjectMap([
+  const twStyleObjectMap = transformers_1.transformTwObjectsToTwStyleObjectMap([
     ...transformedComponents,
     ...transformedUtilities,
   ]);
+
+  return twStyleObjectMap;
 }
 
 function benchBuilder(macroImport) {

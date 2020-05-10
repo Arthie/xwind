@@ -31,7 +31,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.0.0", "@babel/generator@^7.9.6":
+"@babel/generator@^7.9.6":
   version "7.9.6"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.9.6.tgz#5408c82ac5de98cda0d77d8124e99fa1f2170a43"
   integrity sha512-+htwWKJbH2bL72HRluF8zumBxzuX0ZZUFl3JLNyoUjM/Ho8wnVpPXM6aUz8cfKDqQ/h7zHqKt4xzJteUosckqQ==
@@ -144,7 +144,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.0.0", "@babel/parser@^7.1.0", "@babel/parser@^7.7.5", "@babel/parser@^7.8.6", "@babel/parser@^7.9.4", "@babel/parser@^7.9.6":
+"@babel/parser@^7.1.0", "@babel/parser@^7.4.2", "@babel/parser@^7.7.5", "@babel/parser@^7.8.6", "@babel/parser@^7.9.4", "@babel/parser@^7.9.6":
   version "7.9.6"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.9.6.tgz#3b1bbb30dabe600cd72db58720998376ff653bc7"
   integrity sha512-AoeIEJn8vt+d/6+PXDRPaksYhnlbMIiejioBZvvMQsOjW/JYK6k/0dKnvvP3EhK5GfMBWDPtrxRtegWdAcdq9Q==
@@ -493,31 +493,30 @@
     hex-rgb "^4.1.0"
     postcss-selector-parser "^6.0.2"
 
-"@tailwindcssinjs/class-composer@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/class-composer/-/class-composer-0.3.1.tgz#7ebbeba7b7a482c6c127fa40879eb87fc1ab5b1b"
-  integrity sha512-V8A8qop5kdluCTetAwmU4R6WopnXJZmT5SQHj80nX8mOzvRUgnq4ChJDSD59SbK7Vr4oFh+FGMD/G6VoyN1nHw==
+"@tailwindcssinjs/class-composer@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/class-composer/-/class-composer-0.5.0.tgz#848926052d412861c1591a04144983811d8f3fdc"
+  integrity sha512-mmfIECcyVR7taZoS517Y6r9+niQGwSfjSd4ZhHSAoM580/Vuem+l1BW0oYfUTUK1wRaMFbl7J7WPX0FiM3Ncrw==
   dependencies:
     core-js "^3.6.5"
-    lodash "^4.17.15"
 
-"@tailwindcssinjs/macro@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/macro/-/macro-0.4.0.tgz#82d51648d7b80760d44d5b55dd2ba638c1df75b1"
-  integrity sha512-aEzFp5U9mHasM2yu0tAKgPcIWQIhUDQIGrp5dYIcAEDFOK/Z+lNn4m6i7i1tWbWWrRzpW/Re2SwPweYbSYjDDg==
+"@tailwindcssinjs/macro@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/macro/-/macro-0.5.0.tgz#37d3bea07f090202cadbf4793a777981971f26af"
+  integrity sha512-IqPJ55rPy6G30us3TlV63DNPD4zb0FcnAq64gBxwj9pwbGB2sQj/VHPtE7j5jVUKnx6fGWDCPINDCKplQ2RR4Q==
   dependencies:
-    "@tailwindcssinjs/class-composer" "0.3.1"
-    "@tailwindcssinjs/tailwindcss-data" "0.3.1"
+    "@tailwindcssinjs/class-composer" "0.5.0"
+    "@tailwindcssinjs/tailwindcss-data" "0.5.0"
     "@tailwindcssinjs/transformers" "0.3.0"
     babel-plugin-macros "^2.8.0"
+    lodash "^4.17.15"
 
-"@tailwindcssinjs/tailwindcss-data@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/tailwindcss-data/-/tailwindcss-data-0.3.1.tgz#784fcc23b05ecdd74cba84bbdb4c3aec79ca546b"
-  integrity sha512-XhiTVtGTw4o+vSs1VTPf43iWTD1qSgv6lQON11FNpG9oMvJdVzkUgjkv/B9BjvCM2zr6l3YJp5GU1tf40DQExQ==
+"@tailwindcssinjs/tailwindcss-data@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/tailwindcss-data/-/tailwindcss-data-0.5.0.tgz#920ac7b342838228584765c1102b80de89bdb41d"
+  integrity sha512-wx1w2/qeoL2yd0OUK8f/pdOZYFm6Wr/MDyTKiJW0ayvyCjHZmZb7mgmZ3UqnRD0/hUk9hw1Le7LpKOOvlfoVxw==
   dependencies:
     core-js "^3.6.5"
-    import-fresh "^3.2.1"
     postcss "^7.0.29"
 
 "@tailwindcssinjs/transformers@0.3.0":
@@ -673,9 +672,9 @@ acorn-walk@^7.0.0, acorn-walk@^7.1.1:
   integrity sha512-wdlPY2tm/9XBr7QkKlq0WQVgiuGTX6YWPyRyBviSoScBuLfTVQhvwg6wJ369GJ/1nPfTLMfnrFIfjqVg6d+jQQ==
 
 acorn@^7.0.0, acorn@^7.1.1:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.1.1.tgz#e35668de0b402f359de515c5482a1ab9f89a69bf"
-  integrity sha512-add7dgA5ppRPxCFJoAGfMDi7PIBXq1RtGo7BhbLaxwrXPOmw8gq48Y9ozT01hUKy9byMjlR20EJhu5zlkErEkg==
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.2.0.tgz#17ea7e40d7c8640ff54a694c889c26f31704effe"
+  integrity sha512-apwXVmYVpQ34m/i71vrApRrRKCWQnZZF1+npOD0WV5xZFfwWOmKGQ2RWlfdy9vWITsenisM8M0Qeq8agcFHNiQ==
 
 ajv@^6.5.5:
   version "6.12.2"
@@ -841,7 +840,7 @@ babel-plugin-jest-hoist@^26.0.0:
     "@babel/types" "^7.3.3"
     "@types/babel__traverse" "^7.0.6"
 
-babel-plugin-macros@^2.1.0, babel-plugin-macros@^2.8.0:
+babel-plugin-macros@^2.5.1, babel-plugin-macros@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.8.0.tgz#0f958a7cc6556b1e65344465d99111a1e5e10138"
   integrity sha512-SEP5kJpfGYqYKpBrj5XU3ahw5p5GOHJ0U5ssOSQ/WBVdwkD2Dzlce95exQTs3jOVWPPKLBN2rlEWkCK7dSmLvg==
@@ -849,15 +848,6 @@ babel-plugin-macros@^2.1.0, babel-plugin-macros@^2.8.0:
     "@babel/runtime" "^7.7.2"
     cosmiconfig "^6.0.0"
     resolve "^1.12.0"
-
-babel-plugin-tailwind-components@0.5.10:
-  version "0.5.10"
-  resolved "https://registry.yarnpkg.com/babel-plugin-tailwind-components/-/babel-plugin-tailwind-components-0.5.10.tgz#33e3574e7a5ec80d108c7d3d7c424ccd018e390c"
-  integrity sha512-AVZuc+ts2FtTUKJgHb0GyIA89xYeczqTDAM9qjxtEVKgz4gWmqs7HtsC4DPXg0telTZWobwLK1Jw1Cimik1CgA==
-  dependencies:
-    "@babel/generator" "^7.0.0"
-    "@babel/parser" "^7.0.0"
-    babel-plugin-macros "^2.1.0"
 
 babel-plugin-tester@^9.0.1:
   version "9.0.1"
@@ -1016,9 +1006,9 @@ camelcase@^6.0.0:
   integrity sha512-8KMDF1Vz2gzOq54ONPJS65IvTUaB1cHJ2DMM7MbPmLZljDH1qpzzLsWdiN9pHh6qvkRVDTi/07+eNGch/oLU4w==
 
 caniuse-lite@^1.0.30001039, caniuse-lite@^1.0.30001043:
-  version "1.0.30001053"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001053.tgz#b7ae027567ce2665b965b0437e4512b296ccd20d"
-  integrity sha512-HtV4wwIZl6GA4Oznse8aR274XUOYGZnQLcf/P8vHgmlfqSNelwD+id8CyHOceqLqt9yfKmo7DUZTh1EuS9pukg==
+  version "1.0.30001054"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001054.tgz#7e82fc42d927980b0ce1426c4813df12381e1a75"
+  integrity sha512-jiKlTI6Ur8Kjfj8z0muGrV6FscpRvefcQVPSuMuXnvRCfExU7zlVLNjmOz1TnurWgUrAY7MMmjyy+uTgIl1XHw==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -1354,7 +1344,7 @@ diff-sequences@^26.0.0:
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-26.0.0.tgz#0760059a5c287637b842bd7085311db7060e88a6"
   integrity sha512-JC/eHYEC3aSS0vZGjuoc4vHA0yAQTzhQQldXMeMF+JlxLGJlCO38Gma82NV9gk1jGFz8mDzUMeaKXvjRRdJ2dg==
 
-dlv@^1.1.3:
+dlv@^1.1.2, dlv@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/dlv/-/dlv-1.1.3.tgz#5c198a8a11453596e751494d49874bc7732f2e79"
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
@@ -1380,9 +1370,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.413:
-  version "1.3.430"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.430.tgz#33914f7c2db771bdcf30977bd4fd6258ee8a2f37"
-  integrity sha512-HMDYkANGhx6vfbqpOf/hc6hWEmiOipOHGDeRDeUb3HLD3XIWpvKQxFgWf0tgHcr3aNv6I/8VPecplqmQsXoZSw==
+  version "1.3.432"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.432.tgz#3bf7b191978ff2e8bc3caf811bb52b1e9f9eab25"
+  integrity sha512-/GdNhXyLP5Yl2322CUX/+Xi8NhdHBqL6lD9VJVKjH6CjoPGakvwZ5CpKgj/oOlbzuWWjOvMjDw1bBuAIRCNTlw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -1459,9 +1449,9 @@ execa@^1.0.0:
     strip-eof "^1.0.0"
 
 execa@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/execa/-/execa-4.0.0.tgz#7f37d6ec17f09e6b8fc53288611695b6d12b9daf"
-  integrity sha512-JbDUxwV3BoT5ZVXQrSVbAiaXhXUkIwvbhPIwZ0N13kX+5yCzOhUNdocxB/UQRuYOHRYYwAxKYwJYc0T4D12pDA==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-4.0.1.tgz#988488781f1f0238cd156f7aaede11c3e853b4c1"
+  integrity sha512-SCjM/zlBdOK8Q5TIjOn6iEHZaPHFsMoTxXQ2nvUvtPnuohz3H2dIozSg+etNR98dGoYUp2ENSKLL/XaMmbxVgw==
   dependencies:
     cross-spawn "^7.0.0"
     get-stream "^5.0.0"
@@ -1806,7 +1796,7 @@ iconv-lite@0.4.24:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
-import-fresh@^3.1.0, import-fresh@^3.2.1:
+import-fresh@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.1.tgz#633ff618506e793af5ac91bf48b72677e15cbe66"
   integrity sha512-6e1q1cnWP2RXD9/keSkxHScg508CdXqXWgWBaETNhyuBFz+kUZlKboh+ISK+bU++DmbHimVBrOz/zzPe0sZ3sQ==
@@ -3688,17 +3678,21 @@ symbol-tree@^3.2.4:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
 
-tailwind.macro@^0.5.10:
-  version "0.5.10"
-  resolved "https://registry.yarnpkg.com/tailwind.macro/-/tailwind.macro-0.5.10.tgz#17e4ca07bcdeaa50cc4fdc011a9c5c966b9351c8"
-  integrity sha512-ZV2rbd5Q3W7j1HJYzK1I9Q6wkkRVe0J//EprN/XHLKs8bImXkYv1ZcpMM030iSdO/ZBc19YW3CfkRpA25gBg5A==
+tailwind.macro@^1.0.0-alpha.10:
+  version "1.0.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/tailwind.macro/-/tailwind.macro-1.0.0-alpha.10.tgz#f617661dabfdde2276ab7e1bb07ce1f590ced3c4"
+  integrity sha512-JmQ6kz3qssU2Ov7GPM1lH9435vwQ98YpJfKwIYw4taCJ3sPpfuL7kMQtOnFlp0fi6TgWewJwaq4oRrJ9RrEiEw==
   dependencies:
-    babel-plugin-tailwind-components "0.5.10"
+    "@babel/parser" "^7.4.2"
+    babel-plugin-macros "^2.5.1"
+    dlv "^1.1.2"
+    dset "^2.0.1"
+    tailwindcss "^1.0.0-beta.8"
 
-tailwindcss@^1.3.4, tailwindcss@^1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.4.5.tgz#893ccddd226dc264f2bd53acd11e58077149e11d"
-  integrity sha512-MJW96Rz3G3RrFDbDuQCU893y4bf5hMWeVbMgcCqUfLNPbO9wRogDibCEvdKitD6aX9Y90SDT2FOKD17+WmIFLQ==
+tailwindcss@^1.0.0-beta.8, tailwindcss@^1.3.4, tailwindcss@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.4.6.tgz#17b37166ccda08d7e7f9ca995ea48ce1e0089700"
+  integrity sha512-qV0qInUq1FWih39Bc5CWECdgObSzRrbjGD4ke4kAPSIq6WXrPhv0wwOcUWJgJ66ltT9j+XnSRYikG8WNRU/fTQ==
   dependencies:
     "@fullhuman/postcss-purgecss" "^2.1.2"
     autoprefixer "^9.4.5"
@@ -3806,7 +3800,7 @@ tough-cookie@^3.0.1:
     psl "^1.1.28"
     punycode "^2.1.1"
 
-tr46@^2.0.0:
+tr46@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-2.0.2.tgz#03273586def1595ae08fedb38d7733cee91d2479"
   integrity sha512-3n1qG+/5kg+jrbTzwAykB5yRYtQCTqOGKq5U5PE3b0a1/mzo6snDhjGS0zJVJunO0NrT3Dg1MLy5TjWP/UJppg==
@@ -4003,12 +3997,12 @@ whatwg-mimetype@^2.3.0:
   integrity sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==
 
 whatwg-url@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-8.0.0.tgz#37f256cb746398e19b107bd6ef820b4ae2d15871"
-  integrity sha512-41ou2Dugpij8/LPO5Pq64K5q++MnRCBpEHvQr26/mArEKTkCV5aoXIqyhuYtE0pkqScXwhf2JP57rkRTYM29lQ==
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-8.1.0.tgz#c628acdcf45b82274ce7281ee31dd3c839791771"
+  integrity sha512-vEIkwNi9Hqt4TV9RdnaBPNt+E2Sgmo3gePebCRgZ1R7g6d23+53zCTnuB0amKI4AXq6VM8jj2DUAa0S1vjJxkw==
   dependencies:
     lodash.sortby "^4.7.0"
-    tr46 "^2.0.0"
+    tr46 "^2.0.2"
     webidl-conversions "^5.0.0"
 
 which-module@^2.0.0:
