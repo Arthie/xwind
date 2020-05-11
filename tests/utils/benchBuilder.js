@@ -46,8 +46,9 @@ function benchBuilder(macroImport) {
   const tailwindClassesMap = getTailwindClasses();
   const tests = [];
   const classes = [];
-
+  const keys = [];
   for (const [key, styleObject] of tailwindClassesMap.entries()) {
+    keys.push(key);
     //select only utility classes that have text and not opacity in the key
     if (
       key.includes("text") &&
@@ -159,7 +160,16 @@ function benchBuilder(macroImport) {
       snapshot: true,
     },
   ]);
-
+  tests.push([
+    padStr(`test all ${keys.length} classes`),
+    {
+      code: `
+          import tw from '${macroImport}';
+          const css = tw\`${keys.join(" ")}\`;
+          `,
+      snapshot: true,
+    },
+  ]);
   return Object.fromEntries(tests);
 }
 
