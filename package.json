@@ -24,7 +24,7 @@
     "@types/prettier": "2.0.0",
     "babel-plugin-tester": "^9.0.1",
     "jest": "^26.0.1",
-    "postcss": "^7.0.29",
+    "postcss": "^7.0.30",
     "prettier": "^2.0.5",
     "tailwindcss": "^1.4.6",
     "typescript": "^3.8.3"

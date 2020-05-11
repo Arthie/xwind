@@ -17095,14 +17095,14 @@ const css = tw("container");
 
 const css = {
   width: "100%",
+  "@media (min-width: 640px)": {
+    maxWidth: "640px",
+  },
   "@media (min-width: 668px)": {
     maxWidth: "668px",
   },
   "@media (min-width: 868px)": {
     maxWidth: "868px",
-  },
-  "@media (min-width: 640px)": {
-    maxWidth: "640px",
   },
   "@media (min-width: 1024px)": {
     maxWidth: "1024px",

@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/tailwindcss-data",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": "Arthie",
   "description": "This package contains tailwindcssinjs data",
   "main": "lib/tailwindcssData.js",
@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "postcss": "^7.0.29"
+    "postcss": "^7.0.30"
   }
 }

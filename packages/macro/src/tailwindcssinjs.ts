@@ -1,4 +1,5 @@
 import isEqual from "lodash/isEqual";
+import resolveConfig from "tailwindcss/resolveConfig";
 
 import { tailwindData } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData";
 import {
@@ -7,65 +8,55 @@ import {
 } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig";
 
 import {
-  transformPostcssRootToTwObjects,
-  transformTwObjectsToTwStyleObjectMap,
-  transformTwStyleObjectToStyleObject,
-} from "@tailwindcssinjs/transformers";
-
-import {
   twClassesVariantsParser,
   TwClasses,
 } from "@tailwindcssinjs/class-composer";
+import {
+  transformPostcssRootToPostcssRules,
+  transformPostcssRulesToTwObjectMap,
+  TwObject,
+} from "@tailwindcssinjs/transformers";
+import { transformTwClassesToStyleObject } from "@tailwindcssinjs/transformers";
 
-import resolveConfig from "tailwindcss/resolveConfig";
-
-let tailwindconfig: TailwindConfig;
+let configCache: TailwindConfig;
 let tailwind: (arg: TwClasses) => any;
+let twObjectMap: Map<string, TwObject>;
 
 export function tailwindcssinjs(config: TailwindConfig, corePlugins: any) {
-  if (!tailwindconfig || !isEqual(tailwindconfig, config)) {
-    if (tailwindconfig)
+  if (!configCache || !isEqual(configCache, config)) {
+    if (configCache)
       console.log("@tailwindcssinjs/macro - tailwind config changed");
-    tailwindconfig = config;
+    configCache = config;
 
     const resolvedConfig = resolveConfig(config) as ResolvedTialwindConfig;
-
+    const variantParser = twClassesVariantsParser(resolvedConfig.separator);
     const {
       mediaScreens,
       variants,
-      applyVariant,
+      getSubstituteVariantsAtRules,
       componentsRoot,
       utilitiesRoot,
     } = tailwindData(resolvedConfig, corePlugins(resolvedConfig));
 
-    const transformedComponents = transformPostcssRootToTwObjects(
-      componentsRoot,
-      "component"
+    const componentRules = transformPostcssRootToPostcssRules(componentsRoot);
+    const utilityRules = transformPostcssRootToPostcssRules(utilitiesRoot);
+    twObjectMap = transformPostcssRulesToTwObjectMap(
+      utilityRules,
+      componentRules
     );
-    const transformedUtilities = transformPostcssRootToTwObjects(
-      utilitiesRoot,
-      "utility"
-    );
-
-    const twStyleObjectMap = transformTwObjectsToTwStyleObjectMap([
-      ...transformedComponents,
-      ...transformedUtilities,
-    ]);
-
-    const variantParser = twClassesVariantsParser(resolvedConfig.separator);
 
     tailwind = (arg: TwClasses) => {
       const twParsedClasses = variantParser(arg);
 
-      const cssObject = transformTwStyleObjectToStyleObject(
-        twStyleObjectMap,
+      const styleObject = transformTwClassesToStyleObject(
+        twObjectMap,
         twParsedClasses,
         mediaScreens,
         variants,
-        applyVariant
+        getSubstituteVariantsAtRules
       );
 
-      return cssObject;
+      return styleObject;
     };
   }
 

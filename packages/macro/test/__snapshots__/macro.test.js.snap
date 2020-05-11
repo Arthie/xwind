@@ -7,7 +7,7 @@ const css = tw\`lol\`
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test.js: Error: @tailwindcssinjs/macro - Class "lol" not found. Check Tailwind config. Restart dev server and or clearing babel cache after Tailwind config changes.
+MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test.js: Error: @tailwindcssinjs/macro - Class "lol" not found.
 
 `;
 
@@ -40,14 +40,14 @@ const css = {
     boxShadow: "0 0 0 3px rgba(164, 202, 254, 0.45)",
     borderColor: "#a4cafe",
   },
+  "@media (min-width: 640px)": {
+    maxWidth: "640px",
+  },
   "@media (min-width: 668px)": {
     maxWidth: "668px",
   },
   "@media (min-width: 868px)": {
     maxWidth: "868px",
-  },
-  "@media (min-width: 640px)": {
-    maxWidth: "640px",
   },
   "@media (min-width: 1024px)": {
     maxWidth: "1024px",
@@ -90,13 +90,13 @@ const css = {
   },
   "@media (min-width: 1280px)": {
     "--text-opacity": "1",
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
     "&:hover": {
       "--text-opacity": "1",
-      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       "--bg-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
     },
-    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
   },
 };
 
@@ -121,14 +121,14 @@ const css = {
   "--transform-scale-y": "1",
   margin: "0",
   marginRight: "1rem",
+  color: ["#f98080", "rgba(249, 128, 128, var(--text-opacity))"],
   transform:
     "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))",
-  color: ["#f98080", "rgba(249, 128, 128, var(--text-opacity))"],
   "@media (min-width: 1280px)": {
     "&:hover": {
       "--bg-opacity": "1",
-      backgroundColor: ["#e1effe", "rgba(225, 239, 254, var(--bg-opacity))"],
       "--text-opacity": "1",
+      backgroundColor: ["#e1effe", "rgba(225, 239, 254, var(--bg-opacity))"],
       color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
     },
   },
@@ -169,13 +169,13 @@ const css = {
   },
   "@media (min-width: 1280px)": {
     "--text-opacity": "1",
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
     "&:hover": {
       "--text-opacity": "1",
-      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       "--bg-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
     },
-    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
   },
 };
 const css2 = {
@@ -198,13 +198,13 @@ const css2 = {
   },
   "@media (min-width: 1280px)": {
     "--text-opacity": "1",
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
     "&:hover": {
       "--text-opacity": "1",
-      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       "--bg-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
     },
-    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
   },
 };
 const css3 = {
@@ -227,13 +227,13 @@ const css3 = {
   },
   "@media (min-width: 1280px)": {
     "--text-opacity": "1",
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
     "&:hover": {
       "--text-opacity": "1",
-      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       "--bg-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
     },
-    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
   },
 };
 const css4 = {
@@ -256,13 +256,13 @@ const css4 = {
   },
   "@media (min-width: 1280px)": {
     "--text-opacity": "1",
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
     "&:hover": {
       "--text-opacity": "1",
-      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       "--bg-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
     },
-    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
   },
 };
 const css5 = {
@@ -285,13 +285,13 @@ const css5 = {
   },
   "@media (min-width: 1280px)": {
     "--text-opacity": "1",
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
     "&:hover": {
       "--text-opacity": "1",
-      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       "--bg-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
     },
-    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
   },
 };
 const css6 = {
@@ -314,13 +314,13 @@ const css6 = {
   },
   "@media (min-width: 1280px)": {
     "--text-opacity": "1",
+    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
     "&:hover": {
       "--text-opacity": "1",
-      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       "--bg-opacity": "1",
+      color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
       backgroundColor: ["#3f83f8", "rgba(63, 131, 248, var(--bg-opacity))"],
     },
-    color: ["#f8b4b4", "rgba(248, 180, 180, var(--text-opacity))"],
   },
 };
 
@@ -345,14 +345,9 @@ const css = {
   "--transform-scale-y": "1",
   margin: "0",
   marginRight: "1rem",
+  color: ["#f98080", "rgba(249, 128, 128, var(--text-opacity))"],
   transform:
     "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))",
-  "@supports (display: grid)": {
-    "&": {
-      "--text-opacity": "1",
-      color: ["#76a9fa", "rgba(118, 169, 250, var(--text-opacity))"],
-    },
-  },
   "&": {
     "--text-opacity": "1 !important",
     "--bg-opacity": "1 !important",
@@ -365,12 +360,17 @@ const css = {
       "rgba(248, 180, 180, var(--bg-opacity)) !important",
     ],
   },
-  color: ["#f98080", "rgba(249, 128, 128, var(--text-opacity))"],
+  "@supports (display: grid)": {
+    "&": {
+      "--text-opacity": "1",
+      color: ["#76a9fa", "rgba(118, 169, 250, var(--text-opacity))"],
+    },
+  },
   "@media (min-width: 1280px)": {
     "&:hover": {
       "--bg-opacity": "1",
-      backgroundColor: ["#e1effe", "rgba(225, 239, 254, var(--bg-opacity))"],
       "--text-opacity": "1",
+      backgroundColor: ["#e1effe", "rgba(225, 239, 254, var(--bg-opacity))"],
       color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
     },
   },
@@ -413,12 +413,12 @@ const css = {
   lineHeight: "1.25rem",
   fontWeight: "500",
   borderRadius: "0.375rem",
+  color: ["#ffffff", "rgba(255, 255, 255, var(--text-opacity))"],
+  backgroundColor: ["#5850ec", "rgba(88, 80, 236, var(--bg-opacity))"],
   transitionProperty:
     "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
   transitionDuration: "150ms",
   transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
-  color: ["#ffffff", "rgba(255, 255, 255, var(--text-opacity))"],
-  backgroundColor: ["#5850ec", "rgba(88, 80, 236, var(--bg-opacity))"],
   "&:hover": {
     "--bg-opacity": "1",
     backgroundColor: ["#6875f5", "rgba(104, 117, 245, var(--bg-opacity))"],
@@ -426,8 +426,8 @@ const css = {
   "&:focus": {
     "--border-opacity": "1",
     outline: "0",
-    boxShadow: "0 0 0 3px rgba(180, 198, 252, 0.45)",
     borderColor: ["#5145cd", "rgba(81, 69, 205, var(--border-opacity))"],
+    boxShadow: "0 0 0 3px rgba(180, 198, 252, 0.45)",
   },
   "&:active": {
     "--bg-opacity": "1",
@@ -519,18 +519,18 @@ const css = {
     transitionDelay: "1000ms",
     "& > :not(template) ~ :not(template)": {
       "--space-y-reverse": "0",
+      "--space-x-reverse": "1",
+      "--divide-x-reverse": "0",
+      "--divide-y-reverse": "0",
+      "--divide-opacity": "1",
       marginTop: "calc(1rem * calc(1 - var(--space-y-reverse)))",
       marginBottom: "calc(1rem * var(--space-y-reverse))",
-      "--space-x-reverse": "1",
       marginRight: "calc(0.5rem * var(--space-x-reverse))",
       marginLeft: "calc(0.5rem * calc(1 - var(--space-x-reverse)))",
-      "--divide-x-reverse": "0",
       borderRightWidth: "calc(1px * var(--divide-x-reverse))",
       borderLeftWidth: "calc(1px * calc(1 - var(--divide-x-reverse)))",
-      "--divide-y-reverse": "0",
       borderTopWidth: "calc(1px * calc(1 - var(--divide-y-reverse)))",
       borderBottomWidth: "calc(1px * var(--divide-y-reverse))",
-      "--divide-opacity": "1",
       borderColor: ["#3f83f8", "rgba(63, 131, 248, var(--divide-opacity))"],
     },
   },
