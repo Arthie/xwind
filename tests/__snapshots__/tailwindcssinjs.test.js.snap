@@ -215,10 +215,10 @@ const css5 = {
   color: ["#f7fafc", "rgba(247, 250, 252, var(--text-opacity))"],
   "@media (min-width: 768px)": {
     "&:hover": {
+      "--text-opacity": "1",
       fontSize: "4rem",
       textAlign: "justify",
       color: ["#f7fafc", "rgba(247, 250, 252, var(--text-opacity))"],
-      "--text-opacity": "1",
     },
   },
 };
@@ -228,9 +228,9 @@ const css6 = {
   color: ["#cbd5e0", "rgba(203, 213, 224, var(--text-opacity))"],
   "@media (min-width: 768px)": {
     "&:hover": {
+      "--text-opacity": "1",
       textAlign: "justify",
       color: ["#e2e8f0", "rgba(226, 232, 240, var(--text-opacity))"],
-      "--text-opacity": "1",
     },
   },
 };
@@ -239,8 +239,8 @@ const css7 = {
   color: ["#718096", "rgba(113, 128, 150, var(--text-opacity))"],
   "@media (min-width: 768px)": {
     "&:hover": {
-      color: ["#718096", "rgba(113, 128, 150, var(--text-opacity))"],
       "--text-opacity": "1",
+      color: ["#718096", "rgba(113, 128, 150, var(--text-opacity))"],
     },
   },
 };
@@ -325,11 +325,11 @@ const css = {
   color: ["#f7fafc", "rgba(247, 250, 252, var(--text-opacity))"],
   "@media (min-width: 768px)": {
     "&:hover": {
+      "--text-opacity": "1",
       cursor: "text",
       fontSize: "4rem",
       textAlign: "justify",
       color: ["#f7fafc", "rgba(247, 250, 252, var(--text-opacity))"],
-      "--text-opacity": "1",
     },
   },
 };
@@ -352,11 +352,11 @@ const css = {
   color: ["#fbd38d", "rgba(251, 211, 141, var(--text-opacity))"],
   "@media (min-width: 768px)": {
     "&:hover": {
+      "--text-opacity": "1",
       cursor: "text",
       fontSize: "4rem",
       textAlign: "justify",
       color: ["#fbd38d", "rgba(251, 211, 141, var(--text-opacity))"],
-      "--text-opacity": "1",
     },
   },
 };
@@ -379,11 +379,11 @@ const css = {
   color: ["#2b6cb0", "rgba(43, 108, 176, var(--text-opacity))"],
   "@media (min-width: 768px)": {
     "&:hover": {
+      "--text-opacity": "1",
       cursor: "text",
       fontSize: "4rem",
       textAlign: "justify",
       color: ["#2b6cb0", "rgba(43, 108, 176, var(--text-opacity))"],
-      "--text-opacity": "1",
     },
   },
 };
@@ -403,15 +403,15 @@ const css = {
   cursor: "text",
   fontSize: "4rem",
   textAlign: "justify",
-  userSelect: "text",
   color: ["#702459", "rgba(112, 36, 89, var(--text-opacity))"],
+  userSelect: "text",
   "@media (min-width: 768px)": {
     "&:hover": {
+      "--text-opacity": "1",
       cursor: "text",
       fontSize: "4rem",
       textAlign: "justify",
       color: ["#702459", "rgba(112, 36, 89, var(--text-opacity))"],
-      "--text-opacity": "1",
       userSelect: "text",
     },
   },

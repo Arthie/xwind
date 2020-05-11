@@ -17,11 +17,11 @@
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@tailwindcss/ui": "^0.3.0",
-    "@tailwindcssinjs/macro": "^0.5.1",
+    "@tailwindcssinjs/macro": "0.5.2",
     "babel-plugin-macros": "^2.8.0",
     "babel-plugin-tester": "^9.0.1",
     "jest": "^26.0.1",
-    "postcss": "^7.0.29",
+    "postcss": "^7.0.30",
     "prettier": "^2.0.5",
     "tailwind.macro": "^1.0.0-alpha.10",
     "tailwindcss": "^1.4.6",

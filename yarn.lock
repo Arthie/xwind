@@ -500,29 +500,29 @@
   dependencies:
     core-js "^3.6.5"
 
-"@tailwindcssinjs/macro@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/macro/-/macro-0.5.1.tgz#701edcd8003ba340562e94e6404df9f89f5f432f"
-  integrity sha512-Xri/yPrLWLT5S/SGxc9+mjKThYPI0EHnj74GSYmY7pkuzmN63UAVykYP5+PDjlln8tzm7cqj/4+sh3DsAV0TXQ==
+"@tailwindcssinjs/macro@0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/macro/-/macro-0.5.2.tgz#f7c73f40f2997ff566a73d64995fcd2ab6fd8298"
+  integrity sha512-qmNqD7g9RDhxwFF03ctMzZ24QF1uzaxXKz+7hVGhwM7Ua3UJ/xsShgsRyACW3/RuIkWgP9yM/8wH82kGJOO2Fg==
   dependencies:
     "@tailwindcssinjs/class-composer" "0.5.0"
-    "@tailwindcssinjs/tailwindcss-data" "0.5.0"
-    "@tailwindcssinjs/transformers" "0.3.0"
+    "@tailwindcssinjs/tailwindcss-data" "0.5.1"
+    "@tailwindcssinjs/transformers" "0.5.0"
     babel-plugin-macros "^2.8.0"
-    lodash "^4.17.15"
+    postcss-js "^2.0.3"
 
-"@tailwindcssinjs/tailwindcss-data@0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/tailwindcss-data/-/tailwindcss-data-0.5.0.tgz#920ac7b342838228584765c1102b80de89bdb41d"
-  integrity sha512-wx1w2/qeoL2yd0OUK8f/pdOZYFm6Wr/MDyTKiJW0ayvyCjHZmZb7mgmZ3UqnRD0/hUk9hw1Le7LpKOOvlfoVxw==
+"@tailwindcssinjs/tailwindcss-data@0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/tailwindcss-data/-/tailwindcss-data-0.5.1.tgz#bfd4234ff5d51f6c4fa0f74059ac6577a3c19afb"
+  integrity sha512-FPMMMa4xiQfP4e5jaDcZo1BaF36nfWkwyHWEWL7615MVlw18/M2m28vS7CU7rvnI9PThWk8HLhcB/jCBS5gmaA==
   dependencies:
     core-js "^3.6.5"
-    postcss "^7.0.29"
+    postcss "^7.0.30"
 
-"@tailwindcssinjs/transformers@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/transformers/-/transformers-0.3.0.tgz#651ceaa2f117cd70be94c9744f32914586189f11"
-  integrity sha512-RDQHqpRD0jD4X0XIYaqwnFk4h1XyuGFPmLUdCYDuhsejM/u/BV6yzHzqFHi6T7Hsm61N05yCm/fRIAiJsRGapw==
+"@tailwindcssinjs/transformers@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/transformers/-/transformers-0.5.0.tgz#f01ede15b794643e41aacbcf02d59b7bf3c04d9a"
+  integrity sha512-iZcRE113lMXrTowGzt2uyWw4yvkbUzp8482f1ZSV1vAHeMnV2R/LgaKl3NkwGUHw04gpJvRYK23ljHS0gEsCJg==
   dependencies:
     css-what "^3.2.1"
     lodash "^4.17.15"
@@ -3098,10 +3098,19 @@ postcss@^6.0.9:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.11, postcss@^7.0.18, postcss@^7.0.21, postcss@^7.0.27, postcss@^7.0.29:
+postcss@^7.0.11, postcss@^7.0.18, postcss@^7.0.21, postcss@^7.0.27:
   version "7.0.29"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.29.tgz#d3a903872bd52280b83bce38cdc83ce55c06129e"
   integrity sha512-ba0ApvR3LxGvRMMiUa9n0WR4HjzcYm7tS+ht4/2Nd0NLtHpPIH77fuB9Xh1/yJVz9O/E/95Y/dn8ygWsyffXtw==
+  dependencies:
+    chalk "^2.4.2"
+    source-map "^0.6.1"
+    supports-color "^6.1.0"
+
+postcss@^7.0.30:
+  version "7.0.30"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.30.tgz#cc9378beffe46a02cbc4506a0477d05fcea9a8e2"
+  integrity sha512-nu/0m+NtIzoubO+xdAlwZl/u5S5vi/y6BCsoL8D+8IxsD3XvBS8X4YEADNIVXKVuQvduiucnRv+vPIqj56EGMQ==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"

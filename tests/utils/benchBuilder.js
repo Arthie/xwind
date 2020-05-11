@@ -5,13 +5,13 @@ var __importDefault =
     return mod && mod.__esModule ? mod : { default: mod };
   };
 Object.defineProperty(exports, "__esModule", { value: true });
-
-const tailwindcssData_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData");
-const transformers_1 = require("@tailwindcssinjs/transformers");
-const resolveConfig_1 = __importDefault(require("tailwindcss/resolveConfig"));
-
 const tailwindcssConfig_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig");
 const corePlugins_1 = __importDefault(require("tailwindcss/lib/corePlugins"));
+
+const resolveConfig_1 = __importDefault(require("tailwindcss/resolveConfig"));
+const tailwindcssData_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData");
+const transformers_1 = require("@tailwindcssinjs/transformers");
+let twObjectMap;
 
 function getTailwindClasses() {
   // const tailwindConfigPath = tailwindcssConfig_1.resolveTailwindConfigPath(
@@ -20,24 +20,23 @@ function getTailwindClasses() {
   const config = tailwindcssConfig_1.requireTailwindConfig();
 
   const resolvedConfig = resolveConfig_1.default(config);
+
   const { componentsRoot, utilitiesRoot } = tailwindcssData_1.tailwindData(
     resolvedConfig,
     corePlugins_1.default(resolvedConfig)
   );
-  const transformedComponents = transformers_1.transformPostcssRootToTwObjects(
-    componentsRoot,
-    "component"
+  const componentRules = transformers_1.transformPostcssRootToPostcssRules(
+    componentsRoot
   );
-  const transformedUtilities = transformers_1.transformPostcssRootToTwObjects(
-    utilitiesRoot,
-    "utility"
+  const utilityRules = transformers_1.transformPostcssRootToPostcssRules(
+    utilitiesRoot
   );
-  const twStyleObjectMap = transformers_1.transformTwObjectsToTwStyleObjectMap([
-    ...transformedComponents,
-    ...transformedUtilities,
-  ]);
+  twObjectMap = transformers_1.transformPostcssRulesToTwObjectMap(
+    utilityRules,
+    componentRules
+  );
 
-  return twStyleObjectMap;
+  return twObjectMap;
 }
 
 function benchBuilder(macroImport) {
