@@ -26,10 +26,13 @@ Transforms into:
 
 ```js
 const styles = {
-  color: "#fff5f5",
+  "--text-opacity": "1",
+  color: ["#fde8e8", "rgba(253, 232, 232, var(--text-opacity))"],
   "&:hover": {
-    color: "#f0fff4",
-    backgroundColor: "#bee3f8",
+    "--text-opacity": "1",
+    "--bg-opacity": "1",
+    color: ["#def7ec", "rgba(222, 247, 236, var(--text-opacity))"],
+    backgroundColor: ["#c3ddfd", "rgba(195, 221, 253, var(--bg-opacity))"],
   },
 };
 ```
@@ -55,6 +58,7 @@ with css-in-js libraries.
 - New syntax to apply variants to multiple utility classes
 - Supports Tailwind plugins (e.g. tailwind-ui, custom-forms)
 - No runtime impact all transformations happen during build time
+- Hot reloading changes in `tailwind.config.js` (experimental)
 
 ## Usage
 

@@ -1,14 +1,17 @@
-//@ts-ignore
-import objectify from "@tailwindcssinjs/transformers/lib/postcssjs-objectify";
-
+import postcss, { Rule, AtRule, Root } from "postcss";
 import merge from "lodash/merge";
+//@ts-ignore
+const timsort = require("timsort");
+
 import {
   TwObject,
   TwObjectUtility,
   StyleObject,
   StyleObjectRuleOrAtRule,
 } from "./transformPostcss";
-import postcss, { Rule, AtRule, Root } from "postcss";
+
+//@ts-ignore
+import objectify from "./postcssjs-objectify";
 
 import { parseTwSelector } from "./parseTwSelector";
 
@@ -52,7 +55,7 @@ function getStyleObjectFromTwObject(twObject: TwObject): StyleObject {
   throw new Error(`Tailwind Object type is not supported | ${twObject}`);
 }
 
-const applyTwClassVariants = (
+function applyTwClassVariants(
   variant: string,
   styleObject: StyleObject,
   twObject: TwObjectUtility,
@@ -61,7 +64,7 @@ const applyTwClassVariants = (
   },
   variants: string[],
   getSubstituteVariantsAtRules: (root: Root) => void
-): StyleObject => {
+): StyleObject {
   let variantStyleObject = styleObject;
   if (
     twObject.rule.parent.type === "atrule" &&
@@ -110,9 +113,9 @@ const applyTwClassVariants = (
     return variantStyleObject;
   }
   throw new Error(`Utility with variant class '${variant}' not found"`);
-};
+}
 
-export function sortStyleObject<T extends StyleObject>(styleObject: T) {
+function sortStyleObject<T extends StyleObject>(styleObject: T) {
   const styleObjectEntries = Object.entries(styleObject);
 
   //also sort nested style Rules / atRules
@@ -146,7 +149,9 @@ export function sortStyleObject<T extends StyleObject>(styleObject: T) {
     throw new Error(`This type: ${type} of value: ${value} is not supported`);
   };
 
-  const sortedObjectEntries = styleObjectEntries.sort(
+  timsort.sort(
+    styleObjectEntries,
+    //@ts-ignore
     ([first, firstValue], [second, secondValue]) => {
       const firstValueType = getValueType(first, firstValue);
       const secondValueType = getValueType(second, secondValue);
@@ -193,7 +198,21 @@ export function sortStyleObject<T extends StyleObject>(styleObject: T) {
     }
   );
 
-  return Object.fromEntries(sortedObjectEntries);
+  return Object.fromEntries(styleObjectEntries);
+}
+
+function removefallbacks(styleObject: StyleObject): StyleObject {
+  const rules = Object.entries(styleObject).map(([key, value]) => {
+    if (typeof value === "string") {
+      return [key, value];
+    }
+    if (Array.isArray(value)) {
+      return [key, value.pop()];
+    } else {
+      return [key, removefallbacks(value)];
+    }
+  });
+  return Object.fromEntries(rules);
 }
 
 export function transformTwClassesToStyleObject(
@@ -203,7 +222,8 @@ export function transformTwClassesToStyleObject(
     [key: string]: string;
   },
   variants: string[],
-  getSubstituteVariantsAtRules: (root: Root) => void
+  getSubstituteVariantsAtRules: (root: Root) => void,
+  options: { fallbacks: boolean } = { fallbacks: true }
 ) {
   const mergedStyleObject: StyleObject = {};
 
@@ -265,5 +285,11 @@ export function transformTwClassesToStyleObject(
     }
   });
 
-  return sortStyleObject(mergedStyleObject);
+  const sortedStyleObject = sortStyleObject(mergedStyleObject);
+
+  if (!options.fallbacks) {
+    return removefallbacks(sortedStyleObject);
+  }
+
+  return sortedStyleObject;
 }

@@ -46,23 +46,103 @@ function getArgs(path: NodePath<types.Node>) {
   throw new Error("Invalid Nodepath");
 }
 
-interface TailwindcssinjsMacroParams extends MacroParams {
-  config?: {
-    config?: string;
-    experimentalDevelopmentMode?: boolean;
-  };
+function addDevImports(
+  referencePath: NodePath<types.Node>,
+  t: typeof types,
+  state: any,
+  config: any
+) {
+  // add these imports to the file
+  // import tailwindconfig from "../../tailwind.config";
+  // import devCorePlugins from "@tailwindcssinjs/macro/lib/devCorePlugins"
+  // import tailwindcssinjs from "@tailwindcssinjs/macro/lib/tailwindcssinjs";
+  // const tw = tailwindcssinjs(tailwindconfig, devCorePlugins, {fallbacks:true});
+
+  const hasimports = state.tailwindUids.every((uid: types.Identifier) =>
+    referencePath.scope.hasUid(uid.name)
+  );
+
+  if (state.tailwindUids.length === 0 || !hasimports) {
+    const tailwindConfigUid = referencePath.scope.generateUidIdentifier(
+      "tailwindconfig"
+    );
+    state.tailwindUids.push(tailwindConfigUid);
+    const tailwindConfigImport = t.importDeclaration(
+      [t.importDefaultSpecifier(tailwindConfigUid)],
+      t.stringLiteral(
+        state.tailwindConfigPath
+          ? state.tailwindConfigPath
+          : "tailwindcss/defaultConfig"
+      )
+    );
+
+    const devCorePluginsUid = referencePath.scope.generateUidIdentifier(
+      "devCorePlugins"
+    );
+    state.tailwindUids.push(devCorePluginsUid);
+    const corePluginsImport = t.importDeclaration(
+      [t.importDefaultSpecifier(devCorePluginsUid)],
+      t.stringLiteral("@tailwindcssinjs/macro/lib/devCorePlugins")
+    );
+
+    const tailwindcssinjsUid = referencePath.scope.generateUidIdentifier(
+      "tailwindcssinjs"
+    );
+    state.tailwindUids.push(tailwindcssinjsUid);
+    const tailwindcssinjsImport = t.importDeclaration(
+      [t.importDefaultSpecifier(tailwindcssinjsUid)],
+      t.stringLiteral("@tailwindcssinjs/macro/lib/tailwindcssinjs")
+    );
+
+    const twUid = referencePath.scope.generateUidIdentifier("tw");
+    state.tailwindUids.push(twUid);
+    const twConst = t.variableDeclaration("const", [
+      t.variableDeclarator(
+        twUid,
+        t.callExpression(tailwindcssinjsUid, [
+          tailwindConfigUid,
+          devCorePluginsUid,
+          t.objectExpression([
+            t.objectProperty(
+              t.stringLiteral("fallbacks"),
+              t.booleanLiteral(config.fallbacks)
+            ),
+          ]),
+        ])
+      ),
+    ]);
+
+    const program = state.file.path;
+    program.node.body.unshift(
+      tailwindConfigImport,
+      corePluginsImport,
+      tailwindcssinjsImport,
+      twConst
+    );
+  }
 }
 
+interface TailwindcssinjsMacroParams extends MacroParams {
+  config?: {
+    config: string;
+    experimentalDevelopmentMode: boolean;
+    fallbacks: boolean;
+  };
+}
 function tailwindcssinjsMacro({
   references: { default: paths },
   state,
   babel: { types: t, template },
-  config = {},
+  config = {
+    config: "./tailwind.config.js",
+    experimentalDevelopmentMode: false,
+    fallbacks: true,
+  },
 }: TailwindcssinjsMacroParams) {
   config.config = config.config ?? "./tailwind.config.js";
   config.experimentalDevelopmentMode =
     config.experimentalDevelopmentMode ?? false;
-
+  config.fallbacks = config.fallbacks ?? true;
   try {
     state.dev =
       process.env.NODE_ENV === "development" &&
@@ -85,85 +165,22 @@ function tailwindcssinjsMacro({
       state.tailwindConfig = requireTailwindConfig(); //returns default config
     }
 
-    if (!state.dev)
-      state.tailwind = tailwindcssinjs(state.tailwindConfig, corePlugins);
-
+    if (state.dev) {
+      generateDevCorePlugins();
+    } else {
+      state.tailwind = tailwindcssinjs(state.tailwindConfig, corePlugins, {
+        fallbacks: config.fallbacks,
+      });
+    }
     state.tailwindUids = [];
 
     paths.forEach((referencePath) => {
       const args = getArgs(referencePath.parentPath);
 
       if (state.dev) {
-        // add these imports to the file
-        // import tailwindconfig from "../../tailwind.config";
-        // import devCorePlugins from "@tailwindcssinjs/macro/lib/devCorePlugins"
-        // import tailwindcssinjs from "@tailwindcssinjs/macro/lib/tailwindcssinjs";
-        // const tw = tailwindcssinjs(tailwindconfig, devCorePlugins);
-
-        if (!state.generatedDevCorePlugins) {
-          generateDevCorePlugins();
-          state.generatedDevCorePlugins = true;
-        }
-
-        const hasimports = state.tailwindUids.every((uid: types.Identifier) =>
-          referencePath.scope.hasUid(uid.name)
-        );
-
-        if (state.tailwindUids.length === 0 || !hasimports) {
-          const tailwindConfigUid = referencePath.scope.generateUidIdentifier(
-            "tailwindconfig"
-          );
-          state.tailwindUids.push(tailwindConfigUid);
-          const tailwindConfigImport = t.importDeclaration(
-            [t.importDefaultSpecifier(tailwindConfigUid)],
-            t.stringLiteral(
-              state.tailwindConfigPath
-                ? state.tailwindConfigPath
-                : "tailwindcss/defaultConfig"
-            )
-          );
-
-          const devCorePluginsUid = referencePath.scope.generateUidIdentifier(
-            "devCorePlugins"
-          );
-          state.tailwindUids.push(devCorePluginsUid);
-          const corePluginsImport = t.importDeclaration(
-            [t.importDefaultSpecifier(devCorePluginsUid)],
-            t.stringLiteral("@tailwindcssinjs/macro/lib/devCorePlugins")
-          );
-
-          const tailwindcssinjsUid = referencePath.scope.generateUidIdentifier(
-            "tailwindcssinjs"
-          );
-          state.tailwindUids.push(tailwindcssinjsUid);
-          const tailwindcssinjsImport = t.importDeclaration(
-            [t.importDefaultSpecifier(tailwindcssinjsUid)],
-            t.stringLiteral("@tailwindcssinjs/macro/lib/tailwindcssinjs")
-          );
-
-          const twUid = referencePath.scope.generateUidIdentifier("tw");
-          state.tailwindUids.push(twUid);
-          const twConst = t.variableDeclaration("const", [
-            t.variableDeclarator(
-              twUid,
-              t.callExpression(tailwindcssinjsUid, [
-                tailwindConfigUid,
-                devCorePluginsUid,
-              ])
-            ),
-          ]);
-
-          const program = state.file.path;
-          program.node.body.unshift(
-            tailwindConfigImport,
-            corePluginsImport,
-            tailwindcssinjsImport,
-            twConst
-          );
-        }
-
+        addDevImports(referencePath, t, state, config);
         const serialisedArgs = twClassesSerializer(
-          state.tailwindConfig.separator ?? ":"
+          state?.tailwindConfig?.separator ?? ":"
         )(args);
         const call = t.callExpression(state.tailwindUids[3], [
           t.stringLiteral(serialisedArgs),

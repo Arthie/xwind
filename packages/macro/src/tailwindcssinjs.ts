@@ -22,7 +22,11 @@ let configCache: TailwindConfig;
 let tailwind: (arg: TwClasses) => any;
 let twObjectMap: Map<string, TwObject>;
 
-export function tailwindcssinjs(config: TailwindConfig, corePlugins: any) {
+export function tailwindcssinjs(
+  config: TailwindConfig,
+  corePlugins: any,
+  options?: any
+) {
   if (!configCache || !isEqual(configCache, config)) {
     if (configCache)
       console.log("@tailwindcssinjs/macro - tailwind config changed");
@@ -53,7 +57,8 @@ export function tailwindcssinjs(config: TailwindConfig, corePlugins: any) {
         twParsedClasses,
         mediaScreens,
         variants,
-        getSubstituteVariantsAtRules
+        getSubstituteVariantsAtRules,
+        options
       );
 
       return styleObject;

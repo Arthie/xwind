@@ -53,9 +53,10 @@ export function generateDevCorePlugins() {
   });
 
   //get path to devCorePlugins
-  const devPluginPath = require.resolve(
+  const devCorePluginPath = require.resolve(
     "@tailwindcssinjs/macro/lib/devCorePlugins"
   );
+
   //overwrite current devCorePlugins file with transformed code
-  fs.writeFileSync(devPluginPath, output?.code, "utf8");
+  fs.writeFileSync(devCorePluginPath, output?.code, "utf8");
 }
