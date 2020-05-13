@@ -1,5 +1,5 @@
-import { Root, Rule } from "postcss";
-import { parseTwSelector } from "./parseTwSelector";
+import postcss, { Root, Rule } from "postcss";
+import { parseTwSelectorClass } from "./parseTwSelector";
 
 export type StyleObject = StyleObjectDecl | StyleObjectRuleOrAtRule;
 
@@ -11,24 +11,14 @@ export type StyleObjectRuleOrAtRule = {
   [key: string]: string | string[] | StyleObjectRuleOrAtRule;
 };
 
-export interface TwObjectBase {
-  styleObject?: StyleObject;
+export interface TwObject {
   variant?: {
-    [key: string]: StyleObject;
+    [key: string]: Root;
   };
+  root: Root;
+  type: "utility" | "component";
+  class: string;
 }
-
-export interface TwObjectUtility extends TwObjectBase {
-  type: "utility";
-  rule: Rule;
-}
-
-export interface TwObjectComponent extends TwObjectBase {
-  type: "component";
-  rules: Rule[];
-}
-
-export type TwObject = TwObjectUtility | TwObjectComponent;
 
 export function transformPostcssRootToPostcssRules(root: Root) {
   const rules: Rule[] = [];
@@ -38,6 +28,20 @@ export function transformPostcssRootToPostcssRules(root: Root) {
   return rules;
 }
 
+function buildUtilityRoot(rule: Rule) {
+  const root = postcss.root();
+  root.append(rule.clone());
+  return root;
+}
+
+function buildComponentRoot(rules: Rule[]) {
+  const root = postcss.root();
+  for (const rule of rules) {
+    root.append(rule.root());
+  }
+  return root;
+}
+
 export function transformPostcssRulesToTwObjectMap(
   utilityRules: Rule[] = [],
   componentRules: Rule[] = []
@@ -45,31 +49,37 @@ export function transformPostcssRulesToTwObjectMap(
   const twObjectMap = new Map<string, TwObject>();
 
   for (const rule of utilityRules) {
-    const parsedTwSelector = parseTwSelector(rule.selector);
-    if (twObjectMap.has(parsedTwSelector.class)) {
+    const ruleClass = parseTwSelectorClass(rule.selector);
+    if (twObjectMap.has(ruleClass)) {
       throw new Error(
-        `Utility with class: ${parsedTwSelector.class} already exists. Utility classes can only have one rule.`
+        `Utility with class: ${ruleClass} already exists. Utility classes can only have one rule.`
       );
     }
-    twObjectMap.set(parsedTwSelector.class, {
+    const twObject: TwObject = {
       type: "utility",
-      rule,
-    });
+      root: buildUtilityRoot(rule),
+      class: ruleClass,
+    };
+    twObjectMap.set(ruleClass, twObject);
   }
 
-  for (const rule of componentRules) {
-    const parsedTwSelector = parseTwSelector(rule.selector);
-    const twObjectComponent = twObjectMap.get(parsedTwSelector.class);
-
-    if (twObjectComponent?.type === "component") {
-      twObjectComponent.rules.push(rule);
-      twObjectMap.set(parsedTwSelector.class, twObjectComponent);
+  const componentRulesMap = new Map<string, Rule[]>();
+  for (const componentRule of componentRules) {
+    const ruleClass = parseTwSelectorClass(componentRule.selector);
+    const prevComponentRules = componentRulesMap.get(ruleClass);
+    if (prevComponentRules) {
+      componentRulesMap.set(ruleClass, [...prevComponentRules, componentRule]);
     } else {
-      twObjectMap.set(parsedTwSelector.class, {
-        type: "component",
-        rules: [rule],
-      });
+      componentRulesMap.set(ruleClass, [componentRule]);
     }
+  }
+
+  for (const [componentClass, componentRules] of componentRulesMap.entries()) {
+    twObjectMap.set(componentClass, {
+      type: "component",
+      root: buildComponentRoot(componentRules),
+      class: componentClass,
+    });
   }
 
   return twObjectMap;

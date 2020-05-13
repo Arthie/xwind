@@ -25,7 +25,7 @@ function atRule(node) {
   if (typeof node.nodes === "undefined") {
     return true;
   } else {
-    return process(node);
+    return objectify(node);
   }
 }
 
@@ -45,7 +45,7 @@ function objectify(node) {
         result[name] = [result[name], atRule(child)];
       }
     } else if (child.type === "rule") {
-      var body = process(child);
+      var body = objectify(child);
       if (result[child.selector]) {
         for (var i in body) {
           result[child.selector][i] = body[i];

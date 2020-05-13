@@ -2,22 +2,19 @@ import postcss from "postcss";
 import "core-js/stable/object/from-entries";
 
 //Tailwindcss imports
-import buildMediaQuery from "tailwindcss/lib/util/buildMediaQuery";
 import substituteVariantsAtRules from "tailwindcss/lib/lib/substituteVariantsAtRules";
+import substituteScreenAtRules from "tailwindcss/lib/lib/substituteScreenAtRules";
 import processPlugins from "tailwindcss/lib/util/processPlugins";
 
 import { ResolvedTialwindConfig } from "./tailwindcssConfig";
 
-export function getMediaScreens(config: ResolvedTialwindConfig) {
-  const screens = Object.entries(config.theme.screens);
-  const buildScreens = screens.map(([key, value]): [string, string] => [
-    key,
-    buildMediaQuery(value),
-  ]);
-  return Object.fromEntries(buildScreens);
+export { TailwindConfig, ResolvedTialwindConfig } from "./tailwindcssConfig";
+
+function getMediaScreens(config: ResolvedTialwindConfig) {
+  return Object.keys(config.theme.screens);
 }
 
-export function getVariants(variantGenerators: any) {
+function getVariants(variantGenerators: any) {
   return [
     "default",
     "group-hover",
@@ -35,52 +32,36 @@ export function getVariants(variantGenerators: any) {
   ].concat(Object.keys(variantGenerators));
 }
 
-export function processTailwindPlugins(
-  config: ResolvedTialwindConfig,
-  corePlugins: any
-) {
-  const processedPlugins = processPlugins(
-    [...corePlugins, ...config.plugins],
-    config
-  );
-
-  return {
-    variantGenerators: processedPlugins.variantGenerators,
-    baseRoot:
-      processedPlugins.base ?? postcss.root({ nodes: processedPlugins.base }),
-    utilitiesRoot: postcss.root({ nodes: processedPlugins.utilities }),
-    componentsRoot: postcss.root({ nodes: processedPlugins.components }),
-  };
-}
-
 export function tailwindData(
   resolvedConfig: ResolvedTialwindConfig,
-  corePlugins: any
+  corePlugins: any[]
 ) {
-  const {
-    utilitiesRoot,
-    componentsRoot,
-    baseRoot,
-    variantGenerators,
-  } = processTailwindPlugins(resolvedConfig, corePlugins);
+  const processedPlugins = processPlugins(
+    [...corePlugins, ...resolvedConfig.plugins],
+    resolvedConfig
+  );
 
-  const mediaScreens = getMediaScreens(resolvedConfig);
-  const variants = getVariants(variantGenerators);
+  const baseRoot = postcss.root({ nodes: processedPlugins.base });
+  const utilitiesRoot = postcss.root({ nodes: processedPlugins.utilities });
+  const componentsRoot = postcss.root({ nodes: processedPlugins.components });
+
+  const screens = getMediaScreens(resolvedConfig);
+  const variants = getVariants(processedPlugins.variantGenerators);
+
   const getSubstituteVariantsAtRules = substituteVariantsAtRules(
     resolvedConfig,
-    {
-      variantGenerators,
-    }
+    processedPlugins
   );
+  const getSubstituteScreenAtRules = substituteScreenAtRules(resolvedConfig);
 
   return {
     resolvedConfig,
     componentsRoot,
     utilitiesRoot,
     baseRoot,
-    mediaScreens,
+    screens,
     variants,
     getSubstituteVariantsAtRules,
-    variantGenerators,
+    getSubstituteScreenAtRules,
   };
 }

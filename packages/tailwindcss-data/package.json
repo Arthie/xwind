@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/tailwindcss-data",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "author": "Arthie",
   "description": "This package contains tailwindcssinjs data",
   "main": "lib/tailwindcssData.js",

@@ -1,11 +1,10 @@
-import postcss, { Rule, AtRule, Root } from "postcss";
+import postcss from "postcss";
 import merge from "lodash/merge";
 //@ts-ignore
 const timsort = require("timsort");
 
 import {
   TwObject,
-  TwObjectUtility,
   StyleObject,
   StyleObjectRuleOrAtRule,
 } from "./transformPostcss";
@@ -13,106 +12,49 @@ import {
 //@ts-ignore
 import objectify from "./postcssjs-objectify";
 
-import { parseTwSelector } from "./parseTwSelector";
+import { unescapeCSS } from "./parseTwSelector";
 
-function getStyleObjectFromRule(rule: Rule): StyleObject {
-  const parent = rule.parent;
-  let styleObject = objectify(rule);
-
-  const selector = parseTwSelector(rule.selector);
-  if (selector.remainder) {
-    styleObject = { [`&${selector.remainder}`]: styleObject };
-  }
-
-  const applyMedia = (parent: AtRule) => {
-    const atRule = `@media ${parent.params}`;
-    styleObject = { [atRule]: styleObject };
-
-    if (parent.parent.type === "atrule" && parent.parent.name === "media") {
-      applyMedia(parent.parent);
-    }
-  };
-
-  if (parent.type === "atrule" && parent.name === "media") {
-    applyMedia(parent);
-  }
-
-  return styleObject;
-}
-
-function getStyleObjectFromTwObject(twObject: TwObject): StyleObject {
-  if (twObject.type === "utility") {
-    return getStyleObjectFromRule(twObject.rule);
-  }
-
-  if (twObject.type === "component") {
-    const styleObjects = twObject.rules.map((rule) =>
-      getStyleObjectFromRule(rule)
-    );
-    return merge({}, ...styleObjects);
-  }
-
-  throw new Error(`Tailwind Object type is not supported | ${twObject}`);
-}
-
-function applyTwClassVariants(
-  variant: string,
-  styleObject: StyleObject,
-  twObject: TwObjectUtility,
-  mediaScreens: {
-    [key: string]: string;
-  },
-  variants: string[],
-  getSubstituteVariantsAtRules: (root: Root) => void
+function getStyleObjectFromTwObject(
+  twObjectRoot: postcss.Root,
+  twClass: string
 ): StyleObject {
-  let variantStyleObject = styleObject;
-  if (
-    twObject.rule.parent.type === "atrule" &&
-    twObject.rule.parent.name === "variants" &&
-    twObject.rule.parent.params.split(", ").includes("responsive") &&
-    Object.keys(mediaScreens).includes(variant)
-  ) {
-    variantStyleObject = {
-      [`@media ${mediaScreens[variant]}`]: variantStyleObject,
-    };
-    return variantStyleObject;
-  }
-
-  if (variants.includes(variant)) {
-    const root = postcss.parse(
-      `@variants ${variant} {${twObject.rule.toString()}}`,
-      { from: undefined }
-    );
-
-    getSubstituteVariantsAtRules(root);
-
-    let variantRule: any; //postcss.Rule;
-    root.walkRules((rule) => {
-      if (rule.selector === twObject.rule.selector) {
-        rule.remove();
+  const root = twObjectRoot.clone();
+  root.walkRules((rule) => {
+    if (rule.nodes) {
+      const unescapedCSS = unescapeCSS(rule.selector);
+      if (unescapedCSS === `.${twClass}`) {
+        rule.replaceWith(rule.nodes);
       } else {
-        const parsed = parseTwSelector(twObject.rule.selector);
-        rule.selector = rule.selector.replace(
-          new RegExp(`\\S*${parsed.class}`, "g"),
+        rule.selector = unescapedCSS.replace(
+          new RegExp(`\\S*${twClass}`, "g"),
           "&"
         );
-        variantRule = rule;
+        if (rule.selector === "&") {
+          rule.replaceWith(rule.nodes);
+        }
       }
-    });
-
-    variantStyleObject = {
-      [variantRule.selector]: objectify(variantRule),
-    };
-
-    if (variantRule.parent.type === "atrule") {
-      const atRule = `@${variantRule.parent.name} ${variantRule.parent.params}`;
-      variantStyleObject = {
-        [atRule]: variantStyleObject,
-      };
+    } else {
+      throw new Error(`Rule has no nodes ${root}`);
     }
-    return variantStyleObject;
+  });
+  return objectify(root);
+}
+
+function applySubstituteRules(
+  variant: postcss.AtRuleNewProps,
+  twObjectRoot: postcss.Root,
+  getSubstituteRules: (root: postcss.Root) => void
+) {
+  const root = twObjectRoot.clone();
+  if (!root.first || root.first.type !== "rule") {
+    throw new Error(`Root's first node is not of type 'rule' ${root}`);
   }
-  throw new Error(`Utility with variant class '${variant}' not found"`);
+  const atRule = postcss.atRule(variant);
+  atRule.append(root.first.clone());
+  root.first.replaceWith(atRule);
+
+  getSubstituteRules(root);
+  return root;
 }
 
 function sortStyleObject<T extends StyleObject>(styleObject: T) {
@@ -187,9 +129,11 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
         }
         return 0;
       }
+
       if (firstIsAtRule) {
         return 1;
       }
+
       if (secondIsAtRule) {
         return -1;
       }
@@ -201,95 +145,94 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
   return Object.fromEntries(styleObjectEntries);
 }
 
-function removefallbacks(styleObject: StyleObject): StyleObject {
-  const rules = Object.entries(styleObject).map(([key, value]) => {
-    if (typeof value === "string") {
-      return [key, value];
-    }
-    if (Array.isArray(value)) {
-      return [key, value.pop()];
-    } else {
-      return [key, removefallbacks(value)];
-    }
-  });
-  return Object.fromEntries(rules);
-}
-
 export function transformTwClassesToStyleObject(
   twObjectMap: Map<string, TwObject>,
   twParsedClasses: [string, string[]][],
-  mediaScreens: {
-    [key: string]: string;
-  },
+  screens: string[],
   variants: string[],
-  getSubstituteVariantsAtRules: (root: Root) => void,
-  options: { fallbacks: boolean } = { fallbacks: true }
+  getSubstituteScreenAtRules: (root: postcss.Root) => void,
+  getSubstituteVariantsAtRules: (root: postcss.Root) => void
 ) {
   const mergedStyleObject: StyleObject = {};
 
-  twParsedClasses.forEach(([twClass, twClassVariants]) => {
+  for (const [twClass, twClassVariants] of twParsedClasses) {
     const twObject = twObjectMap.get(twClass);
+    if (!twObject) throw new Error(`Class "${twClass}" not found.`);
 
-    if (twObject) {
-      let styleObject: StyleObject;
+    let styleRoot: postcss.Root = twObject.root;
 
-      //check if styleObject is cached
-      if (twObject.styleObject) {
-        styleObject = twObject.styleObject;
-      } else {
-        styleObject = getStyleObjectFromTwObject(twObject);
-        twObject.styleObject;
-        twObjectMap.set(twClass, twObject);
+    const twClassVariantsLength = twClassVariants.length;
+    if (twClassVariantsLength) {
+      if (twObject.type !== "utility") {
+        throw new Error(
+          `Variant class "${twClassVariants.join(
+            ", "
+          )}" not allowed with class "${twClass}" of type "${twObject.type}"`
+        );
       }
 
-      if (twClassVariants.length) {
-        if (twObject.type !== "utility") {
-          throw new Error(
-            `Variant class "${twClassVariants.join(
-              ", "
-            )}" not allowed with class "${twClass}" of type "${twObject.type}"`
-          );
-        }
+      if (twClassVariantsLength > 2) {
+        throw new Error(
+          `Variant classes "${twClassVariants.join(
+            ", "
+          )}" not allowed, expect max 2 variants but got "${twClassVariantsLength}"`
+        );
+      }
 
-        //TODO check if variants are possible
-        // ??? md:hover:space-x-2
-        // ??? hover:focus:text-red-200
-        //add to twStyleOcject if it has selector state, if it does merge those selectors eg with comma
-        const variantCacheKey = twClassVariants.join();
-        if (twObject.variant && twObject.variant[variantCacheKey]) {
-          styleObject = twObject.variant[variantCacheKey];
-        } else {
-          let variantStyleObject: StyleObject = styleObject;
-          for (const variant of twClassVariants) {
-            variantStyleObject = applyTwClassVariants(
-              variant,
-              variantStyleObject,
-              twObject,
-              mediaScreens,
-              variants,
+      if (
+        twClassVariantsLength === 2 &&
+        twClassVariants.every((variant) => variants.includes(variant))
+      ) {
+        throw new Error(
+          `Variant classes "${twClassVariants.join(", ")}" not allowed`
+        );
+      }
+
+      const variantCacheKey = twClassVariants.join();
+      if (!twObject.variant) {
+        twObject.variant = {};
+      }
+      if (twObject.variant[variantCacheKey]) {
+        styleRoot = twObject.variant[variantCacheKey];
+      } else {
+        for (const variant of twClassVariants) {
+          if (screens.includes(variant)) {
+            const atRuleProps = {
+              name: "screen",
+              params: variant,
+            };
+            styleRoot = applySubstituteRules(
+              atRuleProps,
+              styleRoot,
+              getSubstituteScreenAtRules
+            );
+            continue;
+          }
+
+          if (variants.includes(variant)) {
+            const atRuleProps = {
+              name: "variants",
+              params: variant,
+            };
+            styleRoot = applySubstituteRules(
+              atRuleProps,
+              styleRoot,
               getSubstituteVariantsAtRules
             );
+            styleRoot.first?.remove();
+            continue;
           }
-          if (!twObject.variant) {
-            twObject.variant = {};
-          }
-          twObject.variant[variantCacheKey] = variantStyleObject;
-          twObjectMap.set(twClass, twObject);
-          styleObject = variantStyleObject;
+
+          throw new Error(`Utility with variant class '${variant}' not found"`);
         }
+
+        twObject.variant[variantCacheKey] = styleRoot;
+        twObjectMap.set(twClass, twObject);
       }
-
-      merge(mergedStyleObject, styleObject);
-    } else {
-      throw new Error(`Class "${twClass}" not found.`);
     }
-  });
 
-  const sortedStyleObject = sortStyleObject(mergedStyleObject);
-
-  if (!options.fallbacks) {
-    return removefallbacks(sortedStyleObject);
+    merge(mergedStyleObject, getStyleObjectFromTwObject(styleRoot, twClass));
   }
 
-  return sortedStyleObject;
+  return sortStyleObject(mergedStyleObject);
 }

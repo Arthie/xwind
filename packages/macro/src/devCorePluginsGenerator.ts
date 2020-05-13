@@ -58,5 +58,7 @@ export function generateDevCorePlugins() {
   );
 
   //overwrite current devCorePlugins file with transformed code
-  fs.writeFileSync(devCorePluginPath, output?.code, "utf8");
+  if (output?.code) {
+    fs.writeFileSync(devCorePluginPath, output.code, "utf8");
+  }
 }

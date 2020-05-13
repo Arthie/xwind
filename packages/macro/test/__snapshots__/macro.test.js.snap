@@ -336,6 +336,7 @@ const css = tw\`supports-grid:text-blue-400 important[text-green-200 bg-red-300]
 
 const css = {
   "--text-opacity": "1",
+  "--bg-opacity": "1 !important",
   "--transform-translate-x": "0",
   "--transform-translate-y": "-50%",
   "--transform-rotate": "0",
@@ -343,28 +344,18 @@ const css = {
   "--transform-skew-y": "0",
   "--transform-scale-x": "1",
   "--transform-scale-y": "1",
+  color: ["#f98080", "rgba(249, 128, 128, var(--text-opacity))"],
+  backgroundColor: [
+    "#f8b4b4 !important",
+    "rgba(248, 180, 180, var(--bg-opacity)) !important",
+  ],
   margin: "0",
   marginRight: "1rem",
-  color: ["#f98080", "rgba(249, 128, 128, var(--text-opacity))"],
   transform:
     "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))",
-  "&": {
-    "--text-opacity": "1 !important",
-    "--bg-opacity": "1 !important",
-    color: [
-      "#bcf0da !important",
-      "rgba(188, 240, 218, var(--text-opacity)) !important",
-    ],
-    backgroundColor: [
-      "#f8b4b4 !important",
-      "rgba(248, 180, 180, var(--bg-opacity)) !important",
-    ],
-  },
   "@supports (display: grid)": {
-    "&": {
-      "--text-opacity": "1",
-      color: ["#76a9fa", "rgba(118, 169, 250, var(--text-opacity))"],
-    },
+    "--text-opacity": "1",
+    color: ["#76a9fa", "rgba(118, 169, 250, var(--text-opacity))"],
   },
   "@media (min-width: 1280px)": {
     "&:hover": {

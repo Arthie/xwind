@@ -122,22 +122,28 @@ function addDevImports(
   }
 }
 
+function setTailwindConfigState(state: any, config: string) {
+  try {
+    state.tailwindConfigPath = resolveTailwindConfigPath(config);
+    state.tailwindConfig = requireTailwindConfig(state.tailwindConfigPath);
+  } catch (err) {
+    state.tailwindConfig = requireTailwindConfig(); //returns default config
+  }
+}
+
 interface TailwindcssinjsMacroParams extends MacroParams {
   config?: {
-    config: string;
-    experimentalDevelopmentMode: boolean;
-    fallbacks: boolean;
+    config?: string;
+    experimentalDevelopmentMode?: boolean;
+    fallbacks?: boolean;
   };
 }
+
 function tailwindcssinjsMacro({
   references: { default: paths },
   state,
   babel: { types: t, template },
-  config = {
-    config: "./tailwind.config.js",
-    experimentalDevelopmentMode: false,
-    fallbacks: true,
-  },
+  config = {},
 }: TailwindcssinjsMacroParams) {
   config.config = config.config ?? "./tailwind.config.js";
   config.experimentalDevelopmentMode =
@@ -149,47 +155,35 @@ function tailwindcssinjsMacro({
       config.experimentalDevelopmentMode;
 
     //check for config
-    try {
-      state.tailwindConfigPath = resolveTailwindConfigPath(config.config);
-      state.tailwindConfig = requireTailwindConfig(state.tailwindConfigPath);
-      if (state.noTailwindConfig) {
-        throw new Error(
-          "Tailwind config was created please restart dev server"
-        );
-      }
-    } catch (err) {
-      //Check if tailwindconfig has been assigned so it logs only once
-      if (!state.noTailwindConfig) {
-        state.noTailwindConfig = true;
-      }
-      state.tailwindConfig = requireTailwindConfig(); //returns default config
-    }
+    setTailwindConfigState(state, config.config);
 
     if (state.dev) {
       generateDevCorePlugins();
     } else {
-      state.tailwind = tailwindcssinjs(state.tailwindConfig, corePlugins, {
-        fallbacks: config.fallbacks,
-      });
+      state.tailwind = tailwindcssinjs(
+        state.tailwindConfig,
+        corePlugins,
+        config
+      );
     }
-    state.tailwindUids = [];
 
+    state.tailwindUids = [];
     paths.forEach((referencePath) => {
       const args = getArgs(referencePath.parentPath);
 
       if (state.dev) {
         addDevImports(referencePath, t, state, config);
         const serialisedArgs = twClassesSerializer(
-          state?.tailwindConfig?.separator ?? ":"
+          state.tailwindConfig?.separator ?? ":"
         )(args);
         const call = t.callExpression(state.tailwindUids[3], [
           t.stringLiteral(serialisedArgs),
         ]);
         referencePath.parentPath.replaceWith(call);
       } else {
-        const cssObj = state.tailwind(args);
+        const styleObject = state.tailwind(args);
 
-        const ast = template.expression(JSON.stringify(cssObj), {
+        const ast = template.expression(JSON.stringify(styleObject), {
           placeholderPattern: false,
         })();
         referencePath.parentPath.replaceWith(ast);

@@ -1,12 +1,11 @@
 import isEqual from "lodash/isEqual";
 import resolveConfig from "tailwindcss/resolveConfig";
 
-import { tailwindData } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData";
 import {
-  TailwindConfig,
+  tailwindData,
   ResolvedTialwindConfig,
-} from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig";
-
+  TailwindConfig,
+} from "@tailwindcssinjs/tailwindcss-data";
 import {
   twClassesVariantsParser,
   TwClasses,
@@ -14,18 +13,24 @@ import {
 import {
   transformPostcssRootToPostcssRules,
   transformPostcssRulesToTwObjectMap,
+  transformTwClassesToStyleObject,
   TwObject,
 } from "@tailwindcssinjs/transformers";
-import { transformTwClassesToStyleObject } from "@tailwindcssinjs/transformers";
+
+import { removeStyleObjectfallbacks } from "./utils";
 
 let configCache: TailwindConfig;
 let tailwind: (arg: TwClasses) => any;
 let twObjectMap: Map<string, TwObject>;
 
+interface TailwindcssinjsOptions {
+  fallbacks?: boolean;
+}
+
 export function tailwindcssinjs(
   config: TailwindConfig,
-  corePlugins: any,
-  options?: any
+  corePlugins: (arg: ResolvedTialwindConfig) => any,
+  options?: TailwindcssinjsOptions
 ) {
   if (!configCache || !isEqual(configCache, config)) {
     if (configCache)
@@ -35,9 +40,10 @@ export function tailwindcssinjs(
     const resolvedConfig = resolveConfig(config) as ResolvedTialwindConfig;
     const variantParser = twClassesVariantsParser(resolvedConfig.separator);
     const {
-      mediaScreens,
+      screens,
       variants,
       getSubstituteVariantsAtRules,
+      getSubstituteScreenAtRules,
       componentsRoot,
       utilitiesRoot,
     } = tailwindData(resolvedConfig, corePlugins(resolvedConfig));
@@ -49,17 +55,21 @@ export function tailwindcssinjs(
       componentRules
     );
 
-    tailwind = (arg: TwClasses) => {
-      const twParsedClasses = variantParser(arg);
+    tailwind = (twClasses: TwClasses) => {
+      const twParsedClasses = variantParser(twClasses);
 
       const styleObject = transformTwClassesToStyleObject(
         twObjectMap,
         twParsedClasses,
-        mediaScreens,
+        screens,
         variants,
-        getSubstituteVariantsAtRules,
-        options
+        getSubstituteScreenAtRules,
+        getSubstituteVariantsAtRules
       );
+
+      if (!options?.fallbacks) {
+        return removeStyleObjectfallbacks(styleObject);
+      }
 
       return styleObject;
     };
