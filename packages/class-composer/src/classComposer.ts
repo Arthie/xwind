@@ -48,7 +48,8 @@ export function twClassesComposer(separator: string) {
 
   return (...twClasses: TwClasses[]) => {
     //combines all arguments into a string
-    const twClassesString = twClasses.flat(Infinity).join(" ");
+    //@ts-expect-error - typescript Array type is broken: lib.es2019.array.d.ts:23:5 - error TS2502: '"recur"' is referenced directly or indirectly in its own type annotation.
+    const twClassesString = twClasses.flat<any[]>(Infinity).join(" ");
 
     if (NESTED_ANGLE_BRACKET_REGEXP.test(twClassesString)) {
       throw new Error(`Nested variant arrays are not allowed`);
