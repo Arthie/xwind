@@ -10,7 +10,6 @@ const plugin = require("babel-plugin-macros");
 const tailwindcssConfig_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig");
 const corePlugins_1 = __importDefault(require("tailwindcss/lib/corePlugins"));
 
-const resolveConfig_1 = __importDefault(require("tailwindcss/resolveConfig"));
 const tailwindcssData_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData");
 const transformers_1 = require("@tailwindcssinjs/transformers");
 let configCache;
@@ -19,11 +18,10 @@ function tailwindcssinjs(config, corePlugins) {
   if (configCache)
     console.log("@tailwindcssinjs/macro - tailwind config changed");
   configCache = config;
-  const resolvedConfig = resolveConfig_1.default(config);
 
   const { componentsRoot, utilitiesRoot } = tailwindcssData_1.tailwindData(
-    resolvedConfig,
-    corePlugins(resolvedConfig)
+    config,
+    corePlugins
   );
   const componentRules = transformers_1.transformPostcssRootToPostcssRules(
     componentsRoot

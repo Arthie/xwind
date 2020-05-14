@@ -6,14 +6,22 @@ import corePlugins from "tailwindcss/lib/corePlugins";
 import {
   resolveTailwindConfigPath,
   requireTailwindConfig,
+  TailwindConfig,
 } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig";
 
-import { twClassesSerializer } from "@tailwindcssinjs/class-composer";
+import {
+  twClassesSerializer,
+  TwClasses,
+} from "@tailwindcssinjs/class-composer";
 
 import tailwindcssinjs from "./tailwindcssinjs";
 import { generateDevCorePlugins } from "./devCorePluginsGenerator";
 
-function getArgs(path: NodePath<types.Node>) {
+/**
+ * Returns tailwind classes from macro arguments
+ * @param path
+ */
+function getArgs(path: NodePath<types.Node>): TwClasses {
   if (path.type === "CallExpression") {
     const node = path as NodePath<types.CallExpression>;
     return node.get("arguments").map((item) => item.evaluate().value);
@@ -46,27 +54,30 @@ function getArgs(path: NodePath<types.Node>) {
   throw new Error("Invalid Nodepath");
 }
 
+/**
+ * Add development imports to the file this enables hot reloading on config changes
+ *
+ * Example imports:
+ * import tailwindconfig from "ABSULUTEPATH/tailwind.config";
+ * import devCorePlugins from "@tailwindcssinjs/macro/lib/devCorePlugins"
+ * import tailwindcssinjs from "@tailwindcssinjs/macro/lib/tailwindcssinjs";
+ * const tw = tailwindcssinjs(tailwindconfig, devCorePlugins);
+ * @param referencePath
+ * @param t
+ * @param state
+ */
 function addDevImports(
   referencePath: NodePath<types.Node>,
   t: typeof types,
-  state: any,
-  config: any
+  state: TailwindMacroParamsState
 ) {
-  // add these imports to the file
-  // import tailwindconfig from "../../tailwind.config";
-  // import devCorePlugins from "@tailwindcssinjs/macro/lib/devCorePlugins"
-  // import tailwindcssinjs from "@tailwindcssinjs/macro/lib/tailwindcssinjs";
-  // const tw = tailwindcssinjs(tailwindconfig, devCorePlugins, {fallbacks:true});
-
-  const hasimports = state.tailwindUids.every((uid: types.Identifier) =>
-    referencePath.scope.hasUid(uid.name)
-  );
-
-  if (state.tailwindUids.length === 0 || !hasimports) {
+  //check if file already has dev imports
+  if (!state.tailwindDevTwUid) {
+    //create tailwindconfig importDeclaration:
+    //import tailwindconfig from "ABSULUTEPATH/tailwind.config";
     const tailwindConfigUid = referencePath.scope.generateUidIdentifier(
       "tailwindconfig"
     );
-    state.tailwindUids.push(tailwindConfigUid);
     const tailwindConfigImport = t.importDeclaration(
       [t.importDefaultSpecifier(tailwindConfigUid)],
       t.stringLiteral(
@@ -76,44 +87,44 @@ function addDevImports(
       )
     );
 
+    //create devCorePlugins importDeclaration:
+    //import devCorePlugins from "@tailwindcssinjs/macro/lib/devCorePlugins"
     const devCorePluginsUid = referencePath.scope.generateUidIdentifier(
       "devCorePlugins"
     );
-    state.tailwindUids.push(devCorePluginsUid);
     const corePluginsImport = t.importDeclaration(
       [t.importDefaultSpecifier(devCorePluginsUid)],
       t.stringLiteral("@tailwindcssinjs/macro/lib/devCorePlugins")
     );
 
+    //create tailwindcssinjs importDeclaration:
+    //import tailwindcssinjs from "@tailwindcssinjs/macro/lib/tailwindcssinjs";
     const tailwindcssinjsUid = referencePath.scope.generateUidIdentifier(
       "tailwindcssinjs"
     );
-    state.tailwindUids.push(tailwindcssinjsUid);
     const tailwindcssinjsImport = t.importDeclaration(
       [t.importDefaultSpecifier(tailwindcssinjsUid)],
       t.stringLiteral("@tailwindcssinjs/macro/lib/tailwindcssinjs")
     );
 
+    //create tw variableDeclaration:
+    //const tw = tailwindcssinjs(tailwindconfig, devCorePlugins);
     const twUid = referencePath.scope.generateUidIdentifier("tw");
-    state.tailwindUids.push(twUid);
     const twConst = t.variableDeclaration("const", [
       t.variableDeclarator(
         twUid,
         t.callExpression(tailwindcssinjsUid, [
           tailwindConfigUid,
           devCorePluginsUid,
-          t.objectExpression([
-            t.objectProperty(
-              t.stringLiteral("fallbacks"),
-              t.booleanLiteral(config.fallbacks)
-            ),
-          ]),
         ])
       ),
     ]);
 
-    const program = state.file.path;
-    program.node.body.unshift(
+    //store uids in state
+    state.tailwindDevTwUid = twUid;
+
+    //add devImports nodes to the file
+    state.file.path.node.body.unshift(
       tailwindConfigImport,
       corePluginsImport,
       tailwindcssinjsImport,
@@ -122,7 +133,16 @@ function addDevImports(
   }
 }
 
-function setTailwindConfigState(state: any, config: string) {
+/**
+ * tries to get tailwind config and stores config in state
+ * if it fails it stores default config in state
+ * @param state
+ * @param config
+ */
+function setTailwindConfigState(
+  state: TailwindMacroParamsState,
+  config: string
+) {
   try {
     state.tailwindConfigPath = resolveTailwindConfigPath(config);
     state.tailwindConfig = requireTailwindConfig(state.tailwindConfigPath);
@@ -131,63 +151,66 @@ function setTailwindConfigState(state: any, config: string) {
   }
 }
 
+type TailwindMacroParamsState = {
+  configPath: string;
+  developmentMode: boolean;
+  isDev: boolean;
+  tailwindConfigPath?: string;
+  tailwindConfig: TailwindConfig;
+  tailwind: (arg: TwClasses) => any;
+  tailwindDevTwUid: types.Identifier;
+  file: any;
+};
+
 interface TailwindcssinjsMacroParams extends MacroParams {
-  config?: {
+  config: {
     config?: string;
-    experimentalDevelopmentMode?: boolean;
-    fallbacks?: boolean;
+    developmentMode?: boolean;
   };
+  state: TailwindMacroParamsState;
 }
 
 function tailwindcssinjsMacro({
   references: { default: paths },
   state,
   babel: { types: t, template },
-  config = {},
+  config,
 }: TailwindcssinjsMacroParams) {
-  config.config = config.config ?? "./tailwind.config.js";
-  config.experimentalDevelopmentMode =
-    config.experimentalDevelopmentMode ?? false;
-  config.fallbacks = config.fallbacks ?? true;
   try {
-    state.dev =
-      process.env.NODE_ENV === "development" &&
-      config.experimentalDevelopmentMode;
+    state.configPath = config.config ?? "./tailwind.config.js";
+    state.developmentMode = config.developmentMode ?? true;
+    state.isDev =
+      process.env.NODE_ENV === "development" && state.developmentMode;
 
-    //check for config
-    setTailwindConfigState(state, config.config);
+    setTailwindConfigState(state, state.configPath);
 
-    if (state.dev) {
+    if (state.isDev) {
       generateDevCorePlugins();
     } else {
-      state.tailwind = tailwindcssinjs(
-        state.tailwindConfig,
-        corePlugins,
-        config
-      );
+      state.tailwind = tailwindcssinjs(state.tailwindConfig, corePlugins);
     }
 
-    state.tailwindUids = [];
     paths.forEach((referencePath) => {
       const args = getArgs(referencePath.parentPath);
 
-      if (state.dev) {
-        addDevImports(referencePath, t, state, config);
+      let replacementAst: types.CallExpression | types.Expression;
+      if (state.isDev) {
+        addDevImports(referencePath, t, state);
         const serialisedArgs = twClassesSerializer(
           state.tailwindConfig?.separator ?? ":"
         )(args);
-        const call = t.callExpression(state.tailwindUids[3], [
+
+        replacementAst = t.callExpression(state.tailwindDevTwUid, [
           t.stringLiteral(serialisedArgs),
         ]);
-        referencePath.parentPath.replaceWith(call);
       } else {
-        const styleObject = state.tailwind(args);
-
-        const ast = template.expression(JSON.stringify(styleObject), {
+        const style = state.tailwind(args);
+        replacementAst = template.expression(JSON.stringify(style), {
           placeholderPattern: false,
         })();
-        referencePath.parentPath.replaceWith(ast);
       }
+
+      referencePath.parentPath.replaceWith(replacementAst);
     });
   } catch (err) {
     err.message = `@tailwindcssinjs/macro - ${err.message}`;
@@ -195,6 +218,7 @@ function tailwindcssinjsMacro({
   }
 }
 
+//@ts-expect-error babel-plugin-macros MacroParams type doesn't have config property
 export default createMacro(tailwindcssinjsMacro, {
   configName: "tailwindcssinjs",
 });

@@ -1,5 +1,4 @@
 import isEqual from "lodash/isEqual";
-import resolveConfig from "tailwindcss/resolveConfig";
 
 import {
   tailwindData,
@@ -15,38 +14,42 @@ import {
   transformPostcssRulesToTwObjectMap,
   transformTwClassesToStyleObject,
   TwObject,
+  StyleObject,
+  getGenerateTwClassSubstituteRoot,
 } from "@tailwindcssinjs/transformers";
 
-import { removeStyleObjectfallbacks } from "./utils";
+type TailwindcssinjsConfigPlugin = (styleObject: StyleObject) => StyleObject;
 
-let configCache: TailwindConfig;
+interface TailwindcssinjsConfig extends TailwindConfig {
+  tailwindcssinjs?: {
+    plugins?: TailwindcssinjsConfigPlugin[];
+  };
+}
+
+let configCache: TailwindcssinjsConfig;
 let tailwind: (arg: TwClasses) => any;
 let twObjectMap: Map<string, TwObject>;
 
-interface TailwindcssinjsOptions {
-  fallbacks?: boolean;
-}
-
-export function tailwindcssinjs(
-  config: TailwindConfig,
-  corePlugins: (arg: ResolvedTialwindConfig) => any,
-  options?: TailwindcssinjsOptions
+export default function tailwindcssinjs(
+  config: TailwindcssinjsConfig,
+  corePlugins: (arg: ResolvedTialwindConfig) => any
 ) {
   if (!configCache || !isEqual(configCache, config)) {
     if (configCache)
       console.log("@tailwindcssinjs/macro - tailwind config changed");
     configCache = config;
 
-    const resolvedConfig = resolveConfig(config) as ResolvedTialwindConfig;
-    const variantParser = twClassesVariantsParser(resolvedConfig.separator);
     const {
+      resolvedConfig,
       screens,
       variants,
       getSubstituteVariantsAtRules,
       getSubstituteScreenAtRules,
       componentsRoot,
       utilitiesRoot,
-    } = tailwindData(resolvedConfig, corePlugins(resolvedConfig));
+    } = tailwindData(config, corePlugins);
+
+    const variantParser = twClassesVariantsParser(resolvedConfig.separator);
 
     const componentRules = transformPostcssRootToPostcssRules(componentsRoot);
     const utilityRules = transformPostcssRootToPostcssRules(utilitiesRoot);
@@ -55,20 +58,26 @@ export function tailwindcssinjs(
       componentRules
     );
 
+    const generateTwClassSubstituteRoot = getGenerateTwClassSubstituteRoot(
+      screens,
+      variants,
+      getSubstituteScreenAtRules,
+      getSubstituteVariantsAtRules
+    );
+
     tailwind = (twClasses: TwClasses) => {
       const twParsedClasses = variantParser(twClasses);
 
-      const styleObject = transformTwClassesToStyleObject(
+      let styleObject = transformTwClassesToStyleObject(
         twObjectMap,
         twParsedClasses,
-        screens,
-        variants,
-        getSubstituteScreenAtRules,
-        getSubstituteVariantsAtRules
+        generateTwClassSubstituteRoot
       );
 
-      if (!options?.fallbacks) {
-        return removeStyleObjectfallbacks(styleObject);
+      if (config.tailwindcssinjs?.plugins) {
+        for (const plugin of config.tailwindcssinjs.plugins) {
+          styleObject = plugin(styleObject);
+        }
       }
 
       return styleObject;
@@ -77,5 +86,3 @@ export function tailwindcssinjs(
 
   return tailwind;
 }
-
-export default tailwindcssinjs;

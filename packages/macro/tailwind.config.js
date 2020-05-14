@@ -46,4 +46,7 @@ module.exports = {
       });
     }),
   ],
+  // tailwindcssinjs: {
+  //   plugins: [require("./lib/plugins/cssString").default],
+  // },
 };

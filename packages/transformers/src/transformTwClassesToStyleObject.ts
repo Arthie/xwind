@@ -40,23 +40,6 @@ function getStyleObjectFromTwObject(
   return objectify(root);
 }
 
-function applySubstituteRules(
-  variant: postcss.AtRuleNewProps,
-  twObjectRoot: postcss.Root,
-  getSubstituteRules: (root: postcss.Root) => void
-) {
-  const root = twObjectRoot.clone();
-  if (!root.first || root.first.type !== "rule") {
-    throw new Error(`Root's first node is not of type 'rule' ${root}`);
-  }
-  const atRule = postcss.atRule(variant);
-  atRule.append(root.first.clone());
-  root.first.replaceWith(atRule);
-
-  getSubstituteRules(root);
-  return root;
-}
-
 function sortStyleObject<T extends StyleObject>(styleObject: T) {
   const styleObjectEntries = Object.entries(styleObject);
 
@@ -148,88 +131,18 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
 export function transformTwClassesToStyleObject(
   twObjectMap: Map<string, TwObject>,
   twParsedClasses: [string, string[]][],
-  screens: string[],
-  variants: string[],
-  getSubstituteScreenAtRules: (root: postcss.Root) => void,
-  getSubstituteVariantsAtRules: (root: postcss.Root) => void
+  generateTwClassesRoot: (
+    twObjectMap: Map<string, TwObject>,
+    twParsedClass: [string, string[]]
+  ) => postcss.Root
 ) {
   const mergedStyleObject: StyleObject = {};
 
   for (const [twClass, twClassVariants] of twParsedClasses) {
-    const twObject = twObjectMap.get(twClass);
-    if (!twObject) throw new Error(`Class "${twClass}" not found.`);
-
-    let styleRoot: postcss.Root = twObject.root;
-
-    const twClassVariantsLength = twClassVariants.length;
-    if (twClassVariantsLength) {
-      if (twObject.type !== "utility") {
-        throw new Error(
-          `Variant class "${twClassVariants.join(
-            ", "
-          )}" not allowed with class "${twClass}" of type "${twObject.type}"`
-        );
-      }
-
-      if (twClassVariantsLength > 2) {
-        throw new Error(
-          `Variant classes "${twClassVariants.join(
-            ", "
-          )}" not allowed, expect max 2 variants but got "${twClassVariantsLength}"`
-        );
-      }
-
-      if (
-        twClassVariantsLength === 2 &&
-        twClassVariants.every((variant) => variants.includes(variant))
-      ) {
-        throw new Error(
-          `Variant classes "${twClassVariants.join(", ")}" not allowed`
-        );
-      }
-
-      const variantCacheKey = twClassVariants.join();
-      if (!twObject.variant) {
-        twObject.variant = {};
-      }
-      if (twObject.variant[variantCacheKey]) {
-        styleRoot = twObject.variant[variantCacheKey];
-      } else {
-        for (const variant of twClassVariants) {
-          if (screens.includes(variant)) {
-            const atRuleProps = {
-              name: "screen",
-              params: variant,
-            };
-            styleRoot = applySubstituteRules(
-              atRuleProps,
-              styleRoot,
-              getSubstituteScreenAtRules
-            );
-            continue;
-          }
-
-          if (variants.includes(variant)) {
-            const atRuleProps = {
-              name: "variants",
-              params: variant,
-            };
-            styleRoot = applySubstituteRules(
-              atRuleProps,
-              styleRoot,
-              getSubstituteVariantsAtRules
-            );
-            styleRoot.first?.remove();
-            continue;
-          }
-
-          throw new Error(`Utility with variant class '${variant}' not found"`);
-        }
-
-        twObject.variant[variantCacheKey] = styleRoot;
-        twObjectMap.set(twClass, twObject);
-      }
-    }
+    const styleRoot = generateTwClassesRoot(twObjectMap, [
+      twClass,
+      twClassVariants,
+    ]);
 
     merge(mergedStyleObject, getStyleObjectFromTwObject(styleRoot, twClass));
   }

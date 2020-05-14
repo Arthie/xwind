@@ -5,10 +5,11 @@ import "core-js/stable/object/from-entries";
 import substituteVariantsAtRules from "tailwindcss/lib/lib/substituteVariantsAtRules";
 import substituteScreenAtRules from "tailwindcss/lib/lib/substituteScreenAtRules";
 import processPlugins from "tailwindcss/lib/util/processPlugins";
+import resolveConfig from "tailwindcss/resolveConfig";
 
-import { ResolvedTialwindConfig } from "./tailwindcssConfig";
+import { ResolvedTialwindConfig, TailwindConfig } from "./tailwindcssConfig";
 
-export { TailwindConfig, ResolvedTialwindConfig } from "./tailwindcssConfig";
+export { ResolvedTialwindConfig, TailwindConfig } from "./tailwindcssConfig";
 
 function getMediaScreens(config: ResolvedTialwindConfig) {
   return Object.keys(config.theme.screens);
@@ -33,11 +34,13 @@ function getVariants(variantGenerators: any) {
 }
 
 export function tailwindData(
-  resolvedConfig: ResolvedTialwindConfig,
-  corePlugins: any[]
+  config: TailwindConfig,
+  corePlugins: (config: ResolvedTialwindConfig) => any
 ) {
+  const resolvedConfig = resolveConfig(config) as ResolvedTialwindConfig;
+
   const processedPlugins = processPlugins(
-    [...corePlugins, ...resolvedConfig.plugins],
+    [...corePlugins(resolvedConfig), ...resolvedConfig.plugins],
     resolvedConfig
   );
 
