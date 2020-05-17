@@ -1,6 +1,7 @@
 {
   "name": "@tailwindcssinjs/typescript-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "author": "Arthie",
   "description": "This package contains tailwindcssinjs typescript language service plugin",
   "main": "lib/plugin.js",
   "types": "lib",

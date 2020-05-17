@@ -76,6 +76,8 @@ function tailwindcssinjsLanguageService(
         let problems = 0;
         const diagnostics: ts.Diagnostic[] = [];
 
+        logger.log("TEST");
+
         //TODO improve this regex
         const NESTED_VARIANT_REGEXP = /(\[([^\[\]]){0,}\[[^\]]{0,}\][^\]]{0,}\])|(\[([^\[\]]){0,}\[)|(\]([^\[\]]){0,}\])/;
 
@@ -238,15 +240,15 @@ function tailwindcssinjsLanguageService(
           });
 
           if (templateContextClassPosition) {
-            const isTailwindClass =
-              templateContextClassPosition &&
-              tailwindData.twObjectMap.has(
-                templateContextClassPosition.class.text
-              );
-            // const endsWithSeparator = !templateContextClassPosition.class.text.endsWith(
-            //   tailwindConfig?.separator ?? ":"
-            // );
-            if (isTailwindClass) {
+            // const isTailwindClass =
+            //   templateContextClassPosition &&
+            //   tailwindData.twObjectMap.has(
+            //     templateContextClassPosition.class.text
+            //   );
+            const endsWithSeparator = templateContextClassPosition.class.text.endsWith(
+              tailwindConfig?.separator ?? ":"
+            );
+            if (!endsWithSeparator) {
               entry.replacementSpan = {
                 start: templateContextClassPosition.class.index,
                 length: templateContextClassPosition.class.text.length,
