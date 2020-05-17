@@ -198,7 +198,8 @@ const css3 = {
 const css4 = {
   fontSize: "4rem",
   textAlign: "justify",
-  color: "#000",
+  color: "rgba(0, 0, 0, var(--text-opacity))",
+  "--text-opacity": "1",
   "@media (min-width: 768px)": {
     ":hover": {
       fontSize: "4rem",
@@ -210,46 +211,56 @@ const css4 = {
 const css5 = {
   fontSize: "4rem",
   textAlign: "justify",
-  color: "#f7fafc",
+  color: "rgba(247, 250, 252, var(--text-opacity))",
+  "--text-opacity": "1",
   "@media (min-width: 768px)": {
     ":hover": {
       fontSize: "4rem",
       textAlign: "justify",
-      color: "#f7fafc",
+      color: "rgba(247, 250, 252, var(--text-opacity))",
+      "--text-opacity": "1",
     },
   },
 };
 const css6 = {
   textAlign: "justify",
-  color: "#cbd5e0",
+  color: "rgba(203, 213, 224, var(--text-opacity))",
+  "--text-opacity": "1",
   "@media (min-width: 768px)": {
     ":hover": {
       textAlign: "justify",
-      color: "#e2e8f0",
+      color: "rgba(226, 232, 240, var(--text-opacity))",
+      "--text-opacity": "1",
     },
   },
 };
 const css7 = {
-  color: "#718096",
+  color: "rgba(113, 128, 150, var(--text-opacity))",
+  "--text-opacity": "1",
   "@media (min-width: 768px)": {
     ":hover": {
-      color: "#718096",
+      color: "rgba(113, 128, 150, var(--text-opacity))",
+      "--text-opacity": "1",
     },
   },
 };
 const css8 = {
-  color: "#1a202c",
+  "--text-opacity": "1",
+  color: "rgba(26, 32, 44, var(--text-opacity))",
   "@media (min-width: 768px)": {
     ":hover": {
-      color: "#2d3748",
+      "--text-opacity": "1",
+      color: "rgba(45, 55, 72, var(--text-opacity))",
     },
   },
 };
 const css9 = {
-  color: "#fed7d7",
+  "--text-opacity": "1",
+  color: "rgba(254, 215, 215, var(--text-opacity))",
   "@media (min-width: 768px)": {
     ":hover": {
-      color: "#fed7d7",
+      "--text-opacity": "1",
+      color: "rgba(254, 215, 215, var(--text-opacity))",
     },
   },
 };
@@ -310,12 +321,14 @@ const css = {
   cursor: "text",
   fontSize: "4rem",
   textAlign: "justify",
-  color: "#f7fafc",
+  color: "rgba(247, 250, 252, var(--text-opacity))",
+  "--text-opacity": "1",
   "@media (min-width: 768px)": {
     ":hover": {
       fontSize: "3rem",
       textAlign: "justify",
-      color: "#f7fafc",
+      color: "rgba(247, 250, 252, var(--text-opacity))",
+      "--text-opacity": "1",
       cursor: "text",
     },
   },
@@ -335,10 +348,12 @@ const css = {
   cursor: "text",
   fontSize: "4rem",
   textAlign: "justify",
-  color: "#fbd38d",
+  color: "rgba(251, 211, 141, var(--text-opacity))",
+  "--text-opacity": "1",
   "@media (min-width: 768px)": {
     ":hover": {
-      color: "#f7fafc",
+      "--text-opacity": "1",
+      color: "rgba(247, 250, 252, var(--text-opacity))",
       fontSize: "3rem",
       textAlign: "justify",
       cursor: "text",
@@ -360,10 +375,12 @@ const css = {
   cursor: "text",
   fontSize: "4rem",
   textAlign: "justify",
-  color: "#2b6cb0",
+  color: "rgba(43, 108, 176, var(--text-opacity))",
+  "--text-opacity": "1",
   "@media (min-width: 768px)": {
     ":hover": {
-      color: "#f7fafc",
+      "--text-opacity": "1",
+      color: "rgba(247, 250, 252, var(--text-opacity))",
       fontSize: "3rem",
       textAlign: "justify",
       cursor: "text",
@@ -385,11 +402,13 @@ const css = {
   cursor: "text",
   fontSize: "4rem",
   textAlign: "justify",
-  color: "#702459",
+  color: "rgba(112, 36, 89, var(--text-opacity))",
+  "--text-opacity": "1",
   userSelect: "text",
   "@media (min-width: 768px)": {
     ":hover": {
-      color: "#1a202c",
+      "--text-opacity": "1",
+      color: "rgba(26, 32, 44, var(--text-opacity))",
       userSelect: "text",
       textAlign: "right",
       cursor: "text",

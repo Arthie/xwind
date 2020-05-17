@@ -8,7 +8,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tailwindcssConfig_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig");
 const corePlugins_1 = __importDefault(require("tailwindcss/lib/corePlugins"));
 
-const resolveConfig_1 = __importDefault(require("tailwindcss/resolveConfig"));
 const tailwindcssData_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData");
 const transformers_1 = require("@tailwindcssinjs/transformers");
 let twObjectMap;
@@ -19,11 +18,9 @@ function getTailwindClasses() {
   // );
   const config = tailwindcssConfig_1.requireTailwindConfig();
 
-  const resolvedConfig = resolveConfig_1.default(config);
-
   const { componentsRoot, utilitiesRoot } = tailwindcssData_1.tailwindData(
-    resolvedConfig,
-    corePlugins_1.default(resolvedConfig)
+    config,
+    corePlugins_1.default
   );
   const componentRules = transformers_1.transformPostcssRootToPostcssRules(
     componentsRoot
@@ -39,7 +36,7 @@ function getTailwindClasses() {
   return twObjectMap;
 }
 
-function benchBuilder(macroImport) {
+function benchBuilder(macroImport1, macroImport2) {
   const padStr = (str) => {
     return str.padEnd(30, " ");
   };
@@ -60,33 +57,74 @@ function benchBuilder(macroImport) {
   }
 
   tests.push([
-    padStr(`initial load (just import)`),
+    padStr(`1. initial load (just import)`),
     {
       code: `
-          import tw from '${macroImport}';
+          import tw from '${macroImport1}';
           `,
       snapshot: true,
     },
     ,
   ]);
 
-  classes.slice(0, 15).forEach((key) =>
+  tests.push([
+    padStr(`2. initial load (just import)`),
+    {
+      code: `
+          import tw from '${macroImport2}';
+          `,
+      snapshot: true,
+    },
+    ,
+  ]);
+
+  classes.slice(0, 15).forEach((key) => {
     tests.push([
-      padStr(`${key}`),
+      padStr(`1. ${key}`),
       {
         code: `
-  import tw from '${macroImport}';
+  import tw from '${macroImport1}';
   const css = tw\`${key}\`;
   `,
         snapshot: true,
       },
-    ])
-  );
+    ]);
+    tests.push([
+      padStr(`2. ${key}`),
+      {
+        code: `
+  import tw from '${macroImport2}';
+  const css = tw\`${key}\`;
+  `,
+        snapshot: true,
+      },
+    ]);
+  });
+
   tests.push([
-    padStr(`multiple transforms 20 classes`),
+    padStr(`1. multiple transforms 20 classes`),
     {
       code: `
-          import tw from '${macroImport}';
+          import tw from '${macroImport1}';
+          const css1 = tw\`${classes.slice(0, 20).join(" ")}\`;
+          const css2 = tw\`${classes.slice(5, 25).join(" ")}\`;
+          const css3 = tw\`${classes.slice(10, 30).join(" ")}\`;
+          const css4 = tw\`${classes.slice(15, 35).join(" ")}\`;
+          const css5 = tw\`${classes.slice(20, 40).join(" ")}\`;
+          const css6 = tw\`${classes.slice(25, 45).join(" ")}\`;
+          const css7 = tw\`${classes.slice(30, 50).join(" ")}\`;
+          const css8 = tw\`${classes.slice(35, 55).join(" ")}\`;
+          const css9 = tw\`${classes.slice(40, 60).join(" ")}\`;
+          `,
+      snapshot: true,
+    },
+  ]);
+
+  tests.push([
+    padStr(`2. multiple transforms 20 classes`),
+    {
+      code: `
+          import tw from '${macroImport2}';
           const css1 = tw\`${classes.slice(0, 20).join(" ")}\`;
           const css2 = tw\`${classes.slice(5, 25).join(" ")}\`;
           const css3 = tw\`${classes.slice(10, 30).join(" ")}\`;
@@ -101,75 +139,145 @@ function benchBuilder(macroImport) {
     },
   ]);
   tests.push([
-    padStr(`test ${classes.slice(0, 10).length} classes`),
+    padStr(`1. test ${classes.slice(0, 10).length} classes`),
     {
       code: `
-          import tw from '${macroImport}';
+          import tw from '${macroImport1}';
           const css = tw\`${classes.slice(0, 10).join(" ")}\`;
           `,
       snapshot: true,
     },
   ]);
   tests.push([
-    padStr(`test ${classes.slice(0, 20).length} classes`),
+    padStr(`2. test ${classes.slice(0, 10).length} classes`),
     {
       code: `
-          import tw from '${macroImport}';
+          import tw from '${macroImport2}';
+          const css = tw\`${classes.slice(0, 10).join(" ")}\`;
+          `,
+      snapshot: true,
+    },
+  ]);
+  tests.push([
+    padStr(`1. test ${classes.slice(0, 20).length} classes`),
+    {
+      code: `
+          import tw from '${macroImport1}';
           const css = tw\`${classes.slice(0, 20).join(" ")}\`;
           `,
       snapshot: true,
     },
   ]);
   tests.push([
-    padStr(`test ${classes.slice(0, 40).length} classes`),
+    padStr(`2. test ${classes.slice(0, 20).length} classes`),
     {
       code: `
-          import tw from '${macroImport}';
+          import tw from '${macroImport2}';
+          const css = tw\`${classes.slice(0, 20).join(" ")}\`;
+          `,
+      snapshot: true,
+    },
+  ]);
+  tests.push([
+    padStr(`1. test ${classes.slice(0, 40).length} classes`),
+    {
+      code: `
+          import tw from '${macroImport1}';
           const css = tw\`${classes.slice(0, 40).join(" ")}\`;
           `,
       snapshot: true,
     },
   ]);
   tests.push([
-    padStr(`test ${classes.slice(0, 80).length} classes`),
+    padStr(`2. test ${classes.slice(0, 40).length} classes`),
     {
       code: `
-          import tw from '${macroImport}';
+          import tw from '${macroImport2}';
+          const css = tw\`${classes.slice(0, 40).join(" ")}\`;
+          `,
+      snapshot: true,
+    },
+  ]);
+  tests.push([
+    padStr(`1. test ${classes.slice(0, 80).length} classes`),
+    {
+      code: `
+          import tw from '${macroImport1}';
           const css = tw\`${classes.slice(0, 80).join(" ")}\`;
           `,
       snapshot: true,
     },
   ]);
   tests.push([
-    padStr(`test ${classes.slice(0, 160).length} classes`),
+    padStr(`2. test ${classes.slice(0, 80).length} classes`),
     {
       code: `
-          import tw from '${macroImport}';
+          import tw from '${macroImport2}';
+          const css = tw\`${classes.slice(0, 80).join(" ")}\`;
+          `,
+      snapshot: true,
+    },
+  ]);
+  tests.push([
+    padStr(`1. test ${classes.slice(0, 160).length} classes`),
+    {
+      code: `
+          import tw from '${macroImport1}';
           const css = tw\`${classes.slice(0, 160).join(" ")}\`;
           `,
       snapshot: true,
     },
   ]);
   tests.push([
-    padStr(`test ${classes.slice(0, 220).length} classes`),
+    padStr(`2. test ${classes.slice(0, 160).length} classes`),
     {
       code: `
-          import tw from '${macroImport}';
+          import tw from '${macroImport2}';
+          const css = tw\`${classes.slice(0, 160).join(" ")}\`;
+          `,
+      snapshot: true,
+    },
+  ]);
+  tests.push([
+    padStr(`1. test ${classes.slice(0, 220).length} classes`),
+    {
+      code: `
+          import tw from '${macroImport1}';
           const css = tw\`${classes.slice(0, 220).join(" ")}\`;
           `,
       snapshot: true,
     },
   ]);
   tests.push([
-    padStr(`test all ${keys.length} classes`),
+    padStr(`2. test ${classes.slice(0, 220).length} classes`),
     {
       code: `
-          import tw from '${macroImport}';
-          const css = tw\`${keys.join(" ")}\`;
+          import tw from '${macroImport2}';
+          const css = tw\`${classes.slice(0, 220).join(" ")}\`;
           `,
       snapshot: true,
     },
   ]);
+  // tests.push([
+  //   padStr(`1. test all ${keys.length} classes`),
+  //   {
+  //     code: `
+  //         import tw from '${macroImport1}';
+  //         const css = tw\`${keys.join(" ")}\`;
+  //         `,
+  //     snapshot: true,
+  //   },
+  // ]);
+  // tests.push([
+  //   padStr(`2. test all ${keys.length} classes`),
+  //   {
+  //     code: `
+  //         import tw from '${macroImport2}';
+  //         const css = tw\`${keys.join(" ")}\`;
+  //         `,
+  //     snapshot: true,
+  //   },
+  // ]);
   return Object.fromEntries(tests);
 }
 

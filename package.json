@@ -10,14 +10,14 @@
   "scripts": {
     "test": "jest --clearCache && yarn run test-twin && yarn run test-tailwindcssinjs",
     "test-npm": "jest --clearCache && npm run test-twin && npm run test-tailwindcssinjs",
-    "test-tailwindcssinjs": "jest ./tests/tailwindcssinjs.test.js --update-snapshot",
-    "test-tailwind": "jest ./tests/tailwind.test.js --update-snapshot",
-    "test-twin": "jest ./tests/twin.test.js --update-snapshot"
+    "test-tailwindcssinjs": "jest ./tests/tailwindcssinjs.test.js",
+    "test-tailwind": "jest ./tests/tailwind.test.js",
+    "test-twin": "jest ./tests/twin.test.js"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@tailwindcss/ui": "^0.3.0",
-    "@tailwindcssinjs/macro": "0.5.2",
+    "@tailwindcssinjs/macro": "0.7.1",
     "babel-plugin-macros": "^2.8.0",
     "babel-plugin-tester": "^9.0.1",
     "jest": "^26.0.1",
@@ -25,6 +25,6 @@
     "prettier": "^2.0.5",
     "tailwind.macro": "^1.0.0-alpha.10",
     "tailwindcss": "^1.4.6",
-    "twin.macro": "^1.0.0-alpha.10"
+    "twin.macro": "^1.0.0"
   }
 }
