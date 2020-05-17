@@ -18,6 +18,7 @@ export function generateDevCorePlugins() {
   const code = fs.readFileSync(pluginPath, "utf8");
 
   const output = babel.transformSync(code, {
+    filename: "devCorePlugin.js",
     plugins: [
       function myCustomPlugin() {
         return {
