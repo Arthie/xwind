@@ -185,8 +185,7 @@ export default Button;
 
 I am currently working on:
 
-- a [vcode extension](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/vscode-extension)
-- a [Tailwindcssinjs language server](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/language-server)
+- a [vcode extension](https://github.com/Arthie/vscode-tailwindcssinjs)
 
 ---
 
