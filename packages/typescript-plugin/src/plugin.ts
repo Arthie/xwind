@@ -12,10 +12,10 @@ import { TailwindConfig } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcs
 import tailwindcssinjs, { requireTailwindConfig } from "./tailwindcssinjs";
 import { createLogger } from "./logger";
 import {
-  getTemplateContextClassesFromTemplateContext,
-  isPositionInTemplateContextClassRange,
-  TemplateContextClass,
-} from "./templateContextClass";
+  TailwindContext,
+  getTailwindContextFromPosition,
+  getTailwindContextFromTemplateContext,
+} from "./tailwindContext";
 import {
   translateCompletionItemsToCompletionEntryDetails,
   translateCompletionEntry,
@@ -29,10 +29,7 @@ let tailwindData:
       twObjectMap: Map<string, TwObject>;
       screens: string[];
       variants: string[];
-      generateTwClassSubstituteRoot: (
-        twObjectMap: Map<string, TwObject>,
-        twParsedClass: [string, string[]]
-      ) => postcss.Root;
+      generateCssFromText: (text: string) => postcss.Root[];
     }
   | undefined;
 
@@ -76,8 +73,6 @@ function tailwindcssinjsLanguageService(
         let problems = 0;
         const diagnostics: ts.Diagnostic[] = [];
 
-        logger.log("TEST");
-
         //TODO improve this regex
         const NESTED_VARIANT_REGEXP = /(\[([^\[\]]){0,}\[[^\]]{0,}\][^\]]{0,}\])|(\[([^\[\]]){0,}\[)|(\]([^\[\]]){0,}\])/;
 
@@ -97,34 +92,95 @@ function tailwindcssinjsLanguageService(
           diagnostics.push(diagnostic);
         }
 
-        const templateContextClasses = getTemplateContextClassesFromTemplateContext(
+        const tailwindContext = getTailwindContextFromTemplateContext(
           context,
           tailwindConfig?.separator ?? ":"
         );
 
-        for (const templateContextClass of templateContextClasses) {
+        for (const templateContextClass of tailwindContext) {
           if (problems > maxNumberOfProblems) break;
-          if (!tailwindData.twObjectMap.has(templateContextClass.class.text)) {
-            diagnostics.push({
-              file: context.node.getSourceFile(),
-              code: 2,
-              category: ts.DiagnosticCategory.Error,
-              start: templateContextClass.class.index,
-              length: templateContextClass.class.text.length,
-              messageText: `${templateContextClass.class.text} is not a tailwind class.`,
-              source: "tailwindcssinjs",
-            });
-            problems++;
+
+          if (templateContextClass.type === "array") {
+            for (const twClass of templateContextClass.classes) {
+              const twObject = tailwindData.twObjectMap.get(twClass.text);
+              if (!twObject) {
+                diagnostics.push({
+                  file: context.node.getSourceFile(),
+                  code: 2,
+                  category: ts.DiagnosticCategory.Error,
+                  start: twClass.index,
+                  length: twClass.text.length,
+                  messageText: `${twClass.text} is not a tailwind class.`,
+                  source: "tailwindcssinjs",
+                });
+                problems++;
+              }
+              if (twObject?.type !== "utility") {
+                diagnostics.push({
+                  file: context.node.getSourceFile(),
+                  code: 3,
+                  category: ts.DiagnosticCategory.Error,
+                  start: twClass.index,
+                  length: twClass.text.length,
+                  messageText: `${twClass.text} is not a utility class.`,
+                  source: "tailwindcssinjs",
+                });
+                problems++;
+              }
+            }
           }
-          if (templateContextClass.variant) {
-            //first:second:other
-            const [
-              first,
-              second,
-              ...other
-            ] = templateContextClass.variant.text.split(
-              tailwindConfig?.separator ?? ":"
+
+          if (templateContextClass.type === "variant") {
+            const twObject = tailwindData.twObjectMap.get(
+              templateContextClass.class.text
             );
+            if (!twObject) {
+              diagnostics.push({
+                file: context.node.getSourceFile(),
+                code: 2,
+                category: ts.DiagnosticCategory.Error,
+                start: templateContextClass.class.index,
+                length: templateContextClass.class.text.length,
+                messageText: `${templateContextClass.class.text} is not a tailwind class.`,
+                source: "tailwindcssinjs",
+              });
+              problems++;
+            }
+            if (twObject?.type !== "utility") {
+              diagnostics.push({
+                file: context.node.getSourceFile(),
+                code: 3,
+                category: ts.DiagnosticCategory.Error,
+                start: templateContextClass.class.index,
+                length: templateContextClass.class.text.length,
+                messageText: `${templateContextClass.class.text} is not a utility class.`,
+                source: "tailwindcssinjs",
+              });
+              problems++;
+            }
+          }
+
+          if (templateContextClass.type === "class") {
+            if (!tailwindData.twObjectMap.has(templateContextClass.text)) {
+              diagnostics.push({
+                file: context.node.getSourceFile(),
+                code: 5,
+                category: ts.DiagnosticCategory.Error,
+                start: templateContextClass.index,
+                length: templateContextClass.text.length,
+                messageText: `${templateContextClass.text} is not a tailwind class.`,
+                source: "tailwindcssinjs",
+              });
+              problems++;
+            }
+          }
+
+          if (
+            templateContextClass.type === "array" ||
+            templateContextClass.type === "variant"
+          ) {
+            //first:second:...other
+            const [first, second, ...other] = templateContextClass.variant;
 
             const getVariantType = (variant?: string) => {
               if (variant) {
@@ -143,11 +199,15 @@ function tailwindcssinjsLanguageService(
             if (other.length) {
               diagnostics.push({
                 file: context.node.getSourceFile(),
-                code: 3,
+                code: 6,
                 category: ts.DiagnosticCategory.Error,
-                start: templateContextClass.variant.index,
-                length: templateContextClass.variant.text.length,
-                messageText: `${templateContextClass.variant.text} is not a valid tailwind variant. The selector has more than 2 variants: ${other}.`,
+                start: templateContextClass.index,
+                length: templateContextClass.variant.join(
+                  tailwindConfig?.separator ?? ":"
+                ).length,
+                messageText: `${templateContextClass.variant.join(
+                  tailwindConfig?.separator ?? ":"
+                )} is not a valid tailwind variant. The selector has more than 2 variants: ${other}.`,
                 source: "tailwindcssinjs",
               });
               problems++;
@@ -157,11 +217,15 @@ function tailwindcssinjsLanguageService(
             if (secondType && firstType === "variants") {
               diagnostics.push({
                 file: context.node.getSourceFile(),
-                code: 4,
+                code: 7,
                 category: ts.DiagnosticCategory.Error,
-                start: templateContextClass.variant.index,
-                length: templateContextClass.variant.text.length,
-                messageText: `${templateContextClass.variant.text} is not a valid tailwind variant. "${first}" should be a screen variant`,
+                start: templateContextClass.index,
+                length: templateContextClass.variant.join(
+                  tailwindConfig?.separator ?? ":"
+                ).length,
+                messageText: `${templateContextClass.variant.join(
+                  tailwindConfig?.separator ?? ":"
+                )} is not a valid tailwind variant. "${first}" should be a screen variant`,
                 source: "tailwindcssinjs",
               });
               problems++;
@@ -171,11 +235,15 @@ function tailwindcssinjsLanguageService(
             if (!firstType && !secondType) {
               diagnostics.push({
                 file: context.node.getSourceFile(),
-                code: 5,
+                code: 8,
                 category: ts.DiagnosticCategory.Error,
-                start: templateContextClass.variant.index,
-                length: templateContextClass.variant.text.length,
-                messageText: `${templateContextClass.variant.text} is not a tailwind variant.`,
+                start: templateContextClass.index,
+                length: templateContextClass.variant.join(
+                  tailwindConfig?.separator ?? ":"
+                ).length,
+                messageText: `${templateContextClass.variant.join(
+                  tailwindConfig?.separator ?? ":"
+                )} is not a tailwind variant.`,
                 source: "tailwindcssinjs",
               });
               problems++;
@@ -185,11 +253,15 @@ function tailwindcssinjsLanguageService(
             if (firstType === "screen" && secondType === "screen") {
               diagnostics.push({
                 file: context.node.getSourceFile(),
-                code: 6,
+                code: 9,
                 category: ts.DiagnosticCategory.Error,
-                start: templateContextClass.variant.index,
-                length: templateContextClass.variant.text.length,
-                messageText: `${templateContextClass.variant.text} is not a valid tailwind variant. "${second}" should be a variant, not a screen variant`,
+                start: templateContextClass.index,
+                length: templateContextClass.variant.join(
+                  tailwindConfig?.separator ?? ":"
+                ).length,
+                messageText: `${templateContextClass.variant.join(
+                  tailwindConfig?.separator ?? ":"
+                )} is not a valid tailwind variant. "${second}" should be a variant, not a screen variant`,
                 source: "tailwindcssinjs",
               });
               problems++;
@@ -213,46 +285,46 @@ function tailwindcssinjsLanguageService(
           };
         }
 
-        const templateContextClasses = getTemplateContextClassesFromTemplateContext(
+        const tailwindContexts = getTailwindContextFromTemplateContext(
           context,
           tailwindConfig?.separator ?? ":"
         );
 
-        let templateContextClassPosition: TemplateContextClass | undefined;
-        for (const templateContextClass of templateContextClasses) {
-          if (
-            isPositionInTemplateContextClassRange(
-              position,
-              templateContextClass.class.range
-            )
-          ) {
-            templateContextClassPosition = templateContextClass;
-            break;
-          }
-        }
+        const twContext = getTailwindContextFromPosition(
+          tailwindContexts,
+          position
+        );
 
         //todo add check for is tailwind class
         const entries: ts.CompletionEntry[] = [];
         for (const key of tailwindData.twObjectMap.keys()) {
           const entry = translateCompletionEntry({
             label: key,
-            kind: vscode.CompletionItemKind.Keyword,
+            kind: vscode.CompletionItemKind.Text,
           });
 
-          if (templateContextClassPosition) {
-            // const isTailwindClass =
-            //   templateContextClassPosition &&
-            //   tailwindData.twObjectMap.has(
-            //     templateContextClassPosition.class.text
-            //   );
-            const endsWithSeparator = templateContextClassPosition.class.text.endsWith(
-              tailwindConfig?.separator ?? ":"
-            );
-            if (!endsWithSeparator) {
-              entry.replacementSpan = {
-                start: templateContextClassPosition.class.index,
-                length: templateContextClassPosition.class.text.length,
-              };
+          if (twContext) {
+            if (twContext.type === "array") {
+              const twContextClass = getTailwindContextFromPosition(
+                twContext.classes,
+                position
+              );
+              if (twContextClass) {
+                entry.replacementSpan = {
+                  start: twContextClass.index,
+                  length: twContextClass.text.length,
+                };
+              }
+            } else {
+              const endsWithSeparator = twContext.text.endsWith(
+                tailwindConfig?.separator ?? ":"
+              );
+              if (!endsWithSeparator) {
+                entry.replacementSpan = {
+                  start: twContext.index,
+                  length: twContext.text.length,
+                };
+              }
             }
           }
 
@@ -306,104 +378,45 @@ function tailwindcssinjsLanguageService(
         context: TemplateContext,
         position: ts.LineAndCharacter
       ): ts.QuickInfo | undefined {
-        //TODO: improve duplicated code
-        //cache twVariant objects
         if (!tailwindData) {
           return;
         }
-        const templateContextClasses = getTemplateContextClassesFromTemplateContext(
+        const tailwindContexts = getTailwindContextFromTemplateContext(
           context,
           tailwindConfig?.separator ?? ":"
         );
 
-        let templateContextClassPosition: TemplateContextClass | undefined;
-        for (const templateContextClass of templateContextClasses) {
-          if (
-            isPositionInTemplateContextClassRange(
-              position,
-              templateContextClass.class.range
-            )
-          ) {
-            templateContextClassPosition = templateContextClass;
-            break;
-          }
-        }
+        const twContext = getTailwindContextFromPosition(
+          tailwindContexts,
+          position
+        );
 
-        if (templateContextClassPosition) {
-          let twObjectRoot;
-          if (templateContextClassPosition.variant) {
-            const variantClass = `${templateContextClassPosition.variant.text}${
-              tailwindConfig?.separator ?? ":"
-            }${templateContextClassPosition.class.text}`;
-            const [twClass, ...variants] = variantClass
-              .split(tailwindConfig?.separator ?? ":")
-              .reverse();
-            const parsedClass: [string, string[]] = [twClass, variants];
-            twObjectRoot = tailwindData.generateTwClassSubstituteRoot(
-              tailwindData.twObjectMap,
-              parsedClass
-            );
-          } else {
-            twObjectRoot = tailwindData.twObjectMap.get(
-              templateContextClassPosition.class.text
-            )?.root;
-          }
-          if (twObjectRoot) {
-            return translateHoverItemsToQuickInfo({
-              start: templateContextClassPosition.class.index,
-              label: templateContextClassPosition.class.text,
-              kind: vscode.CompletionItemKind.Text,
-              documentation: {
-                kind: vscode.MarkupKind.Markdown,
-                value: [
-                  "```css",
-                  twObjectRoot.toString().replace(/    /g, "  "),
-                  "```",
-                ].join("\n"),
-              },
-            });
-          }
-        }
-
-        let templateContextVariantPosition: TemplateContextClass | undefined;
-        for (const templateContextClass of templateContextClasses) {
-          if (
-            templateContextClass.variant &&
-            isPositionInTemplateContextClassRange(
-              position,
-              templateContextClass.variant.range
-            )
-          ) {
-            templateContextVariantPosition = templateContextClass;
-            break;
-          }
-        }
-
-        if (templateContextVariantPosition?.variant) {
-          const variantClass = `${templateContextVariantPosition.variant.text}${
-            tailwindConfig?.separator ?? ":"
-          }${templateContextVariantPosition.class.text}`;
-          const [twClass, ...variants] = variantClass
-            .split(tailwindConfig?.separator ?? ":")
-            .reverse();
-          const parsedClass: [string, string[]] = [twClass, variants];
-          const variantTwObject = tailwindData.generateTwClassSubstituteRoot(
-            tailwindData.twObjectMap,
-            parsedClass
-          );
+        const getQuickInfo = (
+          twContext: TailwindContext,
+          twObjectRoots: postcss.Root[]
+        ) => {
           return translateHoverItemsToQuickInfo({
-            start: templateContextVariantPosition.variant.index,
-            label: templateContextVariantPosition.variant.text,
+            start: twContext.index,
+            label: twContext.text,
             kind: vscode.CompletionItemKind.Text,
             documentation: {
               kind: vscode.MarkupKind.Markdown,
               value: [
                 "```css",
-                variantTwObject.toString().replace(/    /g, "  "),
+                ...twObjectRoots.map((twObjectRoot: postcss.Root) => [
+                  twObjectRoot.toString().replace(/    /g, "  "),
+                ]),
                 "```",
               ].join("\n"),
             },
           });
+        };
+
+        if (twContext) {
+          const twObjectRoots = tailwindData.generateCssFromText(
+            twContext.text
+          );
+          return getQuickInfo(twContext, twObjectRoots);
         }
       },
     };

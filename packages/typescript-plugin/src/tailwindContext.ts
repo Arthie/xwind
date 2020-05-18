@@ -1,28 +1,42 @@
 import "core-js/stable/string/match-all";
 import { TemplateContext } from "typescript-template-language-service-decorator";
-
-export interface TemplateContextClassRange {
+export interface TailwindContextRange {
   start: ts.LineAndCharacter;
   end: ts.LineAndCharacter;
 }
 
-export interface TemplateContextClass {
-  class: {
-    text: string;
-    index: number;
-    range: TemplateContextClassRange;
-  };
-  variant?: {
-    text: string;
-    index: number;
-    range: TemplateContextClassRange;
-  };
+export interface TailwindContextBase {
+  type: string;
+  text: string;
+  index: number;
+  range: TailwindContextRange;
 }
 
-export function getTemplateContextClassesFromTemplateContext(
+export interface TailwindContextClass extends TailwindContextBase {
+  type: "class";
+}
+
+export interface TailwindContextVariant extends TailwindContextBase {
+  type: "variant";
+  variant: string[];
+  class: TailwindContextClass;
+}
+
+export interface TailwindContextVariantArray extends TailwindContextBase {
+  type: "array";
+  variant: string[];
+  classes: TailwindContextClass[];
+}
+
+export type TailwindContext =
+  | TailwindContextClass
+  | TailwindContextVariant
+  | TailwindContextVariantArray;
+
+export function getTailwindContextFromTemplateContext(
   context: TemplateContext,
   separator: string
-): TemplateContextClass[] {
+): TailwindContext[] {
   const { text } = context;
   const VARIANT_ARRAY_SYNTAX_REGEX = new RegExp(
     `(?<variant>\\S+(?:\\${separator}\\w+)?)\\[(?<classes>(?:.|\\n)*?)\\]`,
@@ -36,7 +50,7 @@ export function getTemplateContextClassesFromTemplateContext(
 
   const REPLACE_REGEX = /[^\n]/g;
 
-  const templateContextClasses: TemplateContextClass[] = [];
+  const templateContextClasses: TailwindContext[] = [];
 
   const variantArraySyntaxReplacer = (
     substring: string,
@@ -52,27 +66,31 @@ export function getTemplateContextClassesFromTemplateContext(
     //matches tailwind classes and removes whitespace
     //" text-red-100  bg-blue-200 " => ["text-red-100", "bg-blue-200"]
     const twClasses = variantclasses.match(NOT_WHITE_SPACE_REGEX) ?? [];
+    const classes: TailwindContextClass[] = [];
     for (const twClass of twClasses) {
       const index = searchIndex + substring.indexOf(twClass);
-      templateContextClasses.push({
-        class: {
-          text: twClass,
-          index,
-          range: {
-            start: context.toPosition(index),
-            end: context.toPosition(index + twClass.length),
-          },
-        },
-        variant: {
-          text: variant,
-          index: searchIndex,
-          range: {
-            start: context.toPosition(searchIndex),
-            end: context.toPosition(searchIndex + variant.length),
-          },
+      classes.push({
+        type: "class",
+        text: twClass,
+        index,
+        range: {
+          start: context.toPosition(index),
+          end: context.toPosition(index + twClass.length),
         },
       });
     }
+    templateContextClasses.push({
+      type: "array",
+      variant: variant.split(separator),
+      classes,
+      text: substring,
+      index: searchIndex,
+      range: {
+        start: context.toPosition(searchIndex),
+        end: context.toPosition(searchIndex + substring.length),
+      },
+    });
+
     return substring.replace(REPLACE_REGEX, " ");
   };
 
@@ -91,7 +109,11 @@ export function getTemplateContextClassesFromTemplateContext(
 
     const index = searchIndex + substring.indexOf(twClass);
     templateContextClasses.push({
+      type: "variant",
+      variant: variant.split(separator),
+      text: substring,
       class: {
+        type: "class",
         text: twClass,
         index,
         range: {
@@ -99,13 +121,10 @@ export function getTemplateContextClassesFromTemplateContext(
           end: context.toPosition(index + twClass.length),
         },
       },
-      variant: {
-        text: variant,
-        index: searchIndex,
-        range: {
-          start: context.toPosition(searchIndex),
-          end: context.toPosition(searchIndex + variant.length),
-        },
+      index: searchIndex,
+      range: {
+        start: context.toPosition(searchIndex),
+        end: context.toPosition(searchIndex + substring.length),
       },
     });
 
@@ -123,13 +142,12 @@ export function getTemplateContextClassesFromTemplateContext(
     const index = twClassMatch.index;
     if (index) {
       templateContextClasses.push({
-        class: {
-          text: twClassMatch[0],
-          index,
-          range: {
-            start: context.toPosition(index),
-            end: context.toPosition(index + twClassMatch[0].length),
-          },
+        type: "class",
+        text: twClassMatch[0],
+        index,
+        range: {
+          start: context.toPosition(index),
+          end: context.toPosition(index + twClassMatch[0].length),
         },
       });
     }
@@ -137,14 +155,25 @@ export function getTemplateContextClassesFromTemplateContext(
   return templateContextClasses;
 }
 
-export function isPositionInTemplateContextClassRange(
-  position: ts.LineAndCharacter,
-  templateContextClassRange: TemplateContextClassRange
+export function getTailwindContextFromPosition(
+  tailwindContexts: TailwindContext[],
+  position: ts.LineAndCharacter
 ) {
-  const classStartLine = templateContextClassRange.start.line;
-  const classEndLine = templateContextClassRange.end.line;
-  const classStartCharacter = templateContextClassRange.start.character;
-  const classEndCharacter = templateContextClassRange.end.character;
+  for (const tailwindContext of tailwindContexts) {
+    if (isPositionInTailwindContextRange(position, tailwindContext.range)) {
+      return tailwindContext;
+    }
+  }
+}
+
+export function isPositionInTailwindContextRange(
+  position: ts.LineAndCharacter,
+  tailwindContextRange: TailwindContextRange
+) {
+  const classStartLine = tailwindContextRange.start.line;
+  const classEndLine = tailwindContextRange.end.line;
+  const classStartCharacter = tailwindContextRange.start.character;
+  const classEndCharacter = tailwindContextRange.end.character;
   const line = position.line;
   const character = position.character;
   let insideLine = false;

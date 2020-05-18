@@ -93,6 +93,7 @@ function translateCompletionItemKind(
       return ts.ScriptElementKind.moduleElement;
     case vscode.CompletionItemKind.Snippet:
     case vscode.CompletionItemKind.Text:
+      return ts.ScriptElementKind.string;
     default:
       return ts.ScriptElementKind.unknown;
   }

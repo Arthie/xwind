@@ -1,10 +1,10 @@
 {
-  "name": "@tailwindcssinjs/typescript-plugin",
-  "version": "0.1.1",
+  "name": "typescript-tailwindcssinjs-plugin",
+  "version": "0.1.0",
   "author": "Arthie",
   "description": "This package contains tailwindcssinjs typescript language service plugin",
   "main": "lib/plugin.js",
-  "types": "lib",
+  "types": "lib/plugin.d.ts",
   "files": [
     "lib"
   ],
@@ -13,10 +13,10 @@
     "build": "tsc --build"
   },
   "peerDependencies": {
-    "tailwindcss": "1.x",
-    "typescript": "^3.x"
+    "tailwindcss": "1.x"
   },
   "dependencies": {
+    "@tailwindcssinjs/class-composer": "^0.5.1",
     "@tailwindcssinjs/tailwindcss-data": "0.7.0",
     "@tailwindcssinjs/transformers": "0.7.0",
     "core-js": "^3.6.5",
