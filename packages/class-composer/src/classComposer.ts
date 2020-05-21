@@ -17,7 +17,7 @@ export function twClassesComposer(separator: string) {
 
   // captures variant arrays syntax =>  sm:hover[text-red-100 bg-blue-200]
   const VARIANT_ARRAY_SYNTAX_REGEX = new RegExp(
-    `(?<variant>\\S+(?:\\${separator}\\w+)?)\\[(?<classes>(?:.|\\n)*?)\\]`,
+    `(\\S+(?:\\${separator}\\w+)?)\\[((?:.|\\n)*?)\\]`,
     "g"
   );
 
