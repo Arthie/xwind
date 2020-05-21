@@ -27,7 +27,7 @@ Valid composer function parameters are:
 
 `Note:` It will return the composed classes in the same order as the input parameters, from left to right.
 
-#### Variant syntax
+#### Variant array syntax
 
 `"variant[class1 class2]" => "variant:class1 variant:class2"`  
 Support for custom variant array syntax.
