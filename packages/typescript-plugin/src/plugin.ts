@@ -276,7 +276,7 @@ function tailwindcssinjsLanguageService(
         context: TemplateContext,
         position: ts.LineAndCharacter
       ): ts.CompletionInfo {
-        if (!tailwindData?.twObjectMap) {
+        if (!tailwindData) {
           return {
             isGlobalCompletion: false,
             isMemberCompletion: false,
@@ -327,8 +327,18 @@ function tailwindcssinjsLanguageService(
               }
             }
           }
-
           entries.push(entry);
+        }
+
+        for (const variant of [
+          ...tailwindData.screens,
+          ...tailwindData.variants,
+        ]) {
+          const variantEntry = translateCompletionEntry({
+            label: variant,
+            kind: vscode.CompletionItemKind.Function,
+          });
+          entries.push(variantEntry);
         }
 
         return {
@@ -381,6 +391,7 @@ function tailwindcssinjsLanguageService(
         if (!tailwindData) {
           return;
         }
+
         const tailwindContexts = getTailwindContextFromTemplateContext(
           context,
           tailwindConfig?.separator ?? ":"

@@ -39,17 +39,12 @@ export function getTailwindContextFromTemplateContext(
 ): TailwindContext[] {
   const { text } = context;
   const VARIANT_ARRAY_SYNTAX_REGEX = new RegExp(
-    `(?<variant>\\S+(?:\\${separator}\\w+)?)\\[(?<classes>(?:.|\\n)*?)\\]`,
+    `(\\S+(?:\\${separator}\\w+)?)\\[((?:.|\\n)*?)\\]`,
     "g"
   );
-  const VARIANT_REGEX = new RegExp(
-    `(?:(?<variant>\\S+)${separator})+(?<classes>\\S+)`,
-    "g"
-  );
+  const VARIANT_REGEX = new RegExp(`(?:(\\S+)${separator})+(\\S+)`, "g");
   const NOT_WHITE_SPACE_REGEX = /\S+/g;
-
   const REPLACE_REGEX = /[^\n]/g;
-
   const templateContextClasses: TailwindContext[] = [];
 
   const variantArraySyntaxReplacer = (
@@ -140,7 +135,7 @@ export function getTailwindContextFromTemplateContext(
   const twClassMatches = variantLess.matchAll(NOT_WHITE_SPACE_REGEX);
   for (const twClassMatch of twClassMatches) {
     const index = twClassMatch.index;
-    if (index) {
+    if (typeof index === "number") {
       templateContextClasses.push({
         type: "class",
         text: twClassMatch[0],
