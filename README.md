@@ -16,7 +16,7 @@ You may have encountered some of these problems when using Tailwind with CSS-in-
 
 ## Features / Goals
 
-- Solves all of the above problems
+- Solve all of the above problems
 - Automatically compatible with latest Tailwind version **>1.4.x**
 - New syntax to apply variants to multiple utility classes `md:hover[text-xs font-normal]`
 - Reacts to changes in made in `tailwind.config.js`
