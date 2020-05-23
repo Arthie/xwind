@@ -80,7 +80,7 @@ color: rgba(253, 232, 232, var(--text-opacity));
 
 Plugins make it possible to support any CSS-in-JS library syntax.
 
-### Go to [@tailwindcssinjs/macro Documentation](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/macro)
+### [@tailwindcssinjs/macro Documentation](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/macro)
 
 ---
 
