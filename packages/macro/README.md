@@ -48,7 +48,7 @@ const styles = `
     background-color: #c3ddfd;
     background-color: rgba(195, 221, 253, var(--bg-opacity));
   }
-`
+`;
 ```
 
 Plugins make it possible to support any CSS-in-JS library syntax.
@@ -76,10 +76,10 @@ yarn add -D @tailwindcssinjs/macro tailwindcss
 import "tailwindcss/dist/base.min.css";
 ```
 
-If you use Tailwind plugins that register new base styles you will need to generate a customized base css file.
+If you use Tailwind plugins that register new base styles you will need to generate a customized base CSS file.
 
 <details>
-  <summary>Generate base css with Tailwind cli</summary>
+  <summary>Generate base CSS with Tailwind cli</summary>
 
 #### 2.1 Create a tailwind.base.css file
 
@@ -113,9 +113,156 @@ npx tailwindcss init
 
 Check out the [Tailwind documentation](https://tailwindcss.com/docs/configuration) for customizing the Tailwind config file.
 
+## Customization
+
+### Babel macro configuration
+
+```json
+// package.json
+"babelMacros": {
+    "tailwindcssinjs": {
+      "config": "./tailwind.config.js",  //Path to 'tailwind.config.js'
+      "developmentMode": true //Enable reacting to tailwind.config.js changes
+    }
+},
+```
+
+```js
+// babel-plugin-macros.config.js
+module.exports = {
+  tailwindcssinjs: {
+    config: "./tailwind.config.js", //Path to 'tailwind.config.js'
+    developmentMode: true, //Enable reacting to tailwind.config.js changes
+  },
+};
+```
+
+### Tailwindcssinjs plugins (experimental)
+
+To support the different CSS-in-JS syntaxes we need a way to change the macro's default output this can be done with tailwindcssinjs plugins.
+
+`note: this is still experimental breaking changes are possible`
+
+tailwindcssinjs plugins are added in the `tailwind.config.js` file
+
+```js
+// tailwind.config.js
+
+module.exports = {
+  theme: {},
+  variants: {},
+  plugins: [],
+
+  //this is added
+  tailwindcssinjs: {
+    plugins: [
+      /* your plugins */
+    ],
+  },
+};
+```
+
+#### Tailwindcssinjs plugin list
+
+**CSS string**
+
+```js
+// tailwind.config.js
+module.exports = {
+  tailwindcssinjs: {
+    plugins: [require("@tailwindcssinjs/macro/lib/plugins/cssString").default];
+  }
+};
+```
+
+<details>
+  <summary>CSS string plugin output example</summary>
+
+Default
+
+```js
+const styles = {
+  "--text-opacity": "1",
+  color: ["#fde8e8", "rgba(253, 232, 232, var(--text-opacity))"],
+  "&:hover": {
+    "--text-opacity": "1",
+    "--bg-opacity": "1",
+    color: ["#def7ec", "rgba(222, 247, 236, var(--text-opacity))"],
+    backgroundColor: ["#c3ddfd", "rgba(195, 221, 253, var(--bg-opacity))"],
+  },
+};
+```
+
+With CSS string plugin
+
+```js
+const styles = `
+  --text-opacity: 1;
+  color: #fde8e8;
+  color: rgba(253, 232, 232, var(--text-opacity));
+  &:hover {
+    --text-opacity: 1;
+    --bg-opacity: 1;
+    color: #def7ec;
+    color: rgba(222, 247, 236, var(--text-opacity));
+    background-color: #c3ddfd;
+    background-color: rgba(195, 221, 253, var(--bg-opacity));
+  }
+`;
+```
+
+</details>
+
+**Remove fallbacks**
+
+```js
+// tailwind.config.js
+module.exports = {
+  tailwindcssinjs: {
+    plugins: [require("@tailwindcssinjs/macro/lib/plugins/removeFallbacks").default];
+  }
+};
+```
+
+<details>
+  <summary>Remove fallbacks plugin output example</summary>
+Default
+
+```js
+const styles = {
+  "--text-opacity": "1",
+  color: ["#fde8e8", "rgba(253, 232, 232, var(--text-opacity))"],
+  "&:hover": {
+    "--text-opacity": "1",
+    "--bg-opacity": "1",
+    color: ["#def7ec", "rgba(222, 247, 236, var(--text-opacity))"],
+    backgroundColor: ["#c3ddfd", "rgba(195, 221, 253, var(--bg-opacity))"],
+  },
+};
+```
+
+With remove fallbacks plugin
+
+```js
+const styles = {
+  "--text-opacity": "1",
+  color: "rgba(253, 232, 232, var(--text-opacity))",
+  "&:hover": {
+    "--text-opacity": "1",
+    "--bg-opacity": "1",
+    color: "rgba(222, 247, 236, var(--text-opacity))",
+    backgroundColor: "rgba(195, 221, 253, var(--bg-opacity))",
+  },
+};
+```
+
+</details>
+
+####
+
 ## Advanced Examples
 
-[Codesandbox](https://codesandbox.io/s/tailwindcssinjsmacro-simple-example-wds6l?file=/pages/index.tsx) with Typescript, [Nextjs](https://nextjs.org/) and [Emotion](https://emotion.sh/docs/introduction)
+[Codesandbox](https://codesandbox.io/s/tailwindcssinjsmacro-simple-example-nzyu8?file=/pages/index.tsx) with Typescript, [Nextjs](https://nextjs.org/) and [Emotion](https://emotion.sh/docs/introduction)
 
 [Official Next.js example - Tailwind CSS with Emotion.js](https://github.com/zeit/next.js/tree/canary/examples/with-tailwindcss-emotion)
 

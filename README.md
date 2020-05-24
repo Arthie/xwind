@@ -62,20 +62,22 @@ const styles = {
 };
 ```
 
-Transform to plain CSS with the CSS string plugin:
+Transform to CSS string syntax with the CSS string plugin:
 
-```css
---text-opacity: 1;
-color: #fde8e8;
-color: rgba(253, 232, 232, var(--text-opacity));
-&:hover {
+```js
+const styles = `
   --text-opacity: 1;
-  --bg-opacity: 1;
-  color: #def7ec;
-  color: rgba(222, 247, 236, var(--text-opacity));
-  background-color: #c3ddfd;
-  background-color: rgba(195, 221, 253, var(--bg-opacity));
-}
+  color: #fde8e8;
+  color: rgba(253, 232, 232, var(--text-opacity));
+  &:hover {
+    --text-opacity: 1;
+    --bg-opacity: 1;
+    color: #def7ec;
+    color: rgba(222, 247, 236, var(--text-opacity));
+    background-color: #c3ddfd;
+    background-color: rgba(195, 221, 253, var(--bg-opacity));
+  }
+`;
 ```
 
 Plugins make it possible to support any CSS-in-JS library syntax.
