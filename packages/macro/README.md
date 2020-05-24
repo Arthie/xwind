@@ -6,6 +6,53 @@
 
 ### [Documentation](https://github.com/Arthie/tailwindcssinjs)
 
+`@tailwindcssinjs/macro` is a babel macro that transforms Tailwind classes into CSS object styles. These CSS object styles can be used with your favorite CSS-in-JS library like emotion, styled-components ...
+
+### Basic example
+
+```js
+import tw from "@tailwindcssinjs/macro";
+
+const styles = tw`text-red-100 hover:text-green-100 hover:bg-blue-200`;
+// OR (with custom array syntax)
+const styles = tw`text-red-100 hover[text-green-100 bg-blue-200]`;
+```
+
+Transforms by default into Postcss-js / JSS compatible syntax:
+
+```js
+const styles = {
+  "--text-opacity": "1",
+  color: ["#fde8e8", "rgba(253, 232, 232, var(--text-opacity))"],
+  "&:hover": {
+    "--text-opacity": "1",
+    "--bg-opacity": "1",
+    color: ["#def7ec", "rgba(222, 247, 236, var(--text-opacity))"],
+    backgroundColor: ["#c3ddfd", "rgba(195, 221, 253, var(--bg-opacity))"],
+  },
+};
+```
+
+Transform to CSS string syntax with the CSS string plugin:
+
+```js
+const styles = `
+  --text-opacity: 1;
+  color: #fde8e8;
+  color: rgba(253, 232, 232, var(--text-opacity));
+  &:hover {
+    --text-opacity: 1;
+    --bg-opacity: 1;
+    color: #def7ec;
+    color: rgba(222, 247, 236, var(--text-opacity));
+    background-color: #c3ddfd;
+    background-color: rgba(195, 221, 253, var(--bg-opacity));
+  }
+`
+```
+
+Plugins make it possible to support any CSS-in-JS library syntax.
+
 ## Install
 
 ### 0. Prerequisites:
@@ -71,57 +118,6 @@ Check out the [Tailwind documentation](https://tailwindcss.com/docs/configuratio
 [Codesandbox](https://codesandbox.io/s/tailwindcssinjsmacro-simple-example-wds6l?file=/pages/index.tsx) with Typescript, [Nextjs](https://nextjs.org/) and [Emotion](https://emotion.sh/docs/introduction)
 
 [Official Next.js example - Tailwind CSS with Emotion.js](https://github.com/zeit/next.js/tree/canary/examples/with-tailwindcss-emotion)
-
-#### React + Emotion: Button component example
-
-```js
-import React from "react";
-import { css, cx } from "@emotion/css";
-import tw from "@tailwindcssinjs/macro";
-
-//"React native style"
-const styles = {
-  button: css(tw`
-    relative
-    w-full
-    flex justify-center
-    py-2 px-4
-    border border-transparent
-    text-sm leading-5 font-medium
-    rounded-md
-    text-white
-    bg-gray-600
-    hover:bg-gray-500
-    focus[outline-none border-gray-700 shadow-outline-gray]
-    active:bg-gray-700
-    transition duration-150 ease-in-out
-  `),
-};
-
-const Button = ({ className, children, ...props }) => (
-  <button {...props} className={cx(styles.button, "group", className)}>
-    {/* inline style */}
-    <span className={css(tw`absolute left-0 inset-y-0 flex items-center pl-3`)}>
-      <svg
-        className={css(
-          tw`h-5 w-5 text-gray-500 group-hover:text-gray-400 transition ease-in-out duration-150`
-        )}
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path
-          fillRule="evenodd"
-          d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </span>
-    {children}
-  </button>
-);
-
-export default Button;
-```
 
 ## License
 
