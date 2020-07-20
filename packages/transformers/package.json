@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "css-what": "^3.2.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "postcss": "^7.0.30",
     "postcss-js": "^2.0.3",
     "timsort": "^0.3.0"

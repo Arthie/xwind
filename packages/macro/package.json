@@ -32,7 +32,7 @@
     "@tailwindcssinjs/tailwindcss-data": "0.7.0",
     "@tailwindcssinjs/transformers": "0.7.0",
     "babel-plugin-macros": "^2.8.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "postcss-js": "^2.0.3"
   }
 }
