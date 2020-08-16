@@ -1,5 +1,4 @@
 import postcss from "postcss";
-import "core-js/stable/object/from-entries";
 
 //Tailwindcss imports
 import substituteVariantsAtRules from "tailwindcss/lib/lib/substituteVariantsAtRules";
@@ -18,14 +17,18 @@ function getMediaScreens(config: ResolvedTialwindConfig) {
 function getVariants(variantGenerators: any) {
   return [
     "default",
+    "motion-safe",
+    "motion-reduce",
     "group-hover",
     "group-focus",
     "hover",
     "focus-within",
+    "focus-visible",
     "focus",
     "active",
     "visited",
     "disabled",
+    "checked",
     "first",
     "last",
     "odd",
