@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`macros correct usage 1: correct usage 1 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("sm:motion-reduce:translate-y-0 motion-reduce:hover:translate-y-0 md:motion-reduce:hover:translate-y-0");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 640px)": {
+    "@media (prefers-reduced-motion: reduce)": {
+      "--transform-translate-y": "0",
+    },
+  },
+  "@media (prefers-reduced-motion: reduce)": {
+    "&:hover": {
+      "--transform-translate-y": "0",
+    },
+  },
+  "@media (min-width: 1024px)": {
+    "@media (prefers-reduced-motion: reduce)": {
+      "&:hover": {
+        "--transform-translate-y": "0",
+      },
+    },
+  },
+};
+
+
+`;
+
+exports[`macros no usage: no usage 1`] = `
+
+import tw from '../lib/macro'
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+
+
+`;

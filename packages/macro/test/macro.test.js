@@ -33,13 +33,12 @@ pluginTester.default({
       import tw from '../lib/macro';
       const css = tw\`container form-input\`
     `,
-    "variant class not allowed": {
+    "variant component class": {
       code: `
       import tw from '../lib/macro';
       const css = tw\`md[container] form-input\`
       `,
       snapshot: true,
-      error: /Variant class/,
     },
     "class not found error": {
       code: `

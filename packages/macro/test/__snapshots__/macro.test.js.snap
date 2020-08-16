@@ -448,14 +448,57 @@ const css = {
 
 `;
 
-exports[`macros variant class not allowed: variant class not allowed 1`] = `
+exports[`macros variant component class: variant component class 1`] = `
 
 import tw from '../lib/macro';
 const css = tw\`md[container] form-input\`
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test.js: Error: @tailwindcssinjs/macro - Variant class "md" not allowed with class "container" of type "component"
+const css = {
+  appearance: "none",
+  backgroundColor: "#ffffff",
+  borderColor: "#d2d6dc",
+  borderWidth: "1px",
+  borderRadius: "0.375rem",
+  paddingTop: "0.5rem",
+  paddingRight: "0.75rem",
+  paddingBottom: "0.5rem",
+  paddingLeft: "0.75rem",
+  fontSize: "1rem",
+  lineHeight: "1.5",
+  "&::placeholder": {
+    color: "#9fa6b2",
+    opacity: "1",
+  },
+  "&:focus": {
+    outline: "none",
+    boxShadow: "0 0 0 3px rgba(164, 202, 254, 0.45)",
+    borderColor: "#a4cafe",
+  },
+  "@media (min-width: 1024px)": {
+    width: "100%",
+    "@media (min-width: 640px)": {
+      maxWidth: "640px",
+    },
+    "@media (min-width: 668px)": {
+      maxWidth: "668px",
+    },
+    "@media (min-width: 868px)": {
+      maxWidth: "868px",
+    },
+    "@media (min-width: 1024px)": {
+      maxWidth: "1024px",
+    },
+    "@media (min-width: 1280px)": {
+      maxWidth: "1280px",
+    },
+    "@media (min-width: 1536px)": {
+      maxWidth: "1536px",
+    },
+  },
+};
+
 
 `;
 

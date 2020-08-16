@@ -728,6 +728,20 @@ const css = {
 
 `;
 
+exports[`macros -m-44: -m-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-m-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  margin: "-11rem",
+};
+
+
+`;
+
 exports[`macros -m-48: -m-48 1`] = `
 
 import tw from '../lib/macro';
@@ -737,6 +751,20 @@ const css = tw("-m-48");
 
 const css = {
   margin: "-12rem",
+};
+
+
+`;
+
+exports[`macros -m-52: -m-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-m-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  margin: "-13rem",
 };
 
 
@@ -1582,6 +1610,20 @@ const css = {
 
 `;
 
+exports[`macros -mb-44: -mb-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-mb-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginBottom: "-11rem",
+};
+
+
+`;
+
 exports[`macros -mb-48: -mb-48 1`] = `
 
 import tw from '../lib/macro';
@@ -1591,6 +1633,20 @@ const css = tw("-mb-48");
 
 const css = {
   marginBottom: "-12rem",
+};
+
+
+`;
+
+exports[`macros -mb-52: -mb-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-mb-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginBottom: "-13rem",
 };
 
 
@@ -2436,6 +2492,20 @@ const css = {
 
 `;
 
+exports[`macros -ml-44: -ml-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-ml-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginLeft: "-11rem",
+};
+
+
+`;
+
 exports[`macros -ml-48: -ml-48 1`] = `
 
 import tw from '../lib/macro';
@@ -2445,6 +2515,20 @@ const css = tw("-ml-48");
 
 const css = {
   marginLeft: "-12rem",
+};
+
+
+`;
+
+exports[`macros -ml-52: -ml-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-ml-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginLeft: "-13rem",
 };
 
 
@@ -3290,6 +3374,20 @@ const css = {
 
 `;
 
+exports[`macros -mr-44: -mr-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-mr-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginRight: "-11rem",
+};
+
+
+`;
+
 exports[`macros -mr-48: -mr-48 1`] = `
 
 import tw from '../lib/macro';
@@ -3299,6 +3397,20 @@ const css = tw("-mr-48");
 
 const css = {
   marginRight: "-12rem",
+};
+
+
+`;
+
+exports[`macros -mr-52: -mr-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-mr-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginRight: "-13rem",
 };
 
 
@@ -4144,6 +4256,20 @@ const css = {
 
 `;
 
+exports[`macros -mt-44: -mt-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-mt-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginTop: "-11rem",
+};
+
+
+`;
+
 exports[`macros -mt-48: -mt-48 1`] = `
 
 import tw from '../lib/macro';
@@ -4153,6 +4279,20 @@ const css = tw("-mt-48");
 
 const css = {
   marginTop: "-12rem",
+};
+
+
+`;
+
+exports[`macros -mt-52: -mt-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-mt-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginTop: "-13rem",
 };
 
 
@@ -5050,6 +5190,21 @@ const css = {
 
 `;
 
+exports[`macros -mx-44: -mx-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-mx-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginLeft: "-11rem",
+  marginRight: "-11rem",
+};
+
+
+`;
+
 exports[`macros -mx-48: -mx-48 1`] = `
 
 import tw from '../lib/macro';
@@ -5060,6 +5215,21 @@ const css = tw("-mx-48");
 const css = {
   marginLeft: "-12rem",
   marginRight: "-12rem",
+};
+
+
+`;
+
+exports[`macros -mx-52: -mx-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-mx-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginLeft: "-13rem",
+  marginRight: "-13rem",
 };
 
 
@@ -5965,6 +6135,21 @@ const css = {
 
 `;
 
+exports[`macros -my-44: -my-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-my-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginTop: "-11rem",
+  marginBottom: "-11rem",
+};
+
+
+`;
+
 exports[`macros -my-48: -my-48 1`] = `
 
 import tw from '../lib/macro';
@@ -5975,6 +6160,21 @@ const css = tw("-my-48");
 const css = {
   marginTop: "-12rem",
   marginBottom: "-12rem",
+};
+
+
+`;
+
+exports[`macros -my-52: -my-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-my-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginTop: "-13rem",
+  marginBottom: "-13rem",
 };
 
 
@@ -7162,6 +7362,24 @@ const css = {
 
 `;
 
+exports[`macros -space-x-44: -space-x-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-space-x-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--space-x-reverse": "0",
+    marginRight: "calc(-11rem * var(--space-x-reverse))",
+    marginLeft: "calc(-11rem * calc(1 - var(--space-x-reverse)))",
+  },
+};
+
+
+`;
+
 exports[`macros -space-x-48: -space-x-48 1`] = `
 
 import tw from '../lib/macro';
@@ -7174,6 +7392,24 @@ const css = {
     "--space-x-reverse": "0",
     marginRight: "calc(-12rem * var(--space-x-reverse))",
     marginLeft: "calc(-12rem * calc(1 - var(--space-x-reverse)))",
+  },
+};
+
+
+`;
+
+exports[`macros -space-x-52: -space-x-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-space-x-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--space-x-reverse": "0",
+    marginRight: "calc(-13rem * var(--space-x-reverse))",
+    marginLeft: "calc(-13rem * calc(1 - var(--space-x-reverse)))",
   },
 };
 
@@ -8260,6 +8496,24 @@ const css = {
 
 `;
 
+exports[`macros -space-y-44: -space-y-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-space-y-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--space-y-reverse": "0",
+    marginTop: "calc(-11rem * calc(1 - var(--space-y-reverse)))",
+    marginBottom: "calc(-11rem * var(--space-y-reverse))",
+  },
+};
+
+
+`;
+
 exports[`macros -space-y-48: -space-y-48 1`] = `
 
 import tw from '../lib/macro';
@@ -8272,6 +8526,24 @@ const css = {
     "--space-y-reverse": "0",
     marginTop: "calc(-12rem * calc(1 - var(--space-y-reverse)))",
     marginBottom: "calc(-12rem * var(--space-y-reverse))",
+  },
+};
+
+
+`;
+
+exports[`macros -space-y-52: -space-y-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-space-y-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--space-y-reverse": "0",
+    marginTop: "calc(-13rem * calc(1 - var(--space-y-reverse)))",
+    marginBottom: "calc(-13rem * var(--space-y-reverse))",
   },
 };
 
@@ -9150,6 +9422,20 @@ const css = {
 
 `;
 
+exports[`macros -translate-x-44: -translate-x-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-translate-x-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--transform-translate-x": "-11rem",
+};
+
+
+`;
+
 exports[`macros -translate-x-48: -translate-x-48 1`] = `
 
 import tw from '../lib/macro';
@@ -9159,6 +9445,20 @@ const css = tw("-translate-x-48");
 
 const css = {
   "--transform-translate-x": "-12rem",
+};
+
+
+`;
+
+exports[`macros -translate-x-52: -translate-x-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-translate-x-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--transform-translate-x": "-13rem",
 };
 
 
@@ -10004,6 +10304,20 @@ const css = {
 
 `;
 
+exports[`macros -translate-y-44: -translate-y-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-translate-y-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--transform-translate-y": "-11rem",
+};
+
+
+`;
+
 exports[`macros -translate-y-48: -translate-y-48 1`] = `
 
 import tw from '../lib/macro';
@@ -10013,6 +10327,20 @@ const css = tw("-translate-y-48");
 
 const css = {
   "--transform-translate-y": "-12rem",
+};
+
+
+`;
+
+exports[`macros -translate-y-52: -translate-y-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("-translate-y-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--transform-translate-y": "-13rem",
 };
 
 
@@ -10223,6 +10551,76 @@ const css = tw("align-top");
 
 const css = {
   verticalAlign: "top",
+};
+
+
+`;
+
+exports[`macros animate-bounce: animate-bounce 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("animate-bounce");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  animation: "bounce 1s infinite",
+};
+
+
+`;
+
+exports[`macros animate-none: animate-none 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("animate-none");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  animation: "none",
+};
+
+
+`;
+
+exports[`macros animate-ping: animate-ping 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("animate-ping");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  animation: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+};
+
+
+`;
+
+exports[`macros animate-pulse: animate-pulse 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("animate-pulse");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+};
+
+
+`;
+
+exports[`macros animate-spin: animate-spin 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("animate-spin");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  animation: "spin 1s linear infinite",
 };
 
 
@@ -10487,7 +10885,7 @@ const css = tw("bg-cool-gray-50");
 
 const css = {
   "--bg-opacity": "1",
-  backgroundColor: ["#fbfdfe", "rgba(251, 253, 254, var(--bg-opacity))"],
+  backgroundColor: ["#f8fafc", "rgba(248, 250, 252, var(--bg-opacity))"],
 };
 
 
@@ -11390,7 +11788,7 @@ const css = tw("bg-orange-900");
 
 const css = {
   "--bg-opacity": "1",
-  backgroundColor: ["#771d1d", "rgba(119, 29, 29, var(--bg-opacity))"],
+  backgroundColor: ["#73230d", "rgba(115, 35, 13, var(--bg-opacity))"],
 };
 
 
@@ -12657,7 +13055,7 @@ const css = tw("border-cool-gray-50");
 
 const css = {
   "--border-opacity": "1",
-  borderColor: ["#fbfdfe", "rgba(251, 253, 254, var(--border-opacity))"],
+  borderColor: ["#f8fafc", "rgba(248, 250, 252, var(--border-opacity))"],
 };
 
 
@@ -13588,7 +13986,7 @@ const css = tw("border-orange-900");
 
 const css = {
   "--border-opacity": "1",
-  borderColor: ["#771d1d", "rgba(119, 29, 29, var(--border-opacity))"],
+  borderColor: ["#73230d", "rgba(115, 35, 13, var(--border-opacity))"],
 };
 
 
@@ -15283,6 +15681,20 @@ const css = {
 
 `;
 
+exports[`macros bottom-44: bottom-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bottom-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  bottom: "11rem",
+};
+
+
+`;
+
 exports[`macros bottom-48: bottom-48 1`] = `
 
 import tw from '../lib/macro';
@@ -15292,6 +15704,20 @@ const css = tw("bottom-48");
 
 const css = {
   bottom: "12rem",
+};
+
+
+`;
+
+exports[`macros bottom-52: bottom-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bottom-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  bottom: "13rem",
 };
 
 
@@ -16587,6 +17013,21 @@ const css = {
 
 `;
 
+exports[`macros col-gap-44: col-gap-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("col-gap-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "11rem",
+  columnGap: "11rem",
+};
+
+
+`;
+
 exports[`macros col-gap-48: col-gap-48 1`] = `
 
 import tw from '../lib/macro';
@@ -16597,6 +17038,21 @@ const css = tw("col-gap-48");
 const css = {
   gridColumnGap: "12rem",
   columnGap: "12rem",
+};
+
+
+`;
+
+exports[`macros col-gap-52: col-gap-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("col-gap-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "13rem",
+  columnGap: "13rem",
 };
 
 
@@ -17595,7 +18051,7 @@ const css = tw("divide-cool-gray-50");
 const css = {
   "& > :not(template) ~ :not(template)": {
     "--divide-opacity": "1",
-    borderColor: ["#fbfdfe", "rgba(251, 253, 254, var(--divide-opacity))"],
+    borderColor: ["#f8fafc", "rgba(248, 250, 252, var(--divide-opacity))"],
   },
 };
 
@@ -18508,7 +18964,7 @@ const css = tw("divide-orange-900");
 const css = {
   "& > :not(template) ~ :not(template)": {
     "--divide-opacity": "1",
-    borderColor: ["#771d1d", "rgba(119, 29, 29, var(--divide-opacity))"],
+    borderColor: ["#73230d", "rgba(115, 35, 13, var(--divide-opacity))"],
   },
 };
 
@@ -21299,6 +21755,21 @@ const css = {
 
 `;
 
+exports[`macros gap-44: gap-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridGap: "11rem",
+  gap: "11rem",
+};
+
+
+`;
+
 exports[`macros gap-48: gap-48 1`] = `
 
 import tw from '../lib/macro';
@@ -21309,6 +21780,21 @@ const css = tw("gap-48");
 const css = {
   gridGap: "12rem",
   gap: "12rem",
+};
+
+
+`;
+
+exports[`macros gap-52: gap-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridGap: "13rem",
+  gap: "13rem",
 };
 
 
@@ -22526,6 +23012,20 @@ const css = {
 
 `;
 
+exports[`macros h-44: h-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("h-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  height: "11rem",
+};
+
+
+`;
+
 exports[`macros h-48: h-48 1`] = `
 
 import tw from '../lib/macro';
@@ -22535,6 +23035,20 @@ const css = tw("h-48");
 
 const css = {
   height: "12rem",
+};
+
+
+`;
+
+exports[`macros h-52: h-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("h-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  height: "13rem",
 };
 
 
@@ -23651,6 +24165,23 @@ const css = {
 
 `;
 
+exports[`macros inset-44: inset-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("inset-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  top: "11rem",
+  right: "11rem",
+  bottom: "11rem",
+  left: "11rem",
+};
+
+
+`;
+
 exports[`macros inset-48: inset-48 1`] = `
 
 import tw from '../lib/macro';
@@ -23663,6 +24194,23 @@ const css = {
   right: "12rem",
   bottom: "12rem",
   left: "12rem",
+};
+
+
+`;
+
+exports[`macros inset-52: inset-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("inset-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  top: "13rem",
+  right: "13rem",
+  bottom: "13rem",
+  left: "13rem",
 };
 
 
@@ -24616,6 +25164,21 @@ const css = {
 
 `;
 
+exports[`macros inset-x-44: inset-x-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("inset-x-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  right: "11rem",
+  left: "11rem",
+};
+
+
+`;
+
 exports[`macros inset-x-48: inset-x-48 1`] = `
 
 import tw from '../lib/macro';
@@ -24626,6 +25189,21 @@ const css = tw("inset-x-48");
 const css = {
   right: "12rem",
   left: "12rem",
+};
+
+
+`;
+
+exports[`macros inset-x-52: inset-x-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("inset-x-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  right: "13rem",
+  left: "13rem",
 };
 
 
@@ -25561,6 +26139,21 @@ const css = {
 
 `;
 
+exports[`macros inset-y-44: inset-y-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("inset-y-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  top: "11rem",
+  bottom: "11rem",
+};
+
+
+`;
+
 exports[`macros inset-y-48: inset-y-48 1`] = `
 
 import tw from '../lib/macro';
@@ -25571,6 +26164,21 @@ const css = tw("inset-y-48");
 const css = {
   top: "12rem",
   bottom: "12rem",
+};
+
+
+`;
+
+exports[`macros inset-y-52: inset-y-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("inset-y-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  top: "13rem",
+  bottom: "13rem",
 };
 
 
@@ -26831,6 +27439,20 @@ const css = {
 
 `;
 
+exports[`macros left-44: left-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("left-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  left: "11rem",
+};
+
+
+`;
+
 exports[`macros left-48: left-48 1`] = `
 
 import tw from '../lib/macro';
@@ -26840,6 +27462,20 @@ const css = tw("left-48");
 
 const css = {
   left: "12rem",
+};
+
+
+`;
+
+exports[`macros left-52: left-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("left-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  left: "13rem",
 };
 
 
@@ -27811,6 +28447,20 @@ const css = {
 
 `;
 
+exports[`macros m-44: m-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("m-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  margin: "11rem",
+};
+
+
+`;
+
 exports[`macros m-48: m-48 1`] = `
 
 import tw from '../lib/macro';
@@ -27820,6 +28470,20 @@ const css = tw("m-48");
 
 const css = {
   margin: "12rem",
+};
+
+
+`;
+
+exports[`macros m-52: m-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("m-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  margin: "13rem",
 };
 
 
@@ -28693,6 +29357,20 @@ const css = {
 
 `;
 
+exports[`macros max-h-44: max-h-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("max-h-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  maxHeight: "11rem",
+};
+
+
+`;
+
 exports[`macros max-h-48: max-h-48 1`] = `
 
 import tw from '../lib/macro';
@@ -28702,6 +29380,20 @@ const css = tw("max-h-48");
 
 const css = {
   maxHeight: "12rem",
+};
+
+
+`;
+
+exports[`macros max-h-52: max-h-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("max-h-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  maxHeight: "13rem",
 };
 
 
@@ -28828,6 +29520,20 @@ const css = tw("max-h-screen");
 
 const css = {
   maxHeight: "100vh",
+};
+
+
+`;
+
+exports[`macros max-w-0: max-w-0 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("max-w-0");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  maxWidth: "0rem",
 };
 
 
@@ -28996,6 +29702,20 @@ const css = tw("max-w-none");
 
 const css = {
   maxWidth: "none",
+};
+
+
+`;
+
+exports[`macros max-w-prose: max-w-prose 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("max-w-prose");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  maxWidth: "65ch",
 };
 
 
@@ -29841,6 +30561,20 @@ const css = {
 
 `;
 
+exports[`macros mb-44: mb-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("mb-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginBottom: "11rem",
+};
+
+
+`;
+
 exports[`macros mb-48: mb-48 1`] = `
 
 import tw from '../lib/macro';
@@ -29850,6 +30584,20 @@ const css = tw("mb-48");
 
 const css = {
   marginBottom: "12rem",
+};
+
+
+`;
+
+exports[`macros mb-52: mb-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("mb-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginBottom: "13rem",
 };
 
 
@@ -30821,6 +31569,20 @@ const css = {
 
 `;
 
+exports[`macros ml-44: ml-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("ml-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginLeft: "11rem",
+};
+
+
+`;
+
 exports[`macros ml-48: ml-48 1`] = `
 
 import tw from '../lib/macro';
@@ -30830,6 +31592,20 @@ const css = tw("ml-48");
 
 const css = {
   marginLeft: "12rem",
+};
+
+
+`;
+
+exports[`macros ml-52: ml-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("ml-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginLeft: "13rem",
 };
 
 
@@ -31703,6 +32479,20 @@ const css = {
 
 `;
 
+exports[`macros mr-44: mr-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("mr-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginRight: "11rem",
+};
+
+
+`;
+
 exports[`macros mr-48: mr-48 1`] = `
 
 import tw from '../lib/macro';
@@ -31712,6 +32502,20 @@ const css = tw("mr-48");
 
 const css = {
   marginRight: "12rem",
+};
+
+
+`;
+
+exports[`macros mr-52: mr-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("mr-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginRight: "13rem",
 };
 
 
@@ -32585,6 +33389,20 @@ const css = {
 
 `;
 
+exports[`macros mt-44: mt-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("mt-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginTop: "11rem",
+};
+
+
+`;
+
 exports[`macros mt-48: mt-48 1`] = `
 
 import tw from '../lib/macro';
@@ -32594,6 +33412,20 @@ const css = tw("mt-48");
 
 const css = {
   marginTop: "12rem",
+};
+
+
+`;
+
+exports[`macros mt-52: mt-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("mt-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginTop: "13rem",
 };
 
 
@@ -33520,6 +34352,21 @@ const css = {
 
 `;
 
+exports[`macros mx-44: mx-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("mx-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginLeft: "11rem",
+  marginRight: "11rem",
+};
+
+
+`;
+
 exports[`macros mx-48: mx-48 1`] = `
 
 import tw from '../lib/macro';
@@ -33530,6 +34377,21 @@ const css = tw("mx-48");
 const css = {
   marginLeft: "12rem",
   marginRight: "12rem",
+};
+
+
+`;
+
+exports[`macros mx-52: mx-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("mx-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginLeft: "13rem",
+  marginRight: "13rem",
 };
 
 
@@ -34465,6 +35327,21 @@ const css = {
 
 `;
 
+exports[`macros my-44: my-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("my-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginTop: "11rem",
+  marginBottom: "11rem",
+};
+
+
+`;
+
 exports[`macros my-48: my-48 1`] = `
 
 import tw from '../lib/macro';
@@ -34475,6 +35352,21 @@ const css = tw("my-48");
 const css = {
   marginTop: "12rem",
   marginBottom: "12rem",
+};
+
+
+`;
+
+exports[`macros my-52: my-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("my-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  marginTop: "13rem",
+  marginBottom: "13rem",
 };
 
 
@@ -35462,6 +36354,132 @@ const css = {
 
 `;
 
+exports[`macros overscroll-auto: overscroll-auto 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("overscroll-auto");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  overscrollBehavior: "auto",
+};
+
+
+`;
+
+exports[`macros overscroll-contain: overscroll-contain 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("overscroll-contain");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  overscrollBehavior: "contain",
+};
+
+
+`;
+
+exports[`macros overscroll-none: overscroll-none 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("overscroll-none");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  overscrollBehavior: "none",
+};
+
+
+`;
+
+exports[`macros overscroll-x-auto: overscroll-x-auto 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("overscroll-x-auto");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  overscrollBehaviorX: "auto",
+};
+
+
+`;
+
+exports[`macros overscroll-x-contain: overscroll-x-contain 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("overscroll-x-contain");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  overscrollBehaviorX: "contain",
+};
+
+
+`;
+
+exports[`macros overscroll-x-none: overscroll-x-none 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("overscroll-x-none");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  overscrollBehaviorX: "none",
+};
+
+
+`;
+
+exports[`macros overscroll-y-auto: overscroll-y-auto 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("overscroll-y-auto");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  overscrollBehaviorY: "auto",
+};
+
+
+`;
+
+exports[`macros overscroll-y-contain: overscroll-y-contain 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("overscroll-y-contain");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  overscrollBehaviorY: "contain",
+};
+
+
+`;
+
+exports[`macros overscroll-y-none: overscroll-y-none 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("overscroll-y-none");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  overscrollBehaviorY: "none",
+};
+
+
+`;
+
 exports[`macros p-0.5: p-0.5 1`] = `
 
 import tw from '../lib/macro';
@@ -36204,6 +37222,20 @@ const css = {
 
 `;
 
+exports[`macros p-44: p-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("p-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  padding: "11rem",
+};
+
+
+`;
+
 exports[`macros p-48: p-48 1`] = `
 
 import tw from '../lib/macro';
@@ -36213,6 +37245,20 @@ const css = tw("p-48");
 
 const css = {
   padding: "12rem",
+};
+
+
+`;
+
+exports[`macros p-52: p-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("p-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  padding: "13rem",
 };
 
 
@@ -37072,6 +38118,20 @@ const css = {
 
 `;
 
+exports[`macros pb-44: pb-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("pb-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingBottom: "11rem",
+};
+
+
+`;
+
 exports[`macros pb-48: pb-48 1`] = `
 
 import tw from '../lib/macro';
@@ -37081,6 +38141,20 @@ const css = tw("pb-48");
 
 const css = {
   paddingBottom: "12rem",
+};
+
+
+`;
+
+exports[`macros pb-52: pb-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("pb-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingBottom: "13rem",
 };
 
 
@@ -37940,6 +39014,20 @@ const css = {
 
 `;
 
+exports[`macros pl-44: pl-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("pl-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingLeft: "11rem",
+};
+
+
+`;
+
 exports[`macros pl-48: pl-48 1`] = `
 
 import tw from '../lib/macro';
@@ -37949,6 +39037,20 @@ const css = tw("pl-48");
 
 const css = {
   paddingLeft: "12rem",
+};
+
+
+`;
+
+exports[`macros pl-52: pl-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("pl-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingLeft: "13rem",
 };
 
 
@@ -38263,7 +39365,7 @@ const css = tw("placeholder-cool-gray-50");
 const css = {
   "&::placeholder": {
     "--placeholder-opacity": "1",
-    color: ["#fbfdfe", "rgba(251, 253, 254, var(--placeholder-opacity))"],
+    color: ["#f8fafc", "rgba(248, 250, 252, var(--placeholder-opacity))"],
   },
 };
 
@@ -39176,7 +40278,7 @@ const css = tw("placeholder-orange-900");
 const css = {
   "&::placeholder": {
     "--placeholder-opacity": "1",
-    color: ["#771d1d", "rgba(119, 29, 29, var(--placeholder-opacity))"],
+    color: ["#73230d", "rgba(115, 35, 13, var(--placeholder-opacity))"],
   },
 };
 
@@ -40836,6 +41938,20 @@ const css = {
 
 `;
 
+exports[`macros pr-44: pr-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("pr-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingRight: "11rem",
+};
+
+
+`;
+
 exports[`macros pr-48: pr-48 1`] = `
 
 import tw from '../lib/macro';
@@ -40845,6 +41961,20 @@ const css = tw("pr-48");
 
 const css = {
   paddingRight: "12rem",
+};
+
+
+`;
+
+exports[`macros pr-52: pr-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("pr-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingRight: "13rem",
 };
 
 
@@ -40957,6 +42087,1056 @@ const css = tw("pr-px");
 
 const css = {
   paddingRight: "1px",
+};
+
+
+`;
+
+exports[`macros prose: prose 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("prose");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  color: "#374151",
+  maxWidth: "65ch",
+  fontSize: "1rem",
+  lineHeight: "1.75",
+  '& [class~="lead"]': {
+    color: "#4b5563",
+    fontSize: "1.25em",
+    lineHeight: "1.6",
+    marginTop: "1.2em",
+    marginBottom: "1.2em",
+  },
+  "& a": {
+    color: "#5850ec",
+    textDecoration: "none",
+    fontWeight: "600",
+  },
+  "& strong": {
+    color: "#161e2e",
+    fontWeight: "600",
+  },
+  "& ol": {
+    counterReset: "list-counter",
+    marginTop: "1.25em",
+    marginBottom: "1.25em",
+  },
+  "& ol > li": {
+    position: "relative",
+    counterIncrement: "list-counter",
+    paddingLeft: "1.75em",
+  },
+  "& ol > li::before": {
+    content: 'counter(list-counter) "."',
+    position: "absolute",
+    fontWeight: "400",
+    color: "#6b7280",
+  },
+  "& ul > li": {
+    position: "relative",
+    paddingLeft: "1.75em",
+  },
+  "& ul > li::before": {
+    content: '""',
+    position: "absolute",
+    backgroundColor: "#d2d6dc",
+    borderRadius: "50%",
+    width: "0.375em",
+    height: "0.375em",
+    top: "calc(0.875em - 0.1875em)",
+    left: "0.25em",
+  },
+  "& hr": {
+    borderColor: "#e5e7eb",
+    borderTopWidth: "1px",
+    marginTop: "3em",
+    marginBottom: "3em",
+  },
+  "& blockquote": {
+    fontWeight: "500",
+    fontStyle: "italic",
+    color: "#161e2e",
+    borderLeftWidth: "0.25rem",
+    borderLeftColor: "#e5e7eb",
+    quotes: '"\\\\201C""\\\\201D""\\\\2018""\\\\2019"',
+    marginTop: "1.6em",
+    marginBottom: "1.6em",
+    paddingLeft: "1em",
+  },
+  "& blockquote p:first-of-type::before": {
+    content: "open-quote",
+  },
+  "& blockquote p:last-of-type::after": {
+    content: "close-quote",
+  },
+  "& h1": {
+    color: "#1a202c",
+    fontWeight: "800",
+    fontSize: "2.25em",
+    marginTop: "0",
+    marginBottom: "0.8888889em",
+    lineHeight: "1.1111111",
+  },
+  "& h2": {
+    color: "#1a202c",
+    fontWeight: "700",
+    fontSize: "1.5em",
+    marginTop: "2em",
+    marginBottom: "1em",
+    lineHeight: "1.3333333",
+  },
+  "& h3": {
+    color: "#1a202c",
+    fontWeight: "600",
+    fontSize: "1.25em",
+    marginTop: "1.6em",
+    marginBottom: "0.6em",
+    lineHeight: "1.6",
+  },
+  "& h4": {
+    color: "#1a202c",
+    fontWeight: "600",
+    marginTop: "1.5em",
+    marginBottom: "0.5em",
+    lineHeight: "1.5",
+  },
+  "& figure figcaption": {
+    color: "#6b7280",
+    fontSize: "0.875em",
+    lineHeight: "1.4285714",
+    marginTop: "0.8571429em",
+  },
+  "& code": {
+    color: "#161e2e",
+    fontWeight: "600",
+    fontSize: "0.875em",
+  },
+  "& code::before": {
+    content: '"\`"',
+  },
+  "& code::after": {
+    content: '"\`"',
+  },
+  "& pre": {
+    color: "#e5e7eb",
+    backgroundColor: "#252f3f",
+    overflowX: "auto",
+    fontSize: "0.875em",
+    lineHeight: "1.7142857",
+    marginTop: "1.7142857em",
+    marginBottom: "1.7142857em",
+    borderRadius: "0.375rem",
+    paddingTop: "0.8571429em",
+    paddingRight: "1.1428571em",
+    paddingBottom: "0.8571429em",
+    paddingLeft: "1.1428571em",
+  },
+  "& pre code": {
+    backgroundColor: "transparent",
+    borderWidth: "0",
+    borderRadius: "0",
+    padding: "0",
+    fontWeight: "400",
+    color: "inherit",
+    fontSize: "inherit",
+    fontFamily: "inherit",
+    lineHeight: "inherit",
+  },
+  "& pre code::before": {
+    content: '""',
+  },
+  "& pre code::after": {
+    content: '""',
+  },
+  "& table": {
+    width: "100%",
+    tableLayout: "auto",
+    textAlign: "left",
+    marginTop: "2em",
+    marginBottom: "2em",
+    fontSize: "0.875em",
+    lineHeight: "1.7142857",
+  },
+  "& thead": {
+    color: "#161e2e",
+    fontWeight: "600",
+    borderBottomWidth: "1px",
+    borderBottomColor: "#d2d6dc",
+  },
+  "& thead th": {
+    verticalAlign: "bottom",
+    paddingRight: "0.5714286em",
+    paddingBottom: "0.5714286em",
+    paddingLeft: "0.5714286em",
+  },
+  "& tbody tr": {
+    borderBottomWidth: "1px",
+    borderBottomColor: "#e5e7eb",
+  },
+  "& tbody tr:last-child": {
+    borderBottomWidth: "0",
+  },
+  "& tbody td": {
+    verticalAlign: "top",
+    paddingTop: "0.5714286em",
+    paddingRight: "0.5714286em",
+    paddingBottom: "0.5714286em",
+    paddingLeft: "0.5714286em",
+  },
+  "& p": {
+    marginTop: "1.25em",
+    marginBottom: "1.25em",
+  },
+  "& img": {
+    marginTop: "2em",
+    marginBottom: "2em",
+  },
+  "& video": {
+    marginTop: "2em",
+    marginBottom: "2em",
+  },
+  "& figure": {
+    marginTop: "2em",
+    marginBottom: "2em",
+  },
+  "& figure > *": {
+    marginTop: "0",
+    marginBottom: "0",
+  },
+  "& h2 code": {
+    fontSize: "0.875em",
+  },
+  "& h3 code": {
+    fontSize: "0.9em",
+  },
+  "& ul": {
+    marginTop: "1.25em",
+    marginBottom: "1.25em",
+  },
+  "& li": {
+    marginTop: "0.5em",
+    marginBottom: "0.5em",
+  },
+  "& ol > li:before": {
+    left: "0",
+  },
+  "& > ul > li p": {
+    marginTop: "0.75em",
+    marginBottom: "0.75em",
+  },
+  "& > ul > li > *:first-child": {
+    marginTop: "1.25em",
+  },
+  "& > ul > li > *:last-child": {
+    marginBottom: "1.25em",
+  },
+  "& > ol > li > *:first-child": {
+    marginTop: "1.25em",
+  },
+  "& > ol > li > *:last-child": {
+    marginBottom: "1.25em",
+  },
+  "& ul ul, & ul ol, & ol ul, & ol ol": {
+    marginTop: "0.75em",
+    marginBottom: "0.75em",
+  },
+  "& hr + *": {
+    marginTop: "0",
+  },
+  "& h2 + *": {
+    marginTop: "0",
+  },
+  "& h3 + *": {
+    marginTop: "0",
+  },
+  "& h4 + *": {
+    marginTop: "0",
+  },
+  "& thead th:first-child": {
+    paddingLeft: "0",
+  },
+  "& thead th:last-child": {
+    paddingRight: "0",
+  },
+  "& tbody td:first-child": {
+    paddingLeft: "0",
+  },
+  "& tbody td:last-child": {
+    paddingRight: "0",
+  },
+  "& > :first-child": {
+    marginTop: "0",
+  },
+  "& > :last-child": {
+    marginBottom: "0",
+  },
+  "& h1, & h2, & h3, & h4": {
+    color: "#161e2e",
+  },
+};
+
+
+`;
+
+exports[`macros prose-2xl: prose-2xl 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("prose-2xl");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "1.5rem",
+  lineHeight: "1.6666667",
+  "& p": {
+    marginTop: "1.3333333em",
+    marginBottom: "1.3333333em",
+  },
+  '& [class~="lead"]': {
+    fontSize: "1.25em",
+    lineHeight: "1.4666667",
+    marginTop: "1.0666667em",
+    marginBottom: "1.0666667em",
+  },
+  "& blockquote": {
+    marginTop: "1.7777778em",
+    marginBottom: "1.7777778em",
+    paddingLeft: "1.1111111em",
+  },
+  "& h1": {
+    fontSize: "2.6666667em",
+    marginTop: "0",
+    marginBottom: "0.875em",
+    lineHeight: "1",
+  },
+  "& h2": {
+    fontSize: "2em",
+    marginTop: "1.5em",
+    marginBottom: "0.8333333em",
+    lineHeight: "1.0833333",
+  },
+  "& h3": {
+    fontSize: "1.5em",
+    marginTop: "1.5555556em",
+    marginBottom: "0.6666667em",
+    lineHeight: "1.2222222",
+  },
+  "& h4": {
+    marginTop: "1.6666667em",
+    marginBottom: "0.6666667em",
+    lineHeight: "1.5",
+  },
+  "& img": {
+    marginTop: "2em",
+    marginBottom: "2em",
+  },
+  "& video": {
+    marginTop: "2em",
+    marginBottom: "2em",
+  },
+  "& figure": {
+    marginTop: "2em",
+    marginBottom: "2em",
+  },
+  "& figure > *": {
+    marginTop: "0",
+    marginBottom: "0",
+  },
+  "& figure figcaption": {
+    fontSize: "0.8333333em",
+    lineHeight: "1.6",
+    marginTop: "1em",
+  },
+  "& code": {
+    fontSize: "0.8333333em",
+  },
+  "& h2 code": {
+    fontSize: "0.875em",
+  },
+  "& h3 code": {
+    fontSize: "0.8888889em",
+  },
+  "& pre": {
+    fontSize: "0.8333333em",
+    lineHeight: "1.8",
+    marginTop: "2em",
+    marginBottom: "2em",
+    borderRadius: "0.5rem",
+    paddingTop: "1.2em",
+    paddingRight: "1.6em",
+    paddingBottom: "1.2em",
+    paddingLeft: "1.6em",
+  },
+  "& ol": {
+    marginTop: "1.3333333em",
+    marginBottom: "1.3333333em",
+  },
+  "& ul": {
+    marginTop: "1.3333333em",
+    marginBottom: "1.3333333em",
+  },
+  "& li": {
+    marginTop: "0.5em",
+    marginBottom: "0.5em",
+  },
+  "& ol > li": {
+    paddingLeft: "1.6666667em",
+  },
+  "& ol > li:before": {
+    left: "0",
+  },
+  "& ul > li": {
+    paddingLeft: "1.6666667em",
+  },
+  "& ul > li::before": {
+    width: "0.3333333em",
+    height: "0.3333333em",
+    top: "calc(0.8333333em - 0.1666667em)",
+    left: "0.25em",
+  },
+  "& > ul > li p": {
+    marginTop: "0.8333333em",
+    marginBottom: "0.8333333em",
+  },
+  "& > ul > li > *:first-child": {
+    marginTop: "1.3333333em",
+  },
+  "& > ul > li > *:last-child": {
+    marginBottom: "1.3333333em",
+  },
+  "& > ol > li > *:first-child": {
+    marginTop: "1.3333333em",
+  },
+  "& > ol > li > *:last-child": {
+    marginBottom: "1.3333333em",
+  },
+  "& ul ul, & ul ol, & ol ul, & ol ol": {
+    marginTop: "0.6666667em",
+    marginBottom: "0.6666667em",
+  },
+  "& hr": {
+    marginTop: "3em",
+    marginBottom: "3em",
+  },
+  "& hr + *": {
+    marginTop: "0",
+  },
+  "& h2 + *": {
+    marginTop: "0",
+  },
+  "& h3 + *": {
+    marginTop: "0",
+  },
+  "& h4 + *": {
+    marginTop: "0",
+  },
+  "& table": {
+    fontSize: "0.8333333em",
+    lineHeight: "1.4",
+  },
+  "& thead th": {
+    paddingRight: "0.6em",
+    paddingBottom: "0.8em",
+    paddingLeft: "0.6em",
+  },
+  "& thead th:first-child": {
+    paddingLeft: "0",
+  },
+  "& thead th:last-child": {
+    paddingRight: "0",
+  },
+  "& tbody td": {
+    paddingTop: "0.8em",
+    paddingRight: "0.6em",
+    paddingBottom: "0.8em",
+    paddingLeft: "0.6em",
+  },
+  "& tbody td:first-child": {
+    paddingLeft: "0",
+  },
+  "& tbody td:last-child": {
+    paddingRight: "0",
+  },
+  "& > :first-child": {
+    marginTop: "0",
+  },
+  "& > :last-child": {
+    marginBottom: "0",
+  },
+};
+
+
+`;
+
+exports[`macros prose-lg: prose-lg 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("prose-lg");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "1.125rem",
+  lineHeight: "1.7777778",
+  "& p": {
+    marginTop: "1.3333333em",
+    marginBottom: "1.3333333em",
+  },
+  '& [class~="lead"]': {
+    fontSize: "1.2222222em",
+    lineHeight: "1.4545455",
+    marginTop: "1.0909091em",
+    marginBottom: "1.0909091em",
+  },
+  "& blockquote": {
+    marginTop: "1.6666667em",
+    marginBottom: "1.6666667em",
+    paddingLeft: "1em",
+  },
+  "& h1": {
+    fontSize: "2.6666667em",
+    marginTop: "0",
+    marginBottom: "0.8333333em",
+    lineHeight: "1",
+  },
+  "& h2": {
+    fontSize: "1.6666667em",
+    marginTop: "1.8666667em",
+    marginBottom: "1.0666667em",
+    lineHeight: "1.3333333",
+  },
+  "& h3": {
+    fontSize: "1.3333333em",
+    marginTop: "1.6666667em",
+    marginBottom: "0.6666667em",
+    lineHeight: "1.5",
+  },
+  "& h4": {
+    marginTop: "1.7777778em",
+    marginBottom: "0.4444444em",
+    lineHeight: "1.5555556",
+  },
+  "& img": {
+    marginTop: "1.7777778em",
+    marginBottom: "1.7777778em",
+  },
+  "& video": {
+    marginTop: "1.7777778em",
+    marginBottom: "1.7777778em",
+  },
+  "& figure": {
+    marginTop: "1.7777778em",
+    marginBottom: "1.7777778em",
+  },
+  "& figure > *": {
+    marginTop: "0",
+    marginBottom: "0",
+  },
+  "& figure figcaption": {
+    fontSize: "0.8888889em",
+    lineHeight: "1.5",
+    marginTop: "1em",
+  },
+  "& code": {
+    fontSize: "0.8888889em",
+  },
+  "& h2 code": {
+    fontSize: "0.8666667em",
+  },
+  "& h3 code": {
+    fontSize: "0.875em",
+  },
+  "& pre": {
+    fontSize: "0.8888889em",
+    lineHeight: "1.75",
+    marginTop: "2em",
+    marginBottom: "2em",
+    borderRadius: "0.375rem",
+    paddingTop: "1em",
+    paddingRight: "1.5em",
+    paddingBottom: "1em",
+    paddingLeft: "1.5em",
+  },
+  "& ol": {
+    marginTop: "1.3333333em",
+    marginBottom: "1.3333333em",
+  },
+  "& ul": {
+    marginTop: "1.3333333em",
+    marginBottom: "1.3333333em",
+  },
+  "& li": {
+    marginTop: "0.6666667em",
+    marginBottom: "0.6666667em",
+  },
+  "& ol > li": {
+    paddingLeft: "1.6666667em",
+  },
+  "& ol > li:before": {
+    left: "0",
+  },
+  "& ul > li": {
+    paddingLeft: "1.6666667em",
+  },
+  "& ul > li::before": {
+    width: "0.3333333em",
+    height: "0.3333333em",
+    top: "calc(0.8888889em - 0.1666667em)",
+    left: "0.2222222em",
+  },
+  "& > ul > li p": {
+    marginTop: "0.8888889em",
+    marginBottom: "0.8888889em",
+  },
+  "& > ul > li > *:first-child": {
+    marginTop: "1.3333333em",
+  },
+  "& > ul > li > *:last-child": {
+    marginBottom: "1.3333333em",
+  },
+  "& > ol > li > *:first-child": {
+    marginTop: "1.3333333em",
+  },
+  "& > ol > li > *:last-child": {
+    marginBottom: "1.3333333em",
+  },
+  "& ul ul, & ul ol, & ol ul, & ol ol": {
+    marginTop: "0.8888889em",
+    marginBottom: "0.8888889em",
+  },
+  "& hr": {
+    marginTop: "3.1111111em",
+    marginBottom: "3.1111111em",
+  },
+  "& hr + *": {
+    marginTop: "0",
+  },
+  "& h2 + *": {
+    marginTop: "0",
+  },
+  "& h3 + *": {
+    marginTop: "0",
+  },
+  "& h4 + *": {
+    marginTop: "0",
+  },
+  "& table": {
+    fontSize: "0.8888889em",
+    lineHeight: "1.5",
+  },
+  "& thead th": {
+    paddingRight: "0.75em",
+    paddingBottom: "0.75em",
+    paddingLeft: "0.75em",
+  },
+  "& thead th:first-child": {
+    paddingLeft: "0",
+  },
+  "& thead th:last-child": {
+    paddingRight: "0",
+  },
+  "& tbody td": {
+    paddingTop: "0.75em",
+    paddingRight: "0.75em",
+    paddingBottom: "0.75em",
+    paddingLeft: "0.75em",
+  },
+  "& tbody td:first-child": {
+    paddingLeft: "0",
+  },
+  "& tbody td:last-child": {
+    paddingRight: "0",
+  },
+  "& > :first-child": {
+    marginTop: "0",
+  },
+  "& > :last-child": {
+    marginBottom: "0",
+  },
+};
+
+
+`;
+
+exports[`macros prose-sm: prose-sm 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("prose-sm");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "0.875rem",
+  lineHeight: "1.7142857",
+  "& p": {
+    marginTop: "1.1428571em",
+    marginBottom: "1.1428571em",
+  },
+  '& [class~="lead"]': {
+    fontSize: "1.2857143em",
+    lineHeight: "1.5555556",
+    marginTop: "0.8888889em",
+    marginBottom: "0.8888889em",
+  },
+  "& blockquote": {
+    marginTop: "1.3333333em",
+    marginBottom: "1.3333333em",
+    paddingLeft: "1.1111111em",
+  },
+  "& h1": {
+    fontSize: "2.1428571em",
+    marginTop: "0",
+    marginBottom: "0.8em",
+    lineHeight: "1.2",
+  },
+  "& h2": {
+    fontSize: "1.4285714em",
+    marginTop: "1.6em",
+    marginBottom: "0.8em",
+    lineHeight: "1.4",
+  },
+  "& h3": {
+    fontSize: "1.2857143em",
+    marginTop: "1.5555556em",
+    marginBottom: "0.4444444em",
+    lineHeight: "1.5555556",
+  },
+  "& h4": {
+    marginTop: "1.4285714em",
+    marginBottom: "0.5714286em",
+    lineHeight: "1.4285714",
+  },
+  "& img": {
+    marginTop: "1.7142857em",
+    marginBottom: "1.7142857em",
+  },
+  "& video": {
+    marginTop: "1.7142857em",
+    marginBottom: "1.7142857em",
+  },
+  "& figure": {
+    marginTop: "1.7142857em",
+    marginBottom: "1.7142857em",
+  },
+  "& figure > *": {
+    marginTop: "0",
+    marginBottom: "0",
+  },
+  "& figure figcaption": {
+    fontSize: "0.8571429em",
+    lineHeight: "1.3333333",
+    marginTop: "0.6666667em",
+  },
+  "& code": {
+    fontSize: "0.8571429em",
+  },
+  "& h2 code": {
+    fontSize: "0.9em",
+  },
+  "& h3 code": {
+    fontSize: "0.8888889em",
+  },
+  "& pre": {
+    fontSize: "0.8571429em",
+    lineHeight: "1.6666667",
+    marginTop: "1.6666667em",
+    marginBottom: "1.6666667em",
+    borderRadius: "0.25rem",
+    paddingTop: "0.6666667em",
+    paddingRight: "1em",
+    paddingBottom: "0.6666667em",
+    paddingLeft: "1em",
+  },
+  "& ol": {
+    marginTop: "1.1428571em",
+    marginBottom: "1.1428571em",
+  },
+  "& ul": {
+    marginTop: "1.1428571em",
+    marginBottom: "1.1428571em",
+  },
+  "& li": {
+    marginTop: "0.2857143em",
+    marginBottom: "0.2857143em",
+  },
+  "& ol > li": {
+    paddingLeft: "1.5714286em",
+  },
+  "& ol > li:before": {
+    left: "0",
+  },
+  "& ul > li": {
+    paddingLeft: "1.5714286em",
+  },
+  "& ul > li::before": {
+    height: "0.3571429em",
+    width: "0.3571429em",
+    top: "calc(0.8571429em - 0.1785714em)",
+    left: "0.2142857em",
+  },
+  "& > ul > li p": {
+    marginTop: "0.5714286em",
+    marginBottom: "0.5714286em",
+  },
+  "& > ul > li > *:first-child": {
+    marginTop: "1.1428571em",
+  },
+  "& > ul > li > *:last-child": {
+    marginBottom: "1.1428571em",
+  },
+  "& > ol > li > *:first-child": {
+    marginTop: "1.1428571em",
+  },
+  "& > ol > li > *:last-child": {
+    marginBottom: "1.1428571em",
+  },
+  "& ul ul, & ul ol, & ol ul, & ol ol": {
+    marginTop: "0.5714286em",
+    marginBottom: "0.5714286em",
+  },
+  "& hr": {
+    marginTop: "2.8571429em",
+    marginBottom: "2.8571429em",
+  },
+  "& hr + *": {
+    marginTop: "0",
+  },
+  "& h2 + *": {
+    marginTop: "0",
+  },
+  "& h3 + *": {
+    marginTop: "0",
+  },
+  "& h4 + *": {
+    marginTop: "0",
+  },
+  "& table": {
+    fontSize: "0.8571429em",
+    lineHeight: "1.5",
+  },
+  "& thead th": {
+    paddingRight: "1em",
+    paddingBottom: "0.6666667em",
+    paddingLeft: "1em",
+  },
+  "& thead th:first-child": {
+    paddingLeft: "0",
+  },
+  "& thead th:last-child": {
+    paddingRight: "0",
+  },
+  "& tbody td": {
+    paddingTop: "0.6666667em",
+    paddingRight: "1em",
+    paddingBottom: "0.6666667em",
+    paddingLeft: "1em",
+  },
+  "& tbody td:first-child": {
+    paddingLeft: "0",
+  },
+  "& tbody td:last-child": {
+    paddingRight: "0",
+  },
+  "& > :first-child": {
+    marginTop: "0",
+  },
+  "& > :last-child": {
+    marginBottom: "0",
+  },
+};
+
+
+`;
+
+exports[`macros prose-xl: prose-xl 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("prose-xl");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "1.25rem",
+  lineHeight: "1.8",
+  "& p": {
+    marginTop: "1.2em",
+    marginBottom: "1.2em",
+  },
+  '& [class~="lead"]': {
+    fontSize: "1.2em",
+    lineHeight: "1.5",
+    marginTop: "1em",
+    marginBottom: "1em",
+  },
+  "& blockquote": {
+    marginTop: "1.6em",
+    marginBottom: "1.6em",
+    paddingLeft: "1.0666667em",
+  },
+  "& h1": {
+    fontSize: "2.8em",
+    marginTop: "0",
+    marginBottom: "0.8571429em",
+    lineHeight: "1",
+  },
+  "& h2": {
+    fontSize: "1.8em",
+    marginTop: "1.5555556em",
+    marginBottom: "0.8888889em",
+    lineHeight: "1.1111111",
+  },
+  "& h3": {
+    fontSize: "1.5em",
+    marginTop: "1.6em",
+    marginBottom: "0.6666667em",
+    lineHeight: "1.3333333",
+  },
+  "& h4": {
+    marginTop: "1.8em",
+    marginBottom: "0.6em",
+    lineHeight: "1.6",
+  },
+  "& img": {
+    marginTop: "2em",
+    marginBottom: "2em",
+  },
+  "& video": {
+    marginTop: "2em",
+    marginBottom: "2em",
+  },
+  "& figure": {
+    marginTop: "2em",
+    marginBottom: "2em",
+  },
+  "& figure > *": {
+    marginTop: "0",
+    marginBottom: "0",
+  },
+  "& figure figcaption": {
+    fontSize: "0.9em",
+    lineHeight: "1.5555556",
+    marginTop: "1em",
+  },
+  "& code": {
+    fontSize: "0.9em",
+  },
+  "& h2 code": {
+    fontSize: "0.8611111em",
+  },
+  "& h3 code": {
+    fontSize: "0.9em",
+  },
+  "& pre": {
+    fontSize: "0.9em",
+    lineHeight: "1.7777778",
+    marginTop: "2em",
+    marginBottom: "2em",
+    borderRadius: "0.5rem",
+    paddingTop: "1.1111111em",
+    paddingRight: "1.3333333em",
+    paddingBottom: "1.1111111em",
+    paddingLeft: "1.3333333em",
+  },
+  "& ol": {
+    marginTop: "1.2em",
+    marginBottom: "1.2em",
+  },
+  "& ul": {
+    marginTop: "1.2em",
+    marginBottom: "1.2em",
+  },
+  "& li": {
+    marginTop: "0.6em",
+    marginBottom: "0.6em",
+  },
+  "& ol > li": {
+    paddingLeft: "1.8em",
+  },
+  "& ol > li:before": {
+    left: "0",
+  },
+  "& ul > li": {
+    paddingLeft: "1.8em",
+  },
+  "& ul > li::before": {
+    width: "0.35em",
+    height: "0.35em",
+    top: "calc(0.9em - 0.175em)",
+    left: "0.25em",
+  },
+  "& > ul > li p": {
+    marginTop: "0.8em",
+    marginBottom: "0.8em",
+  },
+  "& > ul > li > *:first-child": {
+    marginTop: "1.2em",
+  },
+  "& > ul > li > *:last-child": {
+    marginBottom: "1.2em",
+  },
+  "& > ol > li > *:first-child": {
+    marginTop: "1.2em",
+  },
+  "& > ol > li > *:last-child": {
+    marginBottom: "1.2em",
+  },
+  "& ul ul, & ul ol, & ol ul, & ol ol": {
+    marginTop: "0.8em",
+    marginBottom: "0.8em",
+  },
+  "& hr": {
+    marginTop: "2.8em",
+    marginBottom: "2.8em",
+  },
+  "& hr + *": {
+    marginTop: "0",
+  },
+  "& h2 + *": {
+    marginTop: "0",
+  },
+  "& h3 + *": {
+    marginTop: "0",
+  },
+  "& h4 + *": {
+    marginTop: "0",
+  },
+  "& table": {
+    fontSize: "0.9em",
+    lineHeight: "1.5555556",
+  },
+  "& thead th": {
+    paddingRight: "0.6666667em",
+    paddingBottom: "0.8888889em",
+    paddingLeft: "0.6666667em",
+  },
+  "& thead th:first-child": {
+    paddingLeft: "0",
+  },
+  "& thead th:last-child": {
+    paddingRight: "0",
+  },
+  "& tbody td": {
+    paddingTop: "0.8888889em",
+    paddingRight: "0.6666667em",
+    paddingBottom: "0.8888889em",
+    paddingLeft: "0.6666667em",
+  },
+  "& tbody td:first-child": {
+    paddingLeft: "0",
+  },
+  "& tbody td:last-child": {
+    paddingRight: "0",
+  },
+  "& > :first-child": {
+    marginTop: "0",
+  },
+  "& > :last-child": {
+    marginBottom: "0",
+  },
 };
 
 
@@ -41704,6 +43884,20 @@ const css = {
 
 `;
 
+exports[`macros pt-44: pt-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("pt-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingTop: "11rem",
+};
+
+
+`;
+
 exports[`macros pt-48: pt-48 1`] = `
 
 import tw from '../lib/macro';
@@ -41713,6 +43907,20 @@ const css = tw("pt-48");
 
 const css = {
   paddingTop: "12rem",
+};
+
+
+`;
+
+exports[`macros pt-52: pt-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("pt-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingTop: "13rem",
 };
 
 
@@ -42625,6 +44833,21 @@ const css = {
 
 `;
 
+exports[`macros px-44: px-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("px-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingLeft: "11rem",
+  paddingRight: "11rem",
+};
+
+
+`;
+
 exports[`macros px-48: px-48 1`] = `
 
 import tw from '../lib/macro';
@@ -42635,6 +44858,21 @@ const css = tw("px-48");
 const css = {
   paddingLeft: "12rem",
   paddingRight: "12rem",
+};
+
+
+`;
+
+exports[`macros px-52: px-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("px-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingLeft: "13rem",
+  paddingRight: "13rem",
 };
 
 
@@ -43555,6 +45793,21 @@ const css = {
 
 `;
 
+exports[`macros py-44: py-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("py-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingTop: "11rem",
+  paddingBottom: "11rem",
+};
+
+
+`;
+
 exports[`macros py-48: py-48 1`] = `
 
 import tw from '../lib/macro';
@@ -43565,6 +45818,21 @@ const css = tw("py-48");
 const css = {
   paddingTop: "12rem",
   paddingBottom: "12rem",
+};
+
+
+`;
+
+exports[`macros py-52: py-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("py-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  paddingTop: "13rem",
+  paddingBottom: "13rem",
 };
 
 
@@ -44502,6 +46770,20 @@ const css = {
 
 `;
 
+exports[`macros right-44: right-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("right-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  right: "11rem",
+};
+
+
+`;
+
 exports[`macros right-48: right-48 1`] = `
 
 import tw from '../lib/macro';
@@ -44511,6 +46793,20 @@ const css = tw("right-48");
 
 const css = {
   right: "12rem",
+};
+
+
+`;
+
+exports[`macros right-52: right-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("right-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  right: "13rem",
 };
 
 
@@ -46399,6 +48695,21 @@ const css = {
 
 `;
 
+exports[`macros row-gap-44: row-gap-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("row-gap-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "11rem",
+  rowGap: "11rem",
+};
+
+
+`;
+
 exports[`macros row-gap-48: row-gap-48 1`] = `
 
 import tw from '../lib/macro';
@@ -46409,6 +48720,21 @@ const css = tw("row-gap-48");
 const css = {
   gridRowGap: "12rem",
   rowGap: "12rem",
+};
+
+
+`;
+
+exports[`macros row-gap-52: row-gap-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("row-gap-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "13rem",
+  rowGap: "13rem",
 };
 
 
@@ -48677,6 +51003,24 @@ const css = {
 
 `;
 
+exports[`macros space-x-44: space-x-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("space-x-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--space-x-reverse": "0",
+    marginRight: "calc(11rem * var(--space-x-reverse))",
+    marginLeft: "calc(11rem * calc(1 - var(--space-x-reverse)))",
+  },
+};
+
+
+`;
+
 exports[`macros space-x-48: space-x-48 1`] = `
 
 import tw from '../lib/macro';
@@ -48689,6 +51033,24 @@ const css = {
     "--space-x-reverse": "0",
     marginRight: "calc(12rem * var(--space-x-reverse))",
     marginLeft: "calc(12rem * calc(1 - var(--space-x-reverse)))",
+  },
+};
+
+
+`;
+
+exports[`macros space-x-52: space-x-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("space-x-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--space-x-reverse": "0",
+    marginRight: "calc(13rem * var(--space-x-reverse))",
+    marginLeft: "calc(13rem * calc(1 - var(--space-x-reverse)))",
   },
 };
 
@@ -49809,6 +52171,24 @@ const css = {
 
 `;
 
+exports[`macros space-y-44: space-y-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("space-y-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--space-y-reverse": "0",
+    marginTop: "calc(11rem * calc(1 - var(--space-y-reverse)))",
+    marginBottom: "calc(11rem * var(--space-y-reverse))",
+  },
+};
+
+
+`;
+
 exports[`macros space-y-48: space-y-48 1`] = `
 
 import tw from '../lib/macro';
@@ -49821,6 +52201,24 @@ const css = {
     "--space-y-reverse": "0",
     marginTop: "calc(12rem * calc(1 - var(--space-y-reverse)))",
     marginBottom: "calc(12rem * var(--space-y-reverse))",
+  },
+};
+
+
+`;
+
+exports[`macros space-y-52: space-y-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("space-y-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    "--space-y-reverse": "0",
+    marginTop: "calc(13rem * calc(1 - var(--space-y-reverse)))",
+    marginBottom: "calc(13rem * var(--space-y-reverse))",
   },
 };
 
@@ -50534,7 +52932,7 @@ const css = tw("text-cool-gray-50");
 
 const css = {
   "--text-opacity": "1",
-  color: ["#fbfdfe", "rgba(251, 253, 254, var(--text-opacity))"],
+  color: ["#f8fafc", "rgba(248, 250, 252, var(--text-opacity))"],
 };
 
 
@@ -51381,7 +53779,7 @@ const css = tw("text-orange-900");
 
 const css = {
   "--text-opacity": "1",
-  color: ["#771d1d", "rgba(119, 29, 29, var(--text-opacity))"],
+  color: ["#73230d", "rgba(115, 35, 13, var(--text-opacity))"],
 };
 
 
@@ -52964,6 +55362,20 @@ const css = {
 
 `;
 
+exports[`macros top-44: top-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("top-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  top: "11rem",
+};
+
+
+`;
+
 exports[`macros top-48: top-48 1`] = `
 
 import tw from '../lib/macro';
@@ -52973,6 +55385,20 @@ const css = tw("top-48");
 
 const css = {
   top: "12rem",
+};
+
+
+`;
+
+exports[`macros top-52: top-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("top-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  top: "13rem",
 };
 
 
@@ -54065,6 +56491,20 @@ const css = {
 
 `;
 
+exports[`macros translate-x-44: translate-x-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("translate-x-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--transform-translate-x": "11rem",
+};
+
+
+`;
+
 exports[`macros translate-x-48: translate-x-48 1`] = `
 
 import tw from '../lib/macro';
@@ -54074,6 +56514,20 @@ const css = tw("translate-x-48");
 
 const css = {
   "--transform-translate-x": "12rem",
+};
+
+
+`;
+
+exports[`macros translate-x-52: translate-x-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("translate-x-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--transform-translate-x": "13rem",
 };
 
 
@@ -54933,6 +57387,20 @@ const css = {
 
 `;
 
+exports[`macros translate-y-44: translate-y-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("translate-y-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--transform-translate-y": "11rem",
+};
+
+
+`;
+
 exports[`macros translate-y-48: translate-y-48 1`] = `
 
 import tw from '../lib/macro';
@@ -54942,6 +57410,20 @@ const css = tw("translate-y-48");
 
 const css = {
   "--transform-translate-y": "12rem",
+};
+
+
+`;
+
+exports[`macros translate-y-52: translate-y-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("translate-y-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--transform-translate-y": "13rem",
 };
 
 
@@ -55859,6 +58341,20 @@ const css = {
 
 `;
 
+exports[`macros w-44: w-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("w-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  width: "11rem",
+};
+
+
+`;
+
 exports[`macros w-48: w-48 1`] = `
 
 import tw from '../lib/macro';
@@ -55868,6 +58364,20 @@ const css = tw("w-48");
 
 const css = {
   width: "12rem",
+};
+
+
+`;
+
+exports[`macros w-52: w-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("w-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  width: "13rem",
 };
 
 

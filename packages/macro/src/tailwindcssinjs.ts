@@ -10,8 +10,7 @@ import {
   TwClasses,
 } from "@tailwindcssinjs/class-composer";
 import {
-  transformPostcssRootToPostcssRules,
-  transformPostcssRulesToTwObjectMap,
+  transformPostcssRootsToTwObjectMap,
   transformTwClassesToStyleObject,
   TwObject,
   StyleObject,
@@ -51,12 +50,10 @@ export default function tailwindcssinjs(
 
     const variantParser = twClassesVariantsParser(resolvedConfig.separator);
 
-    const componentRules = transformPostcssRootToPostcssRules(componentsRoot);
-    const utilityRules = transformPostcssRootToPostcssRules(utilitiesRoot);
-    twObjectMap = transformPostcssRulesToTwObjectMap(
-      utilityRules,
-      componentRules
-    );
+    twObjectMap = transformPostcssRootsToTwObjectMap([
+      utilitiesRoot,
+      componentsRoot,
+    ]);
 
     const generateTwClassSubstituteRoot = getGenerateTwClassSubstituteRoot(
       screens,

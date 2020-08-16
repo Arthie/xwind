@@ -23,16 +23,10 @@ function tailwindcssinjs(config, corePlugins) {
     config,
     corePlugins
   );
-  const componentRules = transformers_1.transformPostcssRootToPostcssRules(
-    componentsRoot
-  );
-  const utilityRules = transformers_1.transformPostcssRootToPostcssRules(
-    utilitiesRoot
-  );
-  twObjectMap = transformers_1.transformPostcssRulesToTwObjectMap(
-    utilityRules,
-    componentRules
-  );
+  twObjectMap = transformers_1.transformPostcssRootsToTwObjectMap([
+    utilitiesRoot,
+    componentsRoot,
+  ]);
 
   return twObjectMap;
 }
