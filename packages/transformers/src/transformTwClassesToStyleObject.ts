@@ -1,18 +1,19 @@
 import postcss from "postcss";
 import merge from "lodash/merge";
-//@ts-ignore
-const timsort = require("timsort");
 
-import {
-  TwObject,
-  StyleObject,
-  StyleObjectRuleOrAtRule,
-} from "./transformPostcss";
-
-//@ts-ignore
+import { TwObject } from "./transformPostcssRootsToTwObjectMap";
 import objectify from "./postcssjs-objectify";
+import { unescapeCSS } from "./parseTwSelectorClass";
 
-import { unescapeCSS } from "./parseTwSelector";
+export type StyleObject = StyleObjectDecl | StyleObjectRuleOrAtRule;
+
+export type StyleObjectDecl = {
+  [key: string]: string | string[];
+};
+
+export type StyleObjectRuleOrAtRule = {
+  [key: string]: string | string[] | StyleObjectRuleOrAtRule;
+};
 
 function getStyleObjectFromTwObject(
   twObjectRoot: postcss.Root,
@@ -74,9 +75,7 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
     throw new Error(`This type: ${type} of value: ${value} is not supported`);
   };
 
-  timsort.sort(
-    styleObjectEntries,
-    //@ts-ignore
+  const sortedStyleObjectEntries = styleObjectEntries.sort(
     ([first, firstValue], [second, secondValue]) => {
       const firstValueType = getValueType(first, firstValue);
       const secondValueType = getValueType(second, secondValue);
@@ -125,7 +124,7 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
     }
   );
 
-  return Object.fromEntries(styleObjectEntries);
+  return Object.fromEntries(sortedStyleObjectEntries);
 }
 
 export function transformTwClassesToStyleObject(

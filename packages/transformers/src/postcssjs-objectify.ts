@@ -73,4 +73,4 @@ function objectify(node) {
   return result;
 }
 
-module.exports = objectify;
+export default objectify;

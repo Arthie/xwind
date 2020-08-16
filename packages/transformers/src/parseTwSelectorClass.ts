@@ -2,11 +2,6 @@ import { parse } from "css-what";
 
 export function parseTwSelectorClass(twSelector: string) {
   const parsedTwSelector = parse(twSelector);
-  if (parsedTwSelector.length !== 1) {
-    throw new Error(
-      `Only one selector is allowed but got ${parsedTwSelector.length} selectors from "${twSelector}"`
-    );
-  }
   const [classSelector] = parsedTwSelector[0];
   if (classSelector.type !== "attribute" || classSelector.name !== "class") {
     throw new Error(

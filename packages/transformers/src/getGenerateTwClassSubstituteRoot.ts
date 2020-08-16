@@ -1,19 +1,19 @@
 import postcss from "postcss";
-import { TwObject } from "./transformPostcss";
+import { TwObject } from "./transformPostcssRootsToTwObjectMap";
 
 function applySubstituteRules(
   variant: postcss.AtRuleNewProps,
   twObjectRoot: postcss.Root,
   getSubstituteRules: (root: postcss.Root) => void
 ) {
-  const root = twObjectRoot.clone();
-  if (!root.first || root.first.type !== "rule") {
-    throw new Error(`Root's first node is not of type 'rule' ${root}`);
+  if (!twObjectRoot.nodes) {
+    throw new Error("Root has no nodes");
   }
   const atRule = postcss.atRule(variant);
-  atRule.append(root.first.clone());
-  root.first.replaceWith(atRule);
-
+  for (const node of twObjectRoot.nodes) {
+    atRule.append(node.clone());
+  }
+  const root = postcss.root().append(atRule);
   getSubstituteRules(root);
   return root;
 }
@@ -32,29 +32,14 @@ export function getGenerateTwClassSubstituteRoot(
     const twObject = twObjectMap.get(twClass);
     if (!twObject) throw new Error(`Class "${twClass}" not found.`);
 
-    let styleRoot: postcss.Root = twObject.root;
-
+    let styleRoot = postcss.root().append(...twObject.nodes);
     const twClassVariantsLength = twClassVariants.length;
     if (twClassVariantsLength) {
-      if (twObject.type !== "utility") {
-        throw new Error(
-          `Variant class "${twClassVariants.join(
-            ", "
-          )}" not allowed with class "${twClass}" of type "${twObject.type}"`
-        );
-      }
-
-      if (twClassVariantsLength > 2) {
-        throw new Error(
-          `Variant classes "${twClassVariants.join(
-            ", "
-          )}" not allowed, expect max 2 variants but got "${twClassVariantsLength}"`
-        );
-      }
-
       if (
-        twClassVariantsLength === 2 &&
-        twClassVariants.every((variant) => variants.includes(variant))
+        twClassVariantsLength >= 2 &&
+        twClassVariants.every(
+          (variant) => variants.includes(variant) && !variant.includes("motion")
+        )
       ) {
         throw new Error(
           `Variant classes "${twClassVariants.join(", ")}" not allowed`
@@ -62,9 +47,6 @@ export function getGenerateTwClassSubstituteRoot(
       }
 
       const variantCacheKey = twClassVariants.join();
-      if (!twObject.variant) {
-        twObject.variant = {};
-      }
       if (twObject.variant[variantCacheKey]) {
         styleRoot = twObject.variant[variantCacheKey];
       } else {

@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/transformers",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "author": "Arthie",
   "description": "This package contains tailwindcssinjs transformers",
   "main": "lib/index.js",
@@ -9,17 +9,18 @@
     "lib"
   ],
   "license": "MIT",
-  "//engines": {
+  "engines": {
     "node": ">=12.0.0"
   },
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "test": "yarn run build && yarn run jest",
+    "test-only": "jest"
   },
   "dependencies": {
-    "css-what": "^3.2.1",
-    "lodash": "^4.17.15",
-    "postcss": "^7.0.30",
-    "postcss-js": "^2.0.3",
-    "timsort": "^0.3.0"
+    "css-what": "^3.3.0",
+    "lodash": "^4.17.20",
+    "postcss": "^7.0.32",
+    "postcss-js": "^2.0.3"
   }
 }
