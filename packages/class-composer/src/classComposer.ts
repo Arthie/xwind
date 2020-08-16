@@ -1,6 +1,4 @@
-import "core-js/stable/array/flat";
-
-//recursive type: string | string array | nested string array (no depth limit)
+// recursive type: string | string array | nested string array (no depth limit)
 export type TwClasses = string | TwClasses[];
 
 /**
@@ -32,11 +30,11 @@ export function twClassesComposer(separator: string) {
     _substring: string,
     ...searchResult: any[]
   ) => {
-    //searchResult contains substring capture groups
+    // searchResult contains substring capture groups
     const [variant, variantclasses] = searchResult as [string, string];
 
-    //matches tailwind classes and removes whitespace
-    //" text-red-100  bg-blue-200 " => ["text-red-100", "bg-blue-200"]
+    // matches tailwind classes and removes whitespace
+    // " text-red-100  bg-blue-200 " => ["text-red-100", "bg-blue-200"]
     const twClasses = variantclasses.match(NOT_WHITE_SPACE_REGEX) ?? [];
 
     const replacementClasses = [];
@@ -47,22 +45,22 @@ export function twClassesComposer(separator: string) {
   };
 
   return (...twClasses: TwClasses[]) => {
-    //combines all arguments into a string
-    //@ts-expect-error - typescript Array type is broken: lib.es2019.array.d.ts:23:5 - error TS2502: '"recur"' is referenced directly or indirectly in its own type annotation.
-    const twClassesString = twClasses.flat<any[]>(Infinity).join(" ");
+    // combines all arguments into a string
+    // @ts-expect-error - typescript Array type is broken: lib.es2019.array.d.ts:23:5 - error TS2502: '"recur"' is referenced directly or indirectly in its own type annotation.
+    const twClassesString = twClasses.flat<TwClasses[], 1>(Infinity).join(" ");
 
     if (NESTED_ANGLE_BRACKET_REGEXP.test(twClassesString)) {
       throw new Error(`Nested variant arrays are not allowed`);
     }
 
-    //replaces variant array syntax
+    // replaces variant array syntax
     const replacedTwClasses = twClassesString.replace(
       VARIANT_ARRAY_SYNTAX_REGEX,
       variantArraySyntaxReplacer
     );
 
-    //matches tailwind classes and removes whitespace
-    //" text-red-100  bg-blue-200 " => ["text-red-100", "bg-blue-200"]
+    // matches tailwind classes and removes whitespace
+    // " text-red-100  bg-blue-200 " => ["text-red-100", "bg-blue-200"]
     return Array.from(replacedTwClasses.match(NOT_WHITE_SPACE_REGEX) ?? []);
   };
 }
