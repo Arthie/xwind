@@ -115,18 +115,6 @@ function tailwindcssinjsLanguageService(
                 });
                 problems++;
               }
-              if (twObject?.type !== "utility") {
-                diagnostics.push({
-                  file: context.node.getSourceFile(),
-                  code: 3,
-                  category: ts.DiagnosticCategory.Error,
-                  start: twClass.index,
-                  length: twClass.text.length,
-                  messageText: `${twClass.text} is not a utility class.`,
-                  source: "tailwindcssinjs",
-                });
-                problems++;
-              }
             }
           }
 
@@ -142,18 +130,6 @@ function tailwindcssinjsLanguageService(
                 start: templateContextClass.class.index,
                 length: templateContextClass.class.text.length,
                 messageText: `${templateContextClass.class.text} is not a tailwind class.`,
-                source: "tailwindcssinjs",
-              });
-              problems++;
-            }
-            if (twObject?.type !== "utility") {
-              diagnostics.push({
-                file: context.node.getSourceFile(),
-                code: 3,
-                category: ts.DiagnosticCategory.Error,
-                start: templateContextClass.class.index,
-                length: templateContextClass.class.text.length,
-                messageText: `${templateContextClass.class.text} is not a utility class.`,
                 source: "tailwindcssinjs",
               });
               problems++;
@@ -196,41 +172,41 @@ function tailwindcssinjsLanguageService(
             const firstType = getVariantType(first);
             const secondType = getVariantType(second);
 
-            if (other.length) {
-              diagnostics.push({
-                file: context.node.getSourceFile(),
-                code: 6,
-                category: ts.DiagnosticCategory.Error,
-                start: templateContextClass.index,
-                length: templateContextClass.variant.join(
-                  tailwindConfig?.separator ?? ":"
-                ).length,
-                messageText: `${templateContextClass.variant.join(
-                  tailwindConfig?.separator ?? ":"
-                )} is not a valid tailwind variant. The selector has more than 2 variants: ${other}.`,
-                source: "tailwindcssinjs",
-              });
-              problems++;
-              continue;
-            }
+            // if (other.length) {
+            //   diagnostics.push({
+            //     file: context.node.getSourceFile(),
+            //     code: 6,
+            //     category: ts.DiagnosticCategory.Error,
+            //     start: templateContextClass.index,
+            //     length: templateContextClass.variant.join(
+            //       tailwindConfig?.separator ?? ":"
+            //     ).length,
+            //     messageText: `${templateContextClass.variant.join(
+            //       tailwindConfig?.separator ?? ":"
+            //     )} is not a valid tailwind variant. The selector has more than 2 variants: ${other}.`,
+            //     source: "tailwindcssinjs",
+            //   });
+            //   problems++;
+            //   continue;
+            // }
 
-            if (secondType && firstType === "variants") {
-              diagnostics.push({
-                file: context.node.getSourceFile(),
-                code: 7,
-                category: ts.DiagnosticCategory.Error,
-                start: templateContextClass.index,
-                length: templateContextClass.variant.join(
-                  tailwindConfig?.separator ?? ":"
-                ).length,
-                messageText: `${templateContextClass.variant.join(
-                  tailwindConfig?.separator ?? ":"
-                )} is not a valid tailwind variant. "${first}" should be a screen variant`,
-                source: "tailwindcssinjs",
-              });
-              problems++;
-              continue;
-            }
+            // if (secondType && firstType === "variants") {
+            //   diagnostics.push({
+            //     file: context.node.getSourceFile(),
+            //     code: 7,
+            //     category: ts.DiagnosticCategory.Error,
+            //     start: templateContextClass.index,
+            //     length: templateContextClass.variant.join(
+            //       tailwindConfig?.separator ?? ":"
+            //     ).length,
+            //     messageText: `${templateContextClass.variant.join(
+            //       tailwindConfig?.separator ?? ":"
+            //     )} is not a valid tailwind variant. "${first}" should be a screen variant`,
+            //     source: "tailwindcssinjs",
+            //   });
+            //   problems++;
+            //   continue;
+            // }
 
             if (!firstType && !secondType) {
               diagnostics.push({
@@ -364,6 +340,7 @@ function tailwindcssinjsLanguageService(
 
         const twObject = tailwindData.twObjectMap.get(name);
         if (twObject) {
+          const root = postcss.root().append(...twObject.nodes);
           return translateCompletionItemsToCompletionEntryDetails({
             label: name,
             kind: vscode.CompletionItemKind.Text,
@@ -371,7 +348,7 @@ function tailwindcssinjsLanguageService(
               kind: vscode.MarkupKind.Markdown,
               value: [
                 "```css",
-                twObject.root.toString().replace(/    /g, "  "),
+                root.toString().replace(/    /g, "  "),
                 "```",
               ].join("\n"),
             },

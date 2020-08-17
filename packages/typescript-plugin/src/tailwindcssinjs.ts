@@ -7,8 +7,7 @@ import {
 } from "@tailwindcssinjs/tailwindcss-data";
 
 import {
-  transformPostcssRootToPostcssRules,
-  transformPostcssRulesToTwObjectMap,
+  transformPostcssRootsToTwObjectMap,
   getGenerateTwClassSubstituteRoot,
 } from "@tailwindcssinjs/transformers";
 
@@ -27,12 +26,10 @@ export default function tailwindcssinjs(config: TailwindConfig) {
     getSubstituteVariantsAtRules,
   } = tailwindData(config, corePlugins);
 
-  const componentRules = transformPostcssRootToPostcssRules(componentsRoot);
-  const utilityRules = transformPostcssRootToPostcssRules(utilitiesRoot);
-  const twObjectMap = transformPostcssRulesToTwObjectMap(
-    utilityRules,
-    componentRules
-  );
+  const twObjectMap = transformPostcssRootsToTwObjectMap([
+    utilitiesRoot,
+    componentsRoot,
+  ]);
 
   const generateTwClassSubstituteRoot = getGenerateTwClassSubstituteRoot(
     screens,

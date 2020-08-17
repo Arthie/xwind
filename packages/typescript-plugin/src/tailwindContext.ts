@@ -1,4 +1,3 @@
-import "core-js/stable/string/match-all";
 import { TemplateContext } from "typescript-template-language-service-decorator";
 export interface TailwindContextRange {
   start: ts.LineAndCharacter;
