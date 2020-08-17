@@ -117,7 +117,7 @@ Check out the [Tailwind documentation](https://tailwindcss.com/docs/configuratio
 
 ### Babel macro configuration
 
-```json
+```jsonc
 // package.json
 "babelMacros": {
     "tailwindcssinjs": {
