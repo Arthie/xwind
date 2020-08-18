@@ -22,15 +22,9 @@ function getTailwindClasses() {
     config,
     corePlugins_1.default
   );
-  const componentRules = transformers_1.transformPostcssRootToPostcssRules(
-    componentsRoot
-  );
-  const utilityRules = transformers_1.transformPostcssRootToPostcssRules(
-    utilitiesRoot
-  );
-  twObjectMap = transformers_1.transformPostcssRulesToTwObjectMap(
-    utilityRules,
-    componentRules
+
+  twObjectMap = transformers_1.transformPostcssRootsToTwObjectMap(
+    [componentsRoot, utilitiesRoot]
   );
 
   return twObjectMap;
