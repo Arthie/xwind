@@ -1,4 +1,4 @@
-import postcss from "postcss";
+import { Root } from "postcss";
 import merge from "lodash/merge";
 
 import { TwObject } from "./transformPostcssRootsToTwObjectMap";
@@ -16,7 +16,7 @@ export type StyleObjectRuleOrAtRule = {
 };
 
 function getStyleObjectFromTwObject(
-  twObjectRoot: postcss.Root,
+  twObjectRoot: Root,
   twClass: string
 ): StyleObject {
   const root = twObjectRoot.clone();
@@ -133,7 +133,7 @@ export function transformTwClassesToStyleObject(
   generateTwClassesRoot: (
     twObjectMap: Map<string, TwObject>,
     twParsedClass: [string, string[]]
-  ) => postcss.Root
+  ) => Root
 ) {
   const mergedStyleObject: StyleObject = {};
 

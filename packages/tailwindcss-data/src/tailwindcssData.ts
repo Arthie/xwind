@@ -8,8 +8,6 @@ import resolveConfig from "tailwindcss/resolveConfig";
 
 import { ResolvedTialwindConfig, TailwindConfig } from "./tailwindcssConfig";
 
-export { ResolvedTialwindConfig, TailwindConfig } from "./tailwindcssConfig";
-
 function getMediaScreens(config: ResolvedTialwindConfig) {
   return Object.keys(config.theme.screens);
 }

@@ -11,7 +11,7 @@ pluginTester.default({
     "no usage": `import tw from '../lib/macro'`,
     "correct usage 1": `
       import tw from '../lib/macro';
-      const css = tw("sm:motion-reduce:translate-y-0 motion-reduce:hover:translate-y-0 md:motion-reduce:hover:translate-y-0");
+      const css = tw("bg-gradient-to-r sm:motion-reduce:translate-y-0 motion-reduce:hover:translate-y-0 md:motion-reduce:hover:translate-y-0");
       `,
   },
 });

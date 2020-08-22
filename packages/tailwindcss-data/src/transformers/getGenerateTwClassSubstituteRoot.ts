@@ -1,10 +1,10 @@
-import postcss from "postcss";
+import postcss, { Root, AtRuleProps } from "postcss";
 import { TwObject } from "./transformPostcssRootsToTwObjectMap";
 
 function applySubstituteRules(
-  variant: postcss.AtRuleNewProps,
-  twObjectRoot: postcss.Root,
-  getSubstituteRules: (root: postcss.Root) => void
+  variant: AtRuleProps,
+  twObjectRoot: Root,
+  getSubstituteRules: (root: Root) => void
 ) {
   if (!twObjectRoot.nodes) {
     throw new Error("Root has no nodes");
@@ -21,8 +21,8 @@ function applySubstituteRules(
 export function getGenerateTwClassSubstituteRoot(
   screens: string[],
   variants: string[],
-  getSubstituteScreenAtRules: (root: postcss.Root) => void,
-  getSubstituteVariantsAtRules: (root: postcss.Root) => void
+  getSubstituteScreenAtRules: (root: Root) => void,
+  getSubstituteVariantsAtRules: (root: Root) => void
 ) {
   return (
     twObjectMap: Map<string, TwObject>,

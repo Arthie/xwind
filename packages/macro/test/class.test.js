@@ -12,23 +12,16 @@ const corePlugins_1 = __importDefault(require("tailwindcss/lib/corePlugins"));
 
 const tailwindcssData_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData");
 const transformers_1 = require("@tailwindcssinjs/transformers");
-let configCache;
-let twObjectMap;
-function tailwindcssinjs(config, corePlugins) {
-  if (configCache)
-    console.log("@tailwindcssinjs/macro - tailwind config changed");
-  configCache = config;
 
+function tailwindcssinjs(config, corePlugins) {
   const { componentsRoot, utilitiesRoot } = tailwindcssData_1.tailwindData(
     config,
     corePlugins
   );
-  twObjectMap = transformers_1.transformPostcssRootsToTwObjectMap([
+  return transformers_1.transformPostcssRootsToTwObjectMap([
     utilitiesRoot,
     componentsRoot,
   ]);
-
-  return twObjectMap;
 }
 
 const tests = () => {

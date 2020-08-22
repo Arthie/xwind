@@ -10862,6 +10862,62 @@ const css = {
 
 `;
 
+exports[`macros bg-clip-border: bg-clip-border 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-clip-border");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundClip: "border-box",
+};
+
+
+`;
+
+exports[`macros bg-clip-content: bg-clip-content 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-clip-content");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundClip: "content-box",
+};
+
+
+`;
+
+exports[`macros bg-clip-padding: bg-clip-padding 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-clip-padding");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundClip: "padding-box",
+};
+
+
+`;
+
+exports[`macros bg-clip-text: bg-clip-text 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-clip-text");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundClip: "text",
+};
+
+
+`;
+
 exports[`macros bg-contain: bg-contain 1`] = `
 
 import tw from '../lib/macro';
@@ -11049,6 +11105,120 @@ const css = tw("bg-fixed");
 
 const css = {
   backgroundAttachment: "fixed",
+};
+
+
+`;
+
+exports[`macros bg-gradient-to-b: bg-gradient-to-b 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-gradient-to-b");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundImage: "linear-gradient(to bottom, var(--gradient-color-stops))",
+};
+
+
+`;
+
+exports[`macros bg-gradient-to-bl: bg-gradient-to-bl 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-gradient-to-bl");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundImage:
+    "linear-gradient(to bottom left, var(--gradient-color-stops))",
+};
+
+
+`;
+
+exports[`macros bg-gradient-to-br: bg-gradient-to-br 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-gradient-to-br");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundImage:
+    "linear-gradient(to bottom right, var(--gradient-color-stops))",
+};
+
+
+`;
+
+exports[`macros bg-gradient-to-l: bg-gradient-to-l 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-gradient-to-l");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundImage: "linear-gradient(to left, var(--gradient-color-stops))",
+};
+
+
+`;
+
+exports[`macros bg-gradient-to-r: bg-gradient-to-r 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-gradient-to-r");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundImage: "linear-gradient(to right, var(--gradient-color-stops))",
+};
+
+
+`;
+
+exports[`macros bg-gradient-to-t: bg-gradient-to-t 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-gradient-to-t");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundImage: "linear-gradient(to top, var(--gradient-color-stops))",
+};
+
+
+`;
+
+exports[`macros bg-gradient-to-tl: bg-gradient-to-tl 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-gradient-to-tl");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundImage: "linear-gradient(to top left, var(--gradient-color-stops))",
+};
+
+
+`;
+
+exports[`macros bg-gradient-to-tr: bg-gradient-to-tr 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-gradient-to-tr");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundImage: "linear-gradient(to top right, var(--gradient-color-stops))",
 };
 
 
@@ -11569,6 +11739,20 @@ const css = tw("bg-no-repeat");
 
 const css = {
   backgroundRepeat: "no-repeat",
+};
+
+
+`;
+
+exports[`macros bg-none: bg-none 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("bg-none");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundImage: "none",
 };
 
 
@@ -17644,6 +17828,20 @@ const css = {
 
 `;
 
+exports[`macros contents: contents 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("contents");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  display: "contents",
+};
+
+
+`;
+
 exports[`macros cursor-auto: cursor-auto 1`] = `
 
 import tw from '../lib/macro';
@@ -18211,6 +18409,54 @@ const css = {
 
 `;
 
+exports[`macros divide-dashed: divide-dashed 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("divide-dashed");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    borderStyle: "dashed",
+  },
+};
+
+
+`;
+
+exports[`macros divide-dotted: divide-dotted 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("divide-dotted");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    borderStyle: "dotted",
+  },
+};
+
+
+`;
+
+exports[`macros divide-double: divide-double 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("divide-double");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    borderStyle: "double",
+  },
+};
+
+
+`;
+
 exports[`macros divide-gray-50: divide-gray-50 1`] = `
 
 import tw from '../lib/macro';
@@ -18715,6 +18961,22 @@ const css = {
   "& > :not(template) ~ :not(template)": {
     "--divide-opacity": "1",
     borderColor: ["#362f78", "rgba(54, 47, 120, var(--divide-opacity))"],
+  },
+};
+
+
+`;
+
+exports[`macros divide-none: divide-none 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("divide-none");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    borderStyle: "none",
   },
 };
 
@@ -19475,6 +19737,22 @@ const css = {
   "& > :not(template) ~ :not(template)": {
     "--divide-opacity": "1",
     borderColor: ["#771d1d", "rgba(119, 29, 29, var(--divide-opacity))"],
+  },
+};
+
+
+`;
+
+exports[`macros divide-solid: divide-solid 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("divide-solid");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "& > :not(template) ~ :not(template)": {
+    borderStyle: "solid",
   },
 };
 
@@ -20960,6 +21238,1814 @@ const css = {
 
 `;
 
+exports[`macros from-black: from-black 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-black");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#000000",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0))",
+};
+
+
+`;
+
+exports[`macros from-blue-50: from-blue-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-blue-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#ebf5ff",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(235, 245, 255, 0))",
+};
+
+
+`;
+
+exports[`macros from-blue-100: from-blue-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-blue-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#e1effe",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(225, 239, 254, 0))",
+};
+
+
+`;
+
+exports[`macros from-blue-200: from-blue-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-blue-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#c3ddfd",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(195, 221, 253, 0))",
+};
+
+
+`;
+
+exports[`macros from-blue-300: from-blue-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-blue-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#a4cafe",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(164, 202, 254, 0))",
+};
+
+
+`;
+
+exports[`macros from-blue-400: from-blue-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-blue-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#76a9fa",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(118, 169, 250, 0))",
+};
+
+
+`;
+
+exports[`macros from-blue-500: from-blue-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-blue-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#3f83f8",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(63, 131, 248, 0))",
+};
+
+
+`;
+
+exports[`macros from-blue-600: from-blue-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-blue-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#1c64f2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(28, 100, 242, 0))",
+};
+
+
+`;
+
+exports[`macros from-blue-700: from-blue-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-blue-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#1a56db",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(26, 86, 219, 0))",
+};
+
+
+`;
+
+exports[`macros from-blue-800: from-blue-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-blue-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#1e429f",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(30, 66, 159, 0))",
+};
+
+
+`;
+
+exports[`macros from-blue-900: from-blue-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-blue-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#233876",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(35, 56, 118, 0))",
+};
+
+
+`;
+
+exports[`macros from-cool-gray-50: from-cool-gray-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-cool-gray-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f8fafc",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(248, 250, 252, 0))",
+};
+
+
+`;
+
+exports[`macros from-cool-gray-100: from-cool-gray-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-cool-gray-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f1f5f9",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(241, 245, 249, 0))",
+};
+
+
+`;
+
+exports[`macros from-cool-gray-200: from-cool-gray-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-cool-gray-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#e2e8f0",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(226, 232, 240, 0))",
+};
+
+
+`;
+
+exports[`macros from-cool-gray-300: from-cool-gray-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-cool-gray-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#cfd8e3",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(207, 216, 227, 0))",
+};
+
+
+`;
+
+exports[`macros from-cool-gray-400: from-cool-gray-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-cool-gray-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#97a6ba",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(151, 166, 186, 0))",
+};
+
+
+`;
+
+exports[`macros from-cool-gray-500: from-cool-gray-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-cool-gray-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#64748b",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(100, 116, 139, 0))",
+};
+
+
+`;
+
+exports[`macros from-cool-gray-600: from-cool-gray-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-cool-gray-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#475569",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(71, 85, 105, 0))",
+};
+
+
+`;
+
+exports[`macros from-cool-gray-700: from-cool-gray-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-cool-gray-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#364152",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(54, 65, 82, 0))",
+};
+
+
+`;
+
+exports[`macros from-cool-gray-800: from-cool-gray-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-cool-gray-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#27303f",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(39, 48, 63, 0))",
+};
+
+
+`;
+
+exports[`macros from-cool-gray-900: from-cool-gray-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-cool-gray-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#1a202e",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(26, 32, 46, 0))",
+};
+
+
+`;
+
+exports[`macros from-gray-50: from-gray-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-gray-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f9fafb",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(249, 250, 251, 0))",
+};
+
+
+`;
+
+exports[`macros from-gray-100: from-gray-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-gray-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f4f5f7",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(244, 245, 247, 0))",
+};
+
+
+`;
+
+exports[`macros from-gray-200: from-gray-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-gray-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#e5e7eb",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(229, 231, 235, 0))",
+};
+
+
+`;
+
+exports[`macros from-gray-300: from-gray-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-gray-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#d2d6dc",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(210, 214, 220, 0))",
+};
+
+
+`;
+
+exports[`macros from-gray-400: from-gray-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-gray-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#9fa6b2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(159, 166, 178, 0))",
+};
+
+
+`;
+
+exports[`macros from-gray-500: from-gray-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-gray-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#6b7280",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(107, 114, 128, 0))",
+};
+
+
+`;
+
+exports[`macros from-gray-600: from-gray-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-gray-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#4b5563",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(75, 85, 99, 0))",
+};
+
+
+`;
+
+exports[`macros from-gray-700: from-gray-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-gray-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#374151",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(55, 65, 81, 0))",
+};
+
+
+`;
+
+exports[`macros from-gray-800: from-gray-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-gray-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#252f3f",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(37, 47, 63, 0))",
+};
+
+
+`;
+
+exports[`macros from-gray-900: from-gray-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-gray-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#161e2e",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(22, 30, 46, 0))",
+};
+
+
+`;
+
+exports[`macros from-green-50: from-green-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-green-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f3faf7",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(243, 250, 247, 0))",
+};
+
+
+`;
+
+exports[`macros from-green-100: from-green-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-green-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#def7ec",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(222, 247, 236, 0))",
+};
+
+
+`;
+
+exports[`macros from-green-200: from-green-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-green-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#bcf0da",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(188, 240, 218, 0))",
+};
+
+
+`;
+
+exports[`macros from-green-300: from-green-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-green-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#84e1bc",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(132, 225, 188, 0))",
+};
+
+
+`;
+
+exports[`macros from-green-400: from-green-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-green-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#31c48d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(49, 196, 141, 0))",
+};
+
+
+`;
+
+exports[`macros from-green-500: from-green-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-green-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#0e9f6e",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(14, 159, 110, 0))",
+};
+
+
+`;
+
+exports[`macros from-green-600: from-green-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-green-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#057a55",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(5, 122, 85, 0))",
+};
+
+
+`;
+
+exports[`macros from-green-700: from-green-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-green-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#046c4e",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(4, 108, 78, 0))",
+};
+
+
+`;
+
+exports[`macros from-green-800: from-green-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-green-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#03543f",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(3, 84, 63, 0))",
+};
+
+
+`;
+
+exports[`macros from-green-900: from-green-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-green-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#014737",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(1, 71, 55, 0))",
+};
+
+
+`;
+
+exports[`macros from-indigo-50: from-indigo-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-indigo-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f0f5ff",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(240, 245, 255, 0))",
+};
+
+
+`;
+
+exports[`macros from-indigo-100: from-indigo-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-indigo-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#e5edff",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(229, 237, 255, 0))",
+};
+
+
+`;
+
+exports[`macros from-indigo-200: from-indigo-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-indigo-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#cddbfe",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(205, 219, 254, 0))",
+};
+
+
+`;
+
+exports[`macros from-indigo-300: from-indigo-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-indigo-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#b4c6fc",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(180, 198, 252, 0))",
+};
+
+
+`;
+
+exports[`macros from-indigo-400: from-indigo-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-indigo-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#8da2fb",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(141, 162, 251, 0))",
+};
+
+
+`;
+
+exports[`macros from-indigo-500: from-indigo-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-indigo-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#6875f5",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(104, 117, 245, 0))",
+};
+
+
+`;
+
+exports[`macros from-indigo-600: from-indigo-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-indigo-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#5850ec",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(88, 80, 236, 0))",
+};
+
+
+`;
+
+exports[`macros from-indigo-700: from-indigo-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-indigo-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#5145cd",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(81, 69, 205, 0))",
+};
+
+
+`;
+
+exports[`macros from-indigo-800: from-indigo-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-indigo-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#42389d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(66, 56, 157, 0))",
+};
+
+
+`;
+
+exports[`macros from-indigo-900: from-indigo-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-indigo-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#362f78",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(54, 47, 120, 0))",
+};
+
+
+`;
+
+exports[`macros from-orange-50: from-orange-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-orange-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fff8f1",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(255, 248, 241, 0))",
+};
+
+
+`;
+
+exports[`macros from-orange-100: from-orange-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-orange-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#feecdc",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(254, 236, 220, 0))",
+};
+
+
+`;
+
+exports[`macros from-orange-200: from-orange-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-orange-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fcd9bd",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(252, 217, 189, 0))",
+};
+
+
+`;
+
+exports[`macros from-orange-300: from-orange-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-orange-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fdba8c",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(253, 186, 140, 0))",
+};
+
+
+`;
+
+exports[`macros from-orange-400: from-orange-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-orange-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#ff8a4c",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(255, 138, 76, 0))",
+};
+
+
+`;
+
+exports[`macros from-orange-500: from-orange-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-orange-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#ff5a1f",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(255, 90, 31, 0))",
+};
+
+
+`;
+
+exports[`macros from-orange-600: from-orange-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-orange-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#d03801",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(208, 56, 1, 0))",
+};
+
+
+`;
+
+exports[`macros from-orange-700: from-orange-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-orange-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#b43403",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(180, 52, 3, 0))",
+};
+
+
+`;
+
+exports[`macros from-orange-800: from-orange-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-orange-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#8a2c0d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(138, 44, 13, 0))",
+};
+
+
+`;
+
+exports[`macros from-orange-900: from-orange-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-orange-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#73230d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(115, 35, 13, 0))",
+};
+
+
+`;
+
+exports[`macros from-pink-50: from-pink-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-pink-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fdf2f8",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(253, 242, 248, 0))",
+};
+
+
+`;
+
+exports[`macros from-pink-100: from-pink-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-pink-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fce8f3",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(252, 232, 243, 0))",
+};
+
+
+`;
+
+exports[`macros from-pink-200: from-pink-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-pink-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fad1e8",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(250, 209, 232, 0))",
+};
+
+
+`;
+
+exports[`macros from-pink-300: from-pink-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-pink-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f8b4d9",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(248, 180, 217, 0))",
+};
+
+
+`;
+
+exports[`macros from-pink-400: from-pink-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-pink-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f17eb8",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(241, 126, 184, 0))",
+};
+
+
+`;
+
+exports[`macros from-pink-500: from-pink-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-pink-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#e74694",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(231, 70, 148, 0))",
+};
+
+
+`;
+
+exports[`macros from-pink-600: from-pink-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-pink-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#d61f69",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(214, 31, 105, 0))",
+};
+
+
+`;
+
+exports[`macros from-pink-700: from-pink-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-pink-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#bf125d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(191, 18, 93, 0))",
+};
+
+
+`;
+
+exports[`macros from-pink-800: from-pink-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-pink-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#99154b",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(153, 21, 75, 0))",
+};
+
+
+`;
+
+exports[`macros from-pink-900: from-pink-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-pink-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#751a3d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(117, 26, 61, 0))",
+};
+
+
+`;
+
+exports[`macros from-purple-50: from-purple-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-purple-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f6f5ff",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(246, 245, 255, 0))",
+};
+
+
+`;
+
+exports[`macros from-purple-100: from-purple-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-purple-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#edebfe",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(237, 235, 254, 0))",
+};
+
+
+`;
+
+exports[`macros from-purple-200: from-purple-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-purple-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#dcd7fe",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(220, 215, 254, 0))",
+};
+
+
+`;
+
+exports[`macros from-purple-300: from-purple-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-purple-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#cabffd",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(202, 191, 253, 0))",
+};
+
+
+`;
+
+exports[`macros from-purple-400: from-purple-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-purple-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#ac94fa",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(172, 148, 250, 0))",
+};
+
+
+`;
+
+exports[`macros from-purple-500: from-purple-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-purple-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#9061f9",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(144, 97, 249, 0))",
+};
+
+
+`;
+
+exports[`macros from-purple-600: from-purple-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-purple-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#7e3af2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(126, 58, 242, 0))",
+};
+
+
+`;
+
+exports[`macros from-purple-700: from-purple-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-purple-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#6c2bd9",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(108, 43, 217, 0))",
+};
+
+
+`;
+
+exports[`macros from-purple-800: from-purple-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-purple-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#5521b5",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(85, 33, 181, 0))",
+};
+
+
+`;
+
+exports[`macros from-purple-900: from-purple-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-purple-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#4a1d96",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(74, 29, 150, 0))",
+};
+
+
+`;
+
+exports[`macros from-red-50: from-red-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-red-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fdf2f2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(253, 242, 242, 0))",
+};
+
+
+`;
+
+exports[`macros from-red-100: from-red-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-red-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fde8e8",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(253, 232, 232, 0))",
+};
+
+
+`;
+
+exports[`macros from-red-200: from-red-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-red-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fbd5d5",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(251, 213, 213, 0))",
+};
+
+
+`;
+
+exports[`macros from-red-300: from-red-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-red-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f8b4b4",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(248, 180, 180, 0))",
+};
+
+
+`;
+
+exports[`macros from-red-400: from-red-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-red-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f98080",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(249, 128, 128, 0))",
+};
+
+
+`;
+
+exports[`macros from-red-500: from-red-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-red-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#f05252",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(240, 82, 82, 0))",
+};
+
+
+`;
+
+exports[`macros from-red-600: from-red-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-red-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#e02424",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(224, 36, 36, 0))",
+};
+
+
+`;
+
+exports[`macros from-red-700: from-red-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-red-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#c81e1e",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(200, 30, 30, 0))",
+};
+
+
+`;
+
+exports[`macros from-red-800: from-red-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-red-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#9b1c1c",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(155, 28, 28, 0))",
+};
+
+
+`;
+
+exports[`macros from-red-900: from-red-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-red-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#771d1d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(119, 29, 29, 0))",
+};
+
+
+`;
+
+exports[`macros from-teal-50: from-teal-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-teal-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#edfafa",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(237, 250, 250, 0))",
+};
+
+
+`;
+
+exports[`macros from-teal-100: from-teal-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-teal-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#d5f5f6",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(213, 245, 246, 0))",
+};
+
+
+`;
+
+exports[`macros from-teal-200: from-teal-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-teal-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#afecef",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(175, 236, 239, 0))",
+};
+
+
+`;
+
+exports[`macros from-teal-300: from-teal-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-teal-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#7edce2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(126, 220, 226, 0))",
+};
+
+
+`;
+
+exports[`macros from-teal-400: from-teal-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-teal-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#16bdca",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(22, 189, 202, 0))",
+};
+
+
+`;
+
+exports[`macros from-teal-500: from-teal-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-teal-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#0694a2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(6, 148, 162, 0))",
+};
+
+
+`;
+
+exports[`macros from-teal-600: from-teal-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-teal-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#047481",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(4, 116, 129, 0))",
+};
+
+
+`;
+
+exports[`macros from-teal-700: from-teal-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-teal-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#036672",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(3, 102, 114, 0))",
+};
+
+
+`;
+
+exports[`macros from-teal-800: from-teal-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-teal-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#05505c",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(5, 80, 92, 0))",
+};
+
+
+`;
+
+exports[`macros from-teal-900: from-teal-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-teal-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#014451",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(1, 68, 81, 0))",
+};
+
+
+`;
+
+exports[`macros from-transparent: from-transparent 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-transparent");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "transparent",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0))",
+};
+
+
+`;
+
+exports[`macros from-white: from-white 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-white");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#ffffff",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0))",
+};
+
+
+`;
+
+exports[`macros from-yellow-50: from-yellow-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-yellow-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fdfdea",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(253, 253, 234, 0))",
+};
+
+
+`;
+
+exports[`macros from-yellow-100: from-yellow-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-yellow-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fdf6b2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(253, 246, 178, 0))",
+};
+
+
+`;
+
+exports[`macros from-yellow-200: from-yellow-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-yellow-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#fce96a",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(252, 233, 106, 0))",
+};
+
+
+`;
+
+exports[`macros from-yellow-300: from-yellow-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-yellow-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#faca15",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(250, 202, 21, 0))",
+};
+
+
+`;
+
+exports[`macros from-yellow-400: from-yellow-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-yellow-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#e3a008",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(227, 160, 8, 0))",
+};
+
+
+`;
+
+exports[`macros from-yellow-500: from-yellow-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-yellow-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#c27803",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(194, 120, 3, 0))",
+};
+
+
+`;
+
+exports[`macros from-yellow-600: from-yellow-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-yellow-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#9f580a",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(159, 88, 10, 0))",
+};
+
+
+`;
+
+exports[`macros from-yellow-700: from-yellow-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-yellow-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#8e4b10",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(142, 75, 16, 0))",
+};
+
+
+`;
+
+exports[`macros from-yellow-800: from-yellow-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-yellow-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#723b13",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(114, 59, 19, 0))",
+};
+
+
+`;
+
+exports[`macros from-yellow-900: from-yellow-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("from-yellow-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-from-color": "#633112",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-to-color, rgba(99, 49, 18, 0))",
+};
+
+
+`;
+
 exports[`macros gap-0.5: gap-0.5 1`] = `
 
 import tw from '../lib/macro';
@@ -21915,6 +24001,1926 @@ const css = tw("gap-px");
 const css = {
   gridGap: "1px",
   gap: "1px",
+};
+
+
+`;
+
+exports[`macros gap-x-0.5: gap-x-0.5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-0.5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "0.125rem",
+  columnGap: "0.125rem",
+};
+
+
+`;
+
+exports[`macros gap-x-0: gap-x-0 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-0");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "0",
+  columnGap: "0",
+};
+
+
+`;
+
+exports[`macros gap-x-1.5: gap-x-1.5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-1.5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "0.375rem",
+  columnGap: "0.375rem",
+};
+
+
+`;
+
+exports[`macros gap-x-1/2: gap-x-1/2 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-1/2");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "50%",
+  columnGap: "50%",
+};
+
+
+`;
+
+exports[`macros gap-x-1/3: gap-x-1/3 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-1/3");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "33.333333%",
+  columnGap: "33.333333%",
+};
+
+
+`;
+
+exports[`macros gap-x-1/4: gap-x-1/4 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-1/4");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "25%",
+  columnGap: "25%",
+};
+
+
+`;
+
+exports[`macros gap-x-1/5: gap-x-1/5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-1/5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "20%",
+  columnGap: "20%",
+};
+
+
+`;
+
+exports[`macros gap-x-1/6: gap-x-1/6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-1/6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "16.666667%",
+  columnGap: "16.666667%",
+};
+
+
+`;
+
+exports[`macros gap-x-1/12: gap-x-1/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-1/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "8.333333%",
+  columnGap: "8.333333%",
+};
+
+
+`;
+
+exports[`macros gap-x-1: gap-x-1 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-1");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "0.25rem",
+  columnGap: "0.25rem",
+};
+
+
+`;
+
+exports[`macros gap-x-2.5: gap-x-2.5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-2.5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "0.625rem",
+  columnGap: "0.625rem",
+};
+
+
+`;
+
+exports[`macros gap-x-2/3: gap-x-2/3 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-2/3");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "66.666667%",
+  columnGap: "66.666667%",
+};
+
+
+`;
+
+exports[`macros gap-x-2/4: gap-x-2/4 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-2/4");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "50%",
+  columnGap: "50%",
+};
+
+
+`;
+
+exports[`macros gap-x-2/5: gap-x-2/5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-2/5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "40%",
+  columnGap: "40%",
+};
+
+
+`;
+
+exports[`macros gap-x-2/6: gap-x-2/6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-2/6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "33.333333%",
+  columnGap: "33.333333%",
+};
+
+
+`;
+
+exports[`macros gap-x-2/12: gap-x-2/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-2/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "16.666667%",
+  columnGap: "16.666667%",
+};
+
+
+`;
+
+exports[`macros gap-x-2: gap-x-2 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-2");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "0.5rem",
+  columnGap: "0.5rem",
+};
+
+
+`;
+
+exports[`macros gap-x-3.5: gap-x-3.5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-3.5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "0.875rem",
+  columnGap: "0.875rem",
+};
+
+
+`;
+
+exports[`macros gap-x-3/4: gap-x-3/4 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-3/4");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "75%",
+  columnGap: "75%",
+};
+
+
+`;
+
+exports[`macros gap-x-3/5: gap-x-3/5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-3/5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "60%",
+  columnGap: "60%",
+};
+
+
+`;
+
+exports[`macros gap-x-3/6: gap-x-3/6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-3/6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "50%",
+  columnGap: "50%",
+};
+
+
+`;
+
+exports[`macros gap-x-3/12: gap-x-3/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-3/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "25%",
+  columnGap: "25%",
+};
+
+
+`;
+
+exports[`macros gap-x-3: gap-x-3 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-3");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "0.75rem",
+  columnGap: "0.75rem",
+};
+
+
+`;
+
+exports[`macros gap-x-4/5: gap-x-4/5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-4/5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "80%",
+  columnGap: "80%",
+};
+
+
+`;
+
+exports[`macros gap-x-4/6: gap-x-4/6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-4/6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "66.666667%",
+  columnGap: "66.666667%",
+};
+
+
+`;
+
+exports[`macros gap-x-4/12: gap-x-4/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-4/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "33.333333%",
+  columnGap: "33.333333%",
+};
+
+
+`;
+
+exports[`macros gap-x-4: gap-x-4 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-4");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "1rem",
+  columnGap: "1rem",
+};
+
+
+`;
+
+exports[`macros gap-x-5/6: gap-x-5/6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-5/6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "83.333333%",
+  columnGap: "83.333333%",
+};
+
+
+`;
+
+exports[`macros gap-x-5/12: gap-x-5/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-5/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "41.666667%",
+  columnGap: "41.666667%",
+};
+
+
+`;
+
+exports[`macros gap-x-5: gap-x-5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "1.25rem",
+  columnGap: "1.25rem",
+};
+
+
+`;
+
+exports[`macros gap-x-6/12: gap-x-6/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-6/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "50%",
+  columnGap: "50%",
+};
+
+
+`;
+
+exports[`macros gap-x-6: gap-x-6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "1.5rem",
+  columnGap: "1.5rem",
+};
+
+
+`;
+
+exports[`macros gap-x-7/12: gap-x-7/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-7/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "58.333333%",
+  columnGap: "58.333333%",
+};
+
+
+`;
+
+exports[`macros gap-x-7: gap-x-7 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-7");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "1.75rem",
+  columnGap: "1.75rem",
+};
+
+
+`;
+
+exports[`macros gap-x-8/12: gap-x-8/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-8/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "66.666667%",
+  columnGap: "66.666667%",
+};
+
+
+`;
+
+exports[`macros gap-x-8: gap-x-8 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-8");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "2rem",
+  columnGap: "2rem",
+};
+
+
+`;
+
+exports[`macros gap-x-9/12: gap-x-9/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-9/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "75%",
+  columnGap: "75%",
+};
+
+
+`;
+
+exports[`macros gap-x-9: gap-x-9 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-9");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "2.25rem",
+  columnGap: "2.25rem",
+};
+
+
+`;
+
+exports[`macros gap-x-10/12: gap-x-10/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-10/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "83.333333%",
+  columnGap: "83.333333%",
+};
+
+
+`;
+
+exports[`macros gap-x-10: gap-x-10 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-10");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "2.5rem",
+  columnGap: "2.5rem",
+};
+
+
+`;
+
+exports[`macros gap-x-11/12: gap-x-11/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-11/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "91.666667%",
+  columnGap: "91.666667%",
+};
+
+
+`;
+
+exports[`macros gap-x-11: gap-x-11 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-11");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "2.75rem",
+  columnGap: "2.75rem",
+};
+
+
+`;
+
+exports[`macros gap-x-12: gap-x-12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "3rem",
+  columnGap: "3rem",
+};
+
+
+`;
+
+exports[`macros gap-x-13: gap-x-13 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-13");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "3.25rem",
+  columnGap: "3.25rem",
+};
+
+
+`;
+
+exports[`macros gap-x-14: gap-x-14 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-14");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "3.5rem",
+  columnGap: "3.5rem",
+};
+
+
+`;
+
+exports[`macros gap-x-15: gap-x-15 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-15");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "3.75rem",
+  columnGap: "3.75rem",
+};
+
+
+`;
+
+exports[`macros gap-x-16: gap-x-16 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-16");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "4rem",
+  columnGap: "4rem",
+};
+
+
+`;
+
+exports[`macros gap-x-20: gap-x-20 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-20");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "5rem",
+  columnGap: "5rem",
+};
+
+
+`;
+
+exports[`macros gap-x-24: gap-x-24 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-24");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "6rem",
+  columnGap: "6rem",
+};
+
+
+`;
+
+exports[`macros gap-x-28: gap-x-28 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-28");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "7rem",
+  columnGap: "7rem",
+};
+
+
+`;
+
+exports[`macros gap-x-32: gap-x-32 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-32");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "8rem",
+  columnGap: "8rem",
+};
+
+
+`;
+
+exports[`macros gap-x-36: gap-x-36 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-36");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "9rem",
+  columnGap: "9rem",
+};
+
+
+`;
+
+exports[`macros gap-x-40: gap-x-40 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-40");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "10rem",
+  columnGap: "10rem",
+};
+
+
+`;
+
+exports[`macros gap-x-44: gap-x-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "11rem",
+  columnGap: "11rem",
+};
+
+
+`;
+
+exports[`macros gap-x-48: gap-x-48 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-48");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "12rem",
+  columnGap: "12rem",
+};
+
+
+`;
+
+exports[`macros gap-x-52: gap-x-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "13rem",
+  columnGap: "13rem",
+};
+
+
+`;
+
+exports[`macros gap-x-56: gap-x-56 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-56");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "14rem",
+  columnGap: "14rem",
+};
+
+
+`;
+
+exports[`macros gap-x-60: gap-x-60 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-60");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "15rem",
+  columnGap: "15rem",
+};
+
+
+`;
+
+exports[`macros gap-x-64: gap-x-64 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-64");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "16rem",
+  columnGap: "16rem",
+};
+
+
+`;
+
+exports[`macros gap-x-72: gap-x-72 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-72");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "18rem",
+  columnGap: "18rem",
+};
+
+
+`;
+
+exports[`macros gap-x-80: gap-x-80 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-80");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "20rem",
+  columnGap: "20rem",
+};
+
+
+`;
+
+exports[`macros gap-x-96: gap-x-96 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-96");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "24rem",
+  columnGap: "24rem",
+};
+
+
+`;
+
+exports[`macros gap-x-full: gap-x-full 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-full");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "100%",
+  columnGap: "100%",
+};
+
+
+`;
+
+exports[`macros gap-x-px: gap-x-px 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-x-px");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridColumnGap: "1px",
+  columnGap: "1px",
+};
+
+
+`;
+
+exports[`macros gap-y-0.5: gap-y-0.5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-0.5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "0.125rem",
+  rowGap: "0.125rem",
+};
+
+
+`;
+
+exports[`macros gap-y-0: gap-y-0 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-0");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "0",
+  rowGap: "0",
+};
+
+
+`;
+
+exports[`macros gap-y-1.5: gap-y-1.5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-1.5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "0.375rem",
+  rowGap: "0.375rem",
+};
+
+
+`;
+
+exports[`macros gap-y-1/2: gap-y-1/2 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-1/2");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "50%",
+  rowGap: "50%",
+};
+
+
+`;
+
+exports[`macros gap-y-1/3: gap-y-1/3 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-1/3");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "33.333333%",
+  rowGap: "33.333333%",
+};
+
+
+`;
+
+exports[`macros gap-y-1/4: gap-y-1/4 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-1/4");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "25%",
+  rowGap: "25%",
+};
+
+
+`;
+
+exports[`macros gap-y-1/5: gap-y-1/5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-1/5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "20%",
+  rowGap: "20%",
+};
+
+
+`;
+
+exports[`macros gap-y-1/6: gap-y-1/6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-1/6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "16.666667%",
+  rowGap: "16.666667%",
+};
+
+
+`;
+
+exports[`macros gap-y-1/12: gap-y-1/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-1/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "8.333333%",
+  rowGap: "8.333333%",
+};
+
+
+`;
+
+exports[`macros gap-y-1: gap-y-1 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-1");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "0.25rem",
+  rowGap: "0.25rem",
+};
+
+
+`;
+
+exports[`macros gap-y-2.5: gap-y-2.5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-2.5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "0.625rem",
+  rowGap: "0.625rem",
+};
+
+
+`;
+
+exports[`macros gap-y-2/3: gap-y-2/3 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-2/3");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "66.666667%",
+  rowGap: "66.666667%",
+};
+
+
+`;
+
+exports[`macros gap-y-2/4: gap-y-2/4 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-2/4");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "50%",
+  rowGap: "50%",
+};
+
+
+`;
+
+exports[`macros gap-y-2/5: gap-y-2/5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-2/5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "40%",
+  rowGap: "40%",
+};
+
+
+`;
+
+exports[`macros gap-y-2/6: gap-y-2/6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-2/6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "33.333333%",
+  rowGap: "33.333333%",
+};
+
+
+`;
+
+exports[`macros gap-y-2/12: gap-y-2/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-2/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "16.666667%",
+  rowGap: "16.666667%",
+};
+
+
+`;
+
+exports[`macros gap-y-2: gap-y-2 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-2");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "0.5rem",
+  rowGap: "0.5rem",
+};
+
+
+`;
+
+exports[`macros gap-y-3.5: gap-y-3.5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-3.5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "0.875rem",
+  rowGap: "0.875rem",
+};
+
+
+`;
+
+exports[`macros gap-y-3/4: gap-y-3/4 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-3/4");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "75%",
+  rowGap: "75%",
+};
+
+
+`;
+
+exports[`macros gap-y-3/5: gap-y-3/5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-3/5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "60%",
+  rowGap: "60%",
+};
+
+
+`;
+
+exports[`macros gap-y-3/6: gap-y-3/6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-3/6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "50%",
+  rowGap: "50%",
+};
+
+
+`;
+
+exports[`macros gap-y-3/12: gap-y-3/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-3/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "25%",
+  rowGap: "25%",
+};
+
+
+`;
+
+exports[`macros gap-y-3: gap-y-3 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-3");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "0.75rem",
+  rowGap: "0.75rem",
+};
+
+
+`;
+
+exports[`macros gap-y-4/5: gap-y-4/5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-4/5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "80%",
+  rowGap: "80%",
+};
+
+
+`;
+
+exports[`macros gap-y-4/6: gap-y-4/6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-4/6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "66.666667%",
+  rowGap: "66.666667%",
+};
+
+
+`;
+
+exports[`macros gap-y-4/12: gap-y-4/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-4/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "33.333333%",
+  rowGap: "33.333333%",
+};
+
+
+`;
+
+exports[`macros gap-y-4: gap-y-4 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-4");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "1rem",
+  rowGap: "1rem",
+};
+
+
+`;
+
+exports[`macros gap-y-5/6: gap-y-5/6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-5/6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "83.333333%",
+  rowGap: "83.333333%",
+};
+
+
+`;
+
+exports[`macros gap-y-5/12: gap-y-5/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-5/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "41.666667%",
+  rowGap: "41.666667%",
+};
+
+
+`;
+
+exports[`macros gap-y-5: gap-y-5 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-5");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "1.25rem",
+  rowGap: "1.25rem",
+};
+
+
+`;
+
+exports[`macros gap-y-6/12: gap-y-6/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-6/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "50%",
+  rowGap: "50%",
+};
+
+
+`;
+
+exports[`macros gap-y-6: gap-y-6 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-6");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "1.5rem",
+  rowGap: "1.5rem",
+};
+
+
+`;
+
+exports[`macros gap-y-7/12: gap-y-7/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-7/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "58.333333%",
+  rowGap: "58.333333%",
+};
+
+
+`;
+
+exports[`macros gap-y-7: gap-y-7 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-7");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "1.75rem",
+  rowGap: "1.75rem",
+};
+
+
+`;
+
+exports[`macros gap-y-8/12: gap-y-8/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-8/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "66.666667%",
+  rowGap: "66.666667%",
+};
+
+
+`;
+
+exports[`macros gap-y-8: gap-y-8 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-8");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "2rem",
+  rowGap: "2rem",
+};
+
+
+`;
+
+exports[`macros gap-y-9/12: gap-y-9/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-9/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "75%",
+  rowGap: "75%",
+};
+
+
+`;
+
+exports[`macros gap-y-9: gap-y-9 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-9");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "2.25rem",
+  rowGap: "2.25rem",
+};
+
+
+`;
+
+exports[`macros gap-y-10/12: gap-y-10/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-10/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "83.333333%",
+  rowGap: "83.333333%",
+};
+
+
+`;
+
+exports[`macros gap-y-10: gap-y-10 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-10");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "2.5rem",
+  rowGap: "2.5rem",
+};
+
+
+`;
+
+exports[`macros gap-y-11/12: gap-y-11/12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-11/12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "91.666667%",
+  rowGap: "91.666667%",
+};
+
+
+`;
+
+exports[`macros gap-y-11: gap-y-11 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-11");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "2.75rem",
+  rowGap: "2.75rem",
+};
+
+
+`;
+
+exports[`macros gap-y-12: gap-y-12 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-12");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "3rem",
+  rowGap: "3rem",
+};
+
+
+`;
+
+exports[`macros gap-y-13: gap-y-13 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-13");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "3.25rem",
+  rowGap: "3.25rem",
+};
+
+
+`;
+
+exports[`macros gap-y-14: gap-y-14 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-14");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "3.5rem",
+  rowGap: "3.5rem",
+};
+
+
+`;
+
+exports[`macros gap-y-15: gap-y-15 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-15");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "3.75rem",
+  rowGap: "3.75rem",
+};
+
+
+`;
+
+exports[`macros gap-y-16: gap-y-16 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-16");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "4rem",
+  rowGap: "4rem",
+};
+
+
+`;
+
+exports[`macros gap-y-20: gap-y-20 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-20");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "5rem",
+  rowGap: "5rem",
+};
+
+
+`;
+
+exports[`macros gap-y-24: gap-y-24 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-24");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "6rem",
+  rowGap: "6rem",
+};
+
+
+`;
+
+exports[`macros gap-y-28: gap-y-28 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-28");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "7rem",
+  rowGap: "7rem",
+};
+
+
+`;
+
+exports[`macros gap-y-32: gap-y-32 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-32");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "8rem",
+  rowGap: "8rem",
+};
+
+
+`;
+
+exports[`macros gap-y-36: gap-y-36 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-36");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "9rem",
+  rowGap: "9rem",
+};
+
+
+`;
+
+exports[`macros gap-y-40: gap-y-40 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-40");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "10rem",
+  rowGap: "10rem",
+};
+
+
+`;
+
+exports[`macros gap-y-44: gap-y-44 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-44");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "11rem",
+  rowGap: "11rem",
+};
+
+
+`;
+
+exports[`macros gap-y-48: gap-y-48 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-48");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "12rem",
+  rowGap: "12rem",
+};
+
+
+`;
+
+exports[`macros gap-y-52: gap-y-52 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-52");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "13rem",
+  rowGap: "13rem",
+};
+
+
+`;
+
+exports[`macros gap-y-56: gap-y-56 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-56");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "14rem",
+  rowGap: "14rem",
+};
+
+
+`;
+
+exports[`macros gap-y-60: gap-y-60 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-60");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "15rem",
+  rowGap: "15rem",
+};
+
+
+`;
+
+exports[`macros gap-y-64: gap-y-64 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-64");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "16rem",
+  rowGap: "16rem",
+};
+
+
+`;
+
+exports[`macros gap-y-72: gap-y-72 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-72");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "18rem",
+  rowGap: "18rem",
+};
+
+
+`;
+
+exports[`macros gap-y-80: gap-y-80 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-80");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "20rem",
+  rowGap: "20rem",
+};
+
+
+`;
+
+exports[`macros gap-y-96: gap-y-96 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-96");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "24rem",
+  rowGap: "24rem",
+};
+
+
+`;
+
+exports[`macros gap-y-full: gap-y-full 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-full");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "100%",
+  rowGap: "100%",
+};
+
+
+`;
+
+exports[`macros gap-y-px: gap-y-px 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("gap-y-px");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  gridRowGap: "1px",
+  rowGap: "1px",
 };
 
 
@@ -54620,6 +58626,1588 @@ const css = {
 
 `;
 
+exports[`macros to-black: to-black 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-black");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#000000",
+};
+
+
+`;
+
+exports[`macros to-blue-50: to-blue-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-blue-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#ebf5ff",
+};
+
+
+`;
+
+exports[`macros to-blue-100: to-blue-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-blue-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#e1effe",
+};
+
+
+`;
+
+exports[`macros to-blue-200: to-blue-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-blue-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#c3ddfd",
+};
+
+
+`;
+
+exports[`macros to-blue-300: to-blue-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-blue-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#a4cafe",
+};
+
+
+`;
+
+exports[`macros to-blue-400: to-blue-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-blue-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#76a9fa",
+};
+
+
+`;
+
+exports[`macros to-blue-500: to-blue-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-blue-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#3f83f8",
+};
+
+
+`;
+
+exports[`macros to-blue-600: to-blue-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-blue-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#1c64f2",
+};
+
+
+`;
+
+exports[`macros to-blue-700: to-blue-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-blue-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#1a56db",
+};
+
+
+`;
+
+exports[`macros to-blue-800: to-blue-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-blue-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#1e429f",
+};
+
+
+`;
+
+exports[`macros to-blue-900: to-blue-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-blue-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#233876",
+};
+
+
+`;
+
+exports[`macros to-cool-gray-50: to-cool-gray-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-cool-gray-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f8fafc",
+};
+
+
+`;
+
+exports[`macros to-cool-gray-100: to-cool-gray-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-cool-gray-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f1f5f9",
+};
+
+
+`;
+
+exports[`macros to-cool-gray-200: to-cool-gray-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-cool-gray-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#e2e8f0",
+};
+
+
+`;
+
+exports[`macros to-cool-gray-300: to-cool-gray-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-cool-gray-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#cfd8e3",
+};
+
+
+`;
+
+exports[`macros to-cool-gray-400: to-cool-gray-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-cool-gray-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#97a6ba",
+};
+
+
+`;
+
+exports[`macros to-cool-gray-500: to-cool-gray-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-cool-gray-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#64748b",
+};
+
+
+`;
+
+exports[`macros to-cool-gray-600: to-cool-gray-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-cool-gray-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#475569",
+};
+
+
+`;
+
+exports[`macros to-cool-gray-700: to-cool-gray-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-cool-gray-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#364152",
+};
+
+
+`;
+
+exports[`macros to-cool-gray-800: to-cool-gray-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-cool-gray-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#27303f",
+};
+
+
+`;
+
+exports[`macros to-cool-gray-900: to-cool-gray-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-cool-gray-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#1a202e",
+};
+
+
+`;
+
+exports[`macros to-gray-50: to-gray-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-gray-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f9fafb",
+};
+
+
+`;
+
+exports[`macros to-gray-100: to-gray-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-gray-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f4f5f7",
+};
+
+
+`;
+
+exports[`macros to-gray-200: to-gray-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-gray-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#e5e7eb",
+};
+
+
+`;
+
+exports[`macros to-gray-300: to-gray-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-gray-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#d2d6dc",
+};
+
+
+`;
+
+exports[`macros to-gray-400: to-gray-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-gray-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#9fa6b2",
+};
+
+
+`;
+
+exports[`macros to-gray-500: to-gray-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-gray-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#6b7280",
+};
+
+
+`;
+
+exports[`macros to-gray-600: to-gray-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-gray-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#4b5563",
+};
+
+
+`;
+
+exports[`macros to-gray-700: to-gray-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-gray-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#374151",
+};
+
+
+`;
+
+exports[`macros to-gray-800: to-gray-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-gray-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#252f3f",
+};
+
+
+`;
+
+exports[`macros to-gray-900: to-gray-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-gray-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#161e2e",
+};
+
+
+`;
+
+exports[`macros to-green-50: to-green-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-green-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f3faf7",
+};
+
+
+`;
+
+exports[`macros to-green-100: to-green-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-green-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#def7ec",
+};
+
+
+`;
+
+exports[`macros to-green-200: to-green-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-green-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#bcf0da",
+};
+
+
+`;
+
+exports[`macros to-green-300: to-green-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-green-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#84e1bc",
+};
+
+
+`;
+
+exports[`macros to-green-400: to-green-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-green-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#31c48d",
+};
+
+
+`;
+
+exports[`macros to-green-500: to-green-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-green-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#0e9f6e",
+};
+
+
+`;
+
+exports[`macros to-green-600: to-green-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-green-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#057a55",
+};
+
+
+`;
+
+exports[`macros to-green-700: to-green-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-green-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#046c4e",
+};
+
+
+`;
+
+exports[`macros to-green-800: to-green-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-green-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#03543f",
+};
+
+
+`;
+
+exports[`macros to-green-900: to-green-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-green-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#014737",
+};
+
+
+`;
+
+exports[`macros to-indigo-50: to-indigo-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-indigo-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f0f5ff",
+};
+
+
+`;
+
+exports[`macros to-indigo-100: to-indigo-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-indigo-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#e5edff",
+};
+
+
+`;
+
+exports[`macros to-indigo-200: to-indigo-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-indigo-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#cddbfe",
+};
+
+
+`;
+
+exports[`macros to-indigo-300: to-indigo-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-indigo-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#b4c6fc",
+};
+
+
+`;
+
+exports[`macros to-indigo-400: to-indigo-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-indigo-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#8da2fb",
+};
+
+
+`;
+
+exports[`macros to-indigo-500: to-indigo-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-indigo-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#6875f5",
+};
+
+
+`;
+
+exports[`macros to-indigo-600: to-indigo-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-indigo-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#5850ec",
+};
+
+
+`;
+
+exports[`macros to-indigo-700: to-indigo-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-indigo-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#5145cd",
+};
+
+
+`;
+
+exports[`macros to-indigo-800: to-indigo-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-indigo-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#42389d",
+};
+
+
+`;
+
+exports[`macros to-indigo-900: to-indigo-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-indigo-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#362f78",
+};
+
+
+`;
+
+exports[`macros to-orange-50: to-orange-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-orange-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fff8f1",
+};
+
+
+`;
+
+exports[`macros to-orange-100: to-orange-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-orange-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#feecdc",
+};
+
+
+`;
+
+exports[`macros to-orange-200: to-orange-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-orange-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fcd9bd",
+};
+
+
+`;
+
+exports[`macros to-orange-300: to-orange-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-orange-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fdba8c",
+};
+
+
+`;
+
+exports[`macros to-orange-400: to-orange-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-orange-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#ff8a4c",
+};
+
+
+`;
+
+exports[`macros to-orange-500: to-orange-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-orange-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#ff5a1f",
+};
+
+
+`;
+
+exports[`macros to-orange-600: to-orange-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-orange-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#d03801",
+};
+
+
+`;
+
+exports[`macros to-orange-700: to-orange-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-orange-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#b43403",
+};
+
+
+`;
+
+exports[`macros to-orange-800: to-orange-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-orange-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#8a2c0d",
+};
+
+
+`;
+
+exports[`macros to-orange-900: to-orange-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-orange-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#73230d",
+};
+
+
+`;
+
+exports[`macros to-pink-50: to-pink-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-pink-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fdf2f8",
+};
+
+
+`;
+
+exports[`macros to-pink-100: to-pink-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-pink-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fce8f3",
+};
+
+
+`;
+
+exports[`macros to-pink-200: to-pink-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-pink-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fad1e8",
+};
+
+
+`;
+
+exports[`macros to-pink-300: to-pink-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-pink-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f8b4d9",
+};
+
+
+`;
+
+exports[`macros to-pink-400: to-pink-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-pink-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f17eb8",
+};
+
+
+`;
+
+exports[`macros to-pink-500: to-pink-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-pink-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#e74694",
+};
+
+
+`;
+
+exports[`macros to-pink-600: to-pink-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-pink-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#d61f69",
+};
+
+
+`;
+
+exports[`macros to-pink-700: to-pink-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-pink-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#bf125d",
+};
+
+
+`;
+
+exports[`macros to-pink-800: to-pink-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-pink-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#99154b",
+};
+
+
+`;
+
+exports[`macros to-pink-900: to-pink-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-pink-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#751a3d",
+};
+
+
+`;
+
+exports[`macros to-purple-50: to-purple-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-purple-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f6f5ff",
+};
+
+
+`;
+
+exports[`macros to-purple-100: to-purple-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-purple-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#edebfe",
+};
+
+
+`;
+
+exports[`macros to-purple-200: to-purple-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-purple-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#dcd7fe",
+};
+
+
+`;
+
+exports[`macros to-purple-300: to-purple-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-purple-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#cabffd",
+};
+
+
+`;
+
+exports[`macros to-purple-400: to-purple-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-purple-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#ac94fa",
+};
+
+
+`;
+
+exports[`macros to-purple-500: to-purple-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-purple-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#9061f9",
+};
+
+
+`;
+
+exports[`macros to-purple-600: to-purple-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-purple-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#7e3af2",
+};
+
+
+`;
+
+exports[`macros to-purple-700: to-purple-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-purple-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#6c2bd9",
+};
+
+
+`;
+
+exports[`macros to-purple-800: to-purple-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-purple-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#5521b5",
+};
+
+
+`;
+
+exports[`macros to-purple-900: to-purple-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-purple-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#4a1d96",
+};
+
+
+`;
+
+exports[`macros to-red-50: to-red-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-red-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fdf2f2",
+};
+
+
+`;
+
+exports[`macros to-red-100: to-red-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-red-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fde8e8",
+};
+
+
+`;
+
+exports[`macros to-red-200: to-red-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-red-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fbd5d5",
+};
+
+
+`;
+
+exports[`macros to-red-300: to-red-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-red-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f8b4b4",
+};
+
+
+`;
+
+exports[`macros to-red-400: to-red-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-red-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f98080",
+};
+
+
+`;
+
+exports[`macros to-red-500: to-red-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-red-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#f05252",
+};
+
+
+`;
+
+exports[`macros to-red-600: to-red-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-red-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#e02424",
+};
+
+
+`;
+
+exports[`macros to-red-700: to-red-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-red-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#c81e1e",
+};
+
+
+`;
+
+exports[`macros to-red-800: to-red-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-red-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#9b1c1c",
+};
+
+
+`;
+
+exports[`macros to-red-900: to-red-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-red-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#771d1d",
+};
+
+
+`;
+
+exports[`macros to-teal-50: to-teal-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-teal-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#edfafa",
+};
+
+
+`;
+
+exports[`macros to-teal-100: to-teal-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-teal-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#d5f5f6",
+};
+
+
+`;
+
+exports[`macros to-teal-200: to-teal-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-teal-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#afecef",
+};
+
+
+`;
+
+exports[`macros to-teal-300: to-teal-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-teal-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#7edce2",
+};
+
+
+`;
+
+exports[`macros to-teal-400: to-teal-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-teal-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#16bdca",
+};
+
+
+`;
+
+exports[`macros to-teal-500: to-teal-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-teal-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#0694a2",
+};
+
+
+`;
+
+exports[`macros to-teal-600: to-teal-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-teal-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#047481",
+};
+
+
+`;
+
+exports[`macros to-teal-700: to-teal-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-teal-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#036672",
+};
+
+
+`;
+
+exports[`macros to-teal-800: to-teal-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-teal-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#05505c",
+};
+
+
+`;
+
+exports[`macros to-teal-900: to-teal-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-teal-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#014451",
+};
+
+
+`;
+
+exports[`macros to-transparent: to-transparent 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-transparent");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "transparent",
+};
+
+
+`;
+
+exports[`macros to-white: to-white 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-white");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#ffffff",
+};
+
+
+`;
+
+exports[`macros to-yellow-50: to-yellow-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-yellow-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fdfdea",
+};
+
+
+`;
+
+exports[`macros to-yellow-100: to-yellow-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-yellow-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fdf6b2",
+};
+
+
+`;
+
+exports[`macros to-yellow-200: to-yellow-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-yellow-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#fce96a",
+};
+
+
+`;
+
+exports[`macros to-yellow-300: to-yellow-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-yellow-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#faca15",
+};
+
+
+`;
+
+exports[`macros to-yellow-400: to-yellow-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-yellow-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#e3a008",
+};
+
+
+`;
+
+exports[`macros to-yellow-500: to-yellow-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-yellow-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#c27803",
+};
+
+
+`;
+
+exports[`macros to-yellow-600: to-yellow-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-yellow-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#9f580a",
+};
+
+
+`;
+
+exports[`macros to-yellow-700: to-yellow-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-yellow-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#8e4b10",
+};
+
+
+`;
+
+exports[`macros to-yellow-800: to-yellow-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-yellow-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#723b13",
+};
+
+
+`;
+
+exports[`macros to-yellow-900: to-yellow-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("to-yellow-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-to-color": "#633112",
+};
+
+
+`;
+
 exports[`macros top-0.5: top-0.5 1`] = `
 
 import tw from '../lib/macro';
@@ -57580,6 +63168,1814 @@ const css = tw("uppercase");
 
 const css = {
   textTransform: "uppercase",
+};
+
+
+`;
+
+exports[`macros via-black: via-black 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-black");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#000000",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0))",
+};
+
+
+`;
+
+exports[`macros via-blue-50: via-blue-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-blue-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#ebf5ff",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(235, 245, 255, 0))",
+};
+
+
+`;
+
+exports[`macros via-blue-100: via-blue-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-blue-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#e1effe",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(225, 239, 254, 0))",
+};
+
+
+`;
+
+exports[`macros via-blue-200: via-blue-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-blue-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#c3ddfd",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(195, 221, 253, 0))",
+};
+
+
+`;
+
+exports[`macros via-blue-300: via-blue-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-blue-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#a4cafe",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(164, 202, 254, 0))",
+};
+
+
+`;
+
+exports[`macros via-blue-400: via-blue-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-blue-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#76a9fa",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(118, 169, 250, 0))",
+};
+
+
+`;
+
+exports[`macros via-blue-500: via-blue-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-blue-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#3f83f8",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(63, 131, 248, 0))",
+};
+
+
+`;
+
+exports[`macros via-blue-600: via-blue-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-blue-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#1c64f2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(28, 100, 242, 0))",
+};
+
+
+`;
+
+exports[`macros via-blue-700: via-blue-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-blue-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#1a56db",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(26, 86, 219, 0))",
+};
+
+
+`;
+
+exports[`macros via-blue-800: via-blue-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-blue-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#1e429f",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(30, 66, 159, 0))",
+};
+
+
+`;
+
+exports[`macros via-blue-900: via-blue-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-blue-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#233876",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(35, 56, 118, 0))",
+};
+
+
+`;
+
+exports[`macros via-cool-gray-50: via-cool-gray-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-cool-gray-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f8fafc",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(248, 250, 252, 0))",
+};
+
+
+`;
+
+exports[`macros via-cool-gray-100: via-cool-gray-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-cool-gray-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f1f5f9",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 245, 249, 0))",
+};
+
+
+`;
+
+exports[`macros via-cool-gray-200: via-cool-gray-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-cool-gray-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#e2e8f0",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(226, 232, 240, 0))",
+};
+
+
+`;
+
+exports[`macros via-cool-gray-300: via-cool-gray-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-cool-gray-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#cfd8e3",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(207, 216, 227, 0))",
+};
+
+
+`;
+
+exports[`macros via-cool-gray-400: via-cool-gray-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-cool-gray-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#97a6ba",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(151, 166, 186, 0))",
+};
+
+
+`;
+
+exports[`macros via-cool-gray-500: via-cool-gray-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-cool-gray-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#64748b",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(100, 116, 139, 0))",
+};
+
+
+`;
+
+exports[`macros via-cool-gray-600: via-cool-gray-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-cool-gray-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#475569",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(71, 85, 105, 0))",
+};
+
+
+`;
+
+exports[`macros via-cool-gray-700: via-cool-gray-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-cool-gray-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#364152",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(54, 65, 82, 0))",
+};
+
+
+`;
+
+exports[`macros via-cool-gray-800: via-cool-gray-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-cool-gray-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#27303f",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(39, 48, 63, 0))",
+};
+
+
+`;
+
+exports[`macros via-cool-gray-900: via-cool-gray-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-cool-gray-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#1a202e",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(26, 32, 46, 0))",
+};
+
+
+`;
+
+exports[`macros via-gray-50: via-gray-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-gray-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f9fafb",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(249, 250, 251, 0))",
+};
+
+
+`;
+
+exports[`macros via-gray-100: via-gray-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-gray-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f4f5f7",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(244, 245, 247, 0))",
+};
+
+
+`;
+
+exports[`macros via-gray-200: via-gray-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-gray-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#e5e7eb",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(229, 231, 235, 0))",
+};
+
+
+`;
+
+exports[`macros via-gray-300: via-gray-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-gray-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#d2d6dc",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(210, 214, 220, 0))",
+};
+
+
+`;
+
+exports[`macros via-gray-400: via-gray-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-gray-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#9fa6b2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(159, 166, 178, 0))",
+};
+
+
+`;
+
+exports[`macros via-gray-500: via-gray-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-gray-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#6b7280",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(107, 114, 128, 0))",
+};
+
+
+`;
+
+exports[`macros via-gray-600: via-gray-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-gray-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#4b5563",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(75, 85, 99, 0))",
+};
+
+
+`;
+
+exports[`macros via-gray-700: via-gray-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-gray-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#374151",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(55, 65, 81, 0))",
+};
+
+
+`;
+
+exports[`macros via-gray-800: via-gray-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-gray-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#252f3f",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(37, 47, 63, 0))",
+};
+
+
+`;
+
+exports[`macros via-gray-900: via-gray-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-gray-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#161e2e",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(22, 30, 46, 0))",
+};
+
+
+`;
+
+exports[`macros via-green-50: via-green-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-green-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f3faf7",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(243, 250, 247, 0))",
+};
+
+
+`;
+
+exports[`macros via-green-100: via-green-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-green-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#def7ec",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(222, 247, 236, 0))",
+};
+
+
+`;
+
+exports[`macros via-green-200: via-green-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-green-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#bcf0da",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(188, 240, 218, 0))",
+};
+
+
+`;
+
+exports[`macros via-green-300: via-green-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-green-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#84e1bc",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(132, 225, 188, 0))",
+};
+
+
+`;
+
+exports[`macros via-green-400: via-green-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-green-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#31c48d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(49, 196, 141, 0))",
+};
+
+
+`;
+
+exports[`macros via-green-500: via-green-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-green-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#0e9f6e",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(14, 159, 110, 0))",
+};
+
+
+`;
+
+exports[`macros via-green-600: via-green-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-green-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#057a55",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(5, 122, 85, 0))",
+};
+
+
+`;
+
+exports[`macros via-green-700: via-green-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-green-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#046c4e",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(4, 108, 78, 0))",
+};
+
+
+`;
+
+exports[`macros via-green-800: via-green-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-green-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#03543f",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(3, 84, 63, 0))",
+};
+
+
+`;
+
+exports[`macros via-green-900: via-green-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-green-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#014737",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(1, 71, 55, 0))",
+};
+
+
+`;
+
+exports[`macros via-indigo-50: via-indigo-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-indigo-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f0f5ff",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 245, 255, 0))",
+};
+
+
+`;
+
+exports[`macros via-indigo-100: via-indigo-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-indigo-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#e5edff",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(229, 237, 255, 0))",
+};
+
+
+`;
+
+exports[`macros via-indigo-200: via-indigo-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-indigo-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#cddbfe",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(205, 219, 254, 0))",
+};
+
+
+`;
+
+exports[`macros via-indigo-300: via-indigo-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-indigo-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#b4c6fc",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(180, 198, 252, 0))",
+};
+
+
+`;
+
+exports[`macros via-indigo-400: via-indigo-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-indigo-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#8da2fb",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(141, 162, 251, 0))",
+};
+
+
+`;
+
+exports[`macros via-indigo-500: via-indigo-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-indigo-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#6875f5",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(104, 117, 245, 0))",
+};
+
+
+`;
+
+exports[`macros via-indigo-600: via-indigo-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-indigo-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#5850ec",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(88, 80, 236, 0))",
+};
+
+
+`;
+
+exports[`macros via-indigo-700: via-indigo-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-indigo-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#5145cd",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(81, 69, 205, 0))",
+};
+
+
+`;
+
+exports[`macros via-indigo-800: via-indigo-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-indigo-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#42389d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(66, 56, 157, 0))",
+};
+
+
+`;
+
+exports[`macros via-indigo-900: via-indigo-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-indigo-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#362f78",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(54, 47, 120, 0))",
+};
+
+
+`;
+
+exports[`macros via-orange-50: via-orange-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-orange-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fff8f1",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 248, 241, 0))",
+};
+
+
+`;
+
+exports[`macros via-orange-100: via-orange-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-orange-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#feecdc",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(254, 236, 220, 0))",
+};
+
+
+`;
+
+exports[`macros via-orange-200: via-orange-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-orange-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fcd9bd",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(252, 217, 189, 0))",
+};
+
+
+`;
+
+exports[`macros via-orange-300: via-orange-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-orange-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fdba8c",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(253, 186, 140, 0))",
+};
+
+
+`;
+
+exports[`macros via-orange-400: via-orange-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-orange-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#ff8a4c",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 138, 76, 0))",
+};
+
+
+`;
+
+exports[`macros via-orange-500: via-orange-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-orange-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#ff5a1f",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 90, 31, 0))",
+};
+
+
+`;
+
+exports[`macros via-orange-600: via-orange-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-orange-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#d03801",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(208, 56, 1, 0))",
+};
+
+
+`;
+
+exports[`macros via-orange-700: via-orange-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-orange-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#b43403",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(180, 52, 3, 0))",
+};
+
+
+`;
+
+exports[`macros via-orange-800: via-orange-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-orange-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#8a2c0d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(138, 44, 13, 0))",
+};
+
+
+`;
+
+exports[`macros via-orange-900: via-orange-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-orange-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#73230d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(115, 35, 13, 0))",
+};
+
+
+`;
+
+exports[`macros via-pink-50: via-pink-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-pink-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fdf2f8",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(253, 242, 248, 0))",
+};
+
+
+`;
+
+exports[`macros via-pink-100: via-pink-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-pink-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fce8f3",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(252, 232, 243, 0))",
+};
+
+
+`;
+
+exports[`macros via-pink-200: via-pink-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-pink-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fad1e8",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(250, 209, 232, 0))",
+};
+
+
+`;
+
+exports[`macros via-pink-300: via-pink-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-pink-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f8b4d9",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(248, 180, 217, 0))",
+};
+
+
+`;
+
+exports[`macros via-pink-400: via-pink-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-pink-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f17eb8",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(241, 126, 184, 0))",
+};
+
+
+`;
+
+exports[`macros via-pink-500: via-pink-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-pink-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#e74694",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(231, 70, 148, 0))",
+};
+
+
+`;
+
+exports[`macros via-pink-600: via-pink-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-pink-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#d61f69",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(214, 31, 105, 0))",
+};
+
+
+`;
+
+exports[`macros via-pink-700: via-pink-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-pink-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#bf125d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(191, 18, 93, 0))",
+};
+
+
+`;
+
+exports[`macros via-pink-800: via-pink-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-pink-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#99154b",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(153, 21, 75, 0))",
+};
+
+
+`;
+
+exports[`macros via-pink-900: via-pink-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-pink-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#751a3d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(117, 26, 61, 0))",
+};
+
+
+`;
+
+exports[`macros via-purple-50: via-purple-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-purple-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f6f5ff",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(246, 245, 255, 0))",
+};
+
+
+`;
+
+exports[`macros via-purple-100: via-purple-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-purple-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#edebfe",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(237, 235, 254, 0))",
+};
+
+
+`;
+
+exports[`macros via-purple-200: via-purple-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-purple-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#dcd7fe",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(220, 215, 254, 0))",
+};
+
+
+`;
+
+exports[`macros via-purple-300: via-purple-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-purple-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#cabffd",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(202, 191, 253, 0))",
+};
+
+
+`;
+
+exports[`macros via-purple-400: via-purple-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-purple-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#ac94fa",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(172, 148, 250, 0))",
+};
+
+
+`;
+
+exports[`macros via-purple-500: via-purple-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-purple-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#9061f9",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(144, 97, 249, 0))",
+};
+
+
+`;
+
+exports[`macros via-purple-600: via-purple-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-purple-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#7e3af2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(126, 58, 242, 0))",
+};
+
+
+`;
+
+exports[`macros via-purple-700: via-purple-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-purple-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#6c2bd9",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(108, 43, 217, 0))",
+};
+
+
+`;
+
+exports[`macros via-purple-800: via-purple-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-purple-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#5521b5",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(85, 33, 181, 0))",
+};
+
+
+`;
+
+exports[`macros via-purple-900: via-purple-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-purple-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#4a1d96",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(74, 29, 150, 0))",
+};
+
+
+`;
+
+exports[`macros via-red-50: via-red-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-red-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fdf2f2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(253, 242, 242, 0))",
+};
+
+
+`;
+
+exports[`macros via-red-100: via-red-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-red-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fde8e8",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(253, 232, 232, 0))",
+};
+
+
+`;
+
+exports[`macros via-red-200: via-red-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-red-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fbd5d5",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(251, 213, 213, 0))",
+};
+
+
+`;
+
+exports[`macros via-red-300: via-red-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-red-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f8b4b4",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(248, 180, 180, 0))",
+};
+
+
+`;
+
+exports[`macros via-red-400: via-red-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-red-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f98080",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(249, 128, 128, 0))",
+};
+
+
+`;
+
+exports[`macros via-red-500: via-red-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-red-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#f05252",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(240, 82, 82, 0))",
+};
+
+
+`;
+
+exports[`macros via-red-600: via-red-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-red-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#e02424",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(224, 36, 36, 0))",
+};
+
+
+`;
+
+exports[`macros via-red-700: via-red-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-red-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#c81e1e",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(200, 30, 30, 0))",
+};
+
+
+`;
+
+exports[`macros via-red-800: via-red-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-red-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#9b1c1c",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(155, 28, 28, 0))",
+};
+
+
+`;
+
+exports[`macros via-red-900: via-red-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-red-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#771d1d",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(119, 29, 29, 0))",
+};
+
+
+`;
+
+exports[`macros via-teal-50: via-teal-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-teal-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#edfafa",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(237, 250, 250, 0))",
+};
+
+
+`;
+
+exports[`macros via-teal-100: via-teal-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-teal-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#d5f5f6",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(213, 245, 246, 0))",
+};
+
+
+`;
+
+exports[`macros via-teal-200: via-teal-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-teal-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#afecef",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(175, 236, 239, 0))",
+};
+
+
+`;
+
+exports[`macros via-teal-300: via-teal-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-teal-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#7edce2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(126, 220, 226, 0))",
+};
+
+
+`;
+
+exports[`macros via-teal-400: via-teal-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-teal-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#16bdca",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(22, 189, 202, 0))",
+};
+
+
+`;
+
+exports[`macros via-teal-500: via-teal-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-teal-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#0694a2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(6, 148, 162, 0))",
+};
+
+
+`;
+
+exports[`macros via-teal-600: via-teal-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-teal-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#047481",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(4, 116, 129, 0))",
+};
+
+
+`;
+
+exports[`macros via-teal-700: via-teal-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-teal-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#036672",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(3, 102, 114, 0))",
+};
+
+
+`;
+
+exports[`macros via-teal-800: via-teal-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-teal-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#05505c",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(5, 80, 92, 0))",
+};
+
+
+`;
+
+exports[`macros via-teal-900: via-teal-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-teal-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#014451",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(1, 68, 81, 0))",
+};
+
+
+`;
+
+exports[`macros via-transparent: via-transparent 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-transparent");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "transparent",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0))",
+};
+
+
+`;
+
+exports[`macros via-white: via-white 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-white");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#ffffff",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0))",
+};
+
+
+`;
+
+exports[`macros via-yellow-50: via-yellow-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-yellow-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fdfdea",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(253, 253, 234, 0))",
+};
+
+
+`;
+
+exports[`macros via-yellow-100: via-yellow-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-yellow-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fdf6b2",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(253, 246, 178, 0))",
+};
+
+
+`;
+
+exports[`macros via-yellow-200: via-yellow-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-yellow-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#fce96a",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(252, 233, 106, 0))",
+};
+
+
+`;
+
+exports[`macros via-yellow-300: via-yellow-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-yellow-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#faca15",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(250, 202, 21, 0))",
+};
+
+
+`;
+
+exports[`macros via-yellow-400: via-yellow-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-yellow-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#e3a008",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(227, 160, 8, 0))",
+};
+
+
+`;
+
+exports[`macros via-yellow-500: via-yellow-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-yellow-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#c27803",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(194, 120, 3, 0))",
+};
+
+
+`;
+
+exports[`macros via-yellow-600: via-yellow-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-yellow-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#9f580a",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(159, 88, 10, 0))",
+};
+
+
+`;
+
+exports[`macros via-yellow-700: via-yellow-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-yellow-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#8e4b10",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(142, 75, 16, 0))",
+};
+
+
+`;
+
+exports[`macros via-yellow-800: via-yellow-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-yellow-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#723b13",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(114, 59, 19, 0))",
+};
+
+
+`;
+
+exports[`macros via-yellow-900: via-yellow-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("via-yellow-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--gradient-via-color": "#633112",
+  "--gradient-color-stops":
+    "var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(99, 49, 18, 0))",
 };
 
 

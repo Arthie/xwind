@@ -4,18 +4,18 @@ import {
   tailwindData,
   ResolvedTialwindConfig,
   TailwindConfig,
-} from "@tailwindcssinjs/tailwindcss-data";
-import {
-  twClassesVariantsParser,
-  TwClasses,
-} from "@tailwindcssinjs/class-composer";
-import {
   transformPostcssRootsToTwObjectMap,
   transformTwClassesToStyleObject,
   TwObject,
   StyleObject,
   getGenerateTwClassSubstituteRoot,
-} from "@tailwindcssinjs/transformers";
+} from "@tailwindcssinjs/tailwindcss-data";
+
+import {
+  twClassesVariantsParser,
+  TwClasses,
+} from "@tailwindcssinjs/class-composer";
+
 
 type TailwindcssinjsConfigPlugin = (styleObject: StyleObject) => StyleObject;
 
