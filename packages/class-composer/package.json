@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/class-composer",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "author": "Arthie",
   "description": "Simple utility functions for joining tailwindcss classNames together.",
   "main": "lib/classComposer.js",
