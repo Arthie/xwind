@@ -353,10 +353,6 @@ const css = {
   marginRight: "1rem",
   transform:
     "translateX(var(--transform-translate-x)) translateY(var(--transform-translate-y)) rotate(var(--transform-rotate)) skewX(var(--transform-skew-x)) skewY(var(--transform-skew-y)) scaleX(var(--transform-scale-x)) scaleY(var(--transform-scale-y))",
-  "@supports (display: grid)": {
-    "--text-opacity": "1",
-    color: ["#76a9fa", "rgba(118, 169, 250, var(--text-opacity))"],
-  },
   "@media (min-width: 1280px)": {
     "&:hover": {
       "--bg-opacity": "1",
@@ -364,6 +360,10 @@ const css = {
       backgroundColor: ["#e1effe", "rgba(225, 239, 254, var(--bg-opacity))"],
       color: ["#fbd5d5", "rgba(251, 213, 213, var(--text-opacity))"],
     },
+  },
+  "@supports (display: grid)": {
+    "--text-opacity": "1",
+    color: ["#76a9fa", "rgba(118, 169, 250, var(--text-opacity))"],
   },
 };
 

@@ -16,7 +16,6 @@ import {
   TwClasses,
 } from "@tailwindcssinjs/class-composer";
 
-
 type TailwindcssinjsConfigPlugin = (styleObject: StyleObject) => StyleObject;
 
 interface TailwindcssinjsConfig extends TailwindConfig {
