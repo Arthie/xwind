@@ -6,8 +6,7 @@ import {
 } from "typescript-template-language-service-decorator";
 import * as ts from "typescript/lib/tsserverlibrary";
 import * as vscode from "vscode-languageserver-types";
-import { TwObject } from "@tailwindcssinjs/transformers";
-import { TailwindConfig } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig";
+import { TailwindConfig, TwObject } from "@tailwindcssinjs/tailwindcss-data";
 
 import tailwindcssinjs, { requireTailwindConfig } from "./tailwindcssinjs";
 import { createLogger } from "./logger";

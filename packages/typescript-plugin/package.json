@@ -1,6 +1,6 @@
 {
   "name": "typescript-tailwindcssinjs-plugin",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "author": "Arthie",
   "description": "This package contains tailwindcssinjs typescript language service plugin",
   "main": "lib/plugin.js",
@@ -16,9 +16,8 @@
     "tailwindcss": "1.x"
   },
   "dependencies": {
-    "@tailwindcssinjs/class-composer": "^0.8.0",
-    "@tailwindcssinjs/tailwindcss-data": "0.8.0",
-    "@tailwindcssinjs/transformers": "0.8.0",
+    "@tailwindcssinjs/class-composer": "^0.9.0",
+    "@tailwindcssinjs/tailwindcss-data": "0.9.0",
     "import-fresh": "^3.2.1",
     "typescript-template-language-service-decorator": "^2.2.0",
     "vscode-languageserver-types": "^3.15.1"

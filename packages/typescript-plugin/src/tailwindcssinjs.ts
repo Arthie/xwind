@@ -4,12 +4,9 @@ import corePlugins from "tailwindcss/lib/corePlugins";
 import {
   tailwindData,
   TailwindConfig,
-} from "@tailwindcssinjs/tailwindcss-data";
-
-import {
   transformPostcssRootsToTwObjectMap,
   getGenerateTwClassSubstituteRoot,
-} from "@tailwindcssinjs/transformers";
+} from "@tailwindcssinjs/tailwindcss-data";
 
 import { Logger } from "typescript-template-language-service-decorator";
 import importFresh from "import-fresh";
