@@ -1,8 +1,10 @@
 import { Root } from "postcss";
+//@ts-expect-error no types for postcss-js
+import postcssJs from "postcss-js";
 import merge from "lodash/merge";
+import sortCSSmq from 'sort-css-media-queries'
 
 import { TwObject } from "./transformPostcssRootsToTwObjectMap";
-import objectify from "./postcssjs-objectify";
 import { unescapeCSS } from "./parseTwSelectorClass";
 
 export type StyleObject = StyleObjectDecl | StyleObjectRuleOrAtRule;
@@ -38,7 +40,7 @@ function getStyleObjectFromTwObject(
       throw new Error(`Rule has no nodes ${root}`);
     }
   });
-  return objectify(root);
+  return postcssJs.objectify(root);
 }
 
 function sortStyleObject<T extends StyleObject>(styleObject: T) {
@@ -82,40 +84,27 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
 
       const firstIsDecl = firstValueType.startsWith("decl");
       const secondIsDecl = secondValueType.startsWith("decl");
-      if (firstIsDecl || secondIsDecl) {
-        if (firstIsDecl && secondIsDecl) {
-          const firstIsCssVar = firstValueType === "declVariable";
-          const secondIsCssVar = secondValueType === "declVariable";
-          if (firstValueType && secondIsCssVar) return 0;
-          if (firstIsCssVar) return -1;
-          if (secondIsCssVar) return 1;
-          return 0;
-        }
-
-        if (firstIsDecl) return -1;
-        if (secondIsDecl) return 1;
-      }
-
-      const firstIsAtRule = firstValueType === "atRule";
-      const secondIsAtRule = secondValueType === "atRule";
-
-      //TODO better compare for media queries
-      if (firstIsAtRule && secondIsAtRule) {
-        const firstNumber = parseInt(first.replace(/[^0-9]*/g, ""));
-        const secondNumber = parseInt(second.replace(/[^0-9]*/g, ""));
-        if (firstNumber < secondNumber) {
-          return -1;
-        }
-        if (firstNumber > secondNumber) {
-          return 1;
-        }
+      if (firstIsDecl && secondIsDecl) {
+        const firstIsCssVar = firstValueType === "declVariable";
+        const secondIsCssVar = secondValueType === "declVariable";
+        if (firstValueType && secondIsCssVar) return 0;
+        if (firstIsCssVar) return -1;
+        if (secondIsCssVar) return 1;
         return 0;
       }
 
+      if (firstIsDecl) return -1;
+      if (secondIsDecl) return 1;
+
+
+      const firstIsAtRule = firstValueType === "atRule";
+      const secondIsAtRule = secondValueType === "atRule";
+      if (firstIsAtRule && secondIsAtRule) {
+        return sortCSSmq(first, second)
+      }
       if (firstIsAtRule) {
         return 1;
       }
-
       if (secondIsAtRule) {
         return -1;
       }

@@ -1247,52 +1247,50 @@
 const source = `
 @layer components {
   @variants responsive {
-      .container {
-          width: 100%;
-      }
-      @media (min-width: 640px) {
-          .container {
-              max-width: 640px;
-          }
-      }
-      @media (min-width: 668px) {
-          .container {
-              max-width: 668px;
-          }
-      }
-      @media (min-width: 868px) {
-          .container {
-              max-width: 868px;
-          }
-      }
-      @media (min-width: 1024px) {
-          .container {
-              max-width: 1024px;
-          }
-      }
-      @media (min-width: 1280px) {
-          .container {
-              max-width: 1280px;
-          }
-      }
-      @media (min-width: 1536px) {
-          .container {
-              max-width: 1536px;
-          }
-      }
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .boop {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
   }
 }
 `;
 
 const postcss = require("postcss");
 const {
-  transformPostcssRootsToTwObjectMap,
-} = require("../lib/transformPostcss");
+    transformPostcssRootsToTwObjectMap,
+} = require("../lib/transformers/transformPostcssRootsToTwObjectMap");
 
 const root = postcss.parse(source, { from: null });
 
 // console.log(root.toString());
 
-const test = transformPostcssRootsToTwObjectMap([root]);
+const testd = transformPostcssRootsToTwObjectMap([root]);
 
-// console.log(test);
+for (const [twClass, twObject] of testd.entries()) {
+    console.log(twClass, postcss.root().append(twObject.nodes).toString())
+}
+
+test("parse .form-checkbox:checked:focus", () => {
+    expect("form-checkbox").toStrictEqual(
+        "form-checkbox"
+    );
+});

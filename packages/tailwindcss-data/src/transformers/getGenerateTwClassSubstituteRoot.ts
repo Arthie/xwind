@@ -1,8 +1,8 @@
-import postcss, { Root, AtRuleProps } from "postcss";
+import postcss, { Root, AtRuleNewProps } from "postcss";
 import { TwObject } from "./transformPostcssRootsToTwObjectMap";
 
 function applySubstituteRules(
-  variant: AtRuleProps,
+  variant: AtRuleNewProps,
   twObjectRoot: Root,
   getSubstituteRules: (root: Root) => void
 ) {

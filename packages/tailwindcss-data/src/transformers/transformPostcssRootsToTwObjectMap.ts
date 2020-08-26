@@ -40,17 +40,30 @@ export function transformPostcssRootsToTwObjectMap(roots: Root[] = []) {
       } else if (node.name === "variants") {
         node.remove();
       } else if (node.name === "media") {
+        const isMediaAtRule = (mediaAtRule: AtRule) => {
+          const selectorClassesAtRule: { selectorClass: string, atRule: AtRule }[] = []
+          for (const node of mediaAtRule.nodes ?? []) {
+            if (node.type === "rule") {
+              const selectorClass = parseTwSelectorClass(node.selector);
+              const atRule = postcss.atRule({ name: mediaAtRule.name, params: mediaAtRule.params, nodes: [node] })
+              selectorClassesAtRule.push({ atRule, selectorClass });
+            }
+            if (node.type === "atrule") {
+              for (const { atRule: nestedAtRule, selectorClass } of isMediaAtRule(node)) {
+                const atRule = postcss.atRule({ name: mediaAtRule.name, params: mediaAtRule.params })
+                atRule.append(nestedAtRule)
+                selectorClassesAtRule.push({ atRule, selectorClass });
+              }
+            }
+          }
+          return selectorClassesAtRule
+        }
+
         const mediaAtRule = node.clone();
         node.removeAll();
-        if (mediaAtRule.nodes?.length && mediaAtRule.nodes.length > 1) {
-          throw new Error("mediaAtRule has multiple rules");
+        for (const { atRule, selectorClass } of isMediaAtRule(mediaAtRule)) {
+          addNodeToClassNodes(classNodes, atRule, selectorClass)
         }
-        const firstNode = mediaAtRule.first;
-        if (firstNode?.type !== "rule") {
-          throw new Error("mediaAtRule first node is not a rule");
-        }
-        const selectorClass = parseTwSelectorClass(firstNode.selector);
-        addNodeToClassNodes(classNodes, mediaAtRule, selectorClass);
       } else {
         //remove other atRules e.g. @keyframes
         node.removeAll();
