@@ -1,6 +1,5 @@
 import { Root } from "postcss";
-//@ts-expect-error no types for postcss-js
-import { objectify } from "./postcssjs-objectify";
+import objectify from "./postcssjs-objectify";
 import merge from "lodash/merge";
 import sortCSSmq from 'sort-css-media-queries'
 
