@@ -1,6 +1,6 @@
 import { Root } from "postcss";
 //@ts-expect-error no types for postcss-js
-import postcssJs from "postcss-js";
+import { objectify } from "./postcssjs-objectify";
 import merge from "lodash/merge";
 import sortCSSmq from 'sort-css-media-queries'
 
@@ -40,7 +40,7 @@ function getStyleObjectFromTwObject(
       throw new Error(`Rule has no nodes ${root}`);
     }
   });
-  return postcssJs.objectify(root);
+  return objectify(root);
 }
 
 function sortStyleObject<T extends StyleObject>(styleObject: T) {

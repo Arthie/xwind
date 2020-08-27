@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/tailwindcss-data",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "author": "Arthie",
   "description": "This package contains tailwindcssinjs data",
   "main": "lib/index.js",
@@ -22,7 +22,7 @@
     "css-what": "^3.3.0",
     "lodash": "^4.17.20",
     "postcss": "7.0.32",
-    "postcss-js": "postcss/postcss-js#master",
+    "postcss-js": "2.0.3",
     "sort-css-media-queries": "^1.5.0"
   }
 }
