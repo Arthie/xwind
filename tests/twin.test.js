@@ -4,7 +4,7 @@ const plugin = require("babel-plugin-macros");
 // const benchBuilder = require("./utils/benchBuilder");
 // const test = benchBuilder("twin.macro");
 
-const test = require("./utils/twinbench1");
+const test = require("./utils/tailwindcssinjsbench1");
 
 pluginTester.default({
   plugin,

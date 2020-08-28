@@ -9,7 +9,8 @@ const tailwindcssConfig_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailw
 const corePlugins_1 = __importDefault(require("tailwindcss/lib/corePlugins"));
 
 const tailwindcssData_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData");
-const transformers_1 = require("@tailwindcssinjs/transformers");
+const tailwindcssData_2 = require("@tailwindcssinjs/tailwindcss-data/lib/transformers/transformPostcssRootsToTwObjectMap");
+
 let twObjectMap;
 
 function getTailwindClasses() {
@@ -23,10 +24,11 @@ function getTailwindClasses() {
     corePlugins_1.default
   );
 
-  twObjectMap = transformers_1.transformPostcssRootsToTwObjectMap(
+  twObjectMap = tailwindcssData_2.transformPostcssRootsToTwObjectMap(
     [componentsRoot, utilitiesRoot]
   );
 
+  console.log(twObjectMap)
   return twObjectMap;
 }
 
