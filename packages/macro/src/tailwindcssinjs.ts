@@ -1,15 +1,19 @@
 import isEqual from "lodash/isEqual";
 
+import { tailwindData } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData";
+
 import {
-  tailwindData,
-  ResolvedTialwindConfig,
-  TailwindConfig,
   transformPostcssRootsToTwObjectMap,
   transformTwClassesToStyleObject,
   TwObject,
   StyleObject,
   getGenerateTwClassSubstituteRoot,
-} from "@tailwindcssinjs/tailwindcss-data";
+} from "@tailwindcssinjs/tailwindcss-data/lib/transformers";
+
+import {
+  ResolvedTialwindConfig,
+  TailwindConfig,
+} from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig";
 
 import {
   twClassesVariantsParser,

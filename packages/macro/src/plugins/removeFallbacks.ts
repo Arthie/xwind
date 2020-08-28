@@ -1,4 +1,4 @@
-import { StyleObject } from "@tailwindcssinjs/tailwindcss-data";
+import { StyleObject } from "@tailwindcssinjs/tailwindcss-data/lib/transformers";
 
 export default function removeFallbacks(styleObject: StyleObject): StyleObject {
   const rules = Object.entries(styleObject).map(([key, value]) => {
