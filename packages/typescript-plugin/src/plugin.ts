@@ -61,6 +61,7 @@ function tailwindcssinjsLanguageService(
   logger: Logger
 ): TemplateLanguageService {
   try {
+    logger.log(`INFO CONFIG ${JSON.stringify(info.config)}`);
     updateTailwindcssinjs(logger, info.config?.config);
 
     return {
@@ -72,10 +73,12 @@ function tailwindcssinjsLanguageService(
         let problems = 0;
         const diagnostics: ts.Diagnostic[] = [];
 
-        //TODO improve this regex
-        const NESTED_VARIANT_REGEXP = /(\[([^\[\]]){0,}\[[^\]]{0,}\][^\]]{0,}\])|(\[([^\[\]]){0,}\[)|(\]([^\[\]]){0,}\])/;
+        const NESTED_ANGLE_BRACKET_REGEXP = /(\[([^\[\]]){0,}\[)|(\]([^\[\]]){0,}\])/g;
+        const IGNORE_ERRORS = pluginConfig.ignoreErrors
+          ? new RegExp(info.config.ignoreErrors)
+          : null;
 
-        const nestedMath = context.text.match(NESTED_VARIANT_REGEXP);
+        const nestedMath = context.text.match(NESTED_ANGLE_BRACKET_REGEXP);
 
         if (nestedMath?.length) {
           problems++;
@@ -98,6 +101,8 @@ function tailwindcssinjsLanguageService(
 
         for (const templateContextClass of tailwindContext) {
           if (problems > maxNumberOfProblems) break;
+
+          if (IGNORE_ERRORS?.test(templateContextClass.text)) break;
 
           if (templateContextClass.type === "array") {
             for (const twClass of templateContextClass.classes) {
@@ -415,7 +420,10 @@ function tailwindcssinjsLanguageService(
 
 interface PluginConfig {
   config: string;
+  ignoreErrors: string | null;
 }
+
+let pluginConfig: PluginConfig;
 
 export = (mod: { typescript: typeof ts }): ts.server.PluginModule => {
   let logger: Logger;
@@ -423,6 +431,7 @@ export = (mod: { typescript: typeof ts }): ts.server.PluginModule => {
     create(info: ts.server.PluginCreateInfo): ts.LanguageService {
       logger = createLogger(info);
       logger.log("TailwindcssinjsTsPlugin is starting.");
+      pluginConfig = info.config;
       return decorateWithTemplateLanguageService(
         mod.typescript,
         info.languageService,
@@ -432,15 +441,16 @@ export = (mod: { typescript: typeof ts }): ts.server.PluginModule => {
         { logger }
       );
     },
-    onConfigurationChanged(pluginConfig: PluginConfig) {
+    onConfigurationChanged(newPluginConfig: PluginConfig) {
       if (logger) {
         logger.log(
-          `Config has changed ${typeof pluginConfig} ${JSON.stringify(
-            pluginConfig
+          `Config has changed ${typeof newPluginConfig} ${JSON.stringify(
+            newPluginConfig
           )}`
         );
       }
-      updateTailwindcssinjs(logger, pluginConfig.config);
+      pluginConfig = newPluginConfig;
+      updateTailwindcssinjs(logger, newPluginConfig.config);
     },
   };
 };
