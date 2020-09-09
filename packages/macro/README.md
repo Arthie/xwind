@@ -4,8 +4,6 @@
 [![License](https://badgen.net/npm/license/@tailwindcssinjs/macro)](https://www.npmjs.com/package/@tailwindcssinjs/macro)
 [![Babel Macro](https://img.shields.io/badge/babel--macro-%F0%9F%8E%A3-f5da55.svg?style=flat-square)](https://github.com/kentcdodds/babel-plugin-macros)
 
-### [Documentation](https://github.com/Arthie/tailwindcssinjs)
-
 `@tailwindcssinjs/macro` is a babel macro that transforms Tailwind classes into CSS object styles. These CSS object styles can be used with your favorite CSS-in-JS library like emotion, styled-components ...
 
 ### Basic example
