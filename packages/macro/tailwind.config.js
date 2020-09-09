@@ -1,6 +1,9 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
+  dark: 'media', // or 'class'
+  experimental: "all",
+  future: "all",
   theme: {
     extend: {
       screens: {
@@ -46,7 +49,7 @@ module.exports = {
       });
     }),
   ],
-  // tailwindcssinjs: {
-  //   plugins: [require("./lib/plugins/cssString").default],
-  // },
+  tailwindcssinjs: {
+    // plugins: [require("./lib/plugins/cssString").default],
+  },
 };

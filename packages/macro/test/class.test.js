@@ -11,7 +11,7 @@ const tailwindcssConfig_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailw
 const corePlugins_1 = __importDefault(require("tailwindcss/lib/corePlugins"));
 
 const tailwindcssData_1 = require("@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData");
-const transformers_1 = require("@tailwindcssinjs/transformers");
+const transformers_1 = require("@tailwindcssinjs/tailwindcss-data/lib/transformers");
 
 function tailwindcssinjs(config, corePlugins) {
   const { componentsRoot, utilitiesRoot } = tailwindcssData_1.tailwindData(

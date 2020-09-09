@@ -3,18 +3,14 @@
 exports[`macros correct usage 1: correct usage 1 1`] = `
 
 import tw from '../lib/macro';
-const css = tw("sm:motion-reduce:translate-y-0 motion-reduce:hover:translate-y-0 md:motion-reduce:hover:translate-y-0");
+const css = tw("dark:bg-black bg-gradient-to-r sm:motion-reduce:translate-y-0 motion-reduce:hover:translate-y-0 md:motion-reduce:hover:translate-y-0");
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
+  backgroundImage: "linear-gradient(to right, var(--gradient-color-stops))",
   "@media (min-width: 640px)": {
     "@media (prefers-reduced-motion: reduce)": {
-      "--transform-translate-y": "0",
-    },
-  },
-  "@media (prefers-reduced-motion: reduce)": {
-    "&:hover": {
       "--transform-translate-y": "0",
     },
   },
@@ -23,6 +19,15 @@ const css = {
       "&:hover": {
         "--transform-translate-y": "0",
       },
+    },
+  },
+  "@media (prefers-color-scheme: dark)": {
+    "--bg-opacity": "1",
+    backgroundColor: ["#000000", "rgba(0, 0, 0, var(--bg-opacity))"],
+  },
+  "@media (prefers-reduced-motion: reduce)": {
+    "&:hover": {
+      "--transform-translate-y": "0",
     },
   },
 };

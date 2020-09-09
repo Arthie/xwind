@@ -16402,966 +16402,6 @@ const css = {
 
 `;
 
-exports[`macros col-gap-0.5: col-gap-0.5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-0.5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "0.125rem",
-  columnGap: "0.125rem",
-};
-
-
-`;
-
-exports[`macros col-gap-0: col-gap-0 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-0");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "0",
-  columnGap: "0",
-};
-
-
-`;
-
-exports[`macros col-gap-1.5: col-gap-1.5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-1.5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "0.375rem",
-  columnGap: "0.375rem",
-};
-
-
-`;
-
-exports[`macros col-gap-1/2: col-gap-1/2 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-1/2");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "50%",
-  columnGap: "50%",
-};
-
-
-`;
-
-exports[`macros col-gap-1/3: col-gap-1/3 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-1/3");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "33.333333%",
-  columnGap: "33.333333%",
-};
-
-
-`;
-
-exports[`macros col-gap-1/4: col-gap-1/4 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-1/4");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "25%",
-  columnGap: "25%",
-};
-
-
-`;
-
-exports[`macros col-gap-1/5: col-gap-1/5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-1/5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "20%",
-  columnGap: "20%",
-};
-
-
-`;
-
-exports[`macros col-gap-1/6: col-gap-1/6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-1/6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "16.666667%",
-  columnGap: "16.666667%",
-};
-
-
-`;
-
-exports[`macros col-gap-1/12: col-gap-1/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-1/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "8.333333%",
-  columnGap: "8.333333%",
-};
-
-
-`;
-
-exports[`macros col-gap-1: col-gap-1 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-1");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "0.25rem",
-  columnGap: "0.25rem",
-};
-
-
-`;
-
-exports[`macros col-gap-2.5: col-gap-2.5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-2.5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "0.625rem",
-  columnGap: "0.625rem",
-};
-
-
-`;
-
-exports[`macros col-gap-2/3: col-gap-2/3 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-2/3");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "66.666667%",
-  columnGap: "66.666667%",
-};
-
-
-`;
-
-exports[`macros col-gap-2/4: col-gap-2/4 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-2/4");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "50%",
-  columnGap: "50%",
-};
-
-
-`;
-
-exports[`macros col-gap-2/5: col-gap-2/5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-2/5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "40%",
-  columnGap: "40%",
-};
-
-
-`;
-
-exports[`macros col-gap-2/6: col-gap-2/6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-2/6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "33.333333%",
-  columnGap: "33.333333%",
-};
-
-
-`;
-
-exports[`macros col-gap-2/12: col-gap-2/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-2/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "16.666667%",
-  columnGap: "16.666667%",
-};
-
-
-`;
-
-exports[`macros col-gap-2: col-gap-2 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-2");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "0.5rem",
-  columnGap: "0.5rem",
-};
-
-
-`;
-
-exports[`macros col-gap-3.5: col-gap-3.5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-3.5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "0.875rem",
-  columnGap: "0.875rem",
-};
-
-
-`;
-
-exports[`macros col-gap-3/4: col-gap-3/4 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-3/4");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "75%",
-  columnGap: "75%",
-};
-
-
-`;
-
-exports[`macros col-gap-3/5: col-gap-3/5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-3/5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "60%",
-  columnGap: "60%",
-};
-
-
-`;
-
-exports[`macros col-gap-3/6: col-gap-3/6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-3/6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "50%",
-  columnGap: "50%",
-};
-
-
-`;
-
-exports[`macros col-gap-3/12: col-gap-3/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-3/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "25%",
-  columnGap: "25%",
-};
-
-
-`;
-
-exports[`macros col-gap-3: col-gap-3 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-3");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "0.75rem",
-  columnGap: "0.75rem",
-};
-
-
-`;
-
-exports[`macros col-gap-4/5: col-gap-4/5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-4/5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "80%",
-  columnGap: "80%",
-};
-
-
-`;
-
-exports[`macros col-gap-4/6: col-gap-4/6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-4/6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "66.666667%",
-  columnGap: "66.666667%",
-};
-
-
-`;
-
-exports[`macros col-gap-4/12: col-gap-4/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-4/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "33.333333%",
-  columnGap: "33.333333%",
-};
-
-
-`;
-
-exports[`macros col-gap-4: col-gap-4 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-4");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "1rem",
-  columnGap: "1rem",
-};
-
-
-`;
-
-exports[`macros col-gap-5/6: col-gap-5/6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-5/6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "83.333333%",
-  columnGap: "83.333333%",
-};
-
-
-`;
-
-exports[`macros col-gap-5/12: col-gap-5/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-5/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "41.666667%",
-  columnGap: "41.666667%",
-};
-
-
-`;
-
-exports[`macros col-gap-5: col-gap-5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "1.25rem",
-  columnGap: "1.25rem",
-};
-
-
-`;
-
-exports[`macros col-gap-6/12: col-gap-6/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-6/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "50%",
-  columnGap: "50%",
-};
-
-
-`;
-
-exports[`macros col-gap-6: col-gap-6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "1.5rem",
-  columnGap: "1.5rem",
-};
-
-
-`;
-
-exports[`macros col-gap-7/12: col-gap-7/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-7/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "58.333333%",
-  columnGap: "58.333333%",
-};
-
-
-`;
-
-exports[`macros col-gap-7: col-gap-7 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-7");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "1.75rem",
-  columnGap: "1.75rem",
-};
-
-
-`;
-
-exports[`macros col-gap-8/12: col-gap-8/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-8/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "66.666667%",
-  columnGap: "66.666667%",
-};
-
-
-`;
-
-exports[`macros col-gap-8: col-gap-8 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-8");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "2rem",
-  columnGap: "2rem",
-};
-
-
-`;
-
-exports[`macros col-gap-9/12: col-gap-9/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-9/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "75%",
-  columnGap: "75%",
-};
-
-
-`;
-
-exports[`macros col-gap-9: col-gap-9 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-9");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "2.25rem",
-  columnGap: "2.25rem",
-};
-
-
-`;
-
-exports[`macros col-gap-10/12: col-gap-10/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-10/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "83.333333%",
-  columnGap: "83.333333%",
-};
-
-
-`;
-
-exports[`macros col-gap-10: col-gap-10 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-10");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "2.5rem",
-  columnGap: "2.5rem",
-};
-
-
-`;
-
-exports[`macros col-gap-11/12: col-gap-11/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-11/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "91.666667%",
-  columnGap: "91.666667%",
-};
-
-
-`;
-
-exports[`macros col-gap-11: col-gap-11 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-11");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "2.75rem",
-  columnGap: "2.75rem",
-};
-
-
-`;
-
-exports[`macros col-gap-12: col-gap-12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "3rem",
-  columnGap: "3rem",
-};
-
-
-`;
-
-exports[`macros col-gap-13: col-gap-13 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-13");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "3.25rem",
-  columnGap: "3.25rem",
-};
-
-
-`;
-
-exports[`macros col-gap-14: col-gap-14 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-14");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "3.5rem",
-  columnGap: "3.5rem",
-};
-
-
-`;
-
-exports[`macros col-gap-15: col-gap-15 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-15");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "3.75rem",
-  columnGap: "3.75rem",
-};
-
-
-`;
-
-exports[`macros col-gap-16: col-gap-16 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-16");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "4rem",
-  columnGap: "4rem",
-};
-
-
-`;
-
-exports[`macros col-gap-20: col-gap-20 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-20");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "5rem",
-  columnGap: "5rem",
-};
-
-
-`;
-
-exports[`macros col-gap-24: col-gap-24 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-24");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "6rem",
-  columnGap: "6rem",
-};
-
-
-`;
-
-exports[`macros col-gap-28: col-gap-28 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-28");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "7rem",
-  columnGap: "7rem",
-};
-
-
-`;
-
-exports[`macros col-gap-32: col-gap-32 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-32");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "8rem",
-  columnGap: "8rem",
-};
-
-
-`;
-
-exports[`macros col-gap-36: col-gap-36 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-36");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "9rem",
-  columnGap: "9rem",
-};
-
-
-`;
-
-exports[`macros col-gap-40: col-gap-40 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-40");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "10rem",
-  columnGap: "10rem",
-};
-
-
-`;
-
-exports[`macros col-gap-44: col-gap-44 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-44");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "11rem",
-  columnGap: "11rem",
-};
-
-
-`;
-
-exports[`macros col-gap-48: col-gap-48 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-48");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "12rem",
-  columnGap: "12rem",
-};
-
-
-`;
-
-exports[`macros col-gap-52: col-gap-52 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-52");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "13rem",
-  columnGap: "13rem",
-};
-
-
-`;
-
-exports[`macros col-gap-56: col-gap-56 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-56");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "14rem",
-  columnGap: "14rem",
-};
-
-
-`;
-
-exports[`macros col-gap-60: col-gap-60 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-60");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "15rem",
-  columnGap: "15rem",
-};
-
-
-`;
-
-exports[`macros col-gap-64: col-gap-64 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-64");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "16rem",
-  columnGap: "16rem",
-};
-
-
-`;
-
-exports[`macros col-gap-72: col-gap-72 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-72");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "18rem",
-  columnGap: "18rem",
-};
-
-
-`;
-
-exports[`macros col-gap-80: col-gap-80 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-80");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "20rem",
-  columnGap: "20rem",
-};
-
-
-`;
-
-exports[`macros col-gap-96: col-gap-96 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-96");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "24rem",
-  columnGap: "24rem",
-};
-
-
-`;
-
-exports[`macros col-gap-full: col-gap-full 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-full");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "100%",
-  columnGap: "100%",
-};
-
-
-`;
-
-exports[`macros col-gap-px: col-gap-px 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("col-gap-px");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridColumnGap: "1px",
-  columnGap: "1px",
-};
-
-
-`;
-
 exports[`macros col-span-1: col-span-1 1`] = `
 
 import tw from '../lib/macro';
@@ -17814,6 +16854,20 @@ const css = {
 
 `;
 
+exports[`macros content-evenly: content-evenly 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("content-evenly");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  alignContent: "space-evenly",
+};
+
+
+`;
+
 exports[`macros content-start: content-start 1`] = `
 
 import tw from '../lib/macro';
@@ -18047,6 +17101,20 @@ const css = tw("delay-1000");
 
 const css = {
   transitionDelay: "1000ms",
+};
+
+
+`;
+
+exports[`macros diagonal-fractions: diagonal-fractions 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("diagonal-fractions");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--font-variant-numeric-fraction": "diagonal-fractions",
 };
 
 
@@ -20862,15 +19930,15 @@ const css = {
 
 `;
 
-exports[`macros font-hairline: font-hairline 1`] = `
+exports[`macros font-extralight: font-extralight 1`] = `
 
 import tw from '../lib/macro';
-const css = tw("font-hairline");
+const css = tw("font-extralight");
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  fontWeight: "100",
+  fontWeight: "200",
 };
 
 
@@ -20984,7 +20052,7 @@ const css = tw("font-thin");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  fontWeight: "200",
+  fontWeight: "100",
 };
 
 
@@ -30493,6 +29561,146 @@ const css = {
 
 `;
 
+exports[`macros justify-items-auto: justify-items-auto 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("justify-items-auto");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  justifyItems: "auto",
+};
+
+
+`;
+
+exports[`macros justify-items-center: justify-items-center 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("justify-items-center");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  justifyItems: "center",
+};
+
+
+`;
+
+exports[`macros justify-items-end: justify-items-end 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("justify-items-end");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  justifyItems: "end",
+};
+
+
+`;
+
+exports[`macros justify-items-start: justify-items-start 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("justify-items-start");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  justifyItems: "start",
+};
+
+
+`;
+
+exports[`macros justify-items-stretch: justify-items-stretch 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("justify-items-stretch");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  justifyItems: "stretch",
+};
+
+
+`;
+
+exports[`macros justify-self-auto: justify-self-auto 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("justify-self-auto");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  justifySelf: "auto",
+};
+
+
+`;
+
+exports[`macros justify-self-center: justify-self-center 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("justify-self-center");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  justifySelf: "center",
+};
+
+
+`;
+
+exports[`macros justify-self-end: justify-self-end 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("justify-self-end");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  justifySelf: "end",
+};
+
+
+`;
+
+exports[`macros justify-self-start: justify-self-start 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("justify-self-start");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  justifySelf: "start",
+};
+
+
+`;
+
+exports[`macros justify-self-stretch: justify-self-stretch 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("justify-self-stretch");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  justifySelf: "stretch",
+};
+
+
+`;
+
 exports[`macros justify-start: justify-start 1`] = `
 
 import tw from '../lib/macro';
@@ -31622,6 +30830,20 @@ const css = tw("line-through");
 
 const css = {
   textDecoration: "line-through",
+};
+
+
+`;
+
+exports[`macros lining-nums: lining-nums 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("lining-nums");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--font-variant-numeric-figure": "lining-nums",
 };
 
 
@@ -39541,6 +38763,20 @@ const css = {
 
 `;
 
+exports[`macros normal-nums: normal-nums 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("normal-nums");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontVariantNumeric: "normal",
+};
+
+
+`;
+
 exports[`macros not-italic: not-italic 1`] = `
 
 import tw from '../lib/macro';
@@ -39767,6 +39003,20 @@ const css = tw("object-top");
 
 const css = {
   objectPosition: "top",
+};
+
+
+`;
+
+exports[`macros oldstyle-nums: oldstyle-nums 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("oldstyle-nums");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--font-variant-numeric-figure": "oldstyle-nums",
 };
 
 
@@ -40047,6 +39297,29 @@ const css = tw("order-none");
 
 const css = {
   order: "0",
+};
+
+
+`;
+
+exports[`macros ordinal: ordinal 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("ordinal");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--font-variant-numeric-ordinal": "ordinal",
+  "&, .slashed-zero, .lining-nums, .oldstyle-nums, .proportional-nums, .tabular-nums, .diagonal-fractions, .stacked-fractions": {
+    "--font-variant-numeric-ordinal": "var(--tailwind-empty,/*!*/ /*!*/)",
+    "--font-variant-numeric-slashed-zero": "var(--tailwind-empty,/*!*/ /*!*/)",
+    "--font-variant-numeric-figure": "var(--tailwind-empty,/*!*/ /*!*/)",
+    "--font-variant-numeric-spacing": "var(--tailwind-empty,/*!*/ /*!*/)",
+    "--font-variant-numeric-fraction": "var(--tailwind-empty,/*!*/ /*!*/)",
+    fontVariantNumeric:
+      "var(--font-variant-numeric-ordinal) var(--font-variant-numeric-slashed-zero) var(--font-variant-numeric-figure) var(--font-variant-numeric-spacing) var(--font-variant-numeric-fraction)",
+  },
 };
 
 
@@ -43174,6 +42447,244 @@ const css = {
 
 `;
 
+exports[`macros place-content-around: place-content-around 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-content-around");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeContent: "space-around",
+};
+
+
+`;
+
+exports[`macros place-content-between: place-content-between 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-content-between");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeContent: "space-between",
+};
+
+
+`;
+
+exports[`macros place-content-center: place-content-center 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-content-center");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeContent: "center",
+};
+
+
+`;
+
+exports[`macros place-content-end: place-content-end 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-content-end");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeContent: "end",
+};
+
+
+`;
+
+exports[`macros place-content-evenly: place-content-evenly 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-content-evenly");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeContent: "space-evenly",
+};
+
+
+`;
+
+exports[`macros place-content-start: place-content-start 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-content-start");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeContent: "start",
+};
+
+
+`;
+
+exports[`macros place-content-stretch: place-content-stretch 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-content-stretch");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeContent: "stretch",
+};
+
+
+`;
+
+exports[`macros place-items-auto: place-items-auto 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-items-auto");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeItems: "auto",
+};
+
+
+`;
+
+exports[`macros place-items-center: place-items-center 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-items-center");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeItems: "center",
+};
+
+
+`;
+
+exports[`macros place-items-end: place-items-end 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-items-end");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeItems: "end",
+};
+
+
+`;
+
+exports[`macros place-items-start: place-items-start 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-items-start");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeItems: "start",
+};
+
+
+`;
+
+exports[`macros place-items-stretch: place-items-stretch 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-items-stretch");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeItems: "stretch",
+};
+
+
+`;
+
+exports[`macros place-self-auto: place-self-auto 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-self-auto");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeSelf: "auto",
+};
+
+
+`;
+
+exports[`macros place-self-center: place-self-center 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-self-center");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeSelf: "center",
+};
+
+
+`;
+
+exports[`macros place-self-end: place-self-end 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-self-end");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeSelf: "end",
+};
+
+
+`;
+
+exports[`macros place-self-start: place-self-start 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-self-start");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeSelf: "start",
+};
+
+
+`;
+
+exports[`macros place-self-stretch: place-self-stretch 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("place-self-stretch");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  placeSelf: "stretch",
+};
+
+
+`;
+
 exports[`macros placeholder-black: placeholder-black 1`] = `
 
 import tw from '../lib/macro';
@@ -46093,6 +45604,20 @@ const css = tw("pr-px");
 
 const css = {
   paddingRight: "1px",
+};
+
+
+`;
+
+exports[`macros proportional-nums: proportional-nums 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("proportional-nums");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--font-variant-numeric-spacing": "proportional-nums",
 };
 
 
@@ -51906,966 +51431,6 @@ const css = {
 
 `;
 
-exports[`macros row-gap-0.5: row-gap-0.5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-0.5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "0.125rem",
-  rowGap: "0.125rem",
-};
-
-
-`;
-
-exports[`macros row-gap-0: row-gap-0 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-0");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "0",
-  rowGap: "0",
-};
-
-
-`;
-
-exports[`macros row-gap-1.5: row-gap-1.5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-1.5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "0.375rem",
-  rowGap: "0.375rem",
-};
-
-
-`;
-
-exports[`macros row-gap-1/2: row-gap-1/2 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-1/2");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "50%",
-  rowGap: "50%",
-};
-
-
-`;
-
-exports[`macros row-gap-1/3: row-gap-1/3 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-1/3");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "33.333333%",
-  rowGap: "33.333333%",
-};
-
-
-`;
-
-exports[`macros row-gap-1/4: row-gap-1/4 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-1/4");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "25%",
-  rowGap: "25%",
-};
-
-
-`;
-
-exports[`macros row-gap-1/5: row-gap-1/5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-1/5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "20%",
-  rowGap: "20%",
-};
-
-
-`;
-
-exports[`macros row-gap-1/6: row-gap-1/6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-1/6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "16.666667%",
-  rowGap: "16.666667%",
-};
-
-
-`;
-
-exports[`macros row-gap-1/12: row-gap-1/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-1/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "8.333333%",
-  rowGap: "8.333333%",
-};
-
-
-`;
-
-exports[`macros row-gap-1: row-gap-1 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-1");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "0.25rem",
-  rowGap: "0.25rem",
-};
-
-
-`;
-
-exports[`macros row-gap-2.5: row-gap-2.5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-2.5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "0.625rem",
-  rowGap: "0.625rem",
-};
-
-
-`;
-
-exports[`macros row-gap-2/3: row-gap-2/3 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-2/3");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "66.666667%",
-  rowGap: "66.666667%",
-};
-
-
-`;
-
-exports[`macros row-gap-2/4: row-gap-2/4 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-2/4");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "50%",
-  rowGap: "50%",
-};
-
-
-`;
-
-exports[`macros row-gap-2/5: row-gap-2/5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-2/5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "40%",
-  rowGap: "40%",
-};
-
-
-`;
-
-exports[`macros row-gap-2/6: row-gap-2/6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-2/6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "33.333333%",
-  rowGap: "33.333333%",
-};
-
-
-`;
-
-exports[`macros row-gap-2/12: row-gap-2/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-2/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "16.666667%",
-  rowGap: "16.666667%",
-};
-
-
-`;
-
-exports[`macros row-gap-2: row-gap-2 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-2");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "0.5rem",
-  rowGap: "0.5rem",
-};
-
-
-`;
-
-exports[`macros row-gap-3.5: row-gap-3.5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-3.5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "0.875rem",
-  rowGap: "0.875rem",
-};
-
-
-`;
-
-exports[`macros row-gap-3/4: row-gap-3/4 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-3/4");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "75%",
-  rowGap: "75%",
-};
-
-
-`;
-
-exports[`macros row-gap-3/5: row-gap-3/5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-3/5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "60%",
-  rowGap: "60%",
-};
-
-
-`;
-
-exports[`macros row-gap-3/6: row-gap-3/6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-3/6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "50%",
-  rowGap: "50%",
-};
-
-
-`;
-
-exports[`macros row-gap-3/12: row-gap-3/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-3/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "25%",
-  rowGap: "25%",
-};
-
-
-`;
-
-exports[`macros row-gap-3: row-gap-3 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-3");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "0.75rem",
-  rowGap: "0.75rem",
-};
-
-
-`;
-
-exports[`macros row-gap-4/5: row-gap-4/5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-4/5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "80%",
-  rowGap: "80%",
-};
-
-
-`;
-
-exports[`macros row-gap-4/6: row-gap-4/6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-4/6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "66.666667%",
-  rowGap: "66.666667%",
-};
-
-
-`;
-
-exports[`macros row-gap-4/12: row-gap-4/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-4/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "33.333333%",
-  rowGap: "33.333333%",
-};
-
-
-`;
-
-exports[`macros row-gap-4: row-gap-4 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-4");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "1rem",
-  rowGap: "1rem",
-};
-
-
-`;
-
-exports[`macros row-gap-5/6: row-gap-5/6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-5/6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "83.333333%",
-  rowGap: "83.333333%",
-};
-
-
-`;
-
-exports[`macros row-gap-5/12: row-gap-5/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-5/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "41.666667%",
-  rowGap: "41.666667%",
-};
-
-
-`;
-
-exports[`macros row-gap-5: row-gap-5 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-5");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "1.25rem",
-  rowGap: "1.25rem",
-};
-
-
-`;
-
-exports[`macros row-gap-6/12: row-gap-6/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-6/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "50%",
-  rowGap: "50%",
-};
-
-
-`;
-
-exports[`macros row-gap-6: row-gap-6 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-6");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "1.5rem",
-  rowGap: "1.5rem",
-};
-
-
-`;
-
-exports[`macros row-gap-7/12: row-gap-7/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-7/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "58.333333%",
-  rowGap: "58.333333%",
-};
-
-
-`;
-
-exports[`macros row-gap-7: row-gap-7 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-7");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "1.75rem",
-  rowGap: "1.75rem",
-};
-
-
-`;
-
-exports[`macros row-gap-8/12: row-gap-8/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-8/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "66.666667%",
-  rowGap: "66.666667%",
-};
-
-
-`;
-
-exports[`macros row-gap-8: row-gap-8 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-8");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "2rem",
-  rowGap: "2rem",
-};
-
-
-`;
-
-exports[`macros row-gap-9/12: row-gap-9/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-9/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "75%",
-  rowGap: "75%",
-};
-
-
-`;
-
-exports[`macros row-gap-9: row-gap-9 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-9");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "2.25rem",
-  rowGap: "2.25rem",
-};
-
-
-`;
-
-exports[`macros row-gap-10/12: row-gap-10/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-10/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "83.333333%",
-  rowGap: "83.333333%",
-};
-
-
-`;
-
-exports[`macros row-gap-10: row-gap-10 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-10");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "2.5rem",
-  rowGap: "2.5rem",
-};
-
-
-`;
-
-exports[`macros row-gap-11/12: row-gap-11/12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-11/12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "91.666667%",
-  rowGap: "91.666667%",
-};
-
-
-`;
-
-exports[`macros row-gap-11: row-gap-11 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-11");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "2.75rem",
-  rowGap: "2.75rem",
-};
-
-
-`;
-
-exports[`macros row-gap-12: row-gap-12 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-12");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "3rem",
-  rowGap: "3rem",
-};
-
-
-`;
-
-exports[`macros row-gap-13: row-gap-13 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-13");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "3.25rem",
-  rowGap: "3.25rem",
-};
-
-
-`;
-
-exports[`macros row-gap-14: row-gap-14 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-14");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "3.5rem",
-  rowGap: "3.5rem",
-};
-
-
-`;
-
-exports[`macros row-gap-15: row-gap-15 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-15");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "3.75rem",
-  rowGap: "3.75rem",
-};
-
-
-`;
-
-exports[`macros row-gap-16: row-gap-16 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-16");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "4rem",
-  rowGap: "4rem",
-};
-
-
-`;
-
-exports[`macros row-gap-20: row-gap-20 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-20");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "5rem",
-  rowGap: "5rem",
-};
-
-
-`;
-
-exports[`macros row-gap-24: row-gap-24 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-24");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "6rem",
-  rowGap: "6rem",
-};
-
-
-`;
-
-exports[`macros row-gap-28: row-gap-28 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-28");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "7rem",
-  rowGap: "7rem",
-};
-
-
-`;
-
-exports[`macros row-gap-32: row-gap-32 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-32");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "8rem",
-  rowGap: "8rem",
-};
-
-
-`;
-
-exports[`macros row-gap-36: row-gap-36 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-36");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "9rem",
-  rowGap: "9rem",
-};
-
-
-`;
-
-exports[`macros row-gap-40: row-gap-40 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-40");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "10rem",
-  rowGap: "10rem",
-};
-
-
-`;
-
-exports[`macros row-gap-44: row-gap-44 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-44");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "11rem",
-  rowGap: "11rem",
-};
-
-
-`;
-
-exports[`macros row-gap-48: row-gap-48 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-48");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "12rem",
-  rowGap: "12rem",
-};
-
-
-`;
-
-exports[`macros row-gap-52: row-gap-52 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-52");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "13rem",
-  rowGap: "13rem",
-};
-
-
-`;
-
-exports[`macros row-gap-56: row-gap-56 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-56");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "14rem",
-  rowGap: "14rem",
-};
-
-
-`;
-
-exports[`macros row-gap-60: row-gap-60 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-60");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "15rem",
-  rowGap: "15rem",
-};
-
-
-`;
-
-exports[`macros row-gap-64: row-gap-64 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-64");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "16rem",
-  rowGap: "16rem",
-};
-
-
-`;
-
-exports[`macros row-gap-72: row-gap-72 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-72");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "18rem",
-  rowGap: "18rem",
-};
-
-
-`;
-
-exports[`macros row-gap-80: row-gap-80 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-80");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "20rem",
-  rowGap: "20rem",
-};
-
-
-`;
-
-exports[`macros row-gap-96: row-gap-96 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-96");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "24rem",
-  rowGap: "24rem",
-};
-
-
-`;
-
-exports[`macros row-gap-full: row-gap-full 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-full");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "100%",
-  rowGap: "100%",
-};
-
-
-`;
-
-exports[`macros row-gap-px: row-gap-px 1`] = `
-
-import tw from '../lib/macro';
-const css = tw("row-gap-px");
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  gridRowGap: "1px",
-  rowGap: "1px",
-};
-
-
-`;
-
 exports[`macros row-span-1: row-span-1 1`] = `
 
 import tw from '../lib/macro';
@@ -54050,6 +52615,20 @@ const css = tw("skew-y-12");
 
 const css = {
   "--transform-skew-y": "12deg",
+};
+
+
+`;
+
+exports[`macros slashed-zero: slashed-zero 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("slashed-zero");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--font-variant-numeric-slashed-zero": "slashed-zero",
 };
 
 
@@ -56413,6 +54992,20 @@ const css = {
 
 `;
 
+exports[`macros stacked-fractions: stacked-fractions 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("stacked-fractions");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--font-variant-numeric-fraction": "stacked-fractions",
+};
+
+
+`;
+
 exports[`macros static: static 1`] = `
 
 import tw from '../lib/macro';
@@ -56666,6 +55259,20 @@ const css = {
 
 `;
 
+exports[`macros tabular-nums: tabular-nums 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("tabular-nums");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--font-variant-numeric-spacing": "tabular-nums",
+};
+
+
+`;
+
 exports[`macros text-2xl: text-2xl 1`] = `
 
 import tw from '../lib/macro';
@@ -56675,6 +55282,7 @@ const css = tw("text-2xl");
 
 const css = {
   fontSize: "1.5rem",
+  lineHeight: "2rem",
 };
 
 
@@ -56689,6 +55297,7 @@ const css = tw("text-3xl");
 
 const css = {
   fontSize: "1.875rem",
+  lineHeight: "2.25rem",
 };
 
 
@@ -56703,6 +55312,7 @@ const css = tw("text-4xl");
 
 const css = {
   fontSize: "2.25rem",
+  lineHeight: "2.5rem",
 };
 
 
@@ -56717,6 +55327,7 @@ const css = tw("text-5xl");
 
 const css = {
   fontSize: "3rem",
+  lineHeight: "1",
 };
 
 
@@ -56731,6 +55342,52 @@ const css = tw("text-6xl");
 
 const css = {
   fontSize: "4rem",
+  lineHeight: "1",
+};
+
+
+`;
+
+exports[`macros text-7xl: text-7xl 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("text-7xl");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "5rem",
+  lineHeight: "1",
+};
+
+
+`;
+
+exports[`macros text-8xl: text-8xl 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("text-8xl");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "6rem",
+  lineHeight: "1",
+};
+
+
+`;
+
+exports[`macros text-9xl: text-9xl 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("text-9xl");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fontSize: "8rem",
+  lineHeight: "1",
 };
 
 
@@ -56745,6 +55402,7 @@ const css = tw("text-base");
 
 const css = {
   fontSize: "1rem",
+  lineHeight: "1.5rem",
 };
 
 
@@ -57566,6 +56224,7 @@ const css = tw("text-lg");
 
 const css = {
   fontSize: "1.125rem",
+  lineHeight: "1.75rem",
 };
 
 
@@ -58264,6 +56923,7 @@ const css = tw("text-sm");
 
 const css = {
   fontSize: "0.875rem",
+  lineHeight: "1.25rem",
 };
 
 
@@ -58457,6 +57117,7 @@ const css = tw("text-xl");
 
 const css = {
   fontSize: "1.25rem",
+  lineHeight: "1.75rem",
 };
 
 
@@ -58471,6 +57132,7 @@ const css = tw("text-xs");
 
 const css = {
   fontSize: "0.75rem",
+  lineHeight: "1rem",
 };
 
 
