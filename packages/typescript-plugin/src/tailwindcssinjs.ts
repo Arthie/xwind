@@ -11,7 +11,7 @@ import {
 import { Logger } from "typescript-template-language-service-decorator";
 import importFresh from "import-fresh";
 import { twClassesVariantsParser } from "@tailwindcssinjs/class-composer";
-import postcss from "postcss";
+import { Root } from "postcss";
 
 export default function tailwindcssinjs(config: TailwindConfig) {
   const {
@@ -40,7 +40,7 @@ export default function tailwindcssinjs(config: TailwindConfig) {
   const generateCssFromText = (text: string) => {
     const parsedClasses = twParser(text);
 
-    const roots: postcss.Root[] = [];
+    const roots: Root[] = [];
     for (const parsedClass of parsedClasses) {
       roots.push(generateTwClassSubstituteRoot(twObjectMap, parsedClass));
     }

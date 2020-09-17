@@ -20,7 +20,7 @@ import {
   translateCompletionEntry,
   translateHoverItemsToQuickInfo,
 } from "./translate";
-import postcss from "postcss";
+import { root, Root } from "postcss";
 
 let tailwindConfig: TailwindConfig | undefined;
 let tailwindData:
@@ -28,7 +28,7 @@ let tailwindData:
       twObjectMap: Map<string, TwObject>;
       screens: string[];
       variants: string[];
-      generateCssFromText: (text: string) => postcss.Root[];
+      generateCssFromText: (text: string) => Root[];
     }
   | undefined;
 
@@ -344,7 +344,7 @@ function tailwindcssinjsLanguageService(
 
         const twObject = tailwindData.twObjectMap.get(name);
         if (twObject) {
-          const root = postcss.root().append(...twObject.nodes);
+          const rootNode = root().append(...twObject.nodes);
           return translateCompletionItemsToCompletionEntryDetails({
             label: name,
             kind: vscode.CompletionItemKind.Text,
@@ -352,7 +352,7 @@ function tailwindcssinjsLanguageService(
               kind: vscode.MarkupKind.Markdown,
               value: [
                 "```css",
-                root.toString().replace(/    /g, "  "),
+                rootNode.toString().replace(/    /g, "  "),
                 "```",
               ].join("\n"),
             },
@@ -385,7 +385,7 @@ function tailwindcssinjsLanguageService(
 
         const getQuickInfo = (
           twContext: TailwindContext,
-          twObjectRoots: postcss.Root[]
+          twObjectRoots: Root[]
         ) => {
           return translateHoverItemsToQuickInfo({
             start: twContext.index,
@@ -395,7 +395,7 @@ function tailwindcssinjsLanguageService(
               kind: vscode.MarkupKind.Markdown,
               value: [
                 "```css",
-                ...twObjectRoots.map((twObjectRoot: postcss.Root) => [
+                ...twObjectRoots.map((twObjectRoot: Root) => [
                   twObjectRoot.toString().replace(/    /g, "  "),
                 ]),
                 "```",
