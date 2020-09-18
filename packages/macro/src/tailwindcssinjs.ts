@@ -66,11 +66,10 @@ export default function tailwindcssinjs(
     );
 
     tailwind = (twClasses: TwClasses) => {
-      const twParsedClasses = variantParser(twClasses);
-
+      const parsedTwClasses = variantParser(twClasses);
       let styleObject = transformTwClassesToStyleObject(
         twObjectMap,
-        twParsedClasses,
+        parsedTwClasses,
         generateTwClassSubstituteRoot
       );
 

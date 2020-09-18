@@ -30,10 +30,10 @@ const css = {
   paddingBottom: "0.5rem",
   paddingLeft: "0.75rem",
   fontSize: "1rem",
-  lineHeight: "1.5",
+  lineHeight: 1.5,
   "&::placeholder": {
     color: "#9fa6b2",
-    opacity: "1",
+    opacity: 1,
   },
   "&:focus": {
     outline: "none",
@@ -402,7 +402,7 @@ const css = {
   borderColor: "transparent",
   fontSize: "0.875rem",
   lineHeight: "1.25rem",
-  fontWeight: "500",
+  fontWeight: 500,
   borderRadius: "0.375rem",
   color: ["#ffffff", "rgba(255, 255, 255, var(--text-opacity))"],
   backgroundColor: ["#5850ec", "rgba(88, 80, 236, var(--bg-opacity))"],
@@ -466,10 +466,10 @@ const css = {
   paddingBottom: "0.5rem",
   paddingLeft: "0.75rem",
   fontSize: "1rem",
-  lineHeight: "1.5",
+  lineHeight: 1.5,
   "&::placeholder": {
     color: "#9fa6b2",
-    opacity: "1",
+    opacity: 1,
   },
   "&:focus": {
     outline: "none",

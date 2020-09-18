@@ -203,10 +203,7 @@ function tailwindcssinjsMacro({
         }
       } else if (state.tailwind) {
         const style = state.tailwind(args);
-        const replacementAst = template.expression(JSON.stringify(style), {
-          placeholderPattern: false,
-        })();
-        referencePath.parentPath.replaceWith(replacementAst);
+        referencePath.parentPath.replaceWith(t.valueToNode(style));
       }
     });
   } catch (err) {
