@@ -1,21 +1,19 @@
-import postcss, { Root, AtRuleNewProps } from "postcss";
+import { root, Root, atRule, AtRuleProps } from "postcss";
 import { TwObject } from "./transformPostcssRootsToTwObjectMap";
 
 function applySubstituteRules(
-  variant: AtRuleNewProps,
+  variant: AtRuleProps,
   twObjectRoot: Root,
   getSubstituteRules: (root: Root) => void
 ) {
   if (!twObjectRoot.nodes) {
     throw new Error("Root has no nodes");
   }
-  const atRule = postcss.atRule(variant);
-  for (const node of twObjectRoot.nodes) {
-    atRule.append(node.clone());
-  }
-  const root = postcss.root().append(atRule);
-  getSubstituteRules(root);
-  return root;
+  const atRuleNode = atRule(variant);
+  atRuleNode.append(twObjectRoot.clone().nodes);
+  const rootNode = root().append(atRuleNode);
+  getSubstituteRules(rootNode);
+  return rootNode;
 }
 
 export function getGenerateTwClassSubstituteRoot(
@@ -32,7 +30,7 @@ export function getGenerateTwClassSubstituteRoot(
     const twObject = twObjectMap.get(twClass);
     if (!twObject) throw new Error(`Class "${twClass}" not found.`);
 
-    let styleRoot = postcss.root().append(...twObject.nodes);
+    let styleRoot = root().append(...twObject.nodes);
     const twClassVariantsLength = twClassVariants.length;
     if (twClassVariantsLength) {
       if (

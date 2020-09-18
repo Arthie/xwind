@@ -1,5 +1,5 @@
-import postcss, { AtRule, Root, Rule } from "postcss";
-import { parseTwSelectorClass } from "./parseTwSelectorClass";
+import { root, atRule, AtRule, Root, Rule } from "postcss";
+import parser from "postcss-selector-parser";
 
 export interface TwObject {
   variant: {
@@ -10,7 +10,16 @@ export interface TwObject {
 }
 
 export function transformPostcssRootsToTwObjectMap(roots: Root[] = []) {
-  const combinedRoot = postcss.root().append(...roots);
+  const combinedRoot = root().append(...roots);
+  const selectorparser = parser();
+
+  const parseSelectorClasses = (rule: Rule) => {
+    let selectorClasses: string[] = [];
+    selectorparser.astSync(rule.selector).walkClasses((ruleClass) => {
+      if (ruleClass.value) selectorClasses.push(ruleClass.value);
+    });
+    return selectorClasses;
+  };
 
   const addNodeToClassNodes = (
     classNodes: {
@@ -41,28 +50,47 @@ export function transformPostcssRootsToTwObjectMap(roots: Root[] = []) {
         node.remove();
       } else if (node.name === "media") {
         const isMediaAtRule = (mediaAtRule: AtRule) => {
-          const selectorClassesAtRule: { selectorClass: string, atRule: AtRule }[] = []
+          const selectorClassesAtRule: {
+            selectorClass: string;
+            atRule: AtRule;
+          }[] = [];
           for (const node of mediaAtRule.nodes ?? []) {
             if (node.type === "rule") {
-              const selectorClass = parseTwSelectorClass(node.selector);
-              const atRule = postcss.atRule({ name: mediaAtRule.name, params: mediaAtRule.params, nodes: [node] })
-              selectorClassesAtRule.push({ atRule, selectorClass });
+              const [selectorClass] = parseSelectorClasses(node);
+              const atRuleNode = atRule({
+                name: mediaAtRule.name,
+                params: mediaAtRule.params,
+                nodes: [node],
+              });
+              selectorClassesAtRule.push({
+                atRule: atRuleNode,
+                selectorClass: selectorClass,
+              });
             }
             if (node.type === "atrule") {
-              for (const { atRule: nestedAtRule, selectorClass } of isMediaAtRule(node)) {
-                const atRule = postcss.atRule({ name: mediaAtRule.name, params: mediaAtRule.params })
-                atRule.append(nestedAtRule)
-                selectorClassesAtRule.push({ atRule, selectorClass });
+              for (const {
+                atRule: nestedAtRule,
+                selectorClass,
+              } of isMediaAtRule(node)) {
+                const atRuleNode = atRule({
+                  name: mediaAtRule.name,
+                  params: mediaAtRule.params,
+                });
+                atRuleNode.append(nestedAtRule);
+                selectorClassesAtRule.push({
+                  atRule: atRuleNode,
+                  selectorClass,
+                });
               }
             }
           }
-          return selectorClassesAtRule
-        }
+          return selectorClassesAtRule;
+        };
 
         const mediaAtRule = node.clone();
         node.removeAll();
         for (const { atRule, selectorClass } of isMediaAtRule(mediaAtRule)) {
-          addNodeToClassNodes(classNodes, atRule, selectorClass)
+          addNodeToClassNodes(classNodes, atRule, selectorClass);
         }
       } else {
         //remove other atRules e.g. @keyframes
@@ -73,7 +101,7 @@ export function transformPostcssRootsToTwObjectMap(roots: Root[] = []) {
     if (node.type === "rule") {
       const rule = node.clone();
       node.removeAll();
-      const selectorClass = parseTwSelectorClass(node.selector);
+      const [selectorClass] = parseSelectorClasses(node);
       addNodeToClassNodes(classNodes, rule, selectorClass);
     }
   });

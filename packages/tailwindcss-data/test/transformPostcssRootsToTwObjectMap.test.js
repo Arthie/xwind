@@ -1276,7 +1276,7 @@ const source = `
 
 const postcss = require("postcss");
 const {
-    transformPostcssRootsToTwObjectMap,
+  transformPostcssRootsToTwObjectMap,
 } = require("../lib/transformers/transformPostcssRootsToTwObjectMap");
 
 const root = postcss.parse(source, { from: null });
@@ -1286,11 +1286,9 @@ const root = postcss.parse(source, { from: null });
 const testd = transformPostcssRootsToTwObjectMap([root]);
 
 for (const [twClass, twObject] of testd.entries()) {
-    console.log(twClass, postcss.root().append(twObject.nodes).toString())
+  console.log(twClass, postcss.root().append(twObject.nodes).toString());
 }
 
 test("parse .form-checkbox:checked:focus", () => {
-    expect("form-checkbox").toStrictEqual(
-        "form-checkbox"
-    );
+  expect("form-checkbox").toStrictEqual("form-checkbox");
 });

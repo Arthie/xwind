@@ -1,4 +1,4 @@
-import postcss from "postcss";
+import { root } from "postcss";
 
 //Tailwindcss imports
 import substituteVariantsAtRules from "tailwindcss/lib/lib/substituteVariantsAtRules";
@@ -45,9 +45,9 @@ export function tailwindData(
     resolvedConfig
   );
 
-  const baseRoot = postcss.root({ nodes: processedPlugins.base });
-  const utilitiesRoot = postcss.root({ nodes: processedPlugins.utilities });
-  const componentsRoot = postcss.root({ nodes: processedPlugins.components });
+  const baseRoot = root({ nodes: processedPlugins.base });
+  const utilitiesRoot = root({ nodes: processedPlugins.utilities });
+  const componentsRoot = root({ nodes: processedPlugins.components });
 
   const screens = getMediaScreens(resolvedConfig);
   const variants = getVariants(processedPlugins.variantGenerators);

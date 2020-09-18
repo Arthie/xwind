@@ -1,10 +1,11 @@
 import { Root } from "postcss";
-import objectify from "./postcssjs-objectify";
+//@ts-expect-error postcss-js has no type definition
+import { objectify } from "postcss-js";
 import merge from "lodash/merge";
-import sortCSSmq from 'sort-css-media-queries'
+import sortCSSmq from "sort-css-media-queries";
+import parser from "postcss-selector-parser";
 
 import { TwObject } from "./transformPostcssRootsToTwObjectMap";
-import { unescapeCSS } from "./parseTwSelectorClass";
 
 export type StyleObject = StyleObjectDecl | StyleObjectRuleOrAtRule;
 
@@ -20,20 +21,19 @@ function getStyleObjectFromTwObject(
   twObjectRoot: Root,
   twClass: string
 ): StyleObject {
+  const processor = parser((root) => {
+    root.walkClasses((node) => {
+      if (node.value?.endsWith(twClass)) {
+        node.replaceWith(parser.nesting({}));
+      }
+    });
+  });
   const root = twObjectRoot.clone();
   root.walkRules((rule) => {
     if (rule.nodes) {
-      const unescapedCSS = unescapeCSS(rule.selector);
-      if (unescapedCSS === `.${twClass}`) {
+      rule.selector = processor.processSync(rule.selector);
+      if (rule.selector === "&") {
         rule.replaceWith(rule.nodes);
-      } else {
-        rule.selector = unescapedCSS.replace(
-          new RegExp(`\\S*${twClass}`, "g"),
-          "&"
-        );
-        if (rule.selector === "&") {
-          rule.replaceWith(rule.nodes);
-        }
       }
     } else {
       throw new Error(`Rule has no nodes ${root}`);
@@ -61,6 +61,7 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
       }
       return "decl";
     }
+
     if (type === "object") {
       if (Array.isArray(value)) {
         return "declArray";
@@ -68,9 +69,11 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
       if (key.startsWith("@")) {
         return "atRule";
       }
-      if (key.includes("&")) {
-        return "rule";
-      }
+      return "rule";
+    }
+
+    if (type === "number") {
+      return "decl";
     }
 
     throw new Error(`This type: ${type} of value: ${value} is not supported`);
@@ -91,15 +94,13 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
         if (secondIsCssVar) return 1;
         return 0;
       }
-
       if (firstIsDecl) return -1;
       if (secondIsDecl) return 1;
-
 
       const firstIsAtRule = firstValueType === "atRule";
       const secondIsAtRule = secondValueType === "atRule";
       if (firstIsAtRule && secondIsAtRule) {
-        return sortCSSmq(first, second)
+        return sortCSSmq(first, second);
       }
       if (firstIsAtRule) {
         return 1;
@@ -115,24 +116,43 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
   return Object.fromEntries(sortedStyleObjectEntries);
 }
 
-export function transformTwClassesToStyleObject(
+export function transformTwClassesToStyleObjects(
   twObjectMap: Map<string, TwObject>,
-  twParsedClasses: [string, string[]][],
+  parsedTwClasses: [string, string[]][],
   generateTwClassesRoot: (
     twObjectMap: Map<string, TwObject>,
-    twParsedClass: [string, string[]]
+    parsedTwClass: [string, string[]]
   ) => Root
 ) {
-  const mergedStyleObject: StyleObject = {};
+  const styleObjects: StyleObject[] = [];
 
-  for (const [twClass, twClassVariants] of twParsedClasses) {
+  for (const [twClass, twClassVariants] of parsedTwClasses) {
     const styleRoot = generateTwClassesRoot(twObjectMap, [
       twClass,
       twClassVariants,
     ]);
 
-    merge(mergedStyleObject, getStyleObjectFromTwObject(styleRoot, twClass));
+    styleObjects.push(getStyleObjectFromTwObject(styleRoot, twClass));
   }
+
+  return styleObjects;
+}
+
+export function transformTwClassesToStyleObject(
+  twObjectMap: Map<string, TwObject>,
+  parsedTwClasses: [string, string[]][],
+  generateTwClassesRoot: (
+    twObjectMap: Map<string, TwObject>,
+    parsedTwClass: [string, string[]]
+  ) => Root
+) {
+  const styleObjects = transformTwClassesToStyleObjects(
+    twObjectMap,
+    parsedTwClasses,
+    generateTwClassesRoot
+  );
+
+  const mergedStyleObject = merge({}, ...styleObjects);
 
   return sortStyleObject(mergedStyleObject);
 }
