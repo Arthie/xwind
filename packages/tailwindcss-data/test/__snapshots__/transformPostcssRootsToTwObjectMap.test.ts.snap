@@ -1,0 +1,720 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test 1 1`] = `
+Map {
+  "test" => Object {
+    "nodes": Array [
+      Object {
+        "name": "media",
+        "nodes": Array [
+          Object {
+            "nodes": Array [
+              Object {
+                "prop": "max-width",
+                "raws": Object {
+                  "before": "
+            ",
+                  "between": ": ",
+                },
+                "source": Object {
+                  "end": Object {
+                    "column": 29,
+                    "line": 6,
+                    "offset": 122,
+                  },
+                  "input": Input {
+                    "css": "
+@layer components {
+  @variants responsive {
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .test5 {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
+  }
+}
+",
+                    "fromOffset": [Function],
+                    "hasBOM": false,
+                    "id": "<input css l_eVJu>",
+                  },
+                  "start": Object {
+                    "column": 13,
+                    "line": 6,
+                    "offset": 106,
+                  },
+                },
+                "type": "decl",
+                "value": "668px",
+              },
+            ],
+            "raws": Object {
+              "after": "
+        ",
+              "before": "
+        ",
+              "between": " ",
+              "semicolon": true,
+            },
+            "selector": ".test",
+            "source": Object {
+              "end": Object {
+                "column": 9,
+                "line": 7,
+                "offset": 132,
+              },
+              "input": Input {
+                "css": "
+@layer components {
+  @variants responsive {
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .test5 {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
+  }
+}
+",
+                "fromOffset": [Function],
+                "hasBOM": false,
+                "id": "<input css l_eVJu>",
+              },
+              "start": Object {
+                "column": 9,
+                "line": 5,
+                "offset": 86,
+              },
+            },
+            "type": "rule",
+          },
+        ],
+        "params": "(min-width: 668px)",
+        "raws": Object {},
+        "type": "atrule",
+      },
+    ],
+    "twClass": "test",
+    "variant": Object {},
+  },
+  "test2" => Object {
+    "nodes": Array [
+      Object {
+        "name": "media",
+        "nodes": Array [
+          Object {
+            "name": "media",
+            "nodes": Array [
+              Object {
+                "nodes": Array [
+                  Object {
+                    "prop": "max-width",
+                    "raws": Object {
+                      "before": "
+                ",
+                      "between": ": ",
+                    },
+                    "source": Object {
+                      "end": Object {
+                        "column": 33,
+                        "line": 10,
+                        "offset": 223,
+                      },
+                      "input": Input {
+                        "css": "
+@layer components {
+  @variants responsive {
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .test5 {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
+  }
+}
+",
+                        "fromOffset": [Function],
+                        "hasBOM": false,
+                        "id": "<input css l_eVJu>",
+                      },
+                      "start": Object {
+                        "column": 17,
+                        "line": 10,
+                        "offset": 207,
+                      },
+                    },
+                    "type": "decl",
+                    "value": "640px",
+                  },
+                ],
+                "raws": Object {
+                  "after": "
+            ",
+                  "before": "
+            ",
+                  "between": " ",
+                  "semicolon": true,
+                },
+                "selector": ".test2",
+                "source": Object {
+                  "end": Object {
+                    "column": 13,
+                    "line": 11,
+                    "offset": 237,
+                  },
+                  "input": Input {
+                    "css": "
+@layer components {
+  @variants responsive {
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .test5 {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
+  }
+}
+",
+                    "fromOffset": [Function],
+                    "hasBOM": false,
+                    "id": "<input css l_eVJu>",
+                  },
+                  "start": Object {
+                    "column": 13,
+                    "line": 9,
+                    "offset": 182,
+                  },
+                },
+                "type": "rule",
+              },
+            ],
+            "params": "(min-width: 640px)",
+            "raws": Object {},
+            "type": "atrule",
+          },
+        ],
+        "params": "(min-width: 668px)",
+        "raws": Object {},
+        "type": "atrule",
+      },
+    ],
+    "twClass": "test2",
+    "variant": Object {},
+  },
+  "test3" => Object {
+    "nodes": Array [
+      Object {
+        "name": "media",
+        "nodes": Array [
+          Object {
+            "name": "media",
+            "nodes": Array [
+              Object {
+                "name": "media",
+                "nodes": Array [
+                  Object {
+                    "nodes": Array [
+                      Object {
+                        "prop": "max-width",
+                        "raws": Object {
+                          "before": "
+                    ",
+                          "between": ": ",
+                        },
+                        "source": Object {
+                          "end": Object {
+                            "column": 37,
+                            "line": 14,
+                            "offset": 340,
+                          },
+                          "input": Input {
+                            "css": "
+@layer components {
+  @variants responsive {
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .test5 {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
+  }
+}
+",
+                            "fromOffset": [Function],
+                            "hasBOM": false,
+                            "id": "<input css l_eVJu>",
+                          },
+                          "start": Object {
+                            "column": 21,
+                            "line": 14,
+                            "offset": 324,
+                          },
+                        },
+                        "type": "decl",
+                        "value": "640px",
+                      },
+                    ],
+                    "raws": Object {
+                      "after": "
+                ",
+                      "before": "
+                ",
+                      "between": " ",
+                      "semicolon": true,
+                    },
+                    "selector": ".test3",
+                    "source": Object {
+                      "end": Object {
+                        "column": 17,
+                        "line": 15,
+                        "offset": 358,
+                      },
+                      "input": Input {
+                        "css": "
+@layer components {
+  @variants responsive {
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .test5 {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
+  }
+}
+",
+                        "fromOffset": [Function],
+                        "hasBOM": false,
+                        "id": "<input css l_eVJu>",
+                      },
+                      "start": Object {
+                        "column": 17,
+                        "line": 13,
+                        "offset": 295,
+                      },
+                    },
+                    "type": "rule",
+                  },
+                ],
+                "params": "(min-width: 640px)",
+                "raws": Object {},
+                "type": "atrule",
+              },
+            ],
+            "params": "(min-width: 640px)",
+            "raws": Object {},
+            "type": "atrule",
+          },
+        ],
+        "params": "(min-width: 668px)",
+        "raws": Object {},
+        "type": "atrule",
+      },
+    ],
+    "twClass": "test3",
+    "variant": Object {},
+  },
+  "test4" => Object {
+    "nodes": Array [
+      Object {
+        "name": "media",
+        "nodes": Array [
+          Object {
+            "name": "media",
+            "nodes": Array [
+              Object {
+                "name": "media",
+                "nodes": Array [
+                  Object {
+                    "name": "media",
+                    "nodes": Array [
+                      Object {
+                        "nodes": Array [
+                          Object {
+                            "prop": "max-width",
+                            "raws": Object {
+                              "before": "
+                        ",
+                              "between": ": ",
+                            },
+                            "source": Object {
+                              "end": Object {
+                                "column": 41,
+                                "line": 18,
+                                "offset": 473,
+                              },
+                              "input": Input {
+                                "css": "
+@layer components {
+  @variants responsive {
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .test5 {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
+  }
+}
+",
+                                "fromOffset": [Function],
+                                "hasBOM": false,
+                                "id": "<input css l_eVJu>",
+                              },
+                              "start": Object {
+                                "column": 25,
+                                "line": 18,
+                                "offset": 457,
+                              },
+                            },
+                            "type": "decl",
+                            "value": "640px",
+                          },
+                        ],
+                        "raws": Object {
+                          "after": "
+                    ",
+                          "before": "
+                    ",
+                          "between": " ",
+                          "semicolon": true,
+                        },
+                        "selector": ".test4",
+                        "source": Object {
+                          "end": Object {
+                            "column": 21,
+                            "line": 19,
+                            "offset": 495,
+                          },
+                          "input": Input {
+                            "css": "
+@layer components {
+  @variants responsive {
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .test5 {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
+  }
+}
+",
+                            "fromOffset": [Function],
+                            "hasBOM": false,
+                            "id": "<input css l_eVJu>",
+                          },
+                          "start": Object {
+                            "column": 21,
+                            "line": 17,
+                            "offset": 424,
+                          },
+                        },
+                        "type": "rule",
+                      },
+                    ],
+                    "params": "(min-width: 640px)",
+                    "raws": Object {},
+                    "type": "atrule",
+                  },
+                ],
+                "params": "(min-width: 640px)",
+                "raws": Object {},
+                "type": "atrule",
+              },
+            ],
+            "params": "(min-width: 640px)",
+            "raws": Object {},
+            "type": "atrule",
+          },
+        ],
+        "params": "(min-width: 668px)",
+        "raws": Object {},
+        "type": "atrule",
+      },
+    ],
+    "twClass": "test4",
+    "variant": Object {},
+  },
+  "test5" => Object {
+    "nodes": Array [
+      Object {
+        "name": "media",
+        "nodes": Array [
+          Object {
+            "name": "media",
+            "nodes": Array [
+              Object {
+                "name": "media",
+                "nodes": Array [
+                  Object {
+                    "nodes": Array [
+                      Object {
+                        "prop": "max-width",
+                        "raws": Object {
+                          "before": "
+                    ",
+                          "between": ": ",
+                        },
+                        "source": Object {
+                          "end": Object {
+                            "column": 37,
+                            "line": 22,
+                            "offset": 576,
+                          },
+                          "input": Input {
+                            "css": "
+@layer components {
+  @variants responsive {
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .test5 {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
+  }
+}
+",
+                            "fromOffset": [Function],
+                            "hasBOM": false,
+                            "id": "<input css l_eVJu>",
+                          },
+                          "start": Object {
+                            "column": 21,
+                            "line": 22,
+                            "offset": 560,
+                          },
+                        },
+                        "type": "decl",
+                        "value": "640px",
+                      },
+                    ],
+                    "raws": Object {
+                      "after": "
+                ",
+                      "before": "
+                ",
+                      "between": " ",
+                      "semicolon": true,
+                    },
+                    "selector": ".test5",
+                    "source": Object {
+                      "end": Object {
+                        "column": 17,
+                        "line": 23,
+                        "offset": 594,
+                      },
+                      "input": Input {
+                        "css": "
+@layer components {
+  @variants responsive {
+    @media (min-width: 668px) {
+        .test {
+            max-width: 668px;
+        }
+        @media (min-width: 640px) {
+            .test2 {
+                max-width: 640px;
+            }
+            @media (min-width: 640px) {
+                .test3 {
+                    max-width: 640px;
+                }
+                @media (min-width: 640px) {
+                    .test4 {
+                        max-width: 640px;
+                    }
+                }
+                .test5 {
+                    max-width: 640px;
+                }
+            }
+        }
+    }
+  }
+}
+",
+                        "fromOffset": [Function],
+                        "hasBOM": false,
+                        "id": "<input css l_eVJu>",
+                      },
+                      "start": Object {
+                        "column": 17,
+                        "line": 21,
+                        "offset": 531,
+                      },
+                    },
+                    "type": "rule",
+                  },
+                ],
+                "params": "(min-width: 640px)",
+                "raws": Object {},
+                "type": "atrule",
+              },
+            ],
+            "params": "(min-width: 640px)",
+            "raws": Object {},
+            "type": "atrule",
+          },
+        ],
+        "params": "(min-width: 668px)",
+        "raws": Object {},
+        "type": "atrule",
+      },
+    ],
+    "twClass": "test5",
+    "variant": Object {},
+  },
+}
+`;

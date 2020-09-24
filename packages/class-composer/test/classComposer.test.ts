@@ -1,8 +1,8 @@
-const {
+import {
   twClassesComposer,
   twClassesVariantsParser,
   twClassesSerializer,
-} = require("../lib/classComposer");
+} from "../lib/classComposer";
 
 const SEPARATOR = ":";
 
@@ -62,6 +62,7 @@ test("classesSerializer", () => {
 });
 
 test("Composer wrong SEPARATOR type", () => {
+  //@ts-expect-error
   expect(() => twClassesComposer([])).toThrow(/Separator/);
 });
 

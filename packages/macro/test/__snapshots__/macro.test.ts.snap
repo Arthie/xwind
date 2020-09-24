@@ -7,7 +7,7 @@ const css = tw\`lol\`
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test.js: Error: @tailwindcssinjs/macro - Class "lol" not found.
+MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test.ts: Error: @tailwindcssinjs/macro - Class "lol" not found.
 
 `;
 

@@ -48,6 +48,7 @@ module.exports = {
         });
       });
     }),
+    require("tailwindcss/lib/flagged/darkModeVariantPlugin").default
   ],
   tailwindcssinjs: {
     // plugins: [require("./lib/plugins/cssString").default],

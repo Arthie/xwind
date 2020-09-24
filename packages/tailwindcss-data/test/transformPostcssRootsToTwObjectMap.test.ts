@@ -1264,7 +1264,7 @@ const source = `
                         max-width: 640px;
                     }
                 }
-                .boop {
+                .test5 {
                     max-width: 640px;
                 }
             }
@@ -1274,21 +1274,13 @@ const source = `
 }
 `;
 
-const postcss = require("postcss");
-const {
-  transformPostcssRootsToTwObjectMap,
-} = require("../lib/transformers/transformPostcssRootsToTwObjectMap");
+import postcss from "postcss";
+import { transformPostcssRootsToTwObjectMap } from "../lib/transformers/transformPostcssRootsToTwObjectMap";
 
-const root = postcss.parse(source, { from: null });
+const root = postcss.parse(source);
 
-// console.log(root.toString());
+const twObjectMap = transformPostcssRootsToTwObjectMap([root]);
 
-const testd = transformPostcssRootsToTwObjectMap([root]);
-
-for (const [twClass, twObject] of testd.entries()) {
-  console.log(twClass, postcss.root().append(twObject.nodes).toString());
-}
-
-test("parse .form-checkbox:checked:focus", () => {
-  expect("form-checkbox").toStrictEqual("form-checkbox");
+test("test 1", () => {
+  expect(twObjectMap).toMatchSnapshot();
 });

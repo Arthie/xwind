@@ -1,7 +1,7 @@
-const pluginTester = require("babel-plugin-tester");
-const plugin = require("babel-plugin-macros");
+import pluginTester from "babel-plugin-tester";
+import plugin from "babel-plugin-macros";
 
-pluginTester.default({
+pluginTester({
   plugin,
   snapshot: true,
   babelOptions: {
