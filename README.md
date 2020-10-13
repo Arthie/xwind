@@ -8,7 +8,7 @@ This repo contains a collection of packages that makes the integration of Tailwi
 
 You may have encountered some of these problems when using Tailwind with CSS-in-JS libraries.
 
-- You have to use PurgeCSS to get the minimal CSS file. PurgeCSS relies on string matching.
+- You have to use PurgeCSS to get the minimal CSS file, PurgeCSS relies on string matching
 - No warnings when misspelling, refactoring or using a class that doesn't exist
 - Inline classes can get very long and hard to read
 - You have to specify the variants for utility classes in tailwind.config.js
@@ -17,10 +17,10 @@ You may have encountered some of these problems when using Tailwind with CSS-in-
 ## Features / Goals
 
 - Solve all of the above problems
-- Automatically compatible with latest Tailwind version **>1.8.x**
+- Automatically compatible with latest Tailwind version **>1.9.x**
 - New syntax to apply variants to multiple utility classes `md:hover[text-xs font-normal]`
 - Reacts to changes in made in `tailwind.config.js`
-- Great developer experience with vscode extension or typescript-plugin
+- Great developer experience with VS Code extension or typescript-plugin
 - No runtime impact all transformations happen during build time
 - Plugins to support any/your favorite CSS-in-JS syntax
 
@@ -86,14 +86,15 @@ Plugins make it possible to support any CSS-in-JS library syntax.
 
 ---
 
-### [typescript-tailwindcssinjs-plugin](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/typescript-plugin) (WIP)
+### [typescript-tailwindcssinjs-plugin](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/typescript-plugin)
 
 This package is a typescript language service plugin that adds editor support for [@tailwindcssinjs/macro](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/macro) tagged template syntax: tw\`...\`
 
 ![autocomplete](https://github.com/Arthie/vscode-tailwindcssinjs/raw/master/resources/autocomplete.gif)
 
-### [tailwindcssinjs vscode extension](https://github.com/Arthie/vscode-tailwindcssinjs)
+### [tailwindcssinjs VS Code extension](https://github.com/Arthie/vscode-tailwindcssinjs)
 
+This extension activates typescript-tailwindcssinjs-plugin inside VS Code's Typescript language service.
 ---
 
 ## Developer packages
