@@ -7,6 +7,10 @@ import processPlugins from "tailwindcss/lib/util/processPlugins";
 import resolveConfig from "tailwindcss/resolveConfig";
 
 import { ResolvedTialwindConfig, TailwindConfig } from "./tailwindcssConfig";
+import {
+  getGenerateTwClassSubstituteRoot,
+  transformPostcssRootsToTwObjectMap,
+} from "./transformers";
 
 function getMediaScreens(config: ResolvedTialwindConfig) {
   return Object.keys(config.theme.screens);
@@ -34,7 +38,7 @@ function getVariants(variantGenerators: any) {
   ].concat(Object.keys(variantGenerators));
 }
 
-export function tailwindData(
+export function tailwindRootData(
   config: TailwindConfig,
   corePlugins: (config: ResolvedTialwindConfig) => any
 ) {
@@ -58,14 +62,59 @@ export function tailwindData(
   );
   const getSubstituteScreenAtRules = substituteScreenAtRules(resolvedConfig);
 
+  const generateTwClassSubstituteRoot = getGenerateTwClassSubstituteRoot(
+    screens,
+    getSubstituteScreenAtRules,
+    getSubstituteVariantsAtRules
+  );
+
   return {
-    resolvedConfig,
-    componentsRoot,
-    utilitiesRoot,
     baseRoot,
+    utilitiesRoot,
+    componentsRoot,
+    processedPlugins,
+    resolvedConfig,
     screens,
     variants,
-    getSubstituteVariantsAtRules,
     getSubstituteScreenAtRules,
+    getSubstituteVariantsAtRules,
+    generateTwClassSubstituteRoot,
+  };
+}
+
+export function tailwindData(
+  config: TailwindConfig,
+  corePlugins: (config: ResolvedTialwindConfig) => any
+) {
+  const {
+    baseRoot,
+    utilitiesRoot,
+    componentsRoot,
+    processedPlugins,
+    resolvedConfig,
+    screens,
+    variants,
+    getSubstituteScreenAtRules,
+    getSubstituteVariantsAtRules,
+    generateTwClassSubstituteRoot,
+  } = tailwindRootData(config, corePlugins);
+
+  const twObjectMap = transformPostcssRootsToTwObjectMap([
+    utilitiesRoot,
+    componentsRoot,
+  ]);
+
+  return {
+    baseRoot,
+    utilitiesRoot,
+    componentsRoot,
+    processedPlugins,
+    resolvedConfig,
+    screens,
+    variants,
+    getSubstituteScreenAtRules,
+    getSubstituteVariantsAtRules,
+    generateTwClassSubstituteRoot,
+    twObjectMap,
   };
 }

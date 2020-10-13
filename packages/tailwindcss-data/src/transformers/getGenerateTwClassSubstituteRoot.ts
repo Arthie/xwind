@@ -18,7 +18,6 @@ function applySubstituteRules(
 
 export function getGenerateTwClassSubstituteRoot(
   screens: string[],
-  variants: string[],
   getSubstituteScreenAtRules: (root: Root) => void,
   getSubstituteVariantsAtRules: (root: Root) => void
 ) {
@@ -33,17 +32,6 @@ export function getGenerateTwClassSubstituteRoot(
     let styleRoot = root().append(...twObject.nodes);
     const twClassVariantsLength = twClassVariants.length;
     if (twClassVariantsLength) {
-      if (
-        twClassVariantsLength >= 2 &&
-        twClassVariants.every(
-          (variant) => variants.includes(variant) && !variant.includes("motion")
-        )
-      ) {
-        throw new Error(
-          `Variant classes "${twClassVariants.join(", ")}" not allowed`
-        );
-      }
-
       const variantCacheKey = twClassVariants.join();
       if (twObject.variant[variantCacheKey]) {
         styleRoot = twObject.variant[variantCacheKey];
@@ -59,10 +47,7 @@ export function getGenerateTwClassSubstituteRoot(
               styleRoot,
               getSubstituteScreenAtRules
             );
-            continue;
-          }
-
-          if (variants.includes(variant)) {
+          } else {
             const atRuleProps = {
               name: "variants",
               params: variant,
@@ -73,10 +58,7 @@ export function getGenerateTwClassSubstituteRoot(
               getSubstituteVariantsAtRules
             );
             styleRoot.first?.remove();
-            continue;
           }
-
-          throw new Error(`Utility with variant class '${variant}' not found"`);
         }
 
         twObject.variant[variantCacheKey] = styleRoot;

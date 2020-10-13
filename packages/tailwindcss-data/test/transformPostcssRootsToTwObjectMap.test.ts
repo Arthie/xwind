@@ -1274,13 +1274,16 @@ const source = `
 }
 `;
 
-import postcss from "postcss";
+import { parse, root } from "postcss";
 import { transformPostcssRootsToTwObjectMap } from "../lib/transformers/transformPostcssRootsToTwObjectMap";
 
-const root = postcss.parse(source);
+const rootSource = parse(source);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([root]);
+const twObjectMap = transformPostcssRootsToTwObjectMap([rootSource]);
 
-test("test 1", () => {
-  expect(twObjectMap).toMatchSnapshot();
+twObjectMap.forEach((twObject) => {
+  test(`test ${twObject.twClass}`, () => {
+    const test = root().append(twObject.nodes);
+    expect(test.toString()).toMatchSnapshot();
+  });
 });

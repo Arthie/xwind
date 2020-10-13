@@ -7,20 +7,20 @@ import parser from "postcss-selector-parser";
 
 import { TwObject } from "./transformPostcssRootsToTwObjectMap";
 
-export type StyleObject = StyleObjectDecl | StyleObjectRuleOrAtRule;
+export type ObjectStyle = ObjectStyleDecl | ObjectStyleRuleOrAtRule;
 
-export type StyleObjectDecl = {
+export type ObjectStyleDecl = {
   [key: string]: string | string[];
 };
 
-export type StyleObjectRuleOrAtRule = {
-  [key: string]: string | string[] | StyleObjectRuleOrAtRule;
+export type ObjectStyleRuleOrAtRule = {
+  [key: string]: string | string[] | ObjectStyleRuleOrAtRule;
 };
 
-function getStyleObjectFromTwObject(
+function getObjectStyleFromTwObject(
   twObjectRoot: Root,
   twClass: string
-): StyleObject {
+): ObjectStyle {
   const processor = parser((root) => {
     root.walkClasses((node) => {
       if (node.value?.endsWith(twClass)) {
@@ -42,14 +42,14 @@ function getStyleObjectFromTwObject(
   return objectify(root);
 }
 
-function sortStyleObject<T extends StyleObject>(styleObject: T) {
-  const styleObjectEntries = Object.entries(styleObject);
+function sortObjectStyle<T extends ObjectStyle>(objectStyle: T) {
+  const objectStyleEntries = Object.entries(objectStyle);
 
   //also sort nested style Rules / atRules
-  for (const [index, [key, value]] of styleObjectEntries.entries()) {
+  for (const [index, [key, value]] of objectStyleEntries.entries()) {
     if (typeof value === "object" && !Array.isArray(value)) {
-      const sortedValue = sortStyleObject<StyleObjectRuleOrAtRule>(value);
-      styleObjectEntries[index] = [key, sortedValue];
+      const sortedValue = sortObjectStyle<ObjectStyleRuleOrAtRule>(value);
+      objectStyleEntries[index] = [key, sortedValue];
     }
   }
 
@@ -79,7 +79,7 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
     throw new Error(`This type: ${type} of value: ${value} is not supported`);
   };
 
-  const sortedStyleObjectEntries = styleObjectEntries.sort(
+  const sortedObjectStyleEntries = objectStyleEntries.sort(
     ([first, firstValue], [second, secondValue]) => {
       const firstValueType = getValueType(first, firstValue);
       const secondValueType = getValueType(second, secondValue);
@@ -113,10 +113,10 @@ function sortStyleObject<T extends StyleObject>(styleObject: T) {
     }
   );
 
-  return Object.fromEntries(sortedStyleObjectEntries);
+  return Object.fromEntries(sortedObjectStyleEntries);
 }
 
-export function transformTwClassesToStyleObjects(
+export function transformTwClassesToObjectStyles(
   twObjectMap: Map<string, TwObject>,
   parsedTwClasses: [string, string[]][],
   generateTwClassesRoot: (
@@ -124,7 +124,7 @@ export function transformTwClassesToStyleObjects(
     parsedTwClass: [string, string[]]
   ) => Root
 ) {
-  const styleObjects: StyleObject[] = [];
+  const objectStyles: ObjectStyle[] = [];
 
   for (const [twClass, twClassVariants] of parsedTwClasses) {
     const styleRoot = generateTwClassesRoot(twObjectMap, [
@@ -132,13 +132,13 @@ export function transformTwClassesToStyleObjects(
       twClassVariants,
     ]);
 
-    styleObjects.push(getStyleObjectFromTwObject(styleRoot, twClass));
+    objectStyles.push(getObjectStyleFromTwObject(styleRoot, twClass));
   }
 
-  return styleObjects;
+  return objectStyles;
 }
 
-export function transformTwClassesToStyleObject(
+export function transformTwClassesToObjectStyle(
   twObjectMap: Map<string, TwObject>,
   parsedTwClasses: [string, string[]][],
   generateTwClassesRoot: (
@@ -146,13 +146,13 @@ export function transformTwClassesToStyleObject(
     parsedTwClass: [string, string[]]
   ) => Root
 ) {
-  const styleObjects = transformTwClassesToStyleObjects(
+  const objectStyles = transformTwClassesToObjectStyles(
     twObjectMap,
     parsedTwClasses,
     generateTwClassesRoot
   );
 
-  const mergedStyleObject = merge({}, ...styleObjects);
+  const mergedObjectStyle = merge({}, ...objectStyles);
 
-  return sortStyleObject(mergedStyleObject);
+  return sortObjectStyle(mergedObjectStyle);
 }
