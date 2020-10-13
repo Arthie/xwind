@@ -95,6 +95,7 @@ This package is a typescript language service plugin that adds editor support fo
 ### [tailwindcssinjs VS Code extension](https://github.com/Arthie/vscode-tailwindcssinjs)
 
 This extension activates typescript-tailwindcssinjs-plugin inside VS Code's Typescript language service.
+
 ---
 
 ## Developer packages

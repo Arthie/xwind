@@ -19,7 +19,7 @@ yarn add -D typescript-tailwindcssinjs-plugin
 
 Configure the `plugins` section in your _tsconfig.json_ to add the language service plugin.
 
-```json
+```jsonc
 {
   "compilerOptions": {
     //compiler options...
