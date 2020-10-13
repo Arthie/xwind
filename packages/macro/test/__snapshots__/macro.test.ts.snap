@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`macros class not found error: class not found error 1`] = `
+exports[`tailwindcssinjs class not found error: class not found error 1`] = `
 
 import tw from '../lib/macro';
 const css = tw\`lol\`
@@ -11,7 +11,7 @@ MacroError: /home/arthie/projects/tailwindcssinjs/packages/macro/test/macro.test
 
 `;
 
-exports[`macros components: components 1`] = `
+exports[`tailwindcssinjs components: components 1`] = `
 
 import tw from '../lib/macro';
 const css = tw\`container form-input\`
@@ -63,7 +63,7 @@ const css = {
 
 `;
 
-exports[`macros correct usage 1: correct usage 1 1`] = `
+exports[`tailwindcssinjs correct usage 1: correct usage 1 1`] = `
 
 import tw from '../lib/macro';
 const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
@@ -103,7 +103,7 @@ const css = {
 
 `;
 
-exports[`macros correct usage 2: correct usage 2 1`] = `
+exports[`tailwindcssinjs correct usage 2: correct usage 2 1`] = `
 
 import tw from '../lib/macro';
 const css = tw("m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]");
@@ -137,7 +137,7 @@ const css = {
 
 `;
 
-exports[`macros correct usage 3: correct usage 3 1`] = `
+exports[`tailwindcssinjs correct usage 3: correct usage 3 1`] = `
 
 import tw from '../lib/macro';
 const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
@@ -327,7 +327,7 @@ const css6 = {
 
 `;
 
-exports[`macros correct usage tagged: correct usage tagged 1`] = `
+exports[`tailwindcssinjs correct usage tagged: correct usage tagged 1`] = `
 
 import tw from '../lib/macro';
 const css = tw\`supports-grid:text-blue-400 important[text-green-200 bg-red-300] m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]\`;
@@ -370,7 +370,7 @@ const css = {
 
 `;
 
-exports[`macros no usage: no usage 1`] = `
+exports[`tailwindcssinjs no usage: no usage 1`] = `
 
 import tw from '../lib/macro'
 
@@ -380,7 +380,7 @@ import tw from '../lib/macro'
 
 `;
 
-exports[`macros tailwind-ui ussage: tailwind-ui ussage 1`] = `
+exports[`tailwindcssinjs tailwind-ui ussage: tailwind-ui ussage 1`] = `
 
 import tw from '../lib/macro';
 const css = tw\`relative w-full flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-300 transition duration-150 ease-in-out\`;
@@ -416,7 +416,8 @@ const css = {
   },
   "&:focus": {
     "--border-opacity": "1",
-    outline: "0",
+    outline: "2px solid transparent",
+    outlineOffset: "2px",
     borderColor: ["#5145cd", "rgba(81, 69, 205, var(--border-opacity))"],
     boxShadow: "0 0 0 3px rgba(180, 198, 252, 0.45)",
   },
@@ -429,7 +430,7 @@ const css = {
 
 `;
 
-exports[`macros test screen: test screen 1`] = `
+exports[`tailwindcssinjs test screen: test screen 1`] = `
 
 import tw from '../lib/macro';
 const css = tw\`md2[text-red-200] bg-red-300\`;
@@ -448,7 +449,7 @@ const css = {
 
 `;
 
-exports[`macros variant component class: variant component class 1`] = `
+exports[`tailwindcssinjs variant component class: variant component class 1`] = `
 
 import tw from '../lib/macro';
 const css = tw\`md[container] form-input\`
@@ -502,7 +503,7 @@ const css = {
 
 `;
 
-exports[`macros version 1.3.X test 1: version 1.3.X test 1 1`] = `
+exports[`tailwindcssinjs version 1.3.X test 1: version 1.3.X test 1 1`] = `
 
 import tw from '../lib/macro';
 const css = tw\`group-focus:text-red-100 delay-1000 space-y-4 flex space-x-2 divide-x divide-y divide-blue-500 space-x-reverse\`
@@ -537,7 +538,7 @@ const css = {
 
 `;
 
-exports[`macros version 1.3.X test 2: version 1.3.X test 2 1`] = `
+exports[`tailwindcssinjs version 1.3.X test 2: version 1.3.X test 2 1`] = `
 
 import tw from '../lib/macro';
 const css = tw\`group-focus:text-red-100 md:delay-1000 md:space-y-4 md:space-x-2 md:divide-x md:divide-y md:divide-blue-500 md:space-x-reverse\`

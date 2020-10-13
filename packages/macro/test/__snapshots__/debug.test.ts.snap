@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`macros correct usage 1: correct usage 1 1`] = `
+exports[`tailwindcssinjs correct usage 1: correct usage 1 1`] = `
 
 import tw from '../lib/macro';
 const css = tw("dark:bg-black bg-gradient-to-r sm:motion-reduce:translate-y-0 motion-reduce:hover:translate-y-0 md:motion-reduce:hover:translate-y-0");
@@ -35,7 +35,7 @@ const css = {
 
 `;
 
-exports[`macros correct usage 5: correct usage 5 1`] = `
+exports[`tailwindcssinjs correct usage 5: correct usage 5 1`] = `
 
 import tw from '../lib/macro';
 const css = tw("group-hover:bg-red-300");
@@ -52,7 +52,7 @@ const css = {
 
 `;
 
-exports[`macros correct usage 6: correct usage 6 1`] = `
+exports[`tailwindcssinjs correct usage 6: correct usage 6 1`] = `
 
 import tw from '../lib/macro';
 const css = tw("dark:bg-red-300");
@@ -69,7 +69,7 @@ const css = {
 
 `;
 
-exports[`macros no usage: no usage 1`] = `
+exports[`tailwindcssinjs no usage: no usage 1`] = `
 
 import tw from '../lib/macro'
 

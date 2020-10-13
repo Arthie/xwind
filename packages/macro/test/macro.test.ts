@@ -3,6 +3,7 @@ import plugin from "babel-plugin-macros";
 
 pluginTester({
   plugin,
+  pluginName: "tailwindcssinjs",
   snapshot: true,
   babelOptions: {
     filename: __filename,

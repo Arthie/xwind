@@ -4,7 +4,6 @@ import {
   requireTailwindConfig,
   resolveTailwindConfigPath,
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
 } from "@tailwindcssinjs/tailwindcss-data";
 import corePlugins from "tailwindcss/lib/corePlugins";
 
@@ -13,15 +12,7 @@ const tests = () => {
 
   const tailwindConfig = requireTailwindConfig(tailwindConfigPath);
 
-  const { componentsRoot, utilitiesRoot } = tailwindData(
-    tailwindConfig,
-    corePlugins
-  );
-
-  const twObjectMap = transformPostcssRootsToTwObjectMap([
-    utilitiesRoot,
-    componentsRoot,
-  ]);
+  const { twObjectMap } = tailwindData(tailwindConfig, corePlugins);
 
   let tests = [];
   for (const key of twObjectMap.keys()) {
@@ -41,6 +32,7 @@ const tests = () => {
 
 pluginTester({
   plugin,
+  pluginName: "tailwindcssinjs",
   snapshot: true,
   babelOptions: {
     filename: __filename,
