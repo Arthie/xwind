@@ -5,6 +5,8 @@
 
 Simple utilities to compose tailwindcss classes.
 
+## Install
+
 ```bash
 # with npm
 npm install @tailwindcssinjs/class-composer
