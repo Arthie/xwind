@@ -111,6 +111,39 @@ npx tailwindcss init
 
 Check out the [Tailwind documentation](https://tailwindcss.com/docs/configuration) for customizing the Tailwind config file.
 
+#### 3.1 Add Tailwind plugins to support all Tailwind features (keyframes, darkmode)
+
+```javascript
+//tailwind.config.js
+module.exports = {
+  // ... config options
+  plugins: [
+    //Add @keyframes to the base/preflight css file
+    plugin(function ({ addBase, addUtilities, e, theme, variants }) {
+      const keyframesConfig = theme('keyframes')
+      const keyframesStyles = Object.fromEntries(
+        Object.entries(keyframesConfig).map(([name, keyframes]) => {
+          return [`@keyframes ${name}`, keyframes]
+        })
+      )
+      addBase(keyframesStyles)
+    }),
+    //Add !important to css rule with variant: important:bg-red-400
+    plugin(function ({ addVariant }) {
+      addVariant("important", ({ container }) => {
+        container.walkRules((rule) => {
+          rule.selector = `.\\!${rule.selector.slice(1)}`;
+          rule.walkDecls((decl) => {
+            decl.important = true;
+          });
+        });
+      });
+    }),
+    //Add tailwindcss official dark mode plugin
+    require("tailwindcss/lib/flagged/darkModeVariantPlugin").default
+  ]
+```
+
 ## Customization
 
 ### Babel macro configuration

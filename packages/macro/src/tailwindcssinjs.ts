@@ -3,24 +3,28 @@ import isEqual from "lodash/isEqual";
 import { tailwindData } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData";
 
 import {
-  transformPostcssRootsToTwObjectMap,
-  transformTwClassesToStyleObject,
+  transformTwClassesToObjectStyle,
+  ObjectStyle,
   TwObject,
-  StyleObject,
-  getGenerateTwClassSubstituteRoot,
 } from "@tailwindcssinjs/tailwindcss-data/lib/transformers";
 
 import {
   ResolvedTialwindConfig,
+  resolveTailwindConfigPath,
   TailwindConfig,
 } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig";
 
 import {
   twClassesVariantsParser,
   TwClasses,
+  twClassesComposer,
 } from "@tailwindcssinjs/class-composer";
 
-type TailwindcssinjsConfigPlugin = (styleObject: StyleObject) => StyleObject;
+type TailwindcssinjsConfigPlugin = (
+  objectStyle: ObjectStyle,
+  parsedTwClasses: [string, string[]][],
+  resolvedConfig: ResolvedTialwindConfig
+) => ObjectStyle;
 
 interface TailwindcssinjsConfig extends TailwindConfig {
   tailwindcssinjs?: {
@@ -30,7 +34,9 @@ interface TailwindcssinjsConfig extends TailwindConfig {
 
 let configCache: TailwindcssinjsConfig;
 let tailwind: (arg: TwClasses) => any;
-let twObjectMap: Map<string, TwObject>;
+
+export let _twObjectMap: Map<string, TwObject>;
+export const _twClasses: Set<string> = new Set();
 
 export default function tailwindcssinjs(
   config: TailwindcssinjsConfig,
@@ -43,31 +49,20 @@ export default function tailwindcssinjs(
 
     const {
       resolvedConfig,
-      screens,
-      variants,
-      getSubstituteVariantsAtRules,
-      getSubstituteScreenAtRules,
-      componentsRoot,
-      utilitiesRoot,
+      generateTwClassSubstituteRoot,
+      twObjectMap,
     } = tailwindData(config, corePlugins);
 
+    _twObjectMap = twObjectMap;
+
     const variantParser = twClassesVariantsParser(resolvedConfig.separator);
-
-    twObjectMap = transformPostcssRootsToTwObjectMap([
-      utilitiesRoot,
-      componentsRoot,
-    ]);
-
-    const generateTwClassSubstituteRoot = getGenerateTwClassSubstituteRoot(
-      screens,
-      variants,
-      getSubstituteScreenAtRules,
-      getSubstituteVariantsAtRules
-    );
-
+    const composer = twClassesComposer(resolvedConfig.separator);
     tailwind = (twClasses: TwClasses) => {
       const parsedTwClasses = variantParser(twClasses);
-      let styleObject = transformTwClassesToStyleObject(
+      for (const twClass of composer(twClasses)) {
+        _twClasses.add(twClass);
+      }
+      let objectStyle = transformTwClassesToObjectStyle(
         twObjectMap,
         parsedTwClasses,
         generateTwClassSubstituteRoot
@@ -75,11 +70,11 @@ export default function tailwindcssinjs(
 
       if (config.tailwindcssinjs?.plugins) {
         for (const plugin of config.tailwindcssinjs.plugins) {
-          styleObject = plugin(styleObject);
+          objectStyle = plugin(objectStyle, parsedTwClasses, resolvedConfig);
         }
       }
 
-      return styleObject;
+      return objectStyle;
     };
   }
 

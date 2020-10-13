@@ -59,9 +59,9 @@ function getArgs(path: NodePath<types.Node>): TwClasses {
  *
  * Example imports:
  * import tailwindconfig from "ABSULUTEPATH/tailwind.config";
- * import devCorePlugins from "@tailwindcssinjs/macro/lib/devCorePlugins"
+ * import devCorePluginsCreator from "@tailwindcssinjs/macro/lib/devCorePluginsCreator"
  * import tailwindcssinjs from "@tailwindcssinjs/macro/lib/tailwindcssinjs";
- * const tw = tailwindcssinjs(tailwindconfig, devCorePlugins);
+ * const tw = tailwindcssinjs(tailwindconfig, devCorePluginsCreator);
  * @param referencePath
  * @param t
  * @param state
@@ -87,14 +87,14 @@ function addDevImports(
       )
     );
 
-    //create devCorePlugins importDeclaration:
-    //import devCorePlugins from "@tailwindcssinjs/macro/lib/devCorePlugins"
-    const devCorePluginsUid = referencePath.scope.generateUidIdentifier(
-      "devCorePlugins"
+    //create devCorePluginsCreator importDeclaration:
+    //import devCorePluginsCreator from "@tailwindcssinjs/macro/lib/devCorePluginsCreator"
+    const devCorePluginsCreatorUid = referencePath.scope.generateUidIdentifier(
+      "devCorePluginsCreator"
     );
     const corePluginsImport = t.importDeclaration(
-      [t.importDefaultSpecifier(devCorePluginsUid)],
-      t.stringLiteral("@tailwindcssinjs/macro/lib/devCorePlugins")
+      [t.importDefaultSpecifier(devCorePluginsCreatorUid)],
+      t.stringLiteral("@tailwindcssinjs/macro/lib/devCorePluginsCreator")
     );
 
     //create tailwindcssinjs importDeclaration:
@@ -108,14 +108,14 @@ function addDevImports(
     );
 
     //create tw variableDeclaration:
-    //const tw = tailwindcssinjs(tailwindconfig, devCorePlugins);
+    //const tw = tailwindcssinjs(tailwindconfig, devCorePluginsCreator);
     const twUid = referencePath.scope.generateUidIdentifier("tw");
     const twConst = t.variableDeclaration("const", [
       t.variableDeclarator(
         twUid,
         t.callExpression(tailwindcssinjsUid, [
           tailwindConfigUid,
-          devCorePluginsUid,
+          devCorePluginsCreatorUid,
         ])
       ),
     ]);
@@ -170,7 +170,7 @@ interface TailwindcssinjsMacroParams extends MacroParams {
 function tailwindcssinjsMacro({
   references: { default: paths },
   state,
-  babel: { types: t, template },
+  babel: { types: t },
   config,
 }: TailwindcssinjsMacroParams) {
   try {

@@ -14,37 +14,29 @@ import * as babel from "@babel/core";
  */
 export function generateDevCorePlugins() {
   //get the original corePlugins file
-  const pluginPath = require.resolve("tailwindcss/lib/corePlugins");
+  const pluginPath = require.resolve("tailwindcss/lib/plugins");
   const code = fs.readFileSync(pluginPath, "utf8");
 
   const output = babel.transformSync(code, {
-    filename: "devCorePlugin.js",
+    filename: "devCorePlugins.js",
     plugins: [
       function myCustomPlugin() {
         return {
           visitor: {
-            VariableDeclarator(
-              path: babel.NodePath<babel.types.VariableDeclarator>
-            ) {
-              //@ts-ignore
-              const name = path.get("id").node.name;
-              if (name.includes("preflight")) {
-                path.parentPath.remove();
-              }
-            },
-            ObjectProperty(path: babel.NodePath<babel.types.ObjectProperty>) {
-              //@ts-ignore
-              const name = path.get("key").node.name;
-              if (name.includes("preflight")) {
-                path.remove();
-              }
-            },
             StringLiteral(path: babel.NodePath<babel.types.StringLiteral>) {
-              //@ts-ignore
-              const name = path.get("value").node as string;
-              if (name.includes("./")) {
-                const replacement = name.replace("./", "tailwindcss/lib/");
+              const name = path.node.value;
+              if (name.startsWith("./")) {
+                const replacement = name.replace(
+                  "./",
+                  "tailwindcss/lib/plugins/"
+                );
                 path.replaceWith(babel.types.stringLiteral(replacement));
+              }
+              if (name === "preflight" || name === "./preflight") {
+                const rootPath = path.findParent(
+                  (path) => path.parent.type === "Program"
+                );
+                rootPath?.remove();
               }
             },
           },
