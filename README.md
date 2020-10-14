@@ -92,11 +92,11 @@ This package is a typescript language service plugin that adds editor support fo
 
 ![autocomplete](https://github.com/Arthie/vscode-tailwindcssinjs/raw/master/resources/autocomplete.gif)
 
+---
+
 ### [tailwindcssinjs VS Code extension](https://github.com/Arthie/vscode-tailwindcssinjs)
 
 This extension activates typescript-tailwindcssinjs-plugin inside VS Code's Typescript language service.
-
----
 
 ## Developer packages
 
@@ -107,11 +107,11 @@ Have a look at these packages they make the macro and typescript-plugin possible
 
 The class-composer package contains flexible utilities to compose and parse Tailwind classes.
 
+---
+
 ### [@tailwindcssinjs/tailwind-data](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/tailwindcss-data) (WIP)
 
 The tailwind-data package uses Tailwind internals to extracts/generate all the data you could want from Tailwind. It provides the data in a structured way with the necessary utilities to create and manipulate this data.
-
----
 
 ## License
 
