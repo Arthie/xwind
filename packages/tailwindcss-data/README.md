@@ -190,7 +190,7 @@ getCSSFromTailwindClasses("bg-red-300 md:hover:bg-red-300");
 
 <details>
   <summary>
-    Get CSS object style fromTailwind class
+    Get CSS object style from Tailwind class
   </summary>
 
 ```typescript
