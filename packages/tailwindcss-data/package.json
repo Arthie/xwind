@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/tailwindcss-data",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "author": "Arthie",
   "description": "This package contains tailwindcssinjs data",
   "main": "lib/index.js",
@@ -13,7 +13,7 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build --w"
   },
   "peerDependencies": {
     "tailwindcss": "1.x"

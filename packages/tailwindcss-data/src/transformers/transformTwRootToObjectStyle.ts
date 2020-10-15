@@ -5,8 +5,6 @@ import merge from "lodash/merge";
 import sortCSSmq from "sort-css-media-queries";
 import parser from "postcss-selector-parser";
 
-import { TwObject } from "./transformPostcssRootsToTwObjectMap";
-
 export type ObjectStyle = ObjectStyleDecl | ObjectStyleRuleOrAtRule;
 
 export type ObjectStyleDecl = {
@@ -17,9 +15,9 @@ export type ObjectStyleRuleOrAtRule = {
   [key: string]: string | string[] | ObjectStyleRuleOrAtRule;
 };
 
-function getObjectStyleFromTwObject(
-  twObjectRoot: Root,
-  twClass: string
+export function transformTwRootToObjectStyle(
+  twClass: string,
+  twRoot: Root
 ): ObjectStyle {
   const processor = parser((root) => {
     root.walkClasses((node) => {
@@ -28,7 +26,7 @@ function getObjectStyleFromTwObject(
       }
     });
   });
-  const root = twObjectRoot.clone();
+  const root = twRoot.clone();
   root.walkRules((rule) => {
     if (rule.nodes) {
       rule.selector = processor.processSync(rule.selector);
@@ -116,42 +114,7 @@ function sortObjectStyle<T extends ObjectStyle>(objectStyle: T) {
   return Object.fromEntries(sortedObjectStyleEntries);
 }
 
-export function transformTwClassesToObjectStyles(
-  twObjectMap: Map<string, TwObject>,
-  parsedTwClasses: [string, string[]][],
-  generateTwClassesRoot: (
-    twObjectMap: Map<string, TwObject>,
-    parsedTwClass: [string, string[]]
-  ) => Root
-) {
-  const objectStyles: ObjectStyle[] = [];
-
-  for (const [twClass, twClassVariants] of parsedTwClasses) {
-    const styleRoot = generateTwClassesRoot(twObjectMap, [
-      twClass,
-      twClassVariants,
-    ]);
-
-    objectStyles.push(getObjectStyleFromTwObject(styleRoot, twClass));
-  }
-
-  return objectStyles;
-}
-
-export function transformTwClassesToObjectStyle(
-  twObjectMap: Map<string, TwObject>,
-  parsedTwClasses: [string, string[]][],
-  generateTwClassesRoot: (
-    twObjectMap: Map<string, TwObject>,
-    parsedTwClass: [string, string[]]
-  ) => Root
-) {
-  const objectStyles = transformTwClassesToObjectStyles(
-    twObjectMap,
-    parsedTwClasses,
-    generateTwClassesRoot
-  );
-
+export function mergeObjectStyles(objectStyles: ObjectStyle[]) {
   const mergedObjectStyle = merge({}, ...objectStyles);
 
   return sortObjectStyle(mergedObjectStyle);

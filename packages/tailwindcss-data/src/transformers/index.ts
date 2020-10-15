@@ -1,3 +1,3 @@
 export * from "./transformPostcssRootsToTwObjectMap";
-export * from "./transformTwClassesToObjectStyle";
+export * from "./transformTwRootToObjectStyle";
 export * from "./getGenerateTwClassSubstituteRoot";

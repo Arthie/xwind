@@ -6,13 +6,10 @@ import substituteScreenAtRules from "tailwindcss/lib/lib/substituteScreenAtRules
 import processPlugins from "tailwindcss/lib/util/processPlugins";
 import resolveConfig from "tailwindcss/resolveConfig";
 
-import { ResolvedTialwindConfig, TailwindConfig } from "./tailwindcssConfig";
-import {
-  getGenerateTwClassSubstituteRoot,
-  transformPostcssRootsToTwObjectMap,
-} from "./transformers";
+import { ResolvedTailwindConfig, TailwindConfig } from "./tailwindcssConfig";
+import { getGenerateTwClassSubstituteRoot } from "./transformers";
 
-function getMediaScreens(config: ResolvedTialwindConfig) {
+function getMediaScreens(config: ResolvedTailwindConfig) {
   return Object.keys(config.theme.screens);
 }
 
@@ -38,11 +35,11 @@ function getVariants(variantGenerators: any) {
   ].concat(Object.keys(variantGenerators));
 }
 
-export function tailwindRootData(
+export function tailwindData(
   config: TailwindConfig,
-  corePlugins: (config: ResolvedTialwindConfig) => any
+  corePlugins: (config: ResolvedTailwindConfig) => any
 ) {
-  const resolvedConfig = resolveConfig(config) as ResolvedTialwindConfig;
+  const resolvedConfig = resolveConfig(config) as ResolvedTailwindConfig;
 
   const processedPlugins = processPlugins(
     [...corePlugins(resolvedConfig), ...resolvedConfig.plugins],
@@ -79,42 +76,5 @@ export function tailwindRootData(
     getSubstituteScreenAtRules,
     getSubstituteVariantsAtRules,
     generateTwClassSubstituteRoot,
-  };
-}
-
-export function tailwindData(
-  config: TailwindConfig,
-  corePlugins: (config: ResolvedTialwindConfig) => any
-) {
-  const {
-    baseRoot,
-    utilitiesRoot,
-    componentsRoot,
-    processedPlugins,
-    resolvedConfig,
-    screens,
-    variants,
-    getSubstituteScreenAtRules,
-    getSubstituteVariantsAtRules,
-    generateTwClassSubstituteRoot,
-  } = tailwindRootData(config, corePlugins);
-
-  const twObjectMap = transformPostcssRootsToTwObjectMap([
-    utilitiesRoot,
-    componentsRoot,
-  ]);
-
-  return {
-    baseRoot,
-    utilitiesRoot,
-    componentsRoot,
-    processedPlugins,
-    resolvedConfig,
-    screens,
-    variants,
-    getSubstituteScreenAtRules,
-    getSubstituteVariantsAtRules,
-    generateTwClassSubstituteRoot,
-    twObjectMap,
   };
 }

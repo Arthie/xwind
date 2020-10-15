@@ -6,7 +6,7 @@ export interface TwObject {
     [key: string]: Root;
   };
   twClass: string;
-  nodes: Array<Rule | AtRule>;
+  root: Root;
 }
 
 export function transformPostcssRootsToTwObjectMap(roots: Root[] = []) {
@@ -29,12 +29,12 @@ export function transformPostcssRootsToTwObjectMap(roots: Root[] = []) {
     twClass: string
   ) => {
     if (classNodes[twClass]) {
-      classNodes[twClass].nodes.push(node);
+      classNodes[twClass].root.append(node);
     } else {
       classNodes[twClass] = {
         variant: {},
-        nodes: [node],
         twClass,
+        root: root().append(node),
       };
     }
   };

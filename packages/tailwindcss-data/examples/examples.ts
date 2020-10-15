@@ -1,43 +1,26 @@
-# @tailwindcssinjs/tailwindcss-data
-
-[![NPM version](https://badgen.net/npm/v/@tailwindcssinjs/tailwindcss-data)](https://www.npmjs.com/package/@tailwindcssinjs/tailwindcss-data)
-[![License](https://badgen.net/npm/license/@tailwindcssinjs/tailwindcss-data)](https://www.npmjs.com/package/@tailwindcssinjs/tailwindcss-data)
-
-The tailwind-data package uses Tailwind internals to extracts/generate all the data you could want from Tailwind. It provides the data in a structured way with the necessary utilities to create and manipulate this data.
-
-In short: **Unofficial Tailwind developer API**
-
-## More info coming soon!
-
-### This package is under development breaking changes possible!
-
-## Install
-
-```bash
-# with npm
-npm install @tailwindcssinjs/tailwindcss-data @tailwindcssinjs/class-composer tailwindcss
-
-# with Yarn
-yarn add @tailwindcssinjs/tailwindcss-data @tailwindcssinjs/class-composer tailwindcss
-```
-
-## Examples
-
-<details>
-  <summary>
-    List all Tailwind Classes
-  </summary>
-
-```typescript
+//@ts-expect-error
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
+  mergeObjectStyles,
+  ObjectStyle,
   tailwindData,
   transformPostcssRootsToTwObjectMap,
+  transformTwRootToObjectStyle,
 } from "@tailwindcssinjs/tailwindcss-data";
 
+import { TwClasses, twClassesParser } from "@tailwindcssinjs/class-composer";
+
+//@ts-expect-error
 import config from "../../../tailwind.config.js";
 
-const { utilitiesRoot, componentsRoot } = tailwindData(config, corePlugins);
+const {
+  resolvedConfig,
+  generateTwClassSubstituteRoot,
+  utilitiesRoot,
+  componentsRoot,
+} = tailwindData(config, corePlugins);
+
+const twParser = twClassesParser(resolvedConfig.separator);
 
 const twObjectMap = transformPostcssRootsToTwObjectMap([
   componentsRoot,
@@ -59,34 +42,6 @@ function getTwClasses() {
 //   ... 4247 more items
 // ]
 getTwClasses();
-```
-
-</details>
-
-<details>
-  <summary>
-    Get CSS from Tailwind class
-  </summary>
-
-```typescript
-import corePlugins from "tailwindcss/lib/corePlugins";
-import {
-  tailwindData,
-  transformPostcssRootsToTwObjectMap,
-} from "@tailwindcssinjs/tailwindcss-data";
-
-import config from "../../../tailwind.config.js";
-
-const {
-  generateTwClassSubstituteRoot,
-  utilitiesRoot,
-  componentsRoot,
-} = tailwindData(config, corePlugins);
-
-const twObjectMap = transformPostcssRootsToTwObjectMap([
-  componentsRoot,
-  utilitiesRoot,
-]);
 
 function getCSSFromTailwindClass(parsedClass: [string, string[]]) {
   const out = generateTwClassSubstituteRoot(
@@ -122,38 +77,6 @@ getCSSFromTailwindClass(["bg-red-300", ["hover"]]);
 //   background-color: rgba(248, 180, 180, var(--bg-opacity))
 // }
 getCSSFromTailwindClass(["bg-red-300", []]);
-```
-
-</details>
-
-<details>
-  <summary>
-    Get CSS from Tailwind classes
-  </summary>
-
-```typescript
-import corePlugins from "tailwindcss/lib/corePlugins";
-import {
-  tailwindData,
-  transformPostcssRootsToTwObjectMap,
-} from "@tailwindcssinjs/tailwindcss-data";
-
-import { TwClasses, twClassesParser } from "@tailwindcssinjs/class-composer";
-import config from "../../../tailwind.config.js";
-
-const {
-  resolvedConfig,
-  generateTwClassSubstituteRoot,
-  utilitiesRoot,
-  componentsRoot,
-} = tailwindData(config, corePlugins);
-
-const twParser = twClassesParser(resolvedConfig.separator);
-
-const twObjectMap = transformPostcssRootsToTwObjectMap([
-  componentsRoot,
-  utilitiesRoot,
-]);
 
 function getCSSFromTailwindClasses(...twClasses: TwClasses[]) {
   const parsedTwClasses = twParser(twClasses);
@@ -184,35 +107,6 @@ function getCSSFromTailwindClasses(...twClasses: TwClasses[]) {
 //   }
 // }
 getCSSFromTailwindClasses("bg-red-300 md:hover:bg-red-300");
-```
-
-</details>
-
-<details>
-  <summary>
-    Get CSS object style fromTailwind class
-  </summary>
-
-```typescript
-import corePlugins from "tailwindcss/lib/corePlugins";
-import {
-  tailwindData,
-  transformPostcssRootsToTwObjectMap,
-  transformTwRootToObjectStyle,
-} from "@tailwindcssinjs/tailwindcss-data";
-
-import config from "../../../tailwind.config.js";
-
-const {
-  generateTwClassSubstituteRoot,
-  utilitiesRoot,
-  componentsRoot,
-} = tailwindData(config, corePlugins);
-
-const twObjectMap = transformPostcssRootsToTwObjectMap([
-  componentsRoot,
-  utilitiesRoot,
-]);
 
 function getObjectStyleFromTailwindClass(parsedClass: [string, string[]]) {
   const twRoot = generateTwClassSubstituteRoot(twObjectMap, parsedClass);
@@ -256,42 +150,6 @@ getObjectStyleFromTailwindClass(["bg-red-300", ["hover"]]);
 //   ]
 // }
 getObjectStyleFromTailwindClass(["bg-red-300", []]);
-```
-
-</details>
-
-<details>
-  <summary>
-    Get CSS object style from Tailwind classes
-  </summary>
-
-```typescript
-import corePlugins from "tailwindcss/lib/corePlugins";
-import {
-  mergeObjectStyles,
-  ObjectStyle,
-  tailwindData,
-  transformPostcssRootsToTwObjectMap,
-  transformTwRootToObjectStyle,
-} from "@tailwindcssinjs/tailwindcss-data";
-
-import { TwClasses, twClassesParser } from "@tailwindcssinjs/class-composer";
-
-import config from "../../../tailwind.config.js";
-
-const {
-  resolvedConfig,
-  generateTwClassSubstituteRoot,
-  utilitiesRoot,
-  componentsRoot,
-} = tailwindData(config, corePlugins);
-
-const twParser = twClassesParser(resolvedConfig.separator);
-
-const twObjectMap = transformPostcssRootsToTwObjectMap([
-  componentsRoot,
-  utilitiesRoot,
-]);
 
 function getObjectStyleFromTailwindClasses(...twClasses: TwClasses[]) {
   const parsedTwClasses = twParser(twClasses);
@@ -325,10 +183,3 @@ function getObjectStyleFromTailwindClasses(...twClasses: TwClasses[]) {
 //   }
 // }
 getObjectStyleFromTailwindClasses("bg-red-300 md:hover:bg-red-300");
-```
-
-</details>
-
-## License
-
-[MIT](LICENSE). Copyright (c) 2020 Arthur Petrie.

@@ -29,12 +29,12 @@ export function getGenerateTwClassSubstituteRoot(
     const twObject = twObjectMap.get(twClass);
     if (!twObject) throw new Error(`Class "${twClass}" not found.`);
 
-    let styleRoot = root().append(...twObject.nodes);
+    let styleRoot = twObject.root.clone();
     const twClassVariantsLength = twClassVariants.length;
     if (twClassVariantsLength) {
       const variantCacheKey = twClassVariants.join();
       if (twObject.variant[variantCacheKey]) {
-        styleRoot = twObject.variant[variantCacheKey];
+        styleRoot = twObject.variant[variantCacheKey].clone();
       } else {
         for (const variant of twClassVariants) {
           if (screens.includes(variant)) {

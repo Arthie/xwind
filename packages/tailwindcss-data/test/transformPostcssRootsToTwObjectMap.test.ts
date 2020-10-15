@@ -1274,7 +1274,7 @@ const source = `
 }
 `;
 
-import { parse, root } from "postcss";
+import { parse } from "postcss";
 import { transformPostcssRootsToTwObjectMap } from "../lib/transformers/transformPostcssRootsToTwObjectMap";
 
 const rootSource = parse(source);
@@ -1283,7 +1283,7 @@ const twObjectMap = transformPostcssRootsToTwObjectMap([rootSource]);
 
 twObjectMap.forEach((twObject) => {
   test(`test ${twObject.twClass}`, () => {
-    const test = root().append(twObject.nodes);
+    const test = twObject.root.clone();
     expect(test.toString()).toMatchSnapshot();
   });
 });
