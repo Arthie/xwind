@@ -70,18 +70,18 @@ export function twClassesComposer(separator: string) {
  * The composer function will return an array of class and variants tuples.
  * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#2-twclassesvariantsparser
  */
-export function twClassesVariantsParser(separator: string) {
+export function twClassesParser(separator: string) {
   const composer = twClassesComposer(separator);
   return (...twClasses: TwClasses[]) => {
     const composedTwClasses = composer(twClasses);
 
-    const parsedClassesVariants: [string, string[]][] = [];
+    const parsedClasses: [string, string[]][] = [];
     for (const composedTwClass of composedTwClasses) {
       const [twClass, ...variants] = composedTwClass.split(separator).reverse();
-      parsedClassesVariants.push([twClass, variants]);
+      parsedClasses.push([twClass, variants]);
     }
 
-    return parsedClassesVariants;
+    return parsedClasses;
   };
 }
 

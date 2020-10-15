@@ -1,6 +1,6 @@
 import {
   twClassesComposer,
-  twClassesVariantsParser,
+  twClassesParser,
   twClassesSerializer,
 } from "../lib/classComposer";
 
@@ -46,8 +46,8 @@ const VARIANT_PARSER_RESULT = [
   ["text-red-800", ["group-hover"]],
 ];
 
-test("classesVariantParser", () => {
-  expect(twClassesVariantsParser(SEPARATOR)(INPUT)).toStrictEqual(
+test("classesParser", () => {
+  expect(twClassesParser(SEPARATOR)(INPUT)).toStrictEqual(
     VARIANT_PARSER_RESULT
   );
 });

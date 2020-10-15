@@ -74,7 +74,7 @@ tw("text-red-100 hover:bg-red-200 sm:active:bg-red-300");
 //Result: [ "text-red-100", "hover:bg-red-200", "sm:active:bg-red-300" ]
 ```
 
-### 2. twClassesVariantsParser
+### 2. twClassesParser
 
 #### `twClassesComposer(string): function`
 
@@ -84,9 +84,9 @@ The composer function will return an array of class and variants tuples.
 #### Example
 
 ```js
-import { twClassesVariantsParser } from "@tailwindcssinjs/class-composer";
+import { twClassesParser } from "@tailwindcssinjs/class-composer";
 
-const tw = twClassesVariantsParser(":");
+const tw = twClassesParser(":");
 
 tw("text-red-100 hover:bg-red-200 sm:active:bg-red-300");
 
