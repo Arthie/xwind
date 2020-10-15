@@ -16321,6 +16321,7 @@ const css = tw("break-normal");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
+  wordWrap: "normal",
   overflowWrap: "normal",
   wordBreak: "normal",
 };
@@ -16336,6 +16337,7 @@ const css = tw("break-words");
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
+  wordWrap: "break-word",
   overflowWrap: "break-word",
 };
 

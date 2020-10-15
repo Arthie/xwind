@@ -3,19 +3,20 @@ import isEqual from "lodash/isEqual";
 import { tailwindData } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssData";
 
 import {
-  transformTwClassesToObjectStyle,
   ObjectStyle,
   TwObject,
+  transformPostcssRootsToTwObjectMap,
+  mergeObjectStyles,
+  transformTwRootToObjectStyle,
 } from "@tailwindcssinjs/tailwindcss-data/lib/transformers";
 
 import {
-  ResolvedTialwindConfig,
-  resolveTailwindConfigPath,
+  ResolvedTailwindConfig,
   TailwindConfig,
 } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssConfig";
 
 import {
-  twClassesVariantsParser,
+  twClassesParser,
   TwClasses,
   twClassesComposer,
 } from "@tailwindcssinjs/class-composer";
@@ -23,7 +24,7 @@ import {
 type TailwindcssinjsConfigPlugin = (
   objectStyle: ObjectStyle,
   parsedTwClasses: [string, string[]][],
-  resolvedConfig: ResolvedTialwindConfig
+  resolvedConfig: TailwindConfig
 ) => ObjectStyle;
 
 interface TailwindcssinjsConfig extends TailwindConfig {
@@ -40,7 +41,7 @@ export const _twClasses: Set<string> = new Set();
 
 export default function tailwindcssinjs(
   config: TailwindcssinjsConfig,
-  corePlugins: (arg: ResolvedTialwindConfig) => any
+  corePlugins: (arg: ResolvedTailwindConfig) => any
 ) {
   if (!configCache || !isEqual(configCache, config)) {
     if (configCache)
@@ -50,23 +51,37 @@ export default function tailwindcssinjs(
     const {
       resolvedConfig,
       generateTwClassSubstituteRoot,
-      twObjectMap,
+      utilitiesRoot,
+      componentsRoot,
     } = tailwindData(config, corePlugins);
+
+    const twObjectMap = transformPostcssRootsToTwObjectMap([
+      utilitiesRoot,
+      componentsRoot,
+    ]);
 
     _twObjectMap = twObjectMap;
 
-    const variantParser = twClassesVariantsParser(resolvedConfig.separator);
-    const composer = twClassesComposer(resolvedConfig.separator);
+    const twParser = twClassesParser(resolvedConfig.separator);
+    const twComposer = twClassesComposer(resolvedConfig.separator);
     tailwind = (twClasses: TwClasses) => {
-      const parsedTwClasses = variantParser(twClasses);
-      for (const twClass of composer(twClasses)) {
+      const parsedTwClasses = twParser(twClasses);
+      for (const twClass of twComposer(twClasses)) {
         _twClasses.add(twClass);
       }
-      let objectStyle = transformTwClassesToObjectStyle(
-        twObjectMap,
-        parsedTwClasses,
-        generateTwClassSubstituteRoot
-      );
+
+      const objectStyles: ObjectStyle[] = [];
+      for (const parsedTwClass of parsedTwClasses) {
+        const twRoot = generateTwClassSubstituteRoot(
+          twObjectMap,
+          parsedTwClass
+        );
+        objectStyles.push(
+          transformTwRootToObjectStyle(parsedTwClass[0], twRoot)
+        );
+      }
+
+      let objectStyle = mergeObjectStyles(objectStyles);
 
       if (config.tailwindcssinjs?.plugins) {
         for (const plugin of config.tailwindcssinjs.plugins) {
