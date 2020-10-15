@@ -4,11 +4,12 @@ import corePlugins from "tailwindcss/lib/corePlugins";
 import {
   tailwindData,
   TailwindConfig,
+  transformPostcssRootsToTwObjectMap,
 } from "@tailwindcssinjs/tailwindcss-data";
 
 import { Logger } from "typescript-template-language-service-decorator";
 import importFresh from "import-fresh";
-import { twClassesVariantsParser } from "@tailwindcssinjs/class-composer";
+import { twClassesParser } from "@tailwindcssinjs/class-composer";
 import { Root } from "postcss";
 
 export default function tailwindcssinjs(config: TailwindConfig) {
@@ -16,10 +17,16 @@ export default function tailwindcssinjs(config: TailwindConfig) {
     screens,
     variants,
     generateTwClassSubstituteRoot,
-    twObjectMap,
+    utilitiesRoot,
+    componentsRoot,
   } = tailwindData(config, corePlugins);
 
-  const twParser = twClassesVariantsParser(config.separator ?? ":");
+  const twObjectMap = transformPostcssRootsToTwObjectMap([
+    utilitiesRoot,
+    componentsRoot,
+  ]);
+
+  const twParser = twClassesParser(config.separator ?? ":");
 
   const generateCssFromText = (text: string) => {
     const parsedClasses = twParser(text);
