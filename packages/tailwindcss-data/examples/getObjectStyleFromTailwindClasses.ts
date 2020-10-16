@@ -1,9 +1,9 @@
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
+  createTwClassDictionary,
   mergeObjectStyles,
   ObjectStyle,
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
   transformTwRootToObjectStyle,
 } from "@tailwindcssinjs/tailwindcss-data";
 
@@ -20,17 +20,20 @@ const {
 
 const twParser = twClassesParser(resolvedConfig.separator);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([
+const twClassDictionary = createTwClassDictionary(
   componentsRoot,
-  utilitiesRoot,
-]);
+  utilitiesRoot
+);
 
 function getObjectStyleFromTailwindClasses(...twClasses: TwClasses[]) {
   const parsedTwClasses = twParser(twClasses);
 
   const objectStyles: ObjectStyle[] = [];
   for (const parsedTwClass of parsedTwClasses) {
-    const twRoot = generateTwClassSubstituteRoot(twObjectMap, parsedTwClass);
+    const twRoot = generateTwClassSubstituteRoot(
+      twClassDictionary,
+      parsedTwClass
+    );
     objectStyles.push(transformTwRootToObjectStyle(parsedTwClass[0], twRoot));
   }
 

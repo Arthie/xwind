@@ -1,11 +1,13 @@
+//@ts-nocheck
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
+  createTwClassDictionary,
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
 } from "@tailwindcssinjs/tailwindcss-data";
 
 import { TwClasses, twClassesParser } from "@tailwindcssinjs/class-composer";
 import config from "../../../tailwind.config.js";
+import { root } from "postcss";
 
 const {
   resolvedConfig,
@@ -16,22 +18,23 @@ const {
 
 const twParser = twClassesParser(resolvedConfig.separator);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([
+const twClassDictionary = createTwClassDictionary(
   componentsRoot,
-  utilitiesRoot,
-]);
+  utilitiesRoot
+);
 
 function getCSSFromTailwindClasses(...twClasses: TwClasses[]) {
   const parsedTwClasses = twParser(twClasses);
 
-  const roots: string[] = [];
+  const combinedRoot = root();
   for (const parsedTwClass of parsedTwClasses) {
-    roots.push(
-      generateTwClassSubstituteRoot(twObjectMap, parsedTwClass).toString()
+    const twRoot = generateTwClassSubstituteRoot(
+      twClassDictionary,
+      parsedTwClass
     );
+    combinedRoot.append(twRoot);
   }
-
-  const out = roots.join("\n");
+  const out = combinedRoot.toString();
   console.log(out);
   return out;
 }

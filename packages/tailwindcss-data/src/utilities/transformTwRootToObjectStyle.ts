@@ -28,13 +28,12 @@ export function transformTwRootToObjectStyle(
   });
   const root = twRoot.clone();
   root.walkRules((rule) => {
-    if (rule.nodes) {
-      rule.selector = processor.processSync(rule.selector);
-      if (rule.selector === "&") {
-        rule.replaceWith(rule.nodes);
-      }
-    } else {
+    if (!rule.nodes) {
       throw new Error(`Rule has no nodes ${root}`);
+    }
+    rule.selector = processor.processSync(rule.selector);
+    if (rule.selector === "&") {
+      rule.replaceWith(rule.nodes);
     }
   });
   return objectify(root);

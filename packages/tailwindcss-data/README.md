@@ -32,20 +32,20 @@ yarn add @tailwindcssinjs/tailwindcss-data @tailwindcssinjs/class-composer tailw
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
+  createTwClassDictionary,
 } from "@tailwindcssinjs/tailwindcss-data";
 
 import config from "../../../tailwind.config.js";
 
 const { utilitiesRoot, componentsRoot } = tailwindData(config, corePlugins);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([
+const twClassDictionary = createTwClassDictionary(
   componentsRoot,
-  utilitiesRoot,
-]);
+  utilitiesRoot
+);
 
 function getTwClasses() {
-  const out = [...twObjectMap.keys()];
+  const out = Object.keys(twClassDictionary);
   console.log(out);
   return out;
 }
@@ -72,7 +72,7 @@ getTwClasses();
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
+  createTwClassDictionary,
 } from "@tailwindcssinjs/tailwindcss-data";
 
 import config from "../../../tailwind.config.js";
@@ -83,14 +83,14 @@ const {
   componentsRoot,
 } = tailwindData(config, corePlugins);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([
+const twClassDictionary = createTwClassDictionary(
   componentsRoot,
-  utilitiesRoot,
-]);
+  utilitiesRoot
+);
 
 function getCSSFromTailwindClass(parsedClass: [string, string[]]) {
   const out = generateTwClassSubstituteRoot(
-    twObjectMap,
+    twClassDictionary,
     parsedClass
   ).toString();
   console.log(out);
@@ -132,14 +132,16 @@ getCSSFromTailwindClass(["bg-red-300", []]);
   </summary>
 
 ```typescript
+//@ts-nocheck
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
+  createTwClassDictionary,
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
 } from "@tailwindcssinjs/tailwindcss-data";
 
 import { TwClasses, twClassesParser } from "@tailwindcssinjs/class-composer";
 import config from "../../../tailwind.config.js";
+import { root } from "postcss";
 
 const {
   resolvedConfig,
@@ -150,22 +152,23 @@ const {
 
 const twParser = twClassesParser(resolvedConfig.separator);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([
+const twClassDictionary = createTwClassDictionary(
   componentsRoot,
-  utilitiesRoot,
-]);
+  utilitiesRoot
+);
 
 function getCSSFromTailwindClasses(...twClasses: TwClasses[]) {
   const parsedTwClasses = twParser(twClasses);
 
-  const roots: string[] = [];
+  const combinedRoot = root();
   for (const parsedTwClass of parsedTwClasses) {
-    roots.push(
-      generateTwClassSubstituteRoot(twObjectMap, parsedTwClass).toString()
+    const twRoot = generateTwClassSubstituteRoot(
+      twClassDictionary,
+      parsedTwClass
     );
+    combinedRoot.append(twRoot);
   }
-
-  const out = roots.join("\n");
+  const out = combinedRoot.toString();
   console.log(out);
   return out;
 }
@@ -196,8 +199,8 @@ getCSSFromTailwindClasses("bg-red-300 md:hover:bg-red-300");
 ```typescript
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
+  createTwClassDictionary,
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
   transformTwRootToObjectStyle,
 } from "@tailwindcssinjs/tailwindcss-data";
 
@@ -209,13 +212,13 @@ const {
   componentsRoot,
 } = tailwindData(config, corePlugins);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([
+const twClassDictionary = createTwClassDictionary(
   componentsRoot,
-  utilitiesRoot,
-]);
+  utilitiesRoot
+);
 
 function getObjectStyleFromTailwindClass(parsedClass: [string, string[]]) {
-  const twRoot = generateTwClassSubstituteRoot(twObjectMap, parsedClass);
+  const twRoot = generateTwClassSubstituteRoot(twClassDictionary, parsedClass);
   const out = transformTwRootToObjectStyle(parsedClass[0], twRoot);
   console.log(JSON.stringify(out, null, 4));
   return out;
@@ -268,10 +271,10 @@ getObjectStyleFromTailwindClass(["bg-red-300", []]);
 ```typescript
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
+  createTwClassDictionary,
   mergeObjectStyles,
   ObjectStyle,
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
   transformTwRootToObjectStyle,
 } from "@tailwindcssinjs/tailwindcss-data";
 
@@ -288,17 +291,20 @@ const {
 
 const twParser = twClassesParser(resolvedConfig.separator);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([
+const twClassDictionary = createTwClassDictionary(
   componentsRoot,
-  utilitiesRoot,
-]);
+  utilitiesRoot
+);
 
 function getObjectStyleFromTailwindClasses(...twClasses: TwClasses[]) {
   const parsedTwClasses = twParser(twClasses);
 
   const objectStyles: ObjectStyle[] = [];
   for (const parsedTwClass of parsedTwClasses) {
-    const twRoot = generateTwClassSubstituteRoot(twObjectMap, parsedTwClass);
+    const twRoot = generateTwClassSubstituteRoot(
+      twClassDictionary,
+      parsedTwClass
+    );
     objectStyles.push(transformTwRootToObjectStyle(parsedTwClass[0], twRoot));
   }
 

@@ -1275,15 +1275,15 @@ const source = `
 `;
 
 import { parse } from "postcss";
-import { transformPostcssRootsToTwObjectMap } from "../lib/transformers/transformPostcssRootsToTwObjectMap";
+import { createTwClassDictionary } from "../lib/utilities/createTwClassDictionary";
 
 const rootSource = parse(source);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([rootSource]);
+const twObjectMap = createTwClassDictionary(rootSource);
 
-twObjectMap.forEach((twObject) => {
-  test(`test ${twObject.twClass}`, () => {
-    const test = twObject.root.clone();
+Object.entries(twObjectMap).forEach(([twClass, twObject]) => {
+  test(`test ${twClass}`, () => {
+    const test = twObject.clone();
     expect(test.toString()).toMatchSnapshot();
   });
 });

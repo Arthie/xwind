@@ -1,7 +1,7 @@
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
+  createTwClassDictionary,
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
   transformTwRootToObjectStyle,
 } from "@tailwindcssinjs/tailwindcss-data";
 
@@ -13,13 +13,13 @@ const {
   componentsRoot,
 } = tailwindData(config, corePlugins);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([
+const twClassDictionary = createTwClassDictionary(
   componentsRoot,
-  utilitiesRoot,
-]);
+  utilitiesRoot
+);
 
 function getObjectStyleFromTailwindClass(parsedClass: [string, string[]]) {
-  const twRoot = generateTwClassSubstituteRoot(twObjectMap, parsedClass);
+  const twRoot = generateTwClassSubstituteRoot(twClassDictionary, parsedClass);
   const out = transformTwRootToObjectStyle(parsedClass[0], twRoot);
   console.log(JSON.stringify(out, null, 4));
   return out;

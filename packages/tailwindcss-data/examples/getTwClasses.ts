@@ -1,20 +1,20 @@
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
+  createTwClassDictionary,
 } from "@tailwindcssinjs/tailwindcss-data";
 
 import config from "../../../tailwind.config.js";
 
 const { utilitiesRoot, componentsRoot } = tailwindData(config, corePlugins);
 
-const twObjectMap = transformPostcssRootsToTwObjectMap([
+const twClassDictionary = createTwClassDictionary(
   componentsRoot,
-  utilitiesRoot,
-]);
+  utilitiesRoot
+);
 
 function getTwClasses() {
-  const out = [...twObjectMap.keys()];
+  const out = Object.keys(twClassDictionary);
   console.log(out);
   return out;
 }

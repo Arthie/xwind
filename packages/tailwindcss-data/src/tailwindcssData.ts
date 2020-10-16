@@ -7,33 +7,27 @@ import processPlugins from "tailwindcss/lib/util/processPlugins";
 import resolveConfig from "tailwindcss/resolveConfig";
 
 import { ResolvedTailwindConfig, TailwindConfig } from "./tailwindcssConfig";
-import { getGenerateTwClassSubstituteRoot } from "./transformers";
+import { getGenerateTwClassSubstituteRoot } from "./utilities";
 
-function getMediaScreens(config: ResolvedTailwindConfig) {
-  return Object.keys(config.theme.screens);
-}
-
-function getVariants(variantGenerators: any) {
-  return [
-    "default",
-    "motion-safe",
-    "motion-reduce",
-    "group-hover",
-    "group-focus",
-    "hover",
-    "focus-within",
-    "focus-visible",
-    "focus",
-    "active",
-    "visited",
-    "disabled",
-    "checked",
-    "first",
-    "last",
-    "odd",
-    "even",
-  ].concat(Object.keys(variantGenerators));
-}
+const BASEVARIANTS = [
+  "default",
+  "motion-safe",
+  "motion-reduce",
+  "group-hover",
+  "group-focus",
+  "hover",
+  "focus-within",
+  "focus-visible",
+  "focus",
+  "active",
+  "visited",
+  "disabled",
+  "checked",
+  "first",
+  "last",
+  "odd",
+  "even",
+];
 
 export function tailwindData(
   config: TailwindConfig,
@@ -50,8 +44,10 @@ export function tailwindData(
   const utilitiesRoot = root({ nodes: processedPlugins.utilities });
   const componentsRoot = root({ nodes: processedPlugins.components });
 
-  const screens = getMediaScreens(resolvedConfig);
-  const variants = getVariants(processedPlugins.variantGenerators);
+  const screens = Object.keys(resolvedConfig.theme.screens);
+  const variants = BASEVARIANTS.concat(
+    Object.keys(processedPlugins.variantGenerators)
+  );
 
   const getSubstituteVariantsAtRules = substituteVariantsAtRules(
     resolvedConfig,
