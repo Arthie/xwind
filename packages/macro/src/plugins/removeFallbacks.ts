@@ -1,4 +1,4 @@
-import { ObjectStyle } from "@tailwindcssinjs/tailwindcss-data/lib/transformers";
+import { ObjectStyle } from "../../../tailwindcss-data/lib/utilities";
 
 export default function removeFallbacks(objectStyle: ObjectStyle): ObjectStyle {
   const rules = Object.entries(objectStyle).map(([key, value]) => {

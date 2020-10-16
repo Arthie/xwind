@@ -4,7 +4,7 @@ import {
   requireTailwindConfig,
   resolveTailwindConfigPath,
   tailwindData,
-  transformPostcssRootsToTwObjectMap,
+  createTwClassDictionary,
 } from "@tailwindcssinjs/tailwindcss-data";
 import corePlugins from "tailwindcss/lib/corePlugins";
 
@@ -18,13 +18,10 @@ const tests = () => {
     corePlugins
   );
 
-  const twObjectMap = transformPostcssRootsToTwObjectMap([
-    utilitiesRoot,
-    componentsRoot,
-  ]);
+  const twObjectMap = createTwClassDictionary(utilitiesRoot, componentsRoot);
 
   let tests = [];
-  for (const key of twObjectMap.keys()) {
+  for (const key of Object.keys(twObjectMap)) {
     tests.push([
       key,
       {

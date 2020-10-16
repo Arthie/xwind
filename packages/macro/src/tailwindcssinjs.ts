@@ -4,11 +4,11 @@ import { tailwindData } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssD
 
 import {
   ObjectStyle,
-  TwObject,
-  transformPostcssRootsToTwObjectMap,
+  TwClassDictionary,
+  createTwClassDictionary,
   mergeObjectStyles,
   transformTwRootToObjectStyle,
-} from "@tailwindcssinjs/tailwindcss-data/lib/transformers";
+} from "../../tailwindcss-data/lib/utilities";
 
 import {
   ResolvedTailwindConfig,
@@ -36,7 +36,7 @@ interface TailwindcssinjsConfig extends TailwindConfig {
 let configCache: TailwindcssinjsConfig;
 let tailwind: (arg: TwClasses) => any;
 
-export let _twObjectMap: Map<string, TwObject>;
+export let _twClassDictionary: TwClassDictionary;
 export const _twClasses: Set<string> = new Set();
 
 export default function tailwindcssinjs(
@@ -55,12 +55,12 @@ export default function tailwindcssinjs(
       componentsRoot,
     } = tailwindData(config, corePlugins);
 
-    const twObjectMap = transformPostcssRootsToTwObjectMap([
+    const twClassDictionary = createTwClassDictionary(
       utilitiesRoot,
-      componentsRoot,
-    ]);
+      componentsRoot
+    );
 
-    _twObjectMap = twObjectMap;
+    _twClassDictionary = twClassDictionary;
 
     const twParser = twClassesParser(resolvedConfig.separator);
     const twComposer = twClassesComposer(resolvedConfig.separator);
@@ -73,7 +73,7 @@ export default function tailwindcssinjs(
       const objectStyles: ObjectStyle[] = [];
       for (const parsedTwClass of parsedTwClasses) {
         const twRoot = generateTwClassSubstituteRoot(
-          twObjectMap,
+          twClassDictionary,
           parsedTwClass
         );
         objectStyles.push(

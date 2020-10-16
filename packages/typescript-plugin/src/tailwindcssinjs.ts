@@ -4,7 +4,7 @@ import corePlugins from "tailwindcss/lib/corePlugins";
 import {
   tailwindData,
   TailwindConfig,
-  transformPostcssRootsToTwObjectMap,
+  createTwClassDictionary,
 } from "@tailwindcssinjs/tailwindcss-data";
 
 import { Logger } from "typescript-template-language-service-decorator";
@@ -21,10 +21,7 @@ export default function tailwindcssinjs(config: TailwindConfig) {
     componentsRoot,
   } = tailwindData(config, corePlugins);
 
-  const twObjectMap = transformPostcssRootsToTwObjectMap([
-    utilitiesRoot,
-    componentsRoot,
-  ]);
+  const twObjectMap = createTwClassDictionary(utilitiesRoot, componentsRoot);
 
   const twParser = twClassesParser(config.separator ?? ":");
 
