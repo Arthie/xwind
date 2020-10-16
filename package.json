@@ -8,23 +8,23 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "test": "jest --clearCache && yarn run test-twin && yarn run test-tailwindcssinjs",
+    "test": "jest --clearCache && npm run test-twin && npm run test-tailwindcssinjs",
     "test-npm": "jest --clearCache && npm run test-twin && npm run test-tailwindcssinjs",
-    "test-tailwindcssinjs": "jest ./tests/tailwindcssinjs.test.js",
+    "test-tailwindcssinjs": "jest ./tests/tailwindcssinjs.test.js -u",
     "test-tailwind": "jest ./tests/tailwind.test.js",
-    "test-twin": "jest ./tests/twin.test.js"
+    "test-twin": "jest ./tests/twin.test.js -u"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.4",
-    "@tailwindcss/ui": "0.5.0",
-    "@tailwindcssinjs/macro": "0.9.1",
+    "@babel/core": "^7.12.0",
+    "@tailwindcss/ui": "0.6.2",
+    "@tailwindcssinjs/macro": "0.12.0",
     "babel-plugin-macros": "2.8.0",
-    "babel-plugin-tester": "9.2.0",
-    "jest": "26.4.2",
-    "postcss": "7.0.32",
-    "prettier": "2.1.1",
+    "babel-plugin-tester": "10.0.0",
+    "jest": "26.5.3",
+    "postcss": "8.1.1",
+    "prettier": "2.1.2",
     "tailwind.macro": "1.0.0-alpha.10",
-    "tailwindcss": "1.7.5",
-    "twin.macro": "1.7.0"
+    "tailwindcss": "1.9.2",
+    "twin.macro": "1.10.0"
   }
 }

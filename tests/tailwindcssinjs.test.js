@@ -7,6 +7,7 @@ const plugin = require("babel-plugin-macros");
 const test = require("./utils/tailwindcssinjsbench1");
 
 pluginTester.default({
+  pluginName: "tailwindcssinjs",
   plugin,
   snapshot: true,
   babelOptions: {
