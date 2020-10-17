@@ -1,3 +1,4 @@
+//@ts-nocheck
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
   tailwindData,
@@ -28,7 +29,7 @@ function getCSSFromTailwindClass(parsedClass: [string, string[]]) {
 
 // OUTPUT CSS:
 // @media (min-width: 1024px) {
-//   .hover\:bg-red-300:hover {
+//   .md\:hover\:bg-red-300:hover {
 //       --bg-opacity: 1;
 //       background-color: #f8b4b4;
 //       background-color: rgba(248, 180, 180, var(--bg-opacity))

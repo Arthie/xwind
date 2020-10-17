@@ -99,7 +99,7 @@ function getCSSFromTailwindClass(parsedClass: [string, string[]]) {
 
 // OUTPUT CSS:
 // @media (min-width: 1024px) {
-//   .hover\:bg-red-300:hover {
+//   .md\:hover\:bg-red-300:hover {
 //       --bg-opacity: 1;
 //       background-color: #f8b4b4;
 //       background-color: rgba(248, 180, 180, var(--bg-opacity))
@@ -132,7 +132,6 @@ getCSSFromTailwindClass(["bg-red-300", []]);
   </summary>
 
 ```typescript
-//@ts-nocheck
 import corePlugins from "tailwindcss/lib/corePlugins";
 import {
   createTwClassDictionary,
@@ -175,16 +174,16 @@ function getCSSFromTailwindClasses(...twClasses: TwClasses[]) {
 
 // OUTPUT CSS:
 // .bg-red-300 {
-//   --bg-opacity: 1;
-//   background-color: #f8b4b4;
-//   background-color: rgba(248, 180, 180, var(--bg-opacity))
+//     --bg-opacity: 1;
+//     background-color: #f8b4b4;
+//     background-color: rgba(248, 180, 180, var(--bg-opacity))
 // }
 // @media (min-width: 1024px) {
-//   .hover\:bg-red-300:hover {
-//       --bg-opacity: 1;
-//       background-color: #f8b4b4;
-//       background-color: rgba(248, 180, 180, var(--bg-opacity))
-//   }
+//     .md\:hover\:bg-red-300:hover {
+//         --bg-opacity: 1;
+//         background-color: #f8b4b4;
+//         background-color: rgba(248, 180, 180, var(--bg-opacity))
+//     }
 // }
 getCSSFromTailwindClasses("bg-red-300 md:hover:bg-red-300");
 ```
