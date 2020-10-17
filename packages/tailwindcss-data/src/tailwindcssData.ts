@@ -57,6 +57,7 @@ export function tailwindData(
 
   const generateTwClassSubstituteRoot = getGenerateTwClassSubstituteRoot(
     screens,
+    resolvedConfig.separator,
     getSubstituteScreenAtRules,
     getSubstituteVariantsAtRules
   );

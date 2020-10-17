@@ -23,7 +23,7 @@ import {
 
 type TailwindcssinjsConfigPlugin = (
   objectStyle: ObjectStyle,
-  parsedTwClasses: [string, string[]][],
+  parsedTwClasses: string[],
   resolvedConfig: TailwindConfig
 ) => ObjectStyle;
 
@@ -38,6 +38,18 @@ let tailwind: (arg: TwClasses) => any;
 
 export let _twClassDictionary: TwClassDictionary;
 export const _twClasses: Set<string> = new Set();
+export let _tailwindData: {
+  baseRoot: import("postcss").Root;
+  utilitiesRoot: import("postcss").Root;
+  componentsRoot: import("postcss").Root;
+  processedPlugins: any;
+  resolvedConfig: ResolvedTailwindConfig;
+  screens: string[];
+  variants: string[];
+  getSubstituteScreenAtRules: any;
+  getSubstituteVariantsAtRules: any;
+  generateTwClassSubstituteRoot: any;
+}
 
 export default function tailwindcssinjs(
   config: TailwindcssinjsConfig,
@@ -48,12 +60,13 @@ export default function tailwindcssinjs(
       console.log("@tailwindcssinjs/macro - tailwind config changed");
     configCache = config;
 
+    _tailwindData = tailwindData(config, corePlugins);
     const {
       resolvedConfig,
       generateTwClassSubstituteRoot,
       utilitiesRoot,
       componentsRoot,
-    } = tailwindData(config, corePlugins);
+    } = _tailwindData
 
     const twClassDictionary = createTwClassDictionary(
       utilitiesRoot,
@@ -66,7 +79,8 @@ export default function tailwindcssinjs(
     const twComposer = twClassesComposer(resolvedConfig.separator);
     tailwind = (twClasses: TwClasses) => {
       const parsedTwClasses = twParser(twClasses);
-      for (const twClass of twComposer(twClasses)) {
+      const composedTwClasses = twComposer(twClasses)
+      for (const twClass of composedTwClasses) {
         _twClasses.add(twClass);
       }
 
@@ -85,7 +99,7 @@ export default function tailwindcssinjs(
 
       if (config.tailwindcssinjs?.plugins) {
         for (const plugin of config.tailwindcssinjs.plugins) {
-          objectStyle = plugin(objectStyle, parsedTwClasses, resolvedConfig);
+          objectStyle = plugin(objectStyle, composedTwClasses, resolvedConfig);
         }
       }
 

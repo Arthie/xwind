@@ -1,8 +1,10 @@
-import { Root, atRule, AtRuleProps } from "postcss";
+import { Root, Rule, atRule, AtRuleProps } from "postcss";
 import { TwClassDictionary } from "./createTwClassDictionary";
+import parser from "postcss-selector-parser";
 
 export function getGenerateTwClassSubstituteRoot(
   screens: string[],
+  separator: string,
   getSubstituteScreenAtRules: (root: Root) => void,
   getSubstituteVariantsAtRules: (root: Root) => void
 ) {
@@ -19,6 +21,16 @@ export function getGenerateTwClassSubstituteRoot(
     getSubstituteRules(twRoot);
   };
 
+  const selectorparser = parser();
+  const parseSelectorClasses = (rule: Rule, twClass: string, variant: string) => {
+    const selectorRoot = selectorparser.astSync(rule.selector)
+    selectorRoot.walkClasses((ruleClass) => {
+      if (ruleClass.value === twClass || ruleClass.value.includes(`${separator}${twClass}`)) {
+        ruleClass.value = `${variant}${separator}${ruleClass.value}`
+      }
+    });
+    return selectorRoot.toString()
+  };
   return (
     twClassDictionary: TwClassDictionary,
     twParsedClass: [string, string[]]
@@ -35,6 +47,9 @@ export function getGenerateTwClassSubstituteRoot(
             params: variant,
           };
           applySubstituteRules(atRuleProps, twRoot, getSubstituteScreenAtRules);
+          twRoot.walkRules((rule) => {
+            rule.selector = parseSelectorClasses(rule, twClass, variant)
+          })
         } else {
           const atRuleProps = {
             name: "variants",
