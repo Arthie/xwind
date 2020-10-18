@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tailwindcssinjs test 2: test 2 1`] = `
+
+import tw from "tailwindcssinjs"
+const test = tw\`bg-red-200 text-sm\`
+const test2 = tw\`bg-red-200 text-sm\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const test = "bg-red-200 text-sm";
+const test2 = "bg-red-200 text-sm";
+
+
+`;
