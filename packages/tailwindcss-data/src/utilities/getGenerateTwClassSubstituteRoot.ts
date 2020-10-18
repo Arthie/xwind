@@ -22,14 +22,21 @@ export function getGenerateTwClassSubstituteRoot(
   };
 
   const selectorparser = parser();
-  const parseSelectorClasses = (rule: Rule, twClass: string, variant: string) => {
-    const selectorRoot = selectorparser.astSync(rule.selector)
+  const parseSelectorClasses = (
+    rule: Rule,
+    twClass: string,
+    variant: string
+  ) => {
+    const selectorRoot = selectorparser.astSync(rule.selector);
     selectorRoot.walkClasses((ruleClass) => {
-      if (ruleClass.value === twClass || ruleClass.value.includes(`${separator}${twClass}`)) {
-        ruleClass.value = `${variant}${separator}${ruleClass.value}`
+      if (
+        ruleClass.value === twClass ||
+        ruleClass.value.includes(`${separator}${twClass}`)
+      ) {
+        ruleClass.value = `${variant}${separator}${ruleClass.value}`;
       }
     });
-    return selectorRoot.toString()
+    return selectorRoot.toString();
   };
   return (
     twClassDictionary: TwClassDictionary,
@@ -48,8 +55,8 @@ export function getGenerateTwClassSubstituteRoot(
           };
           applySubstituteRules(atRuleProps, twRoot, getSubstituteScreenAtRules);
           twRoot.walkRules((rule) => {
-            rule.selector = parseSelectorClasses(rule, twClass, variant)
-          })
+            rule.selector = parseSelectorClasses(rule, twClass, variant);
+          });
         } else {
           const atRuleProps = {
             name: "variants",
