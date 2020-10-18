@@ -181,6 +181,9 @@ function tailwindcssinjsMacro({
 
     state.tailwindConfig = getTailwindConfig(state, state.configPath);
 
+    const serializer = twClassesSerializer(
+      state.tailwindConfig?.separator ?? ":"
+    );
     if (state.isDev) {
       generateDevCorePlugins();
     } else {
@@ -191,9 +194,7 @@ function tailwindcssinjsMacro({
       const args = getArgs(referencePath.parentPath);
       if (state.isDev) {
         addDevImports(referencePath, t, state);
-        const serialisedArgs = twClassesSerializer(
-          state.tailwindConfig?.separator ?? ":"
-        )(args);
+        const serialisedArgs = serializer(args);
 
         if (state.tailwindDevTwUid) {
           const replacementAst = t.callExpression(state.tailwindDevTwUid, [

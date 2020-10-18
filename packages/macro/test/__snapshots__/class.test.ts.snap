@@ -19834,6 +19834,300 @@ const css = {
 
 `;
 
+exports[`tailwindcssinjs fill-black: fill-black 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-black");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#000000",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-blue-50: fill-blue-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-blue-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#ebf5ff",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-blue-100: fill-blue-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-blue-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#e1effe",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-blue-200: fill-blue-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-blue-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#c3ddfd",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-blue-300: fill-blue-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-blue-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#a4cafe",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-blue-400: fill-blue-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-blue-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#76a9fa",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-blue-500: fill-blue-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-blue-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#3f83f8",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-blue-600: fill-blue-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-blue-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#1c64f2",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-blue-700: fill-blue-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-blue-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#1a56db",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-blue-800: fill-blue-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-blue-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#1e429f",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-blue-900: fill-blue-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-blue-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#233876",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-cool-gray-50: fill-cool-gray-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-cool-gray-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f8fafc",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-cool-gray-100: fill-cool-gray-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-cool-gray-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f1f5f9",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-cool-gray-200: fill-cool-gray-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-cool-gray-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#e2e8f0",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-cool-gray-300: fill-cool-gray-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-cool-gray-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#cfd8e3",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-cool-gray-400: fill-cool-gray-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-cool-gray-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#97a6ba",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-cool-gray-500: fill-cool-gray-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-cool-gray-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#64748b",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-cool-gray-600: fill-cool-gray-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-cool-gray-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#475569",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-cool-gray-700: fill-cool-gray-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-cool-gray-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#364152",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-cool-gray-800: fill-cool-gray-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-cool-gray-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#27303f",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-cool-gray-900: fill-cool-gray-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-cool-gray-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#1a202e",
+};
+
+
+`;
+
 exports[`tailwindcssinjs fill-current: fill-current 1`] = `
 
 import tw from '../lib/macro';
@@ -19843,6 +20137,1294 @@ const css = tw("fill-current");
 
 const css = {
   fill: "currentColor",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-gray-50: fill-gray-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-gray-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f9fafb",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-gray-100: fill-gray-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-gray-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f4f5f7",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-gray-200: fill-gray-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-gray-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#e5e7eb",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-gray-300: fill-gray-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-gray-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#d2d6dc",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-gray-400: fill-gray-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-gray-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#9fa6b2",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-gray-500: fill-gray-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-gray-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#6b7280",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-gray-600: fill-gray-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-gray-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#4b5563",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-gray-700: fill-gray-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-gray-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#374151",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-gray-800: fill-gray-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-gray-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#252f3f",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-gray-900: fill-gray-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-gray-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#161e2e",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-green-50: fill-green-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-green-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f3faf7",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-green-100: fill-green-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-green-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#def7ec",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-green-200: fill-green-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-green-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#bcf0da",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-green-300: fill-green-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-green-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#84e1bc",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-green-400: fill-green-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-green-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#31c48d",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-green-500: fill-green-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-green-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#0e9f6e",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-green-600: fill-green-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-green-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#057a55",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-green-700: fill-green-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-green-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#046c4e",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-green-800: fill-green-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-green-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#03543f",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-green-900: fill-green-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-green-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#014737",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-indigo-50: fill-indigo-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-indigo-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f0f5ff",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-indigo-100: fill-indigo-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-indigo-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#e5edff",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-indigo-200: fill-indigo-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-indigo-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#cddbfe",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-indigo-300: fill-indigo-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-indigo-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#b4c6fc",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-indigo-400: fill-indigo-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-indigo-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#8da2fb",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-indigo-500: fill-indigo-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-indigo-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#6875f5",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-indigo-600: fill-indigo-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-indigo-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#5850ec",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-indigo-700: fill-indigo-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-indigo-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#5145cd",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-indigo-800: fill-indigo-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-indigo-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#42389d",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-indigo-900: fill-indigo-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-indigo-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#362f78",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-orange-50: fill-orange-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-orange-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fff8f1",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-orange-100: fill-orange-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-orange-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#feecdc",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-orange-200: fill-orange-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-orange-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fcd9bd",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-orange-300: fill-orange-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-orange-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fdba8c",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-orange-400: fill-orange-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-orange-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#ff8a4c",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-orange-500: fill-orange-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-orange-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#ff5a1f",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-orange-600: fill-orange-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-orange-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#d03801",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-orange-700: fill-orange-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-orange-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#b43403",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-orange-800: fill-orange-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-orange-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#8a2c0d",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-orange-900: fill-orange-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-orange-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#73230d",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-pink-50: fill-pink-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-pink-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fdf2f8",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-pink-100: fill-pink-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-pink-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fce8f3",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-pink-200: fill-pink-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-pink-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fad1e8",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-pink-300: fill-pink-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-pink-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f8b4d9",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-pink-400: fill-pink-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-pink-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f17eb8",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-pink-500: fill-pink-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-pink-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#e74694",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-pink-600: fill-pink-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-pink-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#d61f69",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-pink-700: fill-pink-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-pink-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#bf125d",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-pink-800: fill-pink-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-pink-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#99154b",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-pink-900: fill-pink-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-pink-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#751a3d",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-purple-50: fill-purple-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-purple-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f6f5ff",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-purple-100: fill-purple-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-purple-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#edebfe",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-purple-200: fill-purple-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-purple-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#dcd7fe",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-purple-300: fill-purple-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-purple-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#cabffd",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-purple-400: fill-purple-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-purple-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#ac94fa",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-purple-500: fill-purple-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-purple-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#9061f9",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-purple-600: fill-purple-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-purple-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#7e3af2",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-purple-700: fill-purple-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-purple-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#6c2bd9",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-purple-800: fill-purple-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-purple-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#5521b5",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-purple-900: fill-purple-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-purple-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#4a1d96",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-red-50: fill-red-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-red-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fdf2f2",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-red-100: fill-red-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-red-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fde8e8",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-red-200: fill-red-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-red-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fbd5d5",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-red-300: fill-red-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-red-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f8b4b4",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-red-400: fill-red-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-red-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f98080",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-red-500: fill-red-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-red-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#f05252",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-red-600: fill-red-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-red-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#e02424",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-red-700: fill-red-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-red-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#c81e1e",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-red-800: fill-red-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-red-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#9b1c1c",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-red-900: fill-red-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-red-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#771d1d",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-teal-50: fill-teal-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-teal-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#edfafa",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-teal-100: fill-teal-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-teal-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#d5f5f6",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-teal-200: fill-teal-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-teal-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#afecef",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-teal-300: fill-teal-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-teal-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#7edce2",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-teal-400: fill-teal-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-teal-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#16bdca",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-teal-500: fill-teal-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-teal-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#0694a2",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-teal-600: fill-teal-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-teal-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#047481",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-teal-700: fill-teal-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-teal-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#036672",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-teal-800: fill-teal-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-teal-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#05505c",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-teal-900: fill-teal-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-teal-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#014451",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-transparent: fill-transparent 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-transparent");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "transparent",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-white: fill-white 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-white");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#ffffff",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-yellow-50: fill-yellow-50 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-yellow-50");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fdfdea",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-yellow-100: fill-yellow-100 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-yellow-100");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fdf6b2",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-yellow-200: fill-yellow-200 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-yellow-200");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#fce96a",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-yellow-300: fill-yellow-300 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-yellow-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#faca15",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-yellow-400: fill-yellow-400 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-yellow-400");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#e3a008",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-yellow-500: fill-yellow-500 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-yellow-500");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#c27803",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-yellow-600: fill-yellow-600 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-yellow-600");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#9f580a",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-yellow-700: fill-yellow-700 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-yellow-700");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#8e4b10",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-yellow-800: fill-yellow-800 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-yellow-800");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#723b13",
+};
+
+
+`;
+
+exports[`tailwindcssinjs fill-yellow-900: fill-yellow-900 1`] = `
+
+import tw from '../lib/macro';
+const css = tw("fill-yellow-900");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  fill: "#633112",
 };
 
 

@@ -4,7 +4,6 @@ import { tailwindData } from "@tailwindcssinjs/tailwindcss-data/lib/tailwindcssD
 
 import {
   ObjectStyle,
-  TwClassDictionary,
   createTwClassDictionary,
   mergeObjectStyles,
   transformTwRootToObjectStyle,
@@ -36,21 +35,6 @@ interface TailwindcssinjsConfig extends TailwindConfig {
 let configCache: TailwindcssinjsConfig;
 let tailwind: (arg: TwClasses) => any;
 
-export let _twClassDictionary: TwClassDictionary;
-export const _twClasses: Set<string> = new Set();
-export let _tailwindData: {
-  baseRoot: import("postcss").Root;
-  utilitiesRoot: import("postcss").Root;
-  componentsRoot: import("postcss").Root;
-  processedPlugins: any;
-  resolvedConfig: ResolvedTailwindConfig;
-  screens: string[];
-  variants: string[];
-  getSubstituteScreenAtRules: any;
-  getSubstituteVariantsAtRules: any;
-  generateTwClassSubstituteRoot: any;
-}
-
 export default function tailwindcssinjs(
   config: TailwindcssinjsConfig,
   corePlugins: (arg: ResolvedTailwindConfig) => any
@@ -60,29 +44,23 @@ export default function tailwindcssinjs(
       console.log("@tailwindcssinjs/macro - tailwind config changed");
     configCache = config;
 
-    _tailwindData = tailwindData(config, corePlugins);
     const {
       resolvedConfig,
       generateTwClassSubstituteRoot,
       utilitiesRoot,
       componentsRoot,
-    } = _tailwindData
+    } = tailwindData(config, corePlugins);
 
     const twClassDictionary = createTwClassDictionary(
       utilitiesRoot,
       componentsRoot
     );
 
-    _twClassDictionary = twClassDictionary;
-
     const twParser = twClassesParser(resolvedConfig.separator);
     const twComposer = twClassesComposer(resolvedConfig.separator);
     tailwind = (twClasses: TwClasses) => {
       const parsedTwClasses = twParser(twClasses);
-      const composedTwClasses = twComposer(twClasses)
-      for (const twClass of composedTwClasses) {
-        _twClasses.add(twClass);
-      }
+      const composedTwClasses = twComposer(twClasses);
 
       const objectStyles: ObjectStyle[] = [];
       for (const parsedTwClass of parsedTwClasses) {
