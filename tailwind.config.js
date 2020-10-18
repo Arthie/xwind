@@ -16,6 +16,7 @@ module.exports = {
           { min: "868px" },
         ],
       },
+      fill: theme => theme('colors')
     },
   },
   variants: {},
@@ -41,7 +42,7 @@ module.exports = {
     plugin(function ({ addVariant }) {
       addVariant("important", ({ container }) => {
         container.walkRules((rule) => {
-          rule.selector = `.\\!${rule.selector.slice(1)}`;
+          rule.selector = `.important\\${config().separator}${rule.selector.slice(1)}`
           rule.walkDecls((decl) => {
             decl.important = true;
           });
