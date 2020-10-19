@@ -1,6 +1,6 @@
 {
   "name": "@tailwindcssinjs/babel-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This package contains tailwindcssinjs babel plugin",
   "keywords": [
     "babel-plugin",
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@tailwindcssinjs/class-composer": "^0.12.0",
-    "@tailwindcssinjs/tailwindcss-data": "^0.14.0",
+    "@tailwindcssinjs/tailwindcss-data": "^0.15.0",
     "lodash": "^4.17.20",
     "postcss": "^8.1.1",
     "postcss-sorting": "^6.0.0"
