@@ -11,7 +11,8 @@ import { ResolvedTailwindConfig, TailwindConfig } from "./tailwindcssConfig";
 import { getGenerateTwClassSubstituteRoot } from "./utilities";
 
 const BASEVARIANTS = [
-  "default",
+  "DEFAULT",
+  "dark",
   "motion-safe",
   "motion-reduce",
   "group-hover",
