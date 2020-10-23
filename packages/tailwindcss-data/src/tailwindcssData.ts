@@ -1,5 +1,8 @@
 import postcss, { root } from "postcss";
 
+// Todo: dynamic import if coreplugins undefined: import corePlugins from "tailwindcss/lib/corePlugins";
+// 2.0 get base variants from config.variantorder
+
 //Tailwindcss imports
 import substituteVariantsAtRules from "tailwindcss/lib/lib/substituteVariantsAtRules";
 import substituteScreenAtRules from "tailwindcss/lib/lib/substituteScreenAtRules";

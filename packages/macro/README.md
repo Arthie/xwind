@@ -129,17 +129,17 @@ module.exports = {
       addBase(keyframesStyles)
     }),
     //Add !important to css rule with variant: important:bg-red-400
-    plugin(function ({ addVariant }) {
+    plugin(function ({ addVariant, addUtilities, addComponents, e, prefix, config }) {
       addVariant("important", ({ container }) => {
         container.walkRules((rule) => {
-          rule.selector = `.\\!${rule.selector.slice(1)}`;
+          rule.selector = `.important\\${config("separator")}${rule.selector.slice(1)}`
           rule.walkDecls((decl) => {
             decl.important = true;
           });
         });
       });
     }),
-    //Add tailwindcss official dark mode plugin
+    //Adds tailwindcss official dark mode plugin for tailwind versions 1.X
     require("tailwindcss/lib/flagged/darkModeVariantPlugin").default
   ]
 ```
