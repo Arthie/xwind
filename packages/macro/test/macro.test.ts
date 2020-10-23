@@ -20,7 +20,7 @@ pluginTester({
     `,
     "correct usage tagged": `
       import tw from '../lib/macro';
-      const css = tw\`supports-grid:text-blue-400 m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]\`;
+      const css = tw\`supports-grid:text-blue-400 important[text-green-200 bg-red-300] m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]\`;
     `,
     "tailwind-ui ussage": `
       import tw from '../lib/macro';

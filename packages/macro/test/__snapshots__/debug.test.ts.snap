@@ -23,7 +23,7 @@ const css = {
   },
   "@media (prefers-color-scheme: dark)": {
     "--bg-opacity": "1",
-    backgroundColor: ["#000000", "rgba(0, 0, 0, var(--bg-opacity))"],
+    backgroundColor: "rgba(0, 0, 0, var(--bg-opacity))",
   },
   "@media (prefers-reduced-motion: reduce)": {
     "&:hover": {
@@ -45,7 +45,7 @@ const css = tw("group-hover:bg-red-300");
 const css = {
   ".group:hover &": {
     "--bg-opacity": "1",
-    backgroundColor: ["#f8b4b4", "rgba(248, 180, 180, var(--bg-opacity))"],
+    backgroundColor: "rgba(248, 180, 180, var(--bg-opacity))",
   },
 };
 
@@ -62,7 +62,7 @@ const css = tw("dark:bg-red-300");
 const css = {
   "@media (prefers-color-scheme: dark)": {
     "--bg-opacity": "1",
-    backgroundColor: ["#f8b4b4", "rgba(248, 180, 180, var(--bg-opacity))"],
+    backgroundColor: "rgba(248, 180, 180, var(--bg-opacity))",
   },
 };
 
