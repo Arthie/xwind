@@ -1,5 +1,7 @@
-import {
+import initClasscomposer, {
+  ParsedTwClass,
   twClassesComposer,
+  twClassesGenerator,
   twClassesParser,
   twClassesSerializer,
 } from "../lib/classComposer";
@@ -35,7 +37,7 @@ test("classesComposer: multiple args", () => {
   expect(twClassesComposer(SEPARATOR)(...INPUT)).toStrictEqual(COMPOSER_RESULT);
 });
 
-const VARIANT_PARSER_RESULT = [
+const VARIANT_PARSER_RESULT: ParsedTwClass[] = [
   ["text-red-100", []],
   ["text-red-200", ["hover"]],
   ["text-red-300", ["focus", "sm"]],
@@ -69,5 +71,35 @@ test("Composer wrong SEPARATOR type", () => {
 test("No nested variants", () => {
   expect(() => twClassesComposer(SEPARATOR)("sm[hover[text-red-200]]")).toThrow(
     /Nested variant/
+  );
+});
+
+test("No separator in variants", () => {
+  expect(() => initClasscomposer(SEPARATOR, ["  : "])).toThrow(
+    /contain separator/
+  );
+});
+
+test("No duplicates", () => {
+  expect(
+    twClassesComposer(SEPARATOR)("text-sm text-xl text-lg text-sm")
+  ).toStrictEqual(["text-xl", "text-lg", "text-sm"]);
+});
+
+test("No classes composer", () => {
+  expect(twClassesComposer(SEPARATOR)("        ")).toStrictEqual([]);
+});
+
+test("No classes parser", () => {
+  expect(twClassesParser(SEPARATOR)("        ")).toStrictEqual([]);
+});
+
+test("No classes serializer", () => {
+  expect(twClassesSerializer(SEPARATOR)("        ")).toStrictEqual("");
+});
+
+test("classesGenerator", () => {
+  expect(twClassesGenerator(SEPARATOR)(VARIANT_PARSER_RESULT)).toStrictEqual(
+    COMPOSER_RESULT
   );
 });

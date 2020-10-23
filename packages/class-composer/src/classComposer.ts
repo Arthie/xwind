@@ -1,6 +1,8 @@
 // recursive type: string | string array | nested string array (no depth limit)
 export type TwClasses = string | TwClasses[];
 
+export type ParsedTwClass = [string, string[]];
+
 /**
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return a Array of tailwind classes.
@@ -54,14 +56,19 @@ export function twClassesComposer(separator: string) {
     }
 
     // replaces variant array syntax
-    const replacedTwClasses = twClassesString.replace(
+    const replacedTwClassesString = twClassesString.replace(
       VARIANT_ARRAY_SYNTAX_REGEX,
       variantArraySyntaxReplacer
     );
 
     // matches tailwind classes and removes whitespace
     // " text-red-100  bg-blue-200 " => ["text-red-100", "bg-blue-200"]
-    return Array.from(replacedTwClasses.match(NOT_WHITE_SPACE_REGEX) ?? []);
+    const composedTwClasses = Array.from(
+      replacedTwClassesString.match(NOT_WHITE_SPACE_REGEX) ?? []
+    );
+
+    //Remove duplicate classes
+    return Array.from(new Set(composedTwClasses.reverse())).reverse();
   };
 }
 
@@ -75,7 +82,7 @@ export function twClassesParser(separator: string) {
   return (...twClasses: TwClasses[]) => {
     const composedTwClasses = composer(twClasses);
 
-    const parsedClasses: [string, string[]][] = [];
+    const parsedClasses: ParsedTwClass[] = [];
     for (const composedTwClass of composedTwClasses) {
       const [twClass, ...variants] = composedTwClass.split(separator).reverse();
       parsedClasses.push([twClass, variants]);
@@ -87,10 +94,48 @@ export function twClassesParser(separator: string) {
 
 /**
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
+ * The composer function takes an array of parsed tailwind classes and return an Array of tailwind classes.
+ */
+export function twClassesGenerator(separator: string) {
+  return (parsedTwClasses: ParsedTwClass[]) => {
+    const twClasses: string[] = [];
+    for (const [twClass, variants] of parsedTwClasses) {
+      if (variants.length) {
+        twClasses.push(
+          variants.reverse().join(separator) + separator + twClass
+        );
+      } else {
+        twClasses.push(twClass);
+      }
+    }
+    return twClasses;
+  };
+}
+
+/**
+ * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return a tailwind classes string
  * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#3-twclassesserializer
  */
 export function twClassesSerializer(separator: string) {
   const composer = twClassesComposer(separator);
   return (...twClasses: TwClasses[]) => composer(twClasses).join(" ");
+}
+
+export default function (separator: string, variants?: string[]) {
+  if (variants) {
+    for (const variant of variants) {
+      if (variant.includes(separator)) {
+        throw new Error(
+          `Variant name: "${variant}" can't contain separator: "${separator}"`
+        );
+      }
+    }
+  }
+  return {
+    composer: twClassesComposer(separator),
+    parser: twClassesParser(separator),
+    serializer: twClassesSerializer(separator),
+    generator: twClassesGenerator(separator),
+  };
 }
