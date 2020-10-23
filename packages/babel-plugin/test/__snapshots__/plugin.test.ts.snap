@@ -1,14 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`tailwindcssinjs test 1: test 1 1`] = `
+
+import tw from "@tailwindcssinjs/css"
+const test = tw\`bg-red-500\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const test = "bg-red-500";
+
+
+`;
+
 exports[`tailwindcssinjs test 2: test 2 1`] = `
 
-import tw from "tailwindcssinjs"
+import tw from "@tailwindcssinjs/css"
 const test = tw\`bg-red-200 text-sm\`
 const test2 = tw\`bg-red-200 text-sm\`
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const test = "bg-red-200 text-sm";
+const test2 = "bg-red-200 text-sm";
+
+
+`;
+
+exports[`tailwindcssinjs test 3: test 3 1`] = `
+
+import tw from "@tailwindcssinjs/css"
+const test = tw\`md:hover:bg-red-200 xl:text-sm\`
+const test2 = tw\`bg-red-200 text-sm\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const test = "md:hover:bg-red-200 xl:text-sm";
+const test2 = "bg-red-200 text-sm";
+
+
+`;
+
+exports[`tailwindcssinjs test 4: test 4 1`] = `
+
+import tw from "@tailwindcssinjs/css"
+const test = tw\`md:hover:bg-red-200 xl:text-sm\`
+const test2 = tw\`bg-red-200 text-sm\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const test = "md:hover:bg-red-200 xl:text-sm";
 const test2 = "bg-red-200 text-sm";
 
 

@@ -1,17 +1,28 @@
+// To do: add package version to the cache //hash of package.json???
+// Check if config is changed + save hash of tailwind.config.js
+// @future https://github.com/babel/babel/pull/11741 + maybe depend on generated css???
+// check if output css file exists and warn if not
+// merge screen atrules?
 import Babel, { PluginObj, PluginPass } from "@babel/core";
+import initTwClassesUtils, {
+  ParsedTwClass,
+} from "@tailwindcssinjs/class-composer";
+import fs from "fs";
+import crypto from "crypto";
 import {
+  createTwClassDictionary,
+  getGenerateTwClassSubstituteRoot,
   requireTailwindConfig,
   resolveTailwindConfigPath,
-  TailwindConfig,
+  tailwindData,
+  TwClassDictionary,
 } from "@tailwindcssinjs/tailwindcss-data";
-import { tailwindcssinjs } from "./tailwindcssinjs";
+import corePlugins from "tailwindcss/lib/corePlugins";
 
-/**
- * tries to get tailwind config and stores config in state
- * if it fails it stores default config in state
- * @param state
- * @param config
- */
+function getHash(source: string) {
+  return crypto.createHash("md5").update(source).digest("hex");
+}
+
 function getTailwindConfig(config: string) {
   try {
     const resolvedConfigPath = resolveTailwindConfigPath(config);
@@ -21,114 +32,279 @@ function getTailwindConfig(config: string) {
   }
 }
 
-//todo: check if file exists if not error
-
-export interface PluginConfig {
-  output?: string;
-  config?: string;
+interface TailwincssinjsCacheEntry {
+  sourcePath: string;
+  sourceHash: string;
+  twClasses: string[];
 }
 
-// https://stackoverflow.com/a/32749533/971592
-class PluginError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = "@tailwindcssinjsPluginError";
-    if (typeof Error.captureStackTrace === "function") {
-      Error.captureStackTrace(this, this.constructor);
-    } else if (!this.stack) {
-      this.stack = new Error(message).stack;
+function initCache(path: string) {
+  const cachePath = path + "/.tailwindcssinjs/cache.json";
+
+  const getCache = (): TailwincssinjsCacheEntry[] => {
+    if (fs.existsSync(cachePath)) {
+      const file = fs.readFileSync(cachePath, { encoding: "utf8" });
+      return JSON.parse(file);
+    } else {
+      if (!fs.existsSync(path + "/.tailwindcssinjs")) {
+        fs.mkdirSync(path + "/.tailwindcssinjs");
+      }
+      fs.writeFileSync(cachePath, "[]");
+      return [];
     }
-  }
-}
+  };
 
-interface PluginState {
-  outputPath: string;
-  configPath: string;
-  importDefaultSpecifier?: string;
-  config: TailwindConfig;
-  tailwind: any;
-}
-
-export default function (
-  { types: t }: typeof Babel,
-  config: PluginConfig
-): PluginObj<PluginPass> {
-  let pluginState: PluginState;
-  return {
-    name: "tailwindcssinjs",
-    pre(state) {
-      // console.log("PRE", state)
-      // console.log("gen config", pluginState)
-      const outputPath = config.output;
-      const configPath = config.config ?? "./tailwind.config.js";
-      if (!outputPath)
-        throw new PluginError("Add output to @tailwindcssinjs plugin options");
-      const tailwindConfig = getTailwindConfig(configPath);
-      pluginState = {
-        outputPath,
-        configPath,
-        config: tailwindConfig,
-        tailwind: tailwindcssinjs(tailwindConfig, outputPath),
-      };
-    },
-    visitor: {
-      ImportDeclaration(path, state) {
-        // console.log("Import", state)
-        const source = path.get("source");
-        if (source.node.value === "@tailwindcssinjs/css") {
-          const specifiers = path.get("specifiers");
-          const importDefaultSpecifier = specifiers.find(
-            (specifier) => specifier.type === "ImportDefaultSpecifier"
-          ) as Babel.NodePath<Babel.types.ImportDefaultSpecifier> | undefined;
-          if (importDefaultSpecifier) {
-            pluginState.importDefaultSpecifier = importDefaultSpecifier.get(
-              "local"
-            ).node.name;
-            importDefaultSpecifier.remove();
-          }
-          if (path.get("specifiers").length === 0) {
-            path.remove();
-          }
-        }
-      },
-      TaggedTemplateExpression(path, state) {
-        const tag = path.get("tag");
-        if (
-          tag.node.type === "Identifier" &&
-          pluginState.importDefaultSpecifier &&
-          tag.node.name === pluginState.importDefaultSpecifier
-        ) {
-          const quasi = path.get("quasi");
-          const templateElements = quasi
-            .get("quasis")
-            .map((item) => item.node.value.raw);
-
-          const expressions = quasi
-            .get("expressions")
-            .map((item) => item.evaluate().value);
-          const twClasses = [];
-          while (templateElements.length || expressions.length) {
-            const twClassString = templateElements.shift();
-            const twClassObject = expressions.shift();
-            if (twClassString) {
-              twClasses.push(twClassString);
-            }
-            if (twClassObject) {
-              twClasses.push(twClassObject);
-            }
-          }
-          // console.log("TAG", state, twClasses)
-          path.replaceWith(
-            t.stringLiteral(pluginState.tailwind.setClasses(twClasses))
+  const validateCache = (cache: TailwincssinjsCacheEntry[]) => {
+    const validatedCache: TailwincssinjsCacheEntry[] = [];
+    for (const entry of cache) {
+      if (fs.existsSync(entry.sourcePath)) {
+        const file = fs.readFileSync(entry.sourcePath, { encoding: "utf8" });
+        const fileHash = getHash(file);
+        if (entry.sourceHash === fileHash) {
+          validatedCache.push(entry);
+        } else {
+          console.log(
+            "hash not right",
+            entry.sourcePath,
+            fileHash,
+            entry.sourceHash
           );
         }
-      },
-    },
-    post(state) {
-      // console.log("POST", state)
-      if (pluginState.outputPath) {
-        pluginState.tailwind.writeCSS();
+      } else {
+        console.log("file is gone", entry.sourcePath);
       }
+    }
+    return validatedCache;
+  };
+
+  const updateCache = (
+    cache: TailwincssinjsCacheEntry[],
+    updateEntry: TailwincssinjsCacheEntry
+  ) => {
+    const index = cache.findIndex(
+      (entry) => entry.sourcePath === updateEntry.sourcePath
+    );
+    if (index === -1) {
+      cache.push(updateEntry);
+    } else {
+      cache[index] = updateEntry;
+    }
+    return cache;
+  };
+
+  const writeCache = (cache: TailwincssinjsCacheEntry[]) => {
+    fs.writeFileSync(cachePath, JSON.stringify(cache));
+  };
+
+  return {
+    getCache,
+    validateCache,
+    updateCache,
+    writeCache,
+  };
+}
+
+let $configHash = "";
+let $generateTwClassSubstituteRoot:
+  | ReturnType<typeof getGenerateTwClassSubstituteRoot>
+  | undefined;
+let $twClassesUtils: ReturnType<typeof initTwClassesUtils> | undefined;
+let $twClassDictionary: TwClassDictionary | undefined;
+let $compare: any | undefined;
+let $generatedTwClassesCSS: { [key: string]: string } = {};
+
+let baseCSS = "";
+const commentCSS = `/* Generated by @tailwindcssinjs/babel-plugin */`;
+
+export default function (
+  babel: typeof Babel,
+  config: {
+    cache?: boolean;
+    includeBase?: boolean;
+    config?: string;
+    output?: string;
+  },
+  workingPath: string
+): PluginObj<PluginPass> {
+  const { types: t } = babel;
+
+  const enableCache = config.cache ?? true;
+  let cacheUtils: ReturnType<typeof initCache> | undefined;
+  let cache: TailwincssinjsCacheEntry[] | undefined;
+  if (enableCache) {
+    cacheUtils = initCache(workingPath);
+    cache = cacheUtils.validateCache(cacheUtils.getCache());
+  }
+
+  const outputPath = config.output;
+  const configPath = config.config ?? "./tailwind.config.js";
+  const includeBase = config.includeBase ?? true;
+
+  return {
+    name: "tailwindcssinjs",
+    visitor: {
+      ImportDefaultSpecifier(path, state) {
+        if (path.parent.type !== "ImportDeclaration") return;
+        if (path.parent.source.value !== "@tailwindcssinjs/css") return;
+
+        const importDefaultName = path.node.local.name;
+        const referencePaths =
+          path.scope.bindings[importDefaultName].referencePaths;
+
+        //remove default import specifier
+        path.remove();
+        if (path.parent.specifiers.length === 0) {
+          path.parentPath.remove();
+        }
+
+        if (!referencePaths.length) return;
+
+        const configHash = getHash(
+          fs.readFileSync(configPath, { encoding: "utf8" })
+        );
+        if ($configHash !== configHash) {
+          $configHash = configHash;
+          const {
+            resolvedConfig,
+            utilitiesRoot,
+            componentsRoot,
+            baseRoot,
+            screens,
+            variants,
+            generateTwClassSubstituteRoot,
+          } = tailwindData(getTailwindConfig(configPath), corePlugins);
+
+          $twClassDictionary = createTwClassDictionary(
+            componentsRoot,
+            utilitiesRoot
+          );
+
+          if (includeBase) {
+            const baseCSSroot = baseRoot.clone();
+            baseCSSroot.walkAtRules("layer", (atRule) => {
+              atRule.replaceWith(atRule.nodes);
+            });
+            baseCSS = baseCSSroot.toString();
+          }
+
+          $compare = (
+            [firstClass, firstVariants]: [string, string[]],
+            [secondClass, secondVariants]: [string, string[]]
+          ) => {
+            const firstIsScreen = screens.indexOf(firstVariants[0]);
+            const secondIsScreen = screens.indexOf(secondVariants[0]);
+            if (firstIsScreen !== -1 || secondIsScreen !== -1) {
+              if (firstIsScreen < secondIsScreen) {
+                return -1;
+              }
+              if (firstIsScreen > secondIsScreen) {
+                return 1;
+              }
+              return 0;
+            }
+
+            if (firstClass < secondClass) {
+              return -1;
+            }
+
+            if (firstClass > secondClass) {
+              return 1;
+            }
+            return 0;
+          };
+
+          $twClassesUtils = initTwClassesUtils(resolvedConfig.separator, [
+            ...screens,
+            ...variants,
+          ]);
+          $generateTwClassSubstituteRoot = generateTwClassSubstituteRoot;
+          $generatedTwClassesCSS = {};
+        }
+
+        if (!$twClassesUtils) throw new Error("No class utils found");
+
+        const referencedTwClasses = [];
+        for (const referencePath of referencePaths) {
+          if (referencePath.type !== "Identifier") {
+            throw new Error("Reference path is not identifier");
+          }
+
+          if (referencePath.parent.type === "TaggedTemplateExpression") {
+            const quasi = referencePath.parent.quasi;
+            const templateElements = quasi.quasis.map((item) => item.value.raw);
+            const expressions = quasi.expressions.map((item) => {
+              //@ts-expect-error
+              return item.evaluate().value;
+            });
+            const twTemplateClasses: string[] = [];
+            while (templateElements.length || expressions.length) {
+              const twClassString = templateElements.shift();
+              const twClassObject = expressions.shift();
+              if (twClassString) {
+                twTemplateClasses.push(twClassString);
+              }
+              if (twClassObject) {
+                twTemplateClasses.push(twClassObject);
+              }
+            }
+            const serializedTwClasses = $twClassesUtils.serializer(
+              twTemplateClasses
+            );
+            referencePath.parentPath.replaceWith(
+              t.stringLiteral(serializedTwClasses)
+            );
+            referencedTwClasses.push(serializedTwClasses);
+          }
+        }
+
+        if (
+          !outputPath ||
+          !$generateTwClassSubstituteRoot ||
+          !$twClassDictionary
+        )
+          return;
+
+        let twClasses = $twClassesUtils.composer(referencedTwClasses);
+        if (!twClasses.length) return;
+
+        let parsedTwClasses: ParsedTwClass[];
+        if (enableCache && state.filename && cacheUtils && cache) {
+          //@future https://github.com/babel/babel/pull/11741
+          // babel.addExternalDependency(configPath, state.filename)
+
+          const cacheEntry: TailwincssinjsCacheEntry = {
+            sourcePath: state.filename,
+            sourceHash: getHash(state.file.code),
+            twClasses,
+          };
+          const updatedCache = cacheUtils.updateCache(cache, cacheEntry);
+          cacheUtils.writeCache(updatedCache);
+
+          parsedTwClasses = $twClassesUtils.parser(
+            updatedCache.map((entry) => entry.twClasses)
+          );
+        } else {
+          parsedTwClasses = $twClassesUtils.parser(twClasses);
+        }
+
+        const sortedTwClasses = parsedTwClasses.sort($compare);
+        const combinedRoot = [];
+        for (const twClass of sortedTwClasses) {
+          const generatedTwClass = $twClassesUtils.generator([twClass]);
+          let generatedTwClassCSS = $generatedTwClassesCSS[generatedTwClass[0]];
+          if (generatedTwClass) {
+            generatedTwClassCSS = $generateTwClassSubstituteRoot(
+              $twClassDictionary,
+              twClass
+            ).toString();
+          }
+          combinedRoot.push(generatedTwClassCSS);
+        }
+        fs.writeFileSync(
+          outputPath,
+          [commentCSS, baseCSS, ...combinedRoot].join("\n\n")
+        );
+      },
     },
   };
 }
