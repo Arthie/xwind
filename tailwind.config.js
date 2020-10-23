@@ -2,6 +2,8 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   dark: "media", // or 'class'
+  //v2
+  darkMode: "media",
   experimental: "all",
   future: "all",
   theme: {
@@ -39,17 +41,17 @@ module.exports = {
         });
       });
     }),
-    plugin(function ({ addVariant }) {
+    plugin(function ({ addVariant, addUtilities, addComponents, e, prefix, config }) {
       addVariant("important", ({ container }) => {
         container.walkRules((rule) => {
-          rule.selector = `.important\\${config().separator}${rule.selector.slice(1)}`
+          rule.selector = `.important\\${config("separator")}${rule.selector.slice(1)}`
           rule.walkDecls((decl) => {
             decl.important = true;
           });
         });
       });
     }),
-    require("tailwindcss/lib/flagged/darkModeVariantPlugin").default
+    // require("tailwindcss/lib/flagged/darkModeVariantPlugin").default
   ],
   tailwindcssinjs: {
     // plugins: [require("./lib/plugins/cssString").default],
