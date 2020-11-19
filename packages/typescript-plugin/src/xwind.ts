@@ -1,32 +1,29 @@
-//@ts-expect-error
-import corePlugins from "tailwindcss/lib/corePlugins";
-
 import {
   tailwindData,
+  resolveConfig,
   TailwindConfig,
   createTwClassDictionary,
-} from "@tailwindcssinjs/tailwindcss-data";
+} from "@xwind/core";
 
 import { Logger } from "typescript-template-language-service-decorator";
 import importFresh from "import-fresh";
-import { twClassesParser } from "@tailwindcssinjs/class-composer";
+import { twClassesParser } from "@xwind/class-utilities";
 import { Root } from "postcss";
 
-export default function tailwindcssinjs(config: TailwindConfig) {
+export default function xwind(config: TailwindConfig) {
+  const resolvedConfig = resolveConfig(config);
   const {
     screens,
     variants,
     generateTwClassSubstituteRoot,
     utilitiesRoot,
     componentsRoot,
-  } = tailwindData(config, corePlugins);
+  } = tailwindData(resolvedConfig);
 
   const twObjectMap = createTwClassDictionary(utilitiesRoot, componentsRoot);
 
-  const twParser = twClassesParser(config.separator ?? ":");
-
   const generateCssFromText = (text: string) => {
-    const parsedClasses = twParser(text);
+    const parsedClasses = twClassesParser(resolvedConfig.separator, text);
 
     const roots: Root[] = [];
     for (const parsedClass of parsedClasses) {
