@@ -1,6 +1,6 @@
 {
   "name": "xwind",
-  "version": "0.1.1",
+  "version": "0.3.0",
   "description": "xwind",
   "keywords": [
     "tailwind",
@@ -27,8 +27,8 @@
     "postcss": "8.X.X"
   },
   "dependencies": {
-    "@xwind/class-utilities": "^0.2.0",
-    "@xwind/core": "^0.2.0",
+    "@xwind/class-utilities": "^0.3.0",
+    "@xwind/core": "^0.3.0",
     "babel-plugin-macros": "^2.8.0",
     "chokidar": "^3.4.3",
     "clsx": "1.1.1",
