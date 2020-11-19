@@ -53,7 +53,8 @@ module.exports = {
     }),
     // require("tailwindcss/lib/flagged/darkModeVariantPlugin").default
   ],
-  tailwindcssinjs: {
+  xwind: {
     // plugins: [require("./lib/plugins/cssString").default],
+    mode: "styleobject"
   },
 };
