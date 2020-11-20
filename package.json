@@ -14,19 +14,20 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/ui": "^0.7.2",
+    "@tailwindcss/typography": "^0.3.1",
     "@types/babel-plugin-macros": "^2.8.4",
     "@types/jest": "^26.0.15",
     "@types/lodash": "^4.14.165",
-    "@types/node": "^14.14.8",
+    "@types/node": "^14.14.9",
     "@types/prettier": "2.1.5",
     "babel-plugin-tester": "^10.0.0",
     "jest": "^26.6.3",
-    "postcss": "^8.1.7",
-    "prettier": "^2.1.2",
+    "postcss": "^8.1.8",
+    "prettier": "^2.2.0",
     "tailwindcss": "^2.0.1",
     "ts-jest": "^26.4.4",
-    "typescript": "4.1.1-rc"
+    "typescript": "4.1.2"
   }
 }
