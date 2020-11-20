@@ -1,9 +1,7 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  dark: "media", // or 'class'
-  //v2
-  darkMode: "media",
+  darkMode: "class",
   experimental: "all",
   future: "all",
   theme: {
@@ -23,9 +21,6 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    require("@tailwindcss/ui")({
-      layout: "sidebar",
-    }),
     plugin(function ({ addVariant, e, postcss }) {
       addVariant("supports-grid", ({ container, separator }) => {
         const supportsRule = postcss.atRule({
@@ -51,10 +46,9 @@ module.exports = {
         });
       });
     }),
-    // require("tailwindcss/lib/flagged/darkModeVariantPlugin").default
   ],
   xwind: {
     // plugins: [require("./lib/plugins/cssString").default],
-    mode: "styleobject"
+    mode: "objectstyles"
   },
 };
