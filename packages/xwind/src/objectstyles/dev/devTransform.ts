@@ -1,8 +1,8 @@
 import Babel from "@babel/core";
-import initDevTailwindObjectstyles from "./devTailwind";
 import { getArgs } from "../../transformUtils";
 import importFresh from "import-fresh";
 import { ObjectStyle } from "@xwind/core";
+import { TwClasses } from "@xwind/class-utilities";
 import generateDevCorePlugins from "./devObjectstylesGenerator";
 
 /**
@@ -16,10 +16,10 @@ import generateDevCorePlugins from "./devObjectstylesGenerator";
  */
 function devTransform(
   twConfigPath: string,
-  state: Babel.PluginPass,
   paths: Babel.NodePath<babel.types.Node>[],
+  state: Babel.PluginPass,
   t: typeof Babel.types,
-  tailwindObjectStyle: ReturnType<typeof initDevTailwindObjectstyles>
+  tailwindObjectStyle: (twClasses: TwClasses) => [string, ObjectStyle][]
 ) {
   const path = state.file.path;
   //create tailwindconfig importDeclaration:
@@ -81,7 +81,6 @@ function devTransform(
       [key: string]: ObjectStyle;
     };
   };
-
   generateDevCorePlugins({ ...cachedObjectstyles.default, ...objectstyles });
 }
 

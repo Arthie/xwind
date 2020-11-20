@@ -3,7 +3,16 @@ import { ObjectStyle, ResolvedTailwindConfig } from "@xwind/core";
 interface ClassesModeOptions {
   mode: "classes";
   classes: {
-    addBase?: boolean;
+    includeBase?: boolean;
+    entry: string | string[];
+    output: string;
+  };
+}
+
+interface ResolvedClassesModeOptions {
+  mode: "classes";
+  classes: {
+    includeBase: boolean;
     entry: string | string[];
     output: string;
   };
@@ -91,7 +100,7 @@ export function resolveXwindConfig(
       throw new Error(`XWIND:"No classes option found in xwind options"`);
     }
 
-    const { addBase, entry, output } = config.xwind.classes;
+    const { includeBase, entry, output } = config.xwind.classes;
 
     if (!entry) {
       throw new Error(`
@@ -141,7 +150,7 @@ export function resolveXwindConfig(
 export function resolveXwindClassesModeConfig(
   configPath: string,
   config: ResolvedXwindTailwindConfig
-): ClassesModeOptions {
+): ResolvedClassesModeOptions {
   const xwindConfig = resolveXwindConfig(configPath, config);
   if (xwindConfig.mode !== "classes") {
     throw new Error(`
@@ -159,7 +168,18 @@ export function resolveXwindClassesModeConfig(
       }
     `);
   }
-  return xwindConfig;
+  if (typeof xwindConfig.classes.includeBase === "undefined") {
+    xwindConfig.classes.includeBase = true;
+  }
+
+  return {
+    mode: "classes",
+    classes: {
+      includeBase: xwindConfig.classes.includeBase ?? true,
+      entry: xwindConfig.classes.entry,
+      output: xwindConfig.classes.output,
+    },
+  };
 }
 
 export function resolveXwindObjectstylesModeConfig(

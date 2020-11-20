@@ -38,13 +38,13 @@ export function getTwConfigCache(
     $twConfig = getTwConfig(twConfigPath);
     return {
       hash: $twConfigHash,
-      isOldTwConfig: false,
+      isNewTwConfig: true,
       twConfig: $twConfig,
     };
   }
   return {
     hash: $twConfigHash,
-    isOldTwConfig: true,
+    isNewTwConfig: false,
     twConfig: $twConfig,
   };
 }

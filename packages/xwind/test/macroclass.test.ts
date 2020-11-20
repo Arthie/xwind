@@ -1,15 +1,11 @@
 import pluginTester from "babel-plugin-tester";
 import plugin from "babel-plugin-macros";
 
-import {
-  tailwindData,
-  createTwClassDictionary,
-  resolveConfig,
-} from "@xwind/core";
+import core, { createTwClassDictionary, resolveConfig } from "@xwind/core";
 
 const tests = () => {
   const resolvedConfig = resolveConfig({});
-  const { utilitiesRoot, componentsRoot } = tailwindData(resolvedConfig);
+  const { utilitiesRoot, componentsRoot } = core(resolvedConfig);
   const twObjectMap = createTwClassDictionary(utilitiesRoot, componentsRoot);
 
   let tests = [];
