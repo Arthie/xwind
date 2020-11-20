@@ -1,4 +1,5 @@
 import { Root, Rule, atRule, AtRuleProps } from "postcss";
+import { TwParsedClass } from "@xwind/class-utilities";
 import { TwClassDictionary } from "./createTwClassDictionary";
 import parser from "postcss-selector-parser";
 
@@ -40,14 +41,14 @@ export function getGenerateTwClassSubstituteRoot(
   };
   return (
     twClassDictionary: TwClassDictionary,
-    twParsedClass: [string, string[]]
+    twParsedClass: TwParsedClass
   ) => {
-    const [twClass, twClassVariants] = twParsedClass;
+    const { class: twClass, variants } = twParsedClass;
     const twObject = twClassDictionary[twClass];
     if (!twObject) throw new Error(`Class "${twClass}" not found.`);
     const twRoot = twObject.clone();
-    if (twClassVariants.length) {
-      for (const variant of twClassVariants) {
+    if (variants.length) {
+      for (const variant of variants) {
         if (screens.includes(variant)) {
           const atRuleProps = {
             name: "screen",

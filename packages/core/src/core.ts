@@ -41,7 +41,7 @@ export function resolveConfig(config: TailwindConfig): ResolvedTailwindConfig {
   return _resolveConfig(config);
 }
 
-export function tailwindData(resolvedConfig: ResolvedTailwindConfig) {
+function core(resolvedConfig: ResolvedTailwindConfig) {
   const processedPlugins = processPlugins(
     [...corePlugins(resolvedConfig), ...resolvedConfig.plugins],
     resolvedConfig
@@ -83,3 +83,6 @@ export function tailwindData(resolvedConfig: ResolvedTailwindConfig) {
     generateTwClassSubstituteRoot,
   };
 }
+
+export default core;
+export * from "./utilities";
