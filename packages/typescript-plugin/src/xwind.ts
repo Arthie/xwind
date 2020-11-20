@@ -1,5 +1,4 @@
-import {
-  tailwindData,
+import core, {
   resolveConfig,
   TailwindConfig,
   createTwClassDictionary,
@@ -7,7 +6,7 @@ import {
 
 import { Logger } from "typescript-template-language-service-decorator";
 import importFresh from "import-fresh";
-import { twClassesParser } from "@xwind/class-utilities";
+import initClassUtilities from "@xwind/class-utilities";
 import { Root } from "postcss";
 
 export default function xwind(config: TailwindConfig) {
@@ -18,12 +17,16 @@ export default function xwind(config: TailwindConfig) {
     generateTwClassSubstituteRoot,
     utilitiesRoot,
     componentsRoot,
-  } = tailwindData(resolvedConfig);
+  } = core(resolvedConfig);
 
   const twObjectMap = createTwClassDictionary(utilitiesRoot, componentsRoot);
+  const twClassUtilities = initClassUtilities(resolvedConfig.separator, [
+    ...screens,
+    ...variants,
+  ]);
 
   const generateCssFromText = (text: string) => {
-    const parsedClasses = twClassesParser(resolvedConfig.separator, text);
+    const parsedClasses = twClassUtilities.parser(text);
 
     const roots: Root[] = [];
     for (const parsedClass of parsedClasses) {

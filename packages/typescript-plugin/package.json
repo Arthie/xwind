@@ -17,8 +17,8 @@
     "postcss": "8.X.X"
   },
   "dependencies": {
-    "@xwind/class-utilities": "^0.3.0",
-    "@xwind/core": "^0.3.0",
+    "@xwind/class-utilities": "^0.4.0",
+    "@xwind/core": "^0.4.0",
     "import-fresh": "^3.2.2",
     "typescript-template-language-service-decorator": "^2.2.0",
     "vscode-languageserver-types": "^3.16.0-next.4"
