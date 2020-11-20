@@ -1,17 +1,21 @@
+export type TwClass = string;
+
 // recursive type: string | string array | nested string array (no depth limit)
 export type TwClasses = string | TwClasses[];
 
-export type ParsedTwClass = [string, string[]];
+export type TwParsedClass = {
+  class: string;
+  variants: string[];
+};
+
+// recursive type: string | string array | nested string array (no depth limit)
+export type TwParsedClasses = TwParsedClass | TwParsedClasses[];
 
 /**
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return a Array of tailwind classes.
- * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#1-twclassescomposer
  */
-export function twClassesComposer(
-  separator: string,
-  ...twClasses: TwClasses[]
-) {
+export function composer(separator: string, ...twClasses: TwClasses[]) {
   if (typeof separator !== "string") {
     throw new Error(`Separator "${separator}" must be of type String`);
   }
@@ -50,8 +54,7 @@ export function twClassesComposer(
   };
 
   // combines all arguments into a string
-  // @ts-expect-error - typescript Array type is broken: lib.es2019.array.d.ts:23:5 - error TS2502: '"recur"' is referenced directly or indirectly in its own type annotation.
-  const twClassesString = twClasses.flat<TwClasses[], 1>(Infinity).join(" ");
+  const twClassesString = twClasses.flat(Infinity).join(" ");
 
   if (NESTED_ANGLE_BRACKET_REGEXP.test(twClassesString)) {
     throw new Error(`Nested variant arrays are not allowed`);
@@ -69,22 +72,24 @@ export function twClassesComposer(
     replacedTwClassesString.match(NOT_WHITE_SPACE_REGEX) ?? []
   );
 
-  //Remove duplicate classes
+  //Remove first of duplicate classes
   return Array.from(new Set(composedTwClasses.reverse())).reverse();
 }
 
 /**
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return an array of class and variants tuples.
- * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#2-twclassesvariantsparser
  */
-export function twClassesParser(separator: string, ...twClasses: TwClasses[]) {
-  const composedTwClasses = twClassesComposer(separator, twClasses);
+export function parser(separator: string, ...twClasses: TwClasses[]) {
+  const composedTwClasses = composer(separator, twClasses);
 
-  const parsedClasses: ParsedTwClass[] = [];
+  const parsedClasses: TwParsedClass[] = [];
   for (const composedTwClass of composedTwClasses) {
     const [twClass, ...variants] = composedTwClass.split(separator).reverse();
-    parsedClasses.push([twClass, variants]);
+    parsedClasses.push({
+      class: twClass,
+      variants,
+    });
   }
 
   return parsedClasses;
@@ -94,31 +99,43 @@ export function twClassesParser(separator: string, ...twClasses: TwClasses[]) {
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function takes an array of parsed tailwind classes and return an Array of tailwind classes.
  */
-export function twClassesGenerator(
+export function generator(
   separator: string,
-  parsedTwClasses: ParsedTwClass[]
+  ...parsedTwClasses: TwParsedClasses[]
 ) {
-  const twClasses: string[] = [];
-  for (const [twClass, variants] of parsedTwClasses) {
-    if (variants.length) {
-      twClasses.push(variants.reverse().join(separator) + separator + twClass);
-    } else {
-      twClasses.push(twClass);
+  const getTwClasses = (parsedTwClasses: TwParsedClasses[]) => {
+    const twClasses: string[] = [];
+    for (const parsedTwClassOrParsedTwClassArray of parsedTwClasses) {
+      if (Array.isArray(parsedTwClassOrParsedTwClassArray)) {
+        const parsedTwClassArray = parsedTwClassOrParsedTwClassArray;
+        twClasses.push(...getTwClasses(parsedTwClassArray));
+      } else {
+        const parsedTwClass = parsedTwClassOrParsedTwClassArray;
+        if (parsedTwClass.variants?.length) {
+          const twClass = [
+            ...Array.from(parsedTwClass.variants).reverse(),
+            parsedTwClass.class,
+          ].join(separator);
+          twClasses.push(twClass);
+        } else {
+          twClasses.push(parsedTwClass.class);
+        }
+      }
     }
-  }
-  return twClasses;
+    return twClasses;
+  };
+
+  const twClasses = getTwClasses(parsedTwClasses);
+  //Remove first of duplicate classes
+  return Array.from(new Set(twClasses.reverse())).reverse();
 }
 
 /**
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return a tailwind classes string
- * Docs + example: https://github.com/Arthie/tailwindcssinjs/tree/master/packages/class-composer#3-twclassesserializer
  */
-export function twClassesSerializer(
-  separator: string,
-  ...twClasses: TwClasses[]
-) {
-  return twClassesComposer(separator, twClasses).join(" ");
+export function serializer(separator: string, ...twClasses: TwClasses[]) {
+  return composer(separator, twClasses).join(" ");
 }
 
 function classUtilities(separator: string, variants?: string[]) {
@@ -131,14 +148,11 @@ function classUtilities(separator: string, variants?: string[]) {
   }
 
   return {
-    composer: (...twClasses: TwClasses[]) =>
-      twClassesComposer(separator, twClasses),
-    parser: (...twClasses: TwClasses[]) =>
-      twClassesParser(separator, twClasses),
-    serializer: (...twClasses: TwClasses[]) =>
-      twClassesSerializer(separator, twClasses),
-    generator: (parsedTwClasses: ParsedTwClass[]) =>
-      twClassesGenerator(separator, parsedTwClasses),
+    composer: (...twClasses: TwClasses[]) => composer(separator, twClasses),
+    parser: (...twClasses: TwClasses[]) => parser(separator, twClasses),
+    serializer: (...twClasses: TwClasses[]) => serializer(separator, twClasses),
+    generator: (...parsedTwClasses: TwParsedClasses[]) =>
+      generator(separator, parsedTwClasses),
   };
 }
 
