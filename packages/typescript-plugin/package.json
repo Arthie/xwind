@@ -1,6 +1,6 @@
 {
   "name": "typescript-xwind-plugin",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "Arthie",
   "description": "This package contains xwind typescript language service plugin",
   "main": "lib/plugin.js",
