@@ -20,7 +20,7 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
   ],
   xwind: {
-    mode: "classes",
+    mode: "objectstyles",
     classes: {
       entry: "./src",
       output: "./src/styles/xwind.css"
