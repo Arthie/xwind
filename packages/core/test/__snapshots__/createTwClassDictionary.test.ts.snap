@@ -1,57 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test test 1`] = `
-"@media (min-width: 668px) {
+"
+@media (min-width: 668px) {
         .test {
             max-width: 668px;
         }
-}"
+    }"
 `;
 
 exports[`test test2 1`] = `
-"@media (min-width: 668px) {
-    @media (min-width: 640px) {
+"
+@media (min-width: 668px) {
+        @media (min-width: 640px) {
             .test2 {
                 max-width: 640px;
             }
-    }
-}"
+        }
+    }"
 `;
 
 exports[`test test3 1`] = `
-"@media (min-width: 668px) {
-    @media (min-width: 640px) {
+"
+@media (min-width: 668px) {
         @media (min-width: 640px) {
+            @media (min-width: 640px) {
                 .test3 {
                     max-width: 640px;
                 }
+            }
         }
-    }
-}"
+    }"
 `;
 
 exports[`test test4 1`] = `
-"@media (min-width: 668px) {
-    @media (min-width: 640px) {
+"
+@media (min-width: 668px) {
         @media (min-width: 640px) {
             @media (min-width: 640px) {
+                @media (min-width: 640px) {
                     .test4 {
                         max-width: 640px;
                     }
+                }
             }
         }
-    }
-}"
+    }"
 `;
 
 exports[`test test5 1`] = `
-"@media (min-width: 668px) {
-    @media (min-width: 640px) {
+"
+@media (min-width: 668px) {
         @media (min-width: 640px) {
+            @media (min-width: 640px) {
                 .test5 {
                     max-width: 640px;
                 }
+            }
         }
-    }
-}"
+    }"
 `;
