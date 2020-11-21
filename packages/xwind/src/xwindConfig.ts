@@ -80,7 +80,7 @@ export function resolveXwindConfig(
   }
 
   if (mode !== "classes" && mode !== "objectstyles")
-    console.log(`
+    throw new Error(`
     XWIND: Mode has been set to "${mode}".
     Please change the mode option from the xwind config object in the "${configPath}" file to "classes" or "objectstyles".
     

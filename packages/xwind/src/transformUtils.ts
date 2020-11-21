@@ -105,7 +105,6 @@ export function getCachedTransformer(twConfigPath: string) {
           const parsedTwClasses = twClassesUtils.parser(twClasses);
           const objectStyles: [string, ObjectStyle][] = [];
           for (const parsedTwClass of parsedTwClasses) {
-            console.log(parsedTwClass);
             const twRoot = generateTwClassSubstituteRoot(
               twClassDictionary,
               parsedTwClass
