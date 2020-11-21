@@ -1,4 +1,13 @@
-import { root, atRule, AtRule, Root, Rule } from "postcss";
+import {
+  root,
+  atRule,
+  AtRule,
+  Root,
+  Rule,
+  Container,
+  ChildNode,
+  rule,
+} from "postcss";
 import parser from "postcss-selector-parser";
 
 export interface TwClassDictionary {
@@ -7,20 +16,6 @@ export interface TwClassDictionary {
 
 export function createTwClassDictionary(...roots: Root[]) {
   const twClassDictionary: TwClassDictionary = {};
-  const combinedRoot = root();
-  for (const twRoot of roots) {
-    combinedRoot.append(twRoot.clone());
-  }
-
-  const selectorparser = parser();
-  const parseSelectorClasses = (rule: Rule) => {
-    let selectorClasses: string[] = [];
-    selectorparser.astSync(rule.selector).walkClasses((ruleClass) => {
-      if (ruleClass.value) selectorClasses.push(ruleClass.value);
-    });
-    return selectorClasses;
-  };
-
   const addNodeToTwClassDictionary = (node: Rule | AtRule, twClass: string) => {
     if (twClassDictionary[twClass]) {
       twClassDictionary[twClass].append(node.clone());
@@ -29,52 +24,109 @@ export function createTwClassDictionary(...roots: Root[]) {
     }
   };
 
-  const isMediaAtRule = (mediaAtRule: AtRule) => {
-    const selectorClassAtRules: [string, AtRule][] = [];
-    const atRuleNode = atRule({
-      name: mediaAtRule.name,
-      params: mediaAtRule.params,
+  const combinedRoot = root();
+  for (const twRoot of roots) {
+    combinedRoot.append(twRoot.clone());
+  }
+  flattenContainer(combinedRoot);
+  for (const node of combinedRoot.nodes) {
+    //@ts-expect-error
+    addNodeToTwClassDictionary(node, node.twClass);
+  }
+  return twClassDictionary;
+}
+
+export function flattenContainer(container: Container) {
+  const selectorparser = parser();
+  const parseSelectorClasses = (rule: Rule) => {
+    let selectorClasses: Array<string> = [];
+    selectorparser.astSync(rule.selector).walkClasses((ruleClass) => {
+      if (ruleClass.value) selectorClasses.push(ruleClass.value);
     });
-    for (const $node of mediaAtRule.nodes ?? []) {
-      const node = $node.clone();
-      if (node.type === "atrule") {
-        for (const [selectorClass, nestedAtRule] of isMediaAtRule(node)) {
-          const selectorAtRuleNode = atRuleNode.clone().append(nestedAtRule);
-          selectorClassAtRules.push([selectorClass, selectorAtRuleNode]);
-        }
-      }
-      if (node.type === "rule") {
-        const [selectorClass] = parseSelectorClasses(node);
-        const selectorAtRuleNode = atRuleNode.clone().append(node);
-        selectorClassAtRules.push([selectorClass, selectorAtRuleNode]);
-      }
-    }
-    return selectorClassAtRules;
+    return Array.from(new Set(selectorClasses));
   };
 
-  combinedRoot.walk((node) => {
+  const walker = (node: ChildNode) => {
+    //@ts-expect-error
+    if (node?.twClass) {
+      return;
+    }
     if (node.type === "atrule") {
       if (node.name === "layer") {
+        node.parent?.append(node.nodes);
+        node.removeAll();
         node.remove();
       } else if (node.name === "variants") {
+        node.parent?.append(node.nodes);
+        node.removeAll();
         node.remove();
       } else if (node.name === "media") {
-        for (const [selectorClass, atRule] of isMediaAtRule(node)) {
-          addNodeToTwClassDictionary(atRule, selectorClass);
+        node.walk(walker);
+        for (const atRulenode of node.nodes) {
+          const newAtrule = atRule({
+            name: node.name,
+            nodes: [atRulenode],
+            params: node.params,
+            raws: node.raws,
+            source: node.source,
+          });
+          //@ts-expect-error
+          newAtrule.twClass = atRulenode.twClass;
+          node.parent?.append(newAtrule);
         }
         node.removeAll();
+        node.remove();
       } else {
-        //remove other atRules e.g. @keyframes
-        node.removeAll();
+        //@ts-expect-error
+        node.twClass = "_REMAINDER";
       }
-    }
+    } else if (node.type === "rule") {
+      const selectorClasses = parseSelectorClasses(node);
 
-    if (node.type === "rule") {
-      const [selectorClass] = parseSelectorClasses(node);
-      addNodeToTwClassDictionary(node, selectorClass);
-      node.removeAll();
-    }
-  });
+      const isNoClassSelector = selectorClasses.length === 0;
+      const isSingleClassSelector = selectorClasses.length === 1;
+      const isMultiSelector = selectorClasses.length > 1;
 
-  return twClassDictionary;
+      if (isSingleClassSelector) {
+        //@ts-expect-error
+        node.twClass = selectorClasses[0];
+      }
+
+      if (isNoClassSelector) {
+        //@ts-expect-error
+        node.twClass = "_REMAINDER";
+      }
+
+      if (isMultiSelector) {
+        const isClassInSelector = (selector: string, twClass: string) => {
+          let isInSelector = false;
+          selectorparser.astSync(selector).walkClasses((selectorClass) => {
+            if (selectorClass.value === twClass) isInSelector = true;
+          });
+          return isInSelector;
+        };
+        for (const selectorClass of selectorClasses) {
+          const selectors = node.selectors.filter((selector) =>
+            isClassInSelector(selector, selectorClass)
+          );
+          const newRule = rule({
+            nodes: node.nodes,
+            raws: node.raws,
+            selectors,
+            source: node.source,
+          });
+          //@ts-expect-error
+          newRule.twClass = selectorClass;
+          node.parent?.append(newRule);
+        }
+        node.removeAll();
+        node.remove();
+      }
+    } else {
+      //@ts-expect-error
+      node.twClass = "_REMAINDER";
+    }
+  };
+
+  container.walk(walker);
 }
