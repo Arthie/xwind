@@ -1,8 +1,14 @@
 import plugin from "tailwindcss/plugin";
 
-//@ts-expect-error
-const base = plugin(function ({ addBase, addUtilities, e, theme, variants }) {
-  const style = {
+const base = plugin(function ({
+  addBase,
+  addUtilities,
+  e,
+  theme,
+  variants,
+  config,
+}: any) {
+  const baseCSS = {
     "*": {
       "--tw-shadow": "0 0 #0000",
       "--tw-ring-inset": "var(--tw-empty,/*!*/ /*!*/)",
@@ -12,15 +18,22 @@ const base = plugin(function ({ addBase, addUtilities, e, theme, variants }) {
       "--tw-ring-offset-shadow": "0 0 #0000",
       "--tw-ring-shadow": "0 0 #0000",
     },
+    "@keyframes spin": { to: { transform: "rotate(360deg)" } },
+    "@keyframes ping": { "75%, 100%": { transform: "scale(2)", opacity: 0 } },
+    "@keyframes pulse": { "50%": { opacity: 0.5 } },
+    "@keyframes bounce": {
+      "0%, 100%": {
+        transform: "translateY(-25%)",
+        animationTimingFunction: "cubic-bezier(0.8,0,1,1)",
+      },
+      "50%": {
+        transform: "none",
+        animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+      },
+    },
   };
-  addBase(style);
-  const keyframesConfig = theme("keyframes");
-  const keyframesStyles = Object.fromEntries(
-    Object.entries(keyframesConfig).map(([name, keyframes]) => {
-      return [`@keyframes ${name}`, keyframes];
-    })
-  );
-  addBase(keyframesStyles);
+
+  addBase(baseCSS);
 });
 
 export default base;
