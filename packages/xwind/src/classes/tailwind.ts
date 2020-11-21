@@ -32,28 +32,36 @@ function tailwind(
     atRule.replaceWith(atRule.nodes);
   });
 
+  const variantOrder = tailwindConfig.variantOrder;
+  const twClassOrder = Object.keys(twClassDictionary);
   const compare = (
     { class: firstClass, variants: firstVariants }: TwParsedClass,
     { class: secondClass, variants: secondVariants }: TwParsedClass
   ) => {
-    const firstIsScreen = screens.indexOf(firstVariants[0]);
-    const secondIsScreen = screens.indexOf(secondVariants[0]);
-    if (firstIsScreen !== -1 || secondIsScreen !== -1) {
-      if (firstIsScreen < secondIsScreen) {
-        return -1;
-      }
-      if (firstIsScreen > secondIsScreen) {
-        return 1;
-      }
-      return 0;
+    //compare screen variants
+    const firstScreenIndex = firstVariants.length
+      ? screens.indexOf(firstVariants[firstVariants.length - 1])
+      : -1;
+    const secondScreenIndex = secondVariants.length
+      ? screens.indexOf(secondVariants[secondVariants.length - 1])
+      : -1;
+    if (firstScreenIndex !== -1 || secondScreenIndex !== -1) {
+      if (firstScreenIndex < secondScreenIndex) return -1;
+      if (firstScreenIndex > secondScreenIndex) return 1;
     }
 
-    if (firstClass < secondClass) {
-      return -1;
-    }
+    //compare classes
+    const firstClassIndex = twClassOrder.indexOf(firstClass);
+    const secondClassIndex = twClassOrder.indexOf(secondClass);
+    if (firstClassIndex < secondClassIndex) return -1;
+    if (firstClassIndex > secondClassIndex) return 1;
 
-    if (firstClass > secondClass) {
-      return 1;
+    //compare variants
+    const firstVariantsIndex = variantOrder.indexOf(firstVariants[0]);
+    const secondVariantsIndex = variantOrder.indexOf(secondVariants[0]);
+    if (firstVariantsIndex !== -1 || secondVariantsIndex !== -1) {
+      if (firstVariantsIndex < secondVariantsIndex) return -1;
+      if (firstVariantsIndex > secondVariantsIndex) return 1;
     }
     return 0;
   };
