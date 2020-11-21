@@ -1,5 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`xwind _REMAINDER: _REMAINDER 1`] = `
+
+import xw from 'xwind';
+const css = xw\`_REMAINDER\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "*": {
+    "--tw-shadow": "0 0 #0000",
+    "--tw-ring-inset": "var(--tw-empty,/*!*/ /*!*/)",
+    "--tw-ring-offset-width": "0px",
+    "--tw-ring-offset-color": "#fff",
+    "--tw-ring-color": "rgba(59, 130, 246, 0.5)",
+    "--tw-ring-offset-shadow": "0 0 #0000",
+    "--tw-ring-shadow": "0 0 #0000",
+  },
+  "@keyframes bounce": {
+    "0%, 100%": {
+      transform: "translateY(-25%)",
+      animationTimingFunction: "cubic-bezier(0.8,0,1,1)",
+    },
+    "50%": {
+      transform: "none",
+      animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+    },
+  },
+  "@keyframes ping": {
+    "75%, 100%": {
+      transform: "scale(2)",
+      opacity: 0,
+    },
+  },
+  "@keyframes pulse": {
+    "50%": {
+      opacity: 0.5,
+    },
+  },
+  "@keyframes spin": {
+    to: {
+      transform: "rotate(360deg)",
+    },
+  },
+};
+
+
+`;
+
 exports[`xwind -bottom-0.5: -bottom-0.5 1`] = `
 
 import xw from 'xwind';
@@ -16373,7 +16421,16 @@ const css = xw\`diagonal-fractions\`;
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  "--tw-numeric-fraction": "diagonal-fractions",
+  "--tw-ordinal": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-slashed-zero": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-figure": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-spacing": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-fraction": [
+    "diagonal-fractions",
+    "var(--tw-empty,/*!*/ /*!*/)",
+  ],
+  fontVariantNumeric:
+    "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)",
 };
 
 
@@ -26122,7 +26179,13 @@ const css = xw\`lining-nums\`;
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  "--tw-numeric-figure": "lining-nums",
+  "--tw-ordinal": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-slashed-zero": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-spacing": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-fraction": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-figure": ["lining-nums", "var(--tw-empty,/*!*/ /*!*/)"],
+  fontVariantNumeric:
+    "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)",
 };
 
 
@@ -31017,7 +31080,13 @@ const css = xw\`oldstyle-nums\`;
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  "--tw-numeric-figure": "oldstyle-nums",
+  "--tw-ordinal": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-slashed-zero": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-spacing": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-fraction": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-figure": ["oldstyle-nums", "var(--tw-empty,/*!*/ /*!*/)"],
+  fontVariantNumeric:
+    "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)",
 };
 
 
@@ -31451,16 +31520,13 @@ const css = xw\`ordinal\`;
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  "--tw-ordinal": "ordinal",
-  "&, .slashed-zero, .lining-nums, .oldstyle-nums, .proportional-nums, .tabular-nums, .diagonal-fractions, .stacked-fractions": {
-    "--tw-ordinal": "var(--tw-empty,/*!*/ /*!*/)",
-    "--tw-slashed-zero": "var(--tw-empty,/*!*/ /*!*/)",
-    "--tw-numeric-figure": "var(--tw-empty,/*!*/ /*!*/)",
-    "--tw-numeric-spacing": "var(--tw-empty,/*!*/ /*!*/)",
-    "--tw-numeric-fraction": "var(--tw-empty,/*!*/ /*!*/)",
-    fontVariantNumeric:
-      "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)",
-  },
+  "--tw-slashed-zero": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-figure": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-spacing": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-fraction": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-ordinal": ["ordinal", "var(--tw-empty,/*!*/ /*!*/)"],
+  fontVariantNumeric:
+    "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)",
 };
 
 
@@ -35859,7 +35925,13 @@ const css = xw\`proportional-nums\`;
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  "--tw-numeric-spacing": "proportional-nums",
+  "--tw-ordinal": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-slashed-zero": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-figure": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-fraction": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-spacing": ["proportional-nums", "var(--tw-empty,/*!*/ /*!*/)"],
+  fontVariantNumeric:
+    "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)",
 };
 
 
@@ -43415,7 +43487,13 @@ const css = xw\`slashed-zero\`;
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  "--tw-slashed-zero": "slashed-zero",
+  "--tw-ordinal": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-figure": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-spacing": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-fraction": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-slashed-zero": ["slashed-zero", "var(--tw-empty,/*!*/ /*!*/)"],
+  fontVariantNumeric:
+    "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)",
 };
 
 
@@ -44743,7 +44821,13 @@ const css = xw\`stacked-fractions\`;
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  "--tw-numeric-fraction": "stacked-fractions",
+  "--tw-ordinal": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-slashed-zero": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-figure": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-spacing": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-fraction": ["stacked-fractions", "var(--tw-empty,/*!*/ /*!*/)"],
+  fontVariantNumeric:
+    "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)",
 };
 
 
@@ -45010,7 +45094,13 @@ const css = xw\`tabular-nums\`;
       ↓ ↓ ↓ ↓ ↓ ↓
 
 const css = {
-  "--tw-numeric-spacing": "tabular-nums",
+  "--tw-ordinal": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-slashed-zero": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-figure": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-fraction": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-numeric-spacing": ["tabular-nums", "var(--tw-empty,/*!*/ /*!*/)"],
+  fontVariantNumeric:
+    "var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)",
 };
 
 
@@ -49953,28 +50043,6 @@ const css = {
   overflow: "hidden",
   textOverflow: "ellipsis",
   whiteSpace: "nowrap",
-};
-
-
-`;
-
-exports[`xwind undefined: undefined 1`] = `
-
-import xw from 'xwind';
-const css = xw\`undefined\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "*": {
-    "--tw-shadow": "0 0 #0000",
-    "--tw-ring-inset": "var(--tw-empty,/*!*/ /*!*/)",
-    "--tw-ring-offset-width": "0px",
-    "--tw-ring-offset-color": "#fff",
-    "--tw-ring-color": "rgba(59, 130, 246, 0.5)",
-    "--tw-ring-offset-shadow": "0 0 #0000",
-    "--tw-ring-shadow": "0 0 #0000",
-  },
 };
 
 
