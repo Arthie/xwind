@@ -36,7 +36,7 @@ You may have encountered some of these problems when using Tailwind with CSS-in-
 
 xwind is a babel plugin that transforms Tailwind classes into CSS object styles or a classes string. The CSS object styles output can be used with your favorite CSS-in-JS library like emotion, styled-components ... The classes string output can be used with the xwind cli to generate a minimal css file of the used Tailwind classes.
 
-### Basic example
+### Output mode "objectstyles" example
 
 ```js
 import xw from "xwind";
@@ -45,8 +45,6 @@ const styles = xw`text-red-100 hover:text-green-100 hover:bg-blue-200`;
 // OR (with custom array syntax)
 const styles = xw`text-red-100 hover[text-green-100 bg-blue-200]`;
 ```
-
-#### Output mode "objectstyles"
 
 Transforms by default into Postcss-js / JSS compatible syntax:
 
@@ -83,7 +81,15 @@ const styles = `
 
 Plugins make it possible to support any CSS-in-JS library syntax.
 
-#### Output mode "classes"
+### Output mode "classes" example
+
+```js
+import xw from "xwind";
+
+const styles = xw`text-red-100 hover:text-green-100 hover:bg-blue-200`;
+// OR (with custom array syntax)
+const styles = xw`text-red-100 hover[text-green-100 bg-blue-200]`;
+```
 
 Transforms into a classes string:
 
