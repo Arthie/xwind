@@ -9,11 +9,11 @@ const { utilitiesRoot, componentsRoot } = core(resolvedConfig);
 const twObjectMap = createTwClassDictionary(utilitiesRoot, componentsRoot);
 
 test(`Remainder test`, () => {
-  expect(twObjectMap._REMAINDER.toString()).toMatchSnapshot();
+  expect(twObjectMap.XWIND_GLOBAL.toString()).toMatchSnapshot();
 });
 
 test(`Remainder object test`, () => {
-  const object = objectify(twObjectMap._REMAINDER);
+  const object = objectify(twObjectMap.XWIND_GLOBAL);
   console.log(object);
   expect(object).toMatchSnapshot();
 });

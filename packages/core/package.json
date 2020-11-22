@@ -1,6 +1,6 @@
 {
   "name": "@xwind/core",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Arthie",
   "description": "This package extracts core data from tailwindcss",
   "main": "lib/core.js",

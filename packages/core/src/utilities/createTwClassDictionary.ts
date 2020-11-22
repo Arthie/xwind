@@ -11,11 +11,16 @@ import {
 import parser from "postcss-selector-parser";
 
 export interface TwClassDictionary {
+  XWIND_GLOBAL: Root;
   [key: string]: Root;
 }
 
+const XWIND_GLOBAL = "XWIND_GLOBAL";
+
 export function createTwClassDictionary(...roots: Root[]) {
-  const twClassDictionary: TwClassDictionary = {};
+  const twClassDictionary: TwClassDictionary = {
+    [XWIND_GLOBAL]: root(),
+  };
   const addNodeToTwClassDictionary = (node: Rule | AtRule, twClass: string) => {
     if (twClassDictionary[twClass]) {
       twClassDictionary[twClass].append(node.clone());
@@ -78,7 +83,7 @@ export function flattenContainer(container: Container) {
         node.remove();
       } else {
         //@ts-expect-error
-        node.twClass = "_REMAINDER";
+        node.twClass = XWIND_GLOBAL;
       }
     } else if (node.type === "rule") {
       const selectorClasses = parseSelectorClasses(node);
@@ -94,7 +99,7 @@ export function flattenContainer(container: Container) {
 
       if (isNoClassSelector) {
         //@ts-expect-error
-        node.twClass = "_REMAINDER";
+        node.twClass = XWIND_GLOBAL;
       }
 
       if (isMultiSelector) {
@@ -124,7 +129,7 @@ export function flattenContainer(container: Container) {
       }
     } else {
       //@ts-expect-error
-      node.twClass = "_REMAINDER";
+      node.twClass = XWIND_GLOBAL;
     }
   };
 
