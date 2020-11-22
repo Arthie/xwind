@@ -169,7 +169,7 @@ The name Tailwind as well as related names, marks, emblems and images are regist
 
 The official Tailwind website can be found at https://tailwindcss.com/.
 
-Please contact the project ower if there are any concers regarding: [Tailwind CSS brand assets and usage guidelines](https://tailwindcss.com/brand).
+Please contact the project ower if there are any concerns regarding: [Tailwind CSS brand assets and usage guidelines](https://tailwindcss.com/brand).
 
 ## License
 
