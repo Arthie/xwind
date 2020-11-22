@@ -13,7 +13,6 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    require("xwind/plugins/base"),
     require("xwind/plugins/important"),
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
