@@ -63,6 +63,7 @@ export function getCachedTransformer(twConfigPath: string) {
     const {
       screens,
       variants,
+      baseRoot,
       componentsRoot,
       utilitiesRoot,
       generateTwClassSubstituteRoot,
@@ -92,10 +93,10 @@ export function getCachedTransformer(twConfigPath: string) {
     }
 
     if (xwConfig.mode === "objectstyles") {
-      const twClassDictionary = createTwClassDictionary(
-        componentsRoot,
-        utilitiesRoot
-      );
+      const twClassDictionary = {
+        XWIND_BASE: createTwClassDictionary(baseRoot).XWIND_GLOBAL,
+        ...createTwClassDictionary(componentsRoot, utilitiesRoot),
+      };
 
       const developmentMode = xwConfig.objectstyles?.developmentMode ?? true;
       const isDev = process.env.NODE_ENV === "development" && developmentMode;

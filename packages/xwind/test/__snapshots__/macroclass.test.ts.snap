@@ -1,53 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`xwind _REMAINDER: _REMAINDER 1`] = `
-
-import xw from 'xwind/macro';
-const css = xw\`_REMAINDER\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  "*": {
-    "--tw-shadow": "0 0 #0000",
-    "--tw-ring-inset": "var(--tw-empty,/*!*/ /*!*/)",
-    "--tw-ring-offset-width": "0px",
-    "--tw-ring-offset-color": "#fff",
-    "--tw-ring-color": "rgba(59, 130, 246, 0.5)",
-    "--tw-ring-offset-shadow": "0 0 #0000",
-    "--tw-ring-shadow": "0 0 #0000",
-  },
-  "@keyframes bounce": {
-    "0%, 100%": {
-      transform: "translateY(-25%)",
-      animationTimingFunction: "cubic-bezier(0.8,0,1,1)",
-    },
-    "50%": {
-      transform: "none",
-      animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
-    },
-  },
-  "@keyframes ping": {
-    "75%, 100%": {
-      transform: "scale(2)",
-      opacity: 0,
-    },
-  },
-  "@keyframes pulse": {
-    "50%": {
-      opacity: 0.5,
-    },
-  },
-  "@keyframes spin": {
-    to: {
-      transform: "rotate(360deg)",
-    },
-  },
-};
-
-
-`;
-
 exports[`xwind -bottom-0.5: -bottom-0.5 1`] = `
 
 import xw from 'xwind/macro';
@@ -10557,6 +10509,54 @@ const css = xw\`-translate-y-px\`;
 
 const css = {
   "--tw-translate-y": "-1px",
+};
+
+
+`;
+
+exports[`xwind XWIND_GLOBAL: XWIND_GLOBAL 1`] = `
+
+import xw from 'xwind/macro';
+const css = xw\`XWIND_GLOBAL\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "*": {
+    "--tw-shadow": "0 0 #0000",
+    "--tw-ring-inset": "var(--tw-empty,/*!*/ /*!*/)",
+    "--tw-ring-offset-width": "0px",
+    "--tw-ring-offset-color": "#fff",
+    "--tw-ring-color": "rgba(59, 130, 246, 0.5)",
+    "--tw-ring-offset-shadow": "0 0 #0000",
+    "--tw-ring-shadow": "0 0 #0000",
+  },
+  "@keyframes bounce": {
+    "0%, 100%": {
+      transform: "translateY(-25%)",
+      animationTimingFunction: "cubic-bezier(0.8,0,1,1)",
+    },
+    "50%": {
+      transform: "none",
+      animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+    },
+  },
+  "@keyframes ping": {
+    "75%, 100%": {
+      transform: "scale(2)",
+      opacity: 0,
+    },
+  },
+  "@keyframes pulse": {
+    "50%": {
+      opacity: 0.5,
+    },
+  },
+  "@keyframes spin": {
+    to: {
+      transform: "rotate(360deg)",
+    },
+  },
 };
 
 

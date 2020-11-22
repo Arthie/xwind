@@ -22,15 +22,10 @@ function tailwind(
     generateTwClassSubstituteRoot,
   } = core(tailwindConfig);
 
-  const twClassDictionary = createTwClassDictionary(
-    componentsRoot,
-    utilitiesRoot
-  );
-
-  const baseCSSroot = baseRoot.clone();
-  baseCSSroot.walkAtRules("layer", (atRule) => {
-    atRule.replaceWith(atRule.nodes);
-  });
+  const twClassDictionary = {
+    XWIND_BASE: createTwClassDictionary(baseRoot).XWIND_GLOBAL,
+    ...createTwClassDictionary(componentsRoot, utilitiesRoot),
+  };
 
   const variantOrder = tailwindConfig.variantOrder;
   const twClassOrder = Object.keys(twClassDictionary);
@@ -74,8 +69,14 @@ function tailwind(
   const generatedTwClassesCSS: { [key: string]: string } = {};
 
   return (twClasses: TwClasses) => {
-    const sortedTwClasses = twClassesUtils.parser(twClasses).sort(compare);
+    const sortedTwClasses = twClassesUtils
+      .parser(
+        includeBase ? "XWIND_BASE XWIND_GLOBAL" : "XWIND_GLOBAL",
+        twClasses
+      )
+      .sort(compare);
     const combinedRoot: string[] = [];
+
     for (const twClass of sortedTwClasses) {
       const [generatedTwClass] = twClassesUtils.generator(twClass);
 
@@ -94,10 +95,7 @@ function tailwind(
     const preText =
       "/*! Generated with xwind | https://github.com/arthie/xwind */";
 
-    if (!includeBase) {
-      return [preText, ...combinedRoot].join("\n");
-    }
-    return [preText, baseCSSroot.toString(), ...combinedRoot].join("\n");
+    return [preText, ...combinedRoot].join("\n");
   };
 }
 
