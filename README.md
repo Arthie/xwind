@@ -19,7 +19,7 @@ You may have encountered some of these problems when using Tailwind with CSS-in-
 - Automatically compatible with latest Tailwind version **2.X.X**
 - New syntax to apply variants to multiple utility classes `md:hover[text-xs font-normal]`
 - Reacts to changes in made in `tailwind.config.js`
-- Great developer experience with [VS Code extension](https://github.com/Arthie/vscode-xwind) or [typescript-xwind-plugin](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/typescript-plugin)
+- Great developer experience with [VS Code extension](https://github.com/Arthie/vscode-xwind) or [typescript-xwind-plugin](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/typescript-plugin)
 - No runtime impact all transformations happen during build time
 - Plugins to support any/your favorite CSS-in-JS syntax
 

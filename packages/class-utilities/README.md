@@ -17,17 +17,19 @@ yarn add @xwind/class-utilities
 
 ## API
 
-### composer function parameters
+### utility function parameters
 
-#### `tw(string | string[] | string[][], ...)`
+#### `utility(string | string[] | string[][], ...)`
 
-Valid composer function parameters are:
+Valid utility function parameters are:
 
 - Classes string
 - Array of classes strings
 - Nested Arrays containing class strings (nesting has no depth limit)
 
-`Note:` It will return the composed classes in the same order as the input parameters, from left to right.
+The utility functions returned result will have removed unnecessary whitespace and duplicate classes.
+
+`Note:` It will return the classes in the same order as the input parameters, from left to right.
 
 #### Variant array syntax
 
@@ -67,88 +69,231 @@ classUtilities.serializer(
 //Same Result: "text-red-100 hover:bg-red-200 hover:m-4 sm:hover:bg-red-300"
 ```
 
-### 1. twClassesComposer
+### initClassUtilities
 
-#### `twClassesComposer(string): function`
+#### initClassUtilities(separator:string, variants?: string[] | undefined): ClassUtilities
 
-Takes a separator string (e.g. ":") as parameter and returns a composer function.
-The composer function will return a Array of tailwind classes.
+The initClassUtilities function is the default export of "@xwind/class-utilities"
+This function takes a seperator string and variants array as parameters.
+The varians array is optional and used to check if the variants names are allowed.
+The function returns an classUtilities object
 
 #### Example
 
 ```js
-import initClassUtilities, { twClassesComposer } from "@xwind/class-utilities";
+import initClassUtilities from "@xwind/class-utilities";
 
 const classUtilities = initClassUtilities(":");
 
 const tw = classUtilities.composer(
   "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
 );
-// OR
-const tw = twClassesComposer(
-  ":",
+//Result: [ "text-red-100", "hover:bg-red-200", "sm:active:bg-red-300" ]
+
+const tw = classUtilities.parser(
   "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
 );
+//Result: [
+//  {
+//    class: "text-red-100",
+//    variants: [],
+//  },
+//  {
+//    class: "bg-red-200",
+//    variants: ["hover"],
+//  },
+//  {
+//    class: "bg-red-300",
+//    variants: ["active", "sm"],
+//  },
+//]
 
+const tw = classUtilities.serializer(
+  "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
+);
+//Result: "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
+
+const tw = classUtilities.generator(
+  {
+    class: "text-red-100",
+    variants: [],
+  },
+  [
+    {
+      class: "bg-red-200",
+      variants: ["hover"],
+    },
+    {
+      class: "bg-red-300",
+      variants: ["active", "sm"],
+    },
+  ]
+);
 //Result: [ "text-red-100", "hover:bg-red-200", "sm:active:bg-red-300" ]
 ```
 
-### 2. twClassesParser
+### 1. composer
 
-#### `twClassesComposer(string): function`
+#### `composer(separator:string, ...classes: string | string[] | string[][]): string[]`
 
-Takes a separator string (e.g. ":") as parameter and returns a composer function.
-The composer function will return an array of class and variants tuples.
+The compposer function will return an Array of tailwind class strings.
 
-#### Example
+#### Examples
 
 ```js
-import initClassUtilities, { twClassesParser } from "@xwind/class-utilities";
+import { composer } from "@xwind/class-utilities";
+
+const tw = composer(":", "text-red-100 hover:bg-red-200 sm:active:bg-red-300");
+//Result: [ "text-red-100", "hover:bg-red-200", "sm:active:bg-red-300" ]
+```
+
+```js
+import initClassUtilities from "@xwind/class-utilities";
+
+const classUtilities = initClassUtilities(":");
+
+const tw = classUtilities.composer(
+  "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
+);
+//Result: [ "text-red-100", "hover:bg-red-200", "sm:active:bg-red-300" ]
+```
+
+### 2. parser
+
+#### `parser(separator:string, ...classes: string | string[] | string[][]): {class:string, variants: string[]}[]`
+
+The parser function will return an Array of parsed tailwind classes.
+
+`Note:` The parsed variants will be in order of application
+
+#### Examples
+
+```js
+import { parser } from "@xwind/class-utilities";
+
+const tw = parser(":", "text-red-100 hover:bg-red-200 sm:active:bg-red-300");
+//Result: [
+//  {
+//    class: "text-red-100",
+//    variants: [],
+//  },
+//  {
+//    class: "bg-red-200",
+//    variants: ["hover"],
+//  },
+//  {
+//    class: "bg-red-300",
+//    variants: ["active", "sm"],
+//  },
+//]
+```
+
+```js
+import initClassUtilities from "@xwind/class-utilities";
 
 const classUtilities = initClassUtilities(":");
 
 const tw = classUtilities.parser(
   "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
 );
-// OR
-const tw = twClassesParser(
+//Result: [
+//  {
+//    class: "text-red-100",
+//    variants: [],
+//  },
+//  {
+//    class: "bg-red-200",
+//    variants: ["hover"],
+//  },
+//  {
+//    class: "bg-red-300",
+//    variants: ["active", "sm"],
+//  },
+//]
+```
+
+### 3. serializer
+
+#### `serializer(separator:string, ...classes: string | string[] | string[][]): string[]`
+
+The serializer function will return a string of tailwind classes.
+
+#### Examples
+
+```js
+import { serializer } from "@xwind/class-utilities";
+
+const tw = serializer(
   ":",
   "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
 );
-
-//Result: [
-//   ["text-red-100", []],
-//   ["bg-red-200", ["hover"]],
-//   ["bg-red-300", ["active", "sm"]]
-// ]
+//Result: "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
 ```
 
-### 3. twClassesSerializer
-
-#### `twClassesSerializer(string): function`
-
-Takes a separator string (e.g. ":") as parameter and returns a composer function.
-The composer function will return a tailwind classes string.
-
-#### Example
-
 ```js
-import initClassUtilities, {
-  twClassesSerializer,
-} from "@xwind/class-utilities";
+import initClassUtilities from "@xwind/class-utilities";
 
 const classUtilities = initClassUtilities(":");
 
 const tw = classUtilities.serializer(
   "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
 );
-// OR
-const tw = twClassesSerializer(
-  ":",
-  "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
-);
-
 //Result: "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
+```
+
+### 4. generator
+
+#### `generator(separator:string, ...twParsedClasses: TwParsedClass | TwParsedClass[] | TwParsedClass[][]): string[]`
+
+The generator function will return a string of tailwind classes.
+
+#### Examples
+
+```js
+import { generator } from "@xwind/class-utilities";
+
+const tw = generator(
+  ":",
+  {
+    class: "text-red-100",
+    variants: [],
+  },
+  [
+    {
+      class: "bg-red-200",
+      variants: ["hover"],
+    },
+    {
+      class: "bg-red-300",
+      variants: ["active", "sm"],
+    },
+  ]
+);
+//Result: [ "text-red-100", "hover:bg-red-200", "sm:active:bg-red-300" ]
+```
+
+```js
+import initClassUtilities from "@xwind/class-utilities";
+
+const classUtilities = initClassUtilities(":");
+
+const tw = classUtilities.generator(
+  {
+    class: "text-red-100",
+    variants: [],
+  },
+  [
+    {
+      class: "bg-red-200",
+      variants: ["hover"],
+    },
+    {
+      class: "bg-red-300",
+      variants: ["active", "sm"],
+    },
+  ]
+);
+//Result: [ "text-red-100", "hover:bg-red-200", "sm:active:bg-red-300" ]
 ```
 
 ## License
