@@ -69,14 +69,13 @@ classUtilities.serializer(
 //Same Result: "text-red-100 hover:bg-red-200 hover:m-4 sm:hover:bg-red-300"
 ```
 
-### initClassUtilities
+### 0. initClassUtilities
 
-#### initClassUtilities(separator:string, variants?: string[] | undefined): ClassUtilities
+#### `initClassUtilities(separator:string, variants?: string[] | undefined): ClassUtilities`
 
 The initClassUtilities function is the default export of "@xwind/class-utilities"
-This function takes a seperator string and variants array as parameters.
+This function takes a seperator string and variants array as parameters and returns an classUtilities object.
 The varians array is optional and used to check if the variants names are allowed.
-The function returns an classUtilities object
 
 #### Example
 
