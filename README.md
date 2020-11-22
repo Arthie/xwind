@@ -121,6 +121,16 @@ Output file "/src/styles/xwind.css":
 }
 ```
 
+Import the output file "/src/styles/xwind.css" into your project:
+
+```js
+//Javascript:
+import "/src/styles/xwind.css";
+//OR
+//HTML:
+<link rel="stylesheet" href="/src/styles/xwind.css" />;
+```
+
 ### [Full xwind package documentation](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/xwind)
 
 ---
