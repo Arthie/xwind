@@ -1,6 +1,6 @@
 {
   "name": "typescript-xwind-plugin",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Arthie",
   "description": "This package contains xwind typescript language service plugin",
   "main": "lib/plugin.js",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@xwind/class-utilities": "^0.4.0",
-    "@xwind/core": "^0.5.0",
+    "@xwind/core": "^0.6.0",
     "import-fresh": "^3.2.2",
     "typescript-template-language-service-decorator": "^2.2.0",
     "vscode-languageserver-types": "^3.16.0-next.4"

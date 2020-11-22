@@ -17,9 +17,14 @@ export default function xwind(config: TailwindConfig) {
     generateTwClassSubstituteRoot,
     utilitiesRoot,
     componentsRoot,
+    baseRoot,
   } = core(resolvedConfig);
 
-  const twObjectMap = createTwClassDictionary(utilitiesRoot, componentsRoot);
+  const twClassDictionary = {
+    XWIND_BASE: createTwClassDictionary(baseRoot).XWIND_GLOBAL,
+    ...createTwClassDictionary(componentsRoot, utilitiesRoot),
+  };
+
   const twClassUtilities = initClassUtilities(resolvedConfig.separator, [
     ...screens,
     ...variants,
@@ -30,12 +35,17 @@ export default function xwind(config: TailwindConfig) {
 
     const roots: Root[] = [];
     for (const parsedClass of parsedClasses) {
-      roots.push(generateTwClassSubstituteRoot(twObjectMap, parsedClass));
+      roots.push(generateTwClassSubstituteRoot(twClassDictionary, parsedClass));
     }
     return roots;
   };
 
-  return { twObjectMap, screens, variants, generateCssFromText };
+  return {
+    twClassDictionary,
+    screens,
+    variants,
+    generateCssFromText,
+  };
 }
 
 export function requireTailwindConfig(

@@ -25,7 +25,7 @@ import { Root } from "postcss";
 let tailwindConfig: TailwindConfig | undefined;
 let tailwindData:
   | {
-      twObjectMap: TwClassDictionary;
+      twClassDictionary: TwClassDictionary;
       screens: string[];
       variants: string[];
       generateCssFromText: (text: string) => Root[];
@@ -106,7 +106,7 @@ function xwindLanguageService(
 
           if (templateContextClass.type === "array") {
             for (const twClass of templateContextClass.classes) {
-              const twObject = tailwindData.twObjectMap[twClass.text];
+              const twObject = tailwindData.twClassDictionary[twClass.text];
               if (!twObject) {
                 diagnostics.push({
                   file: context.node.getSourceFile(),
@@ -124,7 +124,7 @@ function xwindLanguageService(
 
           if (templateContextClass.type === "variant") {
             const twObject =
-              tailwindData.twObjectMap[templateContextClass.class.text];
+              tailwindData.twClassDictionary[templateContextClass.class.text];
             if (!twObject) {
               diagnostics.push({
                 file: context.node.getSourceFile(),
@@ -140,7 +140,7 @@ function xwindLanguageService(
           }
 
           if (templateContextClass.type === "class") {
-            if (!tailwindData.twObjectMap[templateContextClass.text]) {
+            if (!tailwindData.twClassDictionary[templateContextClass.text]) {
               diagnostics.push({
                 file: context.node.getSourceFile(),
                 code: 5,
@@ -276,7 +276,7 @@ function xwindLanguageService(
 
         //todo add check for is tailwind class
         const entries: ts.CompletionEntry[] = [];
-        for (const key of Object.keys(tailwindData.twObjectMap)) {
+        for (const key of Object.keys(tailwindData.twClassDictionary)) {
           const entry = translateCompletionEntry({
             label: key,
             kind: vscode.CompletionItemKind.Text,
@@ -341,7 +341,7 @@ function xwindLanguageService(
           };
         }
 
-        const twObject = tailwindData.twObjectMap[name];
+        const twObject = tailwindData.twClassDictionary[name];
         if (twObject) {
           return translateCompletionItemsToCompletionEntryDetails({
             label: name,
