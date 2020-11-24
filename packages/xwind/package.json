@@ -1,6 +1,6 @@
 {
   "name": "xwind",
-  "version": "0.6.1",
+  "version": "0.7.1",
   "description": "xwind",
   "keywords": [
     "tailwind",
@@ -29,12 +29,14 @@
     "@babel/core": "7.X.X"
   },
   "dependencies": {
-    "@xwind/class-utilities": "^0.4.0",
-    "@xwind/core": "^0.6.0",
+    "@xwind/class-utilities": "^0.7.0",
+    "@xwind/core": "^0.7.0",
     "babel-plugin-macros": "^2.8.0",
     "chokidar": "^3.4.3",
-    "clsx": "1.1.1",
-    "commander": "7.0.0-0",
-    "import-fresh": "3.2.2"
+    "clsx": "^1.1.1",
+    "commander": "^7.0.0-0",
+    "import-fresh": "^3.2.2",
+    "lodash": "^4.17.20",
+    "postcss-js": "^3.0.3"
   }
 }
