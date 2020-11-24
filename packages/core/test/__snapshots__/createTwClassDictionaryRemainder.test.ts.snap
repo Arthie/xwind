@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Remainder object test 1`] = `
+Object {
+  "*": Object {
+    "--tw-ring-color": "rgba(59, 130, 246, 0.5)",
+    "--tw-ring-inset": "var(--tw-empty,/*!*/ /*!*/)",
+    "--tw-ring-offset-color": "#fff",
+    "--tw-ring-offset-shadow": "0 0 #0000",
+    "--tw-ring-offset-width": "0px",
+    "--tw-ring-shadow": "0 0 #0000",
+    "--tw-shadow": "0 0 #0000",
+  },
+  "@keyframes bounce": Object {
+    "0%, 100%": Object {
+      "animationTimingFunction": "cubic-bezier(0.8,0,1,1)",
+      "transform": "translateY(-25%)",
+    },
+    "50%": Object {
+      "animationTimingFunction": "cubic-bezier(0,0,0.2,1)",
+      "transform": "none",
+    },
+  },
+  "@keyframes ping": Object {
+    "75%, 100%": Object {
+      "opacity": 0,
+      "transform": "scale(2)",
+    },
+  },
+  "@keyframes pulse": Object {
+    "50%": Object {
+      "opacity": 0.5,
+    },
+  },
+  "@keyframes spin": Object {
+    "to": Object {
+      "transform": "rotate(360deg)",
+    },
+  },
+}
+`;
+
+exports[`Remainder test 1`] = `
+"* {
+    --tw-shadow: 0 0 #0000
+}
+* {
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59, 130, 246, 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+@keyframes ping {
+    75%, 100% {
+        transform: scale(2);
+        opacity: 0
+    }
+}
+@keyframes pulse {
+    50% {
+        opacity: .5
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8,0,1,1)
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0,0,0.2,1)
+    }
+}"
+`;

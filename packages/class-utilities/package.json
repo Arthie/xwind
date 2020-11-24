@@ -1,0 +1,18 @@
+{
+  "name": "@xwind/class-utilities",
+  "version": "0.7.0",
+  "author": "Arthie",
+  "description": "Simple utility functions for tailwindcss classes",
+  "main": "lib/classUtilities.js",
+  "types": "lib/classUtilities.d.ts",
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "build": "tsc --build --w"
+  }
+}

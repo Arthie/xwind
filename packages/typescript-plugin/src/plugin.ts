@@ -6,9 +6,9 @@ import {
 } from "typescript-template-language-service-decorator";
 import * as ts from "typescript/lib/tsserverlibrary";
 import * as vscode from "vscode-languageserver-types";
-import { TailwindConfig, TwObject } from "@tailwindcssinjs/tailwindcss-data";
+import { TailwindConfig, TwClassDictionary } from "@xwind/core";
 
-import tailwindcssinjs, { requireTailwindConfig } from "./tailwindcssinjs";
+import xwind, { requireTailwindConfig } from "./xwind";
 import { createLogger } from "./logger";
 import {
   TailwindContext,
@@ -20,12 +20,12 @@ import {
   translateCompletionEntry,
   translateHoverItemsToQuickInfo,
 } from "./translate";
-import { root, Root } from "postcss";
+import { Root } from "postcss";
 
 let tailwindConfig: TailwindConfig | undefined;
 let tailwindData:
   | {
-      twObjectMap: Map<string, TwObject>;
+      twClassDictionary: TwClassDictionary;
       screens: string[];
       variants: string[];
       generateCssFromText: (text: string) => Root[];
@@ -34,7 +34,7 @@ let tailwindData:
 
 let watcher: ts.FileWatcher | undefined;
 
-function updateTailwindcssinjs(logger: Logger, configPath?: string) {
+function updateXwind(logger: Logger, configPath?: string) {
   try {
     logger.log(`CONFIG PATH:${configPath}`);
     if (configPath) {
@@ -45,24 +45,24 @@ function updateTailwindcssinjs(logger: Logger, configPath?: string) {
         configPath,
         (fileName: string, eventKind: ts.FileWatcherEventKind) => {
           logger.log(`Watchfile config update: ${configPath}`);
-          updateTailwindcssinjs(logger, fileName);
+          updateXwind(logger, fileName);
         }
       );
     }
     tailwindConfig = requireTailwindConfig(logger, configPath);
-    tailwindData = tailwindcssinjs(tailwindConfig);
+    tailwindData = xwind(tailwindConfig);
   } catch (err) {
     logger.log(`ERROR: ${err}`);
   }
 }
 
-function tailwindcssinjsLanguageService(
+function xwindLanguageService(
   info: ts.server.PluginCreateInfo,
   logger: Logger
 ): TemplateLanguageService {
   try {
     logger.log(`INFO CONFIG ${JSON.stringify(info.config)}`);
-    updateTailwindcssinjs(logger, info.config?.config);
+    updateXwind(logger, info.config?.config);
 
     return {
       getSyntacticDiagnostics(context: TemplateContext): ts.Diagnostic[] {
@@ -89,7 +89,7 @@ function tailwindcssinjsLanguageService(
             start: nestedMath.index,
             length: nestedMath[0].length,
             messageText: `Nested variants arrays are not allowed.`,
-            source: "tailwindcssinjs",
+            source: "xwind",
           };
           diagnostics.push(diagnostic);
         }
@@ -106,7 +106,7 @@ function tailwindcssinjsLanguageService(
 
           if (templateContextClass.type === "array") {
             for (const twClass of templateContextClass.classes) {
-              const twObject = tailwindData.twObjectMap.get(twClass.text);
+              const twObject = tailwindData.twClassDictionary[twClass.text];
               if (!twObject) {
                 diagnostics.push({
                   file: context.node.getSourceFile(),
@@ -115,7 +115,7 @@ function tailwindcssinjsLanguageService(
                   start: twClass.index,
                   length: twClass.text.length,
                   messageText: `${twClass.text} is not a tailwind class.`,
-                  source: "tailwindcssinjs",
+                  source: "xwind",
                 });
                 problems++;
               }
@@ -123,9 +123,8 @@ function tailwindcssinjsLanguageService(
           }
 
           if (templateContextClass.type === "variant") {
-            const twObject = tailwindData.twObjectMap.get(
-              templateContextClass.class.text
-            );
+            const twObject =
+              tailwindData.twClassDictionary[templateContextClass.class.text];
             if (!twObject) {
               diagnostics.push({
                 file: context.node.getSourceFile(),
@@ -134,14 +133,14 @@ function tailwindcssinjsLanguageService(
                 start: templateContextClass.class.index,
                 length: templateContextClass.class.text.length,
                 messageText: `${templateContextClass.class.text} is not a tailwind class.`,
-                source: "tailwindcssinjs",
+                source: "xwind",
               });
               problems++;
             }
           }
 
           if (templateContextClass.type === "class") {
-            if (!tailwindData.twObjectMap.has(templateContextClass.text)) {
+            if (!tailwindData.twClassDictionary[templateContextClass.text]) {
               diagnostics.push({
                 file: context.node.getSourceFile(),
                 code: 5,
@@ -149,7 +148,7 @@ function tailwindcssinjsLanguageService(
                 start: templateContextClass.index,
                 length: templateContextClass.text.length,
                 messageText: `${templateContextClass.text} is not a tailwind class.`,
-                source: "tailwindcssinjs",
+                source: "xwind",
               });
               problems++;
             }
@@ -188,7 +187,7 @@ function tailwindcssinjsLanguageService(
             //     messageText: `${templateContextClass.variant.join(
             //       tailwindConfig?.separator ?? ":"
             //     )} is not a valid tailwind variant. The selector has more than 2 variants: ${other}.`,
-            //     source: "tailwindcssinjs",
+            //     source: "xwind",
             //   });
             //   problems++;
             //   continue;
@@ -206,7 +205,7 @@ function tailwindcssinjsLanguageService(
             //     messageText: `${templateContextClass.variant.join(
             //       tailwindConfig?.separator ?? ":"
             //     )} is not a valid tailwind variant. "${first}" should be a screen variant`,
-            //     source: "tailwindcssinjs",
+            //     source: "xwind",
             //   });
             //   problems++;
             //   continue;
@@ -224,7 +223,7 @@ function tailwindcssinjsLanguageService(
                 messageText: `${templateContextClass.variant.join(
                   tailwindConfig?.separator ?? ":"
                 )} is not a tailwind variant.`,
-                source: "tailwindcssinjs",
+                source: "xwind",
               });
               problems++;
               continue;
@@ -242,7 +241,7 @@ function tailwindcssinjsLanguageService(
                 messageText: `${templateContextClass.variant.join(
                   tailwindConfig?.separator ?? ":"
                 )} is not a valid tailwind variant. "${second}" should be a variant, not a screen variant`,
-                source: "tailwindcssinjs",
+                source: "xwind",
               });
               problems++;
               continue;
@@ -277,7 +276,7 @@ function tailwindcssinjsLanguageService(
 
         //todo add check for is tailwind class
         const entries: ts.CompletionEntry[] = [];
-        for (const key of tailwindData.twObjectMap.keys()) {
+        for (const key of Object.keys(tailwindData.twClassDictionary)) {
           const entry = translateCompletionEntry({
             label: key,
             kind: vscode.CompletionItemKind.Text,
@@ -342,9 +341,8 @@ function tailwindcssinjsLanguageService(
           };
         }
 
-        const twObject = tailwindData.twObjectMap.get(name);
+        const twObject = tailwindData.twClassDictionary[name];
         if (twObject) {
-          const rootNode = root().append(...twObject.nodes);
           return translateCompletionItemsToCompletionEntryDetails({
             label: name,
             kind: vscode.CompletionItemKind.Text,
@@ -352,7 +350,7 @@ function tailwindcssinjsLanguageService(
               kind: vscode.MarkupKind.Markdown,
               value: [
                 "```css",
-                rootNode.toString().replace(/    /g, "  "),
+                twObject.toString().replace(/    /g, "  "),
                 "```",
               ].join("\n"),
             },
@@ -421,6 +419,7 @@ function tailwindcssinjsLanguageService(
 interface PluginConfig {
   config: string;
   ignoreErrors: string | null;
+  tags: string[];
 }
 
 let pluginConfig: PluginConfig;
@@ -430,14 +429,14 @@ export = (mod: { typescript: typeof ts }): ts.server.PluginModule => {
   return {
     create(info: ts.server.PluginCreateInfo): ts.LanguageService {
       logger = createLogger(info);
-      logger.log("TailwindcssinjsTsPlugin is starting.");
+      logger.log(`XwindTsPlugin is starting.`);
       pluginConfig = info.config;
       return decorateWithTemplateLanguageService(
         mod.typescript,
         info.languageService,
         info.project,
-        tailwindcssinjsLanguageService(info, logger),
-        { tags: ["tw"] },
+        xwindLanguageService(info, logger),
+        { tags: info.config?.tags ?? ["tw", "xw"] },
         { logger }
       );
     },
@@ -450,7 +449,7 @@ export = (mod: { typescript: typeof ts }): ts.server.PluginModule => {
         );
       }
       pluginConfig = newPluginConfig;
-      updateTailwindcssinjs(logger, newPluginConfig.config);
+      updateXwind(logger, newPluginConfig.config);
     },
   };
 };

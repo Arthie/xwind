@@ -1,0 +1,556 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`xwind class not found error: class not found error 1`] = `
+
+import tw from 'xwind';
+const css = tw\`lol\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Error: /home/arthie/projects/tailwindcssinjs/packages/xwind/test/debug.test.ts: Class "lol" not found.
+
+`;
+
+exports[`xwind components: components 1`] = `
+
+import tw from 'xwind';
+const css = tw\`container\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  width: "100%",
+  "@media (min-width: 640px)": {
+    maxWidth: "640px",
+  },
+  "@media (min-width: 668px)": {
+    maxWidth: "668px",
+  },
+  "@media (min-width: 768px)": {
+    maxWidth: "768px",
+  },
+  "@media (min-width: 868px)": {
+    maxWidth: "868px",
+  },
+  "@media (min-width: 1024px)": {
+    maxWidth: "1024px",
+  },
+  "@media (min-width: 1280px)": {
+    maxWidth: "1280px",
+  },
+  "@media (min-width: 1536px)": {
+    maxWidth: "1536px",
+  },
+};
+
+
+`;
+
+exports[`xwind correct usage 1: correct usage 1 1`] = `
+
+import tw from 'xwind';
+const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-bg-opacity": "1",
+  "--tw-scale-x": "0",
+  "--tw-scale-y": "0",
+  width: "50%",
+  backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+  "&:active": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(252, 165, 165, var(--tw-bg-opacity))",
+  },
+  "&:focus": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 768px)": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 1024px)": {
+    "--tw-text-opacity": "1",
+    color: "rgba(252, 165, 165, var(--tw-text-opacity))",
+    "&:hover": {
+      "--tw-text-opacity": "1",
+      "--tw-bg-opacity": "1",
+      color: "rgba(254, 202, 202, var(--tw-text-opacity))",
+      backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+    },
+  },
+};
+
+
+`;
+
+exports[`xwind correct usage 2: correct usage 2 1`] = `
+
+import tw from 'xwind';
+const css = tw("m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-text-opacity": "1",
+  "--tw-translate-x": "0",
+  "--tw-translate-y": "-50%",
+  "--tw-rotate": "0",
+  "--tw-skew-x": "0",
+  "--tw-skew-y": "0",
+  "--tw-scale-x": "1",
+  "--tw-scale-y": "1",
+  margin: "0px",
+  marginRight: "1rem",
+  color: "rgba(248, 113, 113, var(--tw-text-opacity))",
+  transform:
+    "translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))",
+  "@media (min-width: 1024px)": {
+    "&:hover": {
+      "--tw-bg-opacity": "1",
+      "--tw-text-opacity": "1",
+      backgroundColor: "rgba(219, 234, 254, var(--tw-bg-opacity))",
+      color: "rgba(254, 202, 202, var(--tw-text-opacity))",
+    },
+  },
+};
+
+
+`;
+
+exports[`xwind correct usage 3: correct usage 3 1`] = `
+
+import tw from 'xwind';
+const css = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+const css2 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+const css3 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+const css4 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+const css5 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+const css6 = tw('w-1/2 bg-blue-500 scale-0 active:bg-red-300 lg:hover[text-red-200 bg-blue-500]', ['lg:text-red-300',"focus:bg-green-300"], "md:bg-green-300");
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-bg-opacity": "1",
+  "--tw-scale-x": "0",
+  "--tw-scale-y": "0",
+  width: "50%",
+  backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+  "&:active": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(252, 165, 165, var(--tw-bg-opacity))",
+  },
+  "&:focus": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 768px)": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 1024px)": {
+    "--tw-text-opacity": "1",
+    color: "rgba(252, 165, 165, var(--tw-text-opacity))",
+    "&:hover": {
+      "--tw-text-opacity": "1",
+      "--tw-bg-opacity": "1",
+      color: "rgba(254, 202, 202, var(--tw-text-opacity))",
+      backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+    },
+  },
+};
+const css2 = {
+  "--tw-bg-opacity": "1",
+  "--tw-scale-x": "0",
+  "--tw-scale-y": "0",
+  width: "50%",
+  backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+  "&:active": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(252, 165, 165, var(--tw-bg-opacity))",
+  },
+  "&:focus": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 768px)": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 1024px)": {
+    "--tw-text-opacity": "1",
+    color: "rgba(252, 165, 165, var(--tw-text-opacity))",
+    "&:hover": {
+      "--tw-text-opacity": "1",
+      "--tw-bg-opacity": "1",
+      color: "rgba(254, 202, 202, var(--tw-text-opacity))",
+      backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+    },
+  },
+};
+const css3 = {
+  "--tw-bg-opacity": "1",
+  "--tw-scale-x": "0",
+  "--tw-scale-y": "0",
+  width: "50%",
+  backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+  "&:active": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(252, 165, 165, var(--tw-bg-opacity))",
+  },
+  "&:focus": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 768px)": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 1024px)": {
+    "--tw-text-opacity": "1",
+    color: "rgba(252, 165, 165, var(--tw-text-opacity))",
+    "&:hover": {
+      "--tw-text-opacity": "1",
+      "--tw-bg-opacity": "1",
+      color: "rgba(254, 202, 202, var(--tw-text-opacity))",
+      backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+    },
+  },
+};
+const css4 = {
+  "--tw-bg-opacity": "1",
+  "--tw-scale-x": "0",
+  "--tw-scale-y": "0",
+  width: "50%",
+  backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+  "&:active": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(252, 165, 165, var(--tw-bg-opacity))",
+  },
+  "&:focus": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 768px)": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 1024px)": {
+    "--tw-text-opacity": "1",
+    color: "rgba(252, 165, 165, var(--tw-text-opacity))",
+    "&:hover": {
+      "--tw-text-opacity": "1",
+      "--tw-bg-opacity": "1",
+      color: "rgba(254, 202, 202, var(--tw-text-opacity))",
+      backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+    },
+  },
+};
+const css5 = {
+  "--tw-bg-opacity": "1",
+  "--tw-scale-x": "0",
+  "--tw-scale-y": "0",
+  width: "50%",
+  backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+  "&:active": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(252, 165, 165, var(--tw-bg-opacity))",
+  },
+  "&:focus": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 768px)": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 1024px)": {
+    "--tw-text-opacity": "1",
+    color: "rgba(252, 165, 165, var(--tw-text-opacity))",
+    "&:hover": {
+      "--tw-text-opacity": "1",
+      "--tw-bg-opacity": "1",
+      color: "rgba(254, 202, 202, var(--tw-text-opacity))",
+      backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+    },
+  },
+};
+const css6 = {
+  "--tw-bg-opacity": "1",
+  "--tw-scale-x": "0",
+  "--tw-scale-y": "0",
+  width: "50%",
+  backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+  "&:active": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(252, 165, 165, var(--tw-bg-opacity))",
+  },
+  "&:focus": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 768px)": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(110, 231, 183, var(--tw-bg-opacity))",
+  },
+  "@media (min-width: 1024px)": {
+    "--tw-text-opacity": "1",
+    color: "rgba(252, 165, 165, var(--tw-text-opacity))",
+    "&:hover": {
+      "--tw-text-opacity": "1",
+      "--tw-bg-opacity": "1",
+      color: "rgba(254, 202, 202, var(--tw-text-opacity))",
+      backgroundColor: "rgba(59, 130, 246, var(--tw-bg-opacity))",
+    },
+  },
+};
+
+
+`;
+
+exports[`xwind correct usage tagged: correct usage tagged 1`] = `
+
+import tw from 'xwind';
+const css = tw\`supports-grid:text-blue-400 important[text-green-200 bg-red-300] m-0 mr-4 text-red-400 transform -translate-y-1/2 lg:hover[bg-blue-100 text-red-200]\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-text-opacity": "1",
+  "--tw-bg-opacity": "1 !important",
+  "--tw-translate-x": "0",
+  "--tw-translate-y": "-50%",
+  "--tw-rotate": "0",
+  "--tw-skew-x": "0",
+  "--tw-skew-y": "0",
+  "--tw-scale-x": "1",
+  "--tw-scale-y": "1",
+  color: "rgba(248, 113, 113, var(--tw-text-opacity))",
+  backgroundColor: "rgba(252, 165, 165, var(--tw-bg-opacity)) !important",
+  margin: "0px",
+  marginRight: "1rem",
+  transform:
+    "translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))",
+  "@media (min-width: 1024px)": {
+    "&:hover": {
+      "--tw-bg-opacity": "1",
+      "--tw-text-opacity": "1",
+      backgroundColor: "rgba(219, 234, 254, var(--tw-bg-opacity))",
+      color: "rgba(254, 202, 202, var(--tw-text-opacity))",
+    },
+  },
+  "@supports (display: grid)": {
+    "--tw-text-opacity": "1",
+    color: "rgba(96, 165, 250, var(--tw-text-opacity))",
+  },
+};
+
+
+`;
+
+exports[`xwind darkmode: darkmode 1`] = `
+
+import tw from 'xwind';
+const css = tw\`md:dark:hover:bg-red-200\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    ".dark &:hover": {
+      "--tw-bg-opacity": "1",
+      backgroundColor: "rgba(254, 202, 202, var(--tw-bg-opacity))",
+    },
+  },
+};
+
+
+`;
+
+exports[`xwind no usage: no usage 1`] = `
+
+import tw from 'xwind'
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+
+
+`;
+
+exports[`xwind tailwind-ui ussage: tailwind-ui ussage 1`] = `
+
+import tw from 'xwind';
+const css = tw\`relative w-full flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 active:bg-indigo-300 transition duration-150 ease-in-out\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-text-opacity": "1",
+  "--tw-bg-opacity": "1",
+  position: "relative",
+  width: "100%",
+  display: "flex",
+  justifyContent: "center",
+  paddingTop: "0.5rem",
+  paddingBottom: "0.5rem",
+  paddingLeft: "1rem",
+  paddingRight: "1rem",
+  borderWidth: "1px",
+  borderColor: "transparent",
+  fontSize: "0.875rem",
+  lineHeight: "1.25rem",
+  fontWeight: 500,
+  borderRadius: "0.375rem",
+  color: "rgba(255, 255, 255, var(--tw-text-opacity))",
+  backgroundColor: "rgba(79, 70, 229, var(--tw-bg-opacity))",
+  transitionProperty:
+    "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
+  transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+  transitionDuration: "150ms",
+  "&:hover": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(99, 102, 241, var(--tw-bg-opacity))",
+  },
+  "&:focus": {
+    "--tw-border-opacity": "1",
+    outline: "2px solid transparent",
+    outlineOffset: "2px",
+    borderColor: "rgba(67, 56, 202, var(--tw-border-opacity))",
+  },
+  "&:active": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(165, 180, 252, var(--tw-bg-opacity))",
+  },
+};
+
+
+`;
+
+exports[`xwind test screen: test screen 1`] = `
+
+import tw from 'xwind';
+const css = tw\`md2[text-red-200] bg-red-300\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-bg-opacity": "1",
+  backgroundColor: "rgba(252, 165, 165, var(--tw-bg-opacity))",
+  "@media (min-width: 668px) and (max-width: 767px), (min-width: 868px)": {
+    "--tw-text-opacity": "1",
+    color: "rgba(254, 202, 202, var(--tw-text-opacity))",
+  },
+};
+
+
+`;
+
+exports[`xwind variant component class: variant component class 1`] = `
+
+import tw from 'xwind';
+const css = tw\`md[container]\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "@media (min-width: 768px)": {
+    width: "100%",
+    "@media (min-width: 640px)": {
+      maxWidth: "640px",
+    },
+    "@media (min-width: 668px)": {
+      maxWidth: "668px",
+    },
+    "@media (min-width: 768px)": {
+      maxWidth: "768px",
+    },
+    "@media (min-width: 868px)": {
+      maxWidth: "868px",
+    },
+    "@media (min-width: 1024px)": {
+      maxWidth: "1024px",
+    },
+    "@media (min-width: 1280px)": {
+      maxWidth: "1280px",
+    },
+    "@media (min-width: 1536px)": {
+      maxWidth: "1536px",
+    },
+  },
+};
+
+
+`;
+
+exports[`xwind version 1.3.X test 1: version 1.3.X test 1 1`] = `
+
+import tw from 'xwind';
+const css = tw\`group-focus:text-red-100 delay-1000 space-y-4 flex space-x-2 divide-x divide-y divide-blue-500 space-x-reverse\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  transitionDelay: "1000ms",
+  display: "flex",
+  ".group:focus &": {
+    "--tw-text-opacity": "1",
+    color: "rgba(254, 226, 226, var(--tw-text-opacity))",
+  },
+  "& > :not([hidden]) ~ :not([hidden])": {
+    "--tw-space-y-reverse": "0",
+    "--tw-space-x-reverse": "1",
+    "--tw-divide-x-reverse": "0",
+    "--tw-divide-y-reverse": "0",
+    "--tw-divide-opacity": "1",
+    marginTop: "calc(1rem * calc(1 - var(--tw-space-y-reverse)))",
+    marginBottom: "calc(1rem * var(--tw-space-y-reverse))",
+    marginRight: "calc(0.5rem * var(--tw-space-x-reverse))",
+    marginLeft: "calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))",
+    borderRightWidth: "calc(1px * var(--tw-divide-x-reverse))",
+    borderLeftWidth: "calc(1px * calc(1 - var(--tw-divide-x-reverse)))",
+    borderTopWidth: "calc(1px * calc(1 - var(--tw-divide-y-reverse)))",
+    borderBottomWidth: "calc(1px * var(--tw-divide-y-reverse))",
+    borderColor: "rgba(59, 130, 246, var(--tw-divide-opacity))",
+  },
+};
+
+
+`;
+
+exports[`xwind version 1.3.X test 2: version 1.3.X test 2 1`] = `
+
+import tw from 'xwind';
+const css = tw\`group-focus:text-red-100 md:delay-1000 md:space-y-4 md:space-x-2 md:divide-x md:divide-y md:divide-blue-500 md:space-x-reverse\`
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  ".group:focus &": {
+    "--tw-text-opacity": "1",
+    color: "rgba(254, 226, 226, var(--tw-text-opacity))",
+  },
+  "@media (min-width: 768px)": {
+    transitionDelay: "1000ms",
+    "& > :not([hidden]) ~ :not([hidden])": {
+      "--tw-space-y-reverse": "0",
+      "--tw-space-x-reverse": "1",
+      "--tw-divide-x-reverse": "0",
+      "--tw-divide-y-reverse": "0",
+      "--tw-divide-opacity": "1",
+      marginTop: "calc(1rem * calc(1 - var(--tw-space-y-reverse)))",
+      marginBottom: "calc(1rem * var(--tw-space-y-reverse))",
+      marginRight: "calc(0.5rem * var(--tw-space-x-reverse))",
+      marginLeft: "calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))",
+      borderRightWidth: "calc(1px * var(--tw-divide-x-reverse))",
+      borderLeftWidth: "calc(1px * calc(1 - var(--tw-divide-x-reverse)))",
+      borderTopWidth: "calc(1px * calc(1 - var(--tw-divide-y-reverse)))",
+      borderBottomWidth: "calc(1px * var(--tw-divide-y-reverse))",
+      borderColor: "rgba(59, 130, 246, var(--tw-divide-opacity))",
+    },
+  },
+};
+
+
+`;
