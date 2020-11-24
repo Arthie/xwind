@@ -1,3 +1,3 @@
 export * from "./createTwClassDictionary";
-export * from "./transformTwRootToObjectStyle";
+export * from "./transformTwRootToObjectstyle";
 export * from "./getGenerateTwClassSubstituteRoot";

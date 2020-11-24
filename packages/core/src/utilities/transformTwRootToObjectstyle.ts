@@ -5,20 +5,20 @@ import merge from "lodash/merge";
 import sortCSSmq from "sort-css-media-queries";
 import parser from "postcss-selector-parser";
 
-export type ObjectStyle = ObjectStyleDecl | ObjectStyleRuleOrAtRule;
+export type Objectstyle = ObjectstyleDecl | ObjectstyleRuleOrAtRule;
 
-export type ObjectStyleDecl = {
+export type ObjectstyleDecl = {
   [key: string]: string | string[];
 };
 
-export type ObjectStyleRuleOrAtRule = {
-  [key: string]: string | string[] | ObjectStyleRuleOrAtRule;
+export type ObjectstyleRuleOrAtRule = {
+  [key: string]: string | string[] | ObjectstyleRuleOrAtRule;
 };
 
-export function transformTwRootToObjectStyle(
+export function transformTwRootToObjectstyle(
   twClass: string,
   twRoot: Root
-): ObjectStyle {
+): Objectstyle {
   const processor = parser((root) => {
     root.walkClasses((node) => {
       if (node.value?.endsWith(twClass)) {
@@ -39,13 +39,13 @@ export function transformTwRootToObjectStyle(
   return objectify(root);
 }
 
-function sortObjectStyle<T extends ObjectStyle>(objectStyle: T) {
+function sortObjectstyle<T extends Objectstyle>(objectStyle: T) {
   const objectStyleEntries = Object.entries(objectStyle);
 
   //also sort nested style Rules / atRules
   for (const [index, [key, value]] of objectStyleEntries.entries()) {
     if (typeof value === "object" && !Array.isArray(value)) {
-      const sortedValue = sortObjectStyle<ObjectStyleRuleOrAtRule>(value);
+      const sortedValue = sortObjectstyle<ObjectstyleRuleOrAtRule>(value);
       objectStyleEntries[index] = [key, sortedValue];
     }
   }
@@ -76,7 +76,7 @@ function sortObjectStyle<T extends ObjectStyle>(objectStyle: T) {
     throw new Error(`This type: ${type} of value: ${value} is not supported`);
   };
 
-  const sortedObjectStyleEntries = objectStyleEntries.sort(
+  const sortedObjectstyleEntries = objectStyleEntries.sort(
     ([first, firstValue], [second, secondValue]) => {
       const firstValueType = getValueType(first, firstValue);
       const secondValueType = getValueType(second, secondValue);
@@ -110,11 +110,11 @@ function sortObjectStyle<T extends ObjectStyle>(objectStyle: T) {
     }
   );
 
-  return Object.fromEntries(sortedObjectStyleEntries);
+  return Object.fromEntries(sortedObjectstyleEntries);
 }
 
-export function mergeObjectStyles(objectStyles: ObjectStyle[]) {
-  const mergedObjectStyle = merge({}, ...objectStyles);
+export function mergeObjectstyles(objectStyles: Objectstyle[]) {
+  const mergedObjectstyle = merge({}, ...objectStyles);
 
-  return sortObjectStyle(mergedObjectStyle);
+  return sortObjectstyle(mergedObjectstyle);
 }
