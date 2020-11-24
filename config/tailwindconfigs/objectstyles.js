@@ -1,5 +1,5 @@
 module.exports = {
   xwind: {
-    mode: "objectstyles"
-  }
+    mode: "objectstyles",
+  },
 };

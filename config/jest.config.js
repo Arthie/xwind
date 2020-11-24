@@ -62,9 +62,9 @@ const config = {
 
   // A set of global variables that need to be available in all test environments
   globals: {
-    'ts-jest': {
-      tsconfig: './config/tsconfig.json'
-    }
+    "ts-jest": {
+      tsconfig: "./config/tsconfig.json",
+    },
   },
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
@@ -122,9 +122,7 @@ const config = {
   // rootDir: undefined,
 
   // A list of paths to directories that Jest should use to search for files in
-  "roots": [
-    "<rootDir>/../packages/"
-  ],
+  roots: ["<rootDir>/../packages/"],
 
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",
@@ -177,8 +175,8 @@ const config = {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-  "transform": {
-    "^.+\\.(ts|tsx)$": "ts-jest"
+  transform: {
+    "^.+\\.(ts|tsx)$": "ts-jest",
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
@@ -200,4 +198,4 @@ const config = {
   // watchman: true,
 };
 
-module.exports = config
+module.exports = config;

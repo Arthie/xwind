@@ -16,7 +16,7 @@ module.exports = {
           { min: "868px" },
         ],
       },
-      fill: theme => theme('colors')
+      fill: (theme) => theme("colors"),
     },
   },
   variants: {},
@@ -36,10 +36,19 @@ module.exports = {
         });
       });
     }),
-    plugin(function ({ addVariant, addUtilities, addComponents, e, prefix, config }) {
+    plugin(function ({
+      addVariant,
+      addUtilities,
+      addComponents,
+      e,
+      prefix,
+      config,
+    }) {
       addVariant("important", ({ container }) => {
         container.walkRules((rule) => {
-          rule.selector = `.important\\${config("separator")}${rule.selector.slice(1)}`
+          rule.selector = `.important\\${config(
+            "separator"
+          )}${rule.selector.slice(1)}`;
           rule.walkDecls((decl) => {
             decl.important = true;
           });
@@ -49,6 +58,6 @@ module.exports = {
   ],
   xwind: {
     // plugins: [require("./lib/plugins/cssString").default],
-    mode: "objectstyles"
+    mode: "objectstyles",
   },
 };
