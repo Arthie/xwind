@@ -7,7 +7,7 @@ export default function (config: ResolvedXwindTailwindConfig) {
     $config = config;
   } else if (!isEqual($config, config)) {
     console.warn(
-      "XWIND: Tailwind config has changed. If you have babel caching enabled you'll need to clear the babel cache mannually and rebuild for the changes to be visible."
+      "XWIND: Tailwind config has changed. If you have babel caching enabled you'll need to clear the babel cache manually and rebuild for the changes to be visible."
     );
     $config = config;
   }
