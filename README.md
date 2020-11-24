@@ -34,7 +34,7 @@ You may have encountered some of these problems when using Tailwind with CSS-in-
 
 ### [xwind](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/xwind)
 
-xwind is a babel plugin that transforms Tailwind classes into CSS object styles or a classes string. The CSS object styles output can be used with your favorite CSS-in-JS library like emotion, styled-components ... The classes string output can be used with the xwind cli to generate a minimal css file of the used Tailwind classes.
+xwind uses a babel plugin that transforms Tailwind classes into CSS object styles or a classes string. The CSS object styles output can be used with your favorite CSS-in-JS library like emotion, styled-components ... The classes string output can be used with the xwind cli to generate a minimal css file of the used Tailwind classes.
 
 ### Output mode "objectstyles" example
 
@@ -79,7 +79,7 @@ const styles = `
 `;
 ```
 
-Plugins make it possible to support any CSS-in-JS library syntax.
+objectstyles plugins make it possible to support any CSS-in-JS library syntax.
 
 ### Output mode "classes" example
 
@@ -121,23 +121,13 @@ Output file "/src/styles/xwind.css":
 }
 ```
 
-Import the output file "/src/styles/xwind.css" into your project:
-
-```js
-//Javascript:
-import "/src/styles/xwind.css";
-//OR
-//HTML:
-<link rel="stylesheet" href="/src/styles/xwind.css" />;
-```
-
 ### [Full xwind package documentation](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/xwind)
 
 ---
 
 ### [typescript-xwind-plugin](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/typescript-plugin)
 
-This package is a typescript language service plugin that adds editor support for [xwind](https://github.com/Arthie/tailwindcssinjs/tree/master/packages/macro) tagged template syntax: xw\`...\` or tw\`...\`
+This package is a typescript language service plugin that adds editor support for xwind tagged template syntax: xw\`...\` or tw\`...\`
 
 ![autocomplete](https://github.com/Arthie/vscode-tailwindcssinjs/raw/master/resources/autocomplete.gif)
 
