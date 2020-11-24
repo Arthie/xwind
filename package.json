@@ -1,7 +1,10 @@
 {
   "name": "xwind-root",
   "version": "1.0.0",
-  "repository": "https://github.com/Arthie/tailwindcssinjs.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arthie/xwind.git"
+  },
   "author": "Arthie",
   "license": "MIT",
   "private": true,

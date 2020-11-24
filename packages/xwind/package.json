@@ -1,7 +1,12 @@
 {
   "name": "xwind",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "xwind",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arthie/xwind.git",
+    "directory": "packages/xwind"
+  },
   "keywords": [
     "tailwind",
     "tailwindcss",

@@ -3,6 +3,11 @@
   "version": "0.7.0",
   "author": "Arthie",
   "description": "This package contains xwind typescript language service plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arthie/xwind.git",
+    "directory": "packages/typescript-xwind-plugin"
+  },
   "main": "lib/plugin.js",
   "types": "lib/plugin.d.ts",
   "files": [

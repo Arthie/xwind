@@ -3,6 +3,11 @@
   "version": "0.7.0",
   "author": "Arthie",
   "description": "Simple utility functions for tailwindcss classes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arthie/xwind.git",
+    "directory": "packages/class-utilities"
+  },
   "main": "lib/classUtilities.js",
   "types": "lib/classUtilities.d.ts",
   "files": [
