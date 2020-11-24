@@ -1,4 +1,4 @@
-import { ObjectStyle, ResolvedTailwindConfig } from "@xwind/core";
+import { Objectstyle, ResolvedTailwindConfig } from "@xwind/core";
 
 interface ClassesModeOptions {
   mode: "classes";
@@ -21,10 +21,10 @@ interface ResolvedClassesModeOptions {
 interface ObjectstylesModeOptions {
   mode: "objectstyles";
   objectstyles?: {
-    developmentMode?: boolean;
+    warningCache?: boolean;
     plugins?: Array<
       (
-        objectStyle: ObjectStyle,
+        objectStyle: Objectstyle,
         composedTwClasses: string[],
         resolvedConfig: ResolvedTailwindConfig
       ) => {}

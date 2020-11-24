@@ -3,12 +3,11 @@ import Babel from "@babel/core";
 import initClassUtilities, { TwClasses } from "@xwind/class-utilities";
 import core, {
   createTwClassDictionary,
-  ObjectStyle,
-  mergeObjectStyles,
-  transformTwRootToObjectStyle,
+  Objectstyle,
+  mergeObjectstyles,
+  transformTwRootToObjectstyle,
 } from "@xwind/core";
 import { getTwConfigCache } from "./tailwindConfig";
-import devTransformObjectstyles from "./objectstyles/dev/devTransform";
 import { resolveXwindConfig } from "./xwindConfig";
 
 export function getArgs(referencePath: Babel.NodePath<Babel.types.Node>) {
@@ -93,83 +92,83 @@ export function getCachedTransformer(twConfigPath: string) {
     }
 
     if (xwConfig.mode === "objectstyles") {
+      const warningCache = xwConfig.objectstyles?.warningCache ?? true;
+      const isDev = process.env.NODE_ENV === "development" && warningCache;
       const twClassDictionary = {
         XWIND_BASE: createTwClassDictionary(baseRoot).XWIND_GLOBAL,
         ...createTwClassDictionary(componentsRoot, utilitiesRoot),
       };
 
-      const developmentMode = xwConfig.objectstyles?.developmentMode ?? true;
-      const isDev = process.env.NODE_ENV === "development" && developmentMode;
+      const tailwindObjectstyles = (twClasses: TwClasses) => {
+        const parsedTwClasses = twClassesUtils.parser(twClasses);
+        const composedTwClasses = twClassesUtils.composer(twClasses);
 
-      if (isDev) {
-        const devTailwindObjectstyles = (twClasses: TwClasses) => {
-          const parsedTwClasses = twClassesUtils.parser(twClasses);
-          const objectStyles: [string, ObjectStyle][] = [];
-          for (const parsedTwClass of parsedTwClasses) {
-            const twRoot = generateTwClassSubstituteRoot(
-              twClassDictionary,
-              parsedTwClass
-            );
-            const [twClass] = twClassesUtils.generator(parsedTwClass);
-            objectStyles.push([
-              twClass,
-              transformTwRootToObjectStyle(parsedTwClass.class, twRoot),
-            ]);
-          }
-          return objectStyles;
-        };
-
-        $transfromer = (
-          paths: Babel.NodePath<babel.types.Node>[],
-          state: Babel.PluginPass,
-          t: typeof Babel.types
-        ) =>
-          devTransformObjectstyles(
-            twConfigPath,
-            paths,
-            state,
-            t,
-            devTailwindObjectstyles
+        const objectstyles: Objectstyle[] = [];
+        for (const parsedTwClass of parsedTwClasses) {
+          const twRoot = generateTwClassSubstituteRoot(
+            twClassDictionary,
+            parsedTwClass
           );
-      } else {
-        const tailwindObjectstyles = (twClasses: TwClasses) => {
-          const parsedTwClasses = twClassesUtils.parser(twClasses);
-          const composedTwClasses = twClassesUtils.composer(twClasses);
+          objectstyles.push(
+            transformTwRootToObjectstyle(parsedTwClass.class, twRoot)
+          );
+        }
 
-          const objectStyles: ObjectStyle[] = [];
-          for (const parsedTwClass of parsedTwClasses) {
-            const twRoot = generateTwClassSubstituteRoot(
-              twClassDictionary,
-              parsedTwClass
-            );
-            objectStyles.push(
-              transformTwRootToObjectStyle(parsedTwClass.class, twRoot)
-            );
+        let objectstyle = mergeObjectstyles(objectstyles);
+
+        if (twConfig.xwind?.objectstyles?.plugins) {
+          for (const plugin of twConfig.xwind.objectstyles.plugins) {
+            objectstyle = plugin(objectstyle, composedTwClasses, twConfig);
           }
+        }
 
-          let objectStyle = mergeObjectStyles(objectStyles);
+        return objectstyle;
+      };
 
-          if (twConfig.xwind?.objectstyles?.plugins) {
-            for (const plugin of twConfig.xwind.objectstyles.plugins) {
-              objectStyle = plugin(objectStyle, composedTwClasses, twConfig);
-            }
-          }
+      $transfromer = (
+        paths: Babel.NodePath<babel.types.Node>[],
+        state: Babel.PluginPass,
+        t: typeof Babel.types
+      ) => {
+        if (isDev) {
+          const path = state.file.path;
+          //create tailwindconfig importDeclaration:
+          //import tailwindconfig from "ABSULUTEPATH/tailwind.config";
+          const tailwindConfigUid = path.scope.generateUidIdentifier(
+            "tailwindconfig"
+          );
+          const tailwindConfigImport = t.importDeclaration(
+            [t.importDefaultSpecifier(tailwindConfigUid)],
+            t.stringLiteral(twConfigPath)
+          );
 
-          return objectStyle;
-        };
+          const devXwUid = path.scope.generateUidIdentifier("devXwUid");
+          const devXwImport = t.importDeclaration(
+            [t.importDefaultSpecifier(devXwUid)],
+            t.stringLiteral("xwind/lib/objectstyles/devXwind")
+          );
 
-        $transfromer = (
-          paths: Babel.NodePath<babel.types.Node>[],
-          state: Babel.PluginPass,
-          t: typeof Babel.types
-        ) => {
-          for (const path of paths) {
-            const args = getArgs(path);
-            const style = tailwindObjectstyles(args);
-            path.parentPath.replaceWith(t.valueToNode(style));
-          }
-        };
-      }
+          const callDevXw = t.expressionStatement(
+            t.callExpression(devXwUid, [tailwindConfigUid])
+          );
+
+          //add devImports nodes to the file
+          const programParentNode = path.scope.getProgramParent().path
+            .node as Babel.types.Program;
+
+          programParentNode.body.unshift(
+            tailwindConfigImport,
+            devXwImport,
+            callDevXw
+          );
+        }
+
+        for (const path of paths) {
+          const args = getArgs(path);
+          const objectstyles = tailwindObjectstyles(args);
+          path.parentPath.replaceWith(t.valueToNode(objectstyles));
+        }
+      };
     }
   }
 

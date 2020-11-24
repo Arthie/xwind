@@ -1,7 +1,7 @@
-import { ObjectStyle } from "@xwind/core/lib/utilities";
+import { Objectstyle } from "@xwind/core/lib/utilities";
 
-export default function removeFallbacks(objectStyle: ObjectStyle): ObjectStyle {
-  const rules = Object.entries(objectStyle).map(([key, value]) => {
+function removeFallbacks(objectstyle: Objectstyle): Objectstyle {
+  const rules = Object.entries(objectstyle).map(([key, value]) => {
     if (typeof value === "string") {
       return [key, value];
     }
@@ -13,3 +13,5 @@ export default function removeFallbacks(objectStyle: ObjectStyle): ObjectStyle {
   });
   return Object.fromEntries(rules);
 }
+
+export default removeFallbacks;
