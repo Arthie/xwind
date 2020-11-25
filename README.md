@@ -19,7 +19,7 @@ You may have encountered some of these problems when using Tailwind with CSS-in-
 - Automatically compatible with latest Tailwind version **2.X.X**
 - New syntax to apply variants to multiple utility classes `md:hover[text-xs font-normal]`
 - Reacts to changes in made in `tailwind.config.js`
-- Great developer experience with [VS Code extension](https://github.com/Arthie/vscode-xwind) or [typescript-xwind-plugin](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/typescript-plugin)
+- Great developer experience with [VS Code extension](https://github.com/Arthie/vscode-xwind) or [typescript-xwind-plugin](https://github.com/Arthie/xwind/tree/master/packages/typescript-plugin)
 - No runtime impact all transformations happen during build time
 - Plugins to support any/your favorite CSS-in-JS syntax
 
@@ -32,7 +32,7 @@ You may have encountered some of these problems when using Tailwind with CSS-in-
 
 ## Packages
 
-### [xwind](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/xwind)
+### [xwind](https://github.com/Arthie/xwind/tree/master/packages/xwind)
 
 xwind uses a babel plugin that transforms Tailwind classes into CSS object styles or a classes string. The CSS object styles output can be used with your favorite CSS-in-JS library like emotion, styled-components ... The classes string output can be used with the xwind cli to generate a minimal css file of the used Tailwind classes.
 
@@ -121,11 +121,11 @@ Output file "/src/styles/xwind.css":
 }
 ```
 
-### [Full xwind package documentation](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/xwind)
+### [Full xwind package documentation](https://github.com/Arthie/xwind/tree/master/packages/xwind)
 
 ---
 
-### [typescript-xwind-plugin](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/typescript-plugin)
+### [typescript-xwind-plugin](https://github.com/Arthie/xwind/tree/master/packages/typescript-plugin)
 
 This package is a typescript language service plugin that adds editor support for xwind tagged template syntax: xw\`...\` or tw\`...\`
 
@@ -142,13 +142,13 @@ This extension activates typescript-xwind-plugin inside VS Code's Typescript lan
 Want to create Tailwind tools with javascript?
 Have a look at these packages they make the xwind and typescript-xwind-plugin possible.
 
-### [@xwind/class-utilities](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/class-utilities)
+### [@xwind/class-utilities](https://github.com/Arthie/xwind/tree/master/packages/class-utilities)
 
 The class-utilities package contains flexible utilities to compose and parse Tailwind classes.
 
 ---
 
-### [@xwind/core](https://github.com/Arthie/tailwindcssinjs/tree/xwind/packages/core) (WIP)
+### [@xwind/core](https://github.com/Arthie/xwind/tree/master/packages/core) (WIP)
 
 The core package uses Tailwind internals to extracts/generate all the data you could want from Tailwind. It provides the data in a structured way with the necessary utilities to create and manipulate this data.
 
