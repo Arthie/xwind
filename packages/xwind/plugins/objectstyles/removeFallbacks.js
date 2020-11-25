@@ -1,1 +1,1 @@
-module.exports = require("../lib/objectstyles/plugins/removeFallbacks").default;
+module.exports = require("../../lib/objectstyles/plugins/removeFallbacks").default;

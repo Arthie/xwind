@@ -1,1 +1,1 @@
-module.exports = require("../lib/objectstyles/plugins/css").default;
+module.exports = require("../../lib/objectstyles/plugins/css").default;
