@@ -7,12 +7,14 @@ import parser from "postcss-selector-parser";
 
 export type Objectstyle = ObjectstyleDecl | ObjectstyleRuleOrAtRule;
 
+export type ObjectstyleDeclValue = string | number;
+
 export type ObjectstyleDecl = {
-  [key: string]: string | string[];
+  [key: string]: ObjectstyleDeclValue | ObjectstyleDeclValue[];
 };
 
 export type ObjectstyleRuleOrAtRule = {
-  [key: string]: string | string[] | ObjectstyleRuleOrAtRule;
+  [key: string]: ObjectstyleDecl | ObjectstyleRuleOrAtRule;
 };
 
 export function transformTwRootToObjectstyle(
