@@ -2,12 +2,13 @@ import commander, { program } from "commander";
 import chokidar from "chokidar";
 import { BabelFileMetadata, transformFileAsync } from "@babel/core";
 import { getTwConfigPath, getTwConfig } from "./tailwindConfig";
-import cache from "./cache";
 import initTailwindClasses from "./classes/tailwind";
 import fs from "fs";
 import path from "path";
 import { getHash } from "./utils";
 import { resolveXwindClassesModeConfig } from "./xwindConfig";
+
+const cache = new Map<string, string>();
 
 const VERSION = "0.0.1";
 

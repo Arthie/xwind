@@ -30,8 +30,8 @@ function tailwind(
   const variantOrder = tailwindConfig.variantOrder;
   const twClassOrder = Object.keys(twClassDictionary);
   const compare = (
-    { class: firstClass, variants: firstVariants }: TwParsedClass,
-    { class: secondClass, variants: secondVariants }: TwParsedClass
+    { twClass: firstClass, variants: firstVariants }: TwParsedClass,
+    { twClass: secondClass, variants: secondVariants }: TwParsedClass
   ) => {
     //compare screen variants
     const firstScreenIndex = firstVariants.length

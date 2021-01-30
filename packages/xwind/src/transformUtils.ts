@@ -92,8 +92,6 @@ export function getCachedTransformer(twConfigPath: string) {
     }
 
     if (xwConfig.mode === "objectstyles") {
-      const warningCache = xwConfig.objectstyles?.warningCache ?? true;
-      const isDev = process.env.NODE_ENV === "development" && warningCache;
       const twClassDictionary = {
         XWIND_BASE: createTwClassDictionary(baseRoot).XWIND_GLOBAL,
         ...createTwClassDictionary(componentsRoot, utilitiesRoot),
@@ -110,7 +108,7 @@ export function getCachedTransformer(twConfigPath: string) {
             parsedTwClass
           );
           objectstyles.push(
-            transformTwRootToObjectstyle(parsedTwClass.class, twRoot)
+            transformTwRootToObjectstyle(parsedTwClass.twClass, twRoot)
           );
         }
 
@@ -130,39 +128,6 @@ export function getCachedTransformer(twConfigPath: string) {
         state: Babel.PluginPass,
         t: typeof Babel.types
       ) => {
-        if (isDev) {
-          const path = state.file.path;
-          //create tailwindconfig importDeclaration:
-          //import tailwindconfig from "ABSULUTEPATH/tailwind.config";
-          const tailwindConfigUid = path.scope.generateUidIdentifier(
-            "tailwindconfig"
-          );
-          const tailwindConfigImport = t.importDeclaration(
-            [t.importDefaultSpecifier(tailwindConfigUid)],
-            t.stringLiteral(twConfigPath)
-          );
-
-          const devXwUid = path.scope.generateUidIdentifier("devXwUid");
-          const devXwImport = t.importDeclaration(
-            [t.importDefaultSpecifier(devXwUid)],
-            t.stringLiteral("xwind/lib/objectstyles/devXwind")
-          );
-
-          const callDevXw = t.expressionStatement(
-            t.callExpression(devXwUid, [tailwindConfigUid])
-          );
-
-          //add devImports nodes to the file
-          const programParentNode = path.scope.getProgramParent().path
-            .node as Babel.types.Program;
-
-          programParentNode.body.unshift(
-            tailwindConfigImport,
-            devXwImport,
-            callDevXw
-          );
-        }
-
         for (const path of paths) {
           const args = getArgs(path);
           const objectstyles = tailwindObjectstyles(args);

@@ -1,6 +1,6 @@
 {
   "name": "xwind",
-  "version": "0.7.4",
+  "version": "0.8.0",
   "description": "xwind",
   "repository": {
     "type": "git",
@@ -19,7 +19,8 @@
     "lib",
     "plugins",
     "babel.js",
-    "macro.js"
+    "macro.js",
+    "next.js"
   ],
   "license": "MIT",
   "engines": {
@@ -34,13 +35,13 @@
     "@babel/core": "7.X.X"
   },
   "dependencies": {
-    "@xwind/class-utilities": "^0.7.0",
-    "@xwind/core": "^0.7.0",
-    "babel-plugin-macros": "^2.8.0",
-    "chokidar": "^3.4.3",
+    "@xwind/class-utilities": "^0.8.0",
+    "@xwind/core": "^0.8.0",
+    "babel-plugin-macros": "^3.0.1",
+    "chokidar": "^3.5.1",
     "clsx": "^1.1.1",
-    "commander": "^7.0.0-0",
-    "import-fresh": "^3.2.2",
+    "commander": "^7.0.0-2",
+    "import-fresh": "^3.3.0",
     "lodash": "^4.17.20",
     "postcss-js": "^3.0.3"
   }

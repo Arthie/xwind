@@ -21,7 +21,6 @@ interface ResolvedClassesModeOptions {
 interface ObjectstylesModeOptions {
   mode: "objectstyles";
   objectstyles?: {
-    warningCache?: boolean;
     plugins?: Array<
       (
         objectStyle: Objectstyle,

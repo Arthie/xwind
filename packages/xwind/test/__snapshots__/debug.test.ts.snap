@@ -7,7 +7,7 @@ const css = tw\`lol\`
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-Error: /home/arthie/projects/tailwindcssinjs/packages/xwind/test/debug.test.ts: Class "lol" not found.
+Error: /home/arthie/projects/xwind/packages/xwind/test/debug.test.ts: Class "lol" not found.
 
 `;
 
