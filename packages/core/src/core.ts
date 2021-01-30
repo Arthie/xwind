@@ -1,13 +1,14 @@
 import postcss, { root } from "postcss";
 
 //Tailwindcss imports
+import _resolveConfig from "tailwindcss/resolveConfig";
+import corePlugins from "tailwindcss/lib/corePlugins";
+import processPlugins from "tailwindcss/lib/util/processPlugins";
 import substituteVariantsAtRules from "tailwindcss/lib/lib/substituteVariantsAtRules";
 import substituteScreenAtRules from "tailwindcss/lib/lib/substituteScreenAtRules";
 import evaluateTailwindFunctions from "tailwindcss/lib/lib/evaluateTailwindFunctions";
-import processPlugins from "tailwindcss/lib/util/processPlugins";
-import _resolveConfig from "tailwindcss/resolveConfig";
+
 import { getGenerateTwClassSubstituteRoot } from "./utilities";
-import corePlugins from "tailwindcss/lib/corePlugins";
 
 export interface TailwindConfig {
   separator?: string;
@@ -53,10 +54,8 @@ function core(resolvedConfig: ResolvedTailwindConfig) {
   const componentsRoot = root({ nodes: processedPlugins.components });
 
   const screens = Object.keys(resolvedConfig.theme.screens);
-  const variants = BASEVARIANTS.concat(
-    Object.keys(processedPlugins.variantGenerators)
-  );
-
+  const variants = Object.keys(processedPlugins.variantGenerators);
+  variants.unshift(...BASEVARIANTS);
   const getSubstituteVariantsAtRules = substituteVariantsAtRules(
     resolvedConfig,
     processedPlugins

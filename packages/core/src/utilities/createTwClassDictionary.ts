@@ -90,14 +90,15 @@ export function flattenContainer(container: Container) {
         node.remove();
       } else if (node.name === "media") {
         node.walk(walker);
-        for (const atRulenode of node.nodes as TwChildNode[]) {
-          const newAtrule = atRule({
+        const nodes: TwChildNode[] = node.nodes;
+        for (const atRulenode of nodes) {
+          const newAtrule: TwAtrule = atRule({
             name: node.name,
             nodes: [atRulenode],
             params: node.params,
             raws: node.raws,
             source: node.source,
-          }) as TwAtrule;
+          });
           newAtrule.twClass = atRulenode.twClass;
           node.parent?.append(newAtrule);
         }
@@ -124,12 +125,12 @@ export function flattenContainer(container: Container) {
           const selectors = node.selectors.filter((selector) =>
             isClassInSelector(selector, selectorClass)
           );
-          const newRule = rule({
+          const newRule: TwRule = rule({
             nodes: node.nodes,
             raws: node.raws,
             selectors,
             source: node.source,
-          }) as TwRule;
+          });
           newRule.twClass = selectorClass;
           node.parent?.append(newRule);
         }

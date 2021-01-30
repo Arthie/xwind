@@ -5,8 +5,6 @@ import merge from "lodash/merge";
 import sortCSSmq from "sort-css-media-queries";
 import parser from "postcss-selector-parser";
 
-export type Objectstyle = ObjectstyleDecl | ObjectstyleRuleOrAtRule;
-
 export type ObjectstyleDeclValue = string | number;
 
 export type ObjectstyleDecl = {
@@ -16,6 +14,8 @@ export type ObjectstyleDecl = {
 export type ObjectstyleRuleOrAtRule = {
   [key: string]: ObjectstyleDecl | ObjectstyleRuleOrAtRule;
 };
+
+export type Objectstyle = ObjectstyleDecl | ObjectstyleRuleOrAtRule;
 
 export function transformTwRootToObjectstyle(
   twClass: string,
@@ -41,13 +41,13 @@ export function transformTwRootToObjectstyle(
   return objectify(root);
 }
 
-function sortObjectstyle<T extends Objectstyle>(objectStyle: T) {
+function sortObjectstyle(objectStyle: Objectstyle): Objectstyle {
   const objectStyleEntries = Object.entries(objectStyle);
 
   //also sort nested style Rules / atRules
   for (const [index, [key, value]] of objectStyleEntries.entries()) {
     if (typeof value === "object" && !Array.isArray(value)) {
-      const sortedValue = sortObjectstyle<ObjectstyleRuleOrAtRule>(value);
+      const sortedValue = sortObjectstyle(value);
       objectStyleEntries[index] = [key, sortedValue];
     }
   }
@@ -116,7 +116,7 @@ function sortObjectstyle<T extends Objectstyle>(objectStyle: T) {
 }
 
 export function mergeObjectstyles(objectStyles: Objectstyle[]) {
-  const mergedObjectstyle = merge({}, ...objectStyles);
+  const mergedObjectstyle: Objectstyle = merge({}, ...objectStyles);
 
   return sortObjectstyle(mergedObjectstyle);
 }

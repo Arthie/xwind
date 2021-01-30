@@ -39,40 +39,35 @@ export function getGenerateTwClassSubstituteRoot(
     });
     return selectorRoot.toString();
   };
+
   return (
     twClassDictionary: TwClassDictionary,
     twParsedClass: TwParsedClass
   ) => {
-    const { class: twClass, variants } = twParsedClass;
+    const { twClass, variants } = twParsedClass;
     const twObject = twClassDictionary[twClass];
     if (!twObject) throw new Error(`Class "${twClass}" not found.`);
+
     const twRoot = twObject.clone();
-    if (variants.length) {
-      for (const variant of variants) {
-        if (screens.includes(variant)) {
-          const atRuleProps = {
-            name: "screen",
-            params: variant,
-          };
-          applySubstituteRules(atRuleProps, twRoot, getSubstituteScreenAtRules);
-          twRoot.walkRules((rule) => {
-            rule.selector = parseSelectorClasses(rule, twClass, variant);
-          });
-        } else {
-          const atRuleProps = {
-            name: "variants",
-            params: variant,
-          };
-          applySubstituteRules(
-            atRuleProps,
-            twRoot,
-            getSubstituteVariantsAtRules
-          );
-          twRoot.first?.remove();
-        }
+    for (const variant of variants) {
+      if (screens.includes(variant)) {
+        const atRuleProps = {
+          name: "screen",
+          params: variant,
+        };
+        applySubstituteRules(atRuleProps, twRoot, getSubstituteScreenAtRules);
+        twRoot.walkRules((rule) => {
+          rule.selector = parseSelectorClasses(rule, twClass, variant);
+        });
+      } else {
+        const atRuleProps = {
+          name: "variants",
+          params: variant,
+        };
+        applySubstituteRules(atRuleProps, twRoot, getSubstituteVariantsAtRules);
+        twRoot.first?.remove();
       }
     }
-
     return twRoot;
   };
 }
