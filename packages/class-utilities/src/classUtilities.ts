@@ -4,7 +4,7 @@ export type TwClass = string;
 export type TwClasses = string | TwClasses[];
 
 export type TwParsedClass = {
-  class: string;
+  twClass: string;
   variants: string[];
 };
 
@@ -15,7 +15,7 @@ export type TwParsedClasses = TwParsedClass | TwParsedClasses[];
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return a Array of tailwind classes.
  */
-export function composer(separator: string, ...twClasses: TwClasses[]) {
+export function composer(twClasses: TwClasses, separator: string) {
   if (typeof separator !== "string") {
     throw new Error(`Separator "${separator}" must be of type String`);
   }
@@ -54,7 +54,10 @@ export function composer(separator: string, ...twClasses: TwClasses[]) {
   };
 
   // combines all arguments into a string
-  const twClassesString = twClasses.flat(Infinity).join(" ");
+  const twClassesString =
+    typeof twClasses === "string"
+      ? twClasses
+      : twClasses.flat(Infinity).join(" ");
 
   if (NESTED_ANGLE_BRACKET_REGEXP.test(twClassesString)) {
     throw new Error(`Nested variant arrays are not allowed`);
@@ -68,9 +71,8 @@ export function composer(separator: string, ...twClasses: TwClasses[]) {
 
   // matches tailwind classes and removes whitespace
   // " text-red-100  bg-blue-200 " => ["text-red-100", "bg-blue-200"]
-  const composedTwClasses = Array.from(
-    replacedTwClassesString.match(NOT_WHITE_SPACE_REGEX) ?? []
-  );
+  const composedTwClasses =
+    replacedTwClassesString.match(NOT_WHITE_SPACE_REGEX) ?? [];
 
   //Remove first of duplicate classes
   return Array.from(new Set(composedTwClasses.reverse())).reverse();
@@ -80,52 +82,47 @@ export function composer(separator: string, ...twClasses: TwClasses[]) {
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return an array of class and variants tuples.
  */
-export function parser(separator: string, ...twClasses: TwClasses[]) {
-  const composedTwClasses = composer(separator, twClasses);
+export function parser(twClasses: TwClasses, separator: string) {
+  const composedTwClasses = composer(twClasses, separator);
 
-  const parsedClasses: TwParsedClass[] = [];
+  const twParsedClasses: TwParsedClass[] = [];
   for (const composedTwClass of composedTwClasses) {
-    const [twClass, ...variants] = composedTwClass.split(separator).reverse();
-    parsedClasses.push({
-      class: twClass,
-      variants,
+    const splitTwClass = composedTwClass.split(separator);
+    const twClass = splitTwClass.pop();
+    if (!twClass) continue;
+    twParsedClasses.push({
+      twClass,
+      variants: splitTwClass.reverse(),
     });
   }
 
-  return parsedClasses;
+  return twParsedClasses;
 }
 
 /**
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function takes an array of parsed tailwind classes and return an Array of tailwind classes.
  */
-export function generator(
-  separator: string,
-  ...parsedTwClasses: TwParsedClasses[]
-) {
-  const getTwClasses = (parsedTwClasses: TwParsedClasses[]) => {
-    const twClasses: string[] = [];
-    for (const parsedTwClassOrParsedTwClassArray of parsedTwClasses) {
-      if (Array.isArray(parsedTwClassOrParsedTwClassArray)) {
-        const parsedTwClassArray = parsedTwClassOrParsedTwClassArray;
-        twClasses.push(...getTwClasses(parsedTwClassArray));
-      } else {
-        const parsedTwClass = parsedTwClassOrParsedTwClassArray;
-        if (parsedTwClass.variants?.length) {
-          const twClass = [
-            ...Array.from(parsedTwClass.variants).reverse(),
-            parsedTwClass.class,
-          ].join(separator);
-          twClasses.push(twClass);
-        } else {
-          twClasses.push(parsedTwClass.class);
-        }
-      }
+export function generator(twParsedClasses: TwParsedClasses, separator: string) {
+  const generateTwClass = (twParsedClass: TwParsedClass) => {
+    if (twParsedClass.variants?.length) {
+      return [...twParsedClass.variants.reverse(), twParsedClass.twClass].join(
+        separator
+      );
+    } else {
+      return twParsedClass.twClass;
     }
-    return twClasses;
   };
 
-  const twClasses = getTwClasses(parsedTwClasses);
+  const twClasses: string[] = [];
+  if (!Array.isArray(twParsedClasses)) {
+    twClasses.push(generateTwClass(twParsedClasses));
+  } else {
+    for (const twParsedClass of twParsedClasses.flat(Infinity)) {
+      twClasses.push(generateTwClass(twParsedClass));
+    }
+  }
+
   //Remove first of duplicate classes
   return Array.from(new Set(twClasses.reverse())).reverse();
 }
@@ -134,8 +131,8 @@ export function generator(
  * Takes a separator string (e.g. ":") as parameter and returns a composer function.
  * The composer function will return a tailwind classes string
  */
-export function serializer(separator: string, ...twClasses: TwClasses[]) {
-  return composer(separator, twClasses).join(" ");
+export function serializer(twClasses: TwClasses, separator: string) {
+  return composer(twClasses, separator).join(" ");
 }
 
 function classUtilities(separator: string, variants?: string[]) {
@@ -148,11 +145,11 @@ function classUtilities(separator: string, variants?: string[]) {
   }
 
   return {
-    composer: (...twClasses: TwClasses[]) => composer(separator, twClasses),
-    parser: (...twClasses: TwClasses[]) => parser(separator, twClasses),
-    serializer: (...twClasses: TwClasses[]) => serializer(separator, twClasses),
-    generator: (...parsedTwClasses: TwParsedClasses[]) =>
-      generator(separator, parsedTwClasses),
+    composer: (...twClasses: TwClasses[]) => composer(twClasses, separator),
+    parser: (...twClasses: TwClasses[]) => parser(twClasses, separator),
+    serializer: (...twClasses: TwClasses[]) => serializer(twClasses, separator),
+    generator: (...twParsedClasses: TwParsedClasses[]) =>
+      generator(twParsedClasses, separator),
   };
 }
 

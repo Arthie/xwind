@@ -1,6 +1,6 @@
 {
   "name": "@xwind/class-utilities",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "author": "Arthie",
   "description": "Simple utility functions for tailwindcss classes",
   "repository": {

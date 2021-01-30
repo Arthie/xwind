@@ -94,15 +94,15 @@ const tw = classUtilities.parser(
 );
 //Result: [
 //  {
-//    class: "text-red-100",
+//    twClass: "text-red-100",
 //    variants: [],
 //  },
 //  {
-//    class: "bg-red-200",
+//    twClass: "bg-red-200",
 //    variants: ["hover"],
 //  },
 //  {
-//    class: "bg-red-300",
+//    twClass: "bg-red-300",
 //    variants: ["active", "sm"],
 //  },
 //]
@@ -114,16 +114,16 @@ const tw = classUtilities.serializer(
 
 const tw = classUtilities.generator(
   {
-    class: "text-red-100",
+    twClass: "text-red-100",
     variants: [],
   },
   [
     {
-      class: "bg-red-200",
+      twClass: "bg-red-200",
       variants: ["hover"],
     },
     {
-      class: "bg-red-300",
+      twClass: "bg-red-300",
       variants: ["active", "sm"],
     },
   ]
@@ -133,7 +133,7 @@ const tw = classUtilities.generator(
 
 ### 1. composer
 
-#### `composer(separator:string, ...classes: string | string[] | string[][]): string[]`
+#### `composer(classes: string | string[], separator: string): string[]`
 
 The compposer function will return an Array of tailwind class strings.
 
@@ -142,7 +142,7 @@ The compposer function will return an Array of tailwind class strings.
 ```js
 import { composer } from "@xwind/class-utilities";
 
-const tw = composer(":", "text-red-100 hover:bg-red-200 sm:active:bg-red-300");
+const tw = composer("text-red-100 hover:bg-red-200 sm:active:bg-red-300", ":");
 //Result: [ "text-red-100", "hover:bg-red-200", "sm:active:bg-red-300" ]
 ```
 
@@ -159,7 +159,7 @@ const tw = classUtilities.composer(
 
 ### 2. parser
 
-#### `parser(separator:string, ...classes: string | string[] | string[][]): {class:string, variants: string[]}[]`
+#### `parser(classes: string | string[], separator: string): {twClass: string, variants: string[]}[]`
 
 The parser function will return an Array of parsed tailwind classes.
 
@@ -170,18 +170,18 @@ The parser function will return an Array of parsed tailwind classes.
 ```js
 import { parser } from "@xwind/class-utilities";
 
-const tw = parser(":", "text-red-100 hover:bg-red-200 sm:active:bg-red-300");
+const tw = parser("text-red-100 hover:bg-red-200 sm:active:bg-red-300", ":");
 //Result: [
 //  {
-//    class: "text-red-100",
+//    twClass: "text-red-100",
 //    variants: [],
 //  },
 //  {
-//    class: "bg-red-200",
+//    twClass: "bg-red-200",
 //    variants: ["hover"],
 //  },
 //  {
-//    class: "bg-red-300",
+//    twClass: "bg-red-300",
 //    variants: ["active", "sm"],
 //  },
 //]
@@ -197,15 +197,15 @@ const tw = classUtilities.parser(
 );
 //Result: [
 //  {
-//    class: "text-red-100",
+//    twClass: "text-red-100",
 //    variants: [],
 //  },
 //  {
-//    class: "bg-red-200",
+//    twClass: "bg-red-200",
 //    variants: ["hover"],
 //  },
 //  {
-//    class: "bg-red-300",
+//    twClass: "bg-red-300",
 //    variants: ["active", "sm"],
 //  },
 //]
@@ -213,7 +213,7 @@ const tw = classUtilities.parser(
 
 ### 3. serializer
 
-#### `serializer(separator:string, ...classes: string | string[] | string[][]): string[]`
+#### `serializer(classes: string | string[], separator: string): string`
 
 The serializer function will return a string of tailwind classes.
 
@@ -223,8 +223,8 @@ The serializer function will return a string of tailwind classes.
 import { serializer } from "@xwind/class-utilities";
 
 const tw = serializer(
-  ":",
-  "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
+  "text-red-100 hover:bg-red-200 sm:active:bg-red-300",
+  ":"
 );
 //Result: "text-red-100 hover:bg-red-200 sm:active:bg-red-300"
 ```
@@ -242,7 +242,7 @@ const tw = classUtilities.serializer(
 
 ### 4. generator
 
-#### `generator(separator:string, ...twParsedClasses: TwParsedClass | TwParsedClass[] | TwParsedClass[][]): string[]`
+#### `generator(twParsedClasses: TwParsedClass | TwParsedClass[], separator: string): string[]`
 
 The generator function will return a string of tailwind classes.
 
@@ -252,23 +252,19 @@ The generator function will return a string of tailwind classes.
 import { generator } from "@xwind/class-utilities";
 
 const tw = generator(
-  ":",
-  {
-    class: "text-red-100",
-    variants: [],
-  },
   [
     {
-      class: "bg-red-200",
+      twClass: "bg-red-200",
       variants: ["hover"],
     },
     {
-      class: "bg-red-300",
+      twClass: "bg-red-300",
       variants: ["active", "sm"],
     },
-  ]
+  ],
+  ":"
 );
-//Result: [ "text-red-100", "hover:bg-red-200", "sm:active:bg-red-300" ]
+//Result: [ "hover:bg-red-200", "sm:active:bg-red-300" ]
 ```
 
 ```js
@@ -278,16 +274,16 @@ const classUtilities = initClassUtilities(":");
 
 const tw = classUtilities.generator(
   {
-    class: "text-red-100",
+    twClass: "text-red-100",
     variants: [],
   },
   [
     {
-      class: "bg-red-200",
+      twClass: "bg-red-200",
       variants: ["hover"],
     },
     {
-      class: "bg-red-300",
+      twClass: "bg-red-300",
       variants: ["active", "sm"],
     },
   ]
