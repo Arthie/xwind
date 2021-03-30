@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Arthie/tailwindcssinjs/raw/xwind/resources/header.png" alt="tailwindcssinjs">
+  <img src="https://raw.githubusercontent.com/Arthie/xwind/master/resources/header.png" alt="tailwindcssinjs">
 </p>
 
 This repo contains a collection of packages that makes the integration of Tailwind with CSS-in-JS libraries easier.
