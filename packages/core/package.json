@@ -18,7 +18,7 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "build": "tsc --build --w"
+    "build": "tsc --build"
   },
   "peerDependencies": {
     "tailwindcss": ">=1.3.X <=2.X.X",

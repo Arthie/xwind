@@ -18,6 +18,6 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "build": "tsc --build --w"
+    "build": "tsc --build"
   }
 }
