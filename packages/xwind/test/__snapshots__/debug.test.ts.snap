@@ -406,7 +406,7 @@ const css = {
   color: "rgba(255, 255, 255, var(--tw-text-opacity))",
   backgroundColor: "rgba(79, 70, 229, var(--tw-bg-opacity))",
   transitionProperty:
-    "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
+    "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter",
   transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
   transitionDuration: "150ms",
   "&:hover": {

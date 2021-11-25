@@ -1,5 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`xwind -backdrop-hue-rotate-15: -backdrop-hue-rotate-15 1`] = `
+
+import xw from 'xwind';
+const css = xw\`-backdrop-hue-rotate-15\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(-15deg)",
+};
+
+
+`;
+
+exports[`xwind -backdrop-hue-rotate-30: -backdrop-hue-rotate-30 1`] = `
+
+import xw from 'xwind';
+const css = xw\`-backdrop-hue-rotate-30\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(-30deg)",
+};
+
+
+`;
+
+exports[`xwind -backdrop-hue-rotate-60: -backdrop-hue-rotate-60 1`] = `
+
+import xw from 'xwind';
+const css = xw\`-backdrop-hue-rotate-60\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(-60deg)",
+};
+
+
+`;
+
+exports[`xwind -backdrop-hue-rotate-90: -backdrop-hue-rotate-90 1`] = `
+
+import xw from 'xwind';
+const css = xw\`-backdrop-hue-rotate-90\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(-90deg)",
+};
+
+
+`;
+
+exports[`xwind -backdrop-hue-rotate-180: -backdrop-hue-rotate-180 1`] = `
+
+import xw from 'xwind';
+const css = xw\`-backdrop-hue-rotate-180\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(-180deg)",
+};
+
+
+`;
+
 exports[`xwind -bottom-0.5: -bottom-0.5 1`] = `
 
 import xw from 'xwind';
@@ -583,6 +653,76 @@ const css = xw\`-bottom-px\`;
 
 const css = {
   bottom: "-1px",
+};
+
+
+`;
+
+exports[`xwind -hue-rotate-15: -hue-rotate-15 1`] = `
+
+import xw from 'xwind';
+const css = xw\`-hue-rotate-15\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(-15deg)",
+};
+
+
+`;
+
+exports[`xwind -hue-rotate-30: -hue-rotate-30 1`] = `
+
+import xw from 'xwind';
+const css = xw\`-hue-rotate-30\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(-30deg)",
+};
+
+
+`;
+
+exports[`xwind -hue-rotate-60: -hue-rotate-60 1`] = `
+
+import xw from 'xwind';
+const css = xw\`-hue-rotate-60\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(-60deg)",
+};
+
+
+`;
+
+exports[`xwind -hue-rotate-90: -hue-rotate-90 1`] = `
+
+import xw from 'xwind';
+const css = xw\`-hue-rotate-90\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(-90deg)",
+};
+
+
+`;
+
+exports[`xwind -hue-rotate-180: -hue-rotate-180 1`] = `
+
+import xw from 'xwind';
+const css = xw\`-hue-rotate-180\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(-180deg)",
 };
 
 
@@ -10871,6 +11011,856 @@ const css = {
 
 `;
 
+exports[`xwind backdrop-blur: backdrop-blur 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-blur\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-blur": "blur(8px)",
+};
+
+
+`;
+
+exports[`xwind backdrop-blur-0: backdrop-blur-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-blur-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-blur": "blur(0)",
+};
+
+
+`;
+
+exports[`xwind backdrop-blur-2xl: backdrop-blur-2xl 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-blur-2xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-blur": "blur(40px)",
+};
+
+
+`;
+
+exports[`xwind backdrop-blur-3xl: backdrop-blur-3xl 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-blur-3xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-blur": "blur(64px)",
+};
+
+
+`;
+
+exports[`xwind backdrop-blur-lg: backdrop-blur-lg 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-blur-lg\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-blur": "blur(16px)",
+};
+
+
+`;
+
+exports[`xwind backdrop-blur-md: backdrop-blur-md 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-blur-md\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-blur": "blur(12px)",
+};
+
+
+`;
+
+exports[`xwind backdrop-blur-sm: backdrop-blur-sm 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-blur-sm\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-blur": "blur(4px)",
+};
+
+
+`;
+
+exports[`xwind backdrop-blur-xl: backdrop-blur-xl 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-blur-xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-blur": "blur(24px)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-0: backdrop-brightness-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(0)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-50: backdrop-brightness-50 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-50\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(.5)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-75: backdrop-brightness-75 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-75\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(.75)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-90: backdrop-brightness-90 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-90\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(.9)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-95: backdrop-brightness-95 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-95\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(.95)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-100: backdrop-brightness-100 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(1)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-105: backdrop-brightness-105 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-105\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(1.05)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-110: backdrop-brightness-110 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-110\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(1.1)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-125: backdrop-brightness-125 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-125\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(1.25)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-150: backdrop-brightness-150 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-150\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(1.5)",
+};
+
+
+`;
+
+exports[`xwind backdrop-brightness-200: backdrop-brightness-200 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-brightness-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-brightness": "brightness(2)",
+};
+
+
+`;
+
+exports[`xwind backdrop-contrast-0: backdrop-contrast-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-contrast-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-contrast": "contrast(0)",
+};
+
+
+`;
+
+exports[`xwind backdrop-contrast-50: backdrop-contrast-50 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-contrast-50\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-contrast": "contrast(.5)",
+};
+
+
+`;
+
+exports[`xwind backdrop-contrast-75: backdrop-contrast-75 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-contrast-75\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-contrast": "contrast(.75)",
+};
+
+
+`;
+
+exports[`xwind backdrop-contrast-100: backdrop-contrast-100 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-contrast-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-contrast": "contrast(1)",
+};
+
+
+`;
+
+exports[`xwind backdrop-contrast-125: backdrop-contrast-125 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-contrast-125\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-contrast": "contrast(1.25)",
+};
+
+
+`;
+
+exports[`xwind backdrop-contrast-150: backdrop-contrast-150 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-contrast-150\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-contrast": "contrast(1.5)",
+};
+
+
+`;
+
+exports[`xwind backdrop-contrast-200: backdrop-contrast-200 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-contrast-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-contrast": "contrast(2)",
+};
+
+
+`;
+
+exports[`xwind backdrop-filter: backdrop-filter 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-filter\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-blur": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-backdrop-brightness": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-backdrop-contrast": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-backdrop-grayscale": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-backdrop-hue-rotate": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-backdrop-invert": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-backdrop-opacity": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-backdrop-saturate": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-backdrop-sepia": "var(--tw-empty,/*!*/ /*!*/)",
+  backdropFilter:
+    "var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)",
+};
+
+
+`;
+
+exports[`xwind backdrop-filter-none: backdrop-filter-none 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-filter-none\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backdropFilter: "none",
+};
+
+
+`;
+
+exports[`xwind backdrop-grayscale: backdrop-grayscale 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-grayscale\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-grayscale": "grayscale(100%)",
+};
+
+
+`;
+
+exports[`xwind backdrop-grayscale-0: backdrop-grayscale-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-grayscale-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-grayscale": "grayscale(0)",
+};
+
+
+`;
+
+exports[`xwind backdrop-hue-rotate-0: backdrop-hue-rotate-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-hue-rotate-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(0deg)",
+};
+
+
+`;
+
+exports[`xwind backdrop-hue-rotate-15: backdrop-hue-rotate-15 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-hue-rotate-15\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(15deg)",
+};
+
+
+`;
+
+exports[`xwind backdrop-hue-rotate-30: backdrop-hue-rotate-30 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-hue-rotate-30\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(30deg)",
+};
+
+
+`;
+
+exports[`xwind backdrop-hue-rotate-60: backdrop-hue-rotate-60 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-hue-rotate-60\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(60deg)",
+};
+
+
+`;
+
+exports[`xwind backdrop-hue-rotate-90: backdrop-hue-rotate-90 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-hue-rotate-90\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(90deg)",
+};
+
+
+`;
+
+exports[`xwind backdrop-hue-rotate-180: backdrop-hue-rotate-180 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-hue-rotate-180\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-hue-rotate": "hue-rotate(180deg)",
+};
+
+
+`;
+
+exports[`xwind backdrop-invert: backdrop-invert 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-invert\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-invert": "invert(100%)",
+};
+
+
+`;
+
+exports[`xwind backdrop-invert-0: backdrop-invert-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-invert-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-invert": "invert(0)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-0: backdrop-opacity-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-5: backdrop-opacity-5 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-5\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.05)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-10: backdrop-opacity-10 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-10\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.1)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-20: backdrop-opacity-20 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-20\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.2)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-25: backdrop-opacity-25 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-25\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.25)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-30: backdrop-opacity-30 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-30\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.3)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-40: backdrop-opacity-40 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-40\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.4)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-50: backdrop-opacity-50 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-50\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.5)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-60: backdrop-opacity-60 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-60\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.6)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-70: backdrop-opacity-70 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-70\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.7)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-75: backdrop-opacity-75 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-75\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.75)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-80: backdrop-opacity-80 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-80\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.8)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-90: backdrop-opacity-90 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-90\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.9)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-95: backdrop-opacity-95 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-95\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(0.95)",
+};
+
+
+`;
+
+exports[`xwind backdrop-opacity-100: backdrop-opacity-100 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-opacity-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-opacity": "opacity(1)",
+};
+
+
+`;
+
+exports[`xwind backdrop-saturate-0: backdrop-saturate-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-saturate-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-saturate": "saturate(0)",
+};
+
+
+`;
+
+exports[`xwind backdrop-saturate-50: backdrop-saturate-50 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-saturate-50\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-saturate": "saturate(.5)",
+};
+
+
+`;
+
+exports[`xwind backdrop-saturate-100: backdrop-saturate-100 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-saturate-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-saturate": "saturate(1)",
+};
+
+
+`;
+
+exports[`xwind backdrop-saturate-150: backdrop-saturate-150 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-saturate-150\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-saturate": "saturate(1.5)",
+};
+
+
+`;
+
+exports[`xwind backdrop-saturate-200: backdrop-saturate-200 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-saturate-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-saturate": "saturate(2)",
+};
+
+
+`;
+
+exports[`xwind backdrop-sepia: backdrop-sepia 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-sepia\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-sepia": "sepia(100%)",
+};
+
+
+`;
+
+exports[`xwind backdrop-sepia-0: backdrop-sepia-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`backdrop-sepia-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-backdrop-sepia": "sepia(0)",
+};
+
+
+`;
+
 exports[`xwind bg-auto: bg-auto 1`] = `
 
 import xw from 'xwind';
@@ -10895,6 +11885,230 @@ const css = xw\`bg-black\`;
 const css = {
   "--tw-bg-opacity": "1",
   backgroundColor: "rgba(0, 0, 0, var(--tw-bg-opacity))",
+};
+
+
+`;
+
+exports[`xwind bg-blend-color: bg-blend-color 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-color\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "color",
+};
+
+
+`;
+
+exports[`xwind bg-blend-color-burn: bg-blend-color-burn 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-color-burn\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "color-burn",
+};
+
+
+`;
+
+exports[`xwind bg-blend-color-dodge: bg-blend-color-dodge 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-color-dodge\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "color-dodge",
+};
+
+
+`;
+
+exports[`xwind bg-blend-darken: bg-blend-darken 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-darken\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "darken",
+};
+
+
+`;
+
+exports[`xwind bg-blend-difference: bg-blend-difference 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-difference\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "difference",
+};
+
+
+`;
+
+exports[`xwind bg-blend-exclusion: bg-blend-exclusion 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-exclusion\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "exclusion",
+};
+
+
+`;
+
+exports[`xwind bg-blend-hard-light: bg-blend-hard-light 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-hard-light\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "hard-light",
+};
+
+
+`;
+
+exports[`xwind bg-blend-hue: bg-blend-hue 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-hue\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "hue",
+};
+
+
+`;
+
+exports[`xwind bg-blend-lighten: bg-blend-lighten 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-lighten\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "lighten",
+};
+
+
+`;
+
+exports[`xwind bg-blend-luminosity: bg-blend-luminosity 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-luminosity\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "luminosity",
+};
+
+
+`;
+
+exports[`xwind bg-blend-multiply: bg-blend-multiply 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-multiply\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "multiply",
+};
+
+
+`;
+
+exports[`xwind bg-blend-normal: bg-blend-normal 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-normal\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "normal",
+};
+
+
+`;
+
+exports[`xwind bg-blend-overlay: bg-blend-overlay 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-overlay\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "overlay",
+};
+
+
+`;
+
+exports[`xwind bg-blend-saturation: bg-blend-saturation 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-saturation\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "saturation",
+};
+
+
+`;
+
+exports[`xwind bg-blend-screen: bg-blend-screen 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-screen\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "screen",
+};
+
+
+`;
+
+exports[`xwind bg-blend-soft-light: bg-blend-soft-light 1`] = `
+
+import xw from 'xwind';
+const css = xw\`bg-blend-soft-light\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  backgroundBlendMode: "soft-light",
 };
 
 
@@ -12824,6 +14038,118 @@ const css = xw\`block\`;
 
 const css = {
   display: "block",
+};
+
+
+`;
+
+exports[`xwind blur: blur 1`] = `
+
+import xw from 'xwind';
+const css = xw\`blur\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-blur": "blur(8px)",
+};
+
+
+`;
+
+exports[`xwind blur-0: blur-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`blur-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-blur": "blur(0)",
+};
+
+
+`;
+
+exports[`xwind blur-2xl: blur-2xl 1`] = `
+
+import xw from 'xwind';
+const css = xw\`blur-2xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-blur": "blur(40px)",
+};
+
+
+`;
+
+exports[`xwind blur-3xl: blur-3xl 1`] = `
+
+import xw from 'xwind';
+const css = xw\`blur-3xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-blur": "blur(64px)",
+};
+
+
+`;
+
+exports[`xwind blur-lg: blur-lg 1`] = `
+
+import xw from 'xwind';
+const css = xw\`blur-lg\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-blur": "blur(16px)",
+};
+
+
+`;
+
+exports[`xwind blur-md: blur-md 1`] = `
+
+import xw from 'xwind';
+const css = xw\`blur-md\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-blur": "blur(12px)",
+};
+
+
+`;
+
+exports[`xwind blur-sm: blur-sm 1`] = `
+
+import xw from 'xwind';
+const css = xw\`blur-sm\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-blur": "blur(4px)",
+};
+
+
+`;
+
+exports[`xwind blur-xl: blur-xl 1`] = `
+
+import xw from 'xwind';
+const css = xw\`blur-xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-blur": "blur(24px)",
 };
 
 
@@ -15418,6 +16744,160 @@ const css = {
 
 `;
 
+exports[`xwind brightness-0: brightness-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(0)",
+};
+
+
+`;
+
+exports[`xwind brightness-50: brightness-50 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-50\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(.5)",
+};
+
+
+`;
+
+exports[`xwind brightness-75: brightness-75 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-75\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(.75)",
+};
+
+
+`;
+
+exports[`xwind brightness-90: brightness-90 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-90\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(.9)",
+};
+
+
+`;
+
+exports[`xwind brightness-95: brightness-95 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-95\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(.95)",
+};
+
+
+`;
+
+exports[`xwind brightness-100: brightness-100 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(1)",
+};
+
+
+`;
+
+exports[`xwind brightness-105: brightness-105 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-105\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(1.05)",
+};
+
+
+`;
+
+exports[`xwind brightness-110: brightness-110 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-110\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(1.1)",
+};
+
+
+`;
+
+exports[`xwind brightness-125: brightness-125 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-125\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(1.25)",
+};
+
+
+`;
+
+exports[`xwind brightness-150: brightness-150 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-150\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(1.5)",
+};
+
+
+`;
+
+exports[`xwind brightness-200: brightness-200 1`] = `
+
+import xw from 'xwind';
+const css = xw\`brightness-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-brightness": "brightness(2)",
+};
+
+
+`;
+
 exports[`xwind capitalize: capitalize 1`] = `
 
 import xw from 'xwind';
@@ -16203,6 +17683,104 @@ const css = {
 
 `;
 
+exports[`xwind contrast-0: contrast-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`contrast-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-contrast": "contrast(0)",
+};
+
+
+`;
+
+exports[`xwind contrast-50: contrast-50 1`] = `
+
+import xw from 'xwind';
+const css = xw\`contrast-50\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-contrast": "contrast(.5)",
+};
+
+
+`;
+
+exports[`xwind contrast-75: contrast-75 1`] = `
+
+import xw from 'xwind';
+const css = xw\`contrast-75\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-contrast": "contrast(.75)",
+};
+
+
+`;
+
+exports[`xwind contrast-100: contrast-100 1`] = `
+
+import xw from 'xwind';
+const css = xw\`contrast-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-contrast": "contrast(1)",
+};
+
+
+`;
+
+exports[`xwind contrast-125: contrast-125 1`] = `
+
+import xw from 'xwind';
+const css = xw\`contrast-125\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-contrast": "contrast(1.25)",
+};
+
+
+`;
+
+exports[`xwind contrast-150: contrast-150 1`] = `
+
+import xw from 'xwind';
+const css = xw\`contrast-150\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-contrast": "contrast(1.5)",
+};
+
+
+`;
+
+exports[`xwind contrast-200: contrast-200 1`] = `
+
+import xw from 'xwind';
+const css = xw\`contrast-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-contrast": "contrast(2)",
+};
+
+
+`;
+
 exports[`xwind cursor-auto: cursor-auto 1`] = `
 
 import xw from 'xwind';
@@ -16226,6 +17804,20 @@ const css = xw\`cursor-default\`;
 
 const css = {
   cursor: "default",
+};
+
+
+`;
+
+exports[`xwind cursor-help: cursor-help 1`] = `
+
+import xw from 'xwind';
+const css = xw\`cursor-help\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  cursor: "help",
 };
 
 
@@ -16296,6 +17888,34 @@ const css = xw\`cursor-wait\`;
 
 const css = {
   cursor: "wait",
+};
+
+
+`;
+
+exports[`xwind decoration-clone: decoration-clone 1`] = `
+
+import xw from 'xwind';
+const css = xw\`decoration-clone\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  boxDecorationBreak: "clone",
+};
+
+
+`;
+
+exports[`xwind decoration-slice: decoration-slice 1`] = `
+
+import xw from 'xwind';
+const css = xw\`decoration-slice\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  boxDecorationBreak: "slice",
 };
 
 
@@ -18394,6 +20014,108 @@ const css = {
 
 `;
 
+exports[`xwind drop-shadow: drop-shadow 1`] = `
+
+import xw from 'xwind';
+const css = xw\`drop-shadow\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-drop-shadow":
+    "drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06))",
+};
+
+
+`;
+
+exports[`xwind drop-shadow-2xl: drop-shadow-2xl 1`] = `
+
+import xw from 'xwind';
+const css = xw\`drop-shadow-2xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-drop-shadow": "drop-shadow(0 25px 25px rgba(0, 0, 0, 0.15))",
+};
+
+
+`;
+
+exports[`xwind drop-shadow-lg: drop-shadow-lg 1`] = `
+
+import xw from 'xwind';
+const css = xw\`drop-shadow-lg\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-drop-shadow":
+    "drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1))",
+};
+
+
+`;
+
+exports[`xwind drop-shadow-md: drop-shadow-md 1`] = `
+
+import xw from 'xwind';
+const css = xw\`drop-shadow-md\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-drop-shadow":
+    "drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06))",
+};
+
+
+`;
+
+exports[`xwind drop-shadow-none: drop-shadow-none 1`] = `
+
+import xw from 'xwind';
+const css = xw\`drop-shadow-none\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-drop-shadow": "drop-shadow(0 0 #0000)",
+};
+
+
+`;
+
+exports[`xwind drop-shadow-sm: drop-shadow-sm 1`] = `
+
+import xw from 'xwind';
+const css = xw\`drop-shadow-sm\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-drop-shadow": "drop-shadow(0 1px 1px rgba(0,0,0,0.05))",
+};
+
+
+`;
+
+exports[`xwind drop-shadow-xl: drop-shadow-xl 1`] = `
+
+import xw from 'xwind';
+const css = xw\`drop-shadow-xl\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-drop-shadow":
+    "drop-shadow(0 20px 13px rgba(0, 0, 0, 0.03)) drop-shadow(0 8px 5px rgba(0, 0, 0, 0.08))",
+};
+
+
+`;
+
 exports[`xwind duration-75: duration-75 1`] = `
 
 import xw from 'xwind';
@@ -18571,6 +20293,44 @@ const css = xw\`fill-current\`;
 
 const css = {
   fill: "currentColor",
+};
+
+
+`;
+
+exports[`xwind filter: filter 1`] = `
+
+import xw from 'xwind';
+const css = xw\`filter\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-blur": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-brightness": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-contrast": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-grayscale": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-hue-rotate": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-invert": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-saturate": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-sepia": "var(--tw-empty,/*!*/ /*!*/)",
+  "--tw-drop-shadow": "var(--tw-empty,/*!*/ /*!*/)",
+  filter:
+    "var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)",
+};
+
+
+`;
+
+exports[`xwind filter-none: filter-none 1`] = `
+
+import xw from 'xwind';
+const css = xw\`filter-none\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  filter: "none",
 };
 
 
@@ -21854,6 +23614,34 @@ const css = {
 
 `;
 
+exports[`xwind grayscale: grayscale 1`] = `
+
+import xw from 'xwind';
+const css = xw\`grayscale\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-grayscale": "grayscale(100%)",
+};
+
+
+`;
+
+exports[`xwind grayscale-0: grayscale-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`grayscale-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-grayscale": "grayscale(0)",
+};
+
+
+`;
+
 exports[`xwind grid: grid 1`] = `
 
 import xw from 'xwind';
@@ -22960,6 +24748,90 @@ const css = {
 
 `;
 
+exports[`xwind hue-rotate-0: hue-rotate-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`hue-rotate-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(0deg)",
+};
+
+
+`;
+
+exports[`xwind hue-rotate-15: hue-rotate-15 1`] = `
+
+import xw from 'xwind';
+const css = xw\`hue-rotate-15\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(15deg)",
+};
+
+
+`;
+
+exports[`xwind hue-rotate-30: hue-rotate-30 1`] = `
+
+import xw from 'xwind';
+const css = xw\`hue-rotate-30\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(30deg)",
+};
+
+
+`;
+
+exports[`xwind hue-rotate-60: hue-rotate-60 1`] = `
+
+import xw from 'xwind';
+const css = xw\`hue-rotate-60\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(60deg)",
+};
+
+
+`;
+
+exports[`xwind hue-rotate-90: hue-rotate-90 1`] = `
+
+import xw from 'xwind';
+const css = xw\`hue-rotate-90\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(90deg)",
+};
+
+
+`;
+
+exports[`xwind hue-rotate-180: hue-rotate-180 1`] = `
+
+import xw from 'xwind';
+const css = xw\`hue-rotate-180\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-hue-rotate": "hue-rotate(180deg)",
+};
+
+
+`;
+
 exports[`xwind inline: inline 1`] = `
 
 import xw from 'xwind';
@@ -23011,6 +24883,20 @@ const css = xw\`inline-grid\`;
 
 const css = {
   display: "inline-grid",
+};
+
+
+`;
+
+exports[`xwind inline-table: inline-table 1`] = `
+
+import xw from 'xwind';
+const css = xw\`inline-table\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  display: "inline-table",
 };
 
 
@@ -25037,6 +26923,34 @@ const css = {
 
 `;
 
+exports[`xwind invert: invert 1`] = `
+
+import xw from 'xwind';
+const css = xw\`invert\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-invert": "invert(100%)",
+};
+
+
+`;
+
+exports[`xwind invert-0: invert-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`invert-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-invert": "invert(0)",
+};
+
+
+`;
+
 exports[`xwind invisible: invisible 1`] = `
 
 import xw from 'xwind';
@@ -25046,6 +26960,34 @@ const css = xw\`invisible\`;
 
 const css = {
   visibility: "hidden",
+};
+
+
+`;
+
+exports[`xwind isolate: isolate 1`] = `
+
+import xw from 'xwind';
+const css = xw\`isolate\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  isolation: "isolate",
+};
+
+
+`;
+
+exports[`xwind isolation-auto: isolation-auto 1`] = `
+
+import xw from 'xwind';
+const css = xw\`isolation-auto\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  isolation: "auto",
 };
 
 
@@ -25200,20 +27142,6 @@ const css = xw\`justify-evenly\`;
 
 const css = {
   justifyContent: "space-evenly",
-};
-
-
-`;
-
-exports[`xwind justify-items-auto: justify-items-auto 1`] = `
-
-import xw from 'xwind';
-const css = xw\`justify-items-auto\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  justifyItems: "auto",
 };
 
 
@@ -26228,6 +28156,20 @@ const css = xw\`list-inside\`;
 
 const css = {
   listStylePosition: "inside",
+};
+
+
+`;
+
+exports[`xwind list-item: list-item 1`] = `
+
+import xw from 'xwind';
+const css = xw\`list-item\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  display: "list-item",
 };
 
 
@@ -28202,6 +30144,230 @@ const css = xw\`min-w-min\`;
 
 const css = {
   minWidth: "min-content",
+};
+
+
+`;
+
+exports[`xwind mix-blend-color: mix-blend-color 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-color\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "color",
+};
+
+
+`;
+
+exports[`xwind mix-blend-color-burn: mix-blend-color-burn 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-color-burn\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "color-burn",
+};
+
+
+`;
+
+exports[`xwind mix-blend-color-dodge: mix-blend-color-dodge 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-color-dodge\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "color-dodge",
+};
+
+
+`;
+
+exports[`xwind mix-blend-darken: mix-blend-darken 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-darken\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "darken",
+};
+
+
+`;
+
+exports[`xwind mix-blend-difference: mix-blend-difference 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-difference\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "difference",
+};
+
+
+`;
+
+exports[`xwind mix-blend-exclusion: mix-blend-exclusion 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-exclusion\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "exclusion",
+};
+
+
+`;
+
+exports[`xwind mix-blend-hard-light: mix-blend-hard-light 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-hard-light\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "hard-light",
+};
+
+
+`;
+
+exports[`xwind mix-blend-hue: mix-blend-hue 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-hue\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "hue",
+};
+
+
+`;
+
+exports[`xwind mix-blend-lighten: mix-blend-lighten 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-lighten\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "lighten",
+};
+
+
+`;
+
+exports[`xwind mix-blend-luminosity: mix-blend-luminosity 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-luminosity\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "luminosity",
+};
+
+
+`;
+
+exports[`xwind mix-blend-multiply: mix-blend-multiply 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-multiply\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "multiply",
+};
+
+
+`;
+
+exports[`xwind mix-blend-normal: mix-blend-normal 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-normal\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "normal",
+};
+
+
+`;
+
+exports[`xwind mix-blend-overlay: mix-blend-overlay 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-overlay\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "overlay",
+};
+
+
+`;
+
+exports[`xwind mix-blend-saturation: mix-blend-saturation 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-saturation\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "saturation",
+};
+
+
+`;
+
+exports[`xwind mix-blend-screen: mix-blend-screen 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-screen\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "screen",
+};
+
+
+`;
+
+exports[`xwind mix-blend-soft-light: mix-blend-soft-light 1`] = `
+
+import xw from 'xwind';
+const css = xw\`mix-blend-soft-light\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  mixBlendMode: "soft-light",
 };
 
 
@@ -33588,20 +35754,6 @@ const css = xw\`place-content-stretch\`;
 
 const css = {
   placeContent: "stretch",
-};
-
-
-`;
-
-exports[`xwind place-items-auto: place-items-auto 1`] = `
-
-import xw from 'xwind';
-const css = xw\`place-items-auto\`;
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-const css = {
-  placeItems: "auto",
 };
 
 
@@ -42623,6 +44775,76 @@ const css = {
 
 `;
 
+exports[`xwind saturate-0: saturate-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`saturate-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-saturate": "saturate(0)",
+};
+
+
+`;
+
+exports[`xwind saturate-50: saturate-50 1`] = `
+
+import xw from 'xwind';
+const css = xw\`saturate-50\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-saturate": "saturate(.5)",
+};
+
+
+`;
+
+exports[`xwind saturate-100: saturate-100 1`] = `
+
+import xw from 'xwind';
+const css = xw\`saturate-100\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-saturate": "saturate(1)",
+};
+
+
+`;
+
+exports[`xwind saturate-150: saturate-150 1`] = `
+
+import xw from 'xwind';
+const css = xw\`saturate-150\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-saturate": "saturate(1.5)",
+};
+
+
+`;
+
+exports[`xwind saturate-200: saturate-200 1`] = `
+
+import xw from 'xwind';
+const css = xw\`saturate-200\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-saturate": "saturate(2)",
+};
+
+
+`;
+
 exports[`xwind scale-0: scale-0 1`] = `
 
 import xw from 'xwind';
@@ -43174,6 +45396,34 @@ const css = xw\`self-stretch\`;
 
 const css = {
   alignSelf: "stretch",
+};
+
+
+`;
+
+exports[`xwind sepia: sepia 1`] = `
+
+import xw from 'xwind';
+const css = xw\`sepia\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-sepia": "sepia(100%)",
+};
+
+
+`;
+
+exports[`xwind sepia-0: sepia-0 1`] = `
+
+import xw from 'xwind';
+const css = xw\`sepia-0\`;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+const css = {
+  "--tw-sepia": "sepia(0)",
 };
 
 
@@ -48754,7 +51004,7 @@ const css = xw\`transition\`;
 
 const css = {
   transitionProperty:
-    "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
+    "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter",
   transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
   transitionDuration: "150ms",
 };
