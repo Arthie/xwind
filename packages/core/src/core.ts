@@ -43,6 +43,9 @@ export function resolveConfig(config: TailwindConfig): ResolvedTailwindConfig {
 }
 
 function core(resolvedConfig: ResolvedTailwindConfig) {
+
+  resolvedConfig.tailwindConfig = resolvedConfig;
+
   const processedPlugins = processPlugins(
     [...corePlugins(resolvedConfig), ...resolvedConfig.plugins],
     resolvedConfig
